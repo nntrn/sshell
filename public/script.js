@@ -1,7 +1,5 @@
 function getSnippetsUrl() {
-  if (location.protocol.indexOf('file:') > -1) {
-    return 'https://nntrn.github.io/archive/snippets.json'
-  } else return 'snippets.json'
+  return 'https://raw.githubusercontent.com/nntrn/sshell/data/snippets.json'
 }
 
 function removeHash () {
@@ -63,7 +61,7 @@ function buildSnippets(res) {
         })
       )
     })
-    document.querySelector('#archive').appendChild(group)
+    document.querySelector('#sshell').appendChild(group)
   })
 }
 

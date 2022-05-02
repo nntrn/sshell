@@ -65,7 +65,7 @@ a {
   color: blue;
 }
 
-#archive a:hover {
+#sshell a:hover {
   text-decoration-thickness: 3px;
 }
 
@@ -93,7 +93,7 @@ code,
 }
 
 header,
-#archive .item {
+#sshell .item {
   padding: 0 2%;
 }
 
@@ -167,7 +167,7 @@ header {
   background-clip: content-box;
 }
 
-#archive {
+#sshell {
   position: absolute;
   box-sizing: border-box;
   height: 100%;
@@ -193,11 +193,11 @@ header {
 }
 
 .group:before,
-#archive .item {
+#sshell .item {
   padding-left: 3%;
   padding-right: 3%;
 }
-#archive [data-before]::before {
+#sshell [data-before]::before {
   border-bottom: 2px solid #ddd;
 }
 
@@ -306,11 +306,5 @@ header {
 @media (max-width: 767.98px) {
   #popup pre {
     white-space: break-spaces;
-  }
-}
-
-@media (min-width: 991.98px) {
-  #popup pre {
-    white-space: pre;
   }
 }
