@@ -1,0 +1,29 @@
+#!/usr/bin/env bash
+
+DIR="$(cd "$(dirname "$0")/.." && pwd)"
+TMPDIR=$(mktemp -d)
+
+CURRENT_BRANCH=$(git branch --show-current)
+
+git fetch -a
+
+# [[ $(git branch -a | grep gh-pages) ]] && git push -d origin gh-pages
+# [[ $(git branch -a | grep gh-pages) ]] && git branch -d gh-pages
+
+echo $TMPDIR
+cd $TMPDIR
+
+git init
+
+for i in config HEAD; do
+  cat $DIR/.git/$i | sed "s,$CURRENT_BRANCH,gh-pages,g" | tee $TMPDIR/.git/$i
+done
+
+git pull
+
+cp -r $DIR/public/* $TMPDIR/
+git add .
+git commit -m "Publish gh-pages"
+git push origin gh-pages
+
+[[ -d "$TMPDIR" ]] && rm -rf "$TMPDIR"

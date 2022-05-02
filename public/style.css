@@ -1,0 +1,316 @@
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: sans-serif;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+html,
+body {
+  margin: auto;
+  overflow: hidden;
+  overflow-x: hidden;
+  height: 100%;
+  width: 100%;
+  position: relative;
+  max-width: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  font-family: monospace;
+}
+
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 0.25em;
+}
+
+h4 {
+  margin: 0.15em 0;
+}
+
+h1,
+h2 {
+  margin: 0;
+}
+
+h2 {
+  font-size: 1em;
+}
+
+h1 {
+  font-family: sans-serif;
+  font-weight: 700;
+  margin: 0;
+  padding: 0;
+}
+h4,
+h4 a {
+  font-size: 14px;
+  margin-top: 8px;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+a {
+  color: blue;
+}
+
+#archive a:hover {
+  text-decoration-thickness: 3px;
+}
+
+main {
+  height: 100%;
+  width: 100%;
+  position: relative;
+}
+
+nav .link {
+  color: white;
+  margin: 4px 6px;
+  margin-left: 1px;
+  padding: 4px 6px;
+  display: block;
+  background: #222;
+  font-size: 95%;
+}
+
+pre,
+code,
+.code {
+  text-rendering: unset;
+  -webkit-font-smoothing: unset;
+}
+
+header,
+#archive .item {
+  padding: 0 2%;
+}
+
+header {
+  z-index: 2000;
+  background: #fff;
+  margin: 0;
+  box-shadow: 0 1px 10px #0000001a;
+  max-height: 250px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  width: 100%;
+  color: #222;
+
+  box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.15);
+  padding: calc(1em + 6px) calc(1em + 6px);
+}
+
+#searchbar {
+  font-size: 1.2em;
+  font-family: sans-serif;
+  padding: 0.35em 0.5em;
+  width: 100%;
+  margin: 0.7em 0;
+}
+
+.hidden {
+  display: none !important;
+}
+.item {
+  font-family: monospace;
+  margin: 1em 0;
+}
+.site-icon img {
+  width: 20px;
+}
+
+[data-before] {
+  word-break: break-word;
+}
+
+[data-before]::before {
+  content: attr(data-before);
+}
+
+[data-before]:empty {
+  display: none;
+}
+
+::-webkit-scrollbar {
+  width: 15px;
+  height: 6px;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 6px;
+  background: transparent;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background: #222;
+  background-clip: content-box;
+  border: 2px solid transparent;
+  background-clip: content-box;
+}
+
+#archive {
+  position: absolute;
+  box-sizing: border-box;
+  height: 100%;
+  max-height: 99%;
+  width: calc(100% - 5px);
+  overflow-y: scroll;
+  margin: auto !important;
+  padding-bottom: 1em;
+  left: 7px;
+}
+
+.group:before {
+  text-transform: uppercase;
+  display: block;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 24px;
+  position: sticky;
+  top: 0;
+  padding-top: 0.7em;
+  padding-bottom: 0.5em;
+  background: white;
+}
+
+.group:before,
+#archive .item {
+  padding-left: 3%;
+  padding-right: 3%;
+}
+#archive [data-before]::before {
+  border-bottom: 2px solid #ddd;
+}
+
+#popup {
+  display: none;
+  z-index: -1;
+}
+
+#popup.show {
+  box-sizing: border-box;
+  padding: 2em;
+  width: 100%;
+  height: 100%;
+  max-height: 100vh;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  margin: auto !important;
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  z-index: 1;
+  background: rgba(0, 0, 0, 0.75);
+  word-break: break-word;
+}
+
+.topbar {
+  display: flex;
+  justify-content: flex-end;
+  position: absolute;
+  right: 0;
+  top: 0;
+  margin: 1em;
+}
+
+.topbar button {
+  font-size: 70%;
+  border-radius: 100%;
+  color: #fff;
+  font-weight: 500;
+  border: 1px solid #000;
+  background: rgba(0, 0, 0, 0.4);
+  height: 24px;
+  display: flex;
+  margin: auto;
+  justify-content: center;
+  width: 24px;
+  align-items: center;
+  box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.412);
+}
+
+.topbar button:hover {
+  box-shadow: 0 0 4px 1px rgba(255, 255, 255, 0.1);
+  transition: all 300ms linear;
+  color: #444;
+  background: white;
+}
+
+#popup h2 {
+  font-size: 2em;
+}
+
+#popup pre[data-key]:before {
+  content: attr(data-key);
+  display: block;
+  font-weight: 700;
+  color: #999;
+  border-bottom: 2px solid #999;
+  padding-bottom: 4px;
+  margin-bottom: 0.8em;
+  text-transform: uppercase;
+}
+
+#popup [data-key]:empty {
+  display: none;
+}
+
+#popup .container {
+  background: white;
+  padding: 1em;
+  margin: 10% auto;
+  position: relative;
+  overflow-x: scroll;
+  box-shadow: 0 0 10px 3px rgba(0, 0, 0, 0.25);
+  width: 100%;
+  height: max-content;
+}
+
+#popup pre {
+  white-space: pre-wrap;
+  padding: 0.5em 0;
+  user-select: all;
+  border-top: 2px solid #999;
+}
+
+@media (max-width: 575.98px) {
+  #popup .container {
+    overflow-x: hidden;
+  }
+
+  #popup.show {
+    background: rgba(0, 0, 0, 0.25);
+  }
+}
+
+@media (max-width: 767.98px) {
+  #popup pre {
+    white-space: break-spaces;
+  }
+}
+
+@media (min-width: 991.98px) {
+  #popup pre {
+    white-space: pre;
+  }
+}

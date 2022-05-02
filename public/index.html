@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <title>archive</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <link rel="icon" href="favicon.png" />
+    <meta name="theme-color" content="#222" />
+    <meta name="robots" content="noindex, nofollow" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <header>
+      <h1>
+        <span class="site-icon">
+          <img src="site-icon.svg" />
+        </span>
+        <span>archive</span>
+      </h1>
+      <h2>by <a href="https://github.com/nntrn" class="author">annie tran</a></h2>
+      <div style="display: flex; width: 100%; background: white; margin-top: 0.5em">
+        <input
+          id="searchbar"
+          autocomplete="off"
+          type="search"
+          name="q"
+          placeholder="search"
+          spellcheck="false"
+          value=""
+        />
+      </div>
+      <nav id="toc"></nav>
+    </header>
+
+    <main id="main">
+      <div id="archive"></div>
+      <div id="popup">
+        <div class="topbar"><button onclick="hidePopup()">X</button></div>
+        <div class="container">
+          <h2 data-key="title"></h2>
+          <pre data-key="description"></pre>
+          <pre data-key="cli"></pre>
+          <pre data-key="output"></pre>
+          <pre data-key="example"></pre>
+          <pre data-key="url"></pre>
+        </div>
+      </div>
+    </main>
+
+    <script async="" src="script.js"></script>
+
+  </body>
+</html>
