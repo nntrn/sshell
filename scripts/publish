@@ -5,14 +5,18 @@ TMPDIR=$(mktemp -d)
 
 CURRENT_BRANCH=$(git branch --show-current)
 
+if [[ $(git ls-files --modified public) ]]; then
+  git add public
+  git commit -m "Update static files in public"
+  git push
+fi
+
 git fetch -a
 
 [[ $(git branch -a | grep gh-pages) ]] && git push -d origin gh-pages
 [[ $(git branch -a | grep gh-pages) ]] && git branch -d gh-pages
 
-echo $TMPDIR
 cd $TMPDIR
-
 git init
 
 for i in config HEAD; do
@@ -22,11 +26,6 @@ done
 git pull
 
 cp -r $DIR/public/* $TMPDIR/
-
-echo '*.md linguist-detectable=false
-*.css linguist-detectable=false
-*.html linguist-detectable=false
-' >>.gitattributes
 
 git add .
 git commit -m "Publish gh-pages"
