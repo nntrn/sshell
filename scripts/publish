@@ -7,8 +7,8 @@ CURRENT_BRANCH=$(git branch --show-current)
 
 git fetch -a
 
-# [[ $(git branch -a | grep gh-pages) ]] && git push -d origin gh-pages
-# [[ $(git branch -a | grep gh-pages) ]] && git branch -d gh-pages
+[[ $(git branch -a | grep gh-pages) ]] && git push -d origin gh-pages
+[[ $(git branch -a | grep gh-pages) ]] && git branch -d gh-pages
 
 echo $TMPDIR
 cd $TMPDIR
