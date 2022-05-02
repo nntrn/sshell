@@ -22,6 +22,12 @@ done
 git pull
 
 cp -r $DIR/public/* $TMPDIR/
+
+echo '*.md linguist-detectable=false
+*.css linguist-detectable=false
+*.html linguist-detectable=false
+' >>.gitattributes
+
 git add .
 git commit -m "Publish gh-pages"
 git push origin gh-pages
