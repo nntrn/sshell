@@ -1,5 +1,1178 @@
 [
   {
+    "id": "305",
+    "title": "fsutil resource info",
+    "language": "cmd",
+    "category": "fsutil",
+    "type": "command",
+    "guid": "5466cccc-610e-44f3-b301-d4898c5d3197",
+    "url": "",
+    "modified": "2022-05-05T01:13:33Z",
+    "created": "2022-05-05T01:13:33Z",
+    "tags": [],
+    "description": [
+      "fsutil resource",
+      "---- RESOURCE Commands Supported ----",
+      "",
+      "create          Create a Secondary Transactional Resource Manager",
+      "info            Display information relating to a Transactional Resource Manager",
+      "setAutoReset    Set whether a default Transactional Resource Manager will clean its transactional metadata on next mount",
+      "setAvailable    Set a Transactional Resource Manager to prefer availability over consistency",
+      "setConsistent   Set a Transactional Resource Manager to prefer consistency over availability",
+      "setLog          Change characteristics of a running Transactional Resource Manager",
+      "start           Start a Transactional Resource Manager",
+      "stop            Stop a Transactional Resource Manager"
+    ],
+    "cli": [
+      "fsutil resource info C:"
+    ],
+    "example": [],
+    "output": [
+      "Resource Manager Identifier :      F3292104-1D58-11EC-96F2-381428BEAE7E",
+      "KTM Log Path for RM:  \\Device\\HarddiskVolume3\\$Extend\\$RmMetadata\\$TxfLog\\$TxfLog::KtmLog",
+      "Space used by TOPS:   1 Mb",
+      "TOPS free space:      100%",
+      "RM State:             Active",
+      "Running transactions: 0",
+      "One phase commits:    2",
+      "Two phase commits:    0",
+      "System initiated rollbacks: 0",
+      "Age of oldest transaction:  00:00:00",
+      "Logging Mode:         Simple",
+      "Number of containers: 2",
+      "Container size:       10 Mb",
+      "Total log capacity:   20 Mb",
+      "Total free log space: 11 Mb",
+      "Minimum containers:   2",
+      "Maximum containers:   20",
+      "Log growth increment: 2 container(s)",
+      "Auto shrink:          Not enabled",
+      "",
+      "RM prefers availability over consistency."
+    ]
+  },
+  {
+    "id": "304",
+    "title": "unset variables beginning with ",
+    "language": "bash",
+    "category": "unset",
+    "type": "command",
+    "guid": "2bec0448-84da-427b-b838-ad2758fd3b83",
+    "url": "https://stackoverflow.com/a/43126805",
+    "modified": "2022-05-04T22:40:03Z",
+    "created": "2022-05-04T22:40:03Z",
+    "tags": [],
+    "description": [
+      "29",
+      "",
+      "In the Bash shell, the ${!prefix@} parameter expansion generates all variables that start with prefix.",
+      "",
+      "${!prefix@} Expands to the names of variables whose names begin with prefix [...] When @ is used and the expansion appears within double quotes, each variable name expands to a separate word.",
+      "",
+      "This list can then be passed to unset:",
+      "",
+      "unset \"${!myvarname@}\""
+    ],
+    "cli": [
+      "unset \"${!VSCODE@}\""
+    ],
+    "example": [],
+    "output": []
+  },
+  {
+    "id": "303",
+    "title": "Get-WindowsUpdateLog - get update",
+    "language": "powershell",
+    "category": "Get-WindowsUpdateLog",
+    "type": "command",
+    "guid": "33844313-8937-48ef-81cc-d2c5a12bbfd2",
+    "url": "",
+    "modified": "2022-05-04T22:39:00Z",
+    "created": "2022-05-04T22:39:00Z",
+    "tags": [],
+    "description": [],
+    "cli": [
+      "Get-WindowsUpdateLog "
+    ],
+    "example": [],
+    "output": [
+      "$ Get-WindowsUpdateLog",
+      "",
+      "Converting C:\\WINDOWS\\logs\\WindowsUpdate into C:\\Users\\annie_tran.AMERICAS\\Desktop\\WindowsUpdate.log ...",
+      "",
+      "Input",
+      "----------------",
+      "File(s):",
+      "     C:\\WINDOWS\\logs\\WindowsUpdate\\WindowsUpdate.20220503.214730.316.3.etl",
+      "     C:\\WINDOWS\\logs\\WindowsUpdate\\WindowsUpdate.20220503.214730.316.4.etl",
+      "     C:\\WINDOWS\\logs\\WindowsUpdate\\WindowsUpdate.20220503.214730.316.5.etl",
+      "     C:\\WINDOWS\\logs\\WindowsUpdate\\WindowsUpdate.20220503.214730.316.6.etl",
+      "     C:\\WINDOWS\\logs\\WindowsUpdate\\WindowsUpdate.20220503.214730.316.7.etl",
+      "     C:\\WINDOWS\\logs\\WindowsUpdate\\WindowsUpdate.20220503.222330.468.1.etl",
+      "     C:\\WINDOWS\\logs\\WindowsUpdate\\WindowsUpdate.20220503.231030.187.1.etl",
+      "     C:\\WINDOWS\\logs\\WindowsUpdate\\WindowsUpdate.20220503.231030.187.2.etl",
+      "     C:\\WINDOWS\\logs\\WindowsUpdate\\WindowsUpdate.20220503.231030.187.3.etl",
+      "     C:\\WINDOWS\\logs\\WindowsUpdate\\WindowsUpdate.20220503.232525.203.1.etl",
+      ""
+    ]
+  },
+  {
+    "id": "302",
+    "title": "Finds local admin password and password expiration timestamp for given computer",
+    "language": "powershell",
+    "category": "Finds",
+    "type": "command",
+    "guid": "f353e5b3-8762-4897-be77-60675442ef81",
+    "url": "",
+    "modified": "2022-05-04T21:25:05Z",
+    "created": "2022-05-04T21:25:05Z",
+    "tags": [],
+    "description": [
+      "NAME",
+      "    Get-AdmPwdPassword",
+      "",
+      "SYNOPSIS",
+      "    Finds admin password for given computer",
+      "",
+      "",
+      "    --------------------------  Example 1  --------------------------",
+      "",
+      "    Get-AdmPwdPassword -ComputerName:MyComputer",
+      "",
+      "    Gets password of local administrator on computer MyComputer"
+    ],
+    "cli": [
+      " Get-AdmPwdPassword -ComputerName:AT01488YD3 | Format-List *",
+      "",
+      ""
+    ],
+    "example": [],
+    "output": [
+      "ComputerName        : AT01488YD3",
+      "DistinguishedName   : CN=W101TL8YD3,OU=Workstations,OU=Computers,OU=Austin,DC=amer,DC=nntrn,DC=com",
+      "Password            :",
+      "ExpirationTimestamp : 5/5/2022 3:07:06 PM"
+    ]
+  },
+  {
+    "id": "301",
+    "title": "find - search files modified in last 24 hours",
+    "language": "bash",
+    "category": "find",
+    "type": "command",
+    "guid": "5fb3c036-1908-453f-8e93-ebed078410db",
+    "url": "",
+    "modified": "2022-05-03T18:55:01Z",
+    "created": "2022-05-03T18:55:01Z",
+    "tags": [],
+    "description": [
+      "Search for files in your home directory which have been modified in the last twenty-four hours. ",
+      "This command works this way because the time since each file was last modified is divided by 24 hours and any remainder is discarded. ",
+      "That means that to match -mtime 0, a file will have to have a modification in the past which is less than 24 hours ago.",
+      "",
+      ""
+    ],
+    "cli": [
+      "find $HOME -mtime 0"
+    ],
+    "example": [],
+    "output": []
+  },
+  {
+    "id": "300",
+    "title": "powershell - get all Get- commands",
+    "language": "bash",
+    "category": "powershell",
+    "type": "command",
+    "guid": "147b9be8-b3f9-43d1-bfab-83f65da62979",
+    "url": "",
+    "modified": "2022-05-03T18:07:51Z",
+    "created": "2022-05-03T18:07:51Z",
+    "tags": [],
+    "description": [],
+    "cli": [
+      "# /cygdrive/c/Windows/System32/WindowsPowerShell/v1.0/Modules",
+      "find . -type f -name \"*.psd1\" -print -exec cat {} \\; | tr -d '\\r' | tr -d '\\0' | grep -Eo 'Get-[a-zA-Z\\-]+' | sort -u | tee ~/all_powershell_get.txt",
+      ""
+    ],
+    "example": [],
+    "output": [
+      "Get-Acl",
+      "Get-ADAccountAuthorizationGroup",
+      "Get-ADAccountResultantPasswordReplicationPolicy",
+      "Get-ADAuthenticationPolicy",
+      "Get-ADAuthenticationPolicySilo",
+      "Get-ADCentralAccessPolicy",
+      "Get-ADCentralAccessRule",
+      "Get-ADClaimTransformPolicy",
+      "Get-ADClaimType",
+      "Get-ADComputer",
+      "Get-ADComputerServiceAccount",
+      "Get-ADDCCloningExcludedApplicationList",
+      "Get-ADDefaultDomainPasswordPolicy",
+      "Get-ADDomain",
+      "Get-ADDomainController",
+      "Get-ADDomainControllerPasswordReplicationPolicy",
+      "Get-ADDomainControllerPasswordReplicationPolicyUsage",
+      "Get-ADFineGrainedPasswordPolicy",
+      "Get-ADFineGrainedPasswordPolicySubject",
+      "Get-ADForest",
+      "Get-ADGroup",
+      "Get-ADGroupMember",
+      "Get-ADObject",
+      "Get-ADOptionalFeature",
+      "Get-ADOrganizationalUnit",
+      "Get-ADPrincipalGroupMembership",
+      "Get-ADReplicationAttributeMetadata",
+      "Get-ADReplicationConnection",
+      "Get-ADReplicationFailure",
+      "Get-ADReplicationPartnerMetadata",
+      "Get-ADReplicationQueueOperation",
+      "Get-ADReplicationSite",
+      "Get-ADReplicationSiteLink",
+      "Get-ADReplicationSiteLinkBridge",
+      "Get-ADReplicationSubnet",
+      "Get-ADReplicationUpToDatenessVectorTable",
+      "Get-ADResourceProperty",
+      "Get-ADResourcePropertyList",
+      "Get-ADResourcePropertyValueType",
+      "Get-ADRootDSE",
+      "Get-ADServiceAccount",
+      "Get-ADTrust",
+      "Get-ADUser",
+      "Get-ADUserResultantPasswordPolicy",
+      "Get-Alias",
+      "Get-AppBackgroundTask",
+      "Get-AppLockerFileInformation",
+      "Get-AppLockerPolicy",
+      "Get-AppPackage",
+      "Get-AppPackageDefaultVolume",
+      "Get-AppPackageLastError",
+      "Get-AppPackageLog",
+      "Get-AppPackageManifest",
+      "Get-AppPackageVolume",
+      "Get-AppProvisionedPackage",
+      "Get-AppvVirtualProcess",
+      "Get-AppxDefaultVolume",
+      "Get-AppxLastError",
+      "Get-AppxLog",
+      "Get-AppxPackage",
+      "Get-AppxPackageManifest",
+      "Get-AppxProvisionedPackage",
+      "Get-AppxVolume",
+      "Get-AssignedAccess",
+      "Get-AuthenticodeSignature",
+      "Get-AutologgerConfig",
+      "Get-AvailableApp",
+      "Get-BCClientConfiguration",
+      "Get-BCContentServerConfiguration",
+      "Get-BCDataCache",
+      "Get-BCDataCacheExtension",
+      "Get-BCHashCache",
+      "Get-BCHostedCacheServerConfiguration",
+      "Get-BCNetworkConfiguration",
+      "Get-BCStatus",
+      "Get-BgpCustomRoute",
+      "Get-BgpPeer",
+      "Get-BgpRouteAggregate",
+      "Get-BgpRouteFlapDampening",
+      "Get-BgpRouteInformation",
+      "Get-BgpRouter",
+      "Get-BgpRoutingPolicy",
+      "Get-BgpStatistics",
+      "Get-BitLockerVolume",
+      "Get-BitsTransfer",
+      "Get-BpaModel",
+      "Get-BpaResult",
+      "Get-Certificate",
+      "Get-CertificateAutoEnrollmentPolicy",
+      "Get-CertificateEnrollmentPolicyServer",
+      "Get-CertificateNotificationTask",
+      "Get-ChildItem",
+      "Get-CimAssociatedInstance",
+      "Get-CimClass",
+      "Get-CimInstance",
+      "Get-CimSession",
+      "Get-CIPolicy",
+      "Get-CIPolicyIdInfo",
+      "Get-CIPolicyInfo",
+      "Get-Clipboard",
+      "Get-ClusteredScheduledTask",
+      "Get-CmsMessage",
+      "Get-ComputeProcess",
+      "Get-ComputerInfo",
+      "Get-ComputerRestorePoint",
+      "Get-ConnectionBrokerHighAvailability",
+      "Get-Content",
+      "Get-ControlPanelItem",
+      "Get-Counter",
+      "Get-CounterSample",
+      "Get-Credential",
+      "Get-Culture",
+      "Get-DAAppServer",
+      "Get-DAClient",
+      "Get-DAClientDnsConfiguration",
+      "Get-DAClientExperienceConfiguration",
+      "Get-DAConnectionStatus",
+      "Get-DAEntryPoint",
+      "Get-DAEntryPointDC",
+      "Get-DAEntryPointTableItem",
+      "Get-DAMgmtServer",
+      "Get-DAMultiSite",
+      "Get-DANetworkLocationServer",
+      "Get-DAOtpAuthentication",
+      "Get-DAPolicyChange",
+      "Get-DAServer",
+      "Get-Date",
+      "Get-DedupProperties",
+      "Get-DeliveryOptimizationLog",
+      "Get-DeliveryOptimizationLogAnalysis",
+      "Get-DeliveryOptimizationPerfSnap",
+      "Get-DeliveryOptimizationPerfSnapThisMonth",
+      "Get-DeliveryOptimizationStatus",
+      "Get-DeploymentGatewayConfiguration",
+      "Get-DfsnAccess",
+      "Get-DfsnFolder",
+      "Get-DfsnFolderTarget",
+      "Get-DfsnRoot",
+      "Get-DfsnRootTarget",
+      "Get-DfsnServerConfiguration",
+      "Get-DfsrBacklog",
+      "Get-DfsrCloneState",
+      "Get-DfsrConnection",
+      "Get-DfsrConnectionSchedule",
+      "Get-DfsrDelegation",
+      "Get-DfsReplicatedFolder",
+      "Get-DfsReplicationGroup",
+      "Get-DfsrFileHash",
+      "Get-DfsrGroupSchedule",
+      "Get-DfsrIdRecord",
+      "Get-DfsrMember",
+      "Get-DfsrMembership",
+      "Get-DfsrPreservedFiles",
+      "Get-DfsrServiceConfiguration",
+      "Get-DfsrState",
+      "Get-Disk",
+      "Get-DiskImage",
+      "Get-DiskSNV",
+      "Get-DiskStorageNodeView",
+      "Get-DnsClient",
+      "Get-DnsClientCache",
+      "Get-DnsClientGlobalSetting",
+      "Get-DnsClientNrptGlobal",
+      "Get-DnsClientNrptPolicy",
+      "Get-DnsClientNrptRule",
+      "Get-DnsClientServerAddress",
+      "Get-DOConfig",
+      "Get-DODownloadMode",
+      "Get-DOPercentageMaxBackgroundBandwidth",
+      "Get-DOPercentageMaxForegroundBandwidth",
+      "Get-DscAction",
+      "Get-DscConfiguration",
+      "Get-DSCConfiguration",
+      "Get-DscConfigurationStatus",
+      "Get-DscDocument",
+      "Get-DscLocalConfigurationManager",
+      "Get-DSCLocalConfigurationManager",
+      "Get-DscModule",
+      "Get-DscResource",
+      "Get-Dtc",
+      "Get-DtcAdvancedHostSetting",
+      "Get-DtcAdvancedSetting",
+      "Get-DtcClusterDefault",
+      "Get-DtcClusterTMMapping",
+      "Get-DtcDefault",
+      "Get-DtcLog",
+      "Get-DtcNetworkSetting",
+      "Get-DtcTransaction",
+      "Get-DtcTransactionsStatistics",
+      "Get-DtcTransactionsTraceSession",
+      "Get-DtcTransactionsTraceSetting",
+      "Get-EtwTraceProvider",
+      "Get-EtwTraceSession",
+      "Get-Event",
+      "Get-EventLog",
+      "Get-EventSubscriber",
+      "Get-ExecutionPolicy",
+      "Get-FileHash",
+      "Get-FileIntegrity",
+      "Get-FileShare",
+      "Get-FileShareAccessControlEntry",
+      "Get-FileStorageTier",
+      "Get-FileTypeAssociation",
+      "Get-FormatData",
+      "Get-GPInheritance",
+      "Get-GPO",
+      "Get-GPOReport",
+      "Get-GPPermission",
+      "Get-GPPermissions",
+      "Get-GPPrefRegistryValue",
+      "Get-GPRegistryValue",
+      "Get-GPResultantSetOfPolicy",
+      "Get-GPStarterGPO",
+      "Get-Help",
+      "Get-HgsAttestationBaselinePolicy",
+      "Get-HgsClientConfiguration",
+      "Get-HgsClientHostKey",
+      "Get-HgsGuardian",
+      "Get-HgsTrace",
+      "Get-HgsTraceFileData",
+      "Get-Host",
+      "Get-HotFix",
+      "Get-InitiatorId",
+      "Get-InitiatorPort",
+      "Get-IpamAddress",
+      "Get-IpamAddressSpace",
+      "Get-IpamAddressUtilizationThreshold",
+      "Get-IpamBlock",
+      "Get-IpamCapability",
+      "Get-IpamConfiguration",
+      "Get-IpamConfigurationEvent",
+      "Get-IpamCustomField",
+      "Get-IpamCustomFieldAssociation",
+      "Get-IpamDatabase",
+      "Get-IpamDhcpConfigurationEvent",
+      "Get-IpamDhcpScope",
+      "Get-IpamDhcpServer",
+      "Get-IpamDhcpSuperscope",
+      "Get-IpamDiscoveryDomain",
+      "Get-IpamDnsConditionalForwarder",
+      "Get-IpamDnsResourceRecord",
+      "Get-IpamDnsServer",
+      "Get-IpamDnsZone",
+      "Get-IpamIpAddressAuditEvent",
+      "Get-IpamRange",
+      "Get-IpamServerInventory",
+      "Get-IpamSubnet",
+      "Get-IscsiConnection",
+      "Get-IscsiServerTarget",
+      "Get-IscsiSession",
+      "Get-IscsiTarget",
+      "Get-IscsiTargetPortal",
+      "Get-IscsiTargetServerSetting",
+      "Get-IscsiVirtualDisk",
+      "Get-IscsiVirtualDiskSnapshot",
+      "Get-IseSnippet",
+      "Get-Item",
+      "Get-ItemProperty",
+      "Get-ItemPropertyValue",
+      "Get-JobTrigger",
+      "Get-KdsConfiguration",
+      "Get-KdsRootKey",
+      "Get-KeyProtectorFromShieldingDataFile",
+      "Get-LicenseConfiguration",
+      "Get-LocalGroup",
+      "Get-LocalGroupMember",
+      "Get-LocalUser",
+      "Get-Location",
+      "Get-LogProperties",
+      "Get-MaskingSet",
+      "Get-Member",
+      "Get-MMAgent",
+      "Get-MpComputerStatus",
+      "Get-MpPreference",
+      "Get-MpThreat",
+      "Get-MpThreatCatalog",
+      "Get-MpThreatDetection",
+      "Get-NCSIPolicyConfiguration",
+      "Get-Net",
+      "Get-NetAdapter",
+      "Get-NetAdapterAdvancedProperty",
+      "Get-NetAdapterBinding",
+      "Get-NetAdapterChecksumOffload",
+      "Get-NetAdapterEncapsulatedPacketTaskOffload",
+      "Get-NetAdapterHardwareInfo",
+      "Get-NetAdapterIPsecOffload",
+      "Get-NetAdapterLso",
+      "Get-NetAdapterPacketDirect",
+      "Get-NetAdapterPowerManagement",
+      "Get-NetAdapterQos",
+      "Get-NetAdapterRdma",
+      "Get-NetAdapterRsc",
+      "Get-NetAdapterRss",
+      "Get-NetAdapterSriov",
+      "Get-NetAdapterSriovVf",
+      "Get-NetAdapterStatistics",
+      "Get-NetAdapterUso",
+      "Get-NetAdapterVmq",
+      "Get-NetAdapterVMQQueue",
+      "Get-NetAdapterVPort",
+      "Get-NetCompartment",
+      "Get-NetConnectionProfile",
+      "Get-NetDnsTransitionConfiguration",
+      "Get-NetDnsTransitionMonitoring",
+      "Get-NetEventNetworkAdapter",
+      "Get-NetEventPacketCaptureProvider",
+      "Get-NetEventProvider",
+      "Get-NetEventSession",
+      "Get-NetEventVFPProvider",
+      "Get-NetEventVmNetworkAdapter",
+      "Get-NetEventVmSwitch",
+      "Get-NetEventVmSwitchProvider",
+      "Get-NetEventWFPCaptureProvider",
+      "Get-NetFirewallAddressFilter",
+      "Get-NetFirewallApplicationFilter",
+      "Get-NetFirewallInterfaceFilter",
+      "Get-NetFirewallInterfaceTypeFilter",
+      "Get-NetFirewallPortFilter",
+      "Get-NetFirewallProfile",
+      "Get-NetFirewallRule",
+      "Get-NetFirewallSecurityFilter",
+      "Get-NetFirewallServiceFilter",
+      "Get-NetFirewallSetting",
+      "Get-NetIPAddress",
+      "Get-NetIPConfiguration",
+      "Get-NetIPHttpsConfiguration",
+      "Get-NetIPHttpsState",
+      "Get-NetIPInterface",
+      "Get-NetIPsecDospSetting",
+      "Get-NetIPsecMainModeCryptoSet",
+      "Get-NetIPsecMainModeRule",
+      "Get-NetIPsecMainModeSA",
+      "Get-NetIPsecPhase",
+      "Get-NetIPsecQuickModeCryptoSet",
+      "Get-NetIPsecQuickModeSA",
+      "Get-NetIPsecRule",
+      "Get-NetIPv",
+      "Get-NetIsatapConfiguration",
+      "Get-NetLbfoTeam",
+      "Get-NetLbfoTeamMember",
+      "Get-NetLbfoTeamNic",
+      "Get-NetNat",
+      "Get-NetNatExternalAddress",
+      "Get-NetNatGlobal",
+      "Get-NetNatSession",
+      "Get-NetNatStaticMapping",
+      "Get-NetNatTransitionConfiguration",
+      "Get-NetNatTransitionMonitoring",
+      "Get-NetNeighbor",
+      "Get-NetOffloadGlobalSetting",
+      "Get-NetPrefixPolicy",
+      "Get-NetQosPolicy",
+      "Get-NetRoute",
+      "Get-NetSwitchTeam",
+      "Get-NetSwitchTeamMember",
+      "Get-NetTCPConnection",
+      "Get-NetTCPSetting",
+      "Get-NetTeredoConfiguration",
+      "Get-NetTeredoState",
+      "Get-NetTransportFilter",
+      "Get-NetUDPEndpoint",
+      "Get-NetUDPSetting",
+      "Get-NetworkControllerDeploymentInfo",
+      "Get-NetworkControllerManagedDevices",
+      "Get-NetworkControllerReplica",
+      "Get-NetworkSwitchEthernetPort",
+      "Get-NetworkSwitchFeature",
+      "Get-NetworkSwitchGlobalData",
+      "Get-NetworkSwitchVlan",
+      "Get-NfsClientConfiguration",
+      "Get-NfsClientgroup",
+      "Get-NfsClientLock",
+      "Get-NfsMappedIdentity",
+      "Get-NfsMappingStore",
+      "Get-NfsMountedClient",
+      "Get-NfsNetgroup",
+      "Get-NfsNetgroupStore",
+      "Get-NfsOpenFile",
+      "Get-NfsServerConfiguration",
+      "Get-NfsSession",
+      "Get-NfsShare",
+      "Get-NfsSharePermission",
+      "Get-NfsStatistics",
+      "Get-NonRemovableAppsPolicy",
+      "Get-OdbcDriver",
+      "Get-OdbcDsn",
+      "Get-OdbcPerfCounter",
+      "Get-OffloadDataTransferSetting",
+      "Get-Partition",
+      "Get-PartitionSupportedSize",
+      "Get-PcsvDevice",
+      "Get-PcsvDeviceLog",
+      "Get-PerformanceCollector",
+      "Get-PersonalSessionDesktopAssignment",
+      "Get-PersonalVirtualDesktopAssignment",
+      "Get-PersonalVirtualDesktopPatchSchedule",
+      "Get-PfxCertificate",
+      "Get-PfxData",
+      "Get-PhysicalDisk",
+      "Get-PhysicalDiskSNV",
+      "Get-PhysicalDiskStorageNodeView",
+      "Get-PhysicalExtent",
+      "Get-PhysicalExtentAssociation",
+      "Get-PlatformIdentifier",
+      "Get-PmemDisk",
+      "Get-PmemPhysicalDevice",
+      "Get-PmemUnusedRegion",
+      "Get-PnpDevice",
+      "Get-PnpDeviceProperty",
+      "Get-PrintConfiguration",
+      "Get-Printer",
+      "Get-PrinterDriver",
+      "Get-PrinterPort",
+      "Get-PrinterProperty",
+      "Get-PrintJob",
+      "Get-Process",
+      "Get-ProcessMitigation",
+      "Get-ProvisionedAppPackage",
+      "Get-ProvisionedAppxPackage",
+      "Get-ProvisioningPackage",
+      "Get-PSBreakpoint",
+      "Get-PSCallStack",
+      "Get-PSDrive",
+      "Get-PSProvider",
+      "Get-Random",
+      "Get-RDVirtualDesktopCollectionJobStatus",
+      "Get-RemoteAccess",
+      "Get-RemoteAccessAccounting",
+      "Get-RemoteAccessConfiguration",
+      "Get-RemoteAccessConnectionStatistics",
+      "Get-RemoteAccessConnectionStatisticsSummary",
+      "Get-RemoteAccessHealth",
+      "Get-RemoteAccessIPFilter",
+      "Get-RemoteAccessLoadBalancer",
+      "Get-RemoteAccessRadius",
+      "Get-RemoteAccessRoutingDomain",
+      "Get-RemoteAccessUserActivity",
+      "Get-RemoteApp",
+      "Get-RemoteDesktop",
+      "Get-ResiliencySetting",
+      "Get-RoutingProtocolPreference",
+      "Get-Runspace",
+      "Get-RunspaceDebug",
+      "Get-ScheduledJob",
+      "Get-ScheduledJobOption",
+      "Get-ScheduledTask",
+      "Get-ScheduledTaskInfo",
+      "Get-SecureBootPolicy",
+      "Get-SecureBootUEFI",
+      "Get-Server",
+      "Get-ServerBpaResult",
+      "Get-ServerClusterName",
+      "Get-ServerEvent",
+      "Get-ServerFeature",
+      "Get-ServerInventory",
+      "Get-ServerService",
+      "Get-Service",
+      "Get-SessionCollection",
+      "Get-SessionCollectionConfiguration",
+      "Get-SessionHost",
+      "Get-ShieldedVMProvisioningStatus",
+      "Get-SmbBandWidthLimit",
+      "Get-SmbClientConfiguration",
+      "Get-SmbClientNetworkInterface",
+      "Get-SmbConnection",
+      "Get-SmbDelegation",
+      "Get-SmbGlobalMapping",
+      "Get-SmbMapping",
+      "Get-SmbMultichannelConnection",
+      "Get-SmbMultichannelConstraint",
+      "Get-SmbOpenFile",
+      "Get-SmbServerCertificateMapping",
+      "Get-SmbServerConfiguration",
+      "Get-SmbServerNetworkInterface",
+      "Get-SmbSession",
+      "Get-SmbShare",
+      "Get-SmbShareAccess",
+      "Get-SmbWitnessClient",
+      "Get-StartApps",
+      "Get-StorageAdvancedProperty",
+      "Get-StorageBusBinding",
+      "Get-StorageBusDisk",
+      "Get-StorageChassis",
+      "Get-StorageDiagnosticInfo",
+      "Get-StorageEnclosure",
+      "Get-StorageEnclosureSNV",
+      "Get-StorageEnclosureStorageNodeView",
+      "Get-StorageEnclosureVendorData",
+      "Get-StorageExtendedStatus",
+      "Get-StorageFaultDomain",
+      "Get-StorageFileServer",
+      "Get-StorageFirmwareInformation",
+      "Get-StorageHealthAction",
+      "Get-StorageHealthReport",
+      "Get-StorageHealthSetting",
+      "Get-StorageHistory",
+      "Get-StorageJob",
+      "Get-StorageNode",
+      "Get-StoragePool",
+      "Get-StorageProvider",
+      "Get-StorageRack",
+      "Get-StorageReliabilityCounter",
+      "Get-StorageScaleUnit",
+      "Get-StorageSetting",
+      "Get-StorageSite",
+      "Get-StorageSubSystem",
+      "Get-StorageTier",
+      "Get-StorageTierSupportedSize",
+      "Get-SupportedClusterSizes",
+      "Get-SupportedFileSystems",
+      "Get-SystemDriver",
+      "Get-TargetPort",
+      "Get-TargetPortal",
+      "Get-TimeZone",
+      "Get-TlsCipherSuite",
+      "Get-TlsEccCurve",
+      "Get-Tpm",
+      "Get-TpmEndorsementKeyInfo",
+      "Get-TpmSupportedFeature",
+      "Get-TraceSource",
+      "Get-Transaction",
+      "Get-TroubleshootingPack",
+      "Get-TrustedProvisioningCertificate",
+      "Get-TypeData",
+      "Get-UICulture",
+      "Get-Unique",
+      "Get-UserSession",
+      "Get-Variable",
+      "Get-VHD",
+      "Get-VHDSet",
+      "Get-VHDSnapshot",
+      "Get-VirtualDesktop",
+      "Get-VirtualDesktopCollection",
+      "Get-VirtualDesktopCollectionConfiguration",
+      "Get-VirtualDesktopCollectionJobStatus",
+      "Get-VirtualDesktopConcurrency",
+      "Get-VirtualDesktopIdleCount",
+      "Get-VirtualDesktopTemplateExportPath",
+      "Get-VirtualDisk",
+      "Get-VirtualDiskSupportedSize",
+      "Get-VM",
+      "Get-VMAssignableDevice",
+      "Get-VMBios",
+      "Get-VMCheckpoint",
+      "Get-VMComPort",
+      "Get-VMConnectAccess",
+      "Get-VMDvdDrive",
+      "Get-VMFibreChannelHba",
+      "Get-VMFirmware",
+      "Get-VMFloppyDiskDrive",
+      "Get-VMGpuPartitionAdapter",
+      "Get-VMGroup",
+      "Get-VMHardDiskDrive",
+      "Get-VMHost",
+      "Get-VMHostAssignableDevice",
+      "Get-VMHostCluster",
+      "Get-VMHostNumaNode",
+      "Get-VMHostNumaNodeStatus",
+      "Get-VMHostSupportedVersion",
+      "Get-VMIdeController",
+      "Get-VMIntegrationService",
+      "Get-VMKeyProtector",
+      "Get-VMKeyStorageDrive",
+      "Get-VMMemory",
+      "Get-VMMigrationNetwork",
+      "Get-VMNetworkAdapter",
+      "Get-VMNetworkAdapterAcl",
+      "Get-VMNetworkAdapterExtendedAcl",
+      "Get-VMNetworkAdapterFailoverConfiguration",
+      "Get-VmNetworkAdapterIsolation",
+      "Get-VMNetworkAdapterIsolation",
+      "Get-VMNetworkAdapterRdma",
+      "Get-VMNetworkAdapterRoutingDomainMapping",
+      "Get-VMNetworkAdapterTeamMapping",
+      "Get-VMNetworkAdapterVlan",
+      "Get-VMPartitionableGpu",
+      "Get-VMPmemController",
+      "Get-VMProcessor",
+      "Get-VMRemoteFx",
+      "Get-VMRemoteFXPhysicalVideoAdapter",
+      "Get-VMReplication",
+      "Get-VMReplicationAuthorizationEntry",
+      "Get-VMReplicationServer",
+      "Get-VMResourcePool",
+      "Get-VMSan",
+      "Get-VMScsiController",
+      "Get-VMSecurity",
+      "Get-VMSnapshot",
+      "Get-VMStoragePath",
+      "Get-VMStorageSettings",
+      "Get-VMSwitch",
+      "Get-VMSwitchExtension",
+      "Get-VMSwitchExtensionPortData",
+      "Get-VMSwitchExtensionPortFeature",
+      "Get-VMSwitchExtensionSwitchData",
+      "Get-VMSwitchExtensionSwitchFeature",
+      "Get-VMSwitchTeam",
+      "Get-VMSystemSwitchExtension",
+      "Get-VMSystemSwitchExtensionPortFeature",
+      "Get-VMSystemSwitchExtensionSwitchFeature",
+      "Get-VMVideo",
+      "Get-Volume",
+      "Get-VolumeCorruptionCount",
+      "Get-VolumeScrubPolicy",
+      "Get-VpnAuthProtocol",
+      "Get-VpnConnection",
+      "Get-VpnConnectionTrigger",
+      "Get-VpnS",
+      "Get-VpnServerConfiguration",
+      "Get-VpnSstpProxyRule",
+      "Get-WdacBidTrace",
+      "Get-WheaMemoryPolicy",
+      "Get-WIMBootEntry",
+      "Get-WinAcceptLanguageFromLanguageListOptOut",
+      "Get-WinCultureFromLanguageListOptOut",
+      "Get-WinDefaultInputMethodOverride",
+      "Get-WindowsCapability",
+      "Get-WindowsDeveloperLicense",
+      "Get-WindowsDriver",
+      "Get-WindowsEdition",
+      "Get-WindowsErrorReporting",
+      "Get-WindowsFeature",
+      "Get-WindowsImage",
+      "Get-WindowsImageContent",
+      "Get-WindowsOptionalFeature",
+      "Get-WindowsPackage",
+      "Get-WindowsReservedStorageState",
+      "Get-WindowsSearchSetting",
+      "Get-WindowsUpdateLog",
+      "Get-WinEvent",
+      "Get-WinHomeLocation",
+      "Get-WinLanguageBarOption",
+      "Get-WinSystemLocale",
+      "Get-WinUILanguageOverride",
+      "Get-WinUserLanguageList",
+      "Get-WmiObject",
+      "Get-Workspace",
+      "Get-WSManCredSSP",
+      "Get-WSManInstance",
+      "Get-WsusClassification",
+      "Get-WsusComputer",
+      "Get-WsusDynamicCategory",
+      "Get-WsusProduct",
+      "Get-WsusServer",
+      "Get-WsusUpdate",
+      "Get-WUAVersion",
+      "Get-WUIsPendingReboot",
+      "Get-WULastInstallationDate",
+      "Get-WULastScanSuccessDate"
+    ]
+  },
+  {
+    "id": "299",
+    "title": "Get-NetAdapter |",
+    "language": "powershell",
+    "category": "Get-NetAdapter",
+    "type": "command",
+    "guid": "f7edeef2-2083-4c50-bbde-06e1a17e1d20",
+    "url": "",
+    "modified": "2022-05-07T10:31:02Z",
+    "created": "2022-05-03T17:53:44Z",
+    "tags": [
+      "network"
+    ],
+    "description": [],
+    "cli": [
+      "Get-NetAdapter | Format-Table  -AutoSize -Wrap"
+    ],
+    "example": [],
+    "output": [
+      "Name                       InterfaceDescription              ifIndex Status MacAddress         LinkSpeed",
+      "----                       --------------------              ------- ------ ----------         ---------",
+      "vEthernet (Default Switch) Hyper-V Virtual Ethernet Adapter       45 Up     00-15-5D-G3-85-46    10 Gbps",
+      "Wi-Fi                      Intel(R) Wi-Fi 6 AX201 160MHz          18 Up     FE-D9-C4-E6-18-B1 866.7 Mbps",
+      "Ethernet 3                 PANGP Virtual Ethernet Adapter #2       7 Up     01-50-41-40-42-01     2 Gbps",
+      ""
+    ]
+  },
+  {
+    "id": "298",
+    "title": "Get-WmiObject - get network adapter config",
+    "language": "powershell",
+    "category": "Get-WmiObject",
+    "type": "command",
+    "guid": "30d8adcc-e943-4089-8cc4-48d340817fcd",
+    "url": "",
+    "modified": "2022-05-03T17:51:56Z",
+    "created": "2022-05-03T17:51:56Z",
+    "tags": [],
+    "description": [],
+    "cli": [
+      "Get-WmiObject win32_networkadapterconfiguration | Format-Table DHCPEnabled,ServiceName,Description -AutoSize -Wrap | Format-Wide -Column 3"
+    ],
+    "example": [],
+    "output": [
+      "DHCPEnabled ServiceName  Description",
+      "----------- -----------  -----------",
+      "       True kdnic        Microsoft Kernel Debug Network Adapter",
+      "      False VMSMP        Hyper-V Virtual Switch Extension Adapter",
+      "      False VMSNPXYMP    Hyper-V Virtual Ethernet Adapter",
+      "       True Netwtw10.    Intel(R) Wi-Fi 6 AX201 160MHz",
+      "       True vwifimp      Microsoft Wi-Fi Direct Virtual Adapter",
+      "       True vwifimp      Microsoft Wi-Fi Direct Virtual Adapter",
+      "      False PanGpd       PANGP Virtual Ethernet Adapter #2",
+      "      False RasSstp      WAN Miniport (SSTP)",
+      "      False RasAgileVpn  WAN Miniport (IKEv2)",
+      "      False Rasl2tp      WAN Miniport (L2TP)",
+      "      False PptpMiniport WAN Miniport (PPTP)",
+      "      False RasPppoe     WAN Miniport (PPPOE)",
+      "      False NdisWan      WAN Miniport (IP)",
+      "      False NdisWan      WAN Miniport (IPv6)",
+      "      False NdisWan      WAN Miniport (Network Monitor)",
+      ""
+    ]
+  },
+  {
+    "id": "297",
+    "title": "curl - search dictionaries ",
+    "language": "bash",
+    "category": "curl",
+    "type": "command",
+    "guid": "da567996-3882-4be8-b117-f850d48bedef",
+    "url": "https://csonuryilmaz.github.io/curl/dict/2018/03/25/search-dictionary-from-command-line-(part1).html",
+    "modified": "2022-05-03T09:05:14Z",
+    "created": "2022-05-03T09:05:14Z",
+    "tags": [],
+    "description": [],
+    "cli": [
+      "# list dictionaries",
+      "curl dict://dict.org/show:db",
+      "",
+      "# search word in a specific dictionary",
+      "curl dict://dict.org/d:computer:fd-eng-tur",
+      ""
+    ],
+    "example": [],
+    "output": [
+      "$ curl dict://dict.org/d:nfs:foldoc",
+      "220 dict.dict.org dictd 1.12.1/rf on Linux 4.19.0-10-amd64 <auth.mime> <113630767.10835.1651568641@dict.dict.org>",
+      "250 ok",
+      "150 1 definitions retrieved",
+      "151 \"nfs\" foldoc \"The Free On-line Dictionary of Computing (30 December 2018)\"",
+      "Network File System",
+      "NFS",
+      "",
+      "   <networking, operating system> (NFS) A {protocol} developed by",
+      "   {Sun Microsystems}, and defined in {RFC 1094}, which allows a",
+      "   computer to access files over a network as if they were on its",
+      "   local disks.  This {protocol} has been incorporated in",
+      "   products by more than two hundred companies, and is now a {de",
+      "   facto} standard.  NFS is implemented using a {connectionless",
+      "   protocol} ({UDP}) in order to make it {stateless}.",
+      "",
+      "   See {Nightmare File System}, {WebNFS}.",
+      "",
+      "   (1994-12-12)",
+      "",
+      "250 ok [d/m/c = 1/0/13; 0.000r 0.000u 0.000s]",
+      "221 bye [d/m/c = 0/0/0; 0.000r 0.000u 0.000s]",
+      "$  curl dict://dict.org/show:db",
+      "220 dict.dict.org dictd 1.12.1/rf on Linux 4.19.0-10-amd64 <auth.mime> <113630281.10315.1651568481@dict.dict.org>",
+      "250 ok",
+      "110 166 databases present",
+      "gcide \"The Collaborative International Dictionary of English v.0.48\"",
+      "wn \"WordNet (r) 3.0 (2006)\"",
+      "moby-thesaurus \"Moby Thesaurus II by Grady Ward, 1.0\"",
+      "elements \"The Elements (07Nov00)\"",
+      "vera \"V.E.R.A. -- Virtual Entity of Relevant Acronyms (February 2016)\"",
+      "jargon \"The Jargon File (version 4.4.7, 29 Dec 2003)\"",
+      "foldoc \"The Free On-line Dictionary of Computing (30 December 2018)\"",
+      "easton \"Easton's 1897 Bible Dictionary\"",
+      "hitchcock \"Hitchcock's Bible Names Dictionary (late 1800's)\"",
+      "bouvier \"Bouvier's Law Dictionary, Revised 6th Ed (1856)\"",
+      "devil \"The Devil's Dictionary (1881-1906)\"",
+      "world02 \"CIA World Factbook 2002\"",
+      "gaz2k-counties \"U.S. Gazetteer Counties (2000)\"",
+      "gaz2k-places \"U.S. Gazetteer Places (2000)\"",
+      "gaz2k-zips \"U.S. Gazetteer Zip Code Tabulation Areas (2000)\"",
+      "fd-hrv-eng \"Croatian-English FreeDict Dictionary ver. 0.1.2\"",
+      "fd-fin-por \"suomi-português FreeDict+WikDict dictionary ver. 2018.09.13\"",
+      "fd-fin-bul \"suomi-български език FreeDict+WikDict dictionary ver. 2018.09.13\"",
+      "fd-fra-bul \"français-български език FreeDict+WikDict dictionary ver. 2018.09.13\"",
+      "fd-deu-swe \"Deutsch-Svenska FreeDict+WikDict dictionary ver. 2018.09.13\"",
+      "fd-fin-swe \"suomi-Svenska FreeDict+WikDict dictionary ver. 2018.09.13\"",
+      "fd-jpn-rus \"Japanese-Russian FreeDict Dictionary ver. 0.1\"",
+      "fd-wol-fra \"Wolof - French FreeDict dictionary ver. 0.1\"",
+      "fd-fra-pol \"français-język polski FreeDict+WikDict dictionary ver. 2018.09.13\"",
+      "fd-eng-deu \"English-German FreeDict Dictionary ver. 0.3.7\"",
+      "fd-deu-nld \"German-Dutch FreeDict Dictionary ver. 0.1.4\"",
+      "fd-por-eng \"Portuguese-English FreeDict Dictionary ver. 0.2\"",
+      "fd-spa-deu \"Spanish-German FreeDict Dictionary ver. 0.1\"",
+      "fd-ces-eng \"Czech-English FreeDict Dictionary ver. 0.2.3\"",
+      "fd-swe-fin \"Svenska-suomi FreeDict+WikDict dictionary ver. 2018.09.13\"",
+      "fd-eng-pol \"English - Polish Piotrowski+Saloni/FreeDict dictionary ver. 0.2\"",
+      "fd-pol-nor \"język polski-Norsk FreeDict+WikDict dictionary ver. 2018.09.13\"",
+      "fd-eng-rom \"English-Romanian FreeDict Dictionary ver. 0.6.3\"",
+      "fd-eng-fra \"English-French FreeDict Dictionary ver. 0.1.6\"",
+      "fd-fin-ell \"suomi-ελληνικά FreeDict+WikDict dictionary ver. 2018.09.13\"",
+      "fd-eng-lit \"English-Lithuanian FreeDict Dictionary ver. 0.7.2\"",
+      "fd-ckb-kmr \"Sorani-Kurmanji Ferheng/FreeDict Dictionary ver. 0.2\"",
+      "fd-ita-eng \"Italian-English FreeDict Dictionary ver. 0.2\"",
+      "fd-pol-eng \"język polski-English FreeDict+WikDict dictionary ver. 2018.09.13\"",
+      "fd-gle-eng \"Irish-English FreeDict Dictionary ver. 0.2\"",
+      "fd-eng-tur \"English-Turkish FreeDict Dictionary ver. 0.3\"",
+      "fd-gle-pol \"Irish-Polish FreeDict Dictionary ver. 0.1.2\"",
+      "fd-pol-deu \"język polski-Deutsch FreeDict+WikDict dictionary ver. 2018.09.13\"",
+      "fd-fra-spa \"français-español FreeDict+WikDict dictionary ver. 2018.09.13\"",
+      "fd-lit-eng \"Lithuanian-English FreeDict Dictionary ver. 0.7.2\"",
+      "fd-eng-jpn \"English-日本語 (にほんご) FreeDict+WikDict dictionary ver. 2018.09.13\"",
+      "fd-ara-eng \"Arabic-English FreeDict Dictionary ver. 0.6.3\"",
+      "fd-nld-ita \"Nederlands-italiano FreeDict+WikDict dictionary ver. 2018.09.13\"",
+      "fd-eng-lat \"English-Latin FreeDict Dictionary ver. 0.1.2\"",
+      "fd-eng-hun \"English-Hungarian FreeDict Dictionary ver. 0.2.1\"",
+      "fd-ita-jpn \"italiano-日本語 (にほんご) FreeDict+WikDict dictionary ver. 2018.09.13\"",
+      "fd-dan-eng \"Danish-English FreeDict Dictionary ver. 0.2.2\"",
+      "fd-hun-eng \"Hungarian-English FreeDict Dictionary ver. 0.4.1\"",
+      "fd-pol-gle \"Polish-Irish FreeDict Dictionary ver. 0.1.2\"",
+      "fd-fra-fin \"français-suomi FreeDict+WikDict dictionary ver. 2018.09.13\"",
+      "fd-nld-swe \"Nederlands-Svenska FreeDict+WikDict dictionary ver. 2018.09.13\"",
+      "fd-nld-eng \"Dutch-English Freedict Dictionary ver. 0.2\"",
+      "fd-deu-kur \"German-Kurdish Ferheng/FreeDict Dictionary ver. 0.2.2\"",
+      "fd-deu-spa \"Deutsch-español FreeDict+WikDict dictionary ver. 2018.09.13\"",
+      "fd-eng-afr \"English-Afrikaans FreeDict Dictionary ver. 0.1.3\"",
+      "fd-eng-swe \"English-Swedish FreeDict Dictionary ver. 0.2\"",
+      "fd-jpn-deu \"Japanese-German FreeDict Dictionary ver. 0.2.0\"",
+      "fd-epo-eng \"Esperanto-English FreeDict dictionary ver. 1.0.1\"",
+      "fd-pol-nld \"język polski-Nederlands FreeDict+WikDict dictionary ver. 2018.09.13\"",
+      "fd-lat-deu \"Lateinisch-Deutsch FreeDict-Wörterbuch ver. 1.0.3\"",
+      "fd-eng-cym \"Eurfa Saesneg, English-Welsh Eurfa/Freedict dictionary ver. 0.2.3\"",
+      "fd-por-spa \"português-español FreeDict+WikDict dictionary ver. 2018.09.13\"",
+      "fd-eng-spa \"English-Spanish FreeDict Dictionary ver. 0.3\"",
+      "fd-swe-tur \"Svenska-Türkçe FreeDict+WikDict dictionary ver. 2018.09.13\"",
+      "fd-tur-eng \"Turkish-English FreeDict Dictionary ver. 0.3\"",
+      "fd-tur-deu \"Turkish-German FreeDict Dictionary ver. 0.2\"",
+      "fd-pol-fra \"język polski-français FreeDict+WikDict dictionary ver. 2018.09.13\"",
+      "fd-eng-por \"English-Portuguese FreeDict Dictionary ver. 0.3\"",
+      "fd-ita-pol \"italiano-język polski FreeDict+WikDict dictionary ver. 2018.09.13\"",
+      "fd-eng-ces \"English-Czech dicts.info/FreeDict Dictionary ver. 0.1.3\"",
+      "fd-deu-tur \"German-Turkish Ferheng/FreeDict Dictionary ver. 0.2.2\"",
+      "fd-fra-jpn \"français-日本語 (にほんご) FreeDict+WikDict dictionary ver. 2018.09.13\"",
+      "fd-cym-eng \"Eurfa Cymraeg, Welsh-English Eurfa/Freedict dictionary ver. 0.2.3\"",
+      "fd-bre-fra \"Breton-French FreeDict Dictionary (Geriadur Tomaz) ver. 0.8.3\"",
+      "fd-jpn-fra \"Japanese-French FreeDict Dictionary ver. 0.1\"",
+      "fd-nld-deu \"Dutch-German FreeDict Dictionary ver. 0.2\"",
+      "fd-eng-nld \"English-Dutch FreeDict Dictionary ver. 0.2\"",
+      "fd-deu-por \"German-Portuguese FreeDict Dictionary ver. 0.2.2\"",
+      "fd-eng-hrv \"English-Croatian FreeDict Dictionary ver. 0.2.2\"",
+      "fd-mkd-bul \"Macedonian - Bulgarian FreeDict Dictionary ver. 0.1.1\"",
+      "fd-swe-eng \"Swedish-English FreeDict Dictionary ver. 0.2\"",
+      "fd-pol-spa \"język polski-español FreeDict+WikDict dictionary ver. 2018.09.13\"",
+      "fd-jpn-eng \"Japanese-English FreeDict Dictionary ver. 0.1\"",
+      "fd-eng-ell \"English - Modern Greek XDXF/FreeDict dictionary ver. 0.1.1\"",
+      "fd-ita-por \"italiano-português FreeDict+WikDict dictionary ver. 2018.09.13\"",
+      "fd-pol-swe \"język polski-Svenska FreeDict+WikDict dictionary ver. 2018.09.13\"",
+      "fd-pol-fin \"język polski-suomi FreeDict+WikDict dictionary ver. 2018.09.13\"",
+      "fd-kur-tur \"Kurdish-Turkish Ferheng/FreeDict Dictionary ver. 0.1.2\"",
+      "fd-ita-swe \"italiano-Svenska FreeDict+WikDict dictionary ver. 2018.09.13\"",
+      "fd-eng-swh \"English-Swahili xFried/FreeDict Dictionary ver. 0.2.2\"",
+      "fd-kha-eng \"Khasi-English FreeDict Dictionary ver. 0.2.2\"",
+      "fd-fin-eng \"suomi-English FreeDict+WikDict dictionary ver. 2018.09.13\"",
+      "fd-eng-hin \"English-Hindi FreeDict Dictionary ver. 1.6\"",
+      "fd-spa-eng \"Spanish-English FreeDict Dictionary ver. 0.3\"",
+      "fd-afr-eng \"Afrikaans-English FreeDict Dictionary ver. 0.2.2\"",
+      "fd-ita-fin \"italiano-suomi FreeDict+WikDict dictionary ver. 2018.09.13\"",
+      "fd-eng-fin \"English-suomi FreeDict+WikDict dictionary ver. 2018.09.13\"",
+      "fd-fra-ita \"français-italiano FreeDict+WikDict dictionary ver. 2018.09.13\"",
+      "fd-deu-rus \"Deutsch-Русский FreeDict+WikDict dictionary ver. 2018.09.13\"",
+      "fd-deu-bul \"Deutsch-български език FreeDict+WikDict dictionary ver. 2018.09.13\"",
+      "fd-deu-pol \"Deutsch-język polski FreeDict+WikDict dictionary ver. 2018.09.13\"",
+      "fd-srp-eng \"Serbian - English FreeDict Dictionary ver. 0.2\"",
+      "fd-kur-deu \"Kurdish-German Ferheng/FreeDict Dictionary ver. 0.1.2\"",
+      "fd-spa-por \"Spanish-Portuguese FreeDict Dictionary ver. 0.2.1\"",
+      "fd-swe-pol \"Svenska-język polski FreeDict+WikDict dictionary ver. 2018.09.13\"",
+      "fd-swe-rus \"Svenska-Русский FreeDict+WikDict dictionary ver. 2018.09.13\"",
+      "fd-nld-spa \"Nederlands-español FreeDict+WikDict dictionary ver. 2018.09.13\"",
+      "fd-swh-pol \"Swahili-Polish SSSP/FreeDict Dictionary ver. 0.2.3\"",
+      "fd-oci-cat \"Lenga d'òc - Català FreeDict Dictionary ver. 0.1.1\"",
+      "fd-ita-rus \"italiano-Русский FreeDict+WikDict dictionary ver. 2018.09.13\"",
+      "fd-fra-ell \"français-ελληνικά FreeDict+WikDict dictionary ver. 2018.09.13\"",
+      "fd-eng-srp \"English-Serbian FreeDict Dictionary ver. 0.1.3\"",
+      "fd-fra-tur \"français-Türkçe FreeDict+WikDict dictionary ver. 2018.09.13\"",
+      "fd-fra-eng \"French-English FreeDict Dictionary ver. 0.4.1\"",
+      "fd-ita-ell \"italiano-ελληνικά FreeDict+WikDict dictionary ver. 2018.09.13\"",
+      "fd-kur-eng \"Kurdish-English Ferheng/FreeDict Dictionary ver. 1.2\"",
+      "fd-swe-deu \"Svenska-Deutsch FreeDict+WikDict dictionary ver. 2018.09.13\"",
+      "fd-swe-fra \"Svenska-français FreeDict+WikDict dictionary ver. 2018.09.13\"",
+      "fd-swe-lat \"Svenska-latine FreeDict+WikDict dictionary ver. 2018.09.13\"",
+      "fd-swe-ell \"Svenska-ελληνικά FreeDict+WikDict dictionary ver. 2018.09.13\"",
+      "fd-eng-rus \"English-Russian FreeDict Dictionary ver. 0.3.1\"",
+      "fd-pol-por \"język polski-português FreeDict+WikDict dictionary ver. 2018.09.13\"",
+      "fd-gla-deu \"Scottish Gaelic-German FreeDict Dictionary ver. 0.2\"",
+      "fd-eng-ita \"English-Italian FreeDict Dictionary ver. 0.1.2\"",
+      "fd-pol-ita \"język polski-italiano FreeDict+WikDict dictionary ver. 2018.09.13\"",
+      "fd-fra-swe \"français-Svenska FreeDict+WikDict dictionary ver. 2018.09.13\"",
+      "fd-isl-eng \"íslenska - English FreeDict Dictionary ver. 0.1.1\"",
+      "fd-swe-spa \"Svenska-español FreeDict+WikDict dictionary ver. 2018.09.13\"",
+      "fd-nno-nob \"Norwegian Nynorsk-Norwegian Bokmål FreeDict Dictionary ver. 0.1.1\"",
+      "fd-swe-ita \"Svenska-italiano FreeDict+WikDict dictionary ver. 2018.09.13\"",
+      "fd-fra-deu \"français-Deutsch FreeDict+WikDict dictionary ver. 2018.09.13\"",
+      "fd-fin-ita \"suomi-italiano FreeDict+WikDict dictionary ver. 2018.09.13\"",
+      "fd-nld-fra \"Nederlands-French FreeDict Dictionary ver. 0.2\"",
+      "fd-eng-ara \"English-Arabic FreeDict Dictionary ver. 0.6.3\"",
+      "fd-slk-eng \"Slovak-English FreeDict Dictionary ver. 0.2.1\"",
+      "fd-fra-por \"français-português FreeDict+WikDict dictionary ver. 2018.09.13\"",
+      "fd-spa-ast \"Spanish - Asturian FreeDict Dictionary ver. 0.1.1\"",
+      "fd-fin-jpn \"suomi-日本語 (にほんご) FreeDict+WikDict dictionary ver. 2018.09.13\"",
+      "fd-deu-ita \"German-Italian FreeDict Dictionary ver. 0.2\"",
+      "fd-swh-eng \"Swahili-English xFried/FreeDict Dictionary ver. 0.4.4\"",
+      "fd-fin-nor \"suomi-Norsk FreeDict+WikDict dictionary ver. 2018.09.13\"",
+      "fd-fra-nld \"French-Dutch FreeDict Dictionary ver. 0.2\"",
+      "fd-lat-eng \"Latin-English FreeDict Dictionary ver. 0.1.2\"",
+      "fd-eng-bul \"English-български език FreeDict+WikDict dictionary ver. 2018.09.13\"",
+      "fd-deu-fra \"Deutsch-français FreeDict+WikDict dictionary ver. 2018.09.13\"",
+      "fd-swe-bul \"Svenska-български език FreeDict+WikDict dictionary ver. 2018.09.13\"",
+      "fd-deu-eng \"German-English FreeDict Dictionary ver. 0.3.5\"",
+      "fd-pol-rus \"język polski-Русский FreeDict+WikDict dictionary ver. 2018.09.13\"",
+      "fd-ita-deu \"Italian-German FreeDict Dictionary ver. 0.2\"",
+      "fd-eng-gle \"English-Irish FreeDict Dictionary ver. 0.3.2\"",
+      "fd-swe-por \"Svenska-português FreeDict+WikDict dictionary ver. 2018.09.13\"",
+      "fd-afr-deu \"Afrikaans-German FreeDict Dictionary ver. 0.3.2\"",
+      "fd-por-deu \"Portuguese-German FreeDict Dictionary ver. 0.2\"",
+      "fd-fra-bre \"French-Breton FreeDict Dictionary (Geriadur Tomaz) ver. 0.2.7\"",
+      "fd-san-deu \"Sanskrit-German FreeDict Dictionary ver. 0.2.2\"",
+      "fd-kha-deu \"Khasi - German FreeDict Dictionary ver. 0.1.3\"",
+      "fd-fra-rus \"français-Русский FreeDict+WikDict dictionary ver. 2018.09.13\"",
+      "fd-pol-ell \"język polski-ελληνικά FreeDict+WikDict dictionary ver. 2018.09.13\"",
+      "english \"English Monolingual Dictionaries\"",
+      "trans \"Translating Dictionaries\"",
+      "all \"All Dictionaries (English-Only and Translating)\"",
+      ".",
+      "250 ok",
+      "221 bye [d/m/c = 0/0/0; 0.000r 0.000u 0.000s]",
+      ""
+    ]
+  },
+  {
+    "id": "296",
+    "title": "wget2 - get site stats and download files",
+    "language": "bash",
+    "category": "wget2",
+    "type": "command",
+    "guid": "7af0885c-62f6-469f-89a1-079ef1cc890e",
+    "url": "https://github.com/rockdaboot/wget2/blob/master/docs/wget2.md",
+    "modified": "2022-05-03T08:53:32Z",
+    "created": "2022-05-03T08:53:19Z",
+    "tags": [],
+    "description": [
+      "--stats-site=[FORMAT:]FILE",
+      "Save Site stats in format FORMAT, in file FILE.",
+      "",
+      "FORMAT can be human or csv. - is shorthand for stdout and h is shorthand for human.",
+      "",
+      "The CSV output format is",
+      "",
+      "ID,ParentID,URL,Status,Link,Method,Size,SizeDecompressed,TransferTime,ResponseTime,Encoding,Verification",
+      "",
+      "- **ID** - unique ID for a stats record.",
+      "- **ParentID** - ID of the parent document, relevant for `--recursive** - mode.",
+      "- **URL** - URL of the document.",
+      "- **Status** - HTTP response code or 0 if not applicable.",
+      "- **Link** - 1 means 'direkt link', 0 means 'redirection link'.",
+      "- **Method** - 1,2,3 mean GET, HEAD, POST request type.",
+      "- **Size** - size of downloaded body (theoretical value for HEAD requests).",
+      "- **SizeDecompressed** - size of decompressed body (0 for HEAD requests).",
+      "- **TransferTime** - ms between start of request and completed download.",
+      "- **ResponseTime** - ms between start of request and first response packet.",
+      "- **Encoding** - 0,1,2,3,4,5 mean server side compression was 'identity', 'gzip', 'deflate', 'lzma/xz', 'bzip2', 'brotli', 'zstd', 'lzip'",
+      "- **Verification** - PGP verification status. 0,1,2,3 mean 'none',  'valid', 'invalid', 'bad', 'missing'."
+    ],
+    "cli": [
+      "wget2 --stats-site=csv:out.csv --recursive kernel.org/doc/Documentation/process/"
+    ],
+    "example": [],
+    "output": []
+  },
+  {
     "id": "295",
     "title": "jq - target objects in array using key",
     "language": "bash",
@@ -9,7 +1182,9 @@
     "url": "",
     "modified": "2022-04-27T20:54:01Z",
     "created": "2022-04-27T20:54:01Z",
-    "tags": ["jq"],
+    "tags": [
+      "jq"
+    ],
     "description": [
       "   select(boolean_expression)",
       "       The function select(foo) produces its input unchanged if foo returns true for that input, and produces no output otherwise.",
@@ -28,7 +1203,12 @@
       "echo '[{\"id\": \"first\", \"val\": 1}, {\"id\": \"second\", \"val\": 2}]' | jq '.[] | select(.id == \"second\")'"
     ],
     "example": [],
-    "output": ["{", "  \"id\": \"second\",", "  \"val\": 2", "}"]
+    "output": [
+      "{",
+      "  \"id\": \"second\",",
+      "  \"val\": 2",
+      "}"
+    ]
   },
   {
     "id": "294",
@@ -40,7 +1220,9 @@
     "url": "https://stackoverflow.com/a/27872686",
     "modified": "2022-04-28T05:35:58Z",
     "created": "2022-04-27T19:01:32Z",
-    "tags": ["security"],
+    "tags": [
+      "security"
+    ],
     "description": [
       "Benjamin Armstrong posted an excellent article about self-elevating PowerShell scripts. There a few minor issue with his code; a modified version based on fixes suggested in the comment is below.",
       "",
@@ -136,7 +1318,9 @@
     "created": "2022-04-27T19:00:35Z",
     "tags": [],
     "description": [],
-    "cli": ["Get-ChildItem env:"],
+    "cli": [
+      "Get-ChildItem env:"
+    ],
     "example": [],
     "output": []
   },
@@ -199,8 +1383,15 @@
     "modified": "2022-04-27T16:36:08Z",
     "created": "2022-04-27T16:36:08Z",
     "tags": [],
-    "description": ["You can find the processId for the registered urls using the following command:", "", ""],
-    "cli": ["netsh http show servicestate view=requestq verbose=no", ""],
+    "description": [
+      "You can find the processId for the registered urls using the following command:",
+      "",
+      ""
+    ],
+    "cli": [
+      "netsh http show servicestate view=requestq verbose=no",
+      ""
+    ],
     "example": [],
     "output": [
       "Snapshot of HTTP service state (Request Queue View):",
@@ -332,8 +1523,15 @@
     "description": [
       "Network shell (netsh) is a command-line utility that allows you to configure and display the status of various network communications server roles and components after they are installed on computers running Windows Server® 2008 R2 and Windows Server® 2008."
     ],
-    "cli": [" netsh show helper"],
-    "example": ["$ which netsh", "/cygdrive/c/WINDOWS/system32/netsh", "", ""],
+    "cli": [
+      " netsh show helper"
+    ],
+    "example": [
+      "$ which netsh",
+      "/cygdrive/c/WINDOWS/system32/netsh",
+      "",
+      ""
+    ],
     "output": [
       "Helper GUID                             DLL Filename  Command",
       "--------------------------------------  ------------  -------",
@@ -420,7 +1618,9 @@
       "  processes  whose  command  name  includes  the  string  \"fox\" or",
       "  \"bird\"."
     ],
-    "cli": ["pidstat -C \"awx | postgres\" -r -p ALL"],
+    "cli": [
+      "pidstat -C \"awx | postgres\" -r -p ALL"
+    ],
     "example": [],
     "output": [
       "Linux 5.4.17-2136.304.4.1.el7uek.x86_64 (awxserver.us.example.com)       04/22/2022      _x86_64_        (2 CPU)",
@@ -468,9 +1668,13 @@
     "url": "",
     "modified": "2022-04-22T03:10:37Z",
     "created": "2022-04-22T03:10:37Z",
-    "tags": ["network"],
+    "tags": [
+      "network"
+    ],
     "description": [],
-    "cli": ["ip route show | grep docker0 | awk '{print $9}'"],
+    "cli": [
+      "ip route show | grep docker0 | awk '{print $9}'"
+    ],
     "example": [],
     "output": []
   },
@@ -486,7 +1690,10 @@
     "created": "2022-04-22T01:10:49Z",
     "tags": [],
     "description": [],
-    "cli": ["Get-ADGroupMember -Identity group,name | Select-Object name", ""],
+    "cli": [
+      "Get-ADGroupMember -Identity group,name | Select-Object name",
+      ""
+    ],
     "example": [],
     "output": [
       "name",
@@ -513,9 +1720,13 @@
     "url": "https://www.cyberciti.biz/faq/unix-linux-check-if-port-is-in-use-command/",
     "modified": "2022-04-21T16:41:59Z",
     "created": "2022-04-21T16:41:59Z",
-    "tags": ["network"],
+    "tags": [
+      "network"
+    ],
     "description": [],
-    "cli": ["nmap -sT -O  10.171.230.150"],
+    "cli": [
+      "nmap -sT -O  10.171.230.150"
+    ],
     "example": [],
     "output": [
       "Starting Nmap 6.40 ( http://nmap.org ) at 2022-04-21 11:31 CDT",
@@ -546,7 +1757,9 @@
     "created": "2022-04-14T22:22:37Z",
     "tags": [],
     "description": [],
-    "cli": [":set all"],
+    "cli": [
+      ":set all"
+    ],
     "example": [],
     "output": [
       "--- Options ---",
@@ -614,7 +1827,9 @@
     "created": "2022-04-14T22:15:58Z",
     "tags": [],
     "description": [],
-    "cli": ["systemctl status --type=service"],
+    "cli": [
+      "systemctl status --type=service"
+    ],
     "example": [],
     "output": [
       "● awxserver.us.example.com",
@@ -650,7 +1865,9 @@
     "created": "2022-04-14T03:15:59Z",
     "tags": [],
     "description": [],
-    "cli": ["journalctl -u  <service>"],
+    "cli": [
+      "journalctl -u  <service>"
+    ],
     "example": " journalctl -u  systemd-logind.service",
     "output": []
   },
@@ -666,7 +1883,10 @@
     "created": "2022-04-14T03:08:22Z",
     "tags": [],
     "description": [],
-    "cli": ["ps aux --sort=-%mem", ""],
+    "cli": [
+      "ps aux --sort=-%mem",
+      ""
+    ],
     "example": [],
     "output": []
   },
@@ -680,9 +1900,13 @@
     "url": "https://opensource.com/article/20/5/systemd-startup",
     "modified": "2022-04-14T02:09:40Z",
     "created": "2022-04-14T02:09:40Z",
-    "tags": ["service"],
+    "tags": [
+      "service"
+    ],
     "description": [],
-    "cli": ["ll /etc/systemd/system/multi-user.target.wants"],
+    "cli": [
+      "ll /etc/systemd/system/multi-user.target.wants"
+    ],
     "example": [],
     "output": []
   },
@@ -696,7 +1920,9 @@
     "url": "https://www.madboa.com/geek/openssl/#introduction",
     "modified": "2022-04-13T00:29:52Z",
     "created": "2022-04-13T00:29:52Z",
-    "tags": ["security"],
+    "tags": [
+      "security"
+    ],
     "description": [],
     "cli": [
       "# define start and ending points",
@@ -708,7 +1934,20 @@
       "done"
     ],
     "example": [],
-    "output": ["10007", "10009", "10037", "10039", "10061", "10067", "10069", "10079", "10091", "10093", "10099", ""]
+    "output": [
+      "10007",
+      "10009",
+      "10037",
+      "10039",
+      "10061",
+      "10067",
+      "10069",
+      "10079",
+      "10091",
+      "10093",
+      "10099",
+      ""
+    ]
   },
   {
     "id": "279",
@@ -720,7 +1959,9 @@
     "url": "https://www.madboa.com/geek/openssl/#introduction",
     "modified": "2022-04-13T00:04:09Z",
     "created": "2022-04-13T00:03:39Z",
-    "tags": ["security"],
+    "tags": [
+      "security"
+    ],
     "description": [
       "Digests",
       "Generating digests with the dgst option is one of the more straightforward tasks you can accomplish with the openssl binary. Producing digests is done so often, as a matter of fact, that you can find special-use binaries for doing the same thing.",
@@ -752,7 +1993,9 @@
     "url": "https://www.madboa.com/geek/openssl/#introduction",
     "modified": "2022-04-12T23:58:16Z",
     "created": "2022-04-12T23:58:16Z",
-    "tags": ["security"],
+    "tags": [
+      "security"
+    ],
     "description": [],
     "cli": [
       "$ openssl x509 -noout -in cert.pem -issuer",
@@ -791,9 +2034,13 @@
     "url": "https://www.madboa.com/geek/openssl/#introduction",
     "modified": "2022-04-12T23:51:12Z",
     "created": "2022-04-12T23:51:12Z",
-    "tags": ["security"],
+    "tags": [
+      "security"
+    ],
     "description": [],
-    "cli": ["openssl ciphers -v 'AES+HIGH'"],
+    "cli": [
+      "openssl ciphers -v 'AES+HIGH'"
+    ],
     "example": [],
     "output": []
   },
@@ -807,7 +2054,9 @@
     "url": "",
     "modified": "2022-04-11T22:33:10Z",
     "created": "2022-04-11T22:33:10Z",
-    "tags": ["AD"],
+    "tags": [
+      "AD"
+    ],
     "description": [],
     "cli": [
       "$Self = Get-ADUser -Identity $Env:Username -Properties *",
@@ -830,7 +2079,9 @@
     "created": "2022-04-11T19:59:56Z",
     "tags": [],
     "description": [],
-    "cli": ["sssctl --help"],
+    "cli": [
+      "sssctl --help"
+    ],
     "example": [],
     "output": [
       "Usage:",
@@ -881,7 +2132,9 @@
     "url": "https://stedolan.github.io/jq/tutorial/",
     "modified": "2022-04-09T07:53:06Z",
     "created": "2022-04-09T07:52:51Z",
-    "tags": ["vault"],
+    "tags": [
+      "vault"
+    ],
     "description": [
       "We can use jq to extract just the first commit.",
       "$ curl 'https://api.github.com/repos/stedolan/jq/commits?per_page=5' | jq '.[0]'",
@@ -985,7 +2238,13 @@
       "]",
       ""
     ],
-    "output": ["{", "  \"message\": \"1.2.0\",", "  \"date\": \"2021-12-27T12:13:16Z\"", "}", ""]
+    "output": [
+      "{",
+      "  \"message\": \"1.2.0\",",
+      "  \"date\": \"2021-12-27T12:13:16Z\"",
+      "}",
+      ""
+    ]
   },
   {
     "id": "273",
@@ -1021,7 +2280,9 @@
     "created": "2022-04-09T07:14:00Z",
     "tags": [],
     "description": [],
-    "cli": ["Get-Help Get | Format-Table Name,Category,Module -AutoSize -Wrap"],
+    "cli": [
+      "Get-Help Get | Format-Table Name,Category,Module -AutoSize -Wrap"
+    ],
     "example": [],
     "output": []
   },
@@ -1037,7 +2298,9 @@
     "created": "2022-04-06T20:06:25Z",
     "tags": [],
     "description": [],
-    "cli": ["sudo -ll | sed -n '/RunAsUsers: root/,/Sudoers entry/p'"],
+    "cli": [
+      "sudo -ll | sed -n '/RunAsUsers: root/,/Sudoers entry/p'"
+    ],
     "example": [],
     "output": []
   },
@@ -1057,7 +2320,13 @@
       "echo \"A,B,C,D,E,F,G,H,I,J,K,L,M,N,O\" | awk -v RS='[,\\n]' '{a=$0;getline b; getline c; print a,b,c}' OFS=,"
     ],
     "example": [],
-    "output": ["A,B,C", "D,E,F", "G,H,I", "J,K,L", "M,N,O"]
+    "output": [
+      "A,B,C",
+      "D,E,F",
+      "G,H,I",
+      "J,K,L",
+      "M,N,O"
+    ]
   },
   {
     "id": "269",
@@ -1090,9 +2359,13 @@
     "url": "",
     "modified": "2022-04-06T17:46:28Z",
     "created": "2022-04-01T04:09:50Z",
-    "tags": ["vault"],
+    "tags": [
+      "vault"
+    ],
     "description": [],
-    "cli": ["curl -H \"X-Vault-Token: $VAULT_TOKEN\" \"$VAULT_ADDR/v1/sys/internal/specs/openapi\""],
+    "cli": [
+      "curl -H \"X-Vault-Token: $VAULT_TOKEN\" \"$VAULT_ADDR/v1/sys/internal/specs/openapi\""
+    ],
     "example": [],
     "output": []
   },
@@ -1160,7 +2433,9 @@
     "created": "2022-03-31T19:53:02Z",
     "tags": [],
     "description": [],
-    "cli": ["get-adgroup -Identity amerunixteam -properties *|Select -ExpandProperty member"],
+    "cli": [
+      "get-adgroup -Identity amerunixteam -properties *|Select -ExpandProperty member"
+    ],
     "example": [],
     "output": []
   },
@@ -1174,9 +2449,13 @@
     "url": "https://prometheus.io/docs/prometheus/latest/querying/api/",
     "modified": "2022-04-09T07:53:21Z",
     "created": "2022-03-31T19:24:30Z",
-    "tags": ["grafana"],
+    "tags": [
+      "grafana"
+    ],
     "description": [],
-    "cli": ["curl http://127.0.0.1:9190/integrations/node_exporter/metrics"],
+    "cli": [
+      "curl http://127.0.0.1:9190/integrations/node_exporter/metrics"
+    ],
     "example": [],
     "output": []
   },
@@ -1192,7 +2471,9 @@
     "created": "2022-03-31T18:24:32Z",
     "tags": [],
     "description": [],
-    "cli": ["ls -lptr --time-style='+%s %FT%T' --no-group --group-directories-first "],
+    "cli": [
+      "ls -lptr --time-style='+%s %FT%T' --no-group --group-directories-first "
+    ],
     "example": [],
     "output": [
       "total 11276",
@@ -1217,9 +2498,14 @@
     "url": "https://github.com/hashicorp/vault/blob/main/website/content/docs/commands/auth/enable.mdx",
     "modified": "2022-03-31T00:12:08Z",
     "created": "2022-03-31T00:12:08Z",
-    "tags": ["vault"],
+    "tags": [
+      "vault"
+    ],
     "description": [],
-    "cli": ["vault auth enable userpass", "vault write auth/userpass/users/annie_tran password=secret"],
+    "cli": [
+      "vault auth enable userpass",
+      "vault write auth/userpass/users/annie_tran password=secret"
+    ],
     "example": [],
     "output": []
   },
@@ -1244,8 +2530,14 @@
       "",
       "When @ is used and the expansion appears within double quotes, each variable name expands to a separate word."
     ],
-    "cli": ["${!prefix*}", "${!prefix@}"],
-    "example": ["$ echo \"${!VAULT*}\"", "VAULT_ADDR VAULT_NAMESPACE VAULT_TOKEN"],
+    "cli": [
+      "${!prefix*}",
+      "${!prefix@}"
+    ],
+    "example": [
+      "$ echo \"${!VAULT*}\"",
+      "VAULT_ADDR VAULT_NAMESPACE VAULT_TOKEN"
+    ],
     "output": []
   },
   {
@@ -1260,7 +2552,10 @@
     "created": "2022-03-30T15:49:09Z",
     "tags": [],
     "description": [],
-    "cli": ["import yaml, json, sys", "sys.stdout.write(yaml.dump(json.load(sys.stdin)))"],
+    "cli": [
+      "import yaml, json, sys",
+      "sys.stdout.write(yaml.dump(json.load(sys.stdin)))"
+    ],
     "example": [
       "# run in shell",
       "cat file.json | python -c 'import yaml, json, sys",
@@ -1303,7 +2598,9 @@
     "url": "https://www.linuxshelltips.com/find-and-close-open-ports-in-linux/",
     "modified": "2022-03-29T22:22:31Z",
     "created": "2022-03-29T22:22:31Z",
-    "tags": ["network"],
+    "tags": [
+      "network"
+    ],
     "description": [],
     "cli": [
       "$ ss -tulnp",
@@ -1328,9 +2625,15 @@
     "url": "",
     "modified": "2022-04-09T07:53:35Z",
     "created": "2022-03-28T23:24:29Z",
-    "tags": ["vault"],
-    "description": ["slash at the end is very important"],
-    "cli": ["vault kv list -format=json 'kv/awx/svc_account/'"],
+    "tags": [
+      "vault"
+    ],
+    "description": [
+      "slash at the end is very important"
+    ],
+    "cli": [
+      "vault kv list -format=json 'kv/awx/svc_account/'"
+    ],
     "example": [],
     "output": []
   },
@@ -1346,7 +2649,10 @@
     "created": "2022-03-28T23:23:58Z",
     "tags": [],
     "description": [],
-    "cli": ["python -m venv .venv", "source .venv/bin/activate"],
+    "cli": [
+      "python -m venv .venv",
+      "source .venv/bin/activate"
+    ],
     "example": [],
     "output": []
   },
@@ -1361,7 +2667,9 @@
     "modified": "2022-03-28T22:02:57Z",
     "created": "2022-03-28T22:02:57Z",
     "tags": [],
-    "description": ["taken from `vault token renew -increment=24h -output-curl-string`"],
+    "description": [
+      "taken from `vault token renew -increment=24h -output-curl-string`"
+    ],
     "cli": [
       "curl -X PUT -H \"X-Vault-Namespace: infrastructure/database/engineering\" -H \"X-Vault-Request: true\" -H \"X-Vault-Token: $VAULT_TOKEN)\" -d '{\"increment\":\"24h\"}' https://hcvault.example.com/v1/auth/token/renew-self"
     ],
@@ -1387,7 +2695,9 @@
       "VAULT_NAMESPACE=infrastructure/database/engineering",
       "VAULT_ADDR=https://hcvault.example.com"
     ],
-    "cli": ["vault kv put 'kv/path/to/secrets' @file-with-object.json"],
+    "cli": [
+      "vault kv put 'kv/path/to/secrets' @file-with-object.json"
+    ],
     "example": [],
     "output": [
       "=============== Secret Path ===============",
@@ -1422,7 +2732,9 @@
       "SGID = 2",
       "Sticky = 1"
     ],
-    "cli": ["find $DIR -maxdepth 3 -mindepth 1 -type d ! -perm -2000 -print -exec chmod g+s {} \\;"],
+    "cli": [
+      "find $DIR -maxdepth 3 -mindepth 1 -type d ! -perm -2000 -print -exec chmod g+s {} \\;"
+    ],
     "example": [],
     "output": []
   },
@@ -1436,9 +2748,13 @@
     "url": "https://superuser.com/a/1351600",
     "modified": "2022-03-25T18:30:04Z",
     "created": "2022-03-25T18:30:04Z",
-    "tags": ["git"],
+    "tags": [
+      "git"
+    ],
     "description": [],
-    "cli": ["git rev-parse --show-toplevel"],
+    "cli": [
+      "git rev-parse --show-toplevel"
+    ],
     "example": [],
     "output": []
   },
@@ -1452,8 +2768,13 @@
     "url": "https://github.com/prettier/plugin-xml",
     "modified": "2022-03-24T22:13:31Z",
     "created": "2022-03-23T21:25:43Z",
-    "tags": ["linter"],
-    "description": ["prereq:", "npm install -g  @prettier/plugin-xml prettier"],
+    "tags": [
+      "linter"
+    ],
+    "description": [
+      "prereq:",
+      "npm install -g  @prettier/plugin-xml prettier"
+    ],
     "cli": [
       "alias prettier-xml='prettier --bracket-same-line true --xml-whitespace-sensitivity ignore --tab-width 2 --print-width 120 --stdin-filepath  *.xml'"
     ],
@@ -1472,7 +2793,9 @@
     "created": "2022-03-23T16:58:39Z",
     "tags": [],
     "description": [],
-    "cli": ["powershell -noprofile -command \"<command to run>\""],
+    "cli": [
+      "powershell -noprofile -command \"<command to run>\""
+    ],
     "example": "powershell -noprofile -command \"Get-ADUser -Identity Annie_Tran -Properties *\"",
     "output": []
   },
@@ -1486,7 +2809,9 @@
     "url": "https://stackoverflow.com/a/9543606",
     "modified": "2022-04-15T17:49:47Z",
     "created": "2022-03-22T21:14:08Z",
-    "tags": ["git"],
+    "tags": [
+      "git"
+    ],
     "description": [
       "fast solution that uses filter-branch instead of rebase",
       "",
@@ -1516,7 +2841,9 @@
     "url": "",
     "modified": "2022-04-11T22:10:30Z",
     "created": "2022-03-18T19:36:58Z",
-    "tags": ["AD"],
+    "tags": [
+      "AD"
+    ],
     "description": [],
     "cli": [
       "Get-ADUser  -Filter 'description -like \"*Annie_Tran\"'  -Properties *  | Sort-Object -Property PasswordLastSet | Format-Table Name,PasswordLastSet -AutoSize -Wrap"
@@ -1553,7 +2880,9 @@
     "url": "https://docs.ansible.com/ansible/latest/user_guide/vault.html#creating-encrypted-variables",
     "modified": "2022-03-16T20:27:18Z",
     "created": "2022-03-16T20:27:18Z",
-    "tags": ["ansible"],
+    "tags": [
+      "ansible"
+    ],
     "description": [
       "To encrypt the string 'letmein' read from stdin, add the vault ID 'dev' using the 'dev' vault password stored in a_password_file, and name the variable 'db_password':",
       "",
@@ -1592,8 +2921,13 @@
       "",
       "The third type of UUID is generated with the --md5 or --sha1 options, followed by --namespace namespace and --name name. The namespace may either be a well-known UUID, or else an alias to one of the well-known UUIDs defined in RFC 4122, that is @dns, @url, @oid, or @x500. The name is an arbitrary string value. The generated UUID is the digest of the concatenation of the namespace UUID and the name value, hashed with the MD5 or SHA1 algorithms. It is, therefore, a predictable value which may be useful when UUIDs are being used as handles or nonces for more complex values or values which shouldn't be disclosed directly. See the RFC for more information."
     ],
-    "cli": ["uuidgen --sha1 --namespace @dns --name \"string_to_hash\""],
-    "example": ["$ uuidgen --sha1 --namespace @dns --name \"1626044030000\"", "1faa6f1b-f538-5d91-8aaa-1f96de461a16"],
+    "cli": [
+      "uuidgen --sha1 --namespace @dns --name \"string_to_hash\""
+    ],
+    "example": [
+      "$ uuidgen --sha1 --namespace @dns --name \"1626044030000\"",
+      "1faa6f1b-f538-5d91-8aaa-1f96de461a16"
+    ],
     "output": []
   },
   {
@@ -1606,7 +2940,9 @@
     "url": "https://stackoverflow.com/a/5242992",
     "modified": "2022-03-16T20:04:40Z",
     "created": "2022-03-15T17:32:11Z",
-    "tags": ["fs"],
+    "tags": [
+      "fs"
+    ],
     "description": [
       "-amin, -atime, -cmin, -ctime, -mmin, and -mtime",
       "",
@@ -1616,7 +2952,9 @@
       "-ctime n",
       "File's status was last changed n*24 hours ago. "
     ],
-    "cli": ["find . -mindepth 1 -maxdepth 1 -type d -ctime 0 -print"],
+    "cli": [
+      "find . -mindepth 1 -maxdepth 1 -type d -ctime 0 -print"
+    ],
     "example": [],
     "output": []
   },
@@ -1630,7 +2968,9 @@
     "url": "",
     "modified": "2022-03-17T00:31:57Z",
     "created": "2022-03-14T22:59:20Z",
-    "tags": ["text"],
+    "tags": [
+      "text"
+    ],
     "description": [
       "Escape a single string:",
       "",
@@ -1654,7 +2994,9 @@
       "",
       ""
     ],
-    "cli": ["systemd-escape -u 'Hall\\xc3\\xb6chen\\x2c\\x20Meister'"],
+    "cli": [
+      "systemd-escape -u 'Hall\\xc3\\xb6chen\\x2c\\x20Meister'"
+    ],
     "example": [],
     "output": "Hallöchen, Meister"
   },
@@ -1668,7 +3010,9 @@
     "url": "https://www.cl.cam.ac.uk/~jw35/docs/ansible/ansible-summary.html",
     "modified": "2022-03-17T00:23:37Z",
     "created": "2022-03-10T01:16:48Z",
-    "tags": ["ansible"],
+    "tags": [
+      "ansible"
+    ],
     "description": [],
     "cli": [
       "- \"{{ var | to_nice_json }}\"",
@@ -1723,7 +3067,9 @@
     "url": "",
     "modified": "2022-03-17T00:31:31Z",
     "created": "2022-03-09T23:04:17Z",
-    "tags": ["security"],
+    "tags": [
+      "security"
+    ],
     "description": [],
     "cli": [
       "echo 'example' >.vault-password",
@@ -1760,7 +3106,9 @@
     "url": "",
     "modified": "2022-03-17T00:31:46Z",
     "created": "2022-03-09T01:24:57Z",
-    "tags": ["security"],
+    "tags": [
+      "security"
+    ],
     "description": [
       "Using the `passwd` option, you can generate password hashes that interoperate with traditional `/etc/passwd` files, newer-style `/etc/shadow` files, and Apache password files.",
       "",
@@ -1776,7 +3124,13 @@
       "    $ openssl passwd -salt 8E MySecret",
       "    8E4vqBR4UOYF."
     ],
-    "cli": ["$ openssl passwd MySecret", "8E4vqBR4UOYF.", "", "$ openssl passwd -salt 8E MySecret", "8E4vqBR4UOYF."],
+    "cli": [
+      "$ openssl passwd MySecret",
+      "8E4vqBR4UOYF.",
+      "",
+      "$ openssl passwd -salt 8E MySecret",
+      "8E4vqBR4UOYF."
+    ],
     "example": [],
     "output": []
   },
@@ -1798,7 +3152,10 @@
       "",
       "To run a catchall benchmark, run it without any further options."
     ],
-    "cli": ["openssl speed", ""],
+    "cli": [
+      "openssl speed",
+      ""
+    ],
     "example": [],
     "output": []
   },
@@ -1814,9 +3171,15 @@
     "created": "2022-03-09T00:44:04Z",
     "tags": [],
     "description": [],
-    "cli": ["stat --printf='%U\\n%G\\n%z\\n' $FILEORDIR"],
+    "cli": [
+      "stat --printf='%U\\n%G\\n%z\\n' $FILEORDIR"
+    ],
     "example": "stat --printf='%U\\n%G\\n%z\\n' .git",
-    "output": ["annie_tran", "wheel", "2022-03-08 18:39:51.177925946 -0600"]
+    "output": [
+      "annie_tran",
+      "wheel",
+      "2022-03-08 18:39:51.177925946 -0600"
+    ]
   },
   {
     "id": "239",
@@ -1828,7 +3191,9 @@
     "url": "",
     "modified": "2022-03-23T16:46:05Z",
     "created": "2022-03-08T21:36:37Z",
-    "tags": ["service"],
+    "tags": [
+      "service"
+    ],
     "description": [],
     "cli": [
       "## VIEWING systemd INFORMATION",
@@ -1883,9 +3248,13 @@
     "url": "https://raw.githubusercontent.com/helm/helm/master/scripts/get-helm-3",
     "modified": "2022-03-16T19:32:35Z",
     "created": "2022-03-04T18:32:12Z",
-    "tags": ["security"],
+    "tags": [
+      "security"
+    ],
     "description": [],
-    "cli": ["openssl sha1 -sha256 file.txt | awk '{print $2}'"],
+    "cli": [
+      "openssl sha1 -sha256 file.txt | awk '{print $2}'"
+    ],
     "example": [],
     "output": []
   },
@@ -1903,7 +3272,9 @@
       "prtstat  prints  the statistics of the specified process.  This information comes from the /proc/PID/stat file.",
       ""
     ],
-    "cli": ["prtstat $PID"],
+    "cli": [
+      "prtstat $PID"
+    ],
     "example": "$ prtstat 3216",
     "output": [
       "Process: awx-manage             State: S (sleeping)",
@@ -1940,7 +3311,9 @@
     "url": "",
     "modified": "2022-03-17T00:24:02Z",
     "created": "2022-03-03T21:23:52Z",
-    "tags": ["system"],
+    "tags": [
+      "system"
+    ],
     "description": [
       "The mpstat command writes to standard output activities for each available processor, processor  0  being",
       "the first one.  Global average activities among all processors are also reported.  The mpstat command can",
@@ -1955,7 +3328,10 @@
       "reports continuously.",
       ""
     ],
-    "cli": ["mpstat 2 5", ""],
+    "cli": [
+      "mpstat 2 5",
+      ""
+    ],
     "example": [],
     "output": [
       "Linux 5.4.17-2102.202.5.el7uek.x86_64 (serserver.us.example.com)         03/03/2022      _x86_64_        (2 CPU)",
@@ -1988,7 +3364,9 @@
       "",
       "Location  of  the history files defaults to /tmp/.ifstat.u$UID but may be overridden with the IFSTAT_HISTORY environment variable. "
     ],
-    "cli": ["ifstat -j -p"],
+    "cli": [
+      "ifstat -j -p"
+    ],
     "example": [],
     "output": [
       "{",
@@ -2121,7 +3499,9 @@
       "        -v      print version info",
       "        -h      print this help"
     ],
-    "cli": ["procinfo -a"],
+    "cli": [
+      "procinfo -a"
+    ],
     "example": [],
     "output": [
       "Linux 5.4.17-2102.202.5.el7uek.x86_64 (mockbuild@host-100-100-224-35) (gcc 4.8.5 20150623) #2 2CPU [awxplprod02]",
@@ -2230,7 +3610,10 @@
       "",
       ""
     ],
-    "cli": ["dstat --top-cpu", ""],
+    "cli": [
+      "dstat --top-cpu",
+      ""
+    ],
     "example": [],
     "output": [
       "-most-expensive-",
@@ -2256,7 +3639,9 @@
     "url": "",
     "modified": "2022-03-03T17:11:18Z",
     "created": "2022-03-03T17:11:18Z",
-    "tags": ["reference"],
+    "tags": [
+      "reference"
+    ],
     "description": [
       "   Performance tools",
       "       ifstat(1), iftop(8), iostat(1), mpstat(1), netstat(1), nfsstat(1), nstat, vmstat(1), xosview(1)",
@@ -2290,7 +3675,9 @@
       "",
       ""
     ],
-    "cli": ["man dstat"],
+    "cli": [
+      "man dstat"
+    ],
     "example": [],
     "output": []
   },
@@ -2303,9 +3690,14 @@
     "url": "",
     "modified": "2022-03-23T21:26:37Z",
     "created": "2022-03-03T17:04:25Z",
-    "tags": ["system"],
+    "tags": [
+      "system"
+    ],
     "description": [],
-    "cli": ["lsblk -a -p", ""],
+    "cli": [
+      "lsblk -a -p",
+      ""
+    ],
     "example": [],
     "output": [
       "NAME                                MAJ:MIN RM  SIZE RO TYPE MOUNTPOINT",
@@ -2339,7 +3731,9 @@
     "url": "",
     "modified": "2022-03-03T16:38:03Z",
     "created": "2022-03-03T16:38:03Z",
-    "tags": ["text"],
+    "tags": [
+      "text"
+    ],
     "description": [
       "'${PARAMETER:OFFSET:LENGTH}'",
       "     This is referred to as Substring Expansion.  It expands to up to",
@@ -2397,9 +3791,13 @@
     "url": "",
     "modified": "2022-03-16T19:42:53Z",
     "created": "2022-03-03T16:33:28Z",
-    "tags": ["service"],
+    "tags": [
+      "service"
+    ],
     "description": [],
-    "cli": ["systemctl list-unit-files --state=enabled --type=service --no-legend | awk '{print $1}'"],
+    "cli": [
+      "systemctl list-unit-files --state=enabled --type=service --no-legend | awk '{print $1}'"
+    ],
     "example": [],
     "output": []
   },
@@ -2412,9 +3810,13 @@
     "url": "",
     "modified": "2022-03-03T16:14:00Z",
     "created": "2022-03-03T16:14:00Z",
-    "tags": ["ansible"],
+    "tags": [
+      "ansible"
+    ],
     "description": [],
-    "cli": ["ansible-config dump | grep -v '\\(default\\)' | sed 's,(.*cfg),,g'"],
+    "cli": [
+      "ansible-config dump | grep -v '\\(default\\)' | sed 's,(.*cfg),,g'"
+    ],
     "example": [],
     "output": [
       "ANSIBLE_SSH_ARGS = -C -o ControlMaster=auto -o ControlPersist=60s -o StrictHostKeyChecking=no",
@@ -2451,7 +3853,10 @@
     "created": "2022-03-01T01:58:08Z",
     "tags": [],
     "description": [],
-    "cli": ["echo '-:svc_account:ALL' | tee -a /etc/security/access.conf", ""],
+    "cli": [
+      "echo '-:svc_account:ALL' | tee -a /etc/security/access.conf",
+      ""
+    ],
     "example": [],
     "output": []
   },
@@ -2464,7 +3869,9 @@
     "url": "",
     "modified": "2022-03-03T16:21:28Z",
     "created": "2022-03-01T01:40:06Z",
-    "tags": ["service"],
+    "tags": [
+      "service"
+    ],
     "description": [],
     "cli": [
       "systemctl list-units --failed --no-legend | awk '{print $1}'| xargs -I % systemctl status % && systemctl restart %"
@@ -2483,7 +3890,9 @@
     "created": "2022-03-01T01:20:44Z",
     "tags": [],
     "description": [],
-    "cli": ["pkill -HUP -u annie_tran"],
+    "cli": [
+      "pkill -HUP -u annie_tran"
+    ],
     "example": [],
     "output": []
   },
@@ -2498,7 +3907,9 @@
     "created": "2022-02-28T20:14:56Z",
     "tags": [],
     "description": [],
-    "cli": ["find . -maxdepth 1 -type d -exec zip archive.zip {} +"],
+    "cli": [
+      "find . -maxdepth 1 -type d -exec zip archive.zip {} +"
+    ],
     "example": [],
     "output": []
   },
@@ -2511,14 +3922,18 @@
     "url": "",
     "modified": "2022-03-23T21:27:40Z",
     "created": "2022-02-28T19:22:41Z",
-    "tags": ["docker"],
+    "tags": [
+      "docker"
+    ],
     "description": [
       "Usage:  docker top CONTAINER [ps OPTIONS]",
       "",
       "Display the running processes of a container",
       ""
     ],
-    "cli": ["$ docker top awx_task"],
+    "cli": [
+      "$ docker top awx_task"
+    ],
     "example": [],
     "output": [
       "UID                 PID                 PPID                C                   STIME               TTY                 TIME                CMD",
@@ -2550,12 +3965,16 @@
     "url": "https://www.redhat.com/sysadmin/nstat-command-linux",
     "modified": "2022-03-03T16:14:29Z",
     "created": "2022-02-24T20:55:47Z",
-    "tags": ["network"],
+    "tags": [
+      "network"
+    ],
     "description": [
       "https://loicpefferkorn.net/2018/09/linux-network-statistics-reference/",
       "https://www.kernel.org/doc/html/latest/networking/"
     ],
-    "cli": ["nstat -a -t 60"],
+    "cli": [
+      "nstat -a -t 60"
+    ],
     "example": [],
     "output": [
       "#kernel",
@@ -2679,7 +4098,9 @@
     "created": "2022-02-24T09:27:47Z",
     "tags": [],
     "description": [],
-    "cli": ["systemd-cgls"],
+    "cli": [
+      "systemd-cgls"
+    ],
     "example": [],
     "output": [
       "$ systemd-cgls",
@@ -2747,9 +4168,13 @@
     "url": "https://github.com/openstack/openstack-ansible/blob/master/playbooks/listening-port-report.yml",
     "modified": "2022-03-03T16:27:10Z",
     "created": "2022-02-24T09:15:34Z",
-    "tags": ["network"],
+    "tags": [
+      "network"
+    ],
     "description": [],
-    "cli": ["netstat -ln --inet --program"],
+    "cli": [
+      "netstat -ln --inet --program"
+    ],
     "example": [],
     "output": [
       "Active Internet connections (only servers)",
@@ -2795,11 +4220,15 @@
     "url": "http://0pointer.de/blog/projects/systemd-for-admins-2.html",
     "modified": "2022-03-17T00:24:31Z",
     "created": "2022-02-24T08:50:50Z",
-    "tags": ["system"],
+    "tags": [
+      "system"
+    ],
     "description": [
       "n systemd we place every process that is spawned in a control group named after its service. Control groups (or cgroups) at their most basic are simply groups of processes that can be arranged in a hierarchy and labelled individually. When processes spawn other processes these children are automatically made members of the parents cgroup. Leaving a cgroup is not possible for unprivileged processes. Thus, cgroups can be used as an effective way to label processes after the service they belong to and be sure that the service cannot escape from the label, regardless how often it forks or renames itself. Furthermore this can be used to safely kill a service and all processes it created, again with no chance of escaping."
     ],
-    "cli": ["ps xawf -eo pid,user,cgroup,args"],
+    "cli": [
+      "ps xawf -eo pid,user,cgroup,args"
+    ],
     "example": [],
     "output": [
       "35899 root     10:devices:/system.slice/co  \\_ containerd-shim -namespace moby -workdir /var/lib/containerd/io.containerd.runtime.v1",
@@ -2846,7 +4275,9 @@
     "url": "https://medium.com/@wlarch/no-space-left-on-device-when-using-docker-compose-why-c4a2c783c6f6",
     "modified": "2022-02-24T03:43:16Z",
     "created": "2022-02-24T03:43:16Z",
-    "tags": ["docker"],
+    "tags": [
+      "docker"
+    ],
     "description": [],
     "cli": [
       "# 1. Stop all containers",
@@ -2873,9 +4304,13 @@
     "url": "https://medium.com/@wlarch/no-space-left-on-device-when-using-docker-compose-why-c4a2c783c6f6",
     "modified": "2022-02-24T03:43:58Z",
     "created": "2022-02-24T03:37:55Z",
-    "tags": ["docker"],
+    "tags": [
+      "docker"
+    ],
     "description": [],
-    "cli": ["docker volume rm $(docker volume ls -qf dangling=true)"],
+    "cli": [
+      "docker volume rm $(docker volume ls -qf dangling=true)"
+    ],
     "example": [],
     "output": []
   },
@@ -2888,7 +4323,9 @@
     "url": "https://medium.com/@wlarch/change-docker-root-directory-by-creating-a-systemd-drop-in-service-file-3c1244244784",
     "modified": "2022-03-04T18:45:40Z",
     "created": "2022-02-24T03:36:17Z",
-    "tags": ["docker"],
+    "tags": [
+      "docker"
+    ],
     "description": [
       "Change docker root directory by creating a systemd drop-in service file",
       "",
@@ -2918,9 +4355,16 @@
     "url": "",
     "modified": "2022-02-24T20:43:12Z",
     "created": "2022-02-22T16:20:19Z",
-    "tags": ["cygwin"],
+    "tags": [
+      "cygwin"
+    ],
     "description": [],
-    "cli": ["echo 'cd \"$OLDPWD\"' >> .bashrc", "", "C:\\Users\\annie_tran.AMERICAS\\cyg\\bin\\bash --login -i", ""],
+    "cli": [
+      "echo 'cd \"$OLDPWD\"' >> .bashrc",
+      "",
+      "C:\\Users\\annie_tran.AMERICAS\\cyg\\bin\\bash --login -i",
+      ""
+    ],
     "example": [],
     "output": []
   },
@@ -2933,9 +4377,13 @@
     "url": "",
     "modified": "2022-03-17T00:33:36Z",
     "created": "2022-02-16T21:22:22Z",
-    "tags": ["fs"],
+    "tags": [
+      "fs"
+    ],
     "description": [],
-    "cli": ["find /tmp -maxdepth 1 -type f -newermt 2022-02-02 ! -newermt 2022-02-04 -print -exec rm -rf {} \\;"],
+    "cli": [
+      "find /tmp -maxdepth 1 -type f -newermt 2022-02-02 ! -newermt 2022-02-04 -print -exec rm -rf {} \\;"
+    ],
     "example": [],
     "output": []
   },
@@ -2957,7 +4405,9 @@
       "So, the answer is, while the processes have the files still opened, you shouldn't expect to get the space back. It's not freed, it's being actively used. This is also one of the reasons that applications should really close the files when they finish using them. In normal usage, you shouldn't think of that space as free, and this also shouldn't be very common at all - with the exception of temporary files that are unlinked on purpose, there shouldn't really be any files that you would consider being unused, but still open. Try to review if there is a process that does this a lot and consider how you use it, or just find more space.",
       ""
     ],
-    "cli": ["kill -9 $(lsof |grep deleted|awk '{print $2}'|sort -u)"],
+    "cli": [
+      "kill -9 $(lsof |grep deleted|awk '{print $2}'|sort -u)"
+    ],
     "example": [],
     "output": []
   },
@@ -2970,7 +4420,9 @@
     "url": "",
     "modified": "2022-03-17T00:33:54Z",
     "created": "2022-02-16T01:26:48Z",
-    "tags": ["ansible"],
+    "tags": [
+      "ansible"
+    ],
     "description": [],
     "cli": [
       "get_token() {",
@@ -2993,9 +4445,13 @@
     "url": "https://stackoverflow.com/questions/16661982/check-folder-size-in-bash",
     "modified": "2022-03-17T00:33:46Z",
     "created": "2022-02-15T21:25:40Z",
-    "tags": ["fs"],
+    "tags": [
+      "fs"
+    ],
     "description": [],
-    "cli": ["du -h -d 1 ."],
+    "cli": [
+      "du -h -d 1 ."
+    ],
     "example": [],
     "output": [
       "132K    ./.ssh",
@@ -3037,7 +4493,9 @@
     "description": [
       "These simple commands give you a feel of the memory usage and give the first indication that you have a memory leak when you see that the Rss of a process keeps on increasing. However, they are not very accurate in the absolute measurements of memory usage."
     ],
-    "cli": ["ps -eo pid,tid,class,rtprio,stat,vsz,rss,comm"],
+    "cli": [
+      "ps -eo pid,tid,class,rtprio,stat,vsz,rss,comm"
+    ],
     "example": [],
     "output": []
   },
@@ -3050,11 +4508,18 @@
     "url": "",
     "modified": "2022-03-17T00:34:01Z",
     "created": "2022-02-05T10:32:18Z",
-    "tags": ["date"],
+    "tags": [
+      "date"
+    ],
     "description": [],
-    "cli": ["date -d @$TIMESTAMP"],
+    "cli": [
+      "date -d @$TIMESTAMP"
+    ],
     "example": "$ date -d @1638163336",
-    "output": ["Sun Nov 28 23:22:16 CST 2021", ""]
+    "output": [
+      "Sun Nov 28 23:22:16 CST 2021",
+      ""
+    ]
   },
   {
     "id": "207",
@@ -3146,11 +4611,24 @@
     "url": "",
     "modified": "2022-02-05T07:16:24Z",
     "created": "2022-02-05T07:16:24Z",
-    "tags": ["utils"],
+    "tags": [
+      "utils"
+    ],
     "description": [],
-    "cli": ["ps -o pid=''"],
+    "cli": [
+      "ps -o pid=''"
+    ],
     "example": [],
-    "output": ["$ ps -o pid=X", "     X", " 29015", " 70109", "", "$ ps -o pid=''", " 29015", " 70138"]
+    "output": [
+      "$ ps -o pid=X",
+      "     X",
+      " 29015",
+      " 70109",
+      "",
+      "$ ps -o pid=''",
+      " 29015",
+      " 70138"
+    ]
   },
   {
     "id": "204",
@@ -3163,9 +4641,17 @@
     "created": "2022-02-05T07:08:34Z",
     "tags": [],
     "description": [],
-    "cli": ["ps -efo pid"],
+    "cli": [
+      "ps -efo pid"
+    ],
     "example": [],
-    "output": ["   PID", " 64822", " 67490", " 64835", " 68072"]
+    "output": [
+      "   PID",
+      " 64822",
+      " 67490",
+      " 64835",
+      " 68072"
+    ]
   },
   {
     "id": "203",
@@ -3176,7 +4662,9 @@
     "url": "https://stackoverflow.com/a/18434831/7460613",
     "modified": "2022-02-05T02:53:47Z",
     "created": "2022-02-05T02:51:12Z",
-    "tags": ["utils"],
+    "tags": [
+      "utils"
+    ],
     "description": [],
     "cli": [
       "case \"$OSTYPE\" in",
@@ -3201,9 +4689,13 @@
     "url": "https://serverfault.com/a/413129",
     "modified": "2022-02-10T16:14:52Z",
     "created": "2022-02-03T03:40:35Z",
-    "tags": ["network"],
+    "tags": [
+      "network"
+    ],
     "description": [],
-    "cli": [" host -t ns example.com"],
+    "cli": [
+      " host -t ns example.com"
+    ],
     "example": [],
     "output": [
       "example.com name server uslserver.us.example.com.",
@@ -3227,7 +4719,9 @@
     "url": "https://access.redhat.com/discussions/4524081",
     "modified": "2022-02-03T03:24:11Z",
     "created": "2022-02-03T03:24:11Z",
-    "tags": ["network"],
+    "tags": [
+      "network"
+    ],
     "description": [],
     "cli": [
       "echo '' | openssl s_client -connect awxserver.us.example.com:443 2>/dev/null | openssl x509 -text -noout | grep -A 1 \"Public Key Algorithm\""
@@ -3248,7 +4742,9 @@
     "url": "https://code.visualstudio.com/docs/remote/troubleshooting#_cleaning-up-the-vs-code-server-on-the-remote",
     "modified": "2022-03-14T22:33:56Z",
     "created": "2022-02-02T07:23:39Z",
-    "tags": ["vscode"],
+    "tags": [
+      "vscode"
+    ],
     "description": [
       "The SSH extension provides a command for cleaning up the VS Code Server from the remote machine, Remote-SSH: Uninstall VS Code Server from Host.... The command does two things: it kills any running VS Code Server processes and it deletes the folder where the server was installed."
     ],
@@ -3272,7 +4768,9 @@
     "created": "2022-02-02T07:22:39Z",
     "tags": [],
     "description": [],
-    "cli": ["ps -ax -o pid=,ppid=,command= | grep -v \"\\[\" | sort -k3 -k2 -k1"],
+    "cli": [
+      "ps -ax -o pid=,ppid=,command= | grep -v \"\\[\" | sort -k3 -k2 -k1"
+    ],
     "example": [],
     "output": []
   },
@@ -3286,7 +4784,9 @@
     "modified": "2022-02-02T06:30:53Z",
     "created": "2022-02-02T06:30:53Z",
     "tags": [],
-    "description": ["To start the SSH Agent automatically on login, add these lines to your ~/.bash_profile"],
+    "description": [
+      "To start the SSH Agent automatically on login, add these lines to your ~/.bash_profile"
+    ],
     "cli": [
       "if [ -z \"$SSH_AUTH_SOCK\" ]; then",
       "   # Check for a currently running instance of the agent",
@@ -3310,7 +4810,9 @@
     "url": "https://code.visualstudio.com/docs/remote/troubleshooting#_enabling-alternate-ssh-authentication-methods",
     "modified": "2022-03-03T16:40:39Z",
     "created": "2022-02-02T03:38:50Z",
-    "tags": ["network"],
+    "tags": [
+      "network"
+    ],
     "description": [
       "If you are on macOS and Linux and want to reduce how often you have to enter a password or token, you can enable the ControlMaster feature on your local machine so that OpenSSH runs multiple SSH sessions over a single connection.",
       "",
@@ -3326,7 +4828,12 @@
       "",
       "Setting up the SSH Agent#"
     ],
-    "cli": ["Host *", "  ControlMaster auto", "  ControlPath  ~/.ssh/sockets/%r@%h-%p", "  ControlPersist  600"],
+    "cli": [
+      "Host *",
+      "  ControlMaster auto",
+      "  ControlPath  ~/.ssh/sockets/%r@%h-%p",
+      "  ControlPersist  600"
+    ],
     "example": [],
     "output": []
   },
@@ -3343,7 +4850,9 @@
     "description": [
       "Run foo with a reduced environment, preserving only the original PATH to avoid problems in locating foo."
     ],
-    "cli": ["env - PATH=\"$PATH\" foo"],
+    "cli": [
+      "env - PATH=\"$PATH\" foo"
+    ],
     "example": [],
     "output": []
   },
@@ -3358,7 +4867,9 @@
     "created": "2022-01-27T21:42:54Z",
     "tags": [],
     "description": [],
-    "cli": ["gcm -module DISM"],
+    "cli": [
+      "gcm -module DISM"
+    ],
     "example": [],
     "output": [
       "CommandType     Name                                               Version    Source",
@@ -3401,7 +4912,9 @@
     "url": "https://en.wikipedia.org/wiki/Util-linux",
     "modified": "2022-03-17T00:25:33Z",
     "created": "2022-01-21T18:49:43Z",
-    "tags": ["gnu"],
+    "tags": [
+      "gnu"
+    ],
     "description": [],
     "cli": [
       "file_system=(cat chmod chown chgrp cksum cmp cp dd du df file fuser ln ls mkdir mv pax pwd rm rmdir split tee touch type umask)",
@@ -3428,7 +4941,10 @@
     "created": "2022-01-21T05:53:13Z",
     "tags": [],
     "description": [],
-    "cli": ["select jsonb_pretty(extra_data::jsonb) ", "from main_joblaunchconfig where extra_data <> '{}';"],
+    "cli": [
+      "select jsonb_pretty(extra_data::jsonb) ",
+      "from main_joblaunchconfig where extra_data <> '{}';"
+    ],
     "example": [],
     "output": [
       "awx=# select jsonb_pretty(extra_data::jsonb) from main_joblaunchconfig where extra_data <> '{}';",
@@ -3469,7 +4985,9 @@
     "url": "https://stackoverflow.com/a/58916394/7460613",
     "modified": "2022-01-24T17:16:06Z",
     "created": "2022-01-21T05:26:05Z",
-    "tags": ["db"],
+    "tags": [
+      "db"
+    ],
     "description": [],
     "cli": [
       "select table_name, pg_size_pretty( pg_relation_size(quote_ident(table_name)) )",
@@ -3504,7 +5022,9 @@
     "created": "2022-01-21T01:29:00Z",
     "tags": [],
     "description": [],
-    "cli": ["alias cls='printf \"\\033c\"'"],
+    "cli": [
+      "alias cls='printf \"\\033c\"'"
+    ],
     "example": [],
     "output": []
   },
@@ -3517,7 +5037,9 @@
     "url": "https://dataedo.com/kb/query/postgresql/list-of-tables-by-the-number-of-rows",
     "modified": "2022-01-19T22:12:32Z",
     "created": "2022-01-19T22:12:32Z",
-    "tags": ["db"],
+    "tags": [
+      "db"
+    ],
     "description": [],
     "cli": [
       "select n.nspname as table_schema,",
@@ -3541,9 +5063,15 @@
     "url": "",
     "modified": "2022-01-19T19:37:55Z",
     "created": "2022-01-19T19:37:55Z",
-    "tags": ["shell"],
-    "description": ["       -o     like -l, but do not list group information"],
-    "cli": ["ls -lptr --time-style='+%s %F %T' --group-directories-first -o"],
+    "tags": [
+      "shell"
+    ],
+    "description": [
+      "       -o     like -l, but do not list group information"
+    ],
+    "cli": [
+      "ls -lptr --time-style='+%s %F %T' --group-directories-first -o"
+    ],
     "example": [],
     "output": [
       "total 11276",
@@ -3577,7 +5105,9 @@
     "created": "2022-01-18T16:42:19Z",
     "tags": [],
     "description": [],
-    "cli": ["Get-WmiObject -Class Win32_ComputerSystem -Property *"],
+    "cli": [
+      "Get-WmiObject -Class Win32_ComputerSystem -Property *"
+    ],
     "example": [],
     "output": [
       "Domain              : amer.example.com",
@@ -3598,9 +5128,13 @@
     "url": "https://chromium.googlesource.com/catapult/+/refs/heads/main/netlog_viewer/bin/serve_static",
     "modified": "2022-03-17T00:21:51Z",
     "created": "2022-01-17T16:59:05Z",
-    "tags": ["http"],
+    "tags": [
+      "http"
+    ],
     "description": [],
-    "cli": ["python -m SimpleHTTPServer 8080"],
+    "cli": [
+      "python -m SimpleHTTPServer 8080"
+    ],
     "example": [],
     "output": []
   },
@@ -3613,12 +5147,16 @@
     "url": "https://renenyffenegger.ch/notes/Linux/shell/commands/zip",
     "modified": "2022-01-10T18:55:33Z",
     "created": "2022-01-10T18:55:33Z",
-    "tags": ["shell"],
+    "tags": [
+      "shell"
+    ],
     "description": [
       "Creating a zip archive from a directory",
       "The command line option -r adds files recursively. Thus, it allows to create a zip file from an entire (sub-)directory:"
     ],
-    "cli": ["zip $ZIP_NAME.zip -r $DIRNAME"],
+    "cli": [
+      "zip $ZIP_NAME.zip -r $DIRNAME"
+    ],
     "example": [],
     "output": []
   },
@@ -3631,10 +5169,17 @@
     "url": "",
     "modified": "2022-01-10T18:38:26Z",
     "created": "2022-01-10T18:38:26Z",
-    "tags": ["shell"],
+    "tags": [
+      "shell"
+    ],
     "description": [],
-    "cli": ["echo \"random: $RANDOM\""],
-    "example": ["$ TMPFILE='random'$RANDOM", "$ echo $TMPFILE"],
+    "cli": [
+      "echo \"random: $RANDOM\""
+    ],
+    "example": [
+      "$ TMPFILE='random'$RANDOM",
+      "$ echo $TMPFILE"
+    ],
     "output": "random27790"
   },
   {
@@ -3648,7 +5193,9 @@
     "created": "2022-01-10T15:55:46Z",
     "tags": [],
     "description": [],
-    "cli": ["date -d \"$date -7 days\" +\"%Y-%m-%d\""],
+    "cli": [
+      "date -d \"$date -7 days\" +\"%Y-%m-%d\""
+    ],
     "example": [
       "# date today",
       "$ date +\"%Y-%m-%d\"",
@@ -3695,7 +5242,9 @@
     "url": "",
     "modified": "2022-03-17T00:26:45Z",
     "created": "2022-01-04T19:28:06Z",
-    "tags": ["shell"],
+    "tags": [
+      "shell"
+    ],
     "description": [
       "Options:",
       "  -a        display all locations containing an executable named NAME;",
@@ -3713,7 +5262,9 @@
       "            or not found, respectively",
       ""
     ],
-    "cli": ["type"],
+    "cli": [
+      "type"
+    ],
     "example": "$ type cd_func",
     "output": [
       "cd_func is a function",
@@ -3763,9 +5314,15 @@
     "url": "https://stackoverflow.com/a/39225649/7460613",
     "modified": "2022-03-03T17:00:24Z",
     "created": "2022-01-04T03:56:34Z",
-    "tags": ["git"],
+    "tags": [
+      "git"
+    ],
     "description": [],
-    "cli": ["git difftool -y -x sdiff", "", "git difftool -y -x sdiff path/to/file"],
+    "cli": [
+      "git difftool -y -x sdiff",
+      "",
+      "git difftool -y -x sdiff path/to/file"
+    ],
     "example": [],
     "output": []
   },
@@ -3778,7 +5335,9 @@
     "url": "https://www.linode.com/docs/guides/securing-your-server/",
     "modified": "2022-03-04T18:49:21Z",
     "created": "2022-01-04T01:56:35Z",
-    "tags": ["network"],
+    "tags": [
+      "network"
+    ],
     "description": [
       "TCP",
       "See the Peer Address:Port column of the ss readout. The process sshd is listening on *:*, which translates into any incoming IPv4 address to any port, and over any network interface. The next line shows an established SSH connection from IP address 198.51.100.2 via ephemeral port 54820. The last line, :::* denotes the sshd process listening for any incoming SSH connections over IPv6 to any port, and again over any network interface.",
@@ -3787,7 +5346,9 @@
       "UDP sockets are stateless, meaning they are either open or closed and every process's connection is independent of those which occurred before and after. This is in contrast to TCP connection states such as LISTEN, ESTABLISHED and CLOSE_WAIT. The ss output above shows no UDP connections.",
       ""
     ],
-    "cli": ["ss -atpu"],
+    "cli": [
+      "ss -atpu"
+    ],
     "example": [],
     "output": []
   },
@@ -3822,7 +5383,9 @@
     "url": "",
     "modified": "2022-03-17T00:27:45Z",
     "created": "2022-01-03T16:40:44Z",
-    "tags": ["ssh"],
+    "tags": [
+      "ssh"
+    ],
     "description": [],
     "cli": [
       "sshpass -f .secrets/sshpass/svc_account ssh -o StrictHostKeyChecking=no svc_account@cfiserver.us.example.com"
@@ -3839,7 +5402,9 @@
     "url": "",
     "modified": "2022-03-17T00:27:23Z",
     "created": "2021-12-29T18:00:23Z",
-    "tags": ["docker"],
+    "tags": [
+      "docker"
+    ],
     "description": [
       "ERROR: failed to register layer: Error processing tar file(exit status 1):",
       "no space left on device",
@@ -3869,7 +5434,9 @@
     "description": [
       "Following @StéphaneChazelas, this works for me: find . -type f -print0 | xargs -0 du -h | sort -rh. If you just want say the largest 30 files: find . -type f -print0 | xargs -0 du -h | sort -rh | head -n 30"
     ],
-    "cli": ["du -h | sort -rh"],
+    "cli": [
+      "du -h | sort -rh"
+    ],
     "example": [],
     "output": [
       "3.3G    ./.awx",
@@ -3909,9 +5476,13 @@
     "url": "https://www.baeldung.com/linux/curl-https-connection",
     "modified": "2022-01-03T06:10:01Z",
     "created": "2021-12-29T03:08:27Z",
-    "tags": ["network"],
+    "tags": [
+      "network"
+    ],
     "description": [],
-    "cli": ["$ openssl s_client -showcerts -connect awxserver.us.example.com:80"],
+    "cli": [
+      "$ openssl s_client -showcerts -connect awxserver.us.example.com:80"
+    ],
     "example": [],
     "output": [
       "",
@@ -3956,7 +5527,9 @@
     "url": "",
     "modified": "2022-03-03T20:46:35Z",
     "created": "2021-12-29T02:15:12Z",
-    "tags": ["vault"],
+    "tags": [
+      "vault"
+    ],
     "description": [],
     "cli": [
       "VAULT_TOKEN=...",
@@ -4012,9 +5585,14 @@
     "url": "",
     "modified": "2021-12-30T19:53:06Z",
     "created": "2021-12-08T20:47:47Z",
-    "tags": ["git"],
+    "tags": [
+      "git"
+    ],
     "description": [],
-    "cli": ["git ls-files -s | awk '/120000/{print $4}'", ""],
+    "cli": [
+      "git ls-files -s | awk '/120000/{print $4}'",
+      ""
+    ],
     "example": [],
     "output": []
   },
@@ -4027,9 +5605,13 @@
     "url": "",
     "modified": "2022-03-17T00:28:02Z",
     "created": "2021-12-06T22:06:14Z",
-    "tags": ["AD"],
+    "tags": [
+      "AD"
+    ],
     "description": [],
-    "cli": ["Get-ADUser -Server amer.example.com -Identity annie_tran -Properties *"],
+    "cli": [
+      "Get-ADUser -Server amer.example.com -Identity annie_tran -Properties *"
+    ],
     "example": [],
     "output": []
   },
@@ -4042,9 +5624,13 @@
     "url": "",
     "modified": "2022-03-17T00:28:12Z",
     "created": "2021-12-06T22:04:12Z",
-    "tags": ["AD"],
+    "tags": [
+      "AD"
+    ],
     "description": [],
-    "cli": ["Get-ADDomainController"],
+    "cli": [
+      "Get-ADDomainController"
+    ],
     "example": [],
     "output": [
       "ComputerObjectDN           : CN=AMER39,OU=Domain Controllers,DC=amer,DC=nntrn,DC=com",
@@ -4112,7 +5698,9 @@
     "created": "2021-12-01T22:57:09Z",
     "tags": [],
     "description": [],
-    "cli": ["tr -d '\\0'"],
+    "cli": [
+      "tr -d '\\0'"
+    ],
     "example": [],
     "output": []
   },
@@ -4125,9 +5713,14 @@
     "url": "https://www.oreilly.com/library/view/learn-ansible/9781788998758/6fc4eb99-e58e-46d3-b9d5-0370f293ec54.xhtml",
     "modified": "2022-01-03T06:11:18Z",
     "created": "2021-11-29T16:35:32Z",
-    "tags": ["ansible"],
+    "tags": [
+      "ansible"
+    ],
     "description": [],
-    "cli": ["ansible-doc awx.awx.tower_ad_hoc_command --snippet", ""],
+    "cli": [
+      "ansible-doc awx.awx.tower_ad_hoc_command --snippet",
+      ""
+    ],
     "example": [],
     "output": [
       "- name: create, update, or destroy Ansible Tower ad hoc commands.",
@@ -4167,9 +5760,13 @@
     "url": "https://stackoverflow.com/a/953573",
     "modified": "2022-01-03T06:11:31Z",
     "created": "2021-11-18T18:38:39Z",
-    "tags": ["git"],
+    "tags": [
+      "git"
+    ],
     "description": [],
-    "cli": ["git log --diff-filter=D --summary"],
+    "cli": [
+      "git log --diff-filter=D --summary"
+    ],
     "example": [],
     "output": []
   },
@@ -4184,7 +5781,10 @@
     "created": "2021-11-12T21:34:39Z",
     "tags": [],
     "description": [],
-    "cli": ["cat /proc/$$/environ | sed 's/\\([A-Z_]*=\\)/\\n\\1/g'", ""],
+    "cli": [
+      "cat /proc/$$/environ | sed 's/\\([A-Z_]*=\\)/\\n\\1/g'",
+      ""
+    ],
     "example": [
       "$ cat /proc/$$/environ",
       "USER=annieLOGNAME=annieHOME=/home/anniePATH=/usr/local/bin:/usr/binMAIL=/var/mail/annieSHELL=/bin/bashTERM=xtermDISPLAY=localhost:10.0",
@@ -4210,7 +5810,9 @@
     "url": "https://stackoverflow.com/a/26619069",
     "modified": "2022-03-17T00:28:57Z",
     "created": "2021-11-12T19:53:56Z",
-    "tags": ["text"],
+    "tags": [
+      "text"
+    ],
     "description": [],
     "cli": [
       "# find lines only in file1",
@@ -4236,7 +5838,9 @@
     "created": "2021-11-11T19:06:10Z",
     "tags": [],
     "description": [],
-    "cli": ["top -o +%MEM"],
+    "cli": [
+      "top -o +%MEM"
+    ],
     "example": [],
     "output": []
   },
@@ -4249,9 +5853,14 @@
     "url": "",
     "modified": "2022-01-21T19:00:56Z",
     "created": "2021-11-10T22:13:28Z",
-    "tags": ["docker"],
+    "tags": [
+      "docker"
+    ],
     "description": [],
-    "cli": ["mount --rbind /u01/docker /var/lib/docker", ""],
+    "cli": [
+      "mount --rbind /u01/docker /var/lib/docker",
+      ""
+    ],
     "example": [],
     "output": []
   },
@@ -4295,8 +5904,15 @@
     "created": "2021-11-08T19:49:50Z",
     "tags": [],
     "description": [],
-    "cli": ["echo \"${VAR1:=default}\""],
-    "example": ["$ echo \"${VAR1:=default}\"", "default", "$ echo \"$VAR1\"", "default"],
+    "cli": [
+      "echo \"${VAR1:=default}\""
+    ],
+    "example": [
+      "$ echo \"${VAR1:=default}\"",
+      "default",
+      "$ echo \"$VAR1\"",
+      "default"
+    ],
     "output": []
   },
   {
@@ -4309,8 +5925,12 @@
     "modified": "2022-01-21T19:15:26Z",
     "created": "2021-11-07T11:51:43Z",
     "tags": [],
-    "description": ["To get a list of the currently installed security updates "],
-    "cli": ["yum updateinfo list security installed"],
+    "description": [
+      "To get a list of the currently installed security updates "
+    ],
+    "cli": [
+      "yum updateinfo list security installed"
+    ],
     "example": [],
     "output": []
   },
@@ -4323,9 +5943,13 @@
     "url": "https://blog.tinned-software.net/generate-public-ssh-key-from-private-ssh-key/",
     "modified": "2022-03-17T00:30:13Z",
     "created": "2021-11-05T21:37:54Z",
-    "tags": ["devops"],
+    "tags": [
+      "devops"
+    ],
     "description": [],
-    "cli": ["ssh-keygen -y -f ~/.ssh/windows_login"],
+    "cli": [
+      "ssh-keygen -y -f ~/.ssh/windows_login"
+    ],
     "example": [],
     "output": []
   },
@@ -4338,7 +5962,9 @@
     "url": "",
     "modified": "2022-01-10T15:56:14Z",
     "created": "2021-11-04T22:58:17Z",
-    "tags": ["docker"],
+    "tags": [
+      "docker"
+    ],
     "description": [],
     "cli": [
       "dockerprettyhist() {",
@@ -4366,7 +5992,9 @@
     "created": "2021-11-04T13:56:21Z",
     "tags": [],
     "description": [],
-    "cli": ["yum list docker-engine --showduplicates"],
+    "cli": [
+      "yum list docker-engine --showduplicates"
+    ],
     "example": [],
     "output": [
       "Loaded plugins: ulninfo",
@@ -4417,7 +6045,9 @@
     "created": "2021-11-04T00:28:59Z",
     "tags": [],
     "description": [],
-    "cli": ["grep '^Umask:' \"/proc/$$/status\""],
+    "cli": [
+      "grep '^Umask:' \"/proc/$$/status\""
+    ],
     "example": [],
     "output": "Umask:  0027"
   },
@@ -4432,7 +6062,9 @@
     "created": "2021-11-04T00:06:00Z",
     "tags": [],
     "description": [],
-    "cli": ["getfacl linux"],
+    "cli": [
+      "getfacl linux"
+    ],
     "example": [],
     "output": [
       "# file: linux",
@@ -4455,7 +6087,9 @@
     "created": "2021-11-03T23:36:59Z",
     "tags": [],
     "description": [],
-    "cli": ["usermod -a -G wheel annie_tran"],
+    "cli": [
+      "usermod -a -G wheel annie_tran"
+    ],
     "example": [],
     "output": []
   },
@@ -4470,7 +6104,9 @@
     "created": "2021-11-03T22:45:29Z",
     "tags": [],
     "description": [],
-    "cli": ["realpath --relative-to=$DIR1 $DIR2"],
+    "cli": [
+      "realpath --relative-to=$DIR1 $DIR2"
+    ],
     "example": [
       "$ realpath --relative-to=/home/annie_tran /tmp",
       "../../tmp",
@@ -4489,9 +6125,14 @@
     "url": "https://github.com/ansible/ansible/issues/1210#issuecomment-172298551",
     "modified": "2022-01-07T18:15:21Z",
     "created": "2021-11-03T18:02:57Z",
-    "tags": ["ansible"],
+    "tags": [
+      "ansible"
+    ],
     "description": [],
-    "cli": ["*/15 * * * *  if ! out=`ansible-playbook yourplaybook.yaml`; then echo $out; fi", ""],
+    "cli": [
+      "*/15 * * * *  if ! out=`ansible-playbook yourplaybook.yaml`; then echo $out; fi",
+      ""
+    ],
     "example": [],
     "output": []
   },
@@ -4506,7 +6147,9 @@
     "created": "2021-11-02T17:23:10Z",
     "tags": [],
     "description": [],
-    "cli": ["printf '%*.0s\\n' 10 \"\" | tr \" \" \"#\""],
+    "cli": [
+      "printf '%*.0s\\n' 10 \"\" | tr \" \" \"#\""
+    ],
     "example": "REPEAT=10; printf '%*.0s\\n' $REPEAT\"\" | tr \" \" \"#\"",
     "output": "##########"
   },
@@ -4521,7 +6164,9 @@
     "created": "2021-10-21T20:33:31Z",
     "tags": [],
     "description": [],
-    "cli": ["rpm -q kernel|awk -F- '{print $3}'|awk -F. '{print $1}'|sort -n|tail -1"],
+    "cli": [
+      "rpm -q kernel|awk -F- '{print $3}'|awk -F. '{print $1}'|sort -n|tail -1"
+    ],
     "example": [],
     "output": []
   },
@@ -4534,7 +6179,9 @@
     "url": "",
     "modified": "2021-12-30T19:52:16Z",
     "created": "2021-10-20T22:24:01Z",
-    "tags": ["ansible"],
+    "tags": [
+      "ansible"
+    ],
     "description": [],
     "cli": [
       "curl -f -k -s -v -H \"Content-Type: application/json\" -X PUT -d @_ldap.json --user $TOWER_USERNAME:$TOWER_PASSWORD \"https://$TOWER_HOST/api/v2/settings/ldap/\""
@@ -4552,8 +6199,12 @@
     "modified": "2022-03-03T20:45:07Z",
     "created": "2021-10-18T17:52:54Z",
     "tags": [],
-    "description": ["To list all the menu entries that will be displayed at system boot"],
-    "cli": ["awk -F\\' '$1==\"menuentry \" {print i++ \" : \" $2}' /etc/grub2.cfg"],
+    "description": [
+      "To list all the menu entries that will be displayed at system boot"
+    ],
+    "cli": [
+      "awk -F\\' '$1==\"menuentry \" {print i++ \" : \" $2}' /etc/grub2.cfg"
+    ],
     "example": "$ awk -F\\' '$1==\"menuentry \" {print i++ \" : \" $2}' /etc/grub2.cfg",
     "output": [
       "0 : Oracle Linux Server 7.6, with Unbreakable Enterprise Kernel 5.4.17-2102.202.5.el7uek.x86_64",
@@ -4573,9 +6224,13 @@
     "url": "",
     "modified": "2022-01-10T15:57:04Z",
     "created": "2021-10-18T16:29:31Z",
-    "tags": ["admin"],
+    "tags": [
+      "admin"
+    ],
     "description": [],
-    "cli": ["awk -F\\' /^menuentry/{print\\$2} /etc/grub2.cfg | grep -vE \"(uek|rescue)\" | sort | tail -n 1"],
+    "cli": [
+      "awk -F\\' /^menuentry/{print\\$2} /etc/grub2.cfg | grep -vE \"(uek|rescue)\" | sort | tail -n 1"
+    ],
     "example": [
       "$ awk -F\\' /^menuentry/{print\\$2} /etc/grub2.cfg | grep -vE \"(uek|rescue)\" | sort | tail -n 1",
       "Oracle Linux Server 7.9, with Linux 3.10.0-1160.36.2.el7.x86_64",
@@ -4593,9 +6248,13 @@
     "url": "",
     "modified": "2022-01-10T15:57:13Z",
     "created": "2021-10-18T16:25:00Z",
-    "tags": ["admin"],
+    "tags": [
+      "admin"
+    ],
     "description": [],
-    "cli": ["awk -F\\' /^menuentry/{print\\$2} /etc/grub2.cfg"],
+    "cli": [
+      "awk -F\\' /^menuentry/{print\\$2} /etc/grub2.cfg"
+    ],
     "example": [
       "$ awk -F\\' /^menuentry/{print\\$2} /etc/grub2.cfg",
       "Oracle Linux Server 7.9, with Unbreakable Enterprise Kernel 5.4.17-2102.202.5.el7uek.x86_64",
@@ -4617,9 +6276,13 @@
     "url": "",
     "modified": "2021-12-30T19:52:24Z",
     "created": "2021-10-13T16:49:11Z",
-    "tags": ["ansible"],
+    "tags": [
+      "ansible"
+    ],
     "description": [],
-    "cli": ["awx job_template list --all -f human --filter 'id, name, playbook, modified, status'"],
+    "cli": [
+      "awx job_template list --all -f human --filter 'id, name, playbook, modified, status'"
+    ],
     "example": [],
     "output": []
   },
@@ -4632,7 +6295,9 @@
     "url": "https://exchangepedia.com/2007/02/getting-nntrn-service-tag-using-powershell.html",
     "modified": "2022-03-24T22:14:06Z",
     "created": "2021-10-08T21:33:35Z",
-    "tags": ["nntrn"],
+    "tags": [
+      "nntrn"
+    ],
     "description": [],
     "cli": [
       "Get-WmiObject win32_SystemEnclosure | select serialnumber",
@@ -4641,7 +6306,11 @@
       "Get-WMIObject -Class Win32_Bios"
     ],
     "example": [],
-    "output": ["serialnumber", "------------", "1TL8YD3"]
+    "output": [
+      "serialnumber",
+      "------------",
+      "1TL8YD3"
+    ]
   },
   {
     "id": "140",
@@ -4654,7 +6323,9 @@
     "created": "2021-10-07T20:39:39Z",
     "tags": [],
     "description": [],
-    "cli": ["get-module -listavailable"],
+    "cli": [
+      "get-module -listavailable"
+    ],
     "example": [],
     "output": []
   },
@@ -4669,7 +6340,9 @@
     "created": "2021-10-04T23:41:29Z",
     "tags": [],
     "description": [],
-    "cli": ["ps -o etimes -p $PID"],
+    "cli": [
+      "ps -o etimes -p $PID"
+    ],
     "example": "ps -o etimes -p 1",
     "output": []
   },
@@ -4705,10 +6378,17 @@
     "url": "https://github.com/kuritaka/ansible-examples/blob/master/playbooks/shell_test.yml",
     "modified": "2022-03-03T21:10:49Z",
     "created": "2021-10-02T04:34:57Z",
-    "tags": ["network"],
+    "tags": [
+      "network"
+    ],
     "description": [],
-    "cli": ["/usr/sbin/ip a | grep inet"],
-    "example": ["$ ip a | grep inet", ""],
+    "cli": [
+      "/usr/sbin/ip a | grep inet"
+    ],
+    "example": [
+      "$ ip a | grep inet",
+      ""
+    ],
     "output": [
       "    inet 127.0.0.1/8 scope host lo",
       "    inet 10.171.230.150/22 brd 10.171.231.255 scope global noprefixroute em1",
@@ -4727,7 +6407,9 @@
     "created": "2021-10-01T08:23:08Z",
     "tags": [],
     "description": [],
-    "cli": ["Get-ADGroupMember -Identity \"dbaassecuritygroup\" -Recursive"],
+    "cli": [
+      "Get-ADGroupMember -Identity \"dbaassecuritygroup\" -Recursive"
+    ],
     "example": [],
     "output": []
   },
@@ -4740,7 +6422,9 @@
     "url": "",
     "modified": "2022-03-10T02:05:09Z",
     "created": "2021-09-29T18:50:59Z",
-    "tags": ["ansible"],
+    "tags": [
+      "ansible"
+    ],
     "description": [],
     "cli": [
       "from awx.main.utils import decrypt_field",
@@ -4834,7 +6518,9 @@
     "created": "2021-09-26T06:42:09Z",
     "tags": [],
     "description": [],
-    "cli": ["openssl rand -base64 20"],
+    "cli": [
+      "openssl rand -base64 20"
+    ],
     "example": [],
     "output": []
   },
@@ -4908,8 +6594,14 @@
       "The -s flag defines the minimum number of special characters that must be in the password.   The  default",
       "is 1."
     ],
-    "cli": ["mkpasswd -l 15 -d 3 -C 5"],
-    "example": ["$ mkpasswd -l 20 -d 5 -C 3", "p10i5nzya3Ebdlj,8XLf", ""],
+    "cli": [
+      "mkpasswd -l 15 -d 3 -C 5"
+    ],
+    "example": [
+      "$ mkpasswd -l 20 -d 5 -C 3",
+      "p10i5nzya3Ebdlj,8XLf",
+      ""
+    ],
     "output": []
   },
   {
@@ -4926,7 +6618,9 @@
     "created": "2021-09-21T17:43:41Z",
     "tags": [],
     "description": [],
-    "cli": ["ps -ax -o pid=,ppid=,pcpu=,pmem=,command="],
+    "cli": [
+      "ps -ax -o pid=,ppid=,pcpu=,pmem=,command="
+    ],
     "example": "$ ps -ax -o pid=,ppid=,pcpu=,pmem=,command= | grep -v '\\['",
     "output": [
       "     1      0  0.0  0.0 /usr/lib/systemd/systemd --switched-root --system --deserialize 22",
@@ -4959,7 +6653,9 @@
     "created": "2021-09-15T23:02:38Z",
     "tags": [],
     "description": [],
-    "cli": ["awk '{$1=$1};1'"],
+    "cli": [
+      "awk '{$1=$1};1'"
+    ],
     "example": [],
     "output": []
   },
@@ -5033,7 +6729,9 @@
     "created": "2021-09-15T19:07:05Z",
     "tags": [],
     "description": [],
-    "cli": [" find . -type f -printf '%TFT%TT %p\\n'"],
+    "cli": [
+      " find . -type f -printf '%TFT%TT %p\\n'"
+    ],
     "example": [],
     "output": []
   },
@@ -5048,7 +6746,9 @@
     "created": "2021-09-15T17:08:17Z",
     "tags": [],
     "description": [],
-    "cli": ["awk '!x[$0]++'"],
+    "cli": [
+      "awk '!x[$0]++'"
+    ],
     "example": [],
     "output": []
   },
@@ -5063,7 +6763,9 @@
     "created": "2021-09-13T15:31:41Z",
     "tags": [],
     "description": [],
-    "cli": ["cat file.txt | awk -F '\\t' '{print \"\\n\"$2,$3}' OFS='\\n'"],
+    "cli": [
+      "cat file.txt | awk -F '\\t' '{print \"\\n\"$2,$3}' OFS='\\n'"
+    ],
     "example": [
       "$ cat Downloads/servicess.txt | awk -F '\\t' '{print \"\\n\"$2,$3}' OFS='\\n'",
       "",
@@ -5087,9 +6789,14 @@
     "url": "",
     "modified": "2022-03-03T21:10:29Z",
     "created": "2021-09-11T06:43:21Z",
-    "tags": ["text"],
+    "tags": [
+      "text"
+    ],
     "description": [],
-    "cli": ["printf '=%.0s' {1..80}", ""],
+    "cli": [
+      "printf '=%.0s' {1..80}",
+      ""
+    ],
     "example": [],
     "output": "================================================================================"
   },
@@ -5104,7 +6811,9 @@
     "created": "2021-09-11T06:29:56Z",
     "tags": [],
     "description": [],
-    "cli": ["ps -U $USER -u $USER u"],
+    "cli": [
+      "ps -U $USER -u $USER u"
+    ],
     "example": [],
     "output": []
   },
@@ -5119,7 +6828,11 @@
     "created": "2021-09-11T00:08:22Z",
     "tags": [],
     "description": [],
-    "cli": ["echo \"${@:2}\"", "echo \"${*:2}\"", ""],
+    "cli": [
+      "echo \"${@:2}\"",
+      "echo \"${*:2}\"",
+      ""
+    ],
     "example": [],
     "output": []
   },
@@ -5134,7 +6847,9 @@
     "created": "2021-09-10T23:53:36Z",
     "tags": [],
     "description": [],
-    "cli": ["sudo --list | grep 'NOPASSWD: ALL' |  awk -F'[)(]' '{print $2}'"],
+    "cli": [
+      "sudo --list | grep 'NOPASSWD: ALL' |  awk -F'[)(]' '{print $2}'"
+    ],
     "example": [],
     "output": []
   },
@@ -5147,9 +6862,15 @@
     "url": "",
     "modified": "2022-03-03T21:10:16Z",
     "created": "2021-09-10T19:56:46Z",
-    "tags": ["text"],
+    "tags": [
+      "text"
+    ],
     "description": [],
-    "cli": ["STR=\"Hello world\"", "echo ${STR:6:5}   # \"world\"", "echo ${STR: -5:5}  # \"world\""],
+    "cli": [
+      "STR=\"Hello world\"",
+      "echo ${STR:6:5}   # \"world\"",
+      "echo ${STR: -5:5}  # \"world\""
+    ],
     "example": [],
     "output": []
   },
@@ -5162,7 +6883,9 @@
     "url": "",
     "modified": "2022-03-03T21:10:21Z",
     "created": "2021-09-10T19:56:06Z",
-    "tags": ["text"],
+    "tags": [
+      "text"
+    ],
     "description": [],
     "cli": [
       "name=\"John\"",
@@ -5221,7 +6944,9 @@
     "created": "2021-09-10T16:43:43Z",
     "tags": [],
     "description": [],
-    "cli": ["ss -a"],
+    "cli": [
+      "ss -a"
+    ],
     "example": [
       "USAGE EXAMPLES",
       "",
@@ -5257,7 +6982,9 @@
     "url": "https://github.com/oracle/vagrant-projects/blob/main/OracleDatabase/19.3.0/scripts/setPassword.sh",
     "modified": "2022-02-22T16:33:48Z",
     "created": "2021-09-10T06:09:43Z",
-    "tags": ["db"],
+    "tags": [
+      "db"
+    ],
     "description": [],
     "cli": [
       "ORACLE_PWD=$1",
@@ -5287,9 +7014,13 @@
     "url": "",
     "modified": "2022-01-19T15:47:48Z",
     "created": "2021-09-10T02:44:20Z",
-    "tags": ["nntrn"],
+    "tags": [
+      "nntrn"
+    ],
     "description": [],
-    "cli": ["awk -F= '/^BUILDTYPE=/ {print tolower($2)}' /etc/example.cfg"],
+    "cli": [
+      "awk -F= '/^BUILDTYPE=/ {print tolower($2)}' /etc/example.cfg"
+    ],
     "example": [
       "$ awk -F= '/^BUILDTYPE=/ {print tolower($2)}' /etc/example.cfg",
       "companyit",
@@ -5320,7 +7051,9 @@
     "created": "2021-09-10T00:27:36Z",
     "tags": [],
     "description": [],
-    "cli": ["bash -c 'echo $$ ; ls -l /proc/self ; echo foo'"],
+    "cli": [
+      "bash -c 'echo $$ ; ls -l /proc/self ; echo foo'"
+    ],
     "example": [
       "$ bash -c 'echo $$ ; ls -l /proc/self ; echo foo ; echo $$'",
       "68800",
@@ -5344,7 +7077,9 @@
     "description": [
       "What exec cmd does, is exactly the same as just running cmd, except that the current shell is replaced with the command, instead of a separate process being run."
     ],
-    "cli": ["bash -c 'echo $$ ; exec ls -l /proc/self ; echo foo'"],
+    "cli": [
+      "bash -c 'echo $$ ; exec ls -l /proc/self ; echo foo'"
+    ],
     "example": [
       "$ bash -c 'echo $$ ; exec ls -l /proc/self ; echo foo'",
       "4315",
@@ -5362,9 +7097,13 @@
     "url": "",
     "modified": "2022-01-19T00:16:34Z",
     "created": "2021-09-09T23:46:59Z",
-    "tags": ["admin"],
+    "tags": [
+      "admin"
+    ],
     "description": [],
-    "cli": ["tr -dc 'a-zA-Z0-9' < /dev/urandom | head -c 32"],
+    "cli": [
+      "tr -dc 'a-zA-Z0-9' < /dev/urandom | head -c 32"
+    ],
     "example": [],
     "output": []
   },
@@ -5395,7 +7134,9 @@
     "url": "",
     "modified": "2022-01-19T15:48:10Z",
     "created": "2021-09-09T22:26:06Z",
-    "tags": ["admin"],
+    "tags": [
+      "admin"
+    ],
     "description": [],
     "cli": [
       "sudo --list | grep -ws User -A 1000 | sed 's/,/\\n/g' | sed 's/:/:\\n/g' | grep -E '^\\s+?/' | sed -e 's/^[[:space:]]*//'"
@@ -5417,9 +7158,13 @@
     "url": "",
     "modified": "2022-01-19T15:48:18Z",
     "created": "2021-09-02T15:36:15Z",
-    "tags": ["git"],
+    "tags": [
+      "git"
+    ],
     "description": [],
-    "cli": ["find . -maxdepth 3 -name .git -type d -print -exec git -C {} status \\;"],
+    "cli": [
+      "find . -maxdepth 3 -name .git -type d -print -exec git -C {} status \\;"
+    ],
     "example": [],
     "output": []
   },
@@ -5434,7 +7179,9 @@
     "created": "2021-08-31T18:52:13Z",
     "tags": [],
     "description": [],
-    "cli": ["ps -elf | grep Z"],
+    "cli": [
+      "ps -elf | grep Z"
+    ],
     "example": [],
     "output": [
       "$ ps -elf | grep Z",
@@ -5456,7 +7203,12 @@
     "created": "2021-08-27T23:27:43Z",
     "tags": [],
     "description": [],
-    "cli": ["tar xvf filename.tar -C /home/username/", "", "# extract to current directory", "tar xvf filename.tar"],
+    "cli": [
+      "tar xvf filename.tar -C /home/username/",
+      "",
+      "# extract to current directory",
+      "tar xvf filename.tar"
+    ],
     "example": [],
     "output": []
   },
@@ -5471,7 +7223,11 @@
     "created": "2021-08-27T23:26:58Z",
     "tags": [],
     "description": [],
-    "cli": ["tar cjvf image_backup.tar.bz2 dirname", "", "tar zcvf image_backup.tar.gz dirname"],
+    "cli": [
+      "tar cjvf image_backup.tar.bz2 dirname",
+      "",
+      "tar zcvf image_backup.tar.gz dirname"
+    ],
     "example": [],
     "output": []
   },
@@ -5505,7 +7261,9 @@
     "url": "",
     "modified": "2022-03-03T21:08:00Z",
     "created": "2021-08-26T07:24:52Z",
-    "tags": ["service"],
+    "tags": [
+      "service"
+    ],
     "description": [],
     "cli": [
       "systemctl show -p WantedBy grafana-agent.service",
@@ -5532,9 +7290,13 @@
     "url": "",
     "modified": "2022-01-19T00:16:57Z",
     "created": "2021-08-25T18:24:45Z",
-    "tags": ["docker"],
+    "tags": [
+      "docker"
+    ],
     "description": [],
-    "cli": ["docker volume inspect $(docker volume ls | awk '{print $2}' |  tail -n +2)"],
+    "cli": [
+      "docker volume inspect $(docker volume ls | awk '{print $2}' |  tail -n +2)"
+    ],
     "example": [],
     "output": []
   },
@@ -5578,9 +7340,13 @@
     "url": "",
     "modified": "2022-01-19T15:49:08Z",
     "created": "2021-08-13T00:31:46Z",
-    "tags": ["git"],
+    "tags": [
+      "git"
+    ],
     "description": [],
-    "cli": [" git diff --minimal -w -b 17.0.1 17.1.0 installer"],
+    "cli": [
+      " git diff --minimal -w -b 17.0.1 17.1.0 installer"
+    ],
     "example": [],
     "output": []
   },
@@ -5595,7 +7361,9 @@
     "created": "2021-08-11T21:55:17Z",
     "tags": [],
     "description": [],
-    "cli": ["sed -n '/^\\[mongo:children.*/,$p'"],
+    "cli": [
+      "sed -n '/^\\[mongo:children.*/,$p'"
+    ],
     "example": [],
     "output": []
   },
@@ -5610,7 +7378,9 @@
     "created": "2021-08-11T21:54:54Z",
     "tags": [],
     "description": [],
-    "cli": ["cat playbooks/hosts/prod.ini | sed -e '/^\\[mongo:children/,+5000d'"],
+    "cli": [
+      "cat playbooks/hosts/prod.ini | sed -e '/^\\[mongo:children/,+5000d'"
+    ],
     "example": [],
     "output": []
   },
@@ -5625,7 +7395,9 @@
     "created": "2021-08-10T14:38:04Z",
     "tags": [],
     "description": [],
-    "cli": ["find . -type f -name \"*.html\" -print -exec sed -i -e 's/\"\\/\\//\"/g' {} \\;"],
+    "cli": [
+      "find . -type f -name \"*.html\" -print -exec sed -i -e 's/\"\\/\\//\"/g' {} \\;"
+    ],
     "example": [],
     "output": []
   },
@@ -5640,7 +7412,10 @@
     "created": "2021-08-09T17:52:39Z",
     "tags": [],
     "description": [],
-    "cli": ["cat .bash_history | grep -vE \"^#[0-9]+\" | sort | uniq -c | sort -k 1 -n | less", ""],
+    "cli": [
+      "cat .bash_history | grep -vE \"^#[0-9]+\" | sort | uniq -c | sort -k 1 -n | less",
+      ""
+    ],
     "example": [],
     "output": []
   },
@@ -5677,7 +7452,9 @@
     "url": "https://stackoverflow.com/a/2183920",
     "modified": "2021-12-30T19:44:10Z",
     "created": "2021-07-30T17:03:33Z",
-    "tags": ["git"],
+    "tags": [
+      "git"
+    ],
     "description": [],
     "cli": [
       "# Tells 'less' not to paginate if less than a page",
@@ -5699,7 +7476,12 @@
     "created": "2021-07-30T10:13:42Z",
     "tags": [],
     "description": [],
-    "cli": ["Get-Service -Displayname \"*network*\"", "", "Get-Service | Where-Object {$_.Status -eq \"Running\"}", ""],
+    "cli": [
+      "Get-Service -Displayname \"*network*\"",
+      "",
+      "Get-Service | Where-Object {$_.Status -eq \"Running\"}",
+      ""
+    ],
     "example": [],
     "output": []
   },
@@ -5712,9 +7494,13 @@
     "url": "https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.management/get-process?view=powershell-7.1",
     "modified": "2022-01-18T17:11:23Z",
     "created": "2021-07-30T10:12:34Z",
-    "tags": ["powershell"],
+    "tags": [
+      "powershell"
+    ],
     "description": [],
-    "cli": ["Get-Process atom | Format-List *"],
+    "cli": [
+      "Get-Process atom | Format-List *"
+    ],
     "example": [],
     "output": []
   },
@@ -5744,9 +7530,13 @@
     "url": "",
     "modified": "2021-12-30T19:55:20Z",
     "created": "2021-07-28T15:47:23Z",
-    "tags": ["powershell"],
+    "tags": [
+      "powershell"
+    ],
     "description": [],
-    "cli": ["Get-ADUser -Identity Annie_Tran -Properties * | Select -ExpandProperty MemberOf"],
+    "cli": [
+      "Get-ADUser -Identity Annie_Tran -Properties * | Select -ExpandProperty MemberOf"
+    ],
     "example": [],
     "output": []
   },
@@ -5759,9 +7549,13 @@
     "url": "",
     "modified": "2021-12-30T19:55:29Z",
     "created": "2021-07-28T15:42:59Z",
-    "tags": ["powershell"],
+    "tags": [
+      "powershell"
+    ],
     "description": [],
-    "cli": ["Get-ADUser -Identity Annie_Tran -Properties *"],
+    "cli": [
+      "Get-ADUser -Identity Annie_Tran -Properties *"
+    ],
     "example": [],
     "output": []
   },
@@ -5774,7 +7568,9 @@
     "url": "",
     "modified": "2021-12-30T19:44:10Z",
     "created": "2021-07-27T04:59:01Z",
-    "tags": ["db"],
+    "tags": [
+      "db"
+    ],
     "description": [],
     "cli": [
       "psql -U awx -d awx -c \"\\dt+\" -P pager=off |",
@@ -5853,9 +7649,13 @@
     "url": "",
     "modified": "2021-12-30T19:44:10Z",
     "created": "2021-07-21T17:59:41Z",
-    "tags": ["ansible"],
+    "tags": [
+      "ansible"
+    ],
     "description": [],
-    "cli": ["ansible all --list-hosts"],
+    "cli": [
+      "ansible all --list-hosts"
+    ],
     "example": [],
     "output": []
   },
@@ -5868,9 +7668,14 @@
     "url": "",
     "modified": "2021-12-30T19:44:10Z",
     "created": "2021-07-21T14:59:17Z",
-    "tags": ["admin"],
+    "tags": [
+      "admin"
+    ],
     "description": [],
-    "cli": ["encrypt () { gpg -ac --no-options \"$1\"; }", "decrypt () { gpg --no-options \"$1\"; }"],
+    "cli": [
+      "encrypt () { gpg -ac --no-options \"$1\"; }",
+      "decrypt () { gpg --no-options \"$1\"; }"
+    ],
     "example": [],
     "output": []
   },
@@ -5883,9 +7688,13 @@
     "url": "https://docs.ansible.com/ansible/2.8/user_guide/intro_adhoc.html",
     "modified": "2021-12-30T19:44:10Z",
     "created": "2021-07-20T04:40:32Z",
-    "tags": ["ansible"],
+    "tags": [
+      "ansible"
+    ],
     "description": [],
-    "cli": ["ansible all -m copy -a \"src=ansible.cfg dest=/tmp/\""],
+    "cli": [
+      "ansible all -m copy -a \"src=ansible.cfg dest=/tmp/\""
+    ],
     "example": [],
     "output": []
   },
@@ -5898,9 +7707,13 @@
     "url": "",
     "modified": "2021-12-30T19:44:10Z",
     "created": "2021-07-16T07:15:47Z",
-    "tags": ["ansible"],
+    "tags": [
+      "ansible"
+    ],
     "description": [],
-    "cli": ["ansible-doc -t become -l"],
+    "cli": [
+      "ansible-doc -t become -l"
+    ],
     "example": [],
     "output": []
   },
@@ -5915,7 +7728,9 @@
     "created": "2021-07-15T18:32:34Z",
     "tags": [],
     "description": [],
-    "cli": ["openssl genpkey -algorithm ed25519"],
+    "cli": [
+      "openssl genpkey -algorithm ed25519"
+    ],
     "example": [],
     "output": []
   },
@@ -5930,7 +7745,9 @@
     "created": "2021-07-14T16:54:27Z",
     "tags": [],
     "description": [],
-    "cli": ["rsync -avr -o -g filename.txt user@hosserver.us.example.com:/home/annie_tran"],
+    "cli": [
+      "rsync -avr -o -g filename.txt user@hosserver.us.example.com:/home/annie_tran"
+    ],
     "example": [],
     "output": []
   },
@@ -5943,7 +7760,9 @@
     "url": "",
     "modified": "2021-12-30T19:44:10Z",
     "created": "2021-07-13T20:01:54Z",
-    "tags": ["admin"],
+    "tags": [
+      "admin"
+    ],
     "description": [],
     "cli": [
       "openssl req -new -newkey rsa:4096 -nodes -keyout \"private.key\" -out \"$(hostname -f).csr\" -subj \"/C=US/ST=Texas/L=Round Rock/O=nntrn/OU=Example /CN=$(hostname -f)\""
@@ -5962,7 +7781,9 @@
     "created": "2021-07-13T19:31:08Z",
     "tags": [],
     "description": [],
-    "cli": ["find . -type f -name \"*.md\" ! -path \"*node_modules*\" -print"],
+    "cli": [
+      "find . -type f -name \"*.md\" ! -path \"*node_modules*\" -print"
+    ],
     "example": [],
     "output": []
   },
@@ -5977,7 +7798,9 @@
     "created": "2021-07-12T21:00:56Z",
     "tags": [],
     "description": [],
-    "cli": ["history | cut -d ' ' -f6- | sort | uniq -c | sort -k1 -nr"],
+    "cli": [
+      "history | cut -d ' ' -f6- | sort | uniq -c | sort -k1 -nr"
+    ],
     "example": [],
     "output": []
   },
@@ -5990,9 +7813,13 @@
     "url": "",
     "modified": "2021-12-30T19:44:10Z",
     "created": "2021-07-12T20:47:34Z",
-    "tags": ["admin"],
+    "tags": [
+      "admin"
+    ],
     "description": [],
-    "cli": ["cat /var/log/sudo.log | grep \"LANG=C;LANGUAGE=en\" | cut -d';' -f3 | sort -u "],
+    "cli": [
+      "cat /var/log/sudo.log | grep \"LANG=C;LANGUAGE=en\" | cut -d';' -f3 | sort -u "
+    ],
     "example": [],
     "output": []
   },
@@ -6005,9 +7832,13 @@
     "url": "",
     "modified": "2021-12-30T19:44:10Z",
     "created": "2021-07-12T20:41:55Z",
-    "tags": ["admin"],
+    "tags": [
+      "admin"
+    ],
     "description": [],
-    "cli": ["lsof -n -i TCP -i UDP"],
+    "cli": [
+      "lsof -n -i TCP -i UDP"
+    ],
     "example": [],
     "output": []
   },
@@ -6062,9 +7893,13 @@
     "url": "https://sites.google.com/site/mrxpalmeiras/linux/iptables-basics",
     "modified": "2022-03-03T21:09:04Z",
     "created": "2021-07-09T02:17:59Z",
-    "tags": ["network"],
+    "tags": [
+      "network"
+    ],
     "description": [],
-    "cli": ["iptables --list-rules -v"],
+    "cli": [
+      "iptables --list-rules -v"
+    ],
     "example": [
       "$ iptables --list-rules",
       "-P INPUT ACCEPT",
@@ -6139,8 +7974,13 @@
       "   previous expression. The '*' metacharacter looks for the leftmost",
       "   possible match first and will match zero characters. Thus,"
     ],
-    "cli": ["echo foo | sed 's/o*/EEE/'"],
-    "example": ["$ echo foo | sed 's/o*/EEE/'", "EEEfoo"],
+    "cli": [
+      "echo foo | sed 's/o*/EEE/'"
+    ],
+    "example": [
+      "$ echo foo | sed 's/o*/EEE/'",
+      "EEEfoo"
+    ],
     "output": [
       "will generate 'EEEfoo', not 'fEEE' as one might expect. This is because /o*/ matches the null string at the beginning of the word.",
       ""
@@ -6157,7 +7997,9 @@
     "created": "2021-07-08T00:33:18Z",
     "tags": [],
     "description": [],
-    "cli": ["export $(cat /path/to/file.txt | grep -vE \"^(#|export)\" | grep \".\")"],
+    "cli": [
+      "export $(cat /path/to/file.txt | grep -vE \"^(#|export)\" | grep \".\")"
+    ],
     "example": [],
     "output": []
   },
@@ -6170,7 +8012,9 @@
     "url": "",
     "modified": "2021-12-30T19:44:09Z",
     "created": "2021-07-06T21:09:04Z",
-    "tags": ["coreutils"],
+    "tags": [
+      "coreutils"
+    ],
     "description": [],
     "cli": [
       "for pb in $(find . -maxdepth 1 -type f -name \"*.yml\"); do",
@@ -6202,9 +8046,13 @@
     "url": "",
     "modified": "2021-12-30T19:44:09Z",
     "created": "2021-06-30T13:47:02Z",
-    "tags": ["nntrn"],
+    "tags": [
+      "nntrn"
+    ],
     "description": [],
-    "cli": ["net config workstation"],
+    "cli": [
+      "net config workstation"
+    ],
     "example": [],
     "output": [
       "Computer name                        \\\\W106697SN2",
@@ -6237,8 +8085,12 @@
     "url": "",
     "modified": "2021-12-30T19:44:09Z",
     "created": "2021-06-22T20:34:02Z",
-    "tags": ["coreutils"],
-    "description": ["`--ignore=\"\\.*\"` removes paths like ./ ../"],
+    "tags": [
+      "coreutils"
+    ],
+    "description": [
+      "`--ignore=\"\\.*\"` removes paths like ./ ../"
+    ],
     "cli": [
       "ls -RA --ignore=\"\\.*\" /misc/software/database/awx | awk '",
       "/:$/&&f{s=$0;f=0}",
@@ -6344,7 +8196,9 @@
       "",
       "sort -hr: sorts it decreasingly"
     ],
-    "cli": ["du -h --max-depth=1 | sort -h"],
+    "cli": [
+      "du -h --max-depth=1 | sort -h"
+    ],
     "example": [],
     "output": [
       "0       ./.pki",
@@ -6368,7 +8222,9 @@
     "url": "https://docs.oracle.com/en/operating-systems/oracle-linux/docker/docker-issues.html#docker-issue-28396501",
     "modified": "2021-12-30T19:44:09Z",
     "created": "2021-06-19T07:09:25Z",
-    "tags": ["docker"],
+    "tags": [
+      "docker"
+    ],
     "description": [
       "Warning messages may be displayed by Docker Engine when a user performs some actions, such as running docker info if the system kernel on a host system is configured to disable the net.bridge.bridge-nf-call-iptables and net.bridge.bridge-nf-call-ip6tables options. For example, the user may see an error similar to:",
       "",
@@ -6412,7 +8268,9 @@
     "created": "2021-06-18T16:19:38Z",
     "tags": [],
     "description": [],
-    "cli": ["df --block-size=1 | numfmt --field 2 --header --to=iec"],
+    "cli": [
+      "df --block-size=1 | numfmt --field 2 --header --to=iec"
+    ],
     "example": [],
     "output": [
       "Filesystem                                                         1B-blocks         Used    Available Use% Mounted on",
@@ -6446,7 +8304,9 @@
     "url": "",
     "modified": "2021-12-30T19:44:09Z",
     "created": "2021-06-16T20:25:21Z",
-    "tags": ["gnu"],
+    "tags": [
+      "gnu"
+    ],
     "description": [],
     "cli": [
       "alias c1=\"awk '{print \\$1}'\"",
@@ -6459,8 +8319,19 @@
       "alias c8=\"awk '{print \\$8}'\"",
       "alias c9=\"awk '{print \\$9}'\""
     ],
-    "example": ["demo=' a1 a2 a3", "b1 b2 b3", "c1 c2 c3'", "", "echo \"$demo\" | c1", ""],
-    "output": ["a1", "b1", "c1"]
+    "example": [
+      "demo=' a1 a2 a3",
+      "b1 b2 b3",
+      "c1 c2 c3'",
+      "",
+      "echo \"$demo\" | c1",
+      ""
+    ],
+    "output": [
+      "a1",
+      "b1",
+      "c1"
+    ]
   },
   {
     "id": "57",
@@ -6471,9 +8342,13 @@
     "url": "",
     "modified": "2021-12-30T19:44:09Z",
     "created": "2021-06-16T14:34:11Z",
-    "tags": ["nntrn"],
+    "tags": [
+      "nntrn"
+    ],
     "description": [],
-    "cli": ["net user /domain svc_account"],
+    "cli": [
+      "net user /domain svc_account"
+    ],
     "example": [],
     "output": []
   },
@@ -6486,9 +8361,13 @@
     "url": "https://devconnected.com/how-to-checkout-git-tags/",
     "modified": "2021-12-30T19:44:09Z",
     "created": "2021-06-10T16:26:06Z",
-    "tags": ["git"],
+    "tags": [
+      "git"
+    ],
     "description": [],
-    "cli": ["git fetch --all --tags"],
+    "cli": [
+      "git fetch --all --tags"
+    ],
     "example": [],
     "output": []
   },
@@ -6503,8 +8382,13 @@
     "created": "2021-06-08T00:04:52Z",
     "tags": [],
     "description": [],
-    "cli": ["df -Ph . "],
-    "example": ["df -Ph . | tail -1 | awk '{print $4}'", ""],
+    "cli": [
+      "df -Ph . "
+    ],
+    "example": [
+      "df -Ph . | tail -1 | awk '{print $4}'",
+      ""
+    ],
     "output": [
       "$ df -Ph . | tail -1 | awk '{print $4}'",
       "16G",
@@ -6524,9 +8408,13 @@
     "url": "https://unix.stackexchange.com/a/6014",
     "modified": "2021-12-30T19:44:09Z",
     "created": "2021-06-07T16:04:43Z",
-    "tags": ["coreutils"],
+    "tags": [
+      "coreutils"
+    ],
     "description": [],
-    "cli": ["df -Ph . "],
+    "cli": [
+      "df -Ph . "
+    ],
     "example": [],
     "output": [
       "$ df -Ph . | tail -1 | awk '{print $4}'",
@@ -6549,7 +8437,9 @@
     "created": "2021-06-04T17:17:09Z",
     "tags": [],
     "description": [],
-    "cli": ["unset $(cat /path/to/file.txt | grep -vE \"^(#|export)\" | grep \".\" | cut -d = -f -1)"],
+    "cli": [
+      "unset $(cat /path/to/file.txt | grep -vE \"^(#|export)\" | grep \".\" | cut -d = -f -1)"
+    ],
     "example": [],
     "output": []
   },
@@ -6564,7 +8454,9 @@
     "created": "2021-06-04T12:34:10Z",
     "tags": [],
     "description": [],
-    "cli": ["exe() { echo \"\\$ $@\" ; \"$@\" ; }"],
+    "cli": [
+      "exe() { echo \"\\$ $@\" ; \"$@\" ; }"
+    ],
     "example": [],
     "output": []
   },
@@ -6579,8 +8471,14 @@
     "created": "2021-06-03T18:23:30Z",
     "tags": [],
     "description": [],
-    "cli": ["ps -ef | awk -v m=\"\\x01\" -v N=\"8\" '{$N=m$N ;print substr($0, index($0,m)+1)}'", ""],
-    "example": ["ps -ef | awk -v m=\"\\x01\" -v N=\"8\" '{$N=m$N ;print substr($0, index($0,m)+1)}'", ""],
+    "cli": [
+      "ps -ef | awk -v m=\"\\x01\" -v N=\"8\" '{$N=m$N ;print substr($0, index($0,m)+1)}'",
+      ""
+    ],
+    "example": [
+      "ps -ef | awk -v m=\"\\x01\" -v N=\"8\" '{$N=m$N ;print substr($0, index($0,m)+1)}'",
+      ""
+    ],
     "output": []
   },
   {
@@ -6598,8 +8496,13 @@
       "* -s 2: the signal to send when the timer has exceeded, it can be a number or the name. Equally valid would have been -s SIGINT (more on the kill signals below)",
       "* 10: the duration the script can run, before the kill signal described above is sent to it."
     ],
-    "cli": ["/bin/timeout -s 2 10 /path/to/your/script.sh"],
-    "example": ["crontab -l", "* * * * * /bin/timeout -s 2 10 /path/to/your/script.sh"],
+    "cli": [
+      "/bin/timeout -s 2 10 /path/to/your/script.sh"
+    ],
+    "example": [
+      "crontab -l",
+      "* * * * * /bin/timeout -s 2 10 /path/to/your/script.sh"
+    ],
     "output": []
   },
   {
@@ -6613,7 +8516,9 @@
     "created": "2021-05-28T17:01:12Z",
     "tags": [],
     "description": [],
-    "cli": ["find . -type f -name \"*.sh\" | xargs -I {} git add --chmod=+x {}"],
+    "cli": [
+      "find . -type f -name \"*.sh\" | xargs -I {} git add --chmod=+x {}"
+    ],
     "example": [],
     "output": []
   },
@@ -6626,9 +8531,14 @@
     "url": "",
     "modified": "2021-12-30T19:44:09Z",
     "created": "2021-05-20T02:13:26Z",
-    "tags": ["file"],
+    "tags": [
+      "file"
+    ],
     "description": [],
-    "cli": ["curl -sL https://dl.yarnpkg.com/rpm/yarn.repo | tee /etc/yum.repos.d/yarn.repo", "yum install yarn"],
+    "cli": [
+      "curl -sL https://dl.yarnpkg.com/rpm/yarn.repo | tee /etc/yum.repos.d/yarn.repo",
+      "yum install yarn"
+    ],
     "example": [],
     "output": []
   },
@@ -6643,7 +8553,9 @@
     "created": "2021-05-14T17:56:27Z",
     "tags": [],
     "description": [],
-    "cli": ["export $(egrep -v '^#' \"path/to/file\" | xargs)"],
+    "cli": [
+      "export $(egrep -v '^#' \"path/to/file\" | xargs)"
+    ],
     "example": [],
     "output": []
   },
@@ -6674,9 +8586,13 @@
     "url": "",
     "modified": "2021-12-30T19:44:09Z",
     "created": "2021-05-06T19:24:05Z",
-    "tags": ["python"],
+    "tags": [
+      "python"
+    ],
     "description": [],
-    "cli": ["pip show $(pip list | awk '{print $1}' | grep -v - | xargs) | less"],
+    "cli": [
+      "pip show $(pip list | awk '{print $1}' | grep -v - | xargs) | less"
+    ],
     "example": [],
     "output": []
   },
@@ -6714,7 +8630,9 @@
     "url": "",
     "modified": "2021-12-30T19:44:09Z",
     "created": "2021-05-06T00:36:44Z",
-    "tags": ["docker"],
+    "tags": [
+      "docker"
+    ],
     "description": [],
     "cli": [
       "docker history --no-trunc <imageid> | tac | tr -s ' ' | cut -d \" \" -f 5- | sed 's,^/bin/sh -c #(nop) ,,g' | sed 's,^/bin/sh -c,RUN,g' | sed 's, && ,\\n  & ,g' | sed 's,\\s*[0-9]*[\\.]*[0-9]*\\s*[kMG]*B\\s*$,,g' | head -n -1"
@@ -6731,7 +8649,9 @@
     "url": "https://stackoverflow.com/a/37650072",
     "modified": "2021-12-30T19:44:09Z",
     "created": "2021-05-05T11:08:21Z",
-    "tags": ["docker"],
+    "tags": [
+      "docker"
+    ],
     "description": [],
     "cli": [
       "dockerimagedir=\"docker-images-$(date +%F)\"",
@@ -6762,9 +8682,13 @@
     "url": "",
     "modified": "2021-12-30T19:44:09Z",
     "created": "2021-05-05T03:22:19Z",
-    "tags": ["python"],
+    "tags": [
+      "python"
+    ],
     "description": [],
-    "cli": [" pip install --upgrade  $(cat requirements.txt | grep -o \"^[^#].*\")"],
+    "cli": [
+      " pip install --upgrade  $(cat requirements.txt | grep -o \"^[^#].*\")"
+    ],
     "example": [],
     "output": []
   },
@@ -6779,9 +8703,18 @@
     "created": "2021-04-27T22:31:37Z",
     "tags": [],
     "description": [],
-    "cli": ["env | grep -o '^S[^=]*'"],
+    "cli": [
+      "env | grep -o '^S[^=]*'"
+    ],
     "example": [],
-    "output": ["SHELL", "SSH_CLIENT", "SSH_TTY", "SSH_AUTH_SOCK", "SHLVL", "SSH_CONNECTION"]
+    "output": [
+      "SHELL",
+      "SSH_CLIENT",
+      "SSH_TTY",
+      "SSH_AUTH_SOCK",
+      "SHLVL",
+      "SSH_CONNECTION"
+    ]
   },
   {
     "id": "39",
@@ -6794,7 +8727,9 @@
     "created": "2021-04-27T16:42:30Z",
     "tags": [],
     "description": [],
-    "cli": ["export $(egrep -v '^#' .env | xargs)"],
+    "cli": [
+      "export $(egrep -v '^#' .env | xargs)"
+    ],
     "example": [],
     "output": []
   },
@@ -6809,7 +8744,9 @@
     "created": "2021-04-21T00:24:26Z",
     "tags": [],
     "description": [],
-    "cli": ["echo -e $html | grep -Eo \"<title>(.*)</title>\""],
+    "cli": [
+      "echo -e $html | grep -Eo \"<title>(.*)</title>\""
+    ],
     "example": [],
     "output": []
   },
@@ -6843,9 +8780,13 @@
     "url": "",
     "modified": "2021-12-30T19:44:09Z",
     "created": "2021-04-20T20:37:37Z",
-    "tags": ["info"],
+    "tags": [
+      "info"
+    ],
     "description": [],
-    "cli": ["find /etc/pki -type f ! -name \"*cacerts*\" -print -exec cat {} \\; | less"],
+    "cli": [
+      "find /etc/pki -type f ! -name \"*cacerts*\" -print -exec cat {} \\; | less"
+    ],
     "example": [],
     "output": []
   },
@@ -6860,7 +8801,10 @@
     "created": "2021-04-14T00:18:25Z",
     "tags": [],
     "description": [],
-    "cli": ["find . -type f -print0 | sort -z | xargs -r0 sha256sum  sha256SumOutput", ""],
+    "cli": [
+      "find . -type f -print0 | sort -z | xargs -r0 sha256sum  sha256SumOutput",
+      ""
+    ],
     "example": [],
     "output": []
   },
@@ -6873,9 +8817,13 @@
     "url": "",
     "modified": "2021-12-30T19:44:09Z",
     "created": "2021-04-13T23:55:19Z",
-    "tags": ["info"],
+    "tags": [
+      "info"
+    ],
     "description": [],
-    "cli": ["find . -type f -print -exec cat {} \\; "],
+    "cli": [
+      "find . -type f -print -exec cat {} \\; "
+    ],
     "example": [],
     "output": []
   },
@@ -6908,9 +8856,13 @@
     "url": "https://stackoverflow.com/a/3040917/7460613",
     "modified": "2021-12-30T19:44:09Z",
     "created": "2021-04-02T15:09:18Z",
-    "tags": ["file"],
+    "tags": [
+      "file"
+    ],
     "description": [],
-    "cli": ["wget <url> -O file_name.json"],
+    "cli": [
+      "wget <url> -O file_name.json"
+    ],
     "example": "wget https://example.service-now.com/api/now/ui/date_time/legacy -O snow_date.json",
     "output": [
       "--2021-04-02 10:00:58--  https://example.service-now.com/api/now/ui/date_time/legacy",
@@ -6937,7 +8889,9 @@
     "created": "2021-03-31T00:20:09Z",
     "tags": [],
     "description": [],
-    "cli": ["lsof -P -i -n"],
+    "cli": [
+      "lsof -P -i -n"
+    ],
     "example": [],
     "output": []
   },
@@ -6952,7 +8906,10 @@
     "created": "2021-03-31T00:14:14Z",
     "tags": [],
     "description": [],
-    "cli": ["COLUMN=4", "history | awk '{a[$COLUMN]++}END{for(i in a){print a[i] \" \" i}}' | sort -rn | head"],
+    "cli": [
+      "COLUMN=4",
+      "history | awk '{a[$COLUMN]++}END{for(i in a){print a[i] \" \" i}}' | sort -rn | head"
+    ],
     "example": [],
     "output": [
       "149 ls",
@@ -6976,7 +8933,9 @@
     "url": "https://www.commandlinefu.com/commands/view/2012/graph-of-connections-for-each-hosts",
     "modified": "2021-12-30T19:44:09Z",
     "created": "2021-03-31T00:03:08Z",
-    "tags": ["network"],
+    "tags": [
+      "network"
+    ],
     "description": [],
     "cli": [
       "netstat -an | grep ESTABLISHED | awk '{print $5}' | awk -F: '{print $1}' | sort | uniq -c | awk '{ printf(\"%s\\t%s\\t\",$2,$1) ; for (i = 0; i < $1; i++) {printf(\"*\")}; print \"\" }'"
@@ -7032,7 +8991,10 @@
       "       v     vsize        total VM size in KiB",
       "       y     priority     kernel scheduling priority"
     ],
-    "cli": ["ps aux", "ps -e"],
+    "cli": [
+      "ps aux",
+      "ps -e"
+    ],
     "example": [
       "",
       "# To see every process on the system using standard syntax:",
@@ -7084,9 +9046,16 @@
     "url": "",
     "modified": "2021-12-30T19:44:09Z",
     "created": "2021-03-30T20:31:15Z",
-    "tags": ["coreutils"],
-    "description": ["Print filename before printing contents of file. ", "Same as `cat ./*.txt` but with filename"],
-    "cli": ["find /etc/sudoers.d/ -type f -print -exec cat {} \\; | less"],
+    "tags": [
+      "coreutils"
+    ],
+    "description": [
+      "Print filename before printing contents of file. ",
+      "Same as `cat ./*.txt` but with filename"
+    ],
+    "cli": [
+      "find /etc/sudoers.d/ -type f -print -exec cat {} \\; | less"
+    ],
     "example": [],
     "output": []
   },
@@ -7124,9 +9093,13 @@
     "url": "",
     "modified": "2021-12-30T19:44:08Z",
     "created": "2021-03-27T00:19:47Z",
-    "tags": ["coreutils"],
+    "tags": [
+      "coreutils"
+    ],
     "description": [],
-    "cli": ["sed \"s@+@ @g;s@%@\\\\\\\\x@g\" | xargs -0 printf \"%b\""],
+    "cli": [
+      "sed \"s@+@ @g;s@%@\\\\\\\\x@g\" | xargs -0 printf \"%b\""
+    ],
     "example": [
       "alias urldecode='sed \"s@+@ @g;s@%@\\\\\\\\x@g\" | xargs -0 printf \"%b\"'",
       "",
@@ -7144,9 +9117,16 @@
     "url": "",
     "modified": "2021-12-30T19:44:08Z",
     "created": "2021-03-27T00:16:31Z",
-    "tags": ["file"],
-    "description": ["recursively download a page ", "creates the "],
-    "cli": ["wget --no-parent -r https://url.com"],
+    "tags": [
+      "file"
+    ],
+    "description": [
+      "recursively download a page ",
+      "creates the "
+    ],
+    "cli": [
+      "wget --no-parent -r https://url.com"
+    ],
     "example": "wget --no-parent -r http://images-httserver.us.example.com/images/repository/apps/git/git29_for_OL7.x/",
     "output": [
       "recursively creates the directory and files to:",
@@ -7162,10 +9142,18 @@
     "url": "https://stackoverflow.com/a/2328528",
     "modified": "2021-12-30T19:44:08Z",
     "created": "2021-03-26T18:34:51Z",
-    "tags": ["coreutils"],
+    "tags": [
+      "coreutils"
+    ],
     "description": [],
-    "cli": ["useradd -p $(openssl passwd -1 $PASS) $USER"],
-    "example": ["USER=noreply", "PASS=password", "useradd -p $(openssl passwd -1 $PASS) $USER"],
+    "cli": [
+      "useradd -p $(openssl passwd -1 $PASS) $USER"
+    ],
+    "example": [
+      "USER=noreply",
+      "PASS=password",
+      "useradd -p $(openssl passwd -1 $PASS) $USER"
+    ],
     "output": []
   },
   {
@@ -7177,9 +9165,14 @@
     "url": "",
     "modified": "2021-12-30T19:44:08Z",
     "created": "2021-03-26T17:57:58Z",
-    "tags": ["coreutils"],
+    "tags": [
+      "coreutils"
+    ],
     "description": [],
-    "cli": ["mail -s \"$(echo -e \"SAR files\\nContent-Type: text/html\")\" annie_tran@example.com <allsar.txt", ""],
+    "cli": [
+      "mail -s \"$(echo -e \"SAR files\\nContent-Type: text/html\")\" annie_tran@example.com <allsar.txt",
+      ""
+    ],
     "example": [
       "mail -s \"Test\" -a vatp2s_hc_WED_vm_sizing.html annie_tran@example.com </dev/null",
       "",
@@ -7206,9 +9199,16 @@
     "url": "",
     "modified": "2021-12-30T19:44:08Z",
     "created": "2021-03-25T15:42:51Z",
-    "tags": ["network"],
-    "description": ["-p displays", "-W print wide (no trim)"],
-    "cli": ["netstat -pW"],
+    "tags": [
+      "network"
+    ],
+    "description": [
+      "-p displays",
+      "-W print wide (no trim)"
+    ],
+    "cli": [
+      "netstat -pW"
+    ],
     "example": [],
     "output": [
       "Active Internet connections (w/o servers)",
@@ -7224,9 +9224,13 @@
     "url": "https://unix.stackexchange.com/a/291047",
     "modified": "2021-12-30T19:44:08Z",
     "created": "2021-03-23T17:17:47Z",
-    "tags": ["root"],
+    "tags": [
+      "root"
+    ],
     "description": [],
-    "cli": ["sed ':a;N;$!{/\\n$/!ba}; s/[[:blank:]]*\\n[[:blank:]]*/ /g' textfile.txt"],
+    "cli": [
+      "sed ':a;N;$!{/\\n$/!ba}; s/[[:blank:]]*\\n[[:blank:]]*/ /g' textfile.txt"
+    ],
     "example": [
       "# unwrap sudo.log file",
       "sed ':a;N;$!{/\\n$/!ba}; s/[[:blank:]]*\\n[[:blank:]]*/ /g' /var/log/sudo.log | sed 's/COMMAND/\\nCOMMAND/g'"
@@ -7242,10 +9246,17 @@
     "url": "",
     "modified": "2022-04-06T21:30:41Z",
     "created": "2021-03-23T02:21:46Z",
-    "tags": ["python"],
+    "tags": [
+      "python"
+    ],
     "description": [],
-    "cli": ["find . | grep -E \"(__pycache__|\\.pyc|\\.pyo$)\" | xargs rm -rf"],
-    "example": ["alias pyclear='find . | grep -E \"(__pycache__|\\.pyc|\\.pyo$)\" | xargs rm -rf'", ""],
+    "cli": [
+      "find . | grep -E \"(__pycache__|\\.pyc|\\.pyo$)\" | xargs rm -rf"
+    ],
+    "example": [
+      "alias pyclear='find . | grep -E \"(__pycache__|\\.pyc|\\.pyo$)\" | xargs rm -rf'",
+      ""
+    ],
     "output": []
   },
   {
@@ -7259,7 +9270,9 @@
     "created": "2021-03-14T19:01:21Z",
     "tags": [],
     "description": [],
-    "cli": ["printf '=%.0s' $(seq 1 $(tput cols))"],
+    "cli": [
+      "printf '=%.0s' $(seq 1 $(tput cols))"
+    ],
     "example": [],
     "output": []
   },
@@ -7272,9 +9285,13 @@
     "url": "",
     "modified": "2021-12-30T19:44:08Z",
     "created": "2021-03-13T04:12:37Z",
-    "tags": ["system"],
+    "tags": [
+      "system"
+    ],
     "description": [],
-    "cli": ["find . -maxdepth 3 -name .git -type d | cut -d '/' -f1,2 | xargs -I {} git -C {} pull"],
+    "cli": [
+      "find . -maxdepth 3 -name .git -type d | cut -d '/' -f1,2 | xargs -I {} git -C {} pull"
+    ],
     "example": [],
     "output": []
   },
@@ -7287,9 +9304,13 @@
     "url": "https://centerkey.com/tree/",
     "modified": "2021-12-30T19:44:08Z",
     "created": "2021-03-12T22:08:24Z",
-    "tags": ["system"],
+    "tags": [
+      "system"
+    ],
     "description": [],
-    "cli": ["ls -R | grep \":$\" | sed -e 's/:$//' -e 's/[^-][^\\/]*\\//--/g' -e 's/^/   /' -e 's/-/|/'"],
+    "cli": [
+      "ls -R | grep \":$\" | sed -e 's/:$//' -e 's/[^-][^\\/]*\\//--/g' -e 's/^/   /' -e 's/-/|/'"
+    ],
     "example": [
       "$ ls -R | grep \":$\" | sed -e 's/:$//' -e 's/[^-][^\\/]*\\//--/g' -e 's/^/   /' -e 's/-/|/'",
       "   .",
@@ -7317,8 +9338,13 @@
     "url": "https://stackoverflow.com/a/1767559",
     "modified": "2021-12-30T19:44:08Z",
     "created": "2021-03-10T23:55:33Z",
-    "tags": ["system"],
-    "description": ["ls command: get a recursive full-path listing, one line per file", ""],
+    "tags": [
+      "system"
+    ],
+    "description": [
+      "ls command: get a recursive full-path listing, one line per file",
+      ""
+    ],
     "cli": [
       "ls -R /path | awk '",
       "/:$/&&f{s=$0;f=0}",
@@ -7342,11 +9368,15 @@
     "url": "https://medium.com/@codenameyau/updating-multiple-repos-with-one-command-9768c8cdfe46",
     "modified": "2021-12-30T19:44:08Z",
     "created": "2021-03-09T20:28:39Z",
-    "tags": ["git"],
+    "tags": [
+      "git"
+    ],
     "description": [
       "This command will find all git repos in your current directory with a max depth of 3. Afterwards it will perform a git pull on the current branch for each of those repositories."
     ],
-    "cli": ["find . -maxdepth 3 -name .git -type d | rev | cut -c 6- | rev | xargs -I {} git -C {} pull"],
+    "cli": [
+      "find . -maxdepth 3 -name .git -type d | rev | cut -c 6- | rev | xargs -I {} git -C {} pull"
+    ],
     "example": [],
     "output": []
   },
@@ -7359,9 +9389,13 @@
     "url": "https://www.digitalocean.com/community/tutorials/how-to-create-a-sudo-user-on-centos-quickstart",
     "modified": "2021-12-30T19:44:08Z",
     "created": "2021-03-03T20:06:00Z",
-    "tags": ["root"],
+    "tags": [
+      "root"
+    ],
     "description": [],
-    "cli": ["usermod -aG wheel username"],
+    "cli": [
+      "usermod -aG wheel username"
+    ],
     "example": "usermod -aG wheel annie_tran",
     "output": []
   },
@@ -7374,9 +9408,13 @@
     "url": "",
     "modified": "2021-12-30T19:44:08Z",
     "created": "2021-03-03T19:39:58Z",
-    "tags": ["system"],
+    "tags": [
+      "system"
+    ],
     "description": [],
-    "cli": ["cat /etc/os-release"],
+    "cli": [
+      "cat /etc/os-release"
+    ],
     "example": [
       "$ cat /etc/os-release",
       "",
@@ -7410,7 +9448,9 @@
     "url": "https://confluence.example.com/display/SAL/%5BDevops%5D+PCF+-+nntrn+IT+Cloud+Foundry",
     "modified": "2021-12-30T19:44:08Z",
     "created": "2021-02-24T09:16:13Z",
-    "tags": ["network"],
+    "tags": [
+      "network"
+    ],
     "description": [
       "Sustaining team has the following PCF Environments (change api to apps if you want to access the panel)",
       "",
@@ -7421,7 +9461,9 @@
       "http://api.sr2.pcf.example.com",
       "PCF Org"
     ],
-    "cli": ["cf login -a https://api.sr2.pcf.example.com"],
+    "cli": [
+      "cf login -a https://api.sr2.pcf.example.com"
+    ],
     "example": [],
     "output": []
   },
@@ -7434,9 +9476,14 @@
     "url": "http://images-httserver.us.example.com/images/repository/linux/apps/",
     "modified": "2021-12-30T19:44:08Z",
     "created": "2021-02-24T07:40:51Z",
-    "tags": ["pkg"],
+    "tags": [
+      "pkg"
+    ],
     "description": [],
-    "cli": ["RPMURL='https://...'", "rpm -ivh $RPMURL"],
+    "cli": [
+      "RPMURL='https://...'",
+      "rpm -ivh $RPMURL"
+    ],
     "example": "rpm -ivh http://images-httserver.us.example.com/images/repository/linux/apps/cloudfoundry/cf-cli-installer_6.51.0_x86-64.rpm",
     "output": []
   },
@@ -7449,9 +9496,13 @@
     "url": "https://github.com/libressl-portable/portable/issues/369",
     "modified": "2021-12-30T19:44:08Z",
     "created": "2021-02-24T07:24:41Z",
-    "tags": ["network"],
+    "tags": [
+      "network"
+    ],
     "description": [],
-    "cli": ["openssl s_client -connect github.com:443 -msg"],
+    "cli": [
+      "openssl s_client -connect github.com:443 -msg"
+    ],
     "example": [],
     "output": []
   },
@@ -7464,11 +9515,15 @@
     "url": "https://www.howtogeek.com/198615/how-to-check-if-your-linux-system-is-32-bit-or-64-bit/",
     "modified": "2021-12-30T19:44:08Z",
     "created": "2021-02-24T07:10:02Z",
-    "tags": ["coreutils"],
+    "tags": [
+      "coreutils"
+    ],
     "description": [
       "To test whether your Linux computer has a 32-bit or 64-bit CPU and to see what version of Linux is installed, open your terminal, type the following command at the prompt, and then hit Enter:"
     ],
-    "cli": ["lscpu"],
+    "cli": [
+      "lscpu"
+    ],
     "example": [],
     "output": [
       "Architecture:        x86_64",
@@ -7506,7 +9561,9 @@
     "url": "https://about.gitlab.com/install/#centos-8",
     "modified": "2021-12-30T19:44:08Z",
     "created": "2021-02-23T19:52:28Z",
-    "tags": ["network"],
+    "tags": [
+      "network"
+    ],
     "description": [
       "On CentOS 8 (and RedHat 8), the commands below will also open HTTP, HTTPS and SSH access in the system firewall."
     ],
@@ -7520,7 +9577,11 @@
       "sudo systemctl reload firewalld",
       ""
     ],
-    "example": ["systemctl status firewalld", "service firewalld start", "#service firewalld stop"],
+    "example": [
+      "systemctl status firewalld",
+      "service firewalld start",
+      "#service firewalld stop"
+    ],
     "output": []
   },
   {
@@ -7532,9 +9593,14 @@
     "url": "",
     "modified": "2021-12-30T19:44:08Z",
     "created": "2021-02-23T16:37:25Z",
-    "tags": ["system"],
+    "tags": [
+      "system"
+    ],
     "description": [],
-    "cli": ["STRING_MATCH=\"\"", "lsof -i | grep $STRING_MATCH |  awk '{print $2}' | xargs kill"],
+    "cli": [
+      "STRING_MATCH=\"\"",
+      "lsof -i | grep $STRING_MATCH |  awk '{print $2}' | xargs kill"
+    ],
     "example": [],
     "output": []
   },
@@ -7549,8 +9615,13 @@
     "created": "2021-02-23T14:53:31Z",
     "tags": [],
     "description": [],
-    "cli": ["host -w hostname"],
-    "example": ["$ host -w awxserver.amer.example.com", "AWXserver.amer.example.com has address 10.179.177.76"],
+    "cli": [
+      "host -w hostname"
+    ],
+    "example": [
+      "$ host -w awxserver.amer.example.com",
+      "AWXserver.amer.example.com has address 10.179.177.76"
+    ],
     "output": []
   },
   {
@@ -7566,7 +9637,9 @@
     "description": [
       "The pstree command shows running processes as a tree. The tree is rooted at either pid or init if pid is omitted. If a username is specified, all process trees rooted at processes owned by that user are shown."
     ],
-    "cli": ["pstree"],
+    "cli": [
+      "pstree"
+    ],
     "example": "$ pstree",
     "output": []
   },
@@ -7579,9 +9652,13 @@
     "url": "https://www.feistyduck.com/library/openssl-cookbook/online/ch-openssl.html",
     "modified": "2021-12-30T19:44:08Z",
     "created": "2021-02-23T05:07:43Z",
-    "tags": ["network"],
+    "tags": [
+      "network"
+    ],
     "description": [],
-    "cli": ["openssl genpkey -out fd.key -algorithm RSA -pkeyopt rsa_keygen_bits:2048 -aes-128-cbc"],
+    "cli": [
+      "openssl genpkey -out fd.key -algorithm RSA -pkeyopt rsa_keygen_bits:2048 -aes-128-cbc"
+    ],
     "example": [],
     "output": []
   }
