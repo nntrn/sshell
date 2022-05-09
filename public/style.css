@@ -25,6 +25,7 @@ body {
   display: flex;
   flex-direction: column;
   font-family: monospace;
+  overflow-x: hidden;
 }
 
 nav {
@@ -73,6 +74,7 @@ main {
   height: 100%;
   width: 100%;
   position: relative;
+  overflow-x: hidden;
 }
 
 nav .link {
@@ -90,6 +92,7 @@ code,
 .code {
   text-rendering: unset;
   -webkit-font-smoothing: unset;
+  white-space: pre-wrap;
 }
 
 header,
@@ -177,9 +180,10 @@ header {
   margin: auto !important;
   padding-bottom: 1em;
   left: 7px;
+  overflow-x: hidden;
 }
 
-.group:before {
+h3 {
   text-transform: uppercase;
   display: block;
   font-weight: 700;
@@ -192,12 +196,12 @@ header {
   background: white;
 }
 
-.group:before,
+h3,
 #sshell .item {
   padding-left: 3%;
   padding-right: 3%;
 }
-#sshell [data-before]::before {
+h3 {
   border-bottom: 2px solid #ddd;
 }
 

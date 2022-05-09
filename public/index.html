@@ -4,13 +4,17 @@
     <title>sshell</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <link rel="icon" href="favicon.png" />
     <meta name="theme-color" content="#222" />
     <meta name="robots" content="noindex, nofollow" />
+
+    <link rel="icon" href="favicon.png" />
+    <link rel="icon" href="site-icon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="favicon.png">
     <link rel="stylesheet" href="style.css" />
   </head>
 
   <body>
+
     <header>
       <h1>
         <span class="site-icon">
@@ -19,7 +23,7 @@
         <span>sshell</span>
       </h1>
       <h2>by <a href="https://github.com/nntrn" class="author">annie tran</a></h2>
-      <div style="display: flex; width: 100%; background: white; margin-top: 0.5em">
+      <div style="display: flex; width: 100%; background: white;">
         <input
           id="searchbar"
           autocomplete="off"
@@ -30,7 +34,7 @@
           value=""
         />
       </div>
-      <nav id="toc"></nav>
+      <nav id="toc" style="position:sticky;top:0" class=""></nav>
     </header>
 
     <main id="main">
