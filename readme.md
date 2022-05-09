@@ -2,24 +2,33 @@
 
 [nntrn.github.io/sshell](http://nntrn.github.io/sshell)
 
-
-## Running Locally
+## Download
 
 ```sh
 git clone https://github.com/nntrn/sshell.git
 cd sshell
+```
 
-# serve locally using python
-python3 -m http.server 3000
+## Local serve
 
-# serve locally using serve
-serve .
+```sh
+# python2
+cd public && python2 -m SimpleHTTPServer 3000
+
+# python3
+python3 -m http.server --directory public 3000
+
+# php
+php -S localhost:3000 -t public/
+
+# serve (npm install -g serve)
+serve public
 ```
 
 ## Scripts
 ```sh
 # update snippets.json in data branch
-cat file.json | ./scripts/update-snippets.sh
+cat updated-snippets.json | ./scripts/update-snippets.sh
 
 # publish changes in public/* to gh-pages branch
 ./scripts/publish
