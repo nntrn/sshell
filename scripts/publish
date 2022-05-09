@@ -5,10 +5,12 @@ TMPDIR=$(mktemp -d)
 
 CURRENT_BRANCH=$(git branch --show-current)
 
-if [[ $(git ls-files --modified public) ]]; then
-  git add public
-  git commit -m "Update static files in public"
-  git push
+if [[ $CURRENT_BRANCH -eq main ]]; then
+  if [[ $(git ls-files --modified public) ]]; then
+    git add public
+    git commit -m "Update static files in public"
+    git push
+  fi
 fi
 
 git fetch -a
