@@ -111,7 +111,6 @@ header {
   justify-content: space-evenly;
   width: 100%;
   color: #222;
-
   box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.15);
   padding: calc(1em + 6px) calc(1em + 6px);
 }
