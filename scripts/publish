@@ -2,35 +2,44 @@
 
 DIR="$(cd "$(dirname "$0")/.." && pwd)"
 TMPDIR=$(mktemp -d)
-
 CURRENT_BRANCH=$(git branch --show-current)
+GITBRANCH=gh-pages
+
+run_git_command() {
+  echo "$*"
+  {
+    eval "$*"
+  } 1>/dev/null
+}
 
 if [[ $CURRENT_BRANCH -eq main ]]; then
-  if [[ $(git ls-files --modified public) ]]; then
-    git add public
-    git commit -m "Update static files in public"
-    git push
+  if [[ -z $(git status public | grep 'nothing to commit') ]]; then
+    run_git_command 'git add public'
+    run_git_command 'git commit -m "Update static files in public"'
+    run_git_command "git push origin $CURRENT_BRANCH"
+
+    run_git_command 'git fetch -a'
+
+    [[ $(git branch -a | grep $GITBRANCH) ]] && run_git_command "git push -d origin $GITBRANCH"
+    [[ $(git branch -a | grep $GITBRANCH) ]] && run_git_command "git branch -d $GITBRANCH"
+
+    cd $TMPDIR
+    run_git_command 'git init'
+
+    for i in config HEAD; do
+      cat $DIR/.git/$i | sed "s,$CURRENT_BRANCH,$GITBRANCH,g" | tee $TMPDIR/.git/$i
+    done
+
+    run_git_command 'git pull'
+
+    cp -r $DIR/public/* $TMPDIR/
+
+    run_git_command 'git add .'
+    run_git_command "git commit -m 'Publish $GITBRANCH'"
+    run_git_command "git push origin $GITBRANCH"
+
+    [[ -d "$TMPDIR" ]] && rm -rf "$TMPDIR"
+  else
+    echo "No changes have been made"
   fi
 fi
-
-git fetch -a
-
-[[ $(git branch -a | grep gh-pages) ]] && git push -d origin gh-pages
-[[ $(git branch -a | grep gh-pages) ]] && git branch -d gh-pages
-
-cd $TMPDIR
-git init
-
-for i in config HEAD; do
-  cat $DIR/.git/$i | sed "s,$CURRENT_BRANCH,gh-pages,g" | tee $TMPDIR/.git/$i
-done
-
-git pull
-
-cp -r $DIR/public/* $TMPDIR/
-
-git add .
-git commit -m "Publish gh-pages"
-git push origin gh-pages
-
-[[ -d "$TMPDIR" ]] && rm -rf "$TMPDIR"
