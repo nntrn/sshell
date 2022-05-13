@@ -7,9 +7,12 @@ GITBRANCH=gh-pages
 
 run_git_command() {
   echo "$*"
-  {
-    eval "$*"
-  } 1>/dev/null
+  eval "$*"
+}
+
+clean_exit() {
+  [[ -d "$TMPDIR" ]] && rm -rf "$TMPDIR"
+  exit
 }
 
 if [[ $CURRENT_BRANCH -eq main ]]; then
@@ -17,29 +20,26 @@ if [[ $CURRENT_BRANCH -eq main ]]; then
     run_git_command 'git add public'
     run_git_command 'git commit -m "Update static files in public"'
     run_git_command "git push origin $CURRENT_BRANCH"
-
     run_git_command 'git fetch -a'
 
-    [[ $(git branch -a | grep $GITBRANCH) ]] && run_git_command "git push -d origin $GITBRANCH"
-    [[ $(git branch -a | grep $GITBRANCH) ]] && run_git_command "git branch -d $GITBRANCH"
+    grep -q $GITBRANCH <(git branch -a) && run_git_command "git push -d origin $GITBRANCH"
+    grep -q $GITBRANCH <(git branch -a) && run_git_command "git branch -d $GITBRANCH"
 
-    cd $TMPDIR
+    cd "$TMPDIR" || clean_exit
     run_git_command 'git init'
 
     for i in config HEAD; do
-      cat $DIR/.git/$i | sed "s,$CURRENT_BRANCH,$GITBRANCH,g" | tee $TMPDIR/.git/$i
+      cat "$DIR"/.git/$i | sed "s,$CURRENT_BRANCH,$GITBRANCH,g" >"$TMPDIR"/.git/$i
     done
 
-    run_git_command 'git pull'
-
-    cp -r $DIR/public/* $TMPDIR/
+    cp -r "$DIR"/public/* "$TMPDIR"/
 
     run_git_command 'git add .'
     run_git_command "git commit -m 'Publish $GITBRANCH'"
     run_git_command "git push origin $GITBRANCH"
-
-    [[ -d "$TMPDIR" ]] && rm -rf "$TMPDIR"
   else
     echo "No changes have been made"
   fi
 fi
+
+clean_exit
