@@ -1,5 +1,68 @@
 [
   {
+    "id": "315",
+    "title": "rpm - get all installed doc files for packages",
+    "language": "bash",
+    "category": "rpm",
+    "type": "command",
+    "guid": "e0bf2033-dd8a-4c20-b7e7-3e93c61b1be0",
+    "url": "",
+    "modified": "2022-05-12T23:57:41Z",
+    "created": "2022-05-12T23:57:41Z",
+    "tags": [],
+    "description": [],
+    "cli": [
+      "rpm -qa -d"
+    ],
+    "example": [
+      "$ rpm -qa -d | head -n 10 ",
+      "/usr/share/doc/make-3.82/AUTHORS",
+      "/usr/share/doc/make-3.82/COPYING",
+      "/usr/share/doc/make-3.82/NEWS",
+      "/usr/share/doc/make-3.82/README",
+      "/usr/share/info/make.info-1.gz",
+      "/usr/share/info/make.info-2.gz",
+      "/usr/share/info/make.info.gz",
+      "/usr/share/man/man1/gmake.1.gz",
+      "/usr/share/man/man1/make.1.gz"
+    ],
+    "output": []
+  },
+  {
+    "id": "314",
+    "title": "xargs - pretty print process environment",
+    "language": "bash",
+    "category": "xargs",
+    "type": "command",
+    "guid": "92568c2f-4bf4-4cdf-b2dd-e2424abb6c99",
+    "url": "",
+    "modified": "2022-05-12T21:52:49Z",
+    "created": "2022-05-12T21:52:49Z",
+    "tags": [],
+    "description": [],
+    "cli": [
+      "xargs -n 1 -0 </proc/$PID/environ"
+    ],
+    "example": [
+      "$ echo ${PID:=$$}",
+      "35179",
+      "",
+      "$ cat \"/proc/$PID/environ\"",
+      "TERM=xtermHOME=/rootSHELL=/bin/bashUSER=rootLOGNAME=rootPATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/binXDG_SESSION_ID=c20",
+      "",
+      "$ xargs -n 1 -0 <\"/proc/$$/environ\"",
+      "TERM=xterm",
+      "HOME=/root",
+      "SHELL=/bin/bash",
+      "USER=root",
+      "LOGNAME=root",
+      "PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin",
+      "XDG_SESSION_ID=c20",
+      ""
+    ],
+    "output": []
+  },
+  {
     "id": "313",
     "title": "nmap - scan port",
     "language": "bash",
@@ -3229,13 +3292,13 @@
   },
   {
     "id": "253",
-    "title": "git - get current working dir",
+    "title": "git - get top level directory",
     "language": "bash",
     "category": "git",
     "type": "command",
     "guid": "a05c557e-2bce-4ea0-b7c0-16ac45b9a9ea",
     "url": "https://superuser.com/a/1351600",
-    "modified": "2022-03-25T18:30:04Z",
+    "modified": "2022-05-12T21:08:32Z",
     "created": "2022-03-25T18:30:04Z",
     "tags": [
       "git"
@@ -3244,7 +3307,13 @@
     "cli": [
       "git rev-parse --show-toplevel"
     ],
-    "example": [],
+    "example": [
+      "$ pwd",
+      "/u01/devops-dbaas/sysadmin",
+      "",
+      "$ git rev-parse --show-toplevel",
+      "/u01/devops-dbaas"
+    ],
     "output": []
   },
   {
@@ -7226,12 +7295,12 @@
   },
   {
     "id": "124",
-    "title": "remove duplicates without sorting",
+    "title": "awk - remove duplicates without sorting",
     "language": "bash",
-    "category": "remove",
+    "category": "awk",
     "guid": "2d0af3f5-6ed0-4f57-9f80-88673f4c4881",
     "url": "https://stackoverflow.com/a/11532197",
-    "modified": "2022-01-19T00:11:03Z",
+    "modified": "2022-05-12T19:27:48Z",
     "created": "2021-09-15T17:08:17Z",
     "tags": [],
     "description": [],
