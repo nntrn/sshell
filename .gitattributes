@@ -1,6 +1,6 @@
 *.md linguist-detectable=false
 *.css linguist-detectable=false
 *.html linguist-detectable=false
+*.js linguist-detectable=false
 
-public/* linguist-detectable=false
 scripts/* linguist-language=Shell
