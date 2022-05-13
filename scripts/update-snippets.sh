@@ -50,3 +50,6 @@ if [[ -z $(git status --ignore-submodules=dirty | grep "nothing to commit, worki
 else
   echo "No changes"
 fi
+
+[[ -f $TMPFILE ]] && rm -rf $TMPFILE
+[[ -d $TMPDIR ]] && rm -rf $TMPDIR
