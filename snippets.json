@@ -1,5 +1,129 @@
 [
   {
+    "id": "320",
+    "title": "jq - convert json to csv",
+    "language": "bash",
+    "category": "jq",
+    "type": "command",
+    "guid": "c1ef3a0a-db12-4f76-a758-f4eb78274dfb",
+    "url": "",
+    "modified": "2022-05-17T20:16:22Z",
+    "created": "2022-05-17T20:16:22Z",
+    "tags": [],
+    "description": [],
+    "cli": [
+      "echo '[{\"name\":\"JSON\", \"good\":true}, {\"name\":\"XML\", \"good\":false}]' |",
+      "  jq -r '.[] | map(.) | @csv'",
+      ""
+    ],
+    "example": [
+      "$ curl -s https://sports.core.api.espn.com/v2/sports/football/leagues/nfl/seasons/2021/futures >futures.json",
+      "",
+      "$ cat futures.json | jq -r '.items[].futures[].provider| map(.) |@csv'",
+      ""
+    ],
+    "output": [
+      "\"JSON\",true",
+      "\"XML\",false"
+    ]
+  },
+  {
+    "id": "319",
+    "title": "grep - display lines in file1 that aren't in file2 (similar to comm)",
+    "language": "bash",
+    "category": "grep",
+    "type": "command",
+    "guid": "47447d4c-baad-4a55-9974-664c1f042564",
+    "url": "https://stackoverflow.com/a/72278813/7460613",
+    "modified": "2022-05-17T19:56:35Z",
+    "created": "2022-05-17T19:56:35Z",
+    "tags": [],
+    "description": [
+      "Options are:",
+      "-v: Selected lines are those not matching any of the specified patterns",
+      "-F: Fixed string search",
+      "-x: Exact match",
+      "-f: Use a file for patterns"
+    ],
+    "cli": [
+      "grep -vFxf file1.txt file2.txt"
+    ],
+    "example": [
+      "$ cat <<EOF >first.txt",
+      "a",
+      "b",
+      "c",
+      "EOF",
+      "",
+      "$ cat <<EOF >second.txt",
+      "a",
+      "b",
+      "1",
+      "4",
+      "EOF",
+      "",
+      "$ grep -vFxf first.txt second.txt",
+      "1",
+      "4",
+      ""
+    ],
+    "output": []
+  },
+  {
+    "id": "318",
+    "title": "declare - list all function names",
+    "language": "bash",
+    "category": "declare",
+    "type": "command",
+    "guid": "c012bfab-4669-4fe1-b5a2-c91537fb7daf",
+    "url": "",
+    "modified": "2022-05-17T00:20:28Z",
+    "created": "2022-05-17T00:20:28Z",
+    "tags": [],
+    "description": [],
+    "cli": [
+      "declare -F"
+    ],
+    "example": [],
+    "output": [
+      "declare -f __expand_tilde_by_ref",
+      "declare -f __get_cword_at_cursor_by_ref",
+      "declare -f __git_aliased_command",
+      "declare -f __git_aliases",
+      "declare -f __git_commands",
+      "declare -f __git_complete",
+      "declare -f __git_complete_diff_index_file",
+      "declare -f __git_complete_file",
+      "declare -f __git_complete_index_file",
+      "declare -f __git_complete_remote_or_refspec",
+      "declare -f __git_complete_revlist",
+      "declare -f __git_complete_revlist_file",
+      "declare -f __git_complete_strategy",
+      "declare -f __git_compute_all_commands",
+      ""
+    ]
+  },
+  {
+    "id": "317",
+    "title": "nmap - view open ports",
+    "language": "bash",
+    "category": "nmap",
+    "type": "command",
+    "guid": "2908f660-432c-43cf-b95d-b7cf97dbd0a0",
+    "url": "",
+    "modified": "2022-05-16T18:01:10Z",
+    "created": "2022-05-16T18:01:10Z",
+    "tags": [
+      "network"
+    ],
+    "description": [],
+    "cli": [
+      "nmap --open $HOSTNAME"
+    ],
+    "example": [],
+    "output": []
+  },
+  {
     "id": "316",
     "title": "csplit - split text in file on empty lines",
     "language": "bash",
