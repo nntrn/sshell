@@ -1,5 +1,25 @@
 [
   {
+    "id": "323",
+    "title": "ignore carriage return in windows ",
+    "language": "bash",
+    "category": "ignore",
+    "type": "command",
+    "guid": "772b1626-f7a0-4c2b-8253-7a2ac03ff566",
+    "url": "https://stackoverflow.com/a/35870173",
+    "modified": "2022-05-25T06:37:28Z",
+    "created": "2022-05-25T06:37:28Z",
+    "tags": [],
+    "description": [
+      "set -o igncr causes the shell ignore windows line endings (skip \\r). Another solution would be to fix the script by running dos2unix on it."
+    ],
+    "cli": [
+      "set -o igncr"
+    ],
+    "example": [],
+    "output": []
+  },
+  {
     "id": "322",
     "title": "python - command line pretty print json",
     "language": "bash",
