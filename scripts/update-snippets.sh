@@ -2,7 +2,8 @@
 
 set -e
 
-DIR="$(cd "$(dirname "$0")/.." && pwd)"
+STDOUT="$@"
+DIR="$(cd "$(dirname "$0")/.." && pwd)" && cd "$DIR"
 CURRENT_BRANCH=$(git branch --show-current)
 REMOTE_URL=$(git config --get remote.origin.url)
 REMOTE_BRANCHES=$(git remote show origin | sed -n '/Remote branches/,/Local/p' | grep -v ':' | awk '{print $1}')
@@ -12,10 +13,8 @@ TMPFILE=$TMPDIR/snippets-new.json
 TMPREADME=$TMPDIR/readme.md
 TMPMODFILE=$TMPDIR/modified.txt
 TODAY=$(date +%F)
+
 trap 'rm -rf -- "$TMPDIR"' EXIT
-
-STDOUT="$@"
-
 source $DIR/scripts/utils.sh
 
 if [[ -t 1 || $# -eq 0 || -f $1 ]]; then
@@ -65,9 +64,8 @@ fi
 sed -i '1s/^/# data\n\n /' $TMPREADME
 sed -i 's/  */ /g' $TMPREADME
 
-if [[ -z $(git status snippets.json readme.md | grep "nothing to commit") ]]; then
-  git add snippets.json readme.md
-  git add data
+if [[ -z $(git status snippets.json readme.md data | grep "nothing to commit") ]]; then
+  git add snippets.json readme.md data
   git commit -m "Update data - $TODAY"
   git push origin $GIT_BRANCH
 else
