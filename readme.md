@@ -1,4 +1,6 @@
-# data - [bash](#bash) (279)
+# data
+
+ - [bash](#bash) (279)
 - [powershell](#powershell) (25)
 - [python](#python) (10)
 - [sql](#sql) (3)
