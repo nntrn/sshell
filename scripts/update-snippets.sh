@@ -43,27 +43,27 @@ export last_modified=$(cat snippets.json | get_last_modified)
 export last_id=$(cat snippets.json | get_last_id)
 
 cat $TMPFILE | jq -c "(.[]|select(.modified > \"$last_modified\"))" >$TMPMODFILE
+cat $TMPFILE | jq -c -r '.[]| .language' | sort | uniq -c | sort -n -r -k1 >$TMPREADME
+cat $TMPFILE >snippets.json
+languages=($(cat $TMPREADME | awk '{print $2}'))
+gawk -i inplace '{print "- [" $2 "](#" $2 ") (" $1 ")" }' $TMPREADME
+
+for lang in "${languages[@]}"; do
+  echo -e "\n## $lang\n" >>$TMPREADME
+  cat $TMPFILE |
+    jq -r ".[] | select(.language==\"$lang\")| \"- [\"+.id+\"](data/\"+.id+\"): \"+.title" >>$TMPREADME
+  echo -e "\n[[Return to top]](#data)\n" >>$TMPREADME
+done
 
 if [[ -s $TMPMODFILE ]]; then
-  cat $TMPFILE >snippets.json
-  cat $TMPFILE | jq -c -r '.[]| .language' | sort | uniq -c | sort -n -r -k1 >$TMPREADME
-  languages=($(cat $TMPREADME | awk '{print $2}'))
-  gawk -i inplace '{print "- [" $2 "](#" $2 ") (" $1 ")" }' ${TMPREADME}.md
-
   while read -r line; do
     filename="data/$(echo "$line" | jq -r '.id')"
     echo "$line" | jq >$filename
   done <$TMPMODFILE
-
-  for lang in "${languages[@]}"; do
-    echo -e "\n## $lang\n" >>$TMPREADME
-    cat $TMPFILE |
-      jq -r ".[] | select(.language==\"$lang\")| \"- [\"+.id+\"](data/\"+.id+\"): \"+.title" >>$TMPREADME
-  done
-
-  sed -i '1s/^/# data /' $TMPREADME
-  sed -i 's/  */ /g' $TMPREADME
 fi
+
+sed -i '1s/^/# data\n\n /' $TMPREADME
+sed -i 's/  */ /g' $TMPREADME
 
 if [[ -z $(git status snippets.json readme.md | grep "nothing to commit") ]]; then
   git add snippets.json readme.md
