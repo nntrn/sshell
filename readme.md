@@ -1,4 +1,4 @@
-- [bash](#bash) (279)
+# data - [bash](#bash) (279)
 - [powershell](#powershell) (25)
 - [python](#python) (10)
 - [sql](#sql) (3)
@@ -39,7 +39,7 @@
 - [295](data/295): jq - target objects in array using key
 - [292](data/292): naive string encryption - scramble numbers in string to hide sensitive data
 - [291](data/291): netsh - find the processId for the registered urls 
-- [290](data/290): netsh -  Lists all defined aliases
+- [290](data/290): netsh - Lists all defined aliases
 - [289](data/289): pidstat - display global page faults and memory statistics
 - [288](data/288): get docker gateway
 - [286](data/286): nmap - list open TCP ports 
@@ -183,7 +183,7 @@
 - [118](data/118): string substring
 - [117](data/117): string slicing
 - [116](data/116): set color
-- [115](data/115): ss -  investigate sockets
+- [115](data/115): ss - investigate sockets
 - [114](data/114): sqlplus - set password
 - [113](data/113): awk - get value only
 - [112](data/112): view process id
