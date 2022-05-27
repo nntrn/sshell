@@ -293,6 +293,9 @@
 - [2](data/2): pstree
 - [1](data/1): generate RSA key
 
+[[Return to top]](#data)
+
+
 ## powershell
 
 - [303](data/303): Get-WindowsUpdateLog - get update
@@ -321,6 +324,9 @@
 - [88](data/88): get ldap group related to ADUser
 - [87](data/87): get AD User (powershell)
 
+[[Return to top]](#data)
+
+
 ## python
 
 - [331](data/331): python - select keys in json to print
@@ -334,33 +340,57 @@
 - [187](data/187): Start a static HTTP server
 - [135](data/135): awx-manage shell_plus
 
+[[Return to top]](#data)
+
+
 ## sql
 
 - [193](data/193): psql: cast json and pretty print
 - [192](data/192): postgresql list and order tables by size
 - [190](data/190): get list of tables and number of rows (postgres)
 
+[[Return to top]](#data)
+
+
 ## cmd
 
 - [305](data/305): fsutil resource info
 - [183](data/183): bat file for opening cygwin in current directory
 
+[[Return to top]](#data)
+
+
 ## yaml
 
 - [244](data/244): ansible playbook variables
+
+[[Return to top]](#data)
+
 
 ## vim
 
 - [285](data/285): vim - display all possible runtime config settings for vim
 
+[[Return to top]](#data)
+
+
 ## plain
 
 - [149](data/149): ansible-playbook in crontab
+
+[[Return to top]](#data)
+
 
 ## javascript
 
 - [173](data/173): devtools: get all css items
 
+[[Return to top]](#data)
+
+
 ## config
 
 - [197](data/197): enable ssh controlmaster - ssh sessions
+
+[[Return to top]](#data)
+
