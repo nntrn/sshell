@@ -1,0 +1,22 @@
+{
+  "id": "215",
+  "title": "cygwin - open terminal here",
+  "language": "bash",
+  "category": "cygwin",
+  "guid": "aad9d0cf-42e6-4860-8ac1-1508e7693ba3",
+  "url": "",
+  "modified": "2022-02-24T20:43:12Z",
+  "created": "2022-02-22T16:20:19Z",
+  "tags": [
+    "cygwin"
+  ],
+  "description": [],
+  "cli": [
+    "echo 'cd \"$OLDPWD\"' >> .bashrc",
+    "",
+    "C:\\Users\\annie_tran.AMERICAS\\cyg\\bin\\bash --login -i",
+    ""
+  ],
+  "example": [],
+  "output": []
+}

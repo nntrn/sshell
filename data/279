@@ -1,0 +1,34 @@
+{
+  "id": "279",
+  "title": "openssl - MD5, SHA1, and SHA256 digest",
+  "language": "bash",
+  "category": "openssl",
+  "type": "command",
+  "guid": "b49bfb90-db47-482b-8895-9a6a83fddccc",
+  "url": "https://www.madboa.com/geek/openssl/#introduction",
+  "modified": "2022-04-13T00:04:09Z",
+  "created": "2022-04-13T00:03:39Z",
+  "tags": [
+    "security"
+  ],
+  "description": [
+    "Digests",
+    "Generating digests with the dgst option is one of the more straightforward tasks you can accomplish with the openssl binary. Producing digests is done so often, as a matter of fact, that you can find special-use binaries for doing the same thing.",
+    "",
+    "How do I create an MD5 or SHA1 digest of a file?",
+    "Digests are created using the dgst option. I've seen several systems on which the OpenSSL dgst(1) man page does not accurately report the digest functions available via the local openssl binary. I suggest running openssl dgst -h to see which digests are actually available."
+  ],
+  "cli": [
+    "$ openssl dgst -md5 README",
+    "MD5(README)= 18ecc2fc65853262f250548e476d0e29",
+    "",
+    "$ openssl dgst -sha1 README",
+    "SHA1(README)= b018bfbdd6b6c939ea6acb3b4ea591e214a2a84d",
+    "",
+    "$ openssl dgst -sha256 README",
+    "SHA256(README)= d173e8ad75a8abbed8d21d4924ce145af7331f27a1a7b31e79e57271888ad54f",
+    ""
+  ],
+  "example": [],
+  "output": []
+}

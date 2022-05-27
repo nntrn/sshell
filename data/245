@@ -1,0 +1,42 @@
+{
+  "id": "245",
+  "title": "systemd-escape - escape strings ",
+  "language": "bash",
+  "category": "systemd-escape",
+  "type": "command",
+  "guid": "212183ba-ffde-4b98-b211-a19d8b6d4917",
+  "url": "",
+  "modified": "2022-03-17T00:31:57Z",
+  "created": "2022-03-14T22:59:20Z",
+  "tags": [
+    "text"
+  ],
+  "description": [
+    "Escape a single string:",
+    "",
+    "$ systemd-escape 'Hallöchen, Meister'",
+    "Hall\\xc3\\xb6chen\\x2c\\x20Meister",
+    "",
+    "To undo escaping on a single string:",
+    "",
+    "$ systemd-escape -u 'Hall\\xc3\\xb6chen\\x2c\\x20Meister'",
+    "Hallöchen, Meister",
+    "",
+    "To generate the mount unit for a path:",
+    "",
+    "$ systemd-escape -p --suffix=mount \"/tmp//waldi/foobar/\"",
+    "tmp-waldi-foobar.mount",
+    "",
+    "To generate instance names of three strings",
+    "",
+    "$ systemd-escape --template=systemd-nspawn@.service 'My Container 1' 'containerb' 'container/III'",
+    "systemd-nspawn@My\\x20Container\\x201.service systemd-nspawn@containerb.service systemd-nspawn@container-III.service",
+    "",
+    ""
+  ],
+  "cli": [
+    "systemd-escape -u 'Hall\\xc3\\xb6chen\\x2c\\x20Meister'"
+  ],
+  "example": [],
+  "output": "Hallöchen, Meister"
+}

@@ -1,0 +1,18 @@
+{
+  "id": "272",
+  "title": "get-help - show all loaded cmdlets, functions, and modules in powershell",
+  "language": "powershell",
+  "category": "get-help",
+  "type": "command",
+  "guid": "29d3f30b-a696-45c9-9cb9-6307e94f256b",
+  "url": "",
+  "modified": "2022-04-09T07:18:05Z",
+  "created": "2022-04-09T07:14:00Z",
+  "tags": [],
+  "description": [],
+  "cli": [
+    "Get-Help Get | Format-Table Name,Category,Module -AutoSize -Wrap"
+  ],
+  "example": [],
+  "output": []
+}

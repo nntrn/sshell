@@ -1,0 +1,19 @@
+{
+  "id": "229",
+  "title": "systemctl - Get enabled services",
+  "language": "bash",
+  "category": "systemctl",
+  "guid": "4206e2cd-ced9-46a9-b964-afef520e90ee",
+  "url": "",
+  "modified": "2022-03-16T19:42:53Z",
+  "created": "2022-03-03T16:33:28Z",
+  "tags": [
+    "service"
+  ],
+  "description": [],
+  "cli": [
+    "systemctl list-unit-files --state=enabled --type=service --no-legend | awk '{print $1}'"
+  ],
+  "example": [],
+  "output": []
+}

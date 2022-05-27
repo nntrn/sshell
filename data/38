@@ -1,0 +1,17 @@
+{
+  "id": "38",
+  "title": "extract title from html",
+  "language": "bash",
+  "category": "extract",
+  "guid": "398af64f-3425-47ca-bb94-89d1e577d003",
+  "url": "",
+  "modified": "2021-12-30T19:44:09Z",
+  "created": "2021-04-21T00:24:26Z",
+  "tags": [],
+  "description": [],
+  "cli": [
+    "echo -e $html | grep -Eo \"<title>(.*)</title>\""
+  ],
+  "example": [],
+  "output": []
+}

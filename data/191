@@ -1,0 +1,17 @@
+{
+  "id": "191",
+  "title": "clear screen",
+  "language": "bash",
+  "category": "clear",
+  "guid": "a8c8beaf-591e-442f-8c2b-0f363a883c55",
+  "url": "https://linoxide.com/commands-clear-linux-terminal/",
+  "modified": "2022-01-21T01:29:00Z",
+  "created": "2022-01-21T01:29:00Z",
+  "tags": [],
+  "description": [],
+  "cli": [
+    "alias cls='printf \"\\033c\"'"
+  ],
+  "example": [],
+  "output": []
+}

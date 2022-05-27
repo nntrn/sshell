@@ -1,0 +1,28 @@
+{
+  "id": "55",
+  "title": "get free space on directory",
+  "language": "bash",
+  "category": "get",
+  "guid": "80efaffd-ab3c-452e-a745-e22c81ae6ff7",
+  "url": "",
+  "modified": "2021-12-30T19:44:09Z",
+  "created": "2021-06-08T00:04:52Z",
+  "tags": [],
+  "description": [],
+  "cli": [
+    "df -Ph . "
+  ],
+  "example": [
+    "df -Ph . | tail -1 | awk '{print $4}'",
+    ""
+  ],
+  "output": [
+    "$ df -Ph . | tail -1 | awk '{print $4}'",
+    "16G",
+    "",
+    "$ df -Ph .",
+    "Filesystem      Size  Used Avail Use% Mounted on",
+    "overlay          20G  4.4G   16G  23% /",
+    ""
+  ]
+}

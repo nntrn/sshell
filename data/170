@@ -1,0 +1,46 @@
+{
+  "id": "170",
+  "title": "get AD domain controller (amer.example.com)",
+  "language": "powershell",
+  "category": "get",
+  "guid": "1dc17549-c9f1-4eef-ae38-5f239dd25175",
+  "url": "",
+  "modified": "2022-03-17T00:28:12Z",
+  "created": "2021-12-06T22:04:12Z",
+  "tags": [
+    "AD"
+  ],
+  "description": [],
+  "cli": [
+    "Get-ADDomainController"
+  ],
+  "example": [],
+  "output": [
+    "ComputerObjectDN           : CN=AMER39,OU=Domain Controllers,DC=amer,DC=nntrn,DC=com",
+    "DefaultPartition           : DC=amer,DC=nntrn,DC=com",
+    "Domain                     : amer.example.com",
+    "Enabled                    : True",
+    "Forest                     : example.com",
+    "HostName                   : AUSserver.amer.example.com",
+    "InvocationId               : a04c78dc-8532-48c9-ab0b-2a0dc5403070",
+    "IPv4Address                : 10.58.68.115",
+    "IPv6Address                :",
+    "IsGlobalCatalog            : True",
+    "IsReadOnly                 : False",
+    "LdapPort                   : 389",
+    "Name                       : AMER39",
+    "NTDSSettingsObjectDN       : CN=NTDS Settings,CN=AMER39,CN=Servers,CN=AMERAustin,CN=Sites,CN=Configuration,DC=de",
+    "                             ll,DC=com",
+    "OperatingSystem            : Windows Server 2016 Standard",
+    "OperatingSystemHotfix      :",
+    "OperatingSystemServicePack :",
+    "OperatingSystemVersion     : 10.0 (14393)",
+    "OperationMasterRoles       : {PDCEmulator, RIDMaster, InfrastructureMaster}",
+    "Partitions                 : {DC=amer,DC=nntrn,DC=com, CN=Schema,CN=Configuration,DC=nntrn,DC=com,",
+    "                             CN=Configuration,DC=nntrn,DC=com, DC=emea,DC=nntrn,DC=com...}",
+    "ServerObjectDN             : CN=AMER39,CN=Servers,CN=AMERAustin,CN=Sites,CN=Configuration,DC=nntrn,DC=com",
+    "ServerObjectGuid           : f5abce4b-53f6-4474-b660-876ad0f7d322",
+    "Site                       : AMERAustin",
+    "SslPort                    : 636"
+  ]
+}

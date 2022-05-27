@@ -1,0 +1,52 @@
+{
+  "id": "220",
+  "title": "Gather listening ports",
+  "language": "bash",
+  "category": "Gather",
+  "guid": "98561987-01a9-431e-8302-e03ff2d3fac4",
+  "url": "https://github.com/openstack/openstack-ansible/blob/master/playbooks/listening-port-report.yml",
+  "modified": "2022-03-03T16:27:10Z",
+  "created": "2022-02-24T09:15:34Z",
+  "tags": [
+    "network"
+  ],
+  "description": [],
+  "cli": [
+    "netstat -ln --inet --program"
+  ],
+  "example": [],
+  "output": [
+    "Active Internet connections (only servers)",
+    "Proto Recv-Q Send-Q Local Address           Foreign Address         State       PID/Program name",
+    "tcp        0      0 0.0.0.0:9100            0.0.0.0:*               LISTEN      1317/node_exporter",
+    "tcp        0      0 0.0.0.0:4750            0.0.0.0:*               LISTEN      1462/bin/rscd",
+    "tcp        0      0 127.0.0.1:29039         0.0.0.0:*               LISTEN      44294/node",
+    "tcp        0      0 0.0.0.0:111             0.0.0.0:*               LISTEN      1054/rpcbind",
+    "tcp        0      0 0.0.0.0:80              0.0.0.0:*               LISTEN      38183/docker-proxy",
+    "tcp        0      0 0.0.0.0:8018            0.0.0.0:*               LISTEN      26385/nsrexecd",
+    "tcp        0      0 0.0.0.0:9428            0.0.0.0:*               LISTEN      26385/nsrexecd",
+    "tcp        0      0 0.0.0.0:22              0.0.0.0:*               LISTEN      1309/sshd",
+    "tcp        0      0 127.0.0.1:27511         0.0.0.0:*               LISTEN      74818/node",
+    "tcp        0      0 0.0.0.0:9176            0.0.0.0:*               LISTEN      26385/nsrexecd",
+    "tcp        0      0 127.0.0.1:25            0.0.0.0:*               LISTEN      5593/sendmail: acce",
+    "tcp        0      0 127.0.0.1:6010          0.0.0.0:*               LISTEN      43309/sshd: service",
+    "tcp        0      0 0.0.0.0:443             0.0.0.0:*               LISTEN      38140/docker-proxy",
+    "tcp        0      0 0.0.0.0:3389            0.0.0.0:*               LISTEN      1521/xrdp",
+    "tcp        0      0 0.0.0.0:26621           0.0.0.0:*               LISTEN      1331/rpc.statd",
+    "tcp        0      0 0.0.0.0:7937            0.0.0.0:*               LISTEN      26385/nsrexecd",
+    "tcp        0      0 0.0.0.0:7938            0.0.0.0:*               LISTEN      26385/nsrexecd",
+    "tcp        0      0 0.0.0.0:10050           0.0.0.0:*               LISTEN      1307/zabbix_agent2",
+    "udp        0      0 0.0.0.0:7938            0.0.0.0:*                           26385/nsrexecd",
+    "udp        0      0 0.0.0.0:44156           0.0.0.0:*                           1338/rsyslogd",
+    "udp        0      0 0.0.0.0:111             0.0.0.0:*                           1054/rpcbind",
+    "udp        0      0 172.18.0.1:123          0.0.0.0:*                           80791/ntpd",
+    "udp        0      0 172.17.0.1:123          0.0.0.0:*                           80791/ntpd",
+    "udp        0      0 10.171.230.150:123      0.0.0.0:*                           80791/ntpd",
+    "udp        0      0 127.0.0.1:123           0.0.0.0:*                           80791/ntpd",
+    "udp        0      0 0.0.0.0:123             0.0.0.0:*                           80791/ntpd",
+    "udp        0      0 127.0.0.1:659           0.0.0.0:*                           1331/rpc.statd",
+    "udp        0      0 0.0.0.0:800             0.0.0.0:*                           1054/rpcbind",
+    "udp        0      0 0.0.0.0:21989           0.0.0.0:*                           1331/rpc.statd",
+    ""
+  ]
+}

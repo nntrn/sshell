@@ -1,0 +1,39 @@
+{
+  "id": "316",
+  "title": "csplit - split text in file on empty lines",
+  "language": "bash",
+  "category": "csplit",
+  "type": "command",
+  "guid": "d4ef54f2-aba2-430e-b231-b61a9d661170",
+  "url": "https://www.gnu.org/software/coreutils/manual/html_node/csplit-invocation.html#csplit-invocation",
+  "modified": "2022-05-13T16:52:40Z",
+  "created": "2022-05-13T16:52:40Z",
+  "tags": [],
+  "description": [],
+  "cli": [
+    "csplit --suppress-matched $FILENAME '/^$/' '{*}'"
+  ],
+  "example": [
+    "$ cat <<EOF >file.txt",
+    "  one",
+    "",
+    "  two",
+    "",
+    "  three",
+    "EOF",
+    "",
+    "$ csplit --suppress-matched --prefix 'file-' file.txt '/^$/' '{*}'",
+    "",
+    "$ ls file-*",
+    "file-00  file-01  file-02",
+    "",
+    "$ find . -type f -name \"file-*\" -print -exec cat {} \\;",
+    "./file-00",
+    "  one",
+    "./file-01",
+    "  two",
+    "./file-02",
+    "  three"
+  ],
+  "output": []
+}

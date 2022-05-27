@@ -1,0 +1,24 @@
+{
+  "id": "40",
+  "title": "print env variables that start with S",
+  "language": "bash",
+  "category": "print",
+  "guid": "ed5b456a-2f27-4c89-ba5c-ffbe3a9e2094",
+  "url": "https://stackoverflow.com/a/43126805",
+  "modified": "2021-12-30T19:44:09Z",
+  "created": "2021-04-27T22:31:37Z",
+  "tags": [],
+  "description": [],
+  "cli": [
+    "env | grep -o '^S[^=]*'"
+  ],
+  "example": [],
+  "output": [
+    "SHELL",
+    "SSH_CLIENT",
+    "SSH_TTY",
+    "SSH_AUTH_SOCK",
+    "SHLVL",
+    "SSH_CONNECTION"
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "id": "118",
+  "title": "string substring",
+  "language": "bash",
+  "category": "string",
+  "guid": "b7b3c986-5faa-4073-b5e9-8ce7b7c9c070",
+  "url": "",
+  "modified": "2022-03-03T21:10:16Z",
+  "created": "2021-09-10T19:56:46Z",
+  "tags": [
+    "text"
+  ],
+  "description": [],
+  "cli": [
+    "STR=\"Hello world\"",
+    "echo ${STR:6:5}   # \"world\"",
+    "echo ${STR: -5:5}  # \"world\""
+  ],
+  "example": [],
+  "output": []
+}

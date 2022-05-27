@@ -1,0 +1,17 @@
+{
+  "id": "47",
+  "title": "set env variables",
+  "language": "bash",
+  "category": "set",
+  "guid": "09de0f18-c4e5-4631-bb3d-c5c38844d816",
+  "url": "",
+  "modified": "2021-12-30T19:44:09Z",
+  "created": "2021-05-14T17:56:27Z",
+  "tags": [],
+  "description": [],
+  "cli": [
+    "export $(egrep -v '^#' \"path/to/file\" | xargs)"
+  ],
+  "example": [],
+  "output": []
+}

@@ -1,0 +1,33 @@
+{
+  "id": "325",
+  "title": "python oneliner - print columns like awk",
+  "language": "python",
+  "category": "python",
+  "type": "command",
+  "guid": "bfaf441b-fdce-4673-80ad-e37738b591b8",
+  "url": "",
+  "modified": "2022-05-25T09:51:36Z",
+  "created": "2022-05-25T09:51:16Z",
+  "tags": [
+    "python-oneliner"
+  ],
+  "description": [],
+  "cli": [
+    "python3 -c 'print(\"\\n\".join(line.split(\":\",1)[0] for line in open(\"/etc/passwd\")))'"
+  ],
+  "example": [
+    "$ python3 -c 'print(\"\\n\".join(line.split(\":\",1)[0] for line in open(\"/etc/passwd\")))'",
+    "SYSTEM",
+    "LOCAL SERVICE",
+    "NETWORK SERVICE",
+    "Administrators",
+    "NT SERVICE+TrustedInstaller",
+    "Annie_Tran",
+    "Administrator",
+    "DefaultAccount",
+    "Guest",
+    "SMSNomadP2P&",
+    "WDAGUtilityAccount"
+  ],
+  "output": []
+}

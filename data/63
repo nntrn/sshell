@@ -1,0 +1,24 @@
+{
+  "id": "63",
+  "title": "Recursively get full path name",
+  "language": "bash",
+  "category": "Recursively",
+  "guid": "ec1da274-5e65-4c6e-a881-6212aafb740e",
+  "url": "",
+  "modified": "2021-12-30T19:44:09Z",
+  "created": "2021-06-22T20:34:02Z",
+  "tags": [
+    "coreutils"
+  ],
+  "description": [
+    "`--ignore=\"\\.*\"` removes paths like ./ ../"
+  ],
+  "cli": [
+    "ls -RA --ignore=\"\\.*\" /misc/software/database/awx | awk '",
+    "/:$/&&f{s=$0;f=0}",
+    "/:$/&&!f{sub(/:$/,\"\");s=$0;f=1;next}",
+    "NF&&f{ print s\"/\"$0 }'"
+  ],
+  "example": [],
+  "output": []
+}

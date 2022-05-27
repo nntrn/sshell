@@ -1,0 +1,26 @@
+{
+  "id": "183",
+  "title": "bat file for opening cygwin in current directory",
+  "language": "cmd",
+  "category": "bat",
+  "guid": "5574a098-dc09-4b71-8517-d732a5d59867",
+  "url": "",
+  "modified": "2022-03-17T00:26:23Z",
+  "created": "2022-01-04T23:18:52Z",
+  "tags": [],
+  "description": [],
+  "cli": [
+    "@echo off",
+    "setlocal enableextensions",
+    "",
+    "set CURRENTDIR=%cd%",
+    "",
+    "C:",
+    "chdir \"%~dp0bin\"",
+    "set TERM=",
+    "",
+    "bash --login -i -c \"eval \\\"cd '$CURRENTDIR'\\\";$SHELL\""
+  ],
+  "example": [],
+  "output": []
+}

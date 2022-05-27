@@ -1,0 +1,19 @@
+{
+  "id": "87",
+  "title": "get AD User (powershell)",
+  "language": "powershell",
+  "category": "get",
+  "guid": "72e71f0b-7895-4c3f-a1b8-558504222e71",
+  "url": "",
+  "modified": "2021-12-30T19:55:29Z",
+  "created": "2021-07-28T15:42:59Z",
+  "tags": [
+    "powershell"
+  ],
+  "description": [],
+  "cli": [
+    "Get-ADUser -Identity Annie_Tran -Properties *"
+  ],
+  "example": [],
+  "output": []
+}

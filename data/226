@@ -1,0 +1,19 @@
+{
+  "id": "226",
+  "title": "restart failed services",
+  "language": "bash",
+  "category": "restart",
+  "guid": "5dd5def4-3058-4d4b-93e4-889a0c85ec73",
+  "url": "",
+  "modified": "2022-03-03T16:21:28Z",
+  "created": "2022-03-01T01:40:06Z",
+  "tags": [
+    "service"
+  ],
+  "description": [],
+  "cli": [
+    "systemctl list-units --failed --no-legend | awk '{print $1}'| xargs -I % systemctl status % && systemctl restart %"
+  ],
+  "example": [],
+  "output": []
+}

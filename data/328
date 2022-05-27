@@ -1,0 +1,20 @@
+{
+  "id": "328",
+  "title": "sysconfig - provide access to Python's configuration information",
+  "language": "python",
+  "category": "sysconfig",
+  "type": "command",
+  "guid": "d0968a5f-0ca0-4204-bf9e-972dc0367bb1",
+  "url": "https://docs.python.org/3.11/library/sysconfig.html",
+  "modified": "2022-05-25T12:48:27Z",
+  "created": "2022-05-25T12:48:27Z",
+  "tags": [],
+  "description": [
+    "The sysconfig module provides access to Python's configuration information like the list of installation paths and the configuration variables relevant for the current platform."
+  ],
+  "cli": [
+    "python -m sysconfig"
+  ],
+  "example": [],
+  "output": []
+}

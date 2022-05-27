@@ -1,0 +1,17 @@
+{
+  "id": "121",
+  "title": "get all processes for user",
+  "language": "bash",
+  "category": "get",
+  "guid": "ef5f98c7-566b-43ed-9b3f-a2d25230927c",
+  "url": "",
+  "modified": "2022-01-19T00:11:13Z",
+  "created": "2021-09-11T06:29:56Z",
+  "tags": [],
+  "description": [],
+  "cli": [
+    "ps -U $USER -u $USER u"
+  ],
+  "example": [],
+  "output": []
+}

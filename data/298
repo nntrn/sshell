@@ -1,0 +1,37 @@
+{
+  "id": "298",
+  "title": "Get-WmiObject - get network adapter config",
+  "language": "powershell",
+  "category": "Get-WmiObject",
+  "type": "command",
+  "guid": "30d8adcc-e943-4089-8cc4-48d340817fcd",
+  "url": "",
+  "modified": "2022-05-03T17:51:56Z",
+  "created": "2022-05-03T17:51:56Z",
+  "tags": [],
+  "description": [],
+  "cli": [
+    "Get-WmiObject win32_networkadapterconfiguration | Format-Table DHCPEnabled,ServiceName,Description -AutoSize -Wrap | Format-Wide -Column 3"
+  ],
+  "example": [],
+  "output": [
+    "DHCPEnabled ServiceName  Description",
+    "----------- -----------  -----------",
+    "       True kdnic        Microsoft Kernel Debug Network Adapter",
+    "      False VMSMP        Hyper-V Virtual Switch Extension Adapter",
+    "      False VMSNPXYMP    Hyper-V Virtual Ethernet Adapter",
+    "       True Netwtw10.    Intel(R) Wi-Fi 6 AX201 160MHz",
+    "       True vwifimp      Microsoft Wi-Fi Direct Virtual Adapter",
+    "       True vwifimp      Microsoft Wi-Fi Direct Virtual Adapter",
+    "      False PanGpd       PANGP Virtual Ethernet Adapter #2",
+    "      False RasSstp      WAN Miniport (SSTP)",
+    "      False RasAgileVpn  WAN Miniport (IKEv2)",
+    "      False Rasl2tp      WAN Miniport (L2TP)",
+    "      False PptpMiniport WAN Miniport (PPTP)",
+    "      False RasPppoe     WAN Miniport (PPPOE)",
+    "      False NdisWan      WAN Miniport (IP)",
+    "      False NdisWan      WAN Miniport (IPv6)",
+    "      False NdisWan      WAN Miniport (Network Monitor)",
+    ""
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "id": "74",
+  "title": "get most used commands",
+  "language": "bash",
+  "category": "get",
+  "guid": "78fb9f54-f561-4a55-b332-0b2afdf23482",
+  "url": "",
+  "modified": "2021-12-30T19:44:10Z",
+  "created": "2021-07-12T21:00:56Z",
+  "tags": [],
+  "description": [],
+  "cli": [
+    "history | cut -d ' ' -f6- | sort | uniq -c | sort -k1 -nr"
+  ],
+  "example": [],
+  "output": []
+}

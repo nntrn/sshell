@@ -1,0 +1,24 @@
+{
+  "id": "24",
+  "title": "urldecode",
+  "language": "bash",
+  "category": "error;#1",
+  "guid": "1edabd88-be49-4ad4-8ae2-7d7d913a2280",
+  "url": "",
+  "modified": "2021-12-30T19:44:08Z",
+  "created": "2021-03-27T00:19:47Z",
+  "tags": [
+    "coreutils"
+  ],
+  "description": [],
+  "cli": [
+    "sed \"s@+@ @g;s@%@\\\\\\\\x@g\" | xargs -0 printf \"%b\""
+  ],
+  "example": [
+    "alias urldecode='sed \"s@+@ @g;s@%@\\\\\\\\x@g\" | xargs -0 printf \"%b\"'",
+    "",
+    "echo \"http%3A%2F%2Fwww\" | urldecode",
+    "http://www"
+  ],
+  "output": "http://www"
+}

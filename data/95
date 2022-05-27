@@ -1,0 +1,17 @@
+{
+  "id": "95",
+  "title": "sed replace files",
+  "language": "bash",
+  "category": "sed",
+  "guid": "a6ea36b8-d9a1-4b61-91f4-49beeee3cc02",
+  "url": "",
+  "modified": "2022-01-19T15:49:43Z",
+  "created": "2021-08-10T14:38:04Z",
+  "tags": [],
+  "description": [],
+  "cli": [
+    "find . -type f -name \"*.html\" -print -exec sed -i -e 's/\"\\/\\//\"/g' {} \\;"
+  ],
+  "example": [],
+  "output": []
+}

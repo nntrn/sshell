@@ -1,0 +1,48 @@
+{
+  "id": "69",
+  "title": "list all ip rules",
+  "language": "bash",
+  "category": "list",
+  "guid": "0c9f2558-03ec-4ffb-b0fa-a2dfbc162e42",
+  "url": "https://sites.google.com/site/mrxpalmeiras/linux/iptables-basics",
+  "modified": "2022-03-03T21:09:04Z",
+  "created": "2021-07-09T02:17:59Z",
+  "tags": [
+    "network"
+  ],
+  "description": [],
+  "cli": [
+    "iptables --list-rules -v"
+  ],
+  "example": [
+    "$ iptables --list-rules",
+    "-P INPUT ACCEPT",
+    "-P FORWARD DROP",
+    "-P OUTPUT ACCEPT",
+    "-N DOCKER",
+    "-N DOCKER-ISOLATION-STAGE-1",
+    "-N DOCKER-ISOLATION-STAGE-2",
+    "-N DOCKER-USER",
+    "-A FORWARD -j DOCKER-USER",
+    "-A FORWARD -j DOCKER-ISOLATION-STAGE-1",
+    "-A FORWARD -o docker0 -m conntrack --ctstate RELATED,ESTABLISHED -j ACCEPT",
+    "-A FORWARD -o docker0 -j DOCKER",
+    "-A FORWARD -i docker0 ! -o docker0 -j ACCEPT",
+    "-A FORWARD -i docker0 -o docker0 -j ACCEPT",
+    "-A FORWARD -o br-a86456b5e096 -m conntrack --ctstate RELATED,ESTABLISHED -j ACCEPT",
+    "-A FORWARD -o br-a86456b5e096 -j DOCKER",
+    "-A FORWARD -i br-a86456b5e096 ! -o br-a86456b5e096 -j ACCEPT",
+    "-A FORWARD -i br-a86456b5e096 -o br-a86456b5e096 -j ACCEPT",
+    "-A DOCKER -d 172.31.0.5/32 ! -i br-a86456b5e096 -o br-a86456b5e096 -p tcp -m tcp --dport 8052 -j ACCEPT",
+    "-A DOCKER -d 172.31.0.5/32 ! -i br-a86456b5e096 -o br-a86456b5e096 -p tcp -m tcp --dport 443 -j ACCEPT",
+    "-A DOCKER-ISOLATION-STAGE-1 -i docker0 ! -o docker0 -j DOCKER-ISOLATION-STAGE-2",
+    "-A DOCKER-ISOLATION-STAGE-1 -i br-a86456b5e096 ! -o br-a86456b5e096 -j DOCKER-ISOLATION-STAGE-2",
+    "-A DOCKER-ISOLATION-STAGE-1 -j RETURN",
+    "-A DOCKER-ISOLATION-STAGE-2 -o docker0 -j DROP",
+    "-A DOCKER-ISOLATION-STAGE-2 -o br-a86456b5e096 -j DROP",
+    "-A DOCKER-ISOLATION-STAGE-2 -j RETURN",
+    "-A DOCKER-USER -j RETURN",
+    ""
+  ],
+  "output": []
+}

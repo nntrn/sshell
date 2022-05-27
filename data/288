@@ -1,0 +1,20 @@
+{
+  "id": "288",
+  "title": "get docker gateway",
+  "language": "bash",
+  "category": "get",
+  "type": "command",
+  "guid": "805d87dc-20f9-4243-81cf-22eef7ecdd80",
+  "url": "",
+  "modified": "2022-04-22T03:10:37Z",
+  "created": "2022-04-22T03:10:37Z",
+  "tags": [
+    "network"
+  ],
+  "description": [],
+  "cli": [
+    "ip route show | grep docker0 | awk '{print $9}'"
+  ],
+  "example": [],
+  "output": []
+}

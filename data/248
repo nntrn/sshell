@@ -1,0 +1,33 @@
+{
+  "id": "248",
+  "title": "ansible-vault - encrypt string with vault id",
+  "language": "bash",
+  "category": "ansible-vault",
+  "type": "command",
+  "guid": "d4089af3-f0d5-4c65-b394-d19439943947",
+  "url": "https://docs.ansible.com/ansible/latest/user_guide/vault.html#creating-encrypted-variables",
+  "modified": "2022-03-16T20:27:18Z",
+  "created": "2022-03-16T20:27:18Z",
+  "tags": [
+    "ansible"
+  ],
+  "description": [
+    "To encrypt the string 'letmein' read from stdin, add the vault ID 'dev' using the 'dev' vault password stored in a_password_file, and name the variable 'db_password':",
+    "",
+    ""
+  ],
+  "cli": [
+    "echo -n 'letmein' | ansible-vault encrypt_string --vault-id dev@a_password_file --stdin-name 'db_password'"
+  ],
+  "example": [],
+  "output": [
+    "Reading plaintext input from stdin. (ctrl-d to end input, twice if your content does not already have a new line)",
+    "db_password: !vault |",
+    "ANSIBLE_VAULT;1.2;AES256;dev",
+    "          61323931353866666336306139373937316366366138656131323863373866376666353364373761",
+    "          3539633234313836346435323766306164626134376564330a373530313635343535343133316133",
+    "          36643666306434616266376434363239346433643238336464643566386135356334303736353136",
+    "          6565633133366366360a326566323363363936613664616364623437336130623133343530333739",
+    "          3039"
+  ]
+}

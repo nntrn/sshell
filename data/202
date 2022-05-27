@@ -1,0 +1,30 @@
+{
+  "id": "202",
+  "title": "get name server",
+  "language": "bash",
+  "category": "get",
+  "guid": "7c049d9b-7ce5-4f41-bc61-7e8450d60042",
+  "url": "https://serverfault.com/a/413129",
+  "modified": "2022-02-10T16:14:52Z",
+  "created": "2022-02-03T03:40:35Z",
+  "tags": [
+    "network"
+  ],
+  "description": [],
+  "cli": [
+    " host -t ns example.com"
+  ],
+  "example": [],
+  "output": [
+    "example.com name server uslserver.us.example.com.",
+    "example.com name server uslserver.us.example.com.",
+    "example.com name server ausserver.us.example.com.",
+    "example.com name server ausserver.us.example.com.",
+    "example.com name server ausserver.us.example.com.",
+    "example.com name server uslserver.us.example.com.",
+    "example.com name server ausserver.us.example.com.",
+    "example.com name server ausserver.us.example.com.",
+    "example.com name server uslserver.us.example.com.",
+    ""
+  ]
+}

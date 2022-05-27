@@ -1,0 +1,22 @@
+{
+  "id": "179",
+  "title": "sendmail template",
+  "language": "bash",
+  "category": "sendmail",
+  "guid": "b6aee805-b360-4cde-b455-e73d72cc2817",
+  "url": "",
+  "modified": "2022-03-17T00:11:45Z",
+  "created": "2022-01-04T01:19:04Z",
+  "tags": [],
+  "description": [],
+  "cli": [
+    "echo \"To: annie_tran@example.com",
+    "Subject: my subject",
+    "Content-Type: text/html",
+    "",
+    "$(cat test-html-email.html)\" | sendmail -t",
+    ""
+  ],
+  "example": [],
+  "output": []
+}

@@ -1,0 +1,24 @@
+{
+  "id": "213",
+  "title": "cleanup leftover open files",
+  "language": "bash",
+  "category": "cleanup",
+  "guid": "b4f0046d-ca6d-4325-a926-d8dae86d3f1d",
+  "url": "https://unix.stackexchange.com/a/182082/464659",
+  "modified": "2022-03-03T17:02:24Z",
+  "created": "2022-02-16T02:56:17Z",
+  "tags": [],
+  "description": [
+    "On unices, filenames are just pointers (inodes) that point to the memory where the file resides (which can be a hard drive or even a RAM-backed filesystem). Each file records the number of links to it: the links can be either the filename (plural, if there are multiple hard links to the same file), and also every time a file is opened, the process actually holds the \"link\" to the same space.",
+    "",
+    "The space is physically freed only if there are no links left (therefore, it's impossible to get to it). That's the only sensible choice: while the file is being used, it's not important if someone else can no longer access it: you are using it and until you close it, you still have control over it - you won't even notice the filename is gone or moved or whatever. That's even used for tempfiles: some implementations create a file and immediately unlink it, so it's not visible in the filesystem, but the process that created it is using it normally. Flash plugin is especially fond of this method: all the downloaded video files are held open, but the filesystem doesn't show them.",
+    "",
+    "So, the answer is,  the processes have the files still opened, you shouldn't expect to get the space back. It's not freed, it's being actively used. This is also one of the reasons that applications should really close the files when they finish using them. In normal usage, you shouldn't think of that space as free, and this also shouldn't be very common at all - with the exception of temporary files that are unlinked on purpose, there shouldn't really be any files that you would consider being unused, but still open. Try to review if there is a process that does this a lot and consider how you use it, or just find more space.",
+    ""
+  ],
+  "cli": [
+    "kill -9 $(lsof |grep deleted|awk '{print $2}'|sort -u)"
+  ],
+  "example": [],
+  "output": []
+}

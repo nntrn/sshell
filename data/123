@@ -1,0 +1,28 @@
+{
+  "id": "123",
+  "title": "Use awk to display text and insert blank line before",
+  "language": "bash",
+  "category": "Use",
+  "guid": "f4d5ab71-3d74-48c4-b2a3-7eda2c964b4f",
+  "url": "",
+  "modified": "2022-01-19T00:10:24Z",
+  "created": "2021-09-13T15:31:41Z",
+  "tags": [],
+  "description": [],
+  "cli": [
+    "cat file.txt | awk -F '\\t' '{print \"\\n\"$2,$3}' OFS='\\n'"
+  ],
+  "example": [
+    "$ cat Downloads/servicess.txt | awk -F '\\t' '{print \"\\n\"$2,$3}' OFS='\\n'",
+    "",
+    "IPsec Policy Agent",
+    "Internet Protocol security (IPsec) supports network-level peer authentication, data origin authentication, data integrity, data confidentiality (encryption), and replay protection.  This service enforces IPsec policies created through the IP Security Policies snap-in or the command-line tool \"netsh ipsec\".  If you stop this service, you may experience network connectivity issues if your policy requires that connections use IPsec.  Also,remote management of Windows Defender Firewall is not available when this service is stopped.",
+    "",
+    "Network Connection Broker",
+    "Brokers connections that allow Windows Store Apps to receive notifications from the internet.",
+    "",
+    "Sensor Monitoring Service",
+    "Monitors various sensors in order to expose data and adapt to system and user state.  If this service is stopped or disabled, the display brightness will not adapt to lighting conditions. Stopping this service may affect other system functionality and features as well."
+  ],
+  "output": []
+}

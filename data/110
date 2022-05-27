@@ -1,0 +1,19 @@
+{
+  "id": "110",
+  "title": "generate random password",
+  "language": "bash",
+  "category": "generate",
+  "guid": "a0b1ab4a-52b0-4e93-afab-2db4321190de",
+  "url": "",
+  "modified": "2022-01-19T00:16:34Z",
+  "created": "2021-09-09T23:46:59Z",
+  "tags": [
+    "admin"
+  ],
+  "description": [],
+  "cli": [
+    "tr -dc 'a-zA-Z0-9' < /dev/urandom | head -c 32"
+  ],
+  "example": [],
+  "output": []
+}

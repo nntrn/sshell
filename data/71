@@ -1,0 +1,23 @@
+{
+  "id": "71",
+  "title": "output all yml",
+  "language": "bash",
+  "category": "output",
+  "guid": "77041f0e-cab6-4db6-b404-07e7143b3e07",
+  "url": "",
+  "modified": "2021-12-30T19:44:10Z",
+  "created": "2021-07-09T21:23:00Z",
+  "tags": [],
+  "description": [],
+  "cli": [
+    "tmppath=\"/tmp/$(date +%F)/ansible-roles\"",
+    "mkdir -p $tmppath",
+    "for d in $(find $PWD -mindepth 1 -maxdepth 1 -type d); do",
+    "  echo \"$d\"",
+    "  savename=\"${d//${PWD}\\//}\"",
+    "  find \"$d\" -type f -name \"*.yml\" -print -exec cat {} \\; | sed -e 's@'\"$(echo \"$d\")\"'@'\"$(echo \"\\n# file: $d\")\"'@g' | tee \"$tmppath/${savename//[^a-zA-Z0-9.]/_}\"",
+    "done"
+  ],
+  "example": [],
+  "output": []
+}

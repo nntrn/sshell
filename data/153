@@ -1,0 +1,25 @@
+{
+  "id": "153",
+  "title": "getfactl - get user, group, and perm ",
+  "language": "bash",
+  "category": "getfactl",
+  "guid": "70fc86bb-e50e-4f10-b612-e3589efea736",
+  "url": "",
+  "modified": "2022-01-07T18:14:32Z",
+  "created": "2021-11-04T00:06:00Z",
+  "tags": [],
+  "description": [],
+  "cli": [
+    "getfacl linux"
+  ],
+  "example": [],
+  "output": [
+    "# file: linux",
+    "# owner: annie_tran",
+    "# group: annie_tran",
+    "user::rwx",
+    "group::rwx",
+    "other::r-x",
+    ""
+  ]
+}

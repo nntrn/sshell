@@ -1,0 +1,22 @@
+{
+  "id": "18",
+  "title": "clear pycache",
+  "language": "bash",
+  "category": "clear",
+  "guid": "a6c65b07-7c89-43b7-a012-62c108ccbeb5",
+  "url": "",
+  "modified": "2022-04-06T21:30:41Z",
+  "created": "2021-03-23T02:21:46Z",
+  "tags": [
+    "python"
+  ],
+  "description": [],
+  "cli": [
+    "find . | grep -E \"(__pycache__|\\.pyc|\\.pyo$)\" | xargs rm -rf"
+  ],
+  "example": [
+    "alias pyclear='find . | grep -E \"(__pycache__|\\.pyc|\\.pyo$)\" | xargs rm -rf'",
+    ""
+  ],
+  "output": []
+}

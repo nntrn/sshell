@@ -1,0 +1,31 @@
+{
+  "id": "164",
+  "title": "proc environ - format for readability",
+  "language": "bash",
+  "category": "proc",
+  "guid": "61502a97-28f3-4050-88f6-209c42e2f1cf",
+  "url": "",
+  "modified": "2022-03-17T00:29:41Z",
+  "created": "2021-11-12T21:34:39Z",
+  "tags": [],
+  "description": [],
+  "cli": [
+    "cat /proc/$$/environ | sed 's/\\([A-Z_]*=\\)/\\n\\1/g'",
+    ""
+  ],
+  "example": [
+    "$ cat /proc/$$/environ",
+    "USER=annieLOGNAME=annieHOME=/home/anniePATH=/usr/local/bin:/usr/binMAIL=/var/mail/annieSHELL=/bin/bashTERM=xtermDISPLAY=localhost:10.0",
+    "",
+    "$ cat /proc/$$/environ | sed 's,\\([A-Z_]*=\\),\\n\\1,g'",
+    "USER=annie",
+    "LOGNAME=annie",
+    "HOME=/home/annie",
+    "PATH=/usr/local/bin:/usr/bin",
+    "MAIL=/var/mail/annie",
+    "SHELL=/bin/bash",
+    "TERM=xterm",
+    "DISPLAY=localhost:10.0"
+  ],
+  "output": []
+}

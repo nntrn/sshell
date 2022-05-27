@@ -1,0 +1,17 @@
+{
+  "id": "147",
+  "title": "get latest kernel version",
+  "language": "bash",
+  "category": "get",
+  "guid": "60070dac-12b1-4afe-a85a-51ca7f5d34b4",
+  "url": "",
+  "modified": "2022-01-10T15:56:56Z",
+  "created": "2021-10-21T20:33:31Z",
+  "tags": [],
+  "description": [],
+  "cli": [
+    "rpm -q kernel|awk -F- '{print $3}'|awk -F. '{print $1}'|sort -n|tail -1"
+  ],
+  "example": [],
+  "output": []
+}

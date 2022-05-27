@@ -1,0 +1,21 @@
+{
+  "id": "260",
+  "title": "Get the parent directory of where this script is.",
+  "language": "bash",
+  "category": "Get",
+  "type": "command",
+  "guid": "e663ceac-0ec7-4ce6-80ff-36e6375c2dbf",
+  "url": "https://github.com/hashicorp/vault/blob/3dc8ef76b670aeb91654a7f7df709c8fd08ca1d0/scripts/build.sh",
+  "modified": "2022-03-29T22:30:56Z",
+  "created": "2022-03-29T22:30:56Z",
+  "tags": [],
+  "description": [],
+  "cli": [
+    "SOURCE=\"${BASH_SOURCE[0]}\"",
+    "while [ -h \"$SOURCE\" ] ; do SOURCE=\"$(readlink \"$SOURCE\")\"; done",
+    "DIR=\"$( cd -P \"$( dirname \"$SOURCE\" )/..\" && pwd )\"",
+    ""
+  ],
+  "example": [],
+  "output": []
+}

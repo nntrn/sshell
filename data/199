@@ -1,0 +1,18 @@
+{
+  "id": "199",
+  "title": "get process pid and parent id",
+  "language": "bash",
+  "category": "get",
+  "type": "command",
+  "guid": "ec80c471-abc0-4883-8c3e-cbb467004edb",
+  "url": "",
+  "modified": "2022-03-17T00:25:01Z",
+  "created": "2022-02-02T07:22:39Z",
+  "tags": [],
+  "description": [],
+  "cli": [
+    "ps -ax -o pid=,ppid=,command= | grep -v \"\\[\" | sort -k3 -k2 -k1"
+  ],
+  "example": [],
+  "output": []
+}

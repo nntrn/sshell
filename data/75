@@ -1,0 +1,17 @@
+{
+  "id": "75",
+  "title": "print markdown docs not in node_modules",
+  "language": "bash",
+  "category": "print",
+  "guid": "f36fc6ee-0155-433b-b1b5-36ddadd70196",
+  "url": "",
+  "modified": "2021-12-30T19:44:10Z",
+  "created": "2021-07-13T19:31:08Z",
+  "tags": [],
+  "description": [],
+  "cli": [
+    "find . -type f -name \"*.md\" ! -path \"*node_modules*\" -print"
+  ],
+  "example": [],
+  "output": []
+}

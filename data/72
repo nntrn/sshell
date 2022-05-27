@@ -1,0 +1,19 @@
+{
+  "id": "72",
+  "title": "view UDP and TCP ports",
+  "language": "bash",
+  "category": "view",
+  "guid": "14602da1-6983-49b7-b837-192e11109e45",
+  "url": "",
+  "modified": "2021-12-30T19:44:10Z",
+  "created": "2021-07-12T20:41:55Z",
+  "tags": [
+    "admin"
+  ],
+  "description": [],
+  "cli": [
+    "lsof -n -i TCP -i UDP"
+  ],
+  "example": [],
+  "output": []
+}

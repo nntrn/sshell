@@ -1,0 +1,18 @@
+{
+  "id": "227",
+  "title": "disable ldap login for user",
+  "language": "bash",
+  "category": "disable",
+  "guid": "17466c09-3a38-4a3e-a278-a43525fb1fda",
+  "url": "https://serverfault.com/a/910048",
+  "modified": "2022-03-04T18:33:21Z",
+  "created": "2022-03-01T01:58:08Z",
+  "tags": [],
+  "description": [],
+  "cli": [
+    "echo '-:svc_account:ALL' | tee -a /etc/security/access.conf",
+    ""
+  ],
+  "example": [],
+  "output": []
+}

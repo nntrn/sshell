@@ -1,0 +1,22 @@
+{
+  "id": "92",
+  "title": "git pager",
+  "language": "bash",
+  "category": "git",
+  "guid": "7541d494-a933-4a1f-a266-03de2b0cff5b",
+  "url": "https://stackoverflow.com/a/2183920",
+  "modified": "2021-12-30T19:44:10Z",
+  "created": "2021-07-30T17:03:33Z",
+  "tags": [
+    "git"
+  ],
+  "description": [],
+  "cli": [
+    "# Tells 'less' not to paginate if less than a page",
+    "export LESS=\"-F -X $LESS\"",
+    "",
+    "git config --global --replace-all core.pager \"less -F -X\""
+  ],
+  "example": [],
+  "output": []
+}

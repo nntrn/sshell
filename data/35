@@ -1,0 +1,18 @@
+{
+  "id": "35",
+  "title": "hash directory ",
+  "language": "bash",
+  "category": "hash",
+  "guid": "6f36ee80-f3b9-44fb-bf2d-d50b04171d96",
+  "url": "",
+  "modified": "2021-12-30T19:44:09Z",
+  "created": "2021-04-14T00:18:25Z",
+  "tags": [],
+  "description": [],
+  "cli": [
+    "find . -type f -print0 | sort -z | xargs -r0 sha256sum  sha256SumOutput",
+    ""
+  ],
+  "example": [],
+  "output": []
+}

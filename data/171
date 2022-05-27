@@ -1,0 +1,19 @@
+{
+  "id": "171",
+  "title": "Get AD User from another domain (ldap)",
+  "language": "powershell",
+  "category": "Get",
+  "guid": "a1b6b0b0-8d99-4975-8f09-360e7c48057a",
+  "url": "",
+  "modified": "2022-03-17T00:28:02Z",
+  "created": "2021-12-06T22:06:14Z",
+  "tags": [
+    "AD"
+  ],
+  "description": [],
+  "cli": [
+    "Get-ADUser -Server amer.example.com -Identity annie_tran -Properties *"
+  ],
+  "example": [],
+  "output": []
+}

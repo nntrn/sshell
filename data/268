@@ -1,0 +1,20 @@
+{
+  "id": "268",
+  "title": "vault - get openapi specs",
+  "language": "bash",
+  "category": "vault",
+  "type": "command",
+  "guid": "838275ce-0b26-408a-9e6e-81e3950208b1",
+  "url": "",
+  "modified": "2022-04-06T17:46:28Z",
+  "created": "2022-04-01T04:09:50Z",
+  "tags": [
+    "vault"
+  ],
+  "description": [],
+  "cli": [
+    "curl -H \"X-Vault-Token: $VAULT_TOKEN\" \"$VAULT_ADDR/v1/sys/internal/specs/openapi\""
+  ],
+  "example": [],
+  "output": []
+}

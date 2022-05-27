@@ -1,0 +1,19 @@
+{
+  "id": "142",
+  "title": "awx job_template",
+  "language": "bash",
+  "category": "awx",
+  "guid": "ece71a34-982d-4a26-abad-9f1cc102d5b2",
+  "url": "",
+  "modified": "2021-12-30T19:52:24Z",
+  "created": "2021-10-13T16:49:11Z",
+  "tags": [
+    "ansible"
+  ],
+  "description": [],
+  "cli": [
+    "awx job_template list --all -f human --filter 'id, name, playbook, modified, status'"
+  ],
+  "example": [],
+  "output": []
+}

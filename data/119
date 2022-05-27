@@ -1,0 +1,17 @@
+{
+  "id": "119",
+  "title": "get runas user",
+  "language": "bash",
+  "category": "get",
+  "guid": "4b539dec-ced1-4ad1-9c5e-6a75ff0b6f99",
+  "url": "",
+  "modified": "2022-01-19T00:11:27Z",
+  "created": "2021-09-10T23:53:36Z",
+  "tags": [],
+  "description": [],
+  "cli": [
+    "sudo --list | grep 'NOPASSWD: ALL' |  awk -F'[)(]' '{print $2}'"
+  ],
+  "example": [],
+  "output": []
+}

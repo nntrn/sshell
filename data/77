@@ -1,0 +1,17 @@
+{
+  "id": "77",
+  "title": "rsync",
+  "language": "bash",
+  "category": "error;#1",
+  "guid": "8144c4d9-4058-42f0-a386-2a2f3fd6590b",
+  "url": "",
+  "modified": "2021-12-30T19:44:10Z",
+  "created": "2021-07-14T16:54:27Z",
+  "tags": [],
+  "description": [],
+  "cli": [
+    "rsync -avr -o -g filename.txt user@hosserver.us.example.com:/home/annie_tran"
+  ],
+  "example": [],
+  "output": []
+}

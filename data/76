@@ -1,0 +1,19 @@
+{
+  "id": "76",
+  "title": "create csr request",
+  "language": "bash",
+  "category": "create",
+  "guid": "cd0a10d0-77f0-4bc2-9617-b38c9c980c6b",
+  "url": "",
+  "modified": "2021-12-30T19:44:10Z",
+  "created": "2021-07-13T20:01:54Z",
+  "tags": [
+    "admin"
+  ],
+  "description": [],
+  "cli": [
+    "openssl req -new -newkey rsa:4096 -nodes -keyout \"private.key\" -out \"$(hostname -f).csr\" -subj \"/C=US/ST=Texas/L=Round Rock/O=nntrn/OU=Example /CN=$(hostname -f)\""
+  ],
+  "example": [],
+  "output": []
+}

@@ -1,0 +1,27 @@
+{
+  "id": "68",
+  "title": "get matching prefix",
+  "language": "bash",
+  "category": "get",
+  "guid": "fd2f9ac8-386e-4c08-be9c-450e36d5e98d",
+  "url": "https://stackoverflow.com/a/6973595/7460613",
+  "modified": "2021-12-30T19:44:09Z",
+  "created": "2021-07-09T00:04:27Z",
+  "tags": [],
+  "description": [],
+  "cli": [
+    "getsame() {",
+    "  string1=${1:?}",
+    "  string2=${2:?}",
+    "  first_diff_char=$(cmp <(echo \"$string1\") <(echo \"$string2\") | cut -d \" \" -f 5 | tr -d \",\")",
+    "  echo ${string1:0:$((first_diff_char - 1))}",
+    "}"
+  ],
+  "example": [
+    "$ path1=kv/SERVICE_ACCOUNT/SQLSERVER",
+    "$ path2=kv/SERVICE_ACCOUNT/MSSQL",
+    "$ getsame $path1 $path2",
+    "kv/SERVICE_ACCOUNT/"
+  ],
+  "output": []
+}

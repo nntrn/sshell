@@ -1,0 +1,24 @@
+{
+  "id": "107",
+  "title": "get allowed sudo commands",
+  "language": "bash",
+  "category": "get",
+  "guid": "cc719e67-a990-45d3-832d-3c1eed022055",
+  "url": "",
+  "modified": "2022-01-19T15:48:10Z",
+  "created": "2021-09-09T22:26:06Z",
+  "tags": [
+    "admin"
+  ],
+  "description": [],
+  "cli": [
+    "sudo --list | grep -ws User -A 1000 | sed 's/,/\\n/g' | sed 's/:/:\\n/g' | grep -E '^\\s+?/' | sed -e 's/^[[:space:]]*//'"
+  ],
+  "example": [
+    "$ sudo --list | grep -ws User -A 1000 | sed 's/,/\\n/g' | sed 's/:/:\\n/g' | grep -E '^\\s+?/' | sed -e 's/^[[:space:]]*//'",
+    "/bin/docker",
+    "/bin/su",
+    "/usr/local/bin/gitlab-runner"
+  ],
+  "output": []
+}

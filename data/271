@@ -1,0 +1,18 @@
+{
+  "id": "271",
+  "title": "sudo - show root entries only ",
+  "language": "bash",
+  "category": "sudo",
+  "type": "command",
+  "guid": "fd00048d-fd5b-498c-b768-cc2a6488a5d2",
+  "url": "",
+  "modified": "2022-04-06T20:06:25Z",
+  "created": "2022-04-06T20:06:25Z",
+  "tags": [],
+  "description": [],
+  "cli": [
+    "sudo -ll | sed -n '/RunAsUsers: root/,/Sudoers entry/p'"
+  ],
+  "example": [],
+  "output": []
+}

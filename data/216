@@ -1,0 +1,32 @@
+{
+  "id": "216",
+  "title": "docker root systemd drop-in service",
+  "language": "bash",
+  "category": "docker",
+  "guid": "2092dc13-107f-45bc-8243-755ac7daa95f",
+  "url": "https://medium.com/@wlarch/change-docker-root-directory-by-creating-a-systemd-drop-in-service-file-3c1244244784",
+  "modified": "2022-03-04T18:45:40Z",
+  "created": "2022-02-24T03:36:17Z",
+  "tags": [
+    "docker"
+  ],
+  "description": [
+    "Change docker root directory by creating a systemd drop-in service file",
+    "",
+    "It is possible to change docker root directory by creating a systemd drop-in service file. This is useful when you want images and containers or docker generated files to be located in another partition or drive."
+  ],
+  "cli": [
+    "mkdir -p /u01/docker-root",
+    "rsync -a /var/lib/docker/* /u01/docker-root",
+    "",
+    "echo '[Service]",
+    "ExecStart=",
+    "ExecStart=/usr/bin/dockerd -g /u01/docker-root -H fd://' >>/etc/systemd/system/docker.service.d/docker.root.conf",
+    "",
+    "systemctl daemon-reload",
+    "systemctl restart docker",
+    ""
+  ],
+  "example": [],
+  "output": []
+}

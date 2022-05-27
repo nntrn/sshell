@@ -1,0 +1,38 @@
+{
+  "id": "59",
+  "title": "Get size of mounted filesystems",
+  "language": "bash",
+  "category": "Get",
+  "guid": "88ad5665-49f6-4271-8ff7-eedfff0cd01f",
+  "url": "",
+  "modified": "2021-12-30T19:44:09Z",
+  "created": "2021-06-18T16:19:38Z",
+  "tags": [],
+  "description": [],
+  "cli": [
+    "df --block-size=1 | numfmt --field 2 --header --to=iec"
+  ],
+  "example": [],
+  "output": [
+    "Filesystem                                                         1B-blocks         Used    Available Use% Mounted on",
+    "devtmpfs                                                                 12G            0  12533854208   0% /dev",
+    "tmpfs                                                                    12G         4096  12546101248   1% /dev/shm",
+    "tmpfs                                                                    12G    801607680  11744497664   7% /run",
+    "tmpfs                                                                    12G            0  12546105344   0% /sys/fs/cgroup",
+    "/dev/mapper/osvg-root.fs                                                4.9G   1860653056   3371741184  36% /",
+    "/dev/mapper/osvg-usr.fs                                                 9.8G   4145782784   6329491456  40% /usr",
+    "/dev/mapper/osvg-opt.fs                                                 9.8G    842670080   9632604160   9% /opt",
+    "/dev/mapper/datavg-u01                                                   99G   1718673408 104529862656   2% /u01",
+    "/dev/mapper/osvg-home.fs                                                4.9G    116166656   5116227584   3% /home",
+    "/dev/mapper/osvg-tmp.fs                                                 997M    599429120    445652992  58% /tmp",
+    "/dev/mapper/osvg-var.fs                                                  20G   4803854336  16157179904  23% /var",
+    "/dev/mapper/osvg-varlog.fs                                              9.8G    195776512  10279497728   2% /var/log",
+    "/dev/mapper/osvg-varlogaudit.fs                                         997M    375377920    669704192  36% /var/log/audit",
+    "/dev/mapper/osvg-vartmp.fs                                              4.9G     35037184   5197357056   1% /var/tmp",
+    "/dev/sda1                                                               997M    209358848    835723264  21% /boot",
+    "/dev/mapper/osvg-oswatcher.fs                                           3.0G    365981696   2844758016  12% /oswatcher",
+    "tmpfs                                                                   2.4G            0   2509221888   0% /run/user/0",
+    "tmpfs                                                                   2.4G            0   2509221888   0% /run/user/1000",
+    ""
+  ]
+}

@@ -1,0 +1,44 @@
+{
+  "id": "211",
+  "title": "du - aggregate directory size",
+  "language": "bash",
+  "category": "du",
+  "guid": "994cfa47-0675-407d-be6c-43777f00e884",
+  "url": "https://stackoverflow.com/questions/16661982/check-folder-size-in-bash",
+  "modified": "2022-03-17T00:33:46Z",
+  "created": "2022-02-15T21:25:40Z",
+  "tags": [
+    "fs"
+  ],
+  "description": [],
+  "cli": [
+    "du -h -d 1 ."
+  ],
+  "example": [],
+  "output": [
+    "132K    ./.ssh",
+    "2.6M    ./.ansible",
+    "0       ./.local",
+    "43M     ./playbooks",
+    "24K     ./host_vars2",
+    "14M     ./.cache",
+    "4.0K    ./.config",
+    "24M     ./.npm",
+    "0       ./.pki",
+    "0       ./.puppetlabs",
+    "4.0K    ./.docker",
+    "290M    ./ansible_setup",
+    "2.4M    ./ansible_dbaas",
+    "62M     ./db-playbooks",
+    "8.0K    ./.gnupg",
+    "304K    ./oradiag_ansible",
+    "82M     ./scm",
+    "160K    ./company_ansible_starter",
+    "1.6M    ./ansible_dbaseceng",
+    "36K     ./.secrets",
+    "20K     ./ssh-expect",
+    "362M    ./.vscode-server",
+    "890M    .",
+    ""
+  ]
+}

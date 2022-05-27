@@ -1,0 +1,43 @@
+{
+  "id": "237",
+  "title": "print statistics of a process",
+  "language": "bash",
+  "category": "print",
+  "guid": "a633b675-2e67-4732-b422-fad34f6409c5",
+  "url": "",
+  "modified": "2022-03-04T00:39:31Z",
+  "created": "2022-03-04T00:39:31Z",
+  "tags": [],
+  "description": [
+    "prtstat  prints  the statistics of the specified process.  This information comes from the /proc/PID/stat file.",
+    ""
+  ],
+  "cli": [
+    "prtstat $PID"
+  ],
+  "example": "$ prtstat 3216",
+  "output": [
+    "Process: awx-manage             State: S (sleeping)",
+    "  CPU#:  1              TTY: 0:0        Threads: 1",
+    "Process, Group and Session IDs",
+    "  Process ID: 3216                Parent ID: 3153",
+    "    Group ID: 3153               Session ID: 2083",
+    "  T Group ID: -1",
+    "",
+    "Page Faults",
+    "  This Process    (minor major):     2168         0",
+    "  Child Processes (minor major):        0         0",
+    "CPU Times",
+    "  This Process    (user system guest blkio):  24.83  17.92   0.00   0.00",
+    "  Child processes (user system guest):         0.00   0.00   0.00",
+    "Memory",
+    "  Vsize:       312 MB",
+    "  RSS:         125 MB                    RSS Limit: 18446744073709 MB",
+    "  Code Start:  0x5608076c3000            Code Stop:  0x5608076c4010",
+    "  Stack Start: 0x7ffc96264720",
+    "  Stack Pointer (ESP):          0        Inst Pointer (EIP):          0",
+    "Scheduling",
+    "  Policy: normal",
+    "  Nice:   0        "
+  ]
+}

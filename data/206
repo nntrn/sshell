@@ -1,0 +1,30 @@
+{
+  "id": "206",
+  "title": "create csv from json (jq)",
+  "language": "bash",
+  "category": "create",
+  "guid": "7569f325-14f3-4b97-aab9-01988f447962",
+  "url": "https://programminghistorian.org/en/lessons/json-and-jq",
+  "modified": "2022-02-05T07:40:54Z",
+  "created": "2022-02-05T07:40:54Z",
+  "tags": [],
+  "description": [],
+  "cli": [
+    "wget -qO- http://programminghistorian.org/assets/jq_rkm.json | jq -r '.artObjects[] | [.id, .title, .principalOrFirstMaker, .webImage.url] | @csv'",
+    ""
+  ],
+  "example": [],
+  "output": [
+    "\"nl-SK-C-5\",\"Schutters van wijk II onder leiding van kapitein Frans Banninck Cocq, bekend als de 'Nachtwacht'\",\"Rembrandt Harmensz. van Rijn\",\"http://lh6.ggpht.com/ZYWwML8mVFonXzbmg2rQBulNuCSr3rAaf5ppNcUc2Id8qXqudDL1NSYxaqjEXyDLSbeNFzOHRu0H7rbIws0Js4d7s_M=s0\"",
+    "\"nl-SK-A-1505\",\"Een molen aan een poldervaart, bekend als 'In de maand juli'\",\"Paul Joseph Constantin Gabriël\",\"http://lh4.ggpht.com/PkQr-nNqzn0OVXVd4-hdJ6PPdWZ6-DQ_74WfBT3MZIV4LNYA-q8LUrtReXNstuzl9k6gKWkaBwG-LcFZ7zWU9Ch92g=s0\"",
+    "\"nl-SK-A-180\",\"Een vrolijke vioolspeler\",\"Gerard van Honthorst\",\"http://lh4.ggpht.com/iIwEcQp7nB5xmV6WctDIG-HRFWwMuegCw7j2On9lTksv9Mwl-nllpaQx_0BORbJiqyks4dR_E4K7AGnNur8hkoJ7WNkz=s0\"",
+    "\"nl-SK-A-2205\",\"Vanitas stilleven\",\"Gerrit van Vucht\",\"http://lh3.ggpht.com/ltkNYBL4U__3FerjWvcmZlOWhZ5kCh5Bxtl0FlkCiTDjYGzO1G4AkyA_5OxLjXiGJJr1qDvvw5_uPGP7kiZYuLef9cA=s0\"",
+    "\"nl-SK-A-1923\",\"Bosgezicht nabij Barbizon\",\"Johan Hendrik Weissenbruch\",\"http://lh3.ggpht.com/4SRlrjFgNfaAQNV66cUTMfJ56r5YMXYci8kQ2Vp7y_B6quBjR0kEf5pdWwFkBN7iI-DhNNEGaLBWiAx9VeWouu0XWvRP=s0\"",
+    "\"nl-SK-A-1935\",\"Landschap met stenen brug\",\"Rembrandt Harmensz. van Rijn\",\"http://lh3.ggpht.com/eENsvvpxhDzqxFf_HFPeHpAD4AH7Pp7zwymufb5m7FaZOKv8IqgLChY4b_LtN6-q3HSrtPmZdIjVkSsVXk61eLXtRkw=s0\"",
+    "\"nl-SK-A-690\",\"Een schrijver die zijn pen versnijdt\",\"Jan Ekels (II)\",\"http://lh4.ggpht.com/e2kmNV3E-YMFjH1zYsRnN7VrsQh5U7PtzJhAeIADmE-C-fw_s5tRkfZid9AIOuUs-6e36YmAylTl2btxkpIoU_3b5K4=s0\"",
+    "\"nl-SK-A-2983\",\"Eendennesten\",\"Paul Joseph Constantin Gabriël\",\"http://lh6.ggpht.com/-Ul_3YE8q2CPw44SRBdz3X3HEqCfMDEqUONqvVWRwHZvIG05D_PerehgIvfy_di71bLX_467GOkR99jFJ3uzsWysqQk=s0\"",
+    "\"nl-SK-A-3924\",\"Pompeius Occo\",\"Dirck Jacobsz.\",\"http://lh3.ggpht.com/bCIqIe6jDaZTe9ABLEbMKQXSFCQMMkPalrqur82zq691y2jpbyJRjpbCtYrsUT1IHgIAQO1stRRDDVErmGlVOzO7IWs=s0\"",
+    "\"nl-SK-A-3246\",\"De visvrouw\",\"Adriaen van Ostade\",\"http://lh4.ggpht.com/I5AaMSHTtQT2s7nFoBDYmKCi77zPvc-i4pssHS_lLlEuadlZ3gRv7vZri1qOog3_ofVS11LvyqZJ_LP-deIFIO7chjs=s0\"",
+    ""
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "id": "192",
+  "title": "postgresql list and order tables by size",
+  "language": "sql",
+  "category": "postgresql",
+  "guid": "6cb2650b-6d8f-4977-afe4-bb2dfc3af586",
+  "url": "https://stackoverflow.com/a/58916394/7460613",
+  "modified": "2022-01-24T17:16:06Z",
+  "created": "2022-01-21T05:26:05Z",
+  "tags": [
+    "db"
+  ],
+  "description": [],
+  "cli": [
+    "select table_name, pg_size_pretty( pg_relation_size(quote_ident(table_name)) )",
+    "from information_schema.tables",
+    "where table_schema = 'public'",
+    "order by pg_relation_size(quote_ident(table_name)) desc;"
+  ],
+  "example": [],
+  "output": [
+    "                        table_name                         | pg_size_pretty",
+    "-----------------------------------------------------------+----------------",
+    " main_projectupdateevent                                   | 372 MB",
+    " main_adhoccommandevent                                    | 16 MB",
+    " main_unifiedjob                                           | 13 MB",
+    " django_session                                            | 5640 kB",
+    " main_jobevent                                             | 3536 kB",
+    " main_activitystream                                       | 1936 kB",
+    " main_projectupdate                                        | 1912 kB",
+    " main_joblaunchconfig                                      | 1696 kB",
+    " main_usersessionmembership                                | 1144 kB",
+    " main_host                                                 | 992 k"
+  ]
+}

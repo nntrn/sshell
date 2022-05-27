@@ -1,0 +1,20 @@
+{
+  "id": "172",
+  "title": "get git symlink files",
+  "language": "bash",
+  "category": "get",
+  "guid": "9742e9c9-b824-4dc3-93c2-67327683e4ca",
+  "url": "",
+  "modified": "2021-12-30T19:53:06Z",
+  "created": "2021-12-08T20:47:47Z",
+  "tags": [
+    "git"
+  ],
+  "description": [],
+  "cli": [
+    "git ls-files -s | awk '/120000/{print $4}'",
+    ""
+  ],
+  "example": [],
+  "output": []
+}

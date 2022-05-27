@@ -1,0 +1,20 @@
+{
+  "id": "3",
+  "title": "host",
+  "language": "bash",
+  "category": "error;#1",
+  "guid": "dd870091-dc95-473d-a829-b1b9b91b5c9e",
+  "url": "",
+  "modified": "2021-12-30T19:44:08Z",
+  "created": "2021-02-23T14:53:31Z",
+  "tags": [],
+  "description": [],
+  "cli": [
+    "host -w hostname"
+  ],
+  "example": [
+    "$ host -w awxserver.amer.example.com",
+    "AWXserver.amer.example.com has address 10.179.177.76"
+  ],
+  "output": []
+}

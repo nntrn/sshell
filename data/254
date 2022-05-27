@@ -1,0 +1,25 @@
+{
+  "id": "254",
+  "title": "find directories that do not have sticky bit for group",
+  "language": "bash",
+  "category": "find",
+  "type": "command",
+  "guid": "8139e351-ff6f-4286-97d4-ba82fbcd82a5",
+  "url": "https://www.redhat.com/sysadmin/suid-sgid-sticky-bit",
+  "modified": "2022-03-26T01:24:02Z",
+  "created": "2022-03-26T01:24:02Z",
+  "tags": [],
+  "description": [
+    "Using the numerical method, we need to pass a fourth, preceding digit in our chmod command. The digit used is calculated similarly to the standard permission digits:",
+    "",
+    "Start at 0",
+    "SUID = 4",
+    "SGID = 2",
+    "Sticky = 1"
+  ],
+  "cli": [
+    "find $DIR -maxdepth 3 -mindepth 1 -type d ! -perm -2000 -print -exec chmod g+s {} \\;"
+  ],
+  "example": [],
+  "output": []
+}

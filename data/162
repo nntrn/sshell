@@ -1,0 +1,17 @@
+{
+  "id": "162",
+  "title": "sort top command by memory",
+  "language": "bash",
+  "category": "sort",
+  "guid": "9fb05023-c00f-4fe8-b034-5864747c6f2e",
+  "url": "",
+  "modified": "2021-12-30T19:25:18Z",
+  "created": "2021-11-11T19:06:10Z",
+  "tags": [],
+  "description": [],
+  "cli": [
+    "top -o +%MEM"
+  ],
+  "example": [],
+  "output": []
+}

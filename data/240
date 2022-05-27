@@ -1,0 +1,22 @@
+{
+  "id": "240",
+  "title": "stat - display file properties",
+  "language": "bash",
+  "category": "stat",
+  "type": "command",
+  "guid": "ca1fc703-7211-462c-9290-2c6adfd74471",
+  "url": "",
+  "modified": "2022-03-17T00:23:45Z",
+  "created": "2022-03-09T00:44:04Z",
+  "tags": [],
+  "description": [],
+  "cli": [
+    "stat --printf='%U\\n%G\\n%z\\n' $FILEORDIR"
+  ],
+  "example": "stat --printf='%U\\n%G\\n%z\\n' .git",
+  "output": [
+    "annie_tran",
+    "wheel",
+    "2022-03-08 18:39:51.177925946 -0600"
+  ]
+}

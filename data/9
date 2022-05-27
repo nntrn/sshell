@@ -1,0 +1,28 @@
+{
+  "id": "9",
+  "title": "cf",
+  "language": "bash",
+  "category": "error;#1",
+  "guid": "ac25aa01-3207-456b-89ef-992d674874e8",
+  "url": "https://confluence.example.com/display/SAL/%5BDevops%5D+PCF+-+nntrn+IT+Cloud+Foundry",
+  "modified": "2021-12-30T19:44:08Z",
+  "created": "2021-02-24T09:16:13Z",
+  "tags": [
+    "network"
+  ],
+  "description": [
+    "Sustaining team has the following PCF Environments (change api to apps if you want to access the panel)",
+    "",
+    "PROD",
+    "PC1: https://api.sausmpc01.pcf.example.com",
+    "S3B: https://api.sausmsc01.pcf.example.com",
+    "NON-PROD",
+    "http://api.sr2.pcf.example.com",
+    "PCF Org"
+  ],
+  "cli": [
+    "cf login -a https://api.sr2.pcf.example.com"
+  ],
+  "example": [],
+  "output": []
+}

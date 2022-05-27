@@ -1,0 +1,24 @@
+{
+  "id": "144",
+  "title": "get latest kernel",
+  "language": "bash",
+  "category": "get",
+  "guid": "ae54d0bd-625c-4599-8a85-73fb3ed94d59",
+  "url": "",
+  "modified": "2022-01-10T15:57:04Z",
+  "created": "2021-10-18T16:29:31Z",
+  "tags": [
+    "admin"
+  ],
+  "description": [],
+  "cli": [
+    "awk -F\\' /^menuentry/{print\\$2} /etc/grub2.cfg | grep -vE \"(uek|rescue)\" | sort | tail -n 1"
+  ],
+  "example": [
+    "$ awk -F\\' /^menuentry/{print\\$2} /etc/grub2.cfg | grep -vE \"(uek|rescue)\" | sort | tail -n 1",
+    "Oracle Linux Server 7.9, with Linux 3.10.0-1160.36.2.el7.x86_64",
+    "",
+    ""
+  ],
+  "output": []
+}

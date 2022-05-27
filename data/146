@@ -1,0 +1,19 @@
+{
+  "id": "146",
+  "title": "awx curl",
+  "language": "bash",
+  "category": "awx",
+  "guid": "ad3347fa-6d33-43ed-804e-e23455783a08",
+  "url": "",
+  "modified": "2021-12-30T19:52:16Z",
+  "created": "2021-10-20T22:24:01Z",
+  "tags": [
+    "ansible"
+  ],
+  "description": [],
+  "cli": [
+    "curl -f -k -s -v -H \"Content-Type: application/json\" -X PUT -d @_ldap.json --user $TOWER_USERNAME:$TOWER_PASSWORD \"https://$TOWER_HOST/api/v2/settings/ldap/\""
+  ],
+  "example": [],
+  "output": []
+}

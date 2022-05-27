@@ -1,0 +1,26 @@
+{
+  "id": "141",
+  "title": "get laptop service tag",
+  "language": "powershell",
+  "category": "get",
+  "guid": "840c1aee-bb72-4509-bd44-5f9336eb4eeb",
+  "url": "https://exchangepedia.com/2007/02/getting-nntrn-service-tag-using-powershell.html",
+  "modified": "2022-03-24T22:14:06Z",
+  "created": "2021-10-08T21:33:35Z",
+  "tags": [
+    "nntrn"
+  ],
+  "description": [],
+  "cli": [
+    "Get-WmiObject win32_SystemEnclosure | select serialnumber",
+    "",
+    "# another way:",
+    "Get-WMIObject -Class Win32_Bios"
+  ],
+  "example": [],
+  "output": [
+    "serialnumber",
+    "------------",
+    "1TL8YD3"
+  ]
+}

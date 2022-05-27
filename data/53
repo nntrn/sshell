@@ -1,0 +1,17 @@
+{
+  "id": "53",
+  "title": "hack for unsourcing env variables",
+  "language": "bash",
+  "category": "hack",
+  "guid": "68b47131-f372-4ac1-a270-d141a6bb09b6",
+  "url": "",
+  "modified": "2022-01-19T16:16:53Z",
+  "created": "2021-06-04T17:17:09Z",
+  "tags": [],
+  "description": [],
+  "cli": [
+    "unset $(cat /path/to/file.txt | grep -vE \"^(#|export)\" | grep \".\" | cut -d = -f -1)"
+  ],
+  "example": [],
+  "output": []
+}

@@ -1,0 +1,17 @@
+{
+  "id": "30",
+  "title": "a fancier lsof -i",
+  "language": "bash",
+  "category": "a",
+  "guid": "96422f23-4e68-4f53-a197-b300b6746c64",
+  "url": "",
+  "modified": "2021-12-30T19:44:09Z",
+  "created": "2021-03-31T00:20:09Z",
+  "tags": [],
+  "description": [],
+  "cli": [
+    "lsof -P -i -n"
+  ],
+  "example": [],
+  "output": []
+}

@@ -1,0 +1,19 @@
+{
+  "id": "106",
+  "title": "get git status for all worktree repos in git",
+  "language": "bash",
+  "category": "get",
+  "guid": "21c2171f-be56-4e49-83b8-e9ff8979d9d1",
+  "url": "",
+  "modified": "2022-01-19T15:48:18Z",
+  "created": "2021-09-02T15:36:15Z",
+  "tags": [
+    "git"
+  ],
+  "description": [],
+  "cli": [
+    "find . -maxdepth 3 -name .git -type d -print -exec git -C {} status \\;"
+  ],
+  "example": [],
+  "output": []
+}

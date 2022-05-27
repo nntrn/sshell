@@ -1,0 +1,20 @@
+{
+  "id": "122",
+  "title": "repeat string N times",
+  "language": "bash",
+  "category": "repeat",
+  "guid": "5bcf313f-c6e0-4637-8b27-6424d8475d13",
+  "url": "",
+  "modified": "2022-03-03T21:10:29Z",
+  "created": "2021-09-11T06:43:21Z",
+  "tags": [
+    "text"
+  ],
+  "description": [],
+  "cli": [
+    "printf '=%.0s' {1..80}",
+    ""
+  ],
+  "example": [],
+  "output": "================================================================================"
+}

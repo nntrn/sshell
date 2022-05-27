@@ -1,0 +1,21 @@
+{
+  "id": "37",
+  "title": "rsync with exclude",
+  "language": "bash",
+  "category": "rsync",
+  "guid": "8da22916-e1cd-4ef6-b815-1aa8a6983f7c",
+  "url": "",
+  "modified": "2021-12-30T19:44:09Z",
+  "created": "2021-04-20T20:56:26Z",
+  "tags": [],
+  "description": [],
+  "cli": [
+    "rsync -avr --exclude={'dbaasv2-awx','*.rpm'} -o -g /home/servicedbaas servicedbaas@awxserver.us.example.com:/home/servicedbaas/01",
+    "",
+    "rsync -avr --exclude={'dbaasv2-awx','ansible'} -o -g dbaas annie_tran@ausserver.us.example.com:/home/annie_tran",
+    "",
+    ""
+  ],
+  "example": [],
+  "output": []
+}

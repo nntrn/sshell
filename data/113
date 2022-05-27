@@ -1,0 +1,35 @@
+{
+  "id": "113",
+  "title": "awk - get value only",
+  "language": "bash",
+  "category": "awk",
+  "guid": "cd022262-a550-4e8e-aa4b-469410b072f1",
+  "url": "",
+  "modified": "2022-01-19T15:47:48Z",
+  "created": "2021-09-10T02:44:20Z",
+  "tags": [
+    "nntrn"
+  ],
+  "description": [],
+  "cli": [
+    "awk -F= '/^BUILDTYPE=/ {print tolower($2)}' /etc/example.cfg"
+  ],
+  "example": [
+    "$ awk -F= '/^BUILDTYPE=/ {print tolower($2)}' /etc/example.cfg",
+    "companyit",
+    "",
+    "$ cat /etc/example.cfg",
+    "ONCALLSHORT=\"svc_account\"",
+    "BUSINESSSHORT=\"svc_account\"",
+    "XINSTALLED=0",
+    "STAFF_EMAIL=svc_account@example.com",
+    "PRODUCTION=PRD",
+    "ENVIRONMENT=PRD",
+    "SUPPORTGROUP=AMER",
+    "SMTPGATEWAY=smtp-out.us.example.com",
+    "HOSTNAME=awxserver.us.example.com",
+    "BUILDTYPE=COMPANYIT",
+    "APPLICATIONID=1003150"
+  ],
+  "output": []
+}

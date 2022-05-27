@@ -1,0 +1,28 @@
+{
+  "id": "143",
+  "title": "get installed kernels",
+  "language": "bash",
+  "category": "get",
+  "guid": "60462c12-1365-48ec-9012-8220859006be",
+  "url": "",
+  "modified": "2022-01-10T15:57:13Z",
+  "created": "2021-10-18T16:25:00Z",
+  "tags": [
+    "admin"
+  ],
+  "description": [],
+  "cli": [
+    "awk -F\\' /^menuentry/{print\\$2} /etc/grub2.cfg"
+  ],
+  "example": [
+    "$ awk -F\\' /^menuentry/{print\\$2} /etc/grub2.cfg",
+    "Oracle Linux Server 7.9, with Unbreakable Enterprise Kernel 5.4.17-2102.202.5.el7uek.x86_64",
+    "Oracle Linux Server 7.9, with Unbreakable Enterprise Kernel 4.1.12-61.1.18.el7uek.x86_64",
+    "Oracle Linux Server 7.9, with Linux 3.10.0-1160.36.2.el7.x86_64",
+    "Oracle Linux Server 7.9, with Linux 3.10.0-1160.15.2.el7.x86_64",
+    "Oracle Linux Server 7.9, with Linux 0-rescue-21e762519e7246a4b97b5fa8e94a7ed1",
+    "",
+    ""
+  ],
+  "output": []
+}

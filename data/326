@@ -1,0 +1,32 @@
+{
+  "id": "326",
+  "title": "python - csv to json",
+  "language": "python",
+  "category": "python",
+  "type": "command",
+  "guid": "556fe5cd-2fad-4322-ada1-3b6f37b9a492",
+  "url": "",
+  "modified": "2022-05-25T10:11:30Z",
+  "created": "2022-05-25T10:11:30Z",
+  "tags": [],
+  "description": [],
+  "cli": [
+    "CSV_FILE=~/csv/cities.csv",
+    "",
+    "# print each row as an object",
+    "cat $CSV_FILE |",
+    "  python -c \"import sys,csv,json;print(json.dumps(list(csv.DictReader(sys.stdin))))\"",
+    "",
+    "# print each row as an array",
+    "cat $CSV_FILE |",
+    "  python -c \"import sys,csv,json;print(json.dumps(list(csv.reader(sys.stdin))))\""
+  ],
+  "example": [
+    "CSV_FILE=~/csv/cities.csv",
+    "",
+    "python -c \"import csv,json;print(json.dumps(list(csv.DictReader(open('$CSV_FILE')))))\"",
+    "python -c \"import csv,json;print(json.dumps(list(csv.reader(open('$CSV_FILE')))))\"",
+    ""
+  ],
+  "output": []
+}

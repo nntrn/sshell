@@ -1,0 +1,18 @@
+{
+  "id": "108",
+  "title": "run sudosu",
+  "language": "bash",
+  "category": "run",
+  "guid": "d6041891-c86f-491d-ae53-6ca155be01d0",
+  "url": "",
+  "modified": "2022-01-19T15:48:05Z",
+  "created": "2021-09-09T23:30:08Z",
+  "tags": [],
+  "description": [],
+  "cli": [
+    "eval \"sudo $(sudo --list | grep -ws User -A 1000 | sed 's/,/\\n/g' | sed 's/:/:\\n/g' | grep '/bin/su' | sort | tail -n 1)\"",
+    ""
+  ],
+  "example": [],
+  "output": []
+}

@@ -1,0 +1,19 @@
+{
+  "id": "43",
+  "title": "docker history dockerfile",
+  "language": "bash",
+  "category": "docker",
+  "guid": "598274d5-3ef3-427f-a8af-ac4293ad1b42",
+  "url": "",
+  "modified": "2021-12-30T19:44:09Z",
+  "created": "2021-05-06T00:36:44Z",
+  "tags": [
+    "docker"
+  ],
+  "description": [],
+  "cli": [
+    "docker history --no-trunc <imageid> | tac | tr -s ' ' | cut -d \" \" -f 5- | sed 's,^/bin/sh -c #(nop) ,,g' | sed 's,^/bin/sh -c,RUN,g' | sed 's, && ,\\n  & ,g' | sed 's,\\s*[0-9]*[\\.]*[0-9]*\\s*[kMG]*B\\s*$,,g' | head -n -1"
+  ],
+  "example": [],
+  "output": []
+}

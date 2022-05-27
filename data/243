@@ -1,0 +1,39 @@
+{
+  "id": "243",
+  "title": "openssl salted encryption/decryption",
+  "language": "bash",
+  "category": "openssl",
+  "type": "command",
+  "guid": "c2e0bf13-eb5d-4aff-a826-c4d2dcf4b8a5",
+  "url": "",
+  "modified": "2022-03-17T00:31:31Z",
+  "created": "2022-03-09T23:04:17Z",
+  "tags": [
+    "security"
+  ],
+  "description": [],
+  "cli": [
+    "echo 'example' >.vault-password",
+    "echo 'username: password' >.secrets",
+    "",
+    "#encrypt",
+    "openssl enc -aes256 -base64 -salt -in .secrets -out .secrets.enc -pass file:./.vault-password",
+    "",
+    "#decrypt",
+    "openssl enc -d -aes256 -a -in .secrets.enc -pass file:./.vault-password"
+  ],
+  "example": [
+    "$ echo 'example' >.vault-password",
+    "$ echo 'username: password' >.secrets",
+    "",
+    "# encrypt:",
+    "$ openssl enc -aes256 -base64 -salt -in .secrets -out .secrets.enc -pass file:./.vault-password",
+    "",
+    "$ cat .secrets.enc",
+    "U2FsdGVkX1/VrT+ty1Q+InEZp6O+2AJYG/axMT4PUXoGgiq0rFA+mAGWFwRDAcYG",
+    "",
+    "$ openssl enc -d -aes256 -a -in .secrets.enc -pass file:./.vault-password 2>/dev/null",
+    "username: password"
+  ],
+  "output": []
+}

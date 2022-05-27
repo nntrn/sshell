@@ -1,0 +1,22 @@
+{
+  "id": "185",
+  "title": "random variable",
+  "language": "bash",
+  "category": "random",
+  "guid": "0c3fe117-21e3-402f-b3fd-9b73aedb66fd",
+  "url": "",
+  "modified": "2022-01-10T18:38:26Z",
+  "created": "2022-01-10T18:38:26Z",
+  "tags": [
+    "shell"
+  ],
+  "description": [],
+  "cli": [
+    "echo \"random: $RANDOM\""
+  ],
+  "example": [
+    "$ TMPFILE='random'$RANDOM",
+    "$ echo $TMPFILE"
+  ],
+  "output": "random27790"
+}

@@ -1,0 +1,17 @@
+{
+  "id": "97",
+  "title": "sed - only print after matching pattern",
+  "language": "bash",
+  "category": "sed",
+  "guid": "a166a2e1-134e-45dd-9e59-18de3958eba5",
+  "url": "",
+  "modified": "2022-01-19T15:49:22Z",
+  "created": "2021-08-11T21:55:17Z",
+  "tags": [],
+  "description": [],
+  "cli": [
+    "sed -n '/^\\[mongo:children.*/,$p'"
+  ],
+  "example": [],
+  "output": []
+}

@@ -1,0 +1,23 @@
+{
+  "id": "322",
+  "title": "python - command line pretty print json",
+  "language": "bash",
+  "category": "python",
+  "type": "command",
+  "guid": "59f489dd-151e-4b60-b14a-28f880cb6973",
+  "url": "https://stackoverflow.com/a/32228333",
+  "modified": "2022-05-23T16:48:23Z",
+  "created": "2022-05-23T16:47:06Z",
+  "tags": [
+    "python"
+  ],
+  "description": [],
+  "cli": [
+    "python3 -m json.tool file.json",
+    "",
+    "# or",
+    "cat file.json | python3 -m json.tool"
+  ],
+  "example": [],
+  "output": []
+}

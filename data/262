@@ -1,0 +1,31 @@
+{
+  "id": "262",
+  "title": "get environment names matching prefix",
+  "language": "bash",
+  "category": "get",
+  "type": "command",
+  "guid": "f813b166-40d4-447e-9830-0411dbda04af",
+  "url": "",
+  "modified": "2022-03-30T16:22:08Z",
+  "created": "2022-03-30T16:22:08Z",
+  "tags": [],
+  "description": [
+    "${!prefix*}",
+    "${!prefix@}",
+    "",
+    "Names matching prefix.  ",
+    "",
+    "Expands to the names of variables whose names begin with prefix, separated by the first character of the IFS special variable.  ",
+    "",
+    "When @ is used and the expansion appears within double quotes, each variable name expands to a separate word."
+  ],
+  "cli": [
+    "${!prefix*}",
+    "${!prefix@}"
+  ],
+  "example": [
+    "$ echo \"${!VAULT*}\"",
+    "VAULT_ADDR VAULT_NAMESPACE VAULT_TOKEN"
+  ],
+  "output": []
+}

@@ -1,0 +1,21 @@
+{
+  "id": "51",
+  "title": "print all the columns after a particular number using awk",
+  "language": "bash",
+  "category": "print",
+  "guid": "204f27d1-46e5-4a38-804b-141ea364cb5f",
+  "url": "https://stackoverflow.com/a/23118210",
+  "modified": "2021-12-30T19:44:09Z",
+  "created": "2021-06-03T18:23:30Z",
+  "tags": [],
+  "description": [],
+  "cli": [
+    "ps -ef | awk -v m=\"\\x01\" -v N=\"8\" '{$N=m$N ;print substr($0, index($0,m)+1)}'",
+    ""
+  ],
+  "example": [
+    "ps -ef | awk -v m=\"\\x01\" -v N=\"8\" '{$N=m$N ;print substr($0, index($0,m)+1)}'",
+    ""
+  ],
+  "output": []
+}

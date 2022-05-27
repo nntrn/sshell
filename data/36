@@ -1,0 +1,19 @@
+{
+  "id": "36",
+  "title": "view signed certs",
+  "language": "bash",
+  "category": "view",
+  "guid": "6b74432f-d189-4136-a475-72dcf944fca7",
+  "url": "",
+  "modified": "2021-12-30T19:44:09Z",
+  "created": "2021-04-20T20:37:37Z",
+  "tags": [
+    "info"
+  ],
+  "description": [],
+  "cli": [
+    "find /etc/pki -type f ! -name \"*cacerts*\" -print -exec cat {} \\; | less"
+  ],
+  "example": [],
+  "output": []
+}
