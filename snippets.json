@@ -1,13 +1,13 @@
 [
     {
         "id": "331",
-        "title": "python - select k",
-        "language": "bash",
+        "title": "python - select keys in json to print",
+        "language": "python",
         "category": "python",
         "type": "command",
         "guid": "ab5c4001-5375-4f36-ade0-f5bce621e9dc",
         "url": "",
-        "modified": "2022-05-27T00:03:57Z",
+        "modified": "2022-05-27T03:43:16Z",
         "created": "2022-05-27T00:03:26Z",
         "tags": [],
         "description": [
@@ -47,7 +47,7 @@
         "type": "command",
         "guid": "5472609e-f05d-4a38-8969-f1dee3670dcd",
         "url": "",
-        "modified": "2022-05-26T23:53:05Z",
+        "modified": "2022-05-27T03:44:33Z",
         "created": "2022-05-26T23:53:05Z",
         "tags": [],
         "description": [
@@ -74,14 +74,51 @@
             "where all occurrences of % must be doubled when using  this  option."
         ],
         "cli": [
-            "curl --write-out \"\\n\\n\\n%{json}\" https://en.wikipedia.org/api/rest_v1/page/title/Sleeper_effect"
+            "curl -s -o snippets.json -w '%{json}' https://raw.githubusercontent.com/nntrn/sshell/data/snippets.json | jq"
         ],
         "example": [],
         "output": [
-            "{\"items\":[{\"title\":\"Sleeper_effect\",\"page_id\":855950,\"rev\":1083148366,\"tid\":\"4b40ac80-dd4e-11ec-bce7-7f97315449ad\",\"namespace\":0,\"user_id\":43211408,\"user_text\":\"Sid rumpo\",\"timestamp\":\"2022-04-17T09:13:08Z\",\"comment\":\"improved intro\",\"tags\":[\"visualeditor\"],\"restrictions\":[],\"page_language\":\"en\",\"redirect\":false}]}",
-            "",
-            "",
-            "{\"content_type\":\"application/json\",\"errormsg\":null,\"exitcode\":0,\"filename_effective\":null,\"ftp_entry_path\":null,\"http_code\":200,\"http_connect\":0,\"http_version\":\"2\",\"local_ip\":\"192.168.1.68\",\"local_port\":8024,\"method\":\"GET\",\"num_connects\":1,\"num_headers\":32,\"num_redirects\":0,\"proxy_ssl_verify_result\":0,\"redirect_url\":null,\"referer\":null,\"remote_ip\":\"208.80.153.224\",\"remote_port\":443,\"response_code\":200,\"scheme\":\"HTTPS\",\"size_download\":316,\"size_header\":2274,\"size_request\":115,\"size_upload\":0,\"speed_download\":1673,\"speed_upload\":0,\"ssl_verify_result\":0,\"time_appconnect\":0.072222,\"time_connect\":0.031673,\"time_namelookup\":0.018426,\"time_pretransfer\":0.072374,\"time_redirect\":0.000000,\"time_starttransfer\":0.188793,\"time_total\":0.188863,\"url\":\"https://en.wikipedia.org/api/rest_v1/page/title/Sleeper_effect\",\"url_effective\":\"https://en.wikipedia.org/api/rest_v1/page/title/Sleeper_effect\",\"url"
+            "{",
+            "  \"content_type\": \"text/plain; charset=utf-8\",",
+            "  \"errormsg\": null,",
+            "  \"exitcode\": 0,",
+            "  \"filename_effective\": \"snippets.json\",",
+            "  \"ftp_entry_path\": null,",
+            "  \"http_code\": 200,",
+            "  \"http_connect\": 0,",
+            "  \"http_version\": \"2\",",
+            "  \"local_ip\": \"192.168.1.68\",",
+            "  \"local_port\": 2685,",
+            "  \"method\": \"GET\",",
+            "  \"num_connects\": 1,",
+            "  \"num_headers\": 22,",
+            "  \"num_redirects\": 0,",
+            "  \"proxy_ssl_verify_result\": 0,",
+            "  \"redirect_url\": null,",
+            "  \"referer\": null,",
+            "  \"remote_ip\": \"185.199.111.133\",",
+            "  \"remote_port\": 443,",
+            "  \"response_code\": 200,",
+            "  \"scheme\": \"HTTPS\",",
+            "  \"size_download\": 476897,",
+            "  \"size_header\": 823,",
+            "  \"size_request\": 118,",
+            "  \"size_upload\": 0,",
+            "  \"speed_download\": 2165587,",
+            "  \"speed_upload\": 0,",
+            "  \"ssl_verify_result\": 0,",
+            "  \"time_appconnect\": 0.086114,",
+            "  \"time_connect\": 0.038847,",
+            "  \"time_namelookup\": 0.014277,",
+            "  \"time_pretransfer\": 0.086251,",
+            "  \"time_redirect\": 0,",
+            "  \"time_starttransfer\": 0.107052,",
+            "  \"time_total\": 0.220216,",
+            "  \"url\": \"https://raw.githubusercontent.com/nntrn/sshell/data/snippets.json\",",
+            "  \"url_effective\": \"https://raw.githubusercontent.com/nntrn/sshell/data/snippets.json\",",
+            "  \"urlnum\": 0,",
+            "  \"curl_version\": \"libcurl/7.82.0 OpenSSL/1.1.1n zlib/1.2.11 brotli/1.0.9 zstd/1.5.2 libidn2/2.3.2 libpsl/0.21.1 (+libidn2/2.3.1) libssh2/1.10.0 nghttp2/1.47.0 libgsasl/1.8.0 OpenLDAP/2.6.1\"",
+            "}"
         ]
     },
     {
