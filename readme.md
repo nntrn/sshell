@@ -1,6 +1,6 @@
 # data
 
- - [bash](#bash) (279)
+ - [bash](#bash) (281)
 - [powershell](#powershell) (25)
 - [python](#python) (10)
 - [sql](#sql) (3)
@@ -13,6 +13,8 @@
 
 ## bash
 
+- [333](data/333): lvm - increase capacity of partition
+- [332](data/332): ${0%/*} - get directory of running script
 - [330](data/330): curl - display information after transfer
 - [324](data/324): awk - remove duplicates without sorting
 - [323](data/323): ignore carriage return in windows 
