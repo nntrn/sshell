@@ -1,6 +1,6 @@
 # data
 
- - [bash](#bash) (281)
+ - [bash](#bash) (283)
 - [powershell](#powershell) (25)
 - [python](#python) (10)
 - [sql](#sql) (3)
@@ -10,9 +10,9 @@
 - [plain](#plain) (1)
 - [javascript](#javascript) (1)
 - [config](#config) (1)
-
 ## bash
-
+- [335](data/335): jq - convert json to environment variables
+- [334](data/334): jq - extract keys/values from object
 - [333](data/333): lvm - increase capacity of partition
 - [332](data/332): ${0%/*} - get directory of running script
 - [330](data/330): curl - display information after transfer
@@ -297,9 +297,7 @@
 
 [[Return to top]](#data)
 
-
 ## powershell
-
 - [303](data/303): Get-WindowsUpdateLog - get update
 - [302](data/302): Finds local admin password and password expiration timestamp for given computer
 - [299](data/299): Get-NetAdapter
@@ -328,9 +326,7 @@
 
 [[Return to top]](#data)
 
-
 ## python
-
 - [331](data/331): python - select keys in json to print
 - [329](data/329): python module calendar
 - [328](data/328): sysconfig - provide access to Python's configuration information
@@ -344,54 +340,40 @@
 
 [[Return to top]](#data)
 
-
 ## sql
-
 - [193](data/193): psql: cast json and pretty print
 - [192](data/192): postgresql list and order tables by size
 - [190](data/190): get list of tables and number of rows (postgres)
 
 [[Return to top]](#data)
 
-
 ## cmd
-
 - [305](data/305): fsutil resource info
 - [183](data/183): bat file for opening cygwin in current directory
 
 [[Return to top]](#data)
 
-
 ## yaml
-
 - [244](data/244): ansible playbook variables
 
 [[Return to top]](#data)
 
-
 ## vim
-
 - [285](data/285): vim - display all possible runtime config settings for vim
 
 [[Return to top]](#data)
 
-
 ## plain
-
 - [149](data/149): ansible-playbook in crontab
 
 [[Return to top]](#data)
 
-
 ## javascript
-
 - [173](data/173): devtools: get all css items
 
 [[Return to top]](#data)
 
-
 ## config
-
 - [197](data/197): enable ssh controlmaster - ssh sessions
 
 [[Return to top]](#data)
