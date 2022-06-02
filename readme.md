@@ -1,6 +1,6 @@
 # data
 
- - [bash](#bash) (286)
+ - [bash](#bash) (288)
 - [powershell](#powershell) (25)
 - [python](#python) (10)
 - [sql](#sql) (3)
@@ -11,6 +11,8 @@
 - [javascript](#javascript) (1)
 - [config](#config) (1)
 ## bash
+- [340](data/340): && and || - compare strings using logical operators
+- [339](data/339): IFS - word splitting observed in for loops
 - [338](data/338): cp - brace expansion to copy/backup file
 - [337](data/337): () - subshell and variable assignment
 - [336](data/336): Useless use of cat

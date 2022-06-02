@@ -6,12 +6,12 @@
   "type": "command",
   "guid": "aa5b784a-b73a-4c00-b606-7d39e0cf8f99",
   "url": "https://askubuntu.com/a/962511",
-  "modified": "2022-06-01T01:14:50Z",
+  "modified": "2022-06-01T23:11:38Z",
   "created": "2022-06-01T01:14:50Z",
   "tags": [],
   "description": [],
   "cli": [
-    " cp snippets.json{,.bkp}"
+    "cp snippets.json{,.bkp}"
   ],
   "example": [],
   "output": []
