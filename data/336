@@ -1,14 +1,18 @@
 {
   "id": "336",
-  "title": "Useless use of cat",
-  "language": "bash",
-  "category": "Useless",
-  "type": "reference",
-  "guid": "eaa618e8-9b73-4899-bd7e-8b992cc0e55a",
-  "url": "https://en.wikipedia.org/wiki/Cat_(Unix)#Useless_use_of_cat",
-  "modified": "2022-05-31T23:15:47Z",
+  "title": "cat - short read about useless use",
+  "modified": "2022-06-15T22:27:01Z",
   "created": "2022-05-31T23:02:03Z",
-  "tags": [],
+  "guid": "eaa618e8-9b73-4899-bd7e-8b992cc0e55a",
+  "cli": [
+    "# Problematic code:",
+    "cat file.txt | awk '{print $1}'",
+    "",
+    "# Correct code:",
+    "< file.txt awk '{print $1}'",
+    "",
+    "# source: https://www.shellcheck.net/wiki/SC2002"
+  ],
   "description": [
     "Useless use of cat (UUOC) is common Unix jargon for command line constructs that only provide a function of convenience to the user. In computing, the word \"abuse\", in the second sense of the definition, is used to disparage the excessive or unnecessary use of a language construct; thus, abuse of cat is sometimes called \"cat abuse\". Example of a common cat abuse is given in the award:",
     "",
@@ -31,9 +35,9 @@
     "     grep \"$pattern\" \"$file\"",
     "     less \"$file\"",
     "",
-    "A common interactive use of cat for a single file is to output the content of a file to standard output. However, if the output is piped or redirected, cat is unnecessary.",
+    "A common interactive use of cat for a single file is to output the content of a file to standard output. However, if the output is piped or redirected, cat is unnserver.",
     "",
-    "A cat written with UUOC might still be preferred for readability reasons, as reading a piped stream left-to-right might be easier to conceptualize. Also, one wrong use of the redirection symbol \">\" instead of \"<\" (often adjacent on keyboards) may permanently delete the content of a file, in other words clobbering, and one way to avoid this is to use cat with pipes. Compare:",
+    "A cat written with UUOC might still be preferred for readability reasons, as reading a piped stream left-to-right might be easier to conserver. Also, one wrong use of the redirection symbol \">\" instead of \"<\" (often adjacent on keyboards) may permanently delete the content of a file, in other words clobbering, and one way to avoid this is to use cat with pipes. Compare:",
     "",
     "     command < in | command2 > out",
     "     <in command | command2 > out",
@@ -42,15 +46,8 @@
     "",
     "    cat in | command | command2 > out"
   ],
-  "cli": [
-    "# Problematic code:",
-    "cat file.txt | awk '{print $1}'",
-    "",
-    "# Correct code:",
-    "< file.txt awk '{print $1}'",
-    "",
-    "# source: https://www.shellcheck.net/wiki/SC2002"
-  ],
-  "example": [],
-  "output": []
+  "url": "https://en.wikipedia.org/wiki/Cat_(Unix)#Useless_use_of_cat",
+  "language": "bash",
+  "category": "cat",
+  "code_type": "reference"
 }

@@ -1,6 +1,6 @@
 # data
 
- - [bash](#bash) (288)
+- [bash](#bash) (290)
 - [powershell](#powershell) (25)
 - [python](#python) (10)
 - [sql](#sql) (3)
@@ -10,12 +10,16 @@
 - [plain](#plain) (1)
 - [javascript](#javascript) (1)
 - [config](#config) (1)
+
 ## bash
+
+- [342](data/342): iconv - convert text encoding
+- [341](data/341): curl - api to get definition
 - [340](data/340): && and || - compare strings using logical operators
 - [339](data/339): IFS - word splitting observed in for loops
 - [338](data/338): cp - brace expansion to copy/backup file
 - [337](data/337): () - subshell and variable assignment
-- [336](data/336): Useless use of cat
+- [336](data/336): cat - short read about useless use
 - [335](data/335): jq - convert json to environment variables
 - [334](data/334): jq - extract keys/values from object
 - [333](data/333): lvm - increase capacity of partition
@@ -92,7 +96,7 @@
 - [239](data/239): systemctl examples
 - [238](data/238): openssl - verify checksum
 - [237](data/237): print statistics of a process
-- [236](data/236): mpstat - processors related statistics.
+- [236](data/236): mpstat - processors related staserver.
 - [235](data/235): read network interface statistics
 - [234](data/234): procinfo: display all system status gathered from /proc
 - [233](data/233): show most expensive CPU process
@@ -302,7 +306,9 @@
 
 [[Return to top]](#data)
 
+
 ## powershell
+
 - [303](data/303): Get-WindowsUpdateLog - get update
 - [302](data/302): Finds local admin password and password expiration timestamp for given computer
 - [299](data/299): Get-NetAdapter
@@ -331,10 +337,12 @@
 
 [[Return to top]](#data)
 
+
 ## python
+
 - [331](data/331): python - select keys in json to print
 - [329](data/329): python module calendar
-- [328](data/328): sysconfig - provide access to Python's configuration information
+- [328](data/328): sysconfig - provide access to Python’s configuration information
 - [327](data/327): cProfile - Performance Profiling Python One-Liner
 - [326](data/326): python - csv to json
 - [325](data/325): python oneliner - print columns like awk
@@ -345,40 +353,54 @@
 
 [[Return to top]](#data)
 
+
 ## sql
+
 - [193](data/193): psql: cast json and pretty print
 - [192](data/192): postgresql list and order tables by size
 - [190](data/190): get list of tables and number of rows (postgres)
 
 [[Return to top]](#data)
 
+
 ## cmd
+
 - [305](data/305): fsutil resource info
 - [183](data/183): bat file for opening cygwin in current directory
 
 [[Return to top]](#data)
 
+
 ## yaml
+
 - [244](data/244): ansible playbook variables
 
 [[Return to top]](#data)
 
+
 ## vim
+
 - [285](data/285): vim - display all possible runtime config settings for vim
 
 [[Return to top]](#data)
 
+
 ## plain
+
 - [149](data/149): ansible-playbook in crontab
 
 [[Return to top]](#data)
 
+
 ## javascript
+
 - [173](data/173): devtools: get all css items
 
 [[Return to top]](#data)
 
+
 ## config
+
 - [197](data/197): enable ssh controlmaster - ssh sessions
 
 [[Return to top]](#data)
