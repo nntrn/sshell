@@ -28,18 +28,15 @@ body {
   overflow-x: hidden;
 }
 
-h4 {
-  margin: 0.15em 0;
-}
-
 h1,
 h2 {
   margin: 0;
-  font-size: 1em;
   padding: 0;
 }
 h1.title {
   margin: 0.5em 0;
+  font-size: 12px;
+  font-family: sans-serif;
 }
 h3 {
   text-transform: uppercase;
@@ -115,13 +112,13 @@ header {
   align-items: center;
 }
 
-#searchbar {
-  font-family: monospace;
-  padding: 0.35em 0.5em;
-  width: 100%;
-  margin: 0.5em 0;
-  margin-top: 1.25em;
-  border-radius: 3px;
+footer {
+  border-top: 3px solid #999;
+  padding: 3px 2em;
+  color: white;
+  background: #222;
+  font-size: 0.8em;
+  text-align: center;
 }
 
 input {
@@ -135,9 +132,17 @@ input:focus {
   box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
 }
 
+#searchbar {
+  font-family: monospace;
+  padding: 0.35em 0.5em;
+  width: 100%;
+  margin: 0.5em 0;
+  margin-top: 1.25em;
+  border-radius: 3px;
+}
+
 #toc {
   margin: 0.5em auto;
-
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -245,12 +250,25 @@ button {
   top: 0;
 }
 
+.site-icon {
+  border-radius: 8px;
+  background: #222;
+  display: inline-flex;
+  border: 2px solid #ddd;
+}
+
+.site-icon svg {
+  padding: 7px;
+  width: 40px;
+  height: 40px;
+  fill: white;
+}
+
 #popup button {
   padding: 0;
   border-radius: 100%;
   color: #fff;
   font-weight: 500;
-  /* border: 1px solid #000; */
   background: #fff;
   display: flex;
   margin: 5px;
@@ -284,16 +302,12 @@ button {
   transition: all 300ms linear;
 }
 
-#popup h2 {
-  font-size: 14px;
-  font-family: sans-serif;
-}
-
 #popup [data-key]:before {
   content: attr(data-key);
   display: block;
   font-weight: 700;
   color: #999;
+  font-size: 12px !important;
   text-transform: uppercase;
 }
 #popup a {
@@ -336,18 +350,4 @@ button {
   #popup pre {
     white-space: break-spaces;
   }
-}
-
-.site-icon {
-  border-radius: 8px;
-  background: #222;
-  display: inline-flex;
-  border: 2px solid #ddd;
-}
-
-.site-icon svg {
-  padding: 7px;
-  width: 40px;
-  height: 40px;
-  fill: white;
 }
