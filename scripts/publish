@@ -1,45 +1,35 @@
 #!/usr/bin/env bash
 
-DIR="$(cd "$(dirname "$0")/.." && pwd)"
+set -e
+
+DIR="$(cd "$(dirname "$0")/.." && pwd)" && cd "$DIR"
 TMPDIR=$(mktemp -d)
-CURRENT_BRANCH=$(git branch --show-current)
-GITBRANCH=gh-pages
+REMOTE_URL=$(git config --get-regexp '^remote.*url' | awk '{print $2}' | tail -n 1)
 
-run_git_command() {
-  echo "$*"
-  eval "$*"
-}
+trap 'rm -rf -- "$TMPDIR"' EXIT
 
-clean_exit() {
-  [[ -d "$TMPDIR" ]] && rm -rf "$TMPDIR"
-  exit
-}
-
-if [[ $CURRENT_BRANCH -eq main ]]; then
-  if [[ -z $(git status public | grep 'nothing to commit') ]]; then
-    run_git_command 'git add public'
-    run_git_command 'git commit -m "Update static files in public"'
-    run_git_command "git push origin $CURRENT_BRANCH"
-    run_git_command 'git fetch -a'
-
-    grep -q $GITBRANCH <(git branch -a) && run_git_command "git push -d origin $GITBRANCH"
-    grep -q $GITBRANCH <(git branch -a) && run_git_command "git branch -d $GITBRANCH"
-
-    cd "$TMPDIR" || clean_exit
-    run_git_command 'git init'
-
-    for i in config HEAD; do
-      cat "$DIR"/.git/$i | sed "s,$CURRENT_BRANCH,$GITBRANCH,g" >"$TMPDIR"/.git/$i
-    done
-
-    cp -r "$DIR"/public/* "$TMPDIR"/
-
-    run_git_command 'git add .'
-    run_git_command "git commit -m 'Publish $GITBRANCH'"
-    run_git_command "git push origin $GITBRANCH"
-  else
-    echo "No changes have been made"
-  fi
+if ! grep -q "nothing to commit, working tree cleannothing to commit" <(git status public); then
+  git add public
+  git commit -m "Update static files in public"
+  git push origin main
 fi
 
-clean_exit
+# delete gh-pages remotely
+#grep -qE "remotes/.*/gh-pages" <(git branch -a) && git push -d $GIT_REMOTE gh-pages
+
+# delete gh-pages locally
+#grep -q 'gh-pages' <(git branch -a) && git branch -d gh-pages
+
+if [[ -d public ]]; then
+  LS_FILES=$(git ls-files public | sed "s,^,$DIR/,g")
+
+  cd $TMPDIR
+  git clone -b gh-pages $REMOTE_URL && cd "$(basename "$_" .git)"
+
+  find . -mindepth 1 -type f ! -path "*.git*" -print -exec mv {} ../ \;
+  cp $LS_FILES .
+
+  git add .
+  git commit -m "Republish gh-pages"
+  git push origin gh-pages
+fi
