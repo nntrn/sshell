@@ -1,4 +1,5 @@
 const $$ = query => Array.from(document.querySelectorAll(query))
+const $ = query => document.querySelector(query)
 
 function getSnippetsUrl() {
   return 'https://raw.githubusercontent.com/nntrn/sshell/data/snippets.json'
@@ -73,7 +74,7 @@ function buildSnippets(res) {
 
 function searchItems(string) {
   Array.from(document.querySelectorAll('.item .filter')).forEach(e => {
-    if (e.textContent.includes(string)) {
+    if(e.textContent.includes(string)) {
       e.parentElement.classList.remove('hidden')
     } else {
       e.parentElement.classList.add('hidden')
@@ -94,7 +95,7 @@ function eventFilter(e) {
     space: 32,
     backspace: 8,
   }
-  if (Object.values(keycodes).includes(e.keyCode)) {
+  if(Object.values(keycodes).includes(e.keyCode)) {
     console.log(e.keyCode, e.key)
     const searchString = e.target.value.toLowerCase().trim()
     searchItems(searchString)
@@ -113,7 +114,7 @@ function getLocationId() {
 
 function editPopupText(obj) {
   $$('#popup [data-key]').forEach(e => {
-    if (e.nodeName.toLowerCase() === 'a') {
+    if(e.nodeName.toLowerCase() === 'a') {
       e.href = obj[e.dataset.key]
     }
     e.textContent = [obj[e.dataset.key]].flat(2).join('\n')
@@ -130,7 +131,7 @@ document.querySelector('#searchbar').addEventListener('keyup', eventFilter)
 document.querySelector('#searchbar').addEventListener('click', unhideAllItems)
 
 document.onkeydown = function (evt) {
-  if (evt.keyCode === 27) {
+  if(evt.keyCode === 27) {
     hidePopup()
   }
 }
@@ -140,7 +141,7 @@ window.addEventListener('load', function () {
     .then(e => e.json())
     .then(res => buildSnippets(res))
     .then(e => {
-      if (location.hash) {
+      if(location.hash) {
         showPopup()
       }
     })
