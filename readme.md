@@ -1,6 +1,6 @@
 # data
 
-- [bash](#bash) (290)
+- [bash](#bash) (292)
 - [powershell](#powershell) (25)
 - [python](#python) (10)
 - [sql](#sql) (3)
@@ -13,6 +13,8 @@
 
 ## bash
 
+- [344](data/344): exec vs eval - process
+- [343](data/343): gitlab - clone using personal token
 - [342](data/342): iconv - convert text encoding
 - [341](data/341): curl - api to get definition
 - [340](data/340): && and || - compare strings using logical operators
