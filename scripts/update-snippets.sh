@@ -3,10 +3,11 @@
 set -e
 
 STDOUT="$@"
-DIR="$(cd "$(dirname "$0")/.." && pwd)" && cd "$DIR"
+SOURCE=$(realpath $0)
 
-REMOTE_URL=$(git config --get remote.origin.url)
-USER_EMAIL=$(git config --local --get user.email)
+DIR="$(cd "$(dirname "$SOURCE")/.." && pwd)" && cd "$DIR"
+
+REMOTE_URL=https://github.com/nntrn/sshell.git
 BRANCH=data
 
 TMPDIR=$(mktemp -d)
@@ -21,13 +22,13 @@ if [[ -t 1 || $# -eq 0 || -f $1 ]]; then
   STDOUT=$(cat $1)
   echo "$STDOUT" | tr -d '\r' | tr -d '\0' >$TMPFILE
 else
-  bye "An error occured reading stdin"
+  echo "Aborting..."
+  exit
 fi
 
 cd $TMPDIR
 
 git clone -b $BRANCH $REMOTE_URL && cd "$(basename "$_" .git)"
-git config --local user.email $USER_EMAIL
 
 cp snippets.json{,.bkp}
 
