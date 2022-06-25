@@ -4,11 +4,11 @@
 - [powershell](#powershell) (25)
 - [python](#python) (10)
 - [sql](#sql) (3)
+- [javascript](#javascript) (2)
 - [cmd](#cmd) (2)
 - [yaml](#yaml) (1)
 - [vim](#vim) (1)
 - [plain](#plain) (1)
-- [javascript](#javascript) (1)
 - [config](#config) (1)
 
 ## bash
@@ -365,6 +365,14 @@
 [[Return to top]](#data)
 
 
+## javascript
+
+- [345](data/345): document.cookie - convert key=value string to JSON string
+- [173](data/173): devtools: get all css items
+
+[[Return to top]](#data)
+
+
 ## cmd
 
 - [305](data/305): fsutil resource info
@@ -390,13 +398,6 @@
 ## plain
 
 - [149](data/149): ansible-playbook in crontab
-
-[[Return to top]](#data)
-
-
-## javascript
-
-- [173](data/173): devtools: get all css items
 
 [[Return to top]](#data)
 
