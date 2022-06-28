@@ -1,6 +1,6 @@
 # data
 
-- [bash](#bash) (292)
+- [bash](#bash) (293)
 - [powershell](#powershell) (25)
 - [python](#python) (10)
 - [sql](#sql) (3)
@@ -13,6 +13,7 @@
 
 ## bash
 
+- [346](data/346): clone gitlab project using project token
 - [344](data/344): exec vs eval - process
 - [343](data/343): gitlab - clone using personal token
 - [342](data/342): iconv - convert text encoding
