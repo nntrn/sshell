@@ -1,10 +1,11 @@
 # data
 
-- [bash](#bash) (293)
+- [bash](#bash) (295)
 - [powershell](#powershell) (25)
-- [python](#python) (10)
+- [python](#python) (11)
 - [sql](#sql) (3)
-- [javascript](#javascript) (2)
+- [javascript](#javascript) (3)
+- [nginx](#nginx) (2)
 - [cmd](#cmd) (2)
 - [yaml](#yaml) (1)
 - [vim](#vim) (1)
@@ -13,6 +14,8 @@
 
 ## bash
 
+- [351](data/351): last reboot - list of the times and dates when the system was recently rebooted
+- [350](data/350): MemAvailable - memory tracker: get reclaimable memory from /proc/meminfo
 - [346](data/346): clone gitlab project using project token
 - [344](data/344): exec vs eval - process
 - [343](data/343): gitlab - clone using personal token
@@ -343,6 +346,7 @@
 
 ## python
 
+- [347](data/347): python oneliner cryptogen
 - [331](data/331): python - select keys in json to print
 - [329](data/329): python module calendar
 - [328](data/328): sysconfig - provide access to Python’s configuration information
@@ -368,8 +372,17 @@
 
 ## javascript
 
+- [352](data/352): document.documentElement.scrollTop - scroll to top of page
 - [345](data/345): document.cookie - convert key=value string to JSON string
 - [173](data/173): devtools: get all css items
+
+[[Return to top]](#data)
+
+
+## nginx
+
+- [349](data/349): nginx - common configurations to block sql injections and other attacks
+- [348](data/348): limit_except
 
 [[Return to top]](#data)
 

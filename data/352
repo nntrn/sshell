@@ -1,0 +1,27 @@
+{
+  "id": "352",
+  "title": "document.documentElement.scrollTop - scroll to top of page",
+  "modified": "2022-06-30T05:53:21Z",
+  "created": "2022-06-30T05:53:21Z",
+  "guid": "bd04179b-2a74-4429-addd-39d5c4f6d705",
+  "cli": [
+    "function setScrollTopForDocument(doc = document, value = 0) {",
+    "  doc.documentElement.scrollTop = doc.body.scrollTop = value",
+    "}"
+  ],
+  "tags": "dom",
+  "example": [
+    "/**",
+    " * Alias for document.scrollTop setter.",
+    " * @param {!HTMLDocument} doc The document node where information will be",
+    " *     queried from.",
+    " * @param {number} value The target Y scroll offset.",
+    " */",
+    "export function setScrollTopForDocument(doc, value) {",
+    "  doc.documentElement.scrollTop = doc.body.scrollTop = value;",
+    "}"
+  ],
+  "language": "javascript",
+  "category": "document.documentElement.scrollTop",
+  "code_type": "command"
+}
