@@ -8,7 +8,7 @@ REMOTE_URL=$(git config --get-regexp '^remote.*url' | awk '{print $2}' | tail -n
 
 trap 'rm -rf -- "$TMPDIR"' EXIT
 
-if ! grep -q "nothing to commit, working tree cleannothing to commit" <(git status public); then
+if ! grep -q 'nothing to commit, working tree cleannothing to commit' <(git status public); then
   git add public
   git commit -m "Update static files in public"
   git push origin main
@@ -22,7 +22,6 @@ fi
 
 if [[ -d public ]]; then
   LS_FILES=$(git ls-files public | sed "s,^,$DIR/,g")
-
   cd $TMPDIR
   git clone -b gh-pages $REMOTE_URL && cd "$(basename "$_" .git)"
 
