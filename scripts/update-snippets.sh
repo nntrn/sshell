@@ -4,12 +4,9 @@ set -e
 
 STDOUT="$@"
 SOURCE=$(realpath $0)
-
 DIR="$(cd "$(dirname "$SOURCE")/.." && pwd)" && cd "$DIR"
-
 REMOTE_URL=https://github.com/nntrn/sshell.git
 BRANCH=data
-
 TMPDIR=$(mktemp -d)
 TMPFILE=$TMPDIR/snippets-new.json
 TMPREADME=$TMPDIR/sshell/readme.md
@@ -27,11 +24,8 @@ else
 fi
 
 cd $TMPDIR
-
 git clone -b $BRANCH $REMOTE_URL && cd "$(basename "$_" .git)"
-
 cp snippets.json{,.bkp}
-
 last_modified=$(get_last_modified <snippets.json)
 cat $TMPFILE | jq -c "(.[]|select(.modified > \"$last_modified\"))" | tr -d '\r' >$TMPMODFILE
 cat $TMPFILE | jq -c -r '.[]| .language' | sort | uniq -c | sort -n -r -k1 >$TMPREADME
@@ -61,7 +55,6 @@ fi
 
 sed -i '1s/^/# data\n\n/' $TMPREADME
 sed -i 's/  */ /g' $TMPREADME
-
 cat snippets.json.bkp | tr -d '\r' | jq -r '.[]|.id' >$TMPDIR/bkp_ids.txt
 cat snippets.json | jq -r '.[]|.id' >$TMPDIR/ids.txt
 grep -vFxf $TMPDIR/ids.txt $TMPDIR/bkp_ids.txt || true >$TMPDIR/deleted_ids.txt
