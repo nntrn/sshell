@@ -1,5 +1,75 @@
 [
   {
+    "id": "354",
+    "title": "openssl-dgst - hash salted password",
+    "modified": "2022-07-01T16:11:33Z",
+    "created": "2022-07-01T16:11:33Z",
+    "guid": "c2558141-e180-4684-a53d-63b2f5818511",
+    "cli": "echo -n \"$salt$password\" | openssl dgst -r -sha1",
+    "description": [
+      "$ man openssl-dgst",
+      "",
+      "  The digest mechanisms that are available will depend on the options used when building",
+      "  OpenSSL.  The list digest-commands command can be used to list them.",
+      "",
+      "  New or agile applications should use probably use SHA-256. Other digests, particularly",
+      "  SHA-1 and MD5, are still widely used for interoperating with existing formats and",
+      "  proserver.",
+      "",
+      "  When signing a file, dgst will automatically determine the algorithm (RSA, ECC, etc) to",
+      "  use for signing based on the private key's ASN.1 info.  When verifying signatures, it",
+      "  only handles the RSA, DSA, or ECDSA signature itself, not the related data to identify",
+      "  the signer and algorithm used in formats such as x.509, CMS, and S/MIME.",
+      "",
+      "  A source of random numbers is required for certain signing algorithms, in particular",
+      "  ECDSA and DSA.",
+      "",
+      "  The signing and verify options should only be used if a single file is being signed or",
+      "  verified.",
+      "",
+      "  Hex signatures cannot be verified using openssl.  Instead, use \"xxd -r\" or similar",
+      "  program to transform the hex signature into a binary signature prior to verserver."
+    ],
+    "tags": "security",
+    "url": "https://stackoverflow.com/a/11709348",
+    "example": [
+      "$ salt=salt",
+      "$ password=password",
+      "$ echo -n \"$salt$password\" | openssl dgst -r -sha1",
+      "59b3e8d637cf97edbe2384cf59cb7453dfe30789 *stdin"
+    ],
+    "language": "bash",
+    "category": "openssl-dgst",
+    "code_type": "command"
+  },
+  {
+    "id": "353",
+    "title": "python one liner - return hashed password as a string",
+    "modified": "2022-07-01T06:13:22Z",
+    "created": "2022-07-01T06:13:22Z",
+    "guid": "36a83e2f-fdc9-49cc-97b2-595e4d018516",
+    "cli": "python -c 'import crypt; print(crypt.crypt(\"This is my Password\", \"$1$SomeSalt$\"))'",
+    "description": [
+      "crypt.crypt(word, salt=None)",
+      "",
+      "word will usually be a user’s password as typed at a prompt or in a graphical intserver. The optional salt is either a string as returned from mksalt(), one of the crypt.METHOD_* values (though not all may be available on all platforms), or a full encrypted password including salt, as returned by this function. If salt is not provided, the strongest method available in methods will be used.",
+      "",
+      "Checking a password is usually done by passing the plain-text password as word and the full results of a previous crypt() call, which should be the same as the results of this call.",
+      "",
+      "salt (either a random 2 or 16 character string, possibly prefixed with $digit$ to indicate the method) which will be used to perturb the encryption algserver. The characters in salt must be in the set [./a-zA-Z0-9], with the exception of Modular Crypt Format which prefixes a $digit$.",
+      "",
+      "Returns the hashed password as a string, which will be composed of characters from the same alphabet as the salt."
+    ],
+    "url": "https://docs.python.org/3/library/crypt.html#crypt.crypt",
+    "example": [
+      "python -c 'import crypt; print(crypt.crypt(\"This is my Password\", \"$1$SomeSalt$\"))'",
+      "$1$SomeSalt$UqddPX3r4kH3UL5jq5/ZI."
+    ],
+    "language": "python",
+    "category": "python",
+    "code_type": "command"
+  },
+  {
     "id": "352",
     "title": "document.documentElement.scrollTop - scroll to top of page",
     "modified": "2022-06-30T05:53:21Z",

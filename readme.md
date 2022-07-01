@@ -1,8 +1,8 @@
 # data
 
-- [bash](#bash) (295)
+- [bash](#bash) (296)
 - [powershell](#powershell) (25)
-- [python](#python) (11)
+- [python](#python) (12)
 - [sql](#sql) (3)
 - [javascript](#javascript) (3)
 - [nginx](#nginx) (2)
@@ -14,6 +14,7 @@
 
 ## bash
 
+- [354](data/354): openssl-dgst - hash salted password
 - [351](data/351): last reboot - list of the times and dates when the system was recently rebooted
 - [350](data/350): MemAvailable - memory tracker: get reclaimable memory from /proc/meminfo
 - [346](data/346): clone gitlab project using project token
@@ -346,6 +347,7 @@
 
 ## python
 
+- [353](data/353): python one liner - return hashed password as a string
 - [347](data/347): python oneliner cryptogen
 - [331](data/331): python - select keys in json to print
 - [329](data/329): python module calendar

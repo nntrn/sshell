@@ -1,0 +1,43 @@
+{
+  "id": "354",
+  "title": "openssl-dgst - hash salted password",
+  "modified": "2022-07-01T16:11:33Z",
+  "created": "2022-07-01T16:11:33Z",
+  "guid": "c2558141-e180-4684-a53d-63b2f5818511",
+  "cli": "echo -n \"$salt$password\" | openssl dgst -r -sha1",
+  "description": [
+    "$ man openssl-dgst",
+    "",
+    "  The digest mechanisms that are available will depend on the options used when building",
+    "  OpenSSL.  The list digest-commands command can be used to list them.",
+    "",
+    "  New or agile applications should use probably use SHA-256. Other digests, particularly",
+    "  SHA-1 and MD5, are still widely used for interoperating with existing formats and",
+    "  proserver.",
+    "",
+    "  When signing a file, dgst will automatically determine the algorithm (RSA, ECC, etc) to",
+    "  use for signing based on the private key's ASN.1 info.  When verifying signatures, it",
+    "  only handles the RSA, DSA, or ECDSA signature itself, not the related data to identify",
+    "  the signer and algorithm used in formats such as x.509, CMS, and S/MIME.",
+    "",
+    "  A source of random numbers is required for certain signing algorithms, in particular",
+    "  ECDSA and DSA.",
+    "",
+    "  The signing and verify options should only be used if a single file is being signed or",
+    "  verified.",
+    "",
+    "  Hex signatures cannot be verified using openssl.  Instead, use \"xxd -r\" or similar",
+    "  program to transform the hex signature into a binary signature prior to verserver."
+  ],
+  "tags": "security",
+  "url": "https://stackoverflow.com/a/11709348",
+  "example": [
+    "$ salt=salt",
+    "$ password=password",
+    "$ echo -n \"$salt$password\" | openssl dgst -r -sha1",
+    "59b3e8d637cf97edbe2384cf59cb7453dfe30789 *stdin"
+  ],
+  "language": "bash",
+  "category": "openssl-dgst",
+  "code_type": "command"
+}
