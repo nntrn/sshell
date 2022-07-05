@@ -1,9 +1,9 @@
 # data
 
-- [bash](#bash) (296)
+- [bash](#bash) (298)
 - [powershell](#powershell) (25)
 - [python](#python) (12)
-- [sql](#sql) (3)
+- [sql](#sql) (4)
 - [javascript](#javascript) (3)
 - [nginx](#nginx) (2)
 - [cmd](#cmd) (2)
@@ -14,6 +14,8 @@
 
 ## bash
 
+- [356](data/356): ansible setup module - adhoc command for gathering facts
+- [355](data/355): docker format results
 - [354](data/354): openssl-dgst - hash salted password
 - [351](data/351): last reboot - list of the times and dates when the system was recently rebooted
 - [350](data/350): MemAvailable - memory tracker: get reclaimable memory from /proc/meminfo
@@ -365,6 +367,7 @@
 
 ## sql
 
+- [357](data/357): awx_postgres - get hostname ids for api
 - [193](data/193): psql: cast json and pretty print
 - [192](data/192): postgresql list and order tables by size
 - [190](data/190): get list of tables and number of rows (postgres)
