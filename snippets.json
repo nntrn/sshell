@@ -1,5 +1,28 @@
 [
   {
+    "id": "360",
+    "title": "set allexport - sourcing key/value .env files (without prefixing export)",
+    "modified": "2022-07-11T23:53:42Z",
+    "created": "2022-07-11T23:53:42Z",
+    "guid": "a63a6850-12b3-4b04-baf9-7a0b99c9c8d6",
+    "cli": [
+      "set -o allexport",
+      "source .env",
+      "set +o allexport"
+    ],
+    "description": [
+      "`-o allexport` enables all following variable definitions to be exported. ",
+      "`+o allexport` disables this feature.",
+      "",
+      "easy way for sourcing key/value environment files "
+    ],
+    "tags": "environment",
+    "url": "https://stackoverflow.com/a/30969768",
+    "language": "bash",
+    "category": "set",
+    "code_type": "command"
+  },
+  {
     "id": "359",
     "title": "github release api - upload asset file",
     "modified": "2022-07-09T18:11:46Z",

@@ -1,6 +1,6 @@
 # data
 
-- [bash](#bash) (300)
+- [bash](#bash) (301)
 - [powershell](#powershell) (25)
 - [python](#python) (12)
 - [sql](#sql) (4)
@@ -14,6 +14,7 @@
 
 ## bash
 
+- [360](data/360): set allexport - sourcing key/value .env files (without prefixing export)
 - [359](data/359): github release api - upload asset file
 - [358](data/358): docker - get IP address of a running container
 - [356](data/356): ansible setup module - adhoc command for gathering facts
