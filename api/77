@@ -1,0 +1,10 @@
+{
+  "id": "77",
+  "title": "rsync",
+  "modified": "2021-12-30T19:44:10Z",
+  "created": "2021-07-14T16:54:27Z",
+  "guid": "8144c4d9-4058-42f0-a386-2a2f3fd6590b",
+  "cli": "rsync -avr -o -g filename.txt user@hostname.us.example.com:/home/annie_tran",
+  "language": "bash",
+  "category": "error;#1"
+}

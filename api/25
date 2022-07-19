@@ -1,0 +1,20 @@
+{
+  "id": "25",
+  "title": "create html toc",
+  "modified": "2021-12-30T19:44:09Z",
+  "created": "2021-03-27T02:40:07Z",
+  "guid": "66b7109b-1c8c-4769-8da2-d74c718f4604",
+  "cli": [
+    "cat <<EOF >index.html",
+    "<html>",
+    "<body>",
+    "<ul>",
+    "$(find . | grep html | sed 's/\\.\\///g' | sed 's/^\\([^ ]*\\)/<li><a href=\"\\1\">\\1<\\/a><\\/li>/')",
+    "</ul>",
+    "</body>",
+    "</html>",
+    "EOF"
+  ],
+  "language": "bash",
+  "category": "create"
+}

@@ -1,0 +1,20 @@
+{
+  "id": "23",
+  "title": "recursively download files from web",
+  "modified": "2021-12-30T19:44:08Z",
+  "created": "2021-03-27T00:16:31Z",
+  "guid": "ad53e5d5-a286-419f-adea-fbca1017b1de",
+  "cli": "wget --no-parent -r https://url.com",
+  "description": [
+    "recursively download a page ",
+    "creates the "
+  ],
+  "tags": "file",
+  "example": "wget --no-parent -r http://images-http.us.example.com/images/repository/apps/git/git29_for_OL7.x/",
+  "output": [
+    "recursively creates the directory and files to:",
+    "./images-http.us.example.com/images/repository/apps/git/git29_for_OL7.x"
+  ],
+  "language": "bash",
+  "category": "recursively"
+}

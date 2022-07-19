@@ -1,0 +1,11 @@
+{
+  "id": "16",
+  "title": "Update multiple repos (no rev)",
+  "modified": "2021-12-30T19:44:08Z",
+  "created": "2021-03-13T04:12:37Z",
+  "guid": "fe60e44b-2333-4d3a-973d-e96f1256229d",
+  "cli": "find . -maxdepth 3 -name .git -type d | cut -d '/' -f1,2 | xargs -I {} git -C {} pull",
+  "tags": "system",
+  "language": "bash",
+  "category": "Update"
+}

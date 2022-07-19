@@ -1,0 +1,11 @@
+{
+  "id": "57",
+  "title": "view service account owner",
+  "modified": "2021-12-30T19:44:09Z",
+  "created": "2021-06-16T14:34:11Z",
+  "guid": "c4c7e471-dc07-4d85-a772-9c2fffcce787",
+  "cli": "net user /domain svc_account",
+  "tags": "nntrn",
+  "language": "bash",
+  "category": "view"
+}

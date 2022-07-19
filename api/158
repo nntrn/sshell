@@ -1,0 +1,12 @@
+{
+  "id": "158",
+  "title": "yum - get installed security updates",
+  "modified": "2022-01-21T19:15:26Z",
+  "created": "2021-11-07T11:51:43Z",
+  "guid": "aaf55c93-dffd-47b3-b840-81014bffaf3e",
+  "cli": "yum updateinfo list security installed",
+  "description": "To get a list of the currently installed security updates ",
+  "url": "https://access.redhat.com/solutions/10021",
+  "language": "bash",
+  "category": "yum"
+}

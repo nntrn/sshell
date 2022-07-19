@@ -1,0 +1,12 @@
+{
+  "id": "342",
+  "title": "iconv - convert text encoding",
+  "modified": "2022-06-16T10:56:18Z",
+  "created": "2022-06-15T23:20:10Z",
+  "guid": "4e33a99e-5399-495a-a8d3-6cb5d5f77b1b",
+  "cli": "iconv -f ISO-8859-1 -t UTF-8 filename.txt",
+  "example": "$ iconv -f ISO-8859-1 -t UTF-8 file.txt ",
+  "language": "bash",
+  "category": "iconv",
+  "code_type": "command"
+}

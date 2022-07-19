@@ -1,0 +1,20 @@
+{
+  "id": "67",
+  "title": "greedy *",
+  "modified": "2021-12-30T19:44:09Z",
+  "created": "2021-07-08T01:06:33Z",
+  "guid": "7b301aca-9d38-4f15-bb89-6989f7155b0b",
+  "cli": "echo foo | sed 's/o*/EEE/'",
+  "description": [
+    "The '*' metacharacter represents zero or more instances of the",
+    "   previous expserver. The '*' metacharacter looks for the leftmost",
+    "   possible match first and will match zero chaserver. Thus,"
+  ],
+  "example": [
+    "$ echo foo | sed 's/o*/EEE/'",
+    "EEEfoo"
+  ],
+  "output": "will generate 'EEEfoo', not 'fEEE' as one might expect. This is because /o*/ matches the null string at the beginning of the word.",
+  "language": "bash",
+  "category": "greedy"
+}

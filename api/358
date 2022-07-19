@@ -1,0 +1,16 @@
+{
+  "id": "358",
+  "title": "docker -  get IP address of a running container",
+  "modified": "2022-07-07T16:20:12Z",
+  "created": "2022-07-07T16:20:12Z",
+  "guid": "db6166c8-06a5-48a5-940a-0630ed335584",
+  "cli": "docker inspect --format '{{range .NetworkSettings.Networks}} {{.IPAddress}} {{end}}' $CONTAINER_NAME",
+  "tags": "docker",
+  "example": [
+    "$ docker inspect --format '{{range .NetworkSettings.Networks}} {{.IPAddress}} {{end}}' awx_web",
+    "172.24.0.4"
+  ],
+  "language": "bash",
+  "category": "docker",
+  "code_type": "command"
+}

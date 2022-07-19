@@ -1,0 +1,12 @@
+{
+  "id": "251",
+  "title": "powershell - run noprofile command in shell (bash)",
+  "modified": "2022-03-23T19:09:20Z",
+  "created": "2022-03-23T16:58:39Z",
+  "guid": "06517a2a-373b-46b6-b337-401031208672",
+  "cli": "powershell -noprofile -command \"<command to run>\"",
+  "example": "powershell -noprofile -command \"Get-ADUser -Identity Annie_Tran -Properties *\"",
+  "language": "bash",
+  "category": "powershell",
+  "code_type": "command"
+}
