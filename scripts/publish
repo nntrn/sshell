@@ -8,25 +8,18 @@ REMOTE_URL=$(git config --get-regexp '^remote.*url' | awk '{print $2}' | tail -n
 
 trap 'rm -rf -- "$TMPDIR"' EXIT
 
-if ! grep -q 'nothing to commit, working tree cleannothing to commit' <(git status public); then
-  git add public
-  git commit -m "Update static files in public"
-  git push origin main
-fi
-
 # delete gh-pages remotely
-#grep -qE "remotes/.*/gh-pages" <(git branch -a) && git push -d $GIT_REMOTE gh-pages
+# grep -qE "remotes/.*/gh-pages" <(git branch -a) && git push -d $REMOTE_URL gh-pages
 
 # delete gh-pages locally
-#grep -q 'gh-pages' <(git branch -a) && git branch -d gh-pages
+# grep -q 'gh-pages' <(git branch -a) && git branch -d gh-pages
 
 if [[ -d public ]]; then
-  LS_FILES=$(git ls-files public | sed "s,^,$DIR/,g")
   cd $TMPDIR
   git clone -b gh-pages $REMOTE_URL && cd "$(basename "$_" .git)"
 
-  find . -mindepth 1 -type f ! -path "*.git*" -print -exec mv {} ../ \;
-  cp $LS_FILES .
+  cp -r $DIR/public/{index.html,api} .
+  cp $DIR/templates/static/* .
 
   git add .
   git commit -m "Republish gh-pages"
