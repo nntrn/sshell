@@ -1,0 +1,30 @@
+{
+  "id": "346",
+  "title": "clone gitlab project using project token",
+  "modified": "2022-06-27T19:12:07Z",
+  "created": "2022-06-27T18:54:00Z",
+  "guid": "a76d5465-5a7c-4904-a042-7a6d7718cdb4",
+  "cli": [
+    "GITLAB_PROJECT_TOKEN=glpat-9eAicfQ9HoLp2ilItrVZ",
+    "git clone https://gitlab-ci-token:$GITLAB_PROJECT_TOKEN@gitlab.example.com/path/to/project.git",
+    "",
+    "git clone -c http.sslVerify=false  https://gitlab-ci-token:$GITLAB_PROJECT_TOKEN@gitlab.example.com/infrastructure/database/devops/tower/inventory.git"
+  ],
+  "url": "https://stackoverflow.com/a/66674205",
+  "example": [
+    "$ git clone https://project_136765_bot:glpat-H5rsFBozrntDhZoLWuC6@gitlab.example.com/infrastructure/database/devops/tower/inventory.git",
+    "Cloning into 'inventory'...",
+    "fatal: unable to access 'https://gitlab.example.com/infrastructure/database/devops/tower/inventory.git/': SSL certificate problem: self signed certificate in certificate chain",
+    "",
+    "$ git clone -c http.sslVerify=false  https://project_136765_bot:glpat-H5rsFBozrntDhZoLWuC6@gitlab.example.com/infrastructure/database/devops/tower/inventory.git",
+    "Cloning into 'inventory'...",
+    "remote: Enumerating objects: 15, done.",
+    "remote: Counting objects: 100% (15/15), done.",
+    "remote: Compressing objects: 100% (13/13), done.",
+    "remote: Total 15 (delta 2), reused 0 (delta 0), pack-reused 0",
+    "Unpacking objects: 100% (15/15), 33.34 KiB | 3.33 MiB/s, done."
+  ],
+  "language": "bash",
+  "category": "clone",
+  "code_type": "command"
+}

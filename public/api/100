@@ -1,0 +1,11 @@
+{
+  "id": "100",
+  "title": "docker volume - inspect all",
+  "modified": "2022-01-19T00:16:57Z",
+  "created": "2021-08-25T18:24:45Z",
+  "guid": "1c152aeb-c80f-4b75-ac9f-d15f30eb01f1",
+  "cli": "docker volume inspect $(docker volume ls | awk '{print $2}' |  tail -n +2)",
+  "tags": "docker",
+  "language": "bash",
+  "category": "docker"
+}

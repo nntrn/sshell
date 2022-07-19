@@ -1,0 +1,47 @@
+{
+  "id": "344",
+  "title": "exec vs eval - process",
+  "modified": "2022-06-23T20:01:43Z",
+  "created": "2022-06-23T20:01:43Z",
+  "guid": "33927d9f-c910-4e0a-93b3-8b9dd93fbeb9",
+  "cli": [
+    "# eval",
+    "bash -c 'echo $$ ; ls -l /proc/self ; echo foo'",
+    "",
+    "# exec",
+    "bash -c 'echo $$ ; exec ls -l /proc/self ; echo foo'"
+  ],
+  "description": [
+    "exec - Replace the shell with the given command.",
+    "eval -  Execute arguments as a shell command.",
+    "",
+    "What exec cmd does, is exactly the same as just running cmd, except that the current shell is replaced with the command, instead of a separate process being run. ",
+    "",
+    "```sh",
+    "$ bash -c 'echo $$ ; ls -l /proc/self ; echo foo'",
+    "7218",
+    "lrwxrwxrwx 1 root root 0 Jun 30 16:49 /proc/self -> 7219",
+    "foo",
+    "",
+    "$ bash -c 'echo $$ ; exec ls -l /proc/self ; echo foo'",
+    "7217",
+    "lrwxrwxrwx 1 root root 0 Jun 30 16:49 /proc/self -> 7217",
+    "```",
+    "",
+    "the command following exec didn't run, since the shell was replaced."
+  ],
+  "url": "https://unix.stackexchange.com/a/296852/464659",
+  "example": [
+    "$ bash -c 'echo $$ ; ls -l /proc/self ; echo foo'",
+    "7218",
+    "lrwxrwxrwx 1 root root 0 Jun 30 16:49 /proc/self -> 7219",
+    "foo",
+    "",
+    "$ bash -c 'echo $$ ; exec ls -l /proc/self ; echo foo'",
+    "7217",
+    "lrwxrwxrwx 1 root root 0 Jun 30 16:49 /proc/self -> 7217"
+  ],
+  "language": "bash",
+  "category": "exec",
+  "code_type": "command"
+}

@@ -1,0 +1,17 @@
+{
+  "id": "276",
+  "title": "Powershell - set variables to get dynamic ADUser",
+  "modified": "2022-04-11T22:33:10Z",
+  "created": "2022-04-11T22:33:10Z",
+  "guid": "87c6e31e-6e61-40a6-822e-853094e8e5db",
+  "cli": [
+    "$Self = Get-ADUser -Identity $Env:Username -Properties *",
+    "$EID = $Self.EmployeeId",
+    "",
+    "Get-ADUser  -Filter \"dellOwnerID -like $EID\"  -Properties * | sort-object -property PasswordLastSet | Format-Table Name,PasswordLastSet -AutoSize -Wrap"
+  ],
+  "tags": "AD",
+  "language": "powershell",
+  "category": "Powershell",
+  "code_type": "command"
+}

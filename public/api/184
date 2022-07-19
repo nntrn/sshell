@@ -1,0 +1,20 @@
+{
+  "id": "184",
+  "title": "date - get N days ago",
+  "modified": "2022-03-23T21:36:44Z",
+  "created": "2022-01-10T15:55:46Z",
+  "guid": "3c287ed9-b18b-4b35-89de-786b3049a7aa",
+  "cli": "date -d \"$date -7 days\" +\"%Y-%m-%d\"",
+  "url": "https://stackoverflow.com/a/53326257/7460613",
+  "example": [
+    "# date today",
+    "$ date +\"%Y-%m-%d\"",
+    "2022-03-23",
+    "",
+    "# date 7 days ago",
+    "$ date -d \"$date -7 days\" +\"%Y-%m-%d\"",
+    "2022-03-16"
+  ],
+  "language": "bash",
+  "category": "date"
+}

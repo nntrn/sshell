@@ -1,0 +1,10 @@
+{
+  "id": "225",
+  "title": "kill all processes for user",
+  "modified": "2022-03-01T01:20:44Z",
+  "created": "2022-03-01T01:20:44Z",
+  "guid": "ac11de37-a6d4-4e3c-91bc-ddafbfd3ea2c",
+  "cli": "pkill -HUP -u annie_tran",
+  "language": "bash",
+  "category": "kill"
+}

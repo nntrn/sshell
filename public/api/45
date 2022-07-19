@@ -1,0 +1,11 @@
+{
+  "id": "45",
+  "title": "pip show for all pip installed",
+  "modified": "2021-12-30T19:44:09Z",
+  "created": "2021-05-06T19:24:05Z",
+  "guid": "00ec6d6a-fb30-4d10-b670-6b9fd7f40521",
+  "cli": "pip show $(pip list | awk '{print $1}' | grep -v - | xargs) | less",
+  "tags": "python",
+  "language": "bash",
+  "category": "pip"
+}

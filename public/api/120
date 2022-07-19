@@ -1,0 +1,14 @@
+{
+  "id": "120",
+  "title": "get arguments after first",
+  "modified": "2022-01-19T00:11:21Z",
+  "created": "2021-09-11T00:08:22Z",
+  "guid": "4a42c4db-c969-45f7-8f3a-108e02d22f79",
+  "cli": [
+    "echo \"${@:2}\"",
+    "echo \"${*:2}\""
+  ],
+  "url": "https://stackoverflow.com/a/9057392",
+  "language": "bash",
+  "category": "get"
+}

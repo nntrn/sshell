@@ -1,0 +1,16 @@
+{
+  "id": "181",
+  "title": "git diff side by side",
+  "modified": "2022-03-03T17:00:24Z",
+  "created": "2022-01-04T03:56:34Z",
+  "guid": "257cf500-a4ec-427e-b7e6-12d24df42b54",
+  "cli": [
+    "git difftool -y -x sdiff",
+    "",
+    "git difftool -y -x sdiff path/to/file"
+  ],
+  "tags": "git",
+  "url": "https://stackoverflow.com/a/39225649/7460613",
+  "language": "bash",
+  "category": "git"
+}
