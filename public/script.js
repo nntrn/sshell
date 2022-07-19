@@ -32,13 +32,52 @@ function escapeHtml(s) {
   })
 }
 
+function buildSnippets(res) {
+  Object.entries(groupByKey(res, 'language')).forEach(langGrp => {
+    const group = Object.assign(document.createElement('div'), {
+      className: 'group',
+      id: langGrp[0],
+    })
+
+    group.appendChild(
+      Object.assign(document.createElement('h3'), {
+        textContent: langGrp[0],
+      })
+    )
+
+    document.querySelector('#toc').appendChild(
+      Object.assign(document.createElement('a'), {
+        className: 'link',
+        href: `#${langGrp[0]}`,
+        textContent: langGrp[0],
+      })
+    )
+
+    langGrp[1].forEach(({ output, ...e }) => {
+      const itemjson = JSON.stringify(e, null, 2)
+      const codeText = escapeHtml([e.cli].flat(2).join('\n'))
+      group.appendChild(
+        Object.assign(document.createElement('div'), {
+          className: 'item',
+          id: `data-${e.id}`,
+          innerHTML: [
+            `<h4><a href="#${e.id}" onclick="showPopup(${e.id})">${e.title}</a></h4>`,
+            `<div class="code" style="user-select:all">${codeText}</div>`,
+            `<div class="filter" style="display:none">${itemjson}</div>`,
+          ].join('\n'),
+        })
+      )
+    })
+    document.querySelector('#sshell').appendChild(group)
+  })
+}
 
 function searchItems(string) {
-  Array.from(document.querySelectorAll('.item')).forEach(e => {
+  Array.from(document.querySelectorAll('.item .filter')).forEach(e => {
     if(e.textContent.includes(string)) {
-      e.classList.remove('hidden')
+      e.parentElement.classList.remove('hidden')
     } else {
-      e.classList.add('hidden')
+      e.parentElement.classList.add('hidden')
     }
   })
 }
@@ -91,20 +130,20 @@ document.querySelector('#searchbar').addEventListener('keyup', eventFilter)
 
 document.querySelector('#searchbar').addEventListener('click', unhideAllItems)
 
-// document.onkeydown = function (evt) {
-//   if(evt.keyCode === 27) {
-//     hidePopup()
-//   }
-// }
+document.onkeydown = function (evt) {
+  if(evt.keyCode === 27) {
+    hidePopup()
+  }
+}
 
-// window.addEventListener('load', function () {
-//   fetch(getSnippetsUrl())
-//     .then(e => e.json())
-//     .then(res => buildSnippets(res))
-//     .then(e => {
-//       if(location.hash) {
-//         showPopup()
-//       }
-//     })
-//     .catch(err => console.log(err))
-// })
+window.addEventListener('load', function () {
+  fetch(getSnippetsUrl())
+    .then(e => e.json())
+    .then(res => buildSnippets(res))
+    .then(e => {
+      if(location.hash) {
+        showPopup()
+      }
+    })
+    .catch(err => console.log(err))
+})
