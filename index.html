@@ -57,7 +57,7 @@ pre[before]:before{display:block;opacity:.5}
 
 <table>
 
-<tr><th colspan="3"><h4><a href="#360" onclick="showPopup(360)">set allexport - sourcing key/value .env files (without prefixing export)</a></h4></th></tr>
+<tr><th colspan="3"><h4><a href="api/360.json" onclick="showPopup(360)">set allexport - sourcing key/value .env files (without prefixing export)</a></h4></th></tr>
 <tr>
 <td colspan="3">
 <pre before="BASH">set -o allexport
@@ -78,7 +78,7 @@ set +o allexport</pre>
 
 <table>
 
-<tr><th colspan="3"><h4><a href="#359" onclick="showPopup(359)">github release api - upload asset file</a></h4></th></tr>
+<tr><th colspan="3"><h4><a href="api/359.json" onclick="showPopup(359)">github release api - upload asset file</a></h4></th></tr>
 <tr>
 <td colspan="3">
 <pre before="BASH">curl -H "Authorization: token $GITHUB_TOKEN" \
@@ -100,7 +100,7 @@ set +o allexport</pre>
 
 <table>
 
-<tr><th colspan="3"><h4><a href="#358" onclick="showPopup(358)">docker -  get IP address of a running container</a></h4></th></tr>
+<tr><th colspan="3"><h4><a href="api/358.json" onclick="showPopup(358)">docker -  get IP address of a running container</a></h4></th></tr>
 <tr>
 <td colspan="3">
 <pre before="BASH">docker inspect --format '{{range .NetworkSettings.Networks}} {{.IPAddress}} {{end}}' $CONTAINER_NAME</pre>
@@ -119,7 +119,7 @@ set +o allexport</pre>
 
 <table>
 
-<tr><th colspan="3"><h4><a href="#357" onclick="showPopup(357)">awx_postgres - get hostname ids for api</a></h4></th></tr>
+<tr><th colspan="3"><h4><a href="api/357.json" onclick="showPopup(357)">awx_postgres - get hostname ids for api</a></h4></th></tr>
 <tr>
 <td colspan="3">
 <pre before="SQL">docker exec -it awx_postgres /bin/bash \
@@ -141,7 +141,7 @@ psql -t -A -F "," -U awx -d awx -c "select id,name from main_host;"|cat</pre>
 
 <table>
 
-<tr><th colspan="3"><h4><a href="#356" onclick="showPopup(356)">ansible setup module - adhoc command for gathering facts</a></h4></th></tr>
+<tr><th colspan="3"><h4><a href="api/356.json" onclick="showPopup(356)">ansible setup module - adhoc command for gathering facts</a></h4></th></tr>
 <tr>
 <td colspan="3">
 <pre before="BASH"># Display facts from all hosts and store them indexed by I(hostname) at C(/tmp/facts).
@@ -191,7 +191,7 @@ psql -t -A -F "," -U awx -d awx -c "select id,name from main_host;"|cat</pre>
 
 <table>
 
-<tr><th colspan="3"><h4><a href="#355" onclick="showPopup(355)">docker format results</a></h4></th></tr>
+<tr><th colspan="3"><h4><a href="api/355.json" onclick="showPopup(355)">docker format results</a></h4></th></tr>
 <tr>
 <td colspan="3">
 <pre before="BASH">docker ps --format "{{json .}}"</pre>
@@ -210,7 +210,7 @@ psql -t -A -F "," -U awx -d awx -c "select id,name from main_host;"|cat</pre>
 
 <table>
 
-<tr><th colspan="3"><h4><a href="#354" onclick="showPopup(354)">openssl-dgst - hash salted password</a></h4></th></tr>
+<tr><th colspan="3"><h4><a href="api/354.json" onclick="showPopup(354)">openssl-dgst - hash salted password</a></h4></th></tr>
 <tr>
 <td colspan="3">
 <pre before="BASH">echo -n "$salt$password" | openssl dgst -r -sha1</pre>
@@ -229,7 +229,7 @@ psql -t -A -F "," -U awx -d awx -c "select id,name from main_host;"|cat</pre>
 
 <table>
 
-<tr><th colspan="3"><h4><a href="#353" onclick="showPopup(353)">python one liner - return hashed password as a string</a></h4></th></tr>
+<tr><th colspan="3"><h4><a href="api/353.json" onclick="showPopup(353)">python one liner - return hashed password as a string</a></h4></th></tr>
 <tr>
 <td colspan="3">
 <pre before="PYTHON">python -c 'import crypt; print(crypt.crypt("This is my Password", "$1$SomeSalt$"))'</pre>
@@ -248,7 +248,7 @@ psql -t -A -F "," -U awx -d awx -c "select id,name from main_host;"|cat</pre>
 
 <table>
 
-<tr><th colspan="3"><h4><a href="#352" onclick="showPopup(352)">document.documentElement.scrollTop - scroll to top of page</a></h4></th></tr>
+<tr><th colspan="3"><h4><a href="api/352.json" onclick="showPopup(352)">document.documentElement.scrollTop - scroll to top of page</a></h4></th></tr>
 <tr>
 <td colspan="3">
 <pre before="JAVASCRIPT">function setScrollTopForDocument(doc = document, value = 0) {
@@ -269,7 +269,7 @@ psql -t -A -F "," -U awx -d awx -c "select id,name from main_host;"|cat</pre>
 
 <table>
 
-<tr><th colspan="3"><h4><a href="#351" onclick="showPopup(351)">last reboot -  list of the times and dates when the system was recently rebooted</a></h4></th></tr>
+<tr><th colspan="3"><h4><a href="api/351.json" onclick="showPopup(351)">last reboot -  list of the times and dates when the system was recently rebooted</a></h4></th></tr>
 <tr>
 <td colspan="3">
 <pre before="BASH">last reboot</pre>
@@ -288,7 +288,7 @@ psql -t -A -F "," -U awx -d awx -c "select id,name from main_host;"|cat</pre>
 
 <table>
 
-<tr><th colspan="3"><h4><a href="#350" onclick="showPopup(350)">MemAvailable - memory tracker: get reclaimable memory from /proc/meminfo</a></h4></th></tr>
+<tr><th colspan="3"><h4><a href="api/350.json" onclick="showPopup(350)">MemAvailable - memory tracker: get reclaimable memory from /proc/meminfo</a></h4></th></tr>
 <tr>
 <td colspan="3">
 <pre before="BASH">awk '/^MemAvailable:/ {print $2}' /proc/meminfo</pre>
@@ -307,7 +307,7 @@ psql -t -A -F "," -U awx -d awx -c "select id,name from main_host;"|cat</pre>
 
 <table>
 
-<tr><th colspan="3"><h4><a href="#349" onclick="showPopup(349)">nginx -  common configurations to block sql injections and other attacks</a></h4></th></tr>
+<tr><th colspan="3"><h4><a href="api/349.json" onclick="showPopup(349)">nginx -  common configurations to block sql injections and other attacks</a></h4></th></tr>
 <tr>
 <td colspan="3">
 <pre before="NGINX"># common nginx configuration to block sql injection and other attacks
@@ -382,7 +382,7 @@ location ~* "/(^$|mobiquo|phpinfo|shell|sqlpatch|thumb|thumb_editor|thumbopen|ti
 
 <table>
 
-<tr><th colspan="3"><h4><a href="#348" onclick="showPopup(348)">limit_except</a></h4></th></tr>
+<tr><th colspan="3"><h4><a href="api/348.json" onclick="showPopup(348)">limit_except</a></h4></th></tr>
 <tr>
 <td colspan="3">
 <pre before="NGINX">location / { 
@@ -406,7 +406,7 @@ location ~* "/(^$|mobiquo|phpinfo|shell|sqlpatch|thumb|thumb_editor|thumbopen|ti
 
 <table>
 
-<tr><th colspan="3"><h4><a href="#347" onclick="showPopup(347)">python oneliner cryptogen</a></h4></th></tr>
+<tr><th colspan="3"><h4><a href="api/347.json" onclick="showPopup(347)">python oneliner cryptogen</a></h4></th></tr>
 <tr>
 <td colspan="3">
 <pre before="PYTHON">python3 -c "import crypt; print(crypt.crypt(input('clear-text password: '), crypt.mksalt(crypt.METHOD_SHA512)))"</pre>
@@ -425,7 +425,7 @@ location ~* "/(^$|mobiquo|phpinfo|shell|sqlpatch|thumb|thumb_editor|thumbopen|ti
 
 <table>
 
-<tr><th colspan="3"><h4><a href="#346" onclick="showPopup(346)">clone gitlab project using project token</a></h4></th></tr>
+<tr><th colspan="3"><h4><a href="api/346.json" onclick="showPopup(346)">clone gitlab project using project token</a></h4></th></tr>
 <tr>
 <td colspan="3">
 <pre before="BASH">GITLAB_PROJECT_TOKEN=glpat-9eAicfQ9HoLp2ilItrVZ
@@ -447,7 +447,7 @@ git clone -c http.sslVerify=false  https://gitlab-ci-token:$GITLAB_PROJECT_TOKEN
 
 <table>
 
-<tr><th colspan="3"><h4><a href="#345" onclick="showPopup(345)">document.cookie - convert key=value string to JSON string</a></h4></th></tr>
+<tr><th colspan="3"><h4><a href="api/345.json" onclick="showPopup(345)">document.cookie - convert key=value string to JSON string</a></h4></th></tr>
 <tr>
 <td colspan="3">
 <pre before="JAVASCRIPT">Object.fromEntries(document.cookie.split('; ').map(e => e.split('=').map((s) => {
@@ -472,7 +472,7 @@ git clone -c http.sslVerify=false  https://gitlab-ci-token:$GITLAB_PROJECT_TOKEN
 
 <table>
 
-<tr><th colspan="3"><h4><a href="#344" onclick="showPopup(344)">exec vs eval - process</a></h4></th></tr>
+<tr><th colspan="3"><h4><a href="api/344.json" onclick="showPopup(344)">exec vs eval - process</a></h4></th></tr>
 <tr>
 <td colspan="3">
 <pre before="BASH"># eval
@@ -495,7 +495,7 @@ bash -c 'echo $$ ; exec ls -l /proc/self ; echo foo'</pre>
 
 <table>
 
-<tr><th colspan="3"><h4><a href="#343" onclick="showPopup(343)">gitlab - clone using personal token</a></h4></th></tr>
+<tr><th colspan="3"><h4><a href="api/343.json" onclick="showPopup(343)">gitlab - clone using personal token</a></h4></th></tr>
 <tr>
 <td colspan="3">
 <pre before="BASH">git clone https://oauth2:personal_token@gitlab.com/username/project.git </pre>
@@ -514,7 +514,7 @@ bash -c 'echo $$ ; exec ls -l /proc/self ; echo foo'</pre>
 
 <table>
 
-<tr><th colspan="3"><h4><a href="#342" onclick="showPopup(342)">iconv - convert text encoding</a></h4></th></tr>
+<tr><th colspan="3"><h4><a href="api/342.json" onclick="showPopup(342)">iconv - convert text encoding</a></h4></th></tr>
 <tr>
 <td colspan="3">
 <pre before="BASH">iconv -f ISO-8859-1 -t UTF-8 filename.txt</pre>
@@ -533,7 +533,7 @@ bash -c 'echo $$ ; exec ls -l /proc/self ; echo foo'</pre>
 
 <table>
 
-<tr><th colspan="3"><h4><a href="#341" onclick="showPopup(341)">curl - api to get definition</a></h4></th></tr>
+<tr><th colspan="3"><h4><a href="api/341.json" onclick="showPopup(341)">curl - api to get definition</a></h4></th></tr>
 <tr>
 <td colspan="3">
 <pre before="BASH">curl dict://dict.org/d:$WORD</pre>
@@ -552,7 +552,7 @@ bash -c 'echo $$ ; exec ls -l /proc/self ; echo foo'</pre>
 
 <table>
 
-<tr><th colspan="3"><h4><a href="#340" onclick="showPopup(340)">&& and || - compare strings using logical operators</a></h4></th></tr>
+<tr><th colspan="3"><h4><a href="api/340.json" onclick="showPopup(340)">&& and || - compare strings using logical operators</a></h4></th></tr>
 <tr>
 <td colspan="3">
 <pre before="BASH">[[ "string1" == "string2" ]] && echo "Equal" || echo "Not equal"</pre>
@@ -571,7 +571,7 @@ bash -c 'echo $$ ; exec ls -l /proc/self ; echo foo'</pre>
 
 <table>
 
-<tr><th colspan="3"><h4><a href="#339" onclick="showPopup(339)">IFS - word splitting observed in for loops</a></h4></th></tr>
+<tr><th colspan="3"><h4><a href="api/339.json" onclick="showPopup(339)">IFS - word splitting observed in for loops</a></h4></th></tr>
 <tr>
 <td colspan="3">
 <pre before="BASH">IFS=$' '
@@ -606,7 +606,7 @@ a b c</pre>
 
 <table>
 
-<tr><th colspan="3"><h4><a href="#338" onclick="showPopup(338)">cp - brace expansion to copy/backup file</a></h4></th></tr>
+<tr><th colspan="3"><h4><a href="api/338.json" onclick="showPopup(338)">cp - brace expansion to copy/backup file</a></h4></th></tr>
 <tr>
 <td colspan="3">
 <pre before="BASH">cp snippets.json{,.bkp}</pre>
@@ -625,7 +625,7 @@ a b c</pre>
 
 <table>
 
-<tr><th colspan="3"><h4><a href="#337" onclick="showPopup(337)">() - subshell and variable assignment</a></h4></th></tr>
+<tr><th colspan="3"><h4><a href="api/337.json" onclick="showPopup(337)">() - subshell and variable assignment</a></h4></th></tr>
 <tr>
 <td colspan="3">
 <pre before="BASH">$ ANNIE=isme
@@ -651,7 +651,7 @@ isme</pre>
 
 <table>
 
-<tr><th colspan="3"><h4><a href="#336" onclick="showPopup(336)">cat - short read about useless use</a></h4></th></tr>
+<tr><th colspan="3"><h4><a href="api/336.json" onclick="showPopup(336)">cat - short read about useless use</a></h4></th></tr>
 <tr>
 <td colspan="3">
 <pre before="BASH"># Problematic code:
@@ -676,7 +676,7 @@ cat file.txt | awk '{print $1}'
 
 <table>
 
-<tr><th colspan="3"><h4><a href="#335" onclick="showPopup(335)">jq - convert json to environment variables</a></h4></th></tr>
+<tr><th colspan="3"><h4><a href="api/335.json" onclick="showPopup(335)">jq - convert json to environment variables</a></h4></th></tr>
 <tr>
 <td colspan="3">
 <pre before="BASH">jq -rc 'to_entries | map("\(.key)=\(.value)")</pre>
@@ -695,7 +695,7 @@ cat file.txt | awk '{print $1}'
 
 <table>
 
-<tr><th colspan="3"><h4><a href="#334" onclick="showPopup(334)">jq - extract keys/values from object</a></h4></th></tr>
+<tr><th colspan="3"><h4><a href="api/334.json" onclick="showPopup(334)">jq - extract keys/values from object</a></h4></th></tr>
 <tr>
 <td colspan="3">
 <pre before="BASH"># get values
@@ -718,7 +718,7 @@ echo '{ "a": 1, "b": 2 }' | jq 'keys | .[]'</pre>
 
 <table>
 
-<tr><th colspan="3"><h4><a href="#333" onclick="showPopup(333)">lvm - increase capacity of partition</a></h4></th></tr>
+<tr><th colspan="3"><h4><a href="api/333.json" onclick="showPopup(333)">lvm - increase capacity of partition</a></h4></th></tr>
 <tr>
 <td colspan="3">
 <pre before="BASH">FILESYSTEM_PATH=/dev/mapper/osvg-var.fs
@@ -749,7 +749,7 @@ xfs_growfs $FILESYSTEM_PATH</pre>
 
 <table>
 
-<tr><th colspan="3"><h4><a href="#332" onclick="showPopup(332)">${0%/*} - get directory of running script</a></h4></th></tr>
+<tr><th colspan="3"><h4><a href="api/332.json" onclick="showPopup(332)">${0%/*} - get directory of running script</a></h4></th></tr>
 <tr>
 <td colspan="3">
 <pre before="BASH">echo "${0%/*}"</pre>
@@ -768,7 +768,7 @@ xfs_growfs $FILESYSTEM_PATH</pre>
 
 <table>
 
-<tr><th colspan="3"><h4><a href="#331" onclick="showPopup(331)">python - select keys in json to print</a></h4></th></tr>
+<tr><th colspan="3"><h4><a href="api/331.json" onclick="showPopup(331)">python - select keys in json to print</a></h4></th></tr>
 <tr>
 <td colspan="3">
 <pre before="PYTHON">curl -s "https://jsonplaceholder.typicode.com/posts" | python3 -c "import sys, json; data=json.load(sys.stdin); x = [{'id': d['id'], 'title': d['title']} for d in data]; print(json.dumps(x, indent=2))"</pre>
@@ -808,7 +808,7 @@ xfs_growfs $FILESYSTEM_PATH</pre>
 
 <table>
 
-<tr><th colspan="3"><h4><a href="#330" onclick="showPopup(330)">curl - display information after transfer</a></h4></th></tr>
+<tr><th colspan="3"><h4><a href="api/330.json" onclick="showPopup(330)">curl - display information after transfer</a></h4></th></tr>
 <tr>
 <td colspan="3">
 <pre before="BASH">curl -s -o snippets.json -w '%{json}' https://raw.githubusercontent.com/nntrn/sshell/data/snippets.json | jq</pre>
@@ -871,7 +871,7 @@ xfs_growfs $FILESYSTEM_PATH</pre>
 
 <table>
 
-<tr><th colspan="3"><h4><a href="#329" onclick="showPopup(329)">python module calendar</a></h4></th></tr>
+<tr><th colspan="3"><h4><a href="api/329.json" onclick="showPopup(329)">python module calendar</a></h4></th></tr>
 <tr>
 <td colspan="3">
 <pre before="PYTHON">python -m calendar</pre>
@@ -929,7 +929,7 @@ Mo Tu We Th Fr Sa Su      Mo Tu We Th Fr Sa Su      Mo Tu We Th Fr Sa Su
 
 <table>
 
-<tr><th colspan="3"><h4><a href="#328" onclick="showPopup(328)">sysconfig - provide access to Python’s configuration information</a></h4></th></tr>
+<tr><th colspan="3"><h4><a href="api/328.json" onclick="showPopup(328)">sysconfig - provide access to Python’s configuration information</a></h4></th></tr>
 <tr>
 <td colspan="3">
 <pre before="PYTHON">python -m sysconfig</pre>
@@ -948,7 +948,7 @@ Mo Tu We Th Fr Sa Su      Mo Tu We Th Fr Sa Su      Mo Tu We Th Fr Sa Su
 
 <table>
 
-<tr><th colspan="3"><h4><a href="#327" onclick="showPopup(327)">cProfile - Performance Profiling Python One-Liner</a></h4></th></tr>
+<tr><th colspan="3"><h4><a href="api/327.json" onclick="showPopup(327)">cProfile - Performance Profiling Python One-Liner</a></h4></th></tr>
 <tr>
 <td colspan="3">
 <pre before="PYTHON">python -m cProfile file.py
@@ -984,7 +984,7 @@ python -m profile file.py</pre>
 
 <table>
 
-<tr><th colspan="3"><h4><a href="#326" onclick="showPopup(326)">python - csv to json</a></h4></th></tr>
+<tr><th colspan="3"><h4><a href="api/326.json" onclick="showPopup(326)">python - csv to json</a></h4></th></tr>
 <tr>
 <td colspan="3">
 <pre before="PYTHON">CSV_FILE=https://raw.githubusercontent.com/jhsu98/json-csv-converter/master/MOCK_DATA.csv
@@ -1011,7 +1011,7 @@ curl -s $CSV_FILE |
 
 <table>
 
-<tr><th colspan="3"><h4><a href="#325" onclick="showPopup(325)">python oneliner - print columns like awk</a></h4></th></tr>
+<tr><th colspan="3"><h4><a href="api/325.json" onclick="showPopup(325)">python oneliner - print columns like awk</a></h4></th></tr>
 <tr>
 <td colspan="3">
 <pre before="PYTHON">python3 -c 'print("\n".join(line.split(":",1)[0] for line in open("/etc/passwd")))'</pre>
@@ -1030,7 +1030,7 @@ curl -s $CSV_FILE |
 
 <table>
 
-<tr><th colspan="3"><h4><a href="#324" onclick="showPopup(324)">awk - remove duplicates without sorting</a></h4></th></tr>
+<tr><th colspan="3"><h4><a href="api/324.json" onclick="showPopup(324)">awk - remove duplicates without sorting</a></h4></th></tr>
 <tr>
 <td colspan="3">
 <pre before="BASH"># from file
@@ -1053,7 +1053,7 @@ echo "..." | awk '!a[$0]++'  </pre>
 
 <table>
 
-<tr><th colspan="3"><h4><a href="#323" onclick="showPopup(323)">ignore carriage return in windows </a></h4></th></tr>
+<tr><th colspan="3"><h4><a href="api/323.json" onclick="showPopup(323)">ignore carriage return in windows </a></h4></th></tr>
 <tr>
 <td colspan="3">
 <pre before="BASH">set -o igncr</pre>
@@ -1072,7 +1072,7 @@ echo "..." | awk '!a[$0]++'  </pre>
 
 <table>
 
-<tr><th colspan="3"><h4><a href="#322" onclick="showPopup(322)">python - command line pretty print json</a></h4></th></tr>
+<tr><th colspan="3"><h4><a href="api/322.json" onclick="showPopup(322)">python - command line pretty print json</a></h4></th></tr>
 <tr>
 <td colspan="3">
 <pre before="BASH">python3 -m json.tool file.json
@@ -1094,7 +1094,7 @@ cat file.json | python3 -m json.tool</pre>
 
 <table>
 
-<tr><th colspan="3"><h4><a href="#321" onclick="showPopup(321)">gitlab - create project </a></h4></th></tr>
+<tr><th colspan="3"><h4><a href="api/321.json" onclick="showPopup(321)">gitlab - create project </a></h4></th></tr>
 <tr>
 <td colspan="3">
 <pre before="BASH">PROJECT_NAME=test
@@ -1121,7 +1121,7 @@ curl --silent --header "PRIVATE-TOKEN: $GITLAB_PERSONAL_ACCESS_TOKEN" \
 
 <table>
 
-<tr><th colspan="3"><h4><a href="#320" onclick="showPopup(320)">jq - convert json to csv</a></h4></th></tr>
+<tr><th colspan="3"><h4><a href="api/320.json" onclick="showPopup(320)">jq - convert json to csv</a></h4></th></tr>
 <tr>
 <td colspan="3">
 <pre before="BASH">echo '[{"name":"JSON", "good":true}, {"name":"XML", "good":false}]' |
@@ -1146,7 +1146,7 @@ curl --silent --header "PRIVATE-TOKEN: $GITLAB_PERSONAL_ACCESS_TOKEN" \
 
 <table>
 
-<tr><th colspan="3"><h4><a href="#319" onclick="showPopup(319)">grep - display lines in file1 that aren't in file2 (similar to comm)</a></h4></th></tr>
+<tr><th colspan="3"><h4><a href="api/319.json" onclick="showPopup(319)">grep - display lines in file1 that aren't in file2 (similar to comm)</a></h4></th></tr>
 <tr>
 <td colspan="3">
 <pre before="BASH">grep -vFxf file1.txt file2.txt</pre>
@@ -1165,7 +1165,7 @@ curl --silent --header "PRIVATE-TOKEN: $GITLAB_PERSONAL_ACCESS_TOKEN" \
 
 <table>
 
-<tr><th colspan="3"><h4><a href="#318" onclick="showPopup(318)">declare - list all function names</a></h4></th></tr>
+<tr><th colspan="3"><h4><a href="api/318.json" onclick="showPopup(318)">declare - list all function names</a></h4></th></tr>
 <tr>
 <td colspan="3">
 <pre before="BASH">declare -F</pre>
@@ -1201,7 +1201,7 @@ declare -f __git_compute_all_commands</pre>
 
 <table>
 
-<tr><th colspan="3"><h4><a href="#317" onclick="showPopup(317)">nmap - view open ports</a></h4></th></tr>
+<tr><th colspan="3"><h4><a href="api/317.json" onclick="showPopup(317)">nmap - view open ports</a></h4></th></tr>
 <tr>
 <td colspan="3">
 <pre before="BASH">nmap --open $HOSTNAME</pre>
@@ -1220,7 +1220,7 @@ declare -f __git_compute_all_commands</pre>
 
 <table>
 
-<tr><th colspan="3"><h4><a href="#316" onclick="showPopup(316)">csplit - split text in file on empty lines</a></h4></th></tr>
+<tr><th colspan="3"><h4><a href="api/316.json" onclick="showPopup(316)">csplit - split text in file on empty lines</a></h4></th></tr>
 <tr>
 <td colspan="3">
 <pre before="BASH">csplit --suppress-matched $FILENAME '/^$/' '{*}'</pre>
@@ -1239,7 +1239,7 @@ declare -f __git_compute_all_commands</pre>
 
 <table>
 
-<tr><th colspan="3"><h4><a href="#315" onclick="showPopup(315)">rpm - get all installed doc files for packages</a></h4></th></tr>
+<tr><th colspan="3"><h4><a href="api/315.json" onclick="showPopup(315)">rpm - get all installed doc files for packages</a></h4></th></tr>
 <tr>
 <td colspan="3">
 <pre before="BASH">rpm -qa -d</pre>
@@ -1258,7 +1258,7 @@ declare -f __git_compute_all_commands</pre>
 
 <table>
 
-<tr><th colspan="3"><h4><a href="#314" onclick="showPopup(314)">xargs - pretty print process environment</a></h4></th></tr>
+<tr><th colspan="3"><h4><a href="api/314.json" onclick="showPopup(314)">xargs - pretty print process environment</a></h4></th></tr>
 <tr>
 <td colspan="3">
 <pre before="BASH">xargs -n 1 -0 </proc/$PID/environ</pre>
@@ -1277,7 +1277,7 @@ declare -f __git_compute_all_commands</pre>
 
 <table>
 
-<tr><th colspan="3"><h4><a href="#313" onclick="showPopup(313)">nmap - scan port</a></h4></th></tr>
+<tr><th colspan="3"><h4><a href="api/313.json" onclick="showPopup(313)">nmap - scan port</a></h4></th></tr>
 <tr>
 <td colspan="3">
 <pre before="BASH">nmap -p 443 $HOSTNAME</pre>
@@ -1296,7 +1296,7 @@ declare -f __git_compute_all_commands</pre>
 
 <table>
 
-<tr><th colspan="3"><h4><a href="#312" onclick="showPopup(312)">jq - get unique items based on key</a></h4></th></tr>
+<tr><th colspan="3"><h4><a href="api/312.json" onclick="showPopup(312)">jq - get unique items based on key</a></h4></th></tr>
 <tr>
 <td colspan="3">
 <pre before="BASH">echo '[{"foo": 1, "bar": 123}, {"foo": 1, "bar": 123}, {"foo": 4, "bar": 123}]' | jq 'unique_by(.foo)'</pre>
@@ -1328,7 +1328,7 @@ declare -f __git_compute_all_commands</pre>
 
 <table>
 
-<tr><th colspan="3"><h4><a href="#311" onclick="showPopup(311)">git - get remote branches</a></h4></th></tr>
+<tr><th colspan="3"><h4><a href="api/311.json" onclick="showPopup(311)">git - get remote branches</a></h4></th></tr>
 <tr>
 <td colspan="3">
 <pre before="BASH">git remote show origin | sed -n '/Remote branches/,/Local/p' | grep -v ':' | awk '{print $1}'</pre>
@@ -1353,7 +1353,7 @@ main</pre>
 
 <table>
 
-<tr><th colspan="3"><h4><a href="#310" onclick="showPopup(310)">git log - get commit hash list</a></h4></th></tr>
+<tr><th colspan="3"><h4><a href="api/310.json" onclick="showPopup(310)">git log - get commit hash list</a></h4></th></tr>
 <tr>
 <td colspan="3">
 <pre before="BASH"># get last 2 
@@ -1376,7 +1376,7 @@ git log --pretty=%h </pre>
 
 <table>
 
-<tr><th colspan="3"><h4><a href="#309" onclick="showPopup(309)">git-gc - cleanup unnecessary files and optimize the local repository</a></h4></th></tr>
+<tr><th colspan="3"><h4><a href="api/309.json" onclick="showPopup(309)">git-gc - cleanup unnecessary files and optimize the local repository</a></h4></th></tr>
 <tr>
 <td colspan="3">
 <pre before="BASH">git gc --aggressive --prune=all </pre>
@@ -1395,7 +1395,7 @@ git log --pretty=%h </pre>
 
 <table>
 
-<tr><th colspan="3"><h4><a href="#308" onclick="showPopup(308)">github api - render a markdown document as an HTML page </a></h4></th></tr>
+<tr><th colspan="3"><h4><a href="api/308.json" onclick="showPopup(308)">github api - render a markdown document as an HTML page </a></h4></th></tr>
 <tr>
 <td colspan="3">
 <pre before="BASH">curl -sL -X POST --data-binary @readme.md  https://api.github.com/markdown/raw --header "Content-Type:text/x-markdown" </pre>
@@ -1414,7 +1414,7 @@ git log --pretty=%h </pre>
 
 <table>
 
-<tr><th colspan="3"><h4><a href="#307" onclick="showPopup(307)">fuser - close tcp ports </a></h4></th></tr>
+<tr><th colspan="3"><h4><a href="api/307.json" onclick="showPopup(307)">fuser - close tcp ports </a></h4></th></tr>
 <tr>
 <td colspan="3">
 <pre before="BASH">fuser -v -k -n tcp 443
@@ -1434,7 +1434,7 @@ fuser -v -k -n tcp 80</pre>
 
 <table>
 
-<tr><th colspan="3"><h4><a href="#306" onclick="showPopup(306)">openssl - create and verify CSR </a></h4></th></tr>
+<tr><th colspan="3"><h4><a href="api/306.json" onclick="showPopup(306)">openssl - create and verify CSR </a></h4></th></tr>
 <tr>
 <td colspan="3">
 <pre before="BASH"># Creating Your CSR with One Command
@@ -1460,7 +1460,7 @@ openssl req -text -in $HOSTNAME.csr -noout -verify</pre>
 
 <table>
 
-<tr><th colspan="3"><h4><a href="#305" onclick="showPopup(305)">fsutil resource info</a></h4></th></tr>
+<tr><th colspan="3"><h4><a href="api/305.json" onclick="showPopup(305)">fsutil resource info</a></h4></th></tr>
 <tr>
 <td colspan="3">
 <pre before="CMD">fsutil resource info C:</pre>
@@ -1503,7 +1503,7 @@ RM prefers availability over conserver.</pre>
 
 <table>
 
-<tr><th colspan="3"><h4><a href="#304" onclick="showPopup(304)">unset variables beginning with </a></h4></th></tr>
+<tr><th colspan="3"><h4><a href="api/304.json" onclick="showPopup(304)">unset variables beginning with </a></h4></th></tr>
 <tr>
 <td colspan="3">
 <pre before="BASH">unset "${!VSCODE@}"</pre>
@@ -1522,7 +1522,7 @@ RM prefers availability over conserver.</pre>
 
 <table>
 
-<tr><th colspan="3"><h4><a href="#303" onclick="showPopup(303)">Get-WindowsUpdateLog - get update</a></h4></th></tr>
+<tr><th colspan="3"><h4><a href="api/303.json" onclick="showPopup(303)">Get-WindowsUpdateLog - get update</a></h4></th></tr>
 <tr>
 <td colspan="3">
 <pre before="POWERSHELL">Get-WindowsUpdateLog </pre>
@@ -1561,7 +1561,7 @@ File(s):
 
 <table>
 
-<tr><th colspan="3"><h4><a href="#302" onclick="showPopup(302)">Finds local admin password and password expiration timestamp for given computer</a></h4></th></tr>
+<tr><th colspan="3"><h4><a href="api/302.json" onclick="showPopup(302)">Finds local admin password and password expiration timestamp for given computer</a></h4></th></tr>
 <tr>
 <td colspan="3">
 <pre before="POWERSHELL">Get-AdmPwdPassword -ComputerName:AT01488YD3 | Format-List *</pre>
@@ -1587,7 +1587,7 @@ ExpirationTimestamp : 5/5/2022 3:07:06 PM</pre>
 
 <table>
 
-<tr><th colspan="3"><h4><a href="#301" onclick="showPopup(301)">find - search files modified in last 24 hours</a></h4></th></tr>
+<tr><th colspan="3"><h4><a href="api/301.json" onclick="showPopup(301)">find - search files modified in last 24 hours</a></h4></th></tr>
 <tr>
 <td colspan="3">
 <pre before="BASH">find $HOME -mtime 0</pre>
@@ -1606,7 +1606,7 @@ ExpirationTimestamp : 5/5/2022 3:07:06 PM</pre>
 
 <table>
 
-<tr><th colspan="3"><h4><a href="#300" onclick="showPopup(300)">powershell - get all Get- commands</a></h4></th></tr>
+<tr><th colspan="3"><h4><a href="api/300.json" onclick="showPopup(300)">powershell - get all Get- commands</a></h4></th></tr>
 <tr>
 <td colspan="3">
 <pre before="BASH">#C:/Windows/System32/WindowsPowerShell/v1.0/Modules
@@ -2278,7 +2278,7 @@ Get-WULastScanSuccessDate</pre>
 
 <table>
 
-<tr><th colspan="3"><h4><a href="#299" onclick="showPopup(299)">Get-NetAdapter</a></h4></th></tr>
+<tr><th colspan="3"><h4><a href="api/299.json" onclick="showPopup(299)">Get-NetAdapter</a></h4></th></tr>
 <tr>
 <td colspan="3">
 <pre before="POWERSHELL">Get-NetAdapter | Format-Table  -AutoSize -Wrap</pre>
@@ -2305,7 +2305,7 @@ Ethernet 3                 PANGP Virtual Ethernet Adapter #2       7 Up     01-5
 
 <table>
 
-<tr><th colspan="3"><h4><a href="#298" onclick="showPopup(298)">Get-WmiObject - get network adapter config</a></h4></th></tr>
+<tr><th colspan="3"><h4><a href="api/298.json" onclick="showPopup(298)">Get-WmiObject - get network adapter config</a></h4></th></tr>
 <tr>
 <td colspan="3">
 <pre before="POWERSHELL">Get-WmiObject win32_networkadapterconfiguration | Format-Table DHCPEnabled,ServiceName,Description -AutoSize -Wrap | Format-Wide -Column 3</pre>
@@ -2344,7 +2344,7 @@ Ethernet 3                 PANGP Virtual Ethernet Adapter #2       7 Up     01-5
 
 <table>
 
-<tr><th colspan="3"><h4><a href="#297" onclick="showPopup(297)">curl - search dictionaries </a></h4></th></tr>
+<tr><th colspan="3"><h4><a href="api/297.json" onclick="showPopup(297)">curl - search dictionaries </a></h4></th></tr>
 <tr>
 <td colspan="3">
 <pre before="BASH"># list dictionaries
@@ -2565,7 +2565,7 @@ all "All Dictionaries (English-Only and Translating)"
 
 <table>
 
-<tr><th colspan="3"><h4><a href="#296" onclick="showPopup(296)">wget2 - get site stats and download files</a></h4></th></tr>
+<tr><th colspan="3"><h4><a href="api/296.json" onclick="showPopup(296)">wget2 - get site stats and download files</a></h4></th></tr>
 <tr>
 <td colspan="3">
 <pre before="BASH">wget2 --stats-site=csv:out.csv --recursive kernel.org/doc/Documentation/process/</pre>
@@ -2584,7 +2584,7 @@ all "All Dictionaries (English-Only and Translating)"
 
 <table>
 
-<tr><th colspan="3"><h4><a href="#295" onclick="showPopup(295)">jq - target objects in array using key</a></h4></th></tr>
+<tr><th colspan="3"><h4><a href="api/295.json" onclick="showPopup(295)">jq - target objects in array using key</a></h4></th></tr>
 <tr>
 <td colspan="3">
 <pre before="BASH">echo '[{"id": "first", "val": 1}, {"id": "second", "val": 2}]' | jq '.[] | select(.id == "second")'</pre>
@@ -2610,7 +2610,7 @@ all "All Dictionaries (English-Only and Translating)"
 
 <table>
 
-<tr><th colspan="3"><h4><a href="#294" onclick="showPopup(294)">WindowsIdentity- get current user in powershell</a></h4></th></tr>
+<tr><th colspan="3"><h4><a href="api/294.json" onclick="showPopup(294)">WindowsIdentity- get current user in powershell</a></h4></th></tr>
 <tr>
 <td colspan="3">
 <pre before="POWERSHELL">$myWindowsID = [System.Security.Principal.WindowsIdentity]::GetCurrent();
@@ -2664,7 +2664,7 @@ Administrator</pre>
 
 <table>
 
-<tr><th colspan="3"><h4><a href="#293" onclick="showPopup(293)">env - get all environment items in powershell</a></h4></th></tr>
+<tr><th colspan="3"><h4><a href="api/293.json" onclick="showPopup(293)">env - get all environment items in powershell</a></h4></th></tr>
 <tr>
 <td colspan="3">
 <pre before="POWERSHELL">Get-ChildItem env:</pre>
@@ -2683,7 +2683,7 @@ Administrator</pre>
 
 <table>
 
-<tr><th colspan="3"><h4><a href="#292" onclick="showPopup(292)">naive string encryption - scramble numbers in string to hide sensitive data</a></h4></th></tr>
+<tr><th colspan="3"><h4><a href="api/292.json" onclick="showPopup(292)">naive string encryption - scramble numbers in string to hide sensitive data</a></h4></th></tr>
 <tr>
 <td colspan="3">
 <pre before="BASH">echo "$text-to-scramble-numbers"  | tr "0123456789" "$RANDOM$RANDOM"
@@ -2733,7 +2733,7 @@ RoleClaimType      : http://schemas.microsoft.com/ws/3118/12/identity/claims/gro
 
 <table>
 
-<tr><th colspan="3"><h4><a href="#291" onclick="showPopup(291)">netsh - find the processId for the registered urls </a></h4></th></tr>
+<tr><th colspan="3"><h4><a href="api/291.json" onclick="showPopup(291)">netsh - find the processId for the registered urls </a></h4></th></tr>
 <tr>
 <td colspan="3">
 <pre before="BASH">netsh http show servicestate view=requestq verbose=no</pre>
@@ -2867,7 +2867,7 @@ Request queue name: Request queue is unnamed.
 
 <table>
 
-<tr><th colspan="3"><h4><a href="#290" onclick="showPopup(290)">netsh -  Lists all defined aliases</a></h4></th></tr>
+<tr><th colspan="3"><h4><a href="api/290.json" onclick="showPopup(290)">netsh -  Lists all defined aliases</a></h4></th></tr>
 <tr>
 <td colspan="3">
 <pre before="BASH">netsh show helper</pre>
@@ -2955,7 +2955,7 @@ Request queue name: Request queue is unnamed.
 
 <table>
 
-<tr><th colspan="3"><h4><a href="#289" onclick="showPopup(289)">pidstat - display global page faults and memory statistics</a></h4></th></tr>
+<tr><th colspan="3"><h4><a href="api/289.json" onclick="showPopup(289)">pidstat - display global page faults and memory statistics</a></h4></th></tr>
 <tr>
 <td colspan="3">
 <pre before="BASH">pidstat -C "awx | postgres" -r -p ALL</pre>
@@ -3009,7 +3009,7 @@ Request queue name: Request queue is unnamed.
 
 <table>
 
-<tr><th colspan="3"><h4><a href="#288" onclick="showPopup(288)">get docker gateway</a></h4></th></tr>
+<tr><th colspan="3"><h4><a href="api/288.json" onclick="showPopup(288)">get docker gateway</a></h4></th></tr>
 <tr>
 <td colspan="3">
 <pre before="BASH">ip route show | grep docker0 | awk '{print $9}'</pre>
@@ -3028,7 +3028,7 @@ Request queue name: Request queue is unnamed.
 
 <table>
 
-<tr><th colspan="3"><h4><a href="#287" onclick="showPopup(287)">Get-ADGroupMember</a></h4></th></tr>
+<tr><th colspan="3"><h4><a href="api/287.json" onclick="showPopup(287)">Get-ADGroupMember</a></h4></th></tr>
 <tr>
 <td colspan="3">
 <pre before="POWERSHELL">Get-ADGroupMember -Identity group,name | Select-Object name</pre>
@@ -3062,7 +3062,7 @@ Mildred Pearson</pre>
 
 <table>
 
-<tr><th colspan="3"><h4><a href="#286" onclick="showPopup(286)">nmap - list open TCP ports </a></h4></th></tr>
+<tr><th colspan="3"><h4><a href="api/286.json" onclick="showPopup(286)">nmap - list open TCP ports </a></h4></th></tr>
 <tr>
 <td colspan="3">
 <pre before="BASH">nmap -sT -O  10.171.230.150</pre>
@@ -3097,7 +3097,7 @@ PORT     STATE SERVICE
 
 <table>
 
-<tr><th colspan="3"><h4><a href="#285" onclick="showPopup(285)">vim - display all possible runtime config settings for vim</a></h4></th></tr>
+<tr><th colspan="3"><h4><a href="api/285.json" onclick="showPopup(285)">vim - display all possible runtime config settings for vim</a></h4></th></tr>
 <tr>
 <td colspan="3">
 <pre before="VIM">:set all</pre>
@@ -3169,7 +3169,7 @@ ine,S:StatusLineNC,t:Title,v:Visual,w:WarningMsg,W:WildMenu,>:SignColumn,*:TabLi
 
 <table>
 
-<tr><th colspan="3"><h4><a href="#284" onclick="showPopup(284)">systemctl - view status for every loaded service on the system</a></h4></th></tr>
+<tr><th colspan="3"><h4><a href="api/284.json" onclick="showPopup(284)">systemctl - view status for every loaded service on the system</a></h4></th></tr>
 <tr>
 <td colspan="3">
 <pre before="BASH">systemctl status --type=service</pre>
@@ -3209,7 +3209,7 @@ ine,S:StatusLineNC,t:Title,v:Visual,w:WarningMsg,W:WildMenu,>:SignColumn,*:TabLi
 
 <table>
 
-<tr><th colspan="3"><h4><a href="#283" onclick="showPopup(283)">journalctl - get entries for service</a></h4></th></tr>
+<tr><th colspan="3"><h4><a href="api/283.json" onclick="showPopup(283)">journalctl - get entries for service</a></h4></th></tr>
 <tr>
 <td colspan="3">
 <pre before="BASH">journalctl -u  <service></pre>
@@ -3228,7 +3228,7 @@ ine,S:StatusLineNC,t:Title,v:Visual,w:WarningMsg,W:WildMenu,>:SignColumn,*:TabLi
 
 <table>
 
-<tr><th colspan="3"><h4><a href="#282" onclick="showPopup(282)">ps - find service using the most memory</a></h4></th></tr>
+<tr><th colspan="3"><h4><a href="api/282.json" onclick="showPopup(282)">ps - find service using the most memory</a></h4></th></tr>
 <tr>
 <td colspan="3">
 <pre before="BASH">ps aux --sort=-%mem</pre>
@@ -3247,7 +3247,7 @@ ine,S:StatusLineNC,t:Title,v:Visual,w:WarningMsg,W:WildMenu,>:SignColumn,*:TabLi
 
 <table>
 
-<tr><th colspan="3"><h4><a href="#281" onclick="showPopup(281)">systemd - files and tools that manage the Linux startup sequence</a></h4></th></tr>
+<tr><th colspan="3"><h4><a href="api/281.json" onclick="showPopup(281)">systemd - files and tools that manage the Linux startup sequence</a></h4></th></tr>
 <tr>
 <td colspan="3">
 <pre before="BASH">ll /etc/systemd/system/multi-user.target.wants</pre>
@@ -3266,7 +3266,7 @@ ine,S:StatusLineNC,t:Title,v:Visual,w:WarningMsg,W:WildMenu,>:SignColumn,*:TabLi
 
 <table>
 
-<tr><th colspan="3"><h4><a href="#280" onclick="showPopup(280)">openssl - generate a set of prime numbers</a></h4></th></tr>
+<tr><th colspan="3"><h4><a href="api/280.json" onclick="showPopup(280)">openssl - generate a set of prime numbers</a></h4></th></tr>
 <tr>
 <td colspan="3">
 <pre before="BASH"># define start and ending points
@@ -3305,7 +3305,7 @@ done</pre>
 
 <table>
 
-<tr><th colspan="3"><h4><a href="#279" onclick="showPopup(279)">openssl - MD5, SHA1, and SHA256 digest</a></h4></th></tr>
+<tr><th colspan="3"><h4><a href="api/279.json" onclick="showPopup(279)">openssl - MD5, SHA1, and SHA256 digest</a></h4></th></tr>
 <tr>
 <td colspan="3">
 <pre before="BASH">$ openssl dgst -md5 README
@@ -3331,7 +3331,7 @@ SHA256(README)= d173e8ad75a8abbed8d21d4924ce145af7331f27a1a7b31e79e57271888ad54f
 
 <table>
 
-<tr><th colspan="3"><h4><a href="#278" onclick="showPopup(278)">openssl - extract information from a certificate</a></h4></th></tr>
+<tr><th colspan="3"><h4><a href="api/278.json" onclick="showPopup(278)">openssl - extract information from a certificate</a></h4></th></tr>
 <tr>
 <td colspan="3">
 <pre before="BASH">$ openssl x509 -noout -in cert.pem -issuer
@@ -3370,7 +3370,7 @@ SHA1 Fingerprint=E3:EB:7B:6B:01:2D:CE:3A:AD:63:00:AA:0B:60:08:F8:64:9F:1E:D9</pr
 
 <table>
 
-<tr><th colspan="3"><h4><a href="#277" onclick="showPopup(277)">openssl - list high encryption ciphers using the AES algorithm</a></h4></th></tr>
+<tr><th colspan="3"><h4><a href="api/277.json" onclick="showPopup(277)">openssl - list high encryption ciphers using the AES algorithm</a></h4></th></tr>
 <tr>
 <td colspan="3">
 <pre before="BASH">openssl ciphers -V 'AES+HIGH'</pre>
@@ -3481,7 +3481,7 @@ SHA1 Fingerprint=E3:EB:7B:6B:01:2D:CE:3A:AD:63:00:AA:0B:60:08:F8:64:9F:1E:D9</pr
 
 <table>
 
-<tr><th colspan="3"><h4><a href="#276" onclick="showPopup(276)">Powershell - set variables to get dynamic ADUser</a></h4></th></tr>
+<tr><th colspan="3"><h4><a href="api/276.json" onclick="showPopup(276)">Powershell - set variables to get dynamic ADUser</a></h4></th></tr>
 <tr>
 <td colspan="3">
 <pre before="POWERSHELL">$Self = Get-ADUser -Identity $Env:Username -Properties *
@@ -3503,7 +3503,7 @@ Get-ADUser  -Filter "dellOwnerID -like $EID"  -Properties * | sort-object -prope
 
 <table>
 
-<tr><th colspan="3"><h4><a href="#275" onclick="showPopup(275)">sssctl - get command usage from help</a></h4></th></tr>
+<tr><th colspan="3"><h4><a href="api/275.json" onclick="showPopup(275)">sssctl - get command usage from help</a></h4></th></tr>
 <tr>
 <td colspan="3">
 <pre before="BASH">sssctl --help</pre>
@@ -3560,7 +3560,7 @@ Help options:
 
 <table>
 
-<tr><th colspan="3"><h4><a href="#274" onclick="showPopup(274)">jq - get </a></h4></th></tr>
+<tr><th colspan="3"><h4><a href="api/274.json" onclick="showPopup(274)">jq - get </a></h4></th></tr>
 <tr>
 <td colspan="3">
 <pre before="BASH">curl -s 'https://api.github.com/repos/nntrn/dvt/commits?per_page=1' | jq '.[] | {message: .commit.message, date: .commit.committer.date}'</pre>
@@ -3586,7 +3586,7 @@ Help options:
 
 <table>
 
-<tr><th colspan="3"><h4><a href="#273" onclick="showPopup(273)">read powershell history and trim leading whitespace</a></h4></th></tr>
+<tr><th colspan="3"><h4><a href="api/273.json" onclick="showPopup(273)">read powershell history and trim leading whitespace</a></h4></th></tr>
 <tr>
 <td colspan="3">
 <pre before="POWERSHELL">POWERSHELL_HISTORY=${USERPROFILE,\\,\/,g}/AppData/Roaming/Microsoft/Windows/PowerShell/PSReadLine/ConsoleHost_history.txt
@@ -3606,7 +3606,7 @@ cat "$POWERSHELL_HISTORY" | sed 's/^[ \t]*//'</pre>
 
 <table>
 
-<tr><th colspan="3"><h4><a href="#272" onclick="showPopup(272)">get-help - show all loaded cmdlets, functions, and modules in powershell</a></h4></th></tr>
+<tr><th colspan="3"><h4><a href="api/272.json" onclick="showPopup(272)">get-help - show all loaded cmdlets, functions, and modules in powershell</a></h4></th></tr>
 <tr>
 <td colspan="3">
 <pre before="POWERSHELL">Get-Help Get | Format-Table Name,Category,Module -AutoSize -Wrap</pre>
@@ -3625,7 +3625,7 @@ cat "$POWERSHELL_HISTORY" | sed 's/^[ \t]*//'</pre>
 
 <table>
 
-<tr><th colspan="3"><h4><a href="#271" onclick="showPopup(271)">sudo - show root entries only </a></h4></th></tr>
+<tr><th colspan="3"><h4><a href="api/271.json" onclick="showPopup(271)">sudo - show root entries only </a></h4></th></tr>
 <tr>
 <td colspan="3">
 <pre before="BASH">sudo -ll | sed -n '/RunAsUsers: root/,/Sudoers entry/p'</pre>
@@ -3644,7 +3644,7 @@ cat "$POWERSHELL_HISTORY" | sed 's/^[ \t]*//'</pre>
 
 <table>
 
-<tr><th colspan="3"><h4><a href="#270" onclick="showPopup(270)">awk - split string into maxtrix-like table</a></h4></th></tr>
+<tr><th colspan="3"><h4><a href="api/270.json" onclick="showPopup(270)">awk - split string into maxtrix-like table</a></h4></th></tr>
 <tr>
 <td colspan="3">
 <pre before="BASH">echo "A,B,C,D,E,F,G,H,I,J,K,L,M,N,O" | awk -v RS='[,\n]' '{a=$0;getline b; getline c; print a,b,c}' OFS=,</pre>
@@ -3671,7 +3671,7 @@ M,N,O</pre>
 
 <table>
 
-<tr><th colspan="3"><h4><a href="#269" onclick="showPopup(269)">sed - prepending and appending to file/line</a></h4></th></tr>
+<tr><th colspan="3"><h4><a href="api/269.json" onclick="showPopup(269)">sed - prepending and appending to file/line</a></h4></th></tr>
 <tr>
 <td colspan="3">
 <pre before="BASH">s/^/"/g; - prepend double quotes to each line
@@ -3693,7 +3693,7 @@ $s/$/\n); - append to file</pre>
 
 <table>
 
-<tr><th colspan="3"><h4><a href="#268" onclick="showPopup(268)">vault - get openapi specs</a></h4></th></tr>
+<tr><th colspan="3"><h4><a href="api/268.json" onclick="showPopup(268)">vault - get openapi specs</a></h4></th></tr>
 <tr>
 <td colspan="3">
 <pre before="BASH">curl -H "X-Vault-Token: $VAULT_TOKEN" "$VAULT_ADDR/v1/sys/internal/specs/openapi"</pre>
@@ -3712,7 +3712,7 @@ $s/$/\n); - append to file</pre>
 
 <table>
 
-<tr><th colspan="3"><h4><a href="#267" onclick="showPopup(267)">openssl - for versions >1.1.1</a></h4></th></tr>
+<tr><th colspan="3"><h4><a href="api/267.json" onclick="showPopup(267)">openssl - for versions >1.1.1</a></h4></th></tr>
 <tr>
 <td colspan="3">
 <pre before="BASH">ENCRYPTEDFILE=.secrets.enc
@@ -3739,7 +3739,7 @@ openssl enc -d -aes-256-cbc -md sha512 -pbkdf2 -iter 100000 -base64 -salt -in $E
 
 <table>
 
-<tr><th colspan="3"><h4><a href="#266" onclick="showPopup(266)">get-adgroup - get all members for AD group</a></h4></th></tr>
+<tr><th colspan="3"><h4><a href="api/266.json" onclick="showPopup(266)">get-adgroup - get all members for AD group</a></h4></th></tr>
 <tr>
 <td colspan="3">
 <pre before="POWERSHELL">get-adgroup -Identity amerunixteam -properties *|Select -ExpandProperty member</pre>
@@ -3758,7 +3758,7 @@ openssl enc -d -aes-256-cbc -md sha512 -pbkdf2 -iter 100000 -base64 -salt -in $E
 
 <table>
 
-<tr><th colspan="3"><h4><a href="#265" onclick="showPopup(265)">prometheus - curl metrics</a></h4></th></tr>
+<tr><th colspan="3"><h4><a href="api/265.json" onclick="showPopup(265)">prometheus - curl metrics</a></h4></th></tr>
 <tr>
 <td colspan="3">
 <pre before="BASH">curl http://127.0.0.1:9190/integrations/node_exporter/metrics</pre>
@@ -3777,7 +3777,7 @@ openssl enc -d -aes-256-cbc -md sha512 -pbkdf2 -iter 100000 -base64 -salt -in $E
 
 <table>
 
-<tr><th colspan="3"><h4><a href="#264" onclick="showPopup(264)">ls - sortable ls</a></h4></th></tr>
+<tr><th colspan="3"><h4><a href="api/264.json" onclick="showPopup(264)">ls - sortable ls</a></h4></th></tr>
 <tr>
 <td colspan="3">
 <pre before="BASH">ls -lptr --time-style='+%s %FT%T' --no-group --group-directories-first </pre>
@@ -3808,7 +3808,7 @@ drwxrwxr-x 4 annie_tran      45 1648750176 2022-03-31T13:09:36 devops-git/</pre>
 
 <table>
 
-<tr><th colspan="3"><h4><a href="#263" onclick="showPopup(263)">vault - enable and write userpass</a></h4></th></tr>
+<tr><th colspan="3"><h4><a href="api/263.json" onclick="showPopup(263)">vault - enable and write userpass</a></h4></th></tr>
 <tr>
 <td colspan="3">
 <pre before="BASH">vault auth enable userpass
@@ -3828,7 +3828,7 @@ vault write auth/userpass/users/annie_tran password=secret</pre>
 
 <table>
 
-<tr><th colspan="3"><h4><a href="#262" onclick="showPopup(262)">get environment names matching prefix</a></h4></th></tr>
+<tr><th colspan="3"><h4><a href="api/262.json" onclick="showPopup(262)">get environment names matching prefix</a></h4></th></tr>
 <tr>
 <td colspan="3">
 <pre before="BASH">${!prefix*}
@@ -3848,7 +3848,7 @@ ${!prefix@}</pre>
 
 <table>
 
-<tr><th colspan="3"><h4><a href="#261" onclick="showPopup(261)">convert json to yaml from stdin</a></h4></th></tr>
+<tr><th colspan="3"><h4><a href="api/261.json" onclick="showPopup(261)">convert json to yaml from stdin</a></h4></th></tr>
 <tr>
 <td colspan="3">
 <pre before="PYTHON">python3 -c "import yaml, json, sys; sys.stdout.write(yaml.dump(json.load(sys.stdin)))"</pre>
@@ -3867,7 +3867,7 @@ ${!prefix@}</pre>
 
 <table>
 
-<tr><th colspan="3"><h4><a href="#260" onclick="showPopup(260)">Get the parent directory of where this script is.</a></h4></th></tr>
+<tr><th colspan="3"><h4><a href="api/260.json" onclick="showPopup(260)">Get the parent directory of where this script is.</a></h4></th></tr>
 <tr>
 <td colspan="3">
 <pre before="BASH">SOURCE="${BASH_SOURCE[0]}"
@@ -3888,7 +3888,7 @@ DIR="$( cd -P "$( dirname "$SOURCE" )/.." && pwd )"</pre>
 
 <table>
 
-<tr><th colspan="3"><h4><a href="#259" onclick="showPopup(259)">investigate sockets & processes</a></h4></th></tr>
+<tr><th colspan="3"><h4><a href="api/259.json" onclick="showPopup(259)">investigate sockets & processes</a></h4></th></tr>
 <tr>
 <td colspan="3">
 <pre before="BASH">$ ss -tulnp
@@ -3914,7 +3914,7 @@ $  procinfo $PID</pre>
 
 <table>
 
-<tr><th colspan="3"><h4><a href="#258" onclick="showPopup(258)">vault - list secrets in path</a></h4></th></tr>
+<tr><th colspan="3"><h4><a href="api/258.json" onclick="showPopup(258)">vault - list secrets in path</a></h4></th></tr>
 <tr>
 <td colspan="3">
 <pre before="BASH">vault kv list -format=json 'kv/awx/svc_account/'</pre>
@@ -3933,7 +3933,7 @@ $  procinfo $PID</pre>
 
 <table>
 
-<tr><th colspan="3"><h4><a href="#257" onclick="showPopup(257)">venv </a></h4></th></tr>
+<tr><th colspan="3"><h4><a href="api/257.json" onclick="showPopup(257)">venv </a></h4></th></tr>
 <tr>
 <td colspan="3">
 <pre before="PYTHON">python -m venv .venv
@@ -3953,7 +3953,7 @@ source .venv/bin/activate</pre>
 
 <table>
 
-<tr><th colspan="3"><h4><a href="#256" onclick="showPopup(256)">curl - renew vault token</a></h4></th></tr>
+<tr><th colspan="3"><h4><a href="api/256.json" onclick="showPopup(256)">curl - renew vault token</a></h4></th></tr>
 <tr>
 <td colspan="3">
 <pre before="BASH">curl -X PUT -H "X-Vault-Namespace: infrastructure/database/engineering" -H "X-Vault-Request: true" -H "X-Vault-Token: $VAULT_TOKEN)" -d '{"increment":"24h"}' https://hcvault.example.com/v1/auth/token/renew-self</pre>
@@ -3972,7 +3972,7 @@ source .venv/bin/activate</pre>
 
 <table>
 
-<tr><th colspan="3"><h4><a href="#255" onclick="showPopup(255)">vault - update secret with file</a></h4></th></tr>
+<tr><th colspan="3"><h4><a href="api/255.json" onclick="showPopup(255)">vault - update secret with file</a></h4></th></tr>
 <tr>
 <td colspan="3">
 <pre before="BASH">vault kv put 'kv/path/to/secrets' @file-with-object.json</pre>
@@ -4005,7 +4005,7 @@ version            2</pre>
 
 <table>
 
-<tr><th colspan="3"><h4><a href="#254" onclick="showPopup(254)">find directories that do not have sticky bit for group</a></h4></th></tr>
+<tr><th colspan="3"><h4><a href="api/254.json" onclick="showPopup(254)">find directories that do not have sticky bit for group</a></h4></th></tr>
 <tr>
 <td colspan="3">
 <pre before="BASH">find $DIR -maxdepth 3 -mindepth 1 -type d ! -perm -2000 -print -exec chmod g+s {} \;</pre>
@@ -4024,7 +4024,7 @@ version            2</pre>
 
 <table>
 
-<tr><th colspan="3"><h4><a href="#253" onclick="showPopup(253)">git - get top level directory</a></h4></th></tr>
+<tr><th colspan="3"><h4><a href="api/253.json" onclick="showPopup(253)">git - get top level directory</a></h4></th></tr>
 <tr>
 <td colspan="3">
 <pre before="BASH">git rev-parse --show-toplevel</pre>
@@ -4043,7 +4043,7 @@ version            2</pre>
 
 <table>
 
-<tr><th colspan="3"><h4><a href="#252" onclick="showPopup(252)">prettier - alias for stdin formatting for xml files</a></h4></th></tr>
+<tr><th colspan="3"><h4><a href="api/252.json" onclick="showPopup(252)">prettier - alias for stdin formatting for xml files</a></h4></th></tr>
 <tr>
 <td colspan="3">
 <pre before="BASH">alias prettier-xml='prettier --bracket-same-line true --xml-whitespace-sensitivity ignore --tab-width 2 --print-width 120 --stdin-filepath  *.xml'</pre>
@@ -4062,7 +4062,7 @@ version            2</pre>
 
 <table>
 
-<tr><th colspan="3"><h4><a href="#251" onclick="showPopup(251)">powershell - run noprofile command in shell (bash)</a></h4></th></tr>
+<tr><th colspan="3"><h4><a href="api/251.json" onclick="showPopup(251)">powershell - run noprofile command in shell (bash)</a></h4></th></tr>
 <tr>
 <td colspan="3">
 <pre before="BASH">powershell -noprofile -command "<command to run>"</pre>
@@ -4081,7 +4081,7 @@ version            2</pre>
 
 <table>
 
-<tr><th colspan="3"><h4><a href="#250" onclick="showPopup(250)">git - remove commits matching pattern in message</a></h4></th></tr>
+<tr><th colspan="3"><h4><a href="api/250.json" onclick="showPopup(250)">git - remove commits matching pattern in message</a></h4></th></tr>
 <tr>
 <td colspan="3">
 <pre before="BASH">git filter-branch --commit-filter '
@@ -4106,7 +4106,7 @@ version            2</pre>
 
 <table>
 
-<tr><th colspan="3"><h4><a href="#249" onclick="showPopup(249)">password last reset</a></h4></th></tr>
+<tr><th colspan="3"><h4><a href="api/249.json" onclick="showPopup(249)">password last reset</a></h4></th></tr>
 <tr>
 <td colspan="3">
 <pre before="POWERSHELL">Get-ADUser  -Filter 'description -like "*Annie_Tran"'  -Properties *  | Sort-Object -Property PasswordLastSet | Format-Table Name,PasswordLastSet -AutoSize -Wrap</pre>
@@ -4145,7 +4145,7 @@ svc_account  4/11/2021 2:47:43 PM
 
 <table>
 
-<tr><th colspan="3"><h4><a href="#248" onclick="showPopup(248)">ansible-vault - encrypt string with vault id</a></h4></th></tr>
+<tr><th colspan="3"><h4><a href="api/248.json" onclick="showPopup(248)">ansible-vault - encrypt string with vault id</a></h4></th></tr>
 <tr>
 <td colspan="3">
 <pre before="BASH">echo -n 'letmein' | ansible-vault encrypt_string --vault-id dev@a_password_file --stdin-name 'db_password'</pre>
@@ -4175,7 +4175,7 @@ ANSIBLE_VAULT;1.2;AES256;dev
 
 <table>
 
-<tr><th colspan="3"><h4><a href="#247" onclick="showPopup(247)">uuidgen - create a new UUID value</a></h4></th></tr>
+<tr><th colspan="3"><h4><a href="api/247.json" onclick="showPopup(247)">uuidgen - create a new UUID value</a></h4></th></tr>
 <tr>
 <td colspan="3">
 <pre before="BASH">uuidgen --sha1 --namespace @dns --name "string_to_hash"</pre>
@@ -4194,7 +4194,7 @@ ANSIBLE_VAULT;1.2;AES256;dev
 
 <table>
 
-<tr><th colspan="3"><h4><a href="#246" onclick="showPopup(246)">find files created in the last hour</a></h4></th></tr>
+<tr><th colspan="3"><h4><a href="api/246.json" onclick="showPopup(246)">find files created in the last hour</a></h4></th></tr>
 <tr>
 <td colspan="3">
 <pre before="BASH">find . -mindepth 1 -maxdepth 1 -type d -ctime 0 -print</pre>
@@ -4213,7 +4213,7 @@ ANSIBLE_VAULT;1.2;AES256;dev
 
 <table>
 
-<tr><th colspan="3"><h4><a href="#245" onclick="showPopup(245)">systemd-escape - escape strings </a></h4></th></tr>
+<tr><th colspan="3"><h4><a href="api/245.json" onclick="showPopup(245)">systemd-escape - escape strings </a></h4></th></tr>
 <tr>
 <td colspan="3">
 <pre before="BASH">systemd-escape -u 'Hall\xc3\xb6chen\x2c\x20Meister'</pre>
@@ -4236,7 +4236,7 @@ ANSIBLE_VAULT;1.2;AES256;dev
 
 <table>
 
-<tr><th colspan="3"><h4><a href="#244" onclick="showPopup(244)">ansible playbook variables</a></h4></th></tr>
+<tr><th colspan="3"><h4><a href="api/244.json" onclick="showPopup(244)">ansible playbook variables</a></h4></th></tr>
 <tr>
 <td colspan="3">
 <pre before="YAML">- "{{ var | to_nice_json }}"
@@ -4292,7 +4292,7 @@ ANSIBLE_VAULT;1.2;AES256;dev
 
 <table>
 
-<tr><th colspan="3"><h4><a href="#243" onclick="showPopup(243)">openssl salted encryption/decryption</a></h4></th></tr>
+<tr><th colspan="3"><h4><a href="api/243.json" onclick="showPopup(243)">openssl salted encryption/decryption</a></h4></th></tr>
 <tr>
 <td colspan="3">
 <pre before="BASH">echo 'example' >.vault-password
@@ -4318,7 +4318,7 @@ openssl enc -d -aes256 -a -in .secrets.enc -pass file:./.vault-password</pre>
 
 <table>
 
-<tr><th colspan="3"><h4><a href="#242" onclick="showPopup(242)">openssl crypt-style password hash</a></h4></th></tr>
+<tr><th colspan="3"><h4><a href="api/242.json" onclick="showPopup(242)">openssl crypt-style password hash</a></h4></th></tr>
 <tr>
 <td colspan="3">
 <pre before="BASH">$ openssl passwd MySecret
@@ -4341,7 +4341,7 @@ $ openssl passwd -salt 8E MySecret
 
 <table>
 
-<tr><th colspan="3"><h4><a href="#241" onclick="showPopup(241)">openssl benchmark</a></h4></th></tr>
+<tr><th colspan="3"><h4><a href="api/241.json" onclick="showPopup(241)">openssl benchmark</a></h4></th></tr>
 <tr>
 <td colspan="3">
 <pre before="BASH">openssl speed</pre>
@@ -4360,7 +4360,7 @@ $ openssl passwd -salt 8E MySecret
 
 <table>
 
-<tr><th colspan="3"><h4><a href="#240" onclick="showPopup(240)">stat - display file properties</a></h4></th></tr>
+<tr><th colspan="3"><h4><a href="api/240.json" onclick="showPopup(240)">stat - display file properties</a></h4></th></tr>
 <tr>
 <td colspan="3">
 <pre before="BASH">stat --printf='%U\n%G\n%z\n' $FILEORDIR</pre>
@@ -4385,7 +4385,7 @@ wheel
 
 <table>
 
-<tr><th colspan="3"><h4><a href="#239" onclick="showPopup(239)">systemctl examples</a></h4></th></tr>
+<tr><th colspan="3"><h4><a href="api/239.json" onclick="showPopup(239)">systemctl examples</a></h4></th></tr>
 <tr>
 <td colspan="3">
 <pre before="BASH">## VIEWING systemd INFORMATION
@@ -4442,7 +4442,7 @@ journalctl -k                 # Show only kernel messages</pre>
 
 <table>
 
-<tr><th colspan="3"><h4><a href="#238" onclick="showPopup(238)">openssl - verify checksum</a></h4></th></tr>
+<tr><th colspan="3"><h4><a href="api/238.json" onclick="showPopup(238)">openssl - verify checksum</a></h4></th></tr>
 <tr>
 <td colspan="3">
 <pre before="BASH">openssl sha1 -sha256 file.txt | awk '{print $2}'</pre>
@@ -4461,7 +4461,7 @@ journalctl -k                 # Show only kernel messages</pre>
 
 <table>
 
-<tr><th colspan="3"><h4><a href="#237" onclick="showPopup(237)">print statistics of a process</a></h4></th></tr>
+<tr><th colspan="3"><h4><a href="api/237.json" onclick="showPopup(237)">print statistics of a process</a></h4></th></tr>
 <tr>
 <td colspan="3">
 <pre before="BASH">prtstat $PID</pre>
@@ -4505,7 +4505,7 @@ Scheduling
 
 <table>
 
-<tr><th colspan="3"><h4><a href="#236" onclick="showPopup(236)">mpstat - processors related staserver.</a></h4></th></tr>
+<tr><th colspan="3"><h4><a href="api/236.json" onclick="showPopup(236)">mpstat - processors related staserver.</a></h4></th></tr>
 <tr>
 <td colspan="3">
 <pre before="BASH">mpstat 2 5</pre>
@@ -4536,7 +4536,7 @@ Average:     all    0.70    0.00    0.85    0.05    0.15    0.10    0.00    0.00
 
 <table>
 
-<tr><th colspan="3"><h4><a href="#235" onclick="showPopup(235)">read network interface statistics</a></h4></th></tr>
+<tr><th colspan="3"><h4><a href="api/235.json" onclick="showPopup(235)">read network interface statistics</a></h4></th></tr>
 <tr>
 <td colspan="3">
 <pre before="BASH">ifstat -j -p</pre>
@@ -4658,7 +4658,7 @@ Average:     all    0.70    0.00    0.85    0.05    0.15    0.10    0.00    0.00
 
 <table>
 
-<tr><th colspan="3"><h4><a href="#234" onclick="showPopup(234)">procinfo: display all system status gathered from /proc</a></h4></th></tr>
+<tr><th colspan="3"><h4><a href="api/234.json" onclick="showPopup(234)">procinfo: display all system status gathered from /proc</a></h4></th></tr>
 <tr>
 <td colspan="3">
 <pre before="BASH">procinfo -a</pre>
@@ -4737,7 +4737,7 @@ Modules:
 
 <table>
 
-<tr><th colspan="3"><h4><a href="#233" onclick="showPopup(233)">show most expensive CPU process</a></h4></th></tr>
+<tr><th colspan="3"><h4><a href="api/233.json" onclick="showPopup(233)">show most expensive CPU process</a></h4></th></tr>
 <tr>
 <td colspan="3">
 <pre before="BASH">dstat --top-cpu</pre>
@@ -4771,7 +4771,7 @@ zabbix_agent20.5^C</pre>
 
 <table>
 
-<tr><th colspan="3"><h4><a href="#232" onclick="showPopup(232)">gnu tools</a></h4></th></tr>
+<tr><th colspan="3"><h4><a href="api/232.json" onclick="showPopup(232)">gnu tools</a></h4></th></tr>
 <tr>
 <td colspan="3">
 <pre before="BASH">man dstat</pre>
@@ -4790,7 +4790,7 @@ zabbix_agent20.5^C</pre>
 
 <table>
 
-<tr><th colspan="3"><h4><a href="#231" onclick="showPopup(231)">list block devices</a></h4></th></tr>
+<tr><th colspan="3"><h4><a href="api/231.json" onclick="showPopup(231)">list block devices</a></h4></th></tr>
 <tr>
 <td colspan="3">
 <pre before="BASH">lsblk -a -p</pre>
@@ -4832,7 +4832,7 @@ zabbix_agent20.5^C</pre>
 
 <table>
 
-<tr><th colspan="3"><h4><a href="#230" onclick="showPopup(230)">examples illustrating substring expansion</a></h4></th></tr>
+<tr><th colspan="3"><h4><a href="api/230.json" onclick="showPopup(230)">examples illustrating substring expansion</a></h4></th></tr>
 <tr>
 <td colspan="3">
 <pre before="BASH">$ set -- 01234567890abcdefgh
@@ -4872,7 +4872,7 @@ bcdef</pre>
 
 <table>
 
-<tr><th colspan="3"><h4><a href="#229" onclick="showPopup(229)">systemctl - Get enabled services</a></h4></th></tr>
+<tr><th colspan="3"><h4><a href="api/229.json" onclick="showPopup(229)">systemctl - Get enabled services</a></h4></th></tr>
 <tr>
 <td colspan="3">
 <pre before="BASH">systemctl list-unit-files --state=enabled --type=service --no-legend | awk '{print $1}'</pre>
@@ -4891,7 +4891,7 @@ bcdef</pre>
 
 <table>
 
-<tr><th colspan="3"><h4><a href="#228" onclick="showPopup(228)">get non default values for ansible config</a></h4></th></tr>
+<tr><th colspan="3"><h4><a href="api/228.json" onclick="showPopup(228)">get non default values for ansible config</a></h4></th></tr>
 <tr>
 <td colspan="3">
 <pre before="BASH">ansible-config dump | grep -v '\(default\)' | sed 's,(.*cfg),,g'</pre>
@@ -4933,7 +4933,7 @@ SYSTEM_WARNINGS = False</pre>
 
 <table>
 
-<tr><th colspan="3"><h4><a href="#227" onclick="showPopup(227)">disable ldap login for user</a></h4></th></tr>
+<tr><th colspan="3"><h4><a href="api/227.json" onclick="showPopup(227)">disable ldap login for user</a></h4></th></tr>
 <tr>
 <td colspan="3">
 <pre before="BASH">echo '-:svc_account:ALL' | tee -a /etc/security/access.conf</pre>
@@ -4952,7 +4952,7 @@ SYSTEM_WARNINGS = False</pre>
 
 <table>
 
-<tr><th colspan="3"><h4><a href="#226" onclick="showPopup(226)">restart failed services</a></h4></th></tr>
+<tr><th colspan="3"><h4><a href="api/226.json" onclick="showPopup(226)">restart failed services</a></h4></th></tr>
 <tr>
 <td colspan="3">
 <pre before="BASH">systemctl list-units --failed --no-legend | awk '{print $1}'| xargs -I % systemctl status % && systemctl restart %</pre>
@@ -4971,7 +4971,7 @@ SYSTEM_WARNINGS = False</pre>
 
 <table>
 
-<tr><th colspan="3"><h4><a href="#225" onclick="showPopup(225)">kill all processes for user</a></h4></th></tr>
+<tr><th colspan="3"><h4><a href="api/225.json" onclick="showPopup(225)">kill all processes for user</a></h4></th></tr>
 <tr>
 <td colspan="3">
 <pre before="BASH">pkill -HUP -u annie_tran</pre>
@@ -4990,7 +4990,7 @@ SYSTEM_WARNINGS = False</pre>
 
 <table>
 
-<tr><th colspan="3"><h4><a href="#224" onclick="showPopup(224)">zip files in current directory</a></h4></th></tr>
+<tr><th colspan="3"><h4><a href="api/224.json" onclick="showPopup(224)">zip files in current directory</a></h4></th></tr>
 <tr>
 <td colspan="3">
 <pre before="BASH">find . -maxdepth 1 -type d -exec zip archive.zip {} +</pre>
@@ -5009,7 +5009,7 @@ SYSTEM_WARNINGS = False</pre>
 
 <table>
 
-<tr><th colspan="3"><h4><a href="#223" onclick="showPopup(223)">Display the running processes of a container</a></h4></th></tr>
+<tr><th colspan="3"><h4><a href="api/223.json" onclick="showPopup(223)">Display the running processes of a container</a></h4></th></tr>
 <tr>
 <td colspan="3">
 <pre before="BASH">$ docker top awx_task</pre>
@@ -5048,7 +5048,7 @@ root                3226                3153                0                   
 
 <table>
 
-<tr><th colspan="3"><h4><a href="#222" onclick="showPopup(222)">nstat (better way of getting network statistics)</a></h4></th></tr>
+<tr><th colspan="3"><h4><a href="api/222.json" onclick="showPopup(222)">nstat (better way of getting network statistics)</a></h4></th></tr>
 <tr>
 <td colspan="3">
 <pre before="BASH">nstat -a -t 60</pre>
@@ -5177,7 +5177,7 @@ IpExtInNoECTPkts                11733275           0.0</pre>
 
 <table>
 
-<tr><th colspan="3"><h4><a href="#221" onclick="showPopup(221)">systemd-cgls: recursively show control group contents.</a></h4></th></tr>
+<tr><th colspan="3"><h4><a href="api/221.json" onclick="showPopup(221)">systemd-cgls: recursively show control group contents.</a></h4></th></tr>
 <tr>
 <td colspan="3">
 <pre before="BASH">systemd-cgls</pre>
@@ -5252,7 +5252,7 @@ IpExtInNoECTPkts                11733275           0.0</pre>
 
 <table>
 
-<tr><th colspan="3"><h4><a href="#220" onclick="showPopup(220)">Gather listening ports</a></h4></th></tr>
+<tr><th colspan="3"><h4><a href="api/220.json" onclick="showPopup(220)">Gather listening ports</a></h4></th></tr>
 <tr>
 <td colspan="3">
 <pre before="BASH">netstat -ln --inet --program</pre>
@@ -5305,7 +5305,7 @@ udp        0      0 0.0.0.0:21989           0.0.0.0:*                           
 
 <table>
 
-<tr><th colspan="3"><h4><a href="#219" onclick="showPopup(219)">map view of pids owned by services</a></h4></th></tr>
+<tr><th colspan="3"><h4><a href="api/219.json" onclick="showPopup(219)">map view of pids owned by services</a></h4></th></tr>
 <tr>
 <td colspan="3">
 <pre before="BASH">ps xawf -eo pid,user,cgroup,args</pre>
@@ -5359,7 +5359,7 @@ udp        0      0 0.0.0.0:21989           0.0.0.0:*                           
 
 <table>
 
-<tr><th colspan="3"><h4><a href="#218" onclick="showPopup(218)">clean docker (to factory)</a></h4></th></tr>
+<tr><th colspan="3"><h4><a href="api/218.json" onclick="showPopup(218)">clean docker (to factory)</a></h4></th></tr>
 <tr>
 <td colspan="3">
 <pre before="BASH"># 1. Stop all containers
@@ -5388,7 +5388,7 @@ docker rmi $(docker images -q)</pre>
 
 <table>
 
-<tr><th colspan="3"><h4><a href="#217" onclick="showPopup(217)">Delete Orphaned Docker Volumes</a></h4></th></tr>
+<tr><th colspan="3"><h4><a href="api/217.json" onclick="showPopup(217)">Delete Orphaned Docker Volumes</a></h4></th></tr>
 <tr>
 <td colspan="3">
 <pre before="BASH">docker volume rm $(docker volume ls -qf dangling=true)</pre>
@@ -5407,7 +5407,7 @@ docker rmi $(docker images -q)</pre>
 
 <table>
 
-<tr><th colspan="3"><h4><a href="#216" onclick="showPopup(216)">docker root systemd drop-in service</a></h4></th></tr>
+<tr><th colspan="3"><h4><a href="api/216.json" onclick="showPopup(216)">docker root systemd drop-in service</a></h4></th></tr>
 <tr>
 <td colspan="3">
 <pre before="BASH">mkdir -p /u01/docker-root
@@ -5434,7 +5434,7 @@ systemctl restart docker</pre>
 
 <table>
 
-<tr><th colspan="3"><h4><a href="#215" onclick="showPopup(215)">cygwin - open terminal here</a></h4></th></tr>
+<tr><th colspan="3"><h4><a href="api/215.json" onclick="showPopup(215)">cygwin - open terminal here</a></h4></th></tr>
 <tr>
 <td colspan="3">
 <pre before="BASH">echo 'cd "$OLDPWD"' >> .bashrc
@@ -5455,7 +5455,7 @@ C:\Users\annie_tran.AMERICAS\cyg\bin\bash --login -i</pre>
 
 <table>
 
-<tr><th colspan="3"><h4><a href="#214" onclick="showPopup(214)">find files created on this date</a></h4></th></tr>
+<tr><th colspan="3"><h4><a href="api/214.json" onclick="showPopup(214)">find files created on this date</a></h4></th></tr>
 <tr>
 <td colspan="3">
 <pre before="BASH">find /tmp -maxdepth 1 -type f -newermt 2022-02-02 ! -newermt 2022-02-04 -print -exec rm -rf {} \;</pre>
@@ -5474,7 +5474,7 @@ C:\Users\annie_tran.AMERICAS\cyg\bin\bash --login -i</pre>
 
 <table>
 
-<tr><th colspan="3"><h4><a href="#213" onclick="showPopup(213)">cleanup leftover open files</a></h4></th></tr>
+<tr><th colspan="3"><h4><a href="api/213.json" onclick="showPopup(213)">cleanup leftover open files</a></h4></th></tr>
 <tr>
 <td colspan="3">
 <pre before="BASH">kill -9 $(lsof |grep deleted|awk '{print $2}'|sort -u)</pre>
@@ -5493,7 +5493,7 @@ C:\Users\annie_tran.AMERICAS\cyg\bin\bash --login -i</pre>
 
 <table>
 
-<tr><th colspan="3"><h4><a href="#212" onclick="showPopup(212)">awx - get token</a></h4></th></tr>
+<tr><th colspan="3"><h4><a href="api/212.json" onclick="showPopup(212)">awx - get token</a></h4></th></tr>
 <tr>
 <td colspan="3">
 <pre before="BASH">get_token() {
@@ -5518,7 +5518,7 @@ echo "TOWER_HOST=http://$1" >
 
 <table>
 
-<tr><th colspan="3"><h4><a href="#211" onclick="showPopup(211)">du - aggregate directory size</a></h4></th></tr>
+<tr><th colspan="3"><h4><a href="api/211.json" onclick="showPopup(211)">du - aggregate directory size</a></h4></th></tr>
 <tr>
 <td colspan="3">
 <pre before="BASH">du -h -d 1 .</pre>
@@ -5563,7 +5563,7 @@ echo "TOWER_HOST=http://$1" >
 
 <table>
 
-<tr><th colspan="3"><h4><a href="#209" onclick="showPopup(209)">check memory usage per process</a></h4></th></tr>
+<tr><th colspan="3"><h4><a href="api/209.json" onclick="showPopup(209)">check memory usage per process</a></h4></th></tr>
 <tr>
 <td colspan="3">
 <pre before="BASH">ps -eo pid,tid,class,rtprio,stat,vsz,rss,comm</pre>
@@ -5582,7 +5582,7 @@ echo "TOWER_HOST=http://$1" >
 
 <table>
 
-<tr><th colspan="3"><h4><a href="#208" onclick="showPopup(208)">date unix timestamp to format</a></h4></th></tr>
+<tr><th colspan="3"><h4><a href="api/208.json" onclick="showPopup(208)">date unix timestamp to format</a></h4></th></tr>
 <tr>
 <td colspan="3">
 <pre before="BASH">date -d @$TIMESTAMP</pre>
@@ -5605,7 +5605,7 @@ echo "TOWER_HOST=http://$1" >
 
 <table>
 
-<tr><th colspan="3"><h4><a href="#207" onclick="showPopup(207)">build json using jq</a></h4></th></tr>
+<tr><th colspan="3"><h4><a href="api/207.json" onclick="showPopup(207)">build json using jq</a></h4></th></tr>
 <tr>
 <td colspan="3">
 <pre before="BASH">str='delete delete modified other other other'
@@ -5659,7 +5659,7 @@ done</pre>
 
 <table>
 
-<tr><th colspan="3"><h4><a href="#206" onclick="showPopup(206)">create csv from json (jq)</a></h4></th></tr>
+<tr><th colspan="3"><h4><a href="api/206.json" onclick="showPopup(206)">create csv from json (jq)</a></h4></th></tr>
 <tr>
 <td colspan="3">
 <pre before="BASH">wget -qO- http://programminghistorian.org/assets/jq_rkm.json | jq -r '.artObjects[] | [.id, .title, .principalOrFirstMaker, .webImage.url] | @csv'</pre>
@@ -5691,7 +5691,7 @@ done</pre>
 
 <table>
 
-<tr><th colspan="3"><h4><a href="#205" onclick="showPopup(205)">ps do not print columns</a></h4></th></tr>
+<tr><th colspan="3"><h4><a href="api/205.json" onclick="showPopup(205)">ps do not print columns</a></h4></th></tr>
 <tr>
 <td colspan="3">
 <pre before="BASH">ps -o pid=''</pre>
@@ -5721,7 +5721,7 @@ $ ps -o pid=''
 
 <table>
 
-<tr><th colspan="3"><h4><a href="#204" onclick="showPopup(204)">only get pid</a></h4></th></tr>
+<tr><th colspan="3"><h4><a href="api/204.json" onclick="showPopup(204)">only get pid</a></h4></th></tr>
 <tr>
 <td colspan="3">
 <pre before="BASH">ps -efo pid</pre>
@@ -5748,7 +5748,7 @@ $ ps -o pid=''
 
 <table>
 
-<tr><th colspan="3"><h4><a href="#203" onclick="showPopup(203)">os detection</a></h4></th></tr>
+<tr><th colspan="3"><h4><a href="api/203.json" onclick="showPopup(203)">os detection</a></h4></th></tr>
 <tr>
 <td colspan="3">
 <pre before="BASH">case "$OSTYPE" in
@@ -5775,7 +5775,7 @@ esac</pre>
 
 <table>
 
-<tr><th colspan="3"><h4><a href="#202" onclick="showPopup(202)">get name server</a></h4></th></tr>
+<tr><th colspan="3"><h4><a href="api/202.json" onclick="showPopup(202)">get name server</a></h4></th></tr>
 <tr>
 <td colspan="3">
 <pre before="BASH"> host -t ns example.com</pre>
@@ -5806,7 +5806,7 @@ example.com name server uslserver.us.example.com.</pre>
 
 <table>
 
-<tr><th colspan="3"><h4><a href="#201" onclick="showPopup(201)">Check client certificate</a></h4></th></tr>
+<tr><th colspan="3"><h4><a href="api/201.json" onclick="showPopup(201)">Check client certificate</a></h4></th></tr>
 <tr>
 <td colspan="3">
 <pre before="BASH">echo '' | openssl s_client -connect awxserver.us.example.com:443 2>/dev/null | openssl x509 -text -noout | grep -A 1 "Public Key Algorithm"</pre>
@@ -5831,7 +5831,7 @@ example.com name server uslserver.us.example.com.</pre>
 
 <table>
 
-<tr><th colspan="3"><h4><a href="#200" onclick="showPopup(200)">Cleaning up the VS Code Server on the remote</a></h4></th></tr>
+<tr><th colspan="3"><h4><a href="api/200.json" onclick="showPopup(200)">Cleaning up the VS Code Server on the remote</a></h4></th></tr>
 <tr>
 <td colspan="3">
 <pre before="BASH">kill -9 `ps ax | grep "remoteExtensionHostAgent.js" | grep -v grep | awk '{print $1}'`
@@ -5852,7 +5852,7 @@ rm -rf ~/.vscode-server # Or ~/.vscode-server-insiders</pre>
 
 <table>
 
-<tr><th colspan="3"><h4><a href="#199" onclick="showPopup(199)">get process pid and parent id</a></h4></th></tr>
+<tr><th colspan="3"><h4><a href="api/199.json" onclick="showPopup(199)">get process pid and parent id</a></h4></th></tr>
 <tr>
 <td colspan="3">
 <pre before="BASH">ps -ax -o pid=,ppid=,command= | grep -v "\[" | sort -k3 -k2 -k1</pre>
@@ -5871,7 +5871,7 @@ rm -rf ~/.vscode-server # Or ~/.vscode-server-insiders</pre>
 
 <table>
 
-<tr><th colspan="3"><h4><a href="#198" onclick="showPopup(198)">start ssh agent on login</a></h4></th></tr>
+<tr><th colspan="3"><h4><a href="api/198.json" onclick="showPopup(198)">start ssh agent on login</a></h4></th></tr>
 <tr>
 <td colspan="3">
 <pre before="BASH">if [ -z "$SSH_AUTH_SOCK" ]; then
@@ -5898,7 +5898,7 @@ fi</pre>
 
 <table>
 
-<tr><th colspan="3"><h4><a href="#197" onclick="showPopup(197)">enable ssh controlmaster - ssh sessions</a></h4></th></tr>
+<tr><th colspan="3"><h4><a href="api/197.json" onclick="showPopup(197)">enable ssh controlmaster - ssh sessions</a></h4></th></tr>
 <tr>
 <td colspan="3">
 <pre before="CONFIG">Host *
@@ -5920,7 +5920,7 @@ fi</pre>
 
 <table>
 
-<tr><th colspan="3"><h4><a href="#196" onclick="showPopup(196)">env reduced environment</a></h4></th></tr>
+<tr><th colspan="3"><h4><a href="api/196.json" onclick="showPopup(196)">env reduced environment</a></h4></th></tr>
 <tr>
 <td colspan="3">
 <pre before="BASH">env - PATH="$PATH" foo</pre>
@@ -5939,7 +5939,7 @@ fi</pre>
 
 <table>
 
-<tr><th colspan="3"><h4><a href="#195" onclick="showPopup(195)">List available powershell commands</a></h4></th></tr>
+<tr><th colspan="3"><h4><a href="api/195.json" onclick="showPopup(195)">List available powershell commands</a></h4></th></tr>
 <tr>
 <td colspan="3">
 <pre before="POWERSHELL">gcm -module DISM</pre>
@@ -5989,7 +5989,7 @@ Cmdlet          Expand-WindowsCustomDataImage                      3.0        Di
 
 <table>
 
-<tr><th colspan="3"><h4><a href="#194" onclick="showPopup(194)">util linux</a></h4></th></tr>
+<tr><th colspan="3"><h4><a href="api/194.json" onclick="showPopup(194)">util linux</a></h4></th></tr>
 <tr>
 <td colspan="3">
 <pre before="BASH">file_system=(cat chmod chown chgrp cksum cmp cp dd du df file fuser ln ls mkdir mv pax pwd rm rmdir split tee touch type umask)
@@ -6016,7 +6016,7 @@ miscellaneous=(bc cal expr lp od sleep true false)</pre>
 
 <table>
 
-<tr><th colspan="3"><h4><a href="#193" onclick="showPopup(193)">psql: cast json and pretty print</a></h4></th></tr>
+<tr><th colspan="3"><h4><a href="api/193.json" onclick="showPopup(193)">psql: cast json and pretty print</a></h4></th></tr>
 <tr>
 <td colspan="3">
 <pre before="SQL">select jsonb_pretty(extra_data::jsonb) 
@@ -6066,7 +6066,7 @@ jsonb_pretty | {                                                                
 
 <table>
 
-<tr><th colspan="3"><h4><a href="#192" onclick="showPopup(192)">postgresql list and order tables by size</a></h4></th></tr>
+<tr><th colspan="3"><h4><a href="api/192.json" onclick="showPopup(192)">postgresql list and order tables by size</a></h4></th></tr>
 <tr>
 <td colspan="3">
 <pre before="SQL">select table_name, pg_size_pretty( pg_relation_size(quote_ident(table_name)) )
@@ -6103,7 +6103,7 @@ order by pg_relation_size(quote_ident(table_name)) desc;</pre>
 
 <table>
 
-<tr><th colspan="3"><h4><a href="#191" onclick="showPopup(191)">clear screen</a></h4></th></tr>
+<tr><th colspan="3"><h4><a href="api/191.json" onclick="showPopup(191)">clear screen</a></h4></th></tr>
 <tr>
 <td colspan="3">
 <pre before="BASH">alias cls='printf "\033c"'</pre>
@@ -6122,7 +6122,7 @@ order by pg_relation_size(quote_ident(table_name)) desc;</pre>
 
 <table>
 
-<tr><th colspan="3"><h4><a href="#190" onclick="showPopup(190)">get list of tables and number of rows (postgres)</a></h4></th></tr>
+<tr><th colspan="3"><h4><a href="api/190.json" onclick="showPopup(190)">get list of tables and number of rows (postgres)</a></h4></th></tr>
 <tr>
 <td colspan="3">
 <pre before="SQL">select n.nspname as table_schema,
@@ -6148,7 +6148,7 @@ order by c.reltuples desc;</pre>
 
 <table>
 
-<tr><th colspan="3"><h4><a href="#189" onclick="showPopup(189)">list files with time style & hides groups</a></h4></th></tr>
+<tr><th colspan="3"><h4><a href="api/189.json" onclick="showPopup(189)">list files with time style & hides groups</a></h4></th></tr>
 <tr>
 <td colspan="3">
 <pre before="BASH">ls -lptr --time-style='+%s %F %T' --group-directories-first -o</pre>
@@ -6188,7 +6188,7 @@ lrwxrwxrwx 1 annie_tran      34 1641408690 2022-01-05 12:51:30 devops -> /reposi
 
 <table>
 
-<tr><th colspan="3"><h4><a href="#188" onclick="showPopup(188)">Get-WmiObject - get computer system properties</a></h4></th></tr>
+<tr><th colspan="3"><h4><a href="api/188.json" onclick="showPopup(188)">Get-WmiObject - get computer system properties</a></h4></th></tr>
 <tr>
 <td colspan="3">
 <pre before="POWERSHELL">Get-WmiObject -Class Win32_ComputerSystem -Property *</pre>
@@ -6216,7 +6216,7 @@ TotalPhysicalMemory : 34065952768</pre>
 
 <table>
 
-<tr><th colspan="3"><h4><a href="#187" onclick="showPopup(187)">Start a static HTTP server</a></h4></th></tr>
+<tr><th colspan="3"><h4><a href="api/187.json" onclick="showPopup(187)">Start a static HTTP server</a></h4></th></tr>
 <tr>
 <td colspan="3">
 <pre before="PYTHON">python -m SimpleHTTPServer 8080</pre>
@@ -6235,7 +6235,7 @@ TotalPhysicalMemory : 34065952768</pre>
 
 <table>
 
-<tr><th colspan="3"><h4><a href="#186" onclick="showPopup(186)">zip directory</a></h4></th></tr>
+<tr><th colspan="3"><h4><a href="api/186.json" onclick="showPopup(186)">zip directory</a></h4></th></tr>
 <tr>
 <td colspan="3">
 <pre before="BASH">zip $ZIP_NAME.zip -r $DIRNAME</pre>
@@ -6254,7 +6254,7 @@ TotalPhysicalMemory : 34065952768</pre>
 
 <table>
 
-<tr><th colspan="3"><h4><a href="#185" onclick="showPopup(185)">random variable</a></h4></th></tr>
+<tr><th colspan="3"><h4><a href="api/185.json" onclick="showPopup(185)">random variable</a></h4></th></tr>
 <tr>
 <td colspan="3">
 <pre before="BASH">echo "random: $RANDOM"</pre>
@@ -6277,7 +6277,7 @@ TotalPhysicalMemory : 34065952768</pre>
 
 <table>
 
-<tr><th colspan="3"><h4><a href="#184" onclick="showPopup(184)">date - get N days ago</a></h4></th></tr>
+<tr><th colspan="3"><h4><a href="api/184.json" onclick="showPopup(184)">date - get N days ago</a></h4></th></tr>
 <tr>
 <td colspan="3">
 <pre before="BASH">date -d "$date -7 days" +"%Y-%m-%d"</pre>
@@ -6296,7 +6296,7 @@ TotalPhysicalMemory : 34065952768</pre>
 
 <table>
 
-<tr><th colspan="3"><h4><a href="#183" onclick="showPopup(183)">bat file for opening cygwin in current directory</a></h4></th></tr>
+<tr><th colspan="3"><h4><a href="api/183.json" onclick="showPopup(183)">bat file for opening cygwin in current directory</a></h4></th></tr>
 <tr>
 <td colspan="3">
 <pre before="CMD">@echo off
@@ -6324,7 +6324,7 @@ bash --login -i -c "eval \"cd '$CURRENTDIR'\";$SHELL"</pre>
 
 <table>
 
-<tr><th colspan="3"><h4><a href="#182" onclick="showPopup(182)">type - display information about command</a></h4></th></tr>
+<tr><th colspan="3"><h4><a href="api/182.json" onclick="showPopup(182)">type - display information about command</a></h4></th></tr>
 <tr>
 <td colspan="3">
 <pre before="BASH">type</pre>
@@ -6381,7 +6381,7 @@ cd_func ()
 
 <table>
 
-<tr><th colspan="3"><h4><a href="#181" onclick="showPopup(181)">git diff side by side</a></h4></th></tr>
+<tr><th colspan="3"><h4><a href="api/181.json" onclick="showPopup(181)">git diff side by side</a></h4></th></tr>
 <tr>
 <td colspan="3">
 <pre before="BASH">git difftool -y -x sdiff
@@ -6402,7 +6402,7 @@ git difftool -y -x sdiff path/to/file</pre>
 
 <table>
 
-<tr><th colspan="3"><h4><a href="#180" onclick="showPopup(180)">List Network Facing Services</a></h4></th></tr>
+<tr><th colspan="3"><h4><a href="api/180.json" onclick="showPopup(180)">List Network Facing Services</a></h4></th></tr>
 <tr>
 <td colspan="3">
 <pre before="BASH">ss -atpu</pre>
@@ -6421,7 +6421,7 @@ git difftool -y -x sdiff path/to/file</pre>
 
 <table>
 
-<tr><th colspan="3"><h4><a href="#179" onclick="showPopup(179)">sendmail template</a></h4></th></tr>
+<tr><th colspan="3"><h4><a href="api/179.json" onclick="showPopup(179)">sendmail template</a></h4></th></tr>
 <tr>
 <td colspan="3">
 <pre before="BASH">echo "To: annie_tran@example.com
@@ -6444,7 +6444,7 @@ $(cat test-html-email.html)" | sendmail -t</pre>
 
 <table>
 
-<tr><th colspan="3"><h4><a href="#178" onclick="showPopup(178)">sshpass - read ssh password from file</a></h4></th></tr>
+<tr><th colspan="3"><h4><a href="api/178.json" onclick="showPopup(178)">sshpass - read ssh password from file</a></h4></th></tr>
 <tr>
 <td colspan="3">
 <pre before="BASH">sshpass -f .secrets/sshpass/svc_account ssh -o StrictHostKeyChecking=no svc_account@cfiserver.us.example.com</pre>
@@ -6463,7 +6463,7 @@ $(cat test-html-email.html)" | sendmail -t</pre>
 
 <table>
 
-<tr><th colspan="3"><h4><a href="#177" onclick="showPopup(177)">docker - resolve no space on device</a></h4></th></tr>
+<tr><th colspan="3"><h4><a href="api/177.json" onclick="showPopup(177)">docker - resolve no space on device</a></h4></th></tr>
 <tr>
 <td colspan="3">
 <pre before="BASH">systemctl stop docker
@@ -6487,7 +6487,7 @@ systemctl start docker</pre>
 
 <table>
 
-<tr><th colspan="3"><h4><a href="#176" onclick="showPopup(176)">list files and sort by size</a></h4></th></tr>
+<tr><th colspan="3"><h4><a href="api/176.json" onclick="showPopup(176)">list files and sort by size</a></h4></th></tr>
 <tr>
 <td colspan="3">
 <pre before="BASH">du -h | sort -rh</pre>
@@ -6534,7 +6534,7 @@ systemctl start docker</pre>
 
 <table>
 
-<tr><th colspan="3"><h4><a href="#175" onclick="showPopup(175)">Getting Server Certificate</a></h4></th></tr>
+<tr><th colspan="3"><h4><a href="api/175.json" onclick="showPopup(175)">Getting Server Certificate</a></h4></th></tr>
 <tr>
 <td colspan="3">
 <pre before="BASH">$ openssl s_client -showcerts -connect awxserver.us.example.com:80</pre>
@@ -6586,7 +6586,7 @@ SSL-Session:
 
 <table>
 
-<tr><th colspan="3"><h4><a href="#174" onclick="showPopup(174)">curl vault secrets</a></h4></th></tr>
+<tr><th colspan="3"><h4><a href="api/174.json" onclick="showPopup(174)">curl vault secrets</a></h4></th></tr>
 <tr>
 <td colspan="3">
 <pre before="BASH">VAULT_TOKEN=...
@@ -6607,7 +6607,7 @@ curl -H "X-Vault-Namespace: infrastructure/database/engineering/tools/dbaasv2/db
 
 <table>
 
-<tr><th colspan="3"><h4><a href="#173" onclick="showPopup(173)">devtools: get all css items</a></h4></th></tr>
+<tr><th colspan="3"><h4><a href="api/173.json" onclick="showPopup(173)">devtools: get all css items</a></h4></th></tr>
 <tr>
 <td colspan="3">
 <pre before="JAVASCRIPT">css = new Set(
@@ -6645,7 +6645,7 @@ curl -H "X-Vault-Namespace: infrastructure/database/engineering/tools/dbaasv2/db
 
 <table>
 
-<tr><th colspan="3"><h4><a href="#172" onclick="showPopup(172)">get git symlink files</a></h4></th></tr>
+<tr><th colspan="3"><h4><a href="api/172.json" onclick="showPopup(172)">get git symlink files</a></h4></th></tr>
 <tr>
 <td colspan="3">
 <pre before="BASH">git ls-files -s | awk '/120000/{print $4}'</pre>
@@ -6664,7 +6664,7 @@ curl -H "X-Vault-Namespace: infrastructure/database/engineering/tools/dbaasv2/db
 
 <table>
 
-<tr><th colspan="3"><h4><a href="#171" onclick="showPopup(171)">Get AD User from another domain (ldap)</a></h4></th></tr>
+<tr><th colspan="3"><h4><a href="api/171.json" onclick="showPopup(171)">Get AD User from another domain (ldap)</a></h4></th></tr>
 <tr>
 <td colspan="3">
 <pre before="POWERSHELL">Get-ADUser -Server amer.example.com -Identity annie_tran -Properties *</pre>
@@ -6683,7 +6683,7 @@ curl -H "X-Vault-Namespace: infrastructure/database/engineering/tools/dbaasv2/db
 
 <table>
 
-<tr><th colspan="3"><h4><a href="#170" onclick="showPopup(170)">get AD domain controller (amer.example.com)</a></h4></th></tr>
+<tr><th colspan="3"><h4><a href="api/170.json" onclick="showPopup(170)">get AD domain controller (amer.example.com)</a></h4></th></tr>
 <tr>
 <td colspan="3">
 <pre before="POWERSHELL">Get-ADDomainController</pre>
@@ -6731,7 +6731,7 @@ SslPort                    : 636</pre>
 
 <table>
 
-<tr><th colspan="3"><h4><a href="#169" onclick="showPopup(169)">set existing variables only</a></h4></th></tr>
+<tr><th colspan="3"><h4><a href="api/169.json" onclick="showPopup(169)">set existing variables only</a></h4></th></tr>
 <tr>
 <td colspan="3">
 <pre before="BASH">: ${SETLANG="env LANG= LC_MESSAGES= LC_ALL= LANGUAGE="}
@@ -6758,7 +6758,7 @@ SslPort                    : 636</pre>
 
 <table>
 
-<tr><th colspan="3"><h4><a href="#168" onclick="showPopup(168)">delete null value</a></h4></th></tr>
+<tr><th colspan="3"><h4><a href="api/168.json" onclick="showPopup(168)">delete null value</a></h4></th></tr>
 <tr>
 <td colspan="3">
 <pre before="BASH">tr -d '\0'</pre>
@@ -6777,7 +6777,7 @@ SslPort                    : 636</pre>
 
 <table>
 
-<tr><th colspan="3"><h4><a href="#167" onclick="showPopup(167)">ansible-doc snippet</a></h4></th></tr>
+<tr><th colspan="3"><h4><a href="api/167.json" onclick="showPopup(167)">ansible-doc snippet</a></h4></th></tr>
 <tr>
 <td colspan="3">
 <pre before="BASH">ansible-doc awx.awx.tower_ad_hoc_command --snippet</pre>
@@ -6824,7 +6824,7 @@ SslPort                    : 636</pre>
 
 <table>
 
-<tr><th colspan="3"><h4><a href="#166" onclick="showPopup(166)">Get commits that have deleted files</a></h4></th></tr>
+<tr><th colspan="3"><h4><a href="api/166.json" onclick="showPopup(166)">Get commits that have deleted files</a></h4></th></tr>
 <tr>
 <td colspan="3">
 <pre before="BASH">git log --diff-filter=D --summary</pre>
@@ -6843,7 +6843,7 @@ SslPort                    : 636</pre>
 
 <table>
 
-<tr><th colspan="3"><h4><a href="#164" onclick="showPopup(164)">proc environ - format for readability</a></h4></th></tr>
+<tr><th colspan="3"><h4><a href="api/164.json" onclick="showPopup(164)">proc environ - format for readability</a></h4></th></tr>
 <tr>
 <td colspan="3">
 <pre before="BASH">cat /proc/$$/environ | sed 's/\([A-Z_]*=\)/\n\1/g'</pre>
@@ -6862,7 +6862,7 @@ SslPort                    : 636</pre>
 
 <table>
 
-<tr><th colspan="3"><h4><a href="#163" onclick="showPopup(163)">comm - find common or distinct lines between files</a></h4></th></tr>
+<tr><th colspan="3"><h4><a href="api/163.json" onclick="showPopup(163)">comm - find common or distinct lines between files</a></h4></th></tr>
 <tr>
 <td colspan="3">
 <pre before="BASH"># find lines only in file1
@@ -6888,7 +6888,7 @@ comm -12 file1 file2 </pre>
 
 <table>
 
-<tr><th colspan="3"><h4><a href="#162" onclick="showPopup(162)">sort top command by memory</a></h4></th></tr>
+<tr><th colspan="3"><h4><a href="api/162.json" onclick="showPopup(162)">sort top command by memory</a></h4></th></tr>
 <tr>
 <td colspan="3">
 <pre before="BASH">top -o +%MEM</pre>
@@ -6907,7 +6907,7 @@ comm -12 file1 file2 </pre>
 
 <table>
 
-<tr><th colspan="3"><h4><a href="#161" onclick="showPopup(161)">rbind mount docker</a></h4></th></tr>
+<tr><th colspan="3"><h4><a href="api/161.json" onclick="showPopup(161)">rbind mount docker</a></h4></th></tr>
 <tr>
 <td colspan="3">
 <pre before="BASH">mount --rbind /u01/docker /var/lib/docker</pre>
@@ -6926,7 +6926,7 @@ comm -12 file1 file2 </pre>
 
 <table>
 
-<tr><th colspan="3"><h4><a href="#160" onclick="showPopup(160)">find js files in src/</a></h4></th></tr>
+<tr><th colspan="3"><h4><a href="api/160.json" onclick="showPopup(160)">find js files in src/</a></h4></th></tr>
 <tr>
 <td colspan="3">
 <pre before="BASH">find . -maxdepth 3 -type f -name "*.js" \( -path "*/src/*" -and ! -regex "*(node_modules|.git)*" \) -print</pre>
@@ -6958,7 +6958,7 @@ comm -12 file1 file2 </pre>
 
 <table>
 
-<tr><th colspan="3"><h4><a href="#159" onclick="showPopup(159)">Check and assign variables</a></h4></th></tr>
+<tr><th colspan="3"><h4><a href="api/159.json" onclick="showPopup(159)">Check and assign variables</a></h4></th></tr>
 <tr>
 <td colspan="3">
 <pre before="BASH">echo "${VAR1:=default}"</pre>
@@ -6977,7 +6977,7 @@ comm -12 file1 file2 </pre>
 
 <table>
 
-<tr><th colspan="3"><h4><a href="#158" onclick="showPopup(158)">yum - get installed security updates</a></h4></th></tr>
+<tr><th colspan="3"><h4><a href="api/158.json" onclick="showPopup(158)">yum - get installed security updates</a></h4></th></tr>
 <tr>
 <td colspan="3">
 <pre before="BASH">yum updateinfo list security installed</pre>
@@ -6996,7 +6996,7 @@ comm -12 file1 file2 </pre>
 
 <table>
 
-<tr><th colspan="3"><h4><a href="#157" onclick="showPopup(157)">ssh-keygen - generate public key from prviate key</a></h4></th></tr>
+<tr><th colspan="3"><h4><a href="api/157.json" onclick="showPopup(157)">ssh-keygen - generate public key from prviate key</a></h4></th></tr>
 <tr>
 <td colspan="3">
 <pre before="BASH">ssh-keygen -y -f ~/.ssh/windows_login</pre>
@@ -7015,7 +7015,7 @@ comm -12 file1 file2 </pre>
 
 <table>
 
-<tr><th colspan="3"><h4><a href="#156" onclick="showPopup(156)">docker history</a></h4></th></tr>
+<tr><th colspan="3"><h4><a href="api/156.json" onclick="showPopup(156)">docker history</a></h4></th></tr>
 <tr>
 <td colspan="3">
 <pre before="BASH">dockerprettyhist() {
@@ -7043,7 +7043,7 @@ comm -12 file1 file2 </pre>
 
 <table>
 
-<tr><th colspan="3"><h4><a href="#155" onclick="showPopup(155)">yum list docker-engine --showduplicates</a></h4></th></tr>
+<tr><th colspan="3"><h4><a href="api/155.json" onclick="showPopup(155)">yum list docker-engine --showduplicates</a></h4></th></tr>
 <tr>
 <td colspan="3">
 <pre before="BASH">yum list docker-engine --showduplicates</pre>
@@ -7099,7 +7099,7 @@ docker-engine.x86_64                    19.03.11.ol-13.el7                      
 
 <table>
 
-<tr><th colspan="3"><h4><a href="#154" onclick="showPopup(154)">umask - get umask for current process</a></h4></th></tr>
+<tr><th colspan="3"><h4><a href="api/154.json" onclick="showPopup(154)">umask - get umask for current process</a></h4></th></tr>
 <tr>
 <td colspan="3">
 <pre before="BASH">grep '^Umask:' "/proc/$$/status"</pre>
@@ -7122,7 +7122,7 @@ docker-engine.x86_64                    19.03.11.ol-13.el7                      
 
 <table>
 
-<tr><th colspan="3"><h4><a href="#153" onclick="showPopup(153)">getfactl - get user, group, and perm </a></h4></th></tr>
+<tr><th colspan="3"><h4><a href="api/153.json" onclick="showPopup(153)">getfactl - get user, group, and perm </a></h4></th></tr>
 <tr>
 <td colspan="3">
 <pre before="BASH">getfacl linux</pre>
@@ -7150,7 +7150,7 @@ other::r-x</pre>
 
 <table>
 
-<tr><th colspan="3"><h4><a href="#152" onclick="showPopup(152)">add user to group</a></h4></th></tr>
+<tr><th colspan="3"><h4><a href="api/152.json" onclick="showPopup(152)">add user to group</a></h4></th></tr>
 <tr>
 <td colspan="3">
 <pre before="BASH">usermod -a -G wheel annie_tran</pre>
@@ -7169,7 +7169,7 @@ other::r-x</pre>
 
 <table>
 
-<tr><th colspan="3"><h4><a href="#151" onclick="showPopup(151)">realpath - get relative paths</a></h4></th></tr>
+<tr><th colspan="3"><h4><a href="api/151.json" onclick="showPopup(151)">realpath - get relative paths</a></h4></th></tr>
 <tr>
 <td colspan="3">
 <pre before="BASH">realpath --relative-to=$DIR1 $DIR2</pre>
@@ -7188,7 +7188,7 @@ other::r-x</pre>
 
 <table>
 
-<tr><th colspan="3"><h4><a href="#149" onclick="showPopup(149)">ansible-playbook in crontab</a></h4></th></tr>
+<tr><th colspan="3"><h4><a href="api/149.json" onclick="showPopup(149)">ansible-playbook in crontab</a></h4></th></tr>
 <tr>
 <td colspan="3">
 <pre before="PLAIN">*/15 * * * *    if ! out=`ansible-playbook youserver.yaml`; then echo $out; fi</pre>
@@ -7207,7 +7207,7 @@ other::r-x</pre>
 
 <table>
 
-<tr><th colspan="3"><h4><a href="#148" onclick="showPopup(148)">Print border</a></h4></th></tr>
+<tr><th colspan="3"><h4><a href="api/148.json" onclick="showPopup(148)">Print border</a></h4></th></tr>
 <tr>
 <td colspan="3">
 <pre before="BASH">printf '%*.0s\n' 10 "" | tr " " "#"</pre>
@@ -7230,7 +7230,7 @@ other::r-x</pre>
 
 <table>
 
-<tr><th colspan="3"><h4><a href="#147" onclick="showPopup(147)">get latest kernel version</a></h4></th></tr>
+<tr><th colspan="3"><h4><a href="api/147.json" onclick="showPopup(147)">get latest kernel version</a></h4></th></tr>
 <tr>
 <td colspan="3">
 <pre before="BASH">rpm -q kernel|awk -F- '{print $3}'|awk -F. '{print $1}'|sort -n|tail -1</pre>
@@ -7249,7 +7249,7 @@ other::r-x</pre>
 
 <table>
 
-<tr><th colspan="3"><h4><a href="#146" onclick="showPopup(146)">awx curl</a></h4></th></tr>
+<tr><th colspan="3"><h4><a href="api/146.json" onclick="showPopup(146)">awx curl</a></h4></th></tr>
 <tr>
 <td colspan="3">
 <pre before="BASH">curl -f -k -s -v -H "Content-Type: application/json" -X PUT -d @_ldap.json --user $TOWER_USERNAME:$TOWER_PASSWORD "https://$TOWER_HOST/api/v2/settings/ldap/"</pre>
@@ -7268,7 +7268,7 @@ other::r-x</pre>
 
 <table>
 
-<tr><th colspan="3"><h4><a href="#145" onclick="showPopup(145)">system boot menu entries</a></h4></th></tr>
+<tr><th colspan="3"><h4><a href="api/145.json" onclick="showPopup(145)">system boot menu entries</a></h4></th></tr>
 <tr>
 <td colspan="3">
 <pre before="BASH">awk -F\' '$1=="menuentry " {print i++ " : " $2}' /etc/grub2.cfg</pre>
@@ -7295,7 +7295,7 @@ other::r-x</pre>
 
 <table>
 
-<tr><th colspan="3"><h4><a href="#144" onclick="showPopup(144)">get latest kernel</a></h4></th></tr>
+<tr><th colspan="3"><h4><a href="api/144.json" onclick="showPopup(144)">get latest kernel</a></h4></th></tr>
 <tr>
 <td colspan="3">
 <pre before="BASH">awk -F\' /^menuentry/{print\$2} /etc/grub2.cfg | grep -vE "(uek|rescue)" | sort | tail -n 1</pre>
@@ -7314,7 +7314,7 @@ other::r-x</pre>
 
 <table>
 
-<tr><th colspan="3"><h4><a href="#143" onclick="showPopup(143)">get installed kernels</a></h4></th></tr>
+<tr><th colspan="3"><h4><a href="api/143.json" onclick="showPopup(143)">get installed kernels</a></h4></th></tr>
 <tr>
 <td colspan="3">
 <pre before="BASH">awk -F\' /^menuentry/{print\$2} /etc/grub2.cfg</pre>
@@ -7333,7 +7333,7 @@ other::r-x</pre>
 
 <table>
 
-<tr><th colspan="3"><h4><a href="#142" onclick="showPopup(142)">awx job_template</a></h4></th></tr>
+<tr><th colspan="3"><h4><a href="api/142.json" onclick="showPopup(142)">awx job_template</a></h4></th></tr>
 <tr>
 <td colspan="3">
 <pre before="BASH">awx job_template list --all -f human --filter 'id, name, playbook, modified, status'</pre>
@@ -7352,7 +7352,7 @@ other::r-x</pre>
 
 <table>
 
-<tr><th colspan="3"><h4><a href="#141" onclick="showPopup(141)">get laptop service tag</a></h4></th></tr>
+<tr><th colspan="3"><h4><a href="api/141.json" onclick="showPopup(141)">get laptop service tag</a></h4></th></tr>
 <tr>
 <td colspan="3">
 <pre before="POWERSHELL">Get-WmiObject win32_SystemEnclosure | select serialnumber
@@ -7380,7 +7380,7 @@ Get-WMIObject -Class Win32_Bios</pre>
 
 <table>
 
-<tr><th colspan="3"><h4><a href="#140" onclick="showPopup(140)">Get all powershell modules</a></h4></th></tr>
+<tr><th colspan="3"><h4><a href="api/140.json" onclick="showPopup(140)">Get all powershell modules</a></h4></th></tr>
 <tr>
 <td colspan="3">
 <pre before="POWERSHELL">get-module -listavailable</pre>
@@ -7399,7 +7399,7 @@ Get-WMIObject -Class Win32_Bios</pre>
 
 <table>
 
-<tr><th colspan="3"><h4><a href="#139" onclick="showPopup(139)">Uptime of a process</a></h4></th></tr>
+<tr><th colspan="3"><h4><a href="api/139.json" onclick="showPopup(139)">Uptime of a process</a></h4></th></tr>
 <tr>
 <td colspan="3">
 <pre before="BASH">ps -o etimes -p $PID</pre>
@@ -7418,7 +7418,7 @@ Get-WMIObject -Class Win32_Bios</pre>
 
 <table>
 
-<tr><th colspan="3"><h4><a href="#138" onclick="showPopup(138)">sha256</a></h4></th></tr>
+<tr><th colspan="3"><h4><a href="api/138.json" onclick="showPopup(138)">sha256</a></h4></th></tr>
 <tr>
 <td colspan="3">
 <pre before="BASH">sha256() {
@@ -7443,7 +7443,7 @@ Get-WMIObject -Class Win32_Bios</pre>
 
 <table>
 
-<tr><th colspan="3"><h4><a href="#137" onclick="showPopup(137)">get ip address</a></h4></th></tr>
+<tr><th colspan="3"><h4><a href="api/137.json" onclick="showPopup(137)">get ip address</a></h4></th></tr>
 <tr>
 <td colspan="3">
 <pre before="BASH">/usr/sbin/ip a | grep inet</pre>
@@ -7469,7 +7469,7 @@ Get-WMIObject -Class Win32_Bios</pre>
 
 <table>
 
-<tr><th colspan="3"><h4><a href="#136" onclick="showPopup(136)">Get group members</a></h4></th></tr>
+<tr><th colspan="3"><h4><a href="api/136.json" onclick="showPopup(136)">Get group members</a></h4></th></tr>
 <tr>
 <td colspan="3">
 <pre before="POWERSHELL">Get-ADGroupMember -Identity "dbaassecuritygroup" -Recursive</pre>
@@ -7488,7 +7488,7 @@ Get-WMIObject -Class Win32_Bios</pre>
 
 <table>
 
-<tr><th colspan="3"><h4><a href="#135" onclick="showPopup(135)">awx-manage shell_plus</a></h4></th></tr>
+<tr><th colspan="3"><h4><a href="api/135.json" onclick="showPopup(135)">awx-manage shell_plus</a></h4></th></tr>
 <tr>
 <td colspan="3">
 <pre before="PYTHON">from awx.main.utils import decrypt_field
@@ -7514,7 +7514,7 @@ for svc in cred_names:
 
 <table>
 
-<tr><th colspan="3"><h4><a href="#134" onclick="showPopup(134)">Powershell get calculated property</a></h4></th></tr>
+<tr><th colspan="3"><h4><a href="api/134.json" onclick="showPopup(134)">Powershell get calculated property</a></h4></th></tr>
 <tr>
 <td colspan="3">
 <pre before="POWERSHELL">Get-ADUser -Filter 'CN -like "svc_*dbaas*"'  -Properties * | Where-Object {$_.dellOwnerId -eq "314810"} | Sort-Object -Property PasswordLastSet | Format-Table Name,PasswordLastSet,Description,Modified,LastLogonDate,@{N='MemberOf';E={$_.MemberOf[0]}} -AutoSize -Wrap</pre>
@@ -7551,7 +7551,7 @@ svc_account   9/25/2021 11:39:02 PM Owner :Thomas_Smith 9/28/2021 7:14:56 PM  9/
 
 <table>
 
-<tr><th colspan="3"><h4><a href="#133" onclick="showPopup(133)">Get service accounts owned by user and display in table</a></h4></th></tr>
+<tr><th colspan="3"><h4><a href="api/133.json" onclick="showPopup(133)">Get service accounts owned by user and display in table</a></h4></th></tr>
 <tr>
 <td colspan="3">
 <pre before="POWERSHELL">Get-ADUser -Filter 'CN -like "svc_*dbaas*"'  -Properties * | Where-Object {$_.dellOwnerId -eq "314810"} | Format-Table Name,PasswordLastSet,Description,Modified -AutoSize -Wrap</pre>
@@ -7587,7 +7587,7 @@ svc_account    11/30/2020 1:37:21 PM Owner :Thomas_Smith 9/15/2021 2:10:41 AM</p
 
 <table>
 
-<tr><th colspan="3"><h4><a href="#132" onclick="showPopup(132)">generate random password openssl</a></h4></th></tr>
+<tr><th colspan="3"><h4><a href="api/132.json" onclick="showPopup(132)">generate random password openssl</a></h4></th></tr>
 <tr>
 <td colspan="3">
 <pre before="BASH">openssl rand -base64 20</pre>
@@ -7606,7 +7606,7 @@ svc_account    11/30/2020 1:37:21 PM Owner :Thomas_Smith 9/15/2021 2:10:41 AM</p
 
 <table>
 
-<tr><th colspan="3"><h4><a href="#131" onclick="showPopup(131)">python to encode and decode</a></h4></th></tr>
+<tr><th colspan="3"><h4><a href="api/131.json" onclick="showPopup(131)">python to encode and decode</a></h4></th></tr>
 <tr>
 <td colspan="3">
 <pre before="BASH"># encode
@@ -7629,7 +7629,7 @@ python -m base64 -d <<< "dGhpcyBpcyBlbmNvZGVkCg=="</pre>
 
 <table>
 
-<tr><th colspan="3"><h4><a href="#130" onclick="showPopup(130)">find world writable files</a></h4></th></tr>
+<tr><th colspan="3"><h4><a href="api/130.json" onclick="showPopup(130)">find world writable files</a></h4></th></tr>
 <tr>
 <td colspan="3">
 <pre before="BASH">find / -type d -path "/misc*" -prune -o -type d -perm /o=w -print
@@ -7650,7 +7650,7 @@ find / -xdev -type d \( -perm -0002 -a ! -perm -1000 \) -print</pre>
 
 <table>
 
-<tr><th colspan="3"><h4><a href="#129" onclick="showPopup(129)">password generator</a></h4></th></tr>
+<tr><th colspan="3"><h4><a href="api/129.json" onclick="showPopup(129)">password generator</a></h4></th></tr>
 <tr>
 <td colspan="3">
 <pre before="BASH">mkpasswd -l 15 -d 3 -C 5</pre>
@@ -7669,7 +7669,7 @@ find / -xdev -type d \( -perm -0002 -a ! -perm -1000 \) -print</pre>
 
 <table>
 
-<tr><th colspan="3"><h4><a href="#128" onclick="showPopup(128)">pmem (vscode mimics ps)</a></h4></th></tr>
+<tr><th colspan="3"><h4><a href="api/128.json" onclick="showPopup(128)">pmem (vscode mimics ps)</a></h4></th></tr>
 <tr>
 <td colspan="3">
 <pre before="BASH">ps -ax -o pid=,ppid=,pcpu=,pmem=,command=</pre>
@@ -7708,7 +7708,7 @@ find / -xdev -type d \( -perm -0002 -a ! -perm -1000 \) -print</pre>
 
 <table>
 
-<tr><th colspan="3"><h4><a href="#127" onclick="showPopup(127)">remove trailing whitespace</a></h4></th></tr>
+<tr><th colspan="3"><h4><a href="api/127.json" onclick="showPopup(127)">remove trailing whitespace</a></h4></th></tr>
 <tr>
 <td colspan="3">
 <pre before="BASH">awk '{$1=$1};1'</pre>
@@ -7727,7 +7727,7 @@ find / -xdev -type d \( -perm -0002 -a ! -perm -1000 \) -print</pre>
 
 <table>
 
-<tr><th colspan="3"><h4><a href="#126" onclick="showPopup(126)">/proc files</a></h4></th></tr>
+<tr><th colspan="3"><h4><a href="api/126.json" onclick="showPopup(126)">/proc files</a></h4></th></tr>
 <tr>
 <td colspan="3">
 <pre before="BASH">cat /etc/redhat-release
@@ -7765,7 +7765,7 @@ cat /proc/modules</pre>
 
 <table>
 
-<tr><th colspan="3"><h4><a href="#125" onclick="showPopup(125)">print files with timestamp</a></h4></th></tr>
+<tr><th colspan="3"><h4><a href="api/125.json" onclick="showPopup(125)">print files with timestamp</a></h4></th></tr>
 <tr>
 <td colspan="3">
 <pre before="BASH"> find . -type f -printf '%TFT%TT %p\n'</pre>
@@ -7784,7 +7784,7 @@ cat /proc/modules</pre>
 
 <table>
 
-<tr><th colspan="3"><h4><a href="#124" onclick="showPopup(124)">awk - remove duplicates without sorting</a></h4></th></tr>
+<tr><th colspan="3"><h4><a href="api/124.json" onclick="showPopup(124)">awk - remove duplicates without sorting</a></h4></th></tr>
 <tr>
 <td colspan="3">
 <pre before="BASH">awk '!x[$0]++'</pre>
@@ -7803,7 +7803,7 @@ cat /proc/modules</pre>
 
 <table>
 
-<tr><th colspan="3"><h4><a href="#123" onclick="showPopup(123)">Use awk to display text and insert blank line before</a></h4></th></tr>
+<tr><th colspan="3"><h4><a href="api/123.json" onclick="showPopup(123)">Use awk to display text and insert blank line before</a></h4></th></tr>
 <tr>
 <td colspan="3">
 <pre before="BASH">cat file.txt | awk -F '\t' '{print "\n"$2,$3}' OFS='\n'</pre>
@@ -7822,7 +7822,7 @@ cat /proc/modules</pre>
 
 <table>
 
-<tr><th colspan="3"><h4><a href="#122" onclick="showPopup(122)">repeat string N times</a></h4></th></tr>
+<tr><th colspan="3"><h4><a href="api/122.json" onclick="showPopup(122)">repeat string N times</a></h4></th></tr>
 <tr>
 <td colspan="3">
 <pre before="BASH">printf '=%.0s' {1..80}</pre>
@@ -7845,7 +7845,7 @@ cat /proc/modules</pre>
 
 <table>
 
-<tr><th colspan="3"><h4><a href="#121" onclick="showPopup(121)">get all processes for user</a></h4></th></tr>
+<tr><th colspan="3"><h4><a href="api/121.json" onclick="showPopup(121)">get all processes for user</a></h4></th></tr>
 <tr>
 <td colspan="3">
 <pre before="BASH">ps -U $USER -u $USER u</pre>
@@ -7864,7 +7864,7 @@ cat /proc/modules</pre>
 
 <table>
 
-<tr><th colspan="3"><h4><a href="#120" onclick="showPopup(120)">get arguments after first</a></h4></th></tr>
+<tr><th colspan="3"><h4><a href="api/120.json" onclick="showPopup(120)">get arguments after first</a></h4></th></tr>
 <tr>
 <td colspan="3">
 <pre before="BASH">echo "${@:2}"
@@ -7884,7 +7884,7 @@ echo "${*:2}"</pre>
 
 <table>
 
-<tr><th colspan="3"><h4><a href="#119" onclick="showPopup(119)">get runas user</a></h4></th></tr>
+<tr><th colspan="3"><h4><a href="api/119.json" onclick="showPopup(119)">get runas user</a></h4></th></tr>
 <tr>
 <td colspan="3">
 <pre before="BASH">sudo --list | grep 'NOPASSWD: ALL' |  awk -F'[)(]' '{print $2}'</pre>
@@ -7903,7 +7903,7 @@ echo "${*:2}"</pre>
 
 <table>
 
-<tr><th colspan="3"><h4><a href="#118" onclick="showPopup(118)">string substring</a></h4></th></tr>
+<tr><th colspan="3"><h4><a href="api/118.json" onclick="showPopup(118)">string substring</a></h4></th></tr>
 <tr>
 <td colspan="3">
 <pre before="BASH">STR="Hello world"
@@ -7924,7 +7924,7 @@ echo ${STR: -5:5}  # "world"</pre>
 
 <table>
 
-<tr><th colspan="3"><h4><a href="#117" onclick="showPopup(117)">string slicing</a></h4></th></tr>
+<tr><th colspan="3"><h4><a href="api/117.json" onclick="showPopup(117)">string slicing</a></h4></th></tr>
 <tr>
 <td colspan="3">
 <pre before="BASH">name="John"
@@ -7951,7 +7951,7 @@ echo ${food:-Cake}  #=> $food or "Cake</pre>
 
 <table>
 
-<tr><th colspan="3"><h4><a href="#116" onclick="showPopup(116)">set color</a></h4></th></tr>
+<tr><th colspan="3"><h4><a href="api/116.json" onclick="showPopup(116)">set color</a></h4></th></tr>
 <tr>
 <td colspan="3">
 <pre before="BASH">SETCOLOR_SUCCESS="echo -en \\033[0;32m"
@@ -7973,7 +7973,7 @@ SETCOLOR_RESET="echo -en \\033[0;39m"</pre>
 
 <table>
 
-<tr><th colspan="3"><h4><a href="#115" onclick="showPopup(115)">ss -  investigate sockets</a></h4></th></tr>
+<tr><th colspan="3"><h4><a href="api/115.json" onclick="showPopup(115)">ss -  investigate sockets</a></h4></th></tr>
 <tr>
 <td colspan="3">
 <pre before="BASH">ss -a</pre>
@@ -7992,7 +7992,7 @@ SETCOLOR_RESET="echo -en \\033[0;39m"</pre>
 
 <table>
 
-<tr><th colspan="3"><h4><a href="#114" onclick="showPopup(114)">sqlplus - set password</a></h4></th></tr>
+<tr><th colspan="3"><h4><a href="api/114.json" onclick="showPopup(114)">sqlplus - set password</a></h4></th></tr>
 <tr>
 <td colspan="3">
 <pre before="BASH">ORACLE_PWD=$1
@@ -8023,7 +8023,7 @@ EOF</pre>
 
 <table>
 
-<tr><th colspan="3"><h4><a href="#113" onclick="showPopup(113)">awk - get value only</a></h4></th></tr>
+<tr><th colspan="3"><h4><a href="api/113.json" onclick="showPopup(113)">awk - get value only</a></h4></th></tr>
 <tr>
 <td colspan="3">
 <pre before="BASH">awk -F= '/^BUILDTYPE=/ {print tolower($2)}' /etc/example.cfg</pre>
@@ -8042,7 +8042,7 @@ EOF</pre>
 
 <table>
 
-<tr><th colspan="3"><h4><a href="#112" onclick="showPopup(112)">view process id</a></h4></th></tr>
+<tr><th colspan="3"><h4><a href="api/112.json" onclick="showPopup(112)">view process id</a></h4></th></tr>
 <tr>
 <td colspan="3">
 <pre before="BASH">bash -c 'echo $$ ; ls -l /proc/self ; echo foo'</pre>
@@ -8061,7 +8061,7 @@ EOF</pre>
 
 <table>
 
-<tr><th colspan="3"><h4><a href="#111" onclick="showPopup(111)">exec cmd</a></h4></th></tr>
+<tr><th colspan="3"><h4><a href="api/111.json" onclick="showPopup(111)">exec cmd</a></h4></th></tr>
 <tr>
 <td colspan="3">
 <pre before="BASH">bash -c 'echo $$ ; exec ls -l /proc/self ; echo foo'</pre>
@@ -8080,7 +8080,7 @@ EOF</pre>
 
 <table>
 
-<tr><th colspan="3"><h4><a href="#110" onclick="showPopup(110)">generate random password</a></h4></th></tr>
+<tr><th colspan="3"><h4><a href="api/110.json" onclick="showPopup(110)">generate random password</a></h4></th></tr>
 <tr>
 <td colspan="3">
 <pre before="BASH">tr -dc 'a-zA-Z0-9' < /dev/urandom | head -c 32</pre>
@@ -8099,7 +8099,7 @@ EOF</pre>
 
 <table>
 
-<tr><th colspan="3"><h4><a href="#108" onclick="showPopup(108)">run sudosu</a></h4></th></tr>
+<tr><th colspan="3"><h4><a href="api/108.json" onclick="showPopup(108)">run sudosu</a></h4></th></tr>
 <tr>
 <td colspan="3">
 <pre before="BASH">eval "sudo $(sudo --list | grep -ws User -A 1000 | sed 's/,/\n/g' | sed 's/:/:\n/g' | grep '/bin/su' | sort | tail -n 1)"</pre>
@@ -8118,7 +8118,7 @@ EOF</pre>
 
 <table>
 
-<tr><th colspan="3"><h4><a href="#107" onclick="showPopup(107)">get allowed sudo commands</a></h4></th></tr>
+<tr><th colspan="3"><h4><a href="api/107.json" onclick="showPopup(107)">get allowed sudo commands</a></h4></th></tr>
 <tr>
 <td colspan="3">
 <pre before="BASH">sudo --list | grep -ws User -A 1000 | sed 's/,/\n/g' | sed 's/:/:\n/g' | grep -E '^\s+?/' | sed -e 's/^[[:space:]]*//'</pre>
@@ -8137,7 +8137,7 @@ EOF</pre>
 
 <table>
 
-<tr><th colspan="3"><h4><a href="#106" onclick="showPopup(106)">get git status for all worktree repos in git</a></h4></th></tr>
+<tr><th colspan="3"><h4><a href="api/106.json" onclick="showPopup(106)">get git status for all worktree repos in git</a></h4></th></tr>
 <tr>
 <td colspan="3">
 <pre before="BASH">find . -maxdepth 3 -name .git -type d -print -exec git -C {} status \;</pre>
@@ -8156,7 +8156,7 @@ EOF</pre>
 
 <table>
 
-<tr><th colspan="3"><h4><a href="#105" onclick="showPopup(105)">find zombie processes</a></h4></th></tr>
+<tr><th colspan="3"><h4><a href="api/105.json" onclick="showPopup(105)">find zombie processes</a></h4></th></tr>
 <tr>
 <td colspan="3">
 <pre before="BASH">ps -elf | grep Z</pre>
@@ -8183,7 +8183,7 @@ F S UID         PID   PPID  C PRI  NI ADDR SZ WCHAN  STIME TTY          TIME CMD
 
 <table>
 
-<tr><th colspan="3"><h4><a href="#104" onclick="showPopup(104)">extract in a different directory</a></h4></th></tr>
+<tr><th colspan="3"><h4><a href="api/104.json" onclick="showPopup(104)">extract in a different directory</a></h4></th></tr>
 <tr>
 <td colspan="3">
 <pre before="BASH">tar xvf filename.tar -C /home/username/
@@ -8205,7 +8205,7 @@ tar xvf filename.tar</pre>
 
 <table>
 
-<tr><th colspan="3"><h4><a href="#103" onclick="showPopup(103)">compress directory using tar</a></h4></th></tr>
+<tr><th colspan="3"><h4><a href="api/103.json" onclick="showPopup(103)">compress directory using tar</a></h4></th></tr>
 <tr>
 <td colspan="3">
 <pre before="BASH">tar cjvf imaserver.tar.bz2 dirname
@@ -8226,7 +8226,7 @@ tar zcvf imaserver.tar.gz dirname</pre>
 
 <table>
 
-<tr><th colspan="3"><h4><a href="#102" onclick="showPopup(102)">get top memory/cpu hog</a></h4></th></tr>
+<tr><th colspan="3"><h4><a href="api/102.json" onclick="showPopup(102)">get top memory/cpu hog</a></h4></th></tr>
 <tr>
 <td colspan="3">
 <pre before="BASH"># get top memory hog
@@ -8249,7 +8249,7 @@ ps -eo user,pid,size,pcpu,cmd --sort=-pcpu</pre>
 
 <table>
 
-<tr><th colspan="3"><h4><a href="#101" onclick="showPopup(101)">Get systemctl property</a></h4></th></tr>
+<tr><th colspan="3"><h4><a href="api/101.json" onclick="showPopup(101)">Get systemctl property</a></h4></th></tr>
 <tr>
 <td colspan="3">
 <pre before="BASH">systemctl show -p WantedBy grafana-agent.service
@@ -8271,7 +8271,7 @@ systemctl show grafana-agent.service</pre>
 
 <table>
 
-<tr><th colspan="3"><h4><a href="#100" onclick="showPopup(100)">docker volume - inspect all</a></h4></th></tr>
+<tr><th colspan="3"><h4><a href="api/100.json" onclick="showPopup(100)">docker volume - inspect all</a></h4></th></tr>
 <tr>
 <td colspan="3">
 <pre before="BASH">docker volume inspect $(docker volume ls | awk '{print $2}' |  tail -n +2)</pre>
@@ -8290,7 +8290,7 @@ systemctl show grafana-agent.service</pre>
 
 <table>
 
-<tr><th colspan="3"><h4><a href="#99" onclick="showPopup(99)">generating crypto quote</a></h4></th></tr>
+<tr><th colspan="3"><h4><a href="api/99.json" onclick="showPopup(99)">generating crypto quote</a></h4></th></tr>
 <tr>
 <td colspan="3">
 <pre before="BASH">$ special='! @ # % ^ & * ( ) _ + = [ ] { } < > . / ?'
@@ -8324,7 +8324,7 @@ i love cary</pre>
 
 <table>
 
-<tr><th colspan="3"><h4><a href="#98" onclick="showPopup(98)">git diff tags</a></h4></th></tr>
+<tr><th colspan="3"><h4><a href="api/98.json" onclick="showPopup(98)">git diff tags</a></h4></th></tr>
 <tr>
 <td colspan="3">
 <pre before="BASH"> git diff --minimal -w -b 17.0.1 17.1.0 installer</pre>
@@ -8343,7 +8343,7 @@ i love cary</pre>
 
 <table>
 
-<tr><th colspan="3"><h4><a href="#97" onclick="showPopup(97)">sed - only print after matching pattern</a></h4></th></tr>
+<tr><th colspan="3"><h4><a href="api/97.json" onclick="showPopup(97)">sed - only print after matching pattern</a></h4></th></tr>
 <tr>
 <td colspan="3">
 <pre before="BASH">sed -n '/^\[mongo:children.*/,$p'</pre>
@@ -8362,7 +8362,7 @@ i love cary</pre>
 
 <table>
 
-<tr><th colspan="3"><h4><a href="#96" onclick="showPopup(96)">sed - delete rows after pattern </a></h4></th></tr>
+<tr><th colspan="3"><h4><a href="api/96.json" onclick="showPopup(96)">sed - delete rows after pattern </a></h4></th></tr>
 <tr>
 <td colspan="3">
 <pre before="BASH">cat playbooks/hosts/prod.ini | sed -e '/^\[mongo:children/,+5000d'</pre>
@@ -8381,7 +8381,7 @@ i love cary</pre>
 
 <table>
 
-<tr><th colspan="3"><h4><a href="#95" onclick="showPopup(95)">sed replace files</a></h4></th></tr>
+<tr><th colspan="3"><h4><a href="api/95.json" onclick="showPopup(95)">sed replace files</a></h4></th></tr>
 <tr>
 <td colspan="3">
 <pre before="BASH">find . -type f -name "*.html" -print -exec sed -i -e 's/"\/\//"/g' {} \;</pre>
@@ -8400,7 +8400,7 @@ i love cary</pre>
 
 <table>
 
-<tr><th colspan="3"><h4><a href="#94" onclick="showPopup(94)">sort .bash_history</a></h4></th></tr>
+<tr><th colspan="3"><h4><a href="api/94.json" onclick="showPopup(94)">sort .bash_history</a></h4></th></tr>
 <tr>
 <td colspan="3">
 <pre before="BASH">cat .bash_history | grep -vE "^#[0-9]+" | sort | uniq -c | sort -k 1 -n | less</pre>
@@ -8419,7 +8419,7 @@ i love cary</pre>
 
 <table>
 
-<tr><th colspan="3"><h4><a href="#93" onclick="showPopup(93)">self sign cert (generate private key, csr, and crt)</a></h4></th></tr>
+<tr><th colspan="3"><h4><a href="api/93.json" onclick="showPopup(93)">self sign cert (generate private key, csr, and crt)</a></h4></th></tr>
 <tr>
 <td colspan="3">
 <pre before="BASH">openssl req -new -newkey rsa:4096 -nodes -keyout "private.key" -out "$(hostname -f).csr" -subj "/C=US/ST=Texas/L=Round Rock/O=nntrn/OU=Example /CN=$(hostname -f)"
@@ -8440,7 +8440,7 @@ openssl x509 -signkey private.key -in $(hostname -f).csr -req -days 365 -out $(h
 
 <table>
 
-<tr><th colspan="3"><h4><a href="#92" onclick="showPopup(92)">git pager</a></h4></th></tr>
+<tr><th colspan="3"><h4><a href="api/92.json" onclick="showPopup(92)">git pager</a></h4></th></tr>
 <tr>
 <td colspan="3">
 <pre before="BASH"># Tells 'less' not to paginate if less than a page
@@ -8462,7 +8462,7 @@ git config --global --replace-all core.pager "less -F -X"</pre>
 
 <table>
 
-<tr><th colspan="3"><h4><a href="#91" onclick="showPopup(91)">Get services with search string</a></h4></th></tr>
+<tr><th colspan="3"><h4><a href="api/91.json" onclick="showPopup(91)">Get services with search string</a></h4></th></tr>
 <tr>
 <td colspan="3">
 <pre before="POWERSHELL">Get-Service -Displayname "*network*"
@@ -8483,7 +8483,7 @@ Get-Service | Where-Object {$_.Status -eq "Running"}</pre>
 
 <table>
 
-<tr><th colspan="3"><h4><a href="#90" onclick="showPopup(90)">get all available data about a process</a></h4></th></tr>
+<tr><th colspan="3"><h4><a href="api/90.json" onclick="showPopup(90)">get all available data about a process</a></h4></th></tr>
 <tr>
 <td colspan="3">
 <pre before="POWERSHELL">Get-Process atom | Format-List *</pre>
@@ -8502,7 +8502,7 @@ Get-Service | Where-Object {$_.Status -eq "Running"}</pre>
 
 <table>
 
-<tr><th colspan="3"><h4><a href="#89" onclick="showPopup(89)">prune unwritable files from find</a></h4></th></tr>
+<tr><th colspan="3"><h4><a href="api/89.json" onclick="showPopup(89)">prune unwritable files from find</a></h4></th></tr>
 <tr>
 <td colspan="3">
 <pre before="BASH">find /repository/images/database -type d ! -writable -prune -o -type f -group $USER -print -exec chown -c $USER.dbcore {} \;</pre>
@@ -8521,7 +8521,7 @@ Get-Service | Where-Object {$_.Status -eq "Running"}</pre>
 
 <table>
 
-<tr><th colspan="3"><h4><a href="#88" onclick="showPopup(88)">get ldap group related to ADUser</a></h4></th></tr>
+<tr><th colspan="3"><h4><a href="api/88.json" onclick="showPopup(88)">get ldap group related to ADUser</a></h4></th></tr>
 <tr>
 <td colspan="3">
 <pre before="POWERSHELL">Get-ADUser -Identity Annie_Tran -Properties * | Select -ExpandProperty MemberOf</pre>
@@ -8540,7 +8540,7 @@ Get-Service | Where-Object {$_.Status -eq "Running"}</pre>
 
 <table>
 
-<tr><th colspan="3"><h4><a href="#87" onclick="showPopup(87)">get AD User (powershell)</a></h4></th></tr>
+<tr><th colspan="3"><h4><a href="api/87.json" onclick="showPopup(87)">get AD User (powershell)</a></h4></th></tr>
 <tr>
 <td colspan="3">
 <pre before="POWERSHELL">Get-ADUser -Identity Annie_Tran -Properties *</pre>
@@ -8559,7 +8559,7 @@ Get-Service | Where-Object {$_.Status -eq "Running"}</pre>
 
 <table>
 
-<tr><th colspan="3"><h4><a href="#86" onclick="showPopup(86)">psql table size</a></h4></th></tr>
+<tr><th colspan="3"><h4><a href="api/86.json" onclick="showPopup(86)">psql table size</a></h4></th></tr>
 <tr>
 <td colspan="3">
 <pre before="BASH">psql -U awx -d awx -c "\dt+" -P pager=off |
@@ -8582,7 +8582,7 @@ Get-Service | Where-Object {$_.Status -eq "Running"}</pre>
 
 <table>
 
-<tr><th colspan="3"><h4><a href="#84" onclick="showPopup(84)">print all commands in $PATH (windows bash)</a></h4></th></tr>
+<tr><th colspan="3"><h4><a href="api/84.json" onclick="showPopup(84)">print all commands in $PATH (windows bash)</a></h4></th></tr>
 <tr>
 <td colspan="3">
 <pre before="BASH">printcommands() {
@@ -8611,7 +8611,7 @@ printcommands | tee /tmp/window-commands.txt</pre>
 
 <table>
 
-<tr><th colspan="3"><h4><a href="#83" onclick="showPopup(83)">type</a></h4></th></tr>
+<tr><th colspan="3"><h4><a href="api/83.json" onclick="showPopup(83)">type</a></h4></th></tr>
 <tr>
 <td colspan="3">
 <pre before="BASH">$ LC_ALL=C type foo
@@ -8642,7 +8642,7 @@ function</pre>
 
 <table>
 
-<tr><th colspan="3"><h4><a href="#82" onclick="showPopup(82)">ansible list all hosts</a></h4></th></tr>
+<tr><th colspan="3"><h4><a href="api/82.json" onclick="showPopup(82)">ansible list all hosts</a></h4></th></tr>
 <tr>
 <td colspan="3">
 <pre before="BASH">ansible all --list-hosts</pre>
@@ -8661,7 +8661,7 @@ function</pre>
 
 <table>
 
-<tr><th colspan="3"><h4><a href="#81" onclick="showPopup(81)">encrypt/decrypt gpg</a></h4></th></tr>
+<tr><th colspan="3"><h4><a href="api/81.json" onclick="showPopup(81)">encrypt/decrypt gpg</a></h4></th></tr>
 <tr>
 <td colspan="3">
 <pre before="BASH">encrypt () { gpg -ac --no-options "$1"; }
@@ -8681,7 +8681,7 @@ decrypt () { gpg --no-options "$1"; }</pre>
 
 <table>
 
-<tr><th colspan="3"><h4><a href="#80" onclick="showPopup(80)">ansible - transfer a file directly to many servers:</a></h4></th></tr>
+<tr><th colspan="3"><h4><a href="api/80.json" onclick="showPopup(80)">ansible - transfer a file directly to many servers:</a></h4></th></tr>
 <tr>
 <td colspan="3">
 <pre before="BASH">ansible all -m copy -a "src=ansible.cfg dest=/tmp/"</pre>
@@ -8700,7 +8700,7 @@ decrypt () { gpg --no-options "$1"; }</pre>
 
 <table>
 
-<tr><th colspan="3"><h4><a href="#79" onclick="showPopup(79)">See the list of available plugins</a></h4></th></tr>
+<tr><th colspan="3"><h4><a href="api/79.json" onclick="showPopup(79)">See the list of available plugins</a></h4></th></tr>
 <tr>
 <td colspan="3">
 <pre before="BASH">ansible-doc -t become -l</pre>
@@ -8719,7 +8719,7 @@ decrypt () { gpg --no-options "$1"; }</pre>
 
 <table>
 
-<tr><th colspan="3"><h4><a href="#78" onclick="showPopup(78)">generate ed25519 private key</a></h4></th></tr>
+<tr><th colspan="3"><h4><a href="api/78.json" onclick="showPopup(78)">generate ed25519 private key</a></h4></th></tr>
 <tr>
 <td colspan="3">
 <pre before="BASH">openssl genpkey -algorithm ed25519</pre>
@@ -8738,7 +8738,7 @@ decrypt () { gpg --no-options "$1"; }</pre>
 
 <table>
 
-<tr><th colspan="3"><h4><a href="#77" onclick="showPopup(77)">rsync</a></h4></th></tr>
+<tr><th colspan="3"><h4><a href="api/77.json" onclick="showPopup(77)">rsync</a></h4></th></tr>
 <tr>
 <td colspan="3">
 <pre before="BASH">rsync -avr -o -g filename.txt user@hostname.us.example.com:/home/annie_tran</pre>
@@ -8757,7 +8757,7 @@ decrypt () { gpg --no-options "$1"; }</pre>
 
 <table>
 
-<tr><th colspan="3"><h4><a href="#76" onclick="showPopup(76)">create csr request</a></h4></th></tr>
+<tr><th colspan="3"><h4><a href="api/76.json" onclick="showPopup(76)">create csr request</a></h4></th></tr>
 <tr>
 <td colspan="3">
 <pre before="BASH">openssl req -new -newkey rsa:4096 -nodes -keyout "private.key" -out "$(hostname -f).csr" -subj "/C=US/ST=Texas/L=Round Rock/O=nntrn/OU=Example /CN=$(hostname -f)"</pre>
@@ -8776,7 +8776,7 @@ decrypt () { gpg --no-options "$1"; }</pre>
 
 <table>
 
-<tr><th colspan="3"><h4><a href="#75" onclick="showPopup(75)">print markdown docs not in node_modules</a></h4></th></tr>
+<tr><th colspan="3"><h4><a href="api/75.json" onclick="showPopup(75)">print markdown docs not in node_modules</a></h4></th></tr>
 <tr>
 <td colspan="3">
 <pre before="BASH">find . -type f -name "*.md" ! -path "*node_modules*" -print</pre>
@@ -8795,7 +8795,7 @@ decrypt () { gpg --no-options "$1"; }</pre>
 
 <table>
 
-<tr><th colspan="3"><h4><a href="#74" onclick="showPopup(74)">get most used commands</a></h4></th></tr>
+<tr><th colspan="3"><h4><a href="api/74.json" onclick="showPopup(74)">get most used commands</a></h4></th></tr>
 <tr>
 <td colspan="3">
 <pre before="BASH">history | cut -d ' ' -f6- | sort | uniq -c | sort -k1 -nr</pre>
@@ -8814,7 +8814,7 @@ decrypt () { gpg --no-options "$1"; }</pre>
 
 <table>
 
-<tr><th colspan="3"><h4><a href="#73" onclick="showPopup(73)">print commands from sudo log</a></h4></th></tr>
+<tr><th colspan="3"><h4><a href="api/73.json" onclick="showPopup(73)">print commands from sudo log</a></h4></th></tr>
 <tr>
 <td colspan="3">
 <pre before="BASH">cat /var/log/sudo.log | grep "LANG=C;LANGUAGE=en" | cut -d';' -f3 | sort -u </pre>
@@ -8833,7 +8833,7 @@ decrypt () { gpg --no-options "$1"; }</pre>
 
 <table>
 
-<tr><th colspan="3"><h4><a href="#72" onclick="showPopup(72)">view UDP and TCP ports</a></h4></th></tr>
+<tr><th colspan="3"><h4><a href="api/72.json" onclick="showPopup(72)">view UDP and TCP ports</a></h4></th></tr>
 <tr>
 <td colspan="3">
 <pre before="BASH">lsof -n -i TCP -i UDP</pre>
@@ -8852,7 +8852,7 @@ decrypt () { gpg --no-options "$1"; }</pre>
 
 <table>
 
-<tr><th colspan="3"><h4><a href="#71" onclick="showPopup(71)">output all yml</a></h4></th></tr>
+<tr><th colspan="3"><h4><a href="api/71.json" onclick="showPopup(71)">output all yml</a></h4></th></tr>
 <tr>
 <td colspan="3">
 <pre before="BASH">tmppath="/tmp/$(date +%F)/ansible-roles"
@@ -8877,7 +8877,7 @@ done</pre>
 
 <table>
 
-<tr><th colspan="3"><h4><a href="#70" onclick="showPopup(70)">encrypt string with ansible-vault</a></h4></th></tr>
+<tr><th colspan="3"><h4><a href="api/70.json" onclick="showPopup(70)">encrypt string with ansible-vault</a></h4></th></tr>
 <tr>
 <td colspan="3">
 <pre before="BASH">echo -n 'letmein' | ansible-vault encrypt_string --vault-id dev@a_password_file --stdin-name 'db_password'</pre>
@@ -8896,7 +8896,7 @@ done</pre>
 
 <table>
 
-<tr><th colspan="3"><h4><a href="#69" onclick="showPopup(69)">list all ip rules</a></h4></th></tr>
+<tr><th colspan="3"><h4><a href="api/69.json" onclick="showPopup(69)">list all ip rules</a></h4></th></tr>
 <tr>
 <td colspan="3">
 <pre before="BASH">iptables --list-rules -v</pre>
@@ -8915,7 +8915,7 @@ done</pre>
 
 <table>
 
-<tr><th colspan="3"><h4><a href="#68" onclick="showPopup(68)">get matching prefix</a></h4></th></tr>
+<tr><th colspan="3"><h4><a href="api/68.json" onclick="showPopup(68)">get matching prefix</a></h4></th></tr>
 <tr>
 <td colspan="3">
 <pre before="BASH">getsame() {
@@ -8939,7 +8939,7 @@ done</pre>
 
 <table>
 
-<tr><th colspan="3"><h4><a href="#67" onclick="showPopup(67)">greedy *</a></h4></th></tr>
+<tr><th colspan="3"><h4><a href="api/67.json" onclick="showPopup(67)">greedy *</a></h4></th></tr>
 <tr>
 <td colspan="3">
 <pre before="BASH">echo foo | sed 's/o*/EEE/'</pre>
@@ -8962,7 +8962,7 @@ done</pre>
 
 <table>
 
-<tr><th colspan="3"><h4><a href="#66" onclick="showPopup(66)">hack for exporting env variables</a></h4></th></tr>
+<tr><th colspan="3"><h4><a href="api/66.json" onclick="showPopup(66)">hack for exporting env variables</a></h4></th></tr>
 <tr>
 <td colspan="3">
 <pre before="BASH">export $(cat /path/to/file.txt | grep -vE "^(#|export)" | grep ".")</pre>
@@ -8981,7 +8981,7 @@ done</pre>
 
 <table>
 
-<tr><th colspan="3"><h4><a href="#65" onclick="showPopup(65)">get modification date for files in directory</a></h4></th></tr>
+<tr><th colspan="3"><h4><a href="api/65.json" onclick="showPopup(65)">get modification date for files in directory</a></h4></th></tr>
 <tr>
 <td colspan="3">
 <pre before="BASH">for pb in $(find . -maxdepth 1 -type f -name "*.yml"); do
@@ -9016,7 +9016,7 @@ done</pre>
 
 <table>
 
-<tr><th colspan="3"><h4><a href="#64" onclick="showPopup(64)">view workstation details</a></h4></th></tr>
+<tr><th colspan="3"><h4><a href="api/64.json" onclick="showPopup(64)">view workstation details</a></h4></th></tr>
 <tr>
 <td colspan="3">
 <pre before="BASH">net config workstation</pre>
@@ -9057,7 +9057,7 @@ The command completed sucserver.</pre>
 
 <table>
 
-<tr><th colspan="3"><h4><a href="#63" onclick="showPopup(63)">Recursively get full path name</a></h4></th></tr>
+<tr><th colspan="3"><h4><a href="api/63.json" onclick="showPopup(63)">Recursively get full path name</a></h4></th></tr>
 <tr>
 <td colspan="3">
 <pre before="BASH">ls -RA --ignore="\.*" /misc/software/database/awx | awk '
@@ -9079,7 +9079,7 @@ NF&&f{ print s"/"$0 }'</pre>
 
 <table>
 
-<tr><th colspan="3"><h4><a href="#62" onclick="showPopup(62)">coreutils</a></h4></th></tr>
+<tr><th colspan="3"><h4><a href="api/62.json" onclick="showPopup(62)">coreutils</a></h4></th></tr>
 <tr>
 <td colspan="3">
 <pre before="BASH"># Output of entire files
@@ -9159,7 +9159,7 @@ chroot env nice nohup stdbuf timeout</pre>
 
 <table>
 
-<tr><th colspan="3"><h4><a href="#61" onclick="showPopup(61)">get sorted size of directories in current working directory</a></h4></th></tr>
+<tr><th colspan="3"><h4><a href="api/61.json" onclick="showPopup(61)">get sorted size of directories in current working directory</a></h4></th></tr>
 <tr>
 <td colspan="3">
 <pre before="BASH">du -h --max-depth=1 | sort -h</pre>
@@ -9190,7 +9190,7 @@ chroot env nice nohup stdbuf timeout</pre>
 
 <table>
 
-<tr><th colspan="3"><h4><a href="#60" onclick="showPopup(60)">Resolve warning that bridge-nf-call-iptables is disabled</a></h4></th></tr>
+<tr><th colspan="3"><h4><a href="api/60.json" onclick="showPopup(60)">Resolve warning that bridge-nf-call-iptables is disabled</a></h4></th></tr>
 <tr>
 <td colspan="3">
 <pre before="BASH">modprobe br_netfilter
@@ -9211,7 +9211,7 @@ sysctl net.bridge.bridge-nf-call-ip6tables=1</pre>
 
 <table>
 
-<tr><th colspan="3"><h4><a href="#59" onclick="showPopup(59)">Get size of mounted filesystems</a></h4></th></tr>
+<tr><th colspan="3"><h4><a href="api/59.json" onclick="showPopup(59)">Get size of mounted filesystems</a></h4></th></tr>
 <tr>
 <td colspan="3">
 <pre before="BASH">df --block-size=1 | numfmt --field 2 --header --to=iec</pre>
@@ -9252,7 +9252,7 @@ tmpfs                                                                   2.4G    
 
 <table>
 
-<tr><th colspan="3"><h4><a href="#58" onclick="showPopup(58)">alias for easy column extraction</a></h4></th></tr>
+<tr><th colspan="3"><h4><a href="api/58.json" onclick="showPopup(58)">alias for easy column extraction</a></h4></th></tr>
 <tr>
 <td colspan="3">
 <pre before="BASH">alias c1="awk '{print \$1}'"
@@ -9285,7 +9285,7 @@ c1</pre>
 
 <table>
 
-<tr><th colspan="3"><h4><a href="#57" onclick="showPopup(57)">view service account owner</a></h4></th></tr>
+<tr><th colspan="3"><h4><a href="api/57.json" onclick="showPopup(57)">view service account owner</a></h4></th></tr>
 <tr>
 <td colspan="3">
 <pre before="BASH">net user /domain svc_account</pre>
@@ -9304,7 +9304,7 @@ c1</pre>
 
 <table>
 
-<tr><th colspan="3"><h4><a href="#56" onclick="showPopup(56)">fetch all git tags</a></h4></th></tr>
+<tr><th colspan="3"><h4><a href="api/56.json" onclick="showPopup(56)">fetch all git tags</a></h4></th></tr>
 <tr>
 <td colspan="3">
 <pre before="BASH">git fetch --all --tags</pre>
@@ -9323,7 +9323,7 @@ c1</pre>
 
 <table>
 
-<tr><th colspan="3"><h4><a href="#55" onclick="showPopup(55)">get free space on directory</a></h4></th></tr>
+<tr><th colspan="3"><h4><a href="api/55.json" onclick="showPopup(55)">get free space on directory</a></h4></th></tr>
 <tr>
 <td colspan="3">
 <pre before="BASH">df -Ph . </pre>
@@ -9351,7 +9351,7 @@ overlay          20G  4.4G   16G  23% /</pre>
 
 <table>
 
-<tr><th colspan="3"><h4><a href="#54" onclick="showPopup(54)">get free space in directory</a></h4></th></tr>
+<tr><th colspan="3"><h4><a href="api/54.json" onclick="showPopup(54)">get free space in directory</a></h4></th></tr>
 <tr>
 <td colspan="3">
 <pre before="BASH">df -Ph . </pre>
@@ -9379,7 +9379,7 @@ overlay          20G  4.4G   16G  23% /</pre>
 
 <table>
 
-<tr><th colspan="3"><h4><a href="#53" onclick="showPopup(53)">hack for unsourcing env variables</a></h4></th></tr>
+<tr><th colspan="3"><h4><a href="api/53.json" onclick="showPopup(53)">hack for unsourcing env variables</a></h4></th></tr>
 <tr>
 <td colspan="3">
 <pre before="BASH">unset $(cat /path/to/file.txt | grep -vE "^(#|export)" | grep "." | cut -d = -f -1)</pre>
@@ -9398,7 +9398,7 @@ overlay          20G  4.4G   16G  23% /</pre>
 
 <table>
 
-<tr><th colspan="3"><h4><a href="#52" onclick="showPopup(52)">echo shell commands as they are executed</a></h4></th></tr>
+<tr><th colspan="3"><h4><a href="api/52.json" onclick="showPopup(52)">echo shell commands as they are executed</a></h4></th></tr>
 <tr>
 <td colspan="3">
 <pre before="BASH">exe() { echo "\$ $@" ; "$@" ; }</pre>
@@ -9417,7 +9417,7 @@ overlay          20G  4.4G   16G  23% /</pre>
 
 <table>
 
-<tr><th colspan="3"><h4><a href="#51" onclick="showPopup(51)">print all the columns after a particular number using awk</a></h4></th></tr>
+<tr><th colspan="3"><h4><a href="api/51.json" onclick="showPopup(51)">print all the columns after a particular number using awk</a></h4></th></tr>
 <tr>
 <td colspan="3">
 <pre before="BASH">ps -ef | awk -v m="\x01" -v N="8" '{$N=m$N ;print substr($0, index($0,m)+1)}'</pre>
@@ -9436,7 +9436,7 @@ overlay          20G  4.4G   16G  23% /</pre>
 
 <table>
 
-<tr><th colspan="3"><h4><a href="#50" onclick="showPopup(50)">set timeout for script </a></h4></th></tr>
+<tr><th colspan="3"><h4><a href="api/50.json" onclick="showPopup(50)">set timeout for script </a></h4></th></tr>
 <tr>
 <td colspan="3">
 <pre before="BASH">/bin/timeout -s 2 10 /path/to/your/script.sh</pre>
@@ -9455,7 +9455,7 @@ overlay          20G  4.4G   16G  23% /</pre>
 
 <table>
 
-<tr><th colspan="3"><h4><a href="#49" onclick="showPopup(49)">git make files executable</a></h4></th></tr>
+<tr><th colspan="3"><h4><a href="api/49.json" onclick="showPopup(49)">git make files executable</a></h4></th></tr>
 <tr>
 <td colspan="3">
 <pre before="BASH">find . -type f -name "*.sh" | xargs -I {} git add --chmod=+x {}</pre>
@@ -9474,7 +9474,7 @@ overlay          20G  4.4G   16G  23% /</pre>
 
 <table>
 
-<tr><th colspan="3"><h4><a href="#48" onclick="showPopup(48)">curl yum repo</a></h4></th></tr>
+<tr><th colspan="3"><h4><a href="api/48.json" onclick="showPopup(48)">curl yum repo</a></h4></th></tr>
 <tr>
 <td colspan="3">
 <pre before="BASH">curl -sL https://dl.yarnpkg.com/rpm/yarn.repo | tee /etc/yum.repos.d/yarn.repo
@@ -9494,7 +9494,7 @@ yum install yarn</pre>
 
 <table>
 
-<tr><th colspan="3"><h4><a href="#47" onclick="showPopup(47)">set env variables</a></h4></th></tr>
+<tr><th colspan="3"><h4><a href="api/47.json" onclick="showPopup(47)">set env variables</a></h4></th></tr>
 <tr>
 <td colspan="3">
 <pre before="BASH">export $(egrep -v '^#' "path/to/file" | xargs)</pre>
@@ -9513,7 +9513,7 @@ yum install yarn</pre>
 
 <table>
 
-<tr><th colspan="3"><h4><a href="#46" onclick="showPopup(46)">umask create file with permissions</a></h4></th></tr>
+<tr><th colspan="3"><h4><a href="api/46.json" onclick="showPopup(46)">umask create file with permissions</a></h4></th></tr>
 <tr>
 <td colspan="3">
 <pre before="BASH">(umask 077; touch file)  # creates a 600 (rw-------) file
@@ -9533,7 +9533,7 @@ yum install yarn</pre>
 
 <table>
 
-<tr><th colspan="3"><h4><a href="#45" onclick="showPopup(45)">pip show for all pip installed</a></h4></th></tr>
+<tr><th colspan="3"><h4><a href="api/45.json" onclick="showPopup(45)">pip show for all pip installed</a></h4></th></tr>
 <tr>
 <td colspan="3">
 <pre before="BASH">pip show $(pip list | awk '{print $1}' | grep -v - | xargs) | less</pre>
@@ -9552,7 +9552,7 @@ yum install yarn</pre>
 
 <table>
 
-<tr><th colspan="3"><h4><a href="#44" onclick="showPopup(44)">capturing group grep</a></h4></th></tr>
+<tr><th colspan="3"><h4><a href="api/44.json" onclick="showPopup(44)">capturing group grep</a></h4></th></tr>
 <tr>
 <td colspan="3">
 <pre before="BASH">shopt -s extglob
@@ -9579,7 +9579,7 @@ done</pre>
 
 <table>
 
-<tr><th colspan="3"><h4><a href="#43" onclick="showPopup(43)">docker history dockerfile</a></h4></th></tr>
+<tr><th colspan="3"><h4><a href="api/43.json" onclick="showPopup(43)">docker history dockerfile</a></h4></th></tr>
 <tr>
 <td colspan="3">
 <pre before="BASH">docker history --no-trunc <imageid> | tac | tr -s ' ' | cut -d " " -f 5- | sed 's,^/bin/sh -c #(nop) ,,g' | sed 's,^/bin/sh -c,RUN,g' | sed 's, && ,\n  & ,g' | sed 's,\s*[0-9]*[\.]*[0-9]*\s*[kMG]*B\s*$,,g' | head -n -1</pre>
@@ -9598,7 +9598,7 @@ done</pre>
 
 <table>
 
-<tr><th colspan="3"><h4><a href="#42" onclick="showPopup(42)">docker save images</a></h4></th></tr>
+<tr><th colspan="3"><h4><a href="api/42.json" onclick="showPopup(42)">docker save images</a></h4></th></tr>
 <tr>
 <td colspan="3">
 <pre before="BASH">dockerimagedir="docker-images-$(date +%F)"
@@ -9631,7 +9631,7 @@ done < "$dockerimagedir/docker-images.list"</pre>
 
 <table>
 
-<tr><th colspan="3"><h4><a href="#41" onclick="showPopup(41)">pip install requirements one line</a></h4></th></tr>
+<tr><th colspan="3"><h4><a href="api/41.json" onclick="showPopup(41)">pip install requirements one line</a></h4></th></tr>
 <tr>
 <td colspan="3">
 <pre before="BASH"> pip install --upgrade  $(cat reqserver.txt | grep -o "^[^#].*")</pre>
@@ -9650,7 +9650,7 @@ done < "$dockerimagedir/docker-images.list"</pre>
 
 <table>
 
-<tr><th colspan="3"><h4><a href="#40" onclick="showPopup(40)">print env variables that start with S</a></h4></th></tr>
+<tr><th colspan="3"><h4><a href="api/40.json" onclick="showPopup(40)">print env variables that start with S</a></h4></th></tr>
 <tr>
 <td colspan="3">
 <pre before="BASH">env | grep -o '^S[^=]*'</pre>
@@ -9678,7 +9678,7 @@ SSH_CONNECTION</pre>
 
 <table>
 
-<tr><th colspan="3"><h4><a href="#39" onclick="showPopup(39)">Parse a .env (dotenv) file directly using bash</a></h4></th></tr>
+<tr><th colspan="3"><h4><a href="api/39.json" onclick="showPopup(39)">Parse a .env (dotenv) file directly using bash</a></h4></th></tr>
 <tr>
 <td colspan="3">
 <pre before="BASH">export $(egrep -v '^#' .env | xargs)</pre>
@@ -9697,7 +9697,7 @@ SSH_CONNECTION</pre>
 
 <table>
 
-<tr><th colspan="3"><h4><a href="#38" onclick="showPopup(38)">extract title from html</a></h4></th></tr>
+<tr><th colspan="3"><h4><a href="api/38.json" onclick="showPopup(38)">extract title from html</a></h4></th></tr>
 <tr>
 <td colspan="3">
 <pre before="BASH">echo -e $html | grep -Eo "<title>(.*)</title>"</pre>
@@ -9716,7 +9716,7 @@ SSH_CONNECTION</pre>
 
 <table>
 
-<tr><th colspan="3"><h4><a href="#37" onclick="showPopup(37)">rsync with exclude</a></h4></th></tr>
+<tr><th colspan="3"><h4><a href="api/37.json" onclick="showPopup(37)">rsync with exclude</a></h4></th></tr>
 <tr>
 <td colspan="3">
 <pre before="BASH">rsync -avr --exclude={'dbaasv2-awx','*.rpm'} -o -g /home/servicedbaas servicedbaas@awxserver.us.example.com:/home/servicedbaas/01
@@ -9738,7 +9738,7 @@ rsync -avr --exclude={'dbaasv2-awx','ansible'} -o -g dbaas annie_tran@ausserver.
 
 <table>
 
-<tr><th colspan="3"><h4><a href="#36" onclick="showPopup(36)">view signed certs</a></h4></th></tr>
+<tr><th colspan="3"><h4><a href="api/36.json" onclick="showPopup(36)">view signed certs</a></h4></th></tr>
 <tr>
 <td colspan="3">
 <pre before="BASH">find /etc/pki -type f ! -name "*cacerts*" -print -exec cat {} \; | less</pre>
@@ -9757,7 +9757,7 @@ rsync -avr --exclude={'dbaasv2-awx','ansible'} -o -g dbaas annie_tran@ausserver.
 
 <table>
 
-<tr><th colspan="3"><h4><a href="#35" onclick="showPopup(35)">hash directory </a></h4></th></tr>
+<tr><th colspan="3"><h4><a href="api/35.json" onclick="showPopup(35)">hash directory </a></h4></th></tr>
 <tr>
 <td colspan="3">
 <pre before="BASH">find . -type f -print0 | sort -z | xargs -r0 sha256sum  sha256SumOutput</pre>
@@ -9776,7 +9776,7 @@ rsync -avr --exclude={'dbaasv2-awx','ansible'} -o -g dbaas annie_tran@ausserver.
 
 <table>
 
-<tr><th colspan="3"><h4><a href="#34" onclick="showPopup(34)">print name + content</a></h4></th></tr>
+<tr><th colspan="3"><h4><a href="api/34.json" onclick="showPopup(34)">print name + content</a></h4></th></tr>
 <tr>
 <td colspan="3">
 <pre before="BASH">find . -type f -print -exec cat {} \; </pre>
@@ -9795,7 +9795,7 @@ rsync -avr --exclude={'dbaasv2-awx','ansible'} -o -g dbaas annie_tran@ausserver.
 
 <table>
 
-<tr><th colspan="3"><h4><a href="#32" onclick="showPopup(32)">diff project structures for git branches</a></h4></th></tr>
+<tr><th colspan="3"><h4><a href="api/32.json" onclick="showPopup(32)">diff project structures for git branches</a></h4></th></tr>
 <tr>
 <td colspan="3">
 <pre before="BASH">diff --side-by-side --color=always --width=200 --suppress-common-lines \
@@ -9816,7 +9816,7 @@ rsync -avr --exclude={'dbaasv2-awx','ansible'} -o -g dbaas annie_tran@ausserver.
 
 <table>
 
-<tr><th colspan="3"><h4><a href="#31" onclick="showPopup(31)">download & save as json</a></h4></th></tr>
+<tr><th colspan="3"><h4><a href="api/31.json" onclick="showPopup(31)">download & save as json</a></h4></th></tr>
 <tr>
 <td colspan="3">
 <pre before="BASH">wget <url> -O filserver.json</pre>
@@ -9848,7 +9848,7 @@ snow_date.json                         [ <=>                                    
 
 <table>
 
-<tr><th colspan="3"><h4><a href="#30" onclick="showPopup(30)">a fancier lsof -i</a></h4></th></tr>
+<tr><th colspan="3"><h4><a href="api/30.json" onclick="showPopup(30)">a fancier lsof -i</a></h4></th></tr>
 <tr>
 <td colspan="3">
 <pre before="BASH">lsof -P -i -n</pre>
@@ -9867,7 +9867,7 @@ snow_date.json                         [ <=>                                    
 
 <table>
 
-<tr><th colspan="3"><h4><a href="#29" onclick="showPopup(29)">get list of most used commands</a></h4></th></tr>
+<tr><th colspan="3"><h4><a href="api/29.json" onclick="showPopup(29)">get list of most used commands</a></h4></th></tr>
 <tr>
 <td colspan="3">
 <pre before="BASH">COLUMN=4
@@ -9900,7 +9900,7 @@ history | awk '{a[$COLUMN]++}END{for(i in a){print a[i] " " i}}' | sort -rn | he
 
 <table>
 
-<tr><th colspan="3"><h4><a href="#28" onclick="showPopup(28)">Graph # of connections for each hosts.</a></h4></th></tr>
+<tr><th colspan="3"><h4><a href="api/28.json" onclick="showPopup(28)">Graph # of connections for each hosts.</a></h4></th></tr>
 <tr>
 <td colspan="3">
 <pre before="BASH">netstat -an | grep ESTABLISHED | awk '{print $5}' | awk -F: '{print $1}' | sort | uniq -c | awk '{ printf("%s\t%s\t",$2,$1) ; for (i = 0; i < $1; i++) {printf("*")}; print "" }'</pre>
@@ -9929,7 +9929,7 @@ history | awk '{a[$COLUMN]++}END{for(i in a){print a[i] " " i}}' | sort -rn | he
 
 <table>
 
-<tr><th colspan="3"><h4><a href="#27" onclick="showPopup(27)">ps examples</a></h4></th></tr>
+<tr><th colspan="3"><h4><a href="api/27.json" onclick="showPopup(27)">ps examples</a></h4></th></tr>
 <tr>
 <td colspan="3">
 <pre before="BASH">ps aux
@@ -9949,7 +9949,7 @@ ps -e</pre>
 
 <table>
 
-<tr><th colspan="3"><h4><a href="#26" onclick="showPopup(26)">print filename + content of sudo privileges</a></h4></th></tr>
+<tr><th colspan="3"><h4><a href="api/26.json" onclick="showPopup(26)">print filename + content of sudo privileges</a></h4></th></tr>
 <tr>
 <td colspan="3">
 <pre before="BASH">find /etc/sudoers.d/ -type f -print -exec cat {} \; | less</pre>
@@ -9968,7 +9968,7 @@ ps -e</pre>
 
 <table>
 
-<tr><th colspan="3"><h4><a href="#25" onclick="showPopup(25)">create html toc</a></h4></th></tr>
+<tr><th colspan="3"><h4><a href="api/25.json" onclick="showPopup(25)">create html toc</a></h4></th></tr>
 <tr>
 <td colspan="3">
 <pre before="BASH">cat <<EOF >index.html
@@ -9995,7 +9995,7 @@ EOF</pre>
 
 <table>
 
-<tr><th colspan="3"><h4><a href="#24" onclick="showPopup(24)">urldecode</a></h4></th></tr>
+<tr><th colspan="3"><h4><a href="api/24.json" onclick="showPopup(24)">urldecode</a></h4></th></tr>
 <tr>
 <td colspan="3">
 <pre before="BASH">sed "s@+@ @g;s@%@\\\\x@g" | xargs -0 printf "%b"</pre>
@@ -10018,7 +10018,7 @@ EOF</pre>
 
 <table>
 
-<tr><th colspan="3"><h4><a href="#23" onclick="showPopup(23)">recursively download files from web</a></h4></th></tr>
+<tr><th colspan="3"><h4><a href="api/23.json" onclick="showPopup(23)">recursively download files from web</a></h4></th></tr>
 <tr>
 <td colspan="3">
 <pre before="BASH">wget --no-parent -r https://url.com</pre>
@@ -10042,7 +10042,7 @@ EOF</pre>
 
 <table>
 
-<tr><th colspan="3"><h4><a href="#22" onclick="showPopup(22)">creating a user with pass</a></h4></th></tr>
+<tr><th colspan="3"><h4><a href="api/22.json" onclick="showPopup(22)">creating a user with pass</a></h4></th></tr>
 <tr>
 <td colspan="3">
 <pre before="BASH">useradd -p $(openssl passwd -1 $PASS) $USER</pre>
@@ -10061,7 +10061,7 @@ EOF</pre>
 
 <table>
 
-<tr><th colspan="3"><h4><a href="#21" onclick="showPopup(21)">sending email</a></h4></th></tr>
+<tr><th colspan="3"><h4><a href="api/21.json" onclick="showPopup(21)">sending email</a></h4></th></tr>
 <tr>
 <td colspan="3">
 <pre before="BASH">mail -s "$(echo -e "SAR files\nContent-Type: text/html")" annie_tran@example.com <allsar.txt</pre>
@@ -10080,7 +10080,7 @@ EOF</pre>
 
 <table>
 
-<tr><th colspan="3"><h4><a href="#20" onclick="showPopup(20)">Get active internet connections and domain sockets</a></h4></th></tr>
+<tr><th colspan="3"><h4><a href="api/20.json" onclick="showPopup(20)">Get active internet connections and domain sockets</a></h4></th></tr>
 <tr>
 <td colspan="3">
 <pre before="BASH">netstat -pW</pre>
@@ -10104,7 +10104,7 @@ Proto Recv-Q Send-Q Local Address           Foreign Address         State       
 
 <table>
 
-<tr><th colspan="3"><h4><a href="#19" onclick="showPopup(19)">unwrap text file (useful for logs)</a></h4></th></tr>
+<tr><th colspan="3"><h4><a href="api/19.json" onclick="showPopup(19)">unwrap text file (useful for logs)</a></h4></th></tr>
 <tr>
 <td colspan="3">
 <pre before="BASH">sed ':a;N;$!{/\n$/!ba}; s/[[:blank:]]*\n[[:blank:]]*/ /g' textfile.txt</pre>
@@ -10123,7 +10123,7 @@ Proto Recv-Q Send-Q Local Address           Foreign Address         State       
 
 <table>
 
-<tr><th colspan="3"><h4><a href="#18" onclick="showPopup(18)">clear pycache</a></h4></th></tr>
+<tr><th colspan="3"><h4><a href="api/18.json" onclick="showPopup(18)">clear pycache</a></h4></th></tr>
 <tr>
 <td colspan="3">
 <pre before="BASH">find . | grep -E "(__pycache__|\.pyc|\.pyo$)" | xargs rm -rf</pre>
@@ -10142,7 +10142,7 @@ Proto Recv-Q Send-Q Local Address           Foreign Address         State       
 
 <table>
 
-<tr><th colspan="3"><h4><a href="#17" onclick="showPopup(17)">print = across the screen</a></h4></th></tr>
+<tr><th colspan="3"><h4><a href="api/17.json" onclick="showPopup(17)">print = across the screen</a></h4></th></tr>
 <tr>
 <td colspan="3">
 <pre before="BASH">printf '=%.0s' $(seq 1 $(tput cols))</pre>
@@ -10161,7 +10161,7 @@ Proto Recv-Q Send-Q Local Address           Foreign Address         State       
 
 <table>
 
-<tr><th colspan="3"><h4><a href="#16" onclick="showPopup(16)">Update multiple repos (no rev)</a></h4></th></tr>
+<tr><th colspan="3"><h4><a href="api/16.json" onclick="showPopup(16)">Update multiple repos (no rev)</a></h4></th></tr>
 <tr>
 <td colspan="3">
 <pre before="BASH">find . -maxdepth 3 -name .git -type d | cut -d '/' -f1,2 | xargs -I {} git -C {} pull</pre>
@@ -10180,7 +10180,7 @@ Proto Recv-Q Send-Q Local Address           Foreign Address         State       
 
 <table>
 
-<tr><th colspan="3"><h4><a href="#15" onclick="showPopup(15)">view file structure (tree)</a></h4></th></tr>
+<tr><th colspan="3"><h4><a href="api/15.json" onclick="showPopup(15)">view file structure (tree)</a></h4></th></tr>
 <tr>
 <td colspan="3">
 <pre before="BASH">ls -R | grep ":$" | sed -e 's/:$//' -e 's/[^-][^\/]*\//--/g' -e 's/^/   /' -e 's/-/|/'</pre>
@@ -10199,7 +10199,7 @@ Proto Recv-Q Send-Q Local Address           Foreign Address         State       
 
 <table>
 
-<tr><th colspan="3"><h4><a href="#14" onclick="showPopup(14)">List full paths for recursive files with grep and awk</a></h4></th></tr>
+<tr><th colspan="3"><h4><a href="api/14.json" onclick="showPopup(14)">List full paths for recursive files with grep and awk</a></h4></th></tr>
 <tr>
 <td colspan="3">
 <pre before="BASH">ls -R /path | awk '
@@ -10221,7 +10221,7 @@ NF&&f{ print s"/"$0 }' | grep docx</pre>
 
 <table>
 
-<tr><th colspan="3"><h4><a href="#13" onclick="showPopup(13)">Updating Multiple Repos With One Command</a></h4></th></tr>
+<tr><th colspan="3"><h4><a href="api/13.json" onclick="showPopup(13)">Updating Multiple Repos With One Command</a></h4></th></tr>
 <tr>
 <td colspan="3">
 <pre before="BASH">find . -maxdepth 3 -name .git -type d | rev | cut -c 6- | rev | xargs -I {} git -C {} pull</pre>
@@ -10240,7 +10240,7 @@ NF&&f{ print s"/"$0 }' | grep docx</pre>
 
 <table>
 
-<tr><th colspan="3"><h4><a href="#11" onclick="showPopup(11)">append group to a user</a></h4></th></tr>
+<tr><th colspan="3"><h4><a href="api/11.json" onclick="showPopup(11)">append group to a user</a></h4></th></tr>
 <tr>
 <td colspan="3">
 <pre before="BASH">usermod -aG wheel username</pre>
@@ -10259,7 +10259,7 @@ NF&&f{ print s"/"$0 }' | grep docx</pre>
 
 <table>
 
-<tr><th colspan="3"><h4><a href="#10" onclick="showPopup(10)">view os-release</a></h4></th></tr>
+<tr><th colspan="3"><h4><a href="api/10.json" onclick="showPopup(10)">view os-release</a></h4></th></tr>
 <tr>
 <td colspan="3">
 <pre before="BASH">cat /etc/os-release</pre>
@@ -10278,7 +10278,7 @@ NF&&f{ print s"/"$0 }' | grep docx</pre>
 
 <table>
 
-<tr><th colspan="3"><h4><a href="#9" onclick="showPopup(9)">cf</a></h4></th></tr>
+<tr><th colspan="3"><h4><a href="api/9.json" onclick="showPopup(9)">cf</a></h4></th></tr>
 <tr>
 <td colspan="3">
 <pre before="BASH">cf login -a https://api.sr2.pcf.example.com</pre>
@@ -10297,7 +10297,7 @@ NF&&f{ print s"/"$0 }' | grep docx</pre>
 
 <table>
 
-<tr><th colspan="3"><h4><a href="#8" onclick="showPopup(8)">rpm</a></h4></th></tr>
+<tr><th colspan="3"><h4><a href="api/8.json" onclick="showPopup(8)">rpm</a></h4></th></tr>
 <tr>
 <td colspan="3">
 <pre before="BASH">RPMURL='https://...'
@@ -10317,7 +10317,7 @@ rpm -ivh $RPMURL</pre>
 
 <table>
 
-<tr><th colspan="3"><h4><a href="#7" onclick="showPopup(7)">test openssl connection</a></h4></th></tr>
+<tr><th colspan="3"><h4><a href="api/7.json" onclick="showPopup(7)">test openssl connection</a></h4></th></tr>
 <tr>
 <td colspan="3">
 <pre before="BASH">openssl s_client -connect github.com:443 -msg</pre>
@@ -10336,7 +10336,7 @@ rpm -ivh $RPMURL</pre>
 
 <table>
 
-<tr><th colspan="3"><h4><a href="#6" onclick="showPopup(6)">display information about the CPU architecture</a></h4></th></tr>
+<tr><th colspan="3"><h4><a href="api/6.json" onclick="showPopup(6)">display information about the CPU architecture</a></h4></th></tr>
 <tr>
 <td colspan="3">
 <pre before="BASH">lscpu</pre>
@@ -10382,7 +10382,7 @@ Flags:               fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cm
 
 <table>
 
-<tr><th colspan="3"><h4><a href="#5" onclick="showPopup(5)">start firewalld</a></h4></th></tr>
+<tr><th colspan="3"><h4><a href="api/5.json" onclick="showPopup(5)">start firewalld</a></h4></th></tr>
 <tr>
 <td colspan="3">
 <pre before="BASH">sudo dnf install -y curl policycoreutils openssh-server perl
@@ -10407,7 +10407,7 @@ sudo systemctl reload firewalld</pre>
 
 <table>
 
-<tr><th colspan="3"><h4><a href="#4" onclick="showPopup(4)">find and kill processes</a></h4></th></tr>
+<tr><th colspan="3"><h4><a href="api/4.json" onclick="showPopup(4)">find and kill processes</a></h4></th></tr>
 <tr>
 <td colspan="3">
 <pre before="BASH">STRING_MATCH=""
@@ -10427,7 +10427,7 @@ lsof -i | grep $STRING_MATCH |  awk '{print $2}' | xargs kill</pre>
 
 <table>
 
-<tr><th colspan="3"><h4><a href="#3" onclick="showPopup(3)">host</a></h4></th></tr>
+<tr><th colspan="3"><h4><a href="api/3.json" onclick="showPopup(3)">host</a></h4></th></tr>
 <tr>
 <td colspan="3">
 <pre before="BASH">host -w hostname</pre>
@@ -10446,7 +10446,7 @@ lsof -i | grep $STRING_MATCH |  awk '{print $2}' | xargs kill</pre>
 
 <table>
 
-<tr><th colspan="3"><h4><a href="#2" onclick="showPopup(2)">pstree</a></h4></th></tr>
+<tr><th colspan="3"><h4><a href="api/2.json" onclick="showPopup(2)">pstree</a></h4></th></tr>
 <tr>
 <td colspan="3">
 <pre before="BASH">pstree</pre>
@@ -10465,7 +10465,7 @@ lsof -i | grep $STRING_MATCH |  awk '{print $2}' | xargs kill</pre>
 
 <table>
 
-<tr><th colspan="3"><h4><a href="#1" onclick="showPopup(1)">generate RSA key</a></h4></th></tr>
+<tr><th colspan="3"><h4><a href="api/1.json" onclick="showPopup(1)">generate RSA key</a></h4></th></tr>
 <tr>
 <td colspan="3">
 <pre before="BASH">openssl genpkey -out fd.key -algorithm RSA -pkeyopt rsa_keygen_bits:2048 -aes-128-cbc</pre>
