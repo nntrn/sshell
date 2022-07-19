@@ -17,43 +17,162 @@
   <link rel="icon" href="https://nntrn.github.io/sshell/site-icon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="https://nntrn.github.io/sshell/favicon.png">
 <style>
-  
-  body{font-family:sans-serif;font-weight:500;line-height:110%}
-h1,h2,h3,h4{all:unset;font-family:monospace}
-*,:before,:after{box-sizing:border-box}
-body,html,h1,h2,h3,h4,h5,pre{margin:unset;padding:0}
-main{width:100%;margin:auto;overflow-x:hidden}
-pre{white-space:pre-wrap;font-family:monospace;font-weight:400}
-.item{margin:1em 0}
+   *,:before,:after{box-sizing:border-box}
+#searchbar:focus,#searchbar:hover{outline:none}
+#searchbar:focus{background:#fff;border-bottom:3px solid #222}
+#searchbar{background:#eee}
 #searchbar{width:100%;font-size:15px;line-height:150%;padding:10px 2%;border:0;background:#fff;box-shadow:inset 0 0 3px rgba(0,0,0,.09)}
-nav{position:sticky;top:0;z-index:10000}
-header,main{padding:0 2%}
-header{border-top:4px solid var(--theme-link-color);background:#fff;line-height:100%;font-size:.9em;padding-top:3px;padding-bottom:2px}
+a{color:#222;text-decoration:none}
+body,html,h1,h2,h3,h4,h5,pre{margin:unset;padding:0}
+body{font-family:sans-serif;font-weight:500;line-height:110%}
+body{font-size:12px;line-height:140%;word-break:break-word;max-width:100%;overflow-x:hidden}
+details{padding:6px;border:2px solid #222}
+h1,h2,h3,h4{font-family:monospace}
+h1{font-weight:400;font-family:monospace}
 h4{font-weight:700;font-size:110%}
 h5{font-weight:400;text-transform:uppercase}
-a{color:var(--theme-link-color);text-decoration:none;user-select:auto}
-.hidden{display:none!important}
-h1{font-weight:400;font-family:monospace}
-table,tr,td,th{border-collapse:collapse;text-align:left}
-td,th{border:2px solid #fff;user-select:all;border-left:none;border-right:none}
-table{width:100%;border:0px solid #ddd}
-pre{background:#222;color:#fff;padding:6px}
-[before]:before{content:attr(before)}
+header{background:#fff;line-height:100%;font-size:.9em;}
+main{font-size:clamp(12px,.8vw,1.4rem);line-height:140%}
+main{width:100%;margin:auto;overflow-x:hidden}
+main{padding:0 2%}
+nav{flex:1;display:flex;padding:1em 1%}
+header{position:sticky;top:0;z-index:10000}
 pre[before]:before{display:block;opacity:.5}
-.flex{display:flex;gap:2%}
+pre{background:#222;color:#fff;padding:6px}
+pre{white-space:pre-wrap;font-family:monospace;font-weight:400}
+table,tr,td,th{border-collapse:collapse;text-align:left}
+table{width:100%;border:0 solid #ddd}
+td,th{border:2px solid #fff;border-left:none;border-right:none}
+.example,.output{white-space:pre-wrap}
+.example{font-weight:700}
+.flex{display:flex}
+.hidden{display:none!important}
+.item{margin:1em 0}
+.output{background:#fff;color:#222}
+[before]:before{content:attr(before)}
+
+.icon{background:#fff;width:40px;}
+.icon svg{width:100%;height:100%;padding:7px;}
 </style>
 </head>
 
 <body>
-  <nav>
-    <header>
-      <h1 class="title"><span>sshell</span>&nbsp;by&nbsp;<a href="https://github.com/nntrn" data-author="annie tran">annie&nbsp;tran</a></h1>
-    </header>
-    <input id="searchbar" autocomplete="off" type="search" name="q" placeholder="search" spellcheck="false" value="" />
-  </nav>
-
+  <header>
+    <nav>
+    <div class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+    <path
+      d="M8.186 1.113a.5.5 0 0 0-.372 0L1.846 3.5l2.404.961L10.404 2l-2.218-.887zm3.564 1.426L5.596 5 8 5.961 14.154 3.5l-2.404-.961zm3.25 1.7-6.5 2.6v7.922l6.5-2.6V4.24zM7.5 14.762V6.838L1 4.239v7.923l6.5 2.6zM7.443.184a1.5 1.5 0 0 1 1.114 0l7.129 2.852A.5.5 0 0 1 16 3.5v8.662a1 1 0 0 1-.629.928l-7.185 2.874a.5.5 0 0 1-.372 0L.63 13.09a1 1 0 0 1-.63-.928V3.5a.5.5 0 0 1 .314-.464L7.443.184z" />
+  </svg></div>
+      <input id="searchbar" autocomplete="off" type="search" name="q" placeholder="search" spellcheck="false" value="" />
+    </nav>
+  <div>
+    <a href="https://github.com/nntrn/sshell">@nntrn/sshell</a></div>
+  </header>
   <main>
-    <div class="item" data-lang="bash" data-id="360">
+    <div class="item" data-lang="bash" data-id="362">
+
+<table>
+
+<tr><th colspan="3"><h4><a href="api/362.json" onclick="showPopup(362)">curl awx - view api </a></h4></th></tr>
+<tr>
+<td colspan="3">
+<pre before="BASH">$ curl -s -k -u "admin:$(cat /root/awx_admin_pass.txt)" https://$HOSTNAME/api/v2/me/| python3 -m json.tool</pre>
+
+<details><summary>example</summary>
+
+
+
+
+<div class="output">{
+    "count": 1,
+    "next": null,
+    "previous": null,
+    "results": [
+        {
+            "id": 1,
+            "type": "user",
+            "url": "/api/v2/users/1/",
+            "related": {
+                "teams": "/api/v2/users/1/teams/",
+                "organizations": "/api/v2/users/1/organizations/",
+                "admin_of_organizations": "/api/v2/users/1/admin_of_organizations/",
+                "projects": "/api/v2/users/1/projects/",
+                "credentials": "/api/v2/users/1/credentials/",
+                "roles": "/api/v2/users/1/roles/",
+                "activity_stream": "/api/v2/users/1/activity_stream/",
+                "access_list": "/api/v2/users/1/access_list/",
+                "tokens": "/api/v2/users/1/tokens/",
+                "authorized_tokens": "/api/v2/users/1/authorized_tokens/",
+                "personal_tokens": "/api/v2/users/1/personal_tokens/"
+            },
+            "summary_fields": {
+                "user_capabilities": {
+                    "edit": true,
+                    "delete": false
+                }
+            },
+            "created": "2022-02-22T01:24:18.310457Z",
+            "username": "admin",
+            "first_name": "",
+            "last_name": "",
+            "email": "root@localhost",
+            "is_superuser": true,
+            "is_system_auditor": false,
+            "ldap_dn": "",
+            "last_login": "2022-07-18T20:08:58.997179Z",
+            "external_account": null,
+            "auth": []
+        }
+    ]
+}</div>
+
+
+</details>
+
+</td>
+</tr>
+<tr><td colspan="3"><div class="flex">
+<time datetime="2022-07-18T23:08:37Z">2022-07-18T23:08:37Z</time>
+
+</div>
+</td></tr>
+
+</table>
+</div>
+<div class="item" data-lang="bash" data-id="361">
+
+<table>
+
+<tr><th colspan="3"><h4><a href="api/361.json" onclick="showPopup(361)">zip - create zip file from list piped in stdin</a></h4></th></tr>
+<tr>
+<td colspan="3">
+<pre before="BASH"><list of files> | zip name.zip --names-stdin</pre>
+
+<details><summary>example</summary>
+
+
+<div class="example"># zip files smaller than 2M
+find /var/log -type f -not -size +2M | zip name.zip --names-stdin
+
+# zip only shell scripts
+ls -1 *.sh | zip shell-files.zip --names-stdin</div>
+
+
+
+
+</details>
+
+</td>
+</tr>
+<tr><td colspan="3"><div class="flex">
+<time datetime="2022-07-14T17:25:09Z">2022-07-14T17:25:09Z</time>
+
+</div>
+</td></tr>
+
+</table>
+</div>
+<div class="item" data-lang="bash" data-id="360">
 
 <table>
 
@@ -105,6 +224,17 @@ set +o allexport</pre>
 <td colspan="3">
 <pre before="BASH">docker inspect --format '{{range .NetworkSettings.Networks}} {{.IPAddress}} {{end}}' $CONTAINER_NAME</pre>
 
+<details><summary>example</summary>
+
+
+<div class="example">$ docker inspect --format '{{range .NetworkSettings.Networks}} {{.IPAddress}} {{end}}' awx_web
+172.24.0.4</div>
+
+
+
+
+</details>
+
 </td>
 </tr>
 <tr><td colspan="3"><div class="flex">
@@ -126,6 +256,20 @@ set +o allexport</pre>
   -c 'psql -t -A -F "," -U awx -d awx -c "select id,name from main_host;"|cat'
 
 psql -t -A -F "," -U awx -d awx -c "select id,name from main_host;"|cat</pre>
+
+<details><summary>example</summary>
+
+
+<div class="example">$ psql -t -A -F "," -U awx -d awx -c "select id,name from main_host;"|cat
+4611,server10.amer.example.com
+4613,server11.us.example.com
+4614,server12.us.example.com
+5311,server13.us.example.com</div>
+
+
+
+
+</details>
 
 </td>
 </tr>
@@ -196,6 +340,58 @@ psql -t -A -F "," -U awx -d awx -c "select id,name from main_host;"|cat</pre>
 <td colspan="3">
 <pre before="BASH">docker ps --format "{{json .}}"</pre>
 
+<details><summary>example</summary>
+
+
+<div class="example">$ docker inspect --format='{{json .NetworkSettings}}' awx_task | jq
+{
+  "Bridge": "",
+  "SandboxID": "d5d2b82b35d9849fd33ca3335721af8cc1cc5a277df12cf31fee81a0291942b2",
+  "HairpinMode": false,
+  "LinkLocalIPv6Address": "",
+  "LinkLocalIPv6PrefixLen": 0,
+  "Ports": {
+    "8052/tcp": null
+  },
+  "SandboxKey": "/var/run/docker/netns/d5d2b82b35d9",
+  "SecondaryIPAddresses": null,
+  "SecondaryIPv6Addresses": null,
+  "EndpointID": "",
+  "Gateway": "",
+  "GlobalIPv6Address": "",
+  "GlobalIPv6PrefixLen": 0,
+  "IPAddress": "",
+  "IPPrefixLen": 0,
+  "IPv6Gateway": "",
+  "MacAddress": "",
+  "Networks": {
+    "awxcompose_default": {
+      "IPAMConfig": null,
+      "Links": null,
+      "Aliases": [
+        "task",
+        "328c8d3ce273"
+      ],
+      "NetworkID": "a92c7453699dd5b657cdf5b0b1ee4ffdc0ba2f9ae5f9c6212356285b85da0b1a",
+      "EndpointID": "d273d879f26644f56970777b8af082c600fadf818f7c6c0d3f6fd5cce2a348ae",
+      "Gateway": "172.20.0.1",
+      "IPAddress": "172.20.0.5",
+      "IPPrefixLen": 16,
+      "IPv6Gateway": "",
+      "GlobalIPv6Address": "",
+      "GlobalIPv6PrefixLen": 0,
+      "MacAddress": "02:42:ac:14:00:05",
+      "DriverOpts": null
+    }
+  }
+}
+</div>
+
+
+
+
+</details>
+
 </td>
 </tr>
 <tr><td colspan="3"><div class="flex">
@@ -215,6 +411,19 @@ psql -t -A -F "," -U awx -d awx -c "select id,name from main_host;"|cat</pre>
 <td colspan="3">
 <pre before="BASH">echo -n "$salt$password" | openssl dgst -r -sha1</pre>
 
+<details><summary>example</summary>
+
+
+<div class="example">$ salt=salt
+$ password=password
+$ echo -n "$salt$password" | openssl dgst -r -sha1
+59b3e8d637cf97edbe2384cf59cb7453dfe30789 *stdin</div>
+
+
+
+
+</details>
+
 </td>
 </tr>
 <tr><td colspan="3"><div class="flex">
@@ -233,6 +442,17 @@ psql -t -A -F "," -U awx -d awx -c "select id,name from main_host;"|cat</pre>
 <tr>
 <td colspan="3">
 <pre before="PYTHON">python -c 'import crypt; print(crypt.crypt("This is my Password", "$1$SomeSalt$"))'</pre>
+
+<details><summary>example</summary>
+
+
+<div class="example">python -c 'import crypt; print(crypt.crypt("This is my Password", "$1$SomeSalt$"))'
+$1$SomeSalt$UqddPX3r4kH3UL5jq5/ZI.</div>
+
+
+
+
+</details>
 
 </td>
 </tr>
@@ -255,6 +475,24 @@ psql -t -A -F "," -U awx -d awx -c "select id,name from main_host;"|cat</pre>
   doc.documentElement.scrollTop = doc.body.scrollTop = value
 }</pre>
 
+<details><summary>example</summary>
+
+
+<div class="example">/**
+ * Alias for document.scrollTop setter.
+ * @param {!HTMLDocument} doc The document node where information will be
+ *     queried from.
+ * @param {number} value The target Y scroll offset.
+ */
+export function setScrollTopForDocument(doc, value) {
+  doc.documentElement.scrollTop = doc.body.scrollTop = value;
+}</div>
+
+
+
+
+</details>
+
 </td>
 </tr>
 <tr><td colspan="3"><div class="flex">
@@ -273,6 +511,24 @@ psql -t -A -F "," -U awx -d awx -c "select id,name from main_host;"|cat</pre>
 <tr>
 <td colspan="3">
 <pre before="BASH">last reboot</pre>
+
+<details><summary>example</summary>
+
+
+<div class="example">$ last reboot
+reboot   system boot  5.4.17-2136.304. Thu Jun 16 04:46 - 23:09 (13+18:23)
+reboot   system boot  5.4.17-2136.304. Wed Jun 15 16:41 - 09:45  (17:04)
+reboot   system boot  5.4.17-2136.304. Mon Jun  6 07:03 - 21:40 (9+14:37)
+reboot   system boot  5.4.17-2136.304. Fri Jun  3 13:36 - 12:02 (2+22:26)
+reboot   system boot  5.4.17-2136.304. Thu Jun  2 09:55 - 18:35 (1+08:40)
+
+wtmp begins Wed Jun  1 09:54:13 2022
+</div>
+
+
+
+
+</details>
 
 </td>
 </tr>
@@ -411,6 +667,18 @@ location ~* "/(^$|mobiquo|phpinfo|shell|sqlpatch|thumb|thumb_editor|thumbopen|ti
 <td colspan="3">
 <pre before="PYTHON">python3 -c "import crypt; print(crypt.crypt(input('clear-text password: '), crypt.mksalt(crypt.METHOD_SHA512)))"</pre>
 
+<details><summary>example</summary>
+
+
+<div class="example">$   python3 -c "import crypt; print(crypt.crypt(input('clear-text password: '), crypt.mksalt(crypt.METHOD_SHA512)))"
+clear-text password: hello
+$6$8.cZMuvV3mZj3JHW$wADCu1k1DuH4CkodnCXpolIQiUWVAonb0Iiwi5/ayVqPNw.haTdW5jlqiqw/SjGQk04H2SAYw2gBbsAq7nmai0</div>
+
+
+
+
+</details>
+
 </td>
 </tr>
 <tr><td colspan="3"><div class="flex">
@@ -432,6 +700,26 @@ location ~* "/(^$|mobiquo|phpinfo|shell|sqlpatch|thumb|thumb_editor|thumbopen|ti
 git clone https://gitlab-ci-token:$GITLAB_PROJECT_TOKEN@gitlab.example.com/path/to/project.git
 
 git clone -c http.sslVerify=false  https://gitlab-ci-token:$GITLAB_PROJECT_TOKEN@gitlab.example.com/infrastructure/database/devops/tower/inventory.git</pre>
+
+<details><summary>example</summary>
+
+
+<div class="example">$ git clone https://project_136765_bot:glpat-H5rsFBozrntDhZoLWuC6@gitlab.example.com/infrastructure/database/devops/tower/inventory.git
+Cloning into 'inventory'...
+fatal: unable to access 'https://gitlab.example.com/infrastructure/database/devops/tower/inventory.git/': SSL certificate problem: self signed certificate in certificate chain
+
+$ git clone -c http.sslVerify=false  https://project_136765_bot:glpat-H5rsFBozrntDhZoLWuC6@gitlab.example.com/infrastructure/database/devops/tower/inventory.git
+Cloning into 'inventory'...
+remote: Enumerating objects: 15, done.
+remote: Counting objects: 100% (15/15), done.
+remote: Compressing objects: 100% (13/13), done.
+remote: Total 15 (delta 2), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (15/15), 33.34 KiB | 3.33 MiB/s, done.</div>
+
+
+
+
+</details>
 
 </td>
 </tr>
@@ -458,6 +746,36 @@ git clone -c http.sslVerify=false  https://gitlab-ci-token:$GITLAB_PROJECT_TOKEN
   return ret
 })))</pre>
 
+<details><summary>example</summary>
+
+
+<div class="example">> document.cookie
+
+'pglt-edgeChromium-ntp=129; pglt-edgeChromium-dhp=129; sptmarket=en-us||us|en-us|en-us|en|; _SS=SID=00; MUID=351DE2B987AE61362EB5F37C862060D4; MicrosoftApplicationsTelemetryDeviceId=ff4d450d-7d3f-43ed-a307-c7b9a5edded9; ai_session=pwphoYvaRZgwAq3bBU7MUJ|1656047614115|1656047632593'
+
+> Object.fromEntries(document.cookie.split('; ').map(e => e.split('=').map((s) => {
+  let ret = unescape(decodeURI(s)).replace(/'/g, '"')
+  try {
+    ret = JSON.parse(ret)
+  } catch (err) {}
+  return ret
+})))
+
+{
+  "pglt-edgeChromium-ntp": 129,
+  "pglt-edgeChromium-dhp": 129,
+  "sptmarket": "en-us||us|en-us|en-us|en|",
+  "_SS": "SID",
+  "MUID": "351DE2B987AE61362EB5F37C862060D4",
+  "MicrosoftApplicationsTelemetryDeviceId": "ff4d450d-7d3f-43ed-a307-c7b9a5edded9",
+  "ai_session": "pwphoYvaRZgwAq3bBU7MUJ|1656047614115|1656047632593"
+}</div>
+
+
+
+
+</details>
+
 </td>
 </tr>
 <tr><td colspan="3"><div class="flex">
@@ -480,6 +798,23 @@ bash -c 'echo $$ ; ls -l /proc/self ; echo foo'
 
 # exec
 bash -c 'echo $$ ; exec ls -l /proc/self ; echo foo'</pre>
+
+<details><summary>example</summary>
+
+
+<div class="example">$ bash -c 'echo $$ ; ls -l /proc/self ; echo foo'
+7218
+lrwxrwxrwx 1 root root 0 Jun 30 16:49 /proc/self -> 7219
+foo
+
+$ bash -c 'echo $$ ; exec ls -l /proc/self ; echo foo'
+7217
+lrwxrwxrwx 1 root root 0 Jun 30 16:49 /proc/self -> 7217</div>
+
+
+
+
+</details>
 
 </td>
 </tr>
@@ -519,6 +854,16 @@ bash -c 'echo $$ ; exec ls -l /proc/self ; echo foo'</pre>
 <td colspan="3">
 <pre before="BASH">iconv -f ISO-8859-1 -t UTF-8 filename.txt</pre>
 
+<details><summary>example</summary>
+
+
+<div class="example">$ iconv -f ISO-8859-1 -t UTF-8 file.txt </div>
+
+
+
+
+</details>
+
 </td>
 </tr>
 <tr><td colspan="3"><div class="flex">
@@ -538,6 +883,30 @@ bash -c 'echo $$ ; exec ls -l /proc/self ; echo foo'</pre>
 <td colspan="3">
 <pre before="BASH">curl dict://dict.org/d:$WORD</pre>
 
+<details><summary>example</summary>
+
+
+<div class="example">$ curl dict://dict.org/d:hello
+220 dict.dict.org dictd 1.12.1/rf on Linux 4.19.0-10-amd64 <auth.mime> <122027170.31256.1655331679@dict.dict.org>
+250 ok
+150 1 definitions retrieved
+151 "Hello" gcide "The Collaborative International Dictionary of English v.0.48"
+Hello \Hel*lo"\, interj. & n.
+   An exclamation used as a greeting, to call attention, as an
+   exclamation of surprise, or to encourage one. This variant of
+   {Halloo} and {Holloo} has become the dominant form. In the
+   United States, it is the most common greeting used in
+   answering a telserver.
+   [1913 Webster +PJC]
+.
+250 ok [d/m/c = 1/0/16; 0.000r 0.000u 0.000s]
+221 bye [d/m/c = 0/0/0; 0.000r 0.000u 0.000s]</div>
+
+
+
+
+</details>
+
 </td>
 </tr>
 <tr><td colspan="3"><div class="flex">
@@ -556,6 +925,20 @@ bash -c 'echo $$ ; exec ls -l /proc/self ; echo foo'</pre>
 <tr>
 <td colspan="3">
 <pre before="BASH">[[ "string1" == "string2" ]] && echo "Equal" || echo "Not equal"</pre>
+
+<details><summary>example</summary>
+
+
+<div class="example">$ [[ "string1" == "string1" ]] && echo "Equal" || echo "Not equal"
+Equal
+
+$ [[ "string1" == "string2" ]] && echo "Equal" || echo "Not equal"
+Not equal</div>
+
+
+
+
+</details>
 
 </td>
 </tr>
@@ -585,11 +968,17 @@ for y in $items; do
     echo "$y"
 done</pre>
 
-<details><summary>output</summary>
-<pre class="output">a
+<details><summary>example</summary>
+
+
+
+
+<div class="output">a
 b
 c
-a b c</pre>
+a b c</div>
+
+
 </details>
 
 </td>
@@ -681,6 +1070,48 @@ cat file.txt | awk '{print $1}'
 <td colspan="3">
 <pre before="BASH">jq -rc 'to_entries | map("\(.key)=\(.value)")</pre>
 
+<details><summary>example</summary>
+
+
+<div class="example">$ curl -s https://api.github.com/users/nntrn | jq -rc 'to_entries | map("\(.key)=\(.value)") 
+login=nntrn
+id=17685332
+node_id=MDQ6VXNlcjE3Njg1MzMy
+avatar_url=https://avatars.githubusercontent.com/u/17685332?v=4
+gravatar_id=
+url=https://api.github.com/users/nntrn
+html_url=https://github.com/nntrn
+followers_url=https://api.github.com/users/nntrn/followers
+following_url=https://api.github.com/users/nntrn/following{/other_user}
+gists_url=https://api.github.com/users/nntrn/gists{/gist_id}
+starred_url=https://api.github.com/users/nntrn/starred{/owner}{/repo}
+subscriptions_url=https://api.github.com/users/nntrn/subscriptions
+organizations_url=https://api.github.com/users/nntrn/orgs
+repos_url=https://api.github.com/users/nntrn/repos
+events_url=https://api.github.com/users/nntrn/events{/privacy}
+received_events_url=https://api.github.com/users/nntrn/received_events
+type=User
+site_admin=false
+name=null
+company=null
+blog=
+location=Austin, TX
+email=null
+hireable=null
+bio=kinda cool kinda nerdy
+twitter_username=null
+public_repos=26
+public_gists=6
+followers=18
+following=21
+created_at=2016-03-06T11:27:35Z
+updated_at=2022-03-15T20:41:03Z</div>
+
+
+
+
+</details>
+
 </td>
 </tr>
 <tr><td colspan="3"><div class="flex">
@@ -703,6 +1134,22 @@ echo '{ "a": 1, "b": 2 }' | jq '.[]'
 
 # get keys
 echo '{ "a": 1, "b": 2 }' | jq 'keys | .[]'</pre>
+
+<details><summary>example</summary>
+
+
+<div class="example">$ echo '{ "a": 1, "b": 2 }' | jq '.[]'
+1
+2
+
+$ echo '{ "a": 1, "b": 2 }' | jq 'keys | .[]'
+"a"
+"b"</div>
+
+
+
+
+</details>
 
 </td>
 </tr>
@@ -735,6 +1182,85 @@ lvextend -L +5G $FILESYSTEM_PATH
 # expand filesystem so changes can be reflected in df -h
 xfs_growfs $FILESYSTEM_PATH</pre>
 
+<details><summary>example</summary>
+
+
+<div class="example">$ FILESYSTEM_PATH=/dev/mapper/osvg-var.fs
+
+$ vgdisplay
+
+    --- Volume group ---
+    VG Name               osvg
+    System ID
+    Format                lvm2
+    Metadata Areas        1
+    Metadata Sequence No  15
+    VG Access             read/write
+    VG Status             resizable
+    MAX LV                0
+    Cur LV                10
+    Open LV               9
+    Max PV                0
+    Cur PV                1
+    Act PV                1
+    VG Size               <95.02 GiB
+    PE Size               4.00 MiB
+    Total PE              24325
+    Alloc PE / Size       10894 / 42.55 GiB
+    Free  PE / Size       13431 / 52.46 GiB
+    VG UUID               BC3fLo-0uIt-5Gcg-dL0i-ywLL-4miW-eT6cw3
+
+$ df -h 
+
+    Filesystem                                Size  Used Avail Use% Mounted on
+    devtmpfs                                   63G     0   63G   0% /dev
+    tmpfs                                      63G   12M   63G   1% /dev/shm
+    tmpfs                                      63G   58M   63G   1% /run
+    tmpfs                                      63G     0   63G   0% /sys/fs/cgroup
+    /dev/mapper/osvg-root.fs                  3.0G  551M  2.4G  19% /
+    /dev/mapper/osvg-usr.fs                    13G  4.2G  8.9G  32% /usr
+    /dev/mapper/datavg-u01                    299G   46G  254G  16% /u01
+    /dev/mapper/datavg-u02                    300G   33M  300G   1% /u02
+    /dev/mapper/osvg-opt.fs                    14G  1.2G   13G   9% /opt
+    /dev/mapper/osvg-var.fs                   3.0G  1.4G  1.7G  45% /var
+    /dev/mapper/datavg-u04                    100G   33M  100G   1% /u04
+    /dev/mapper/datavg-u06                     50G   33M   50G   1% /u06
+    /dev/mapper/datavg-u03                    100G   33M  100G   1% /u03
+    /dev/mapper/datavg-u05                     50G   33M   50G   1% /u05
+    /dev/mapper/osvg-home.fs                  1.5G  952M  546M  64% /home
+    /dev/mapper/osvg-tmp.fs                   997M   33M  964M   4% /tmp
+    /dev/sdc1                                 997M  316M  682M  32% /boot
+    /dev/mapper/osvg-oswatcher.fs             3.0G  416M  2.6G  14% /oswatcher
+    /dev/mapper/osvg-varlog.fs                2.0G  858M  1.2G  44% /var/log
+
+$ lvextend -L +5G /dev/mapper/osvg-var.fs
+
+    Size of logical volume osvg/var.fs changed from 2.95 GiB (756 extents) to 7.95 GiB (2036 extents).
+    Logical volume osvg/var.fs successfully resized.
+
+$ xfs_growfs $FILESYSTEM_PATH
+
+    meta-data=/dev/mapper/osvg-var.fs isize=256    agcount=21, agsize=128000 blks
+            =                       sectsz=512   attr=2, projid32bit=1
+            =                       crc=0        finobt=0 spinodes=0
+    data    =                       bsize=4096   blocks=2606080, imaxpct=25
+            =                       sunit=0      swidth=0 blks
+    naming  =version 2              bsize=4096   ascii-ci=0 ftype=1
+    log     =internal               bsize=4096   blocks=2560, version=2
+            =                       sectsz=512   sunit=0 blks, lazy-count=1
+    realtime =none                   extsz=4096   blocks=0, rtextents=0
+    data blocks changed from 2606080 to 3916800
+
+
+$ df -h | grep $FILESYSTEM_PATH
+
+    /dev/mapper/osvg-var.fs                    15G   10G  5.0G  67% /var</div>
+
+
+
+
+</details>
+
 </td>
 </tr>
 <tr><td colspan="3"><div class="flex">
@@ -753,6 +1279,34 @@ xfs_growfs $FILESYSTEM_PATH</pre>
 <tr>
 <td colspan="3">
 <pre before="BASH">echo "${0%/*}"</pre>
+
+<details><summary>example</summary>
+
+
+<div class="example">$ tree ci/
+ci/
+├── check-directional-formatting.bash
+├── config
+│   └── allow-ref.sample
+├── install-dependencies.sh
+├── install-docker-dependencies.sh   
+├── lib.sh
+├── make-test-artifacts.sh
+├── mount-fileshare.sh
+├── print-test-failures.sh
+├── run-build-and-tests.sh
+├── run-docker.sh
+├── run-docker-build.sh
+├── run-static-analysis.sh
+├── run-test-slice.sh
+├── test-documentation.sh
+└── util
+    └── extract-trash-dirs.sh       </div>
+
+
+
+
+</details>
 
 </td>
 </tr>
@@ -773,8 +1327,12 @@ xfs_growfs $FILESYSTEM_PATH</pre>
 <td colspan="3">
 <pre before="PYTHON">curl -s "https://jsonplaceholder.typicode.com/posts" | python3 -c "import sys, json; data=json.load(sys.stdin); x = [{'id': d['id'], 'title': d['title']} for d in data]; print(json.dumps(x, indent=2))"</pre>
 
-<details><summary>output</summary>
-<pre class="output">[
+<details><summary>example</summary>
+
+
+
+
+<div class="output">[
   {
     "id": 1,
     "title": "sunt aut facere repellat provident occaecati excepturi optio reprehenderit"
@@ -791,7 +1349,9 @@ xfs_growfs $FILESYSTEM_PATH</pre>
     "id": 4,
     "title": "eum et est occaecati"
   }
-]</pre>
+]</div>
+
+
 </details>
 
 </td>
@@ -813,8 +1373,12 @@ xfs_growfs $FILESYSTEM_PATH</pre>
 <td colspan="3">
 <pre before="BASH">curl -s -o snippets.json -w '%{json}' https://raw.githubusercontent.com/nntrn/sshell/data/snippets.json | jq</pre>
 
-<details><summary>output</summary>
-<pre class="output">{
+<details><summary>example</summary>
+
+
+
+
+<div class="output">{
   "content_type": "text/plain; charset=utf-8",
   "errormsg": null,
   "exitcode": 0,
@@ -854,7 +1418,9 @@ xfs_growfs $FILESYSTEM_PATH</pre>
   "url_effective": "https://raw.githubusercontent.com/nntrn/sshell/data/snippets.json",
   "urlnum": 0,
   "curl_version": "libcurl/7.82.0 OpenSSL/1.1.1n zlib/1.2.11 brotli/1.0.9 zstd/1.5.2 libidn2/2.3.2 libpsl/0.21.1 (+libidn2/2.3.1) libssh2/1.10.0 nghttp2/1.47.0 libgsasl/1.8.0 OpenLDAP/2.6.1"
-}</pre>
+}</div>
+
+
 </details>
 
 </td>
@@ -876,8 +1442,12 @@ xfs_growfs $FILESYSTEM_PATH</pre>
 <td colspan="3">
 <pre before="PYTHON">python -m calendar</pre>
 
-<details><summary>output</summary>
-<pre class="output">                                  2022
+<details><summary>example</summary>
+
+
+
+
+<div class="output">                                  2022
 
       January                   February                   March
 Mo Tu We Th Fr Sa Su      Mo Tu We Th Fr Sa Su      Mo Tu We Th Fr Sa Su
@@ -912,7 +1482,9 @@ Mo Tu We Th Fr Sa Su      Mo Tu We Th Fr Sa Su      Mo Tu We Th Fr Sa Su
 10 11 12 13 14 15 16      14 15 16 17 18 19 20      12 13 14 15 16 17 18
 17 18 19 20 21 22 23      21 22 23 24 25 26 27      19 20 21 22 23 24 25
 24 25 26 27 28 29 30      28 29 30                  26 27 28 29 30 31
-31</pre>
+31</div>
+
+
 </details>
 
 </td>
@@ -955,8 +1527,12 @@ Mo Tu We Th Fr Sa Su      Mo Tu We Th Fr Sa Su      Mo Tu We Th Fr Sa Su
 
 python -m profile file.py</pre>
 
-<details><summary>output</summary>
-<pre class="output">         1347 function calls (1290 primitive calls) in 0.003 seconds
+<details><summary>example</summary>
+
+
+
+
+<div class="output">         1347 function calls (1290 primitive calls) in 0.003 seconds
 
    Ordered by: standard name
 
@@ -967,7 +1543,9 @@ python -m profile file.py</pre>
         1    0.000    0.000    0.000    0.000 <frozen impserver._bootstrap>:156(__enter__)
         1    0.000    0.000    0.000    0.000 <frozen impserver._bootstrap>:160(__exit__)
         1    0.000    0.000    0.000    0.000 <frozen impserver._bootstrap>:166(_get_module_lock)
-        1    0.000    0.000    0.000    0.000 <frozen impserver._bootstrap>:185(cb)</pre>
+        1    0.000    0.000    0.000    0.000 <frozen impserver._bootstrap>:185(cb)</div>
+
+
 </details>
 
 </td>
@@ -997,6 +1575,19 @@ curl -s $CSV_FILE |
 curl -s $CSV_FILE |
   python -c "import sys,csv,json;print(json.dumps(list(csv.reader(sys.stdin))))"</pre>
 
+<details><summary>example</summary>
+
+
+<div class="example">CSV_FILE=~/csv/cities.csv
+
+python -c "import csv,json;print(json.dumps(list(csv.DictReader(open('$CSV_FILE')))))"
+python -c "import csv,json;print(json.dumps(list(csv.reader(open('$CSV_FILE')))))"</div>
+
+
+
+
+</details>
+
 </td>
 </tr>
 <tr><td colspan="3"><div class="flex">
@@ -1015,6 +1606,27 @@ curl -s $CSV_FILE |
 <tr>
 <td colspan="3">
 <pre before="PYTHON">python3 -c 'print("\n".join(line.split(":",1)[0] for line in open("/etc/passwd")))'</pre>
+
+<details><summary>example</summary>
+
+
+<div class="example">$ python3 -c 'print("\n".join(line.split(":",1)[0] for line in open("/etc/passwd")))'
+SYSTEM
+LOCAL SERVICE
+NETWORK SERVICE
+Administrators
+NT SERVICE+TrustedInstaller
+Annie_Tran
+Administrator
+DefaultAccount
+Guest
+SMSNomadP2P&
+WDAGUtilityAccount</div>
+
+
+
+
+</details>
 
 </td>
 </tr>
@@ -1038,6 +1650,18 @@ awk '!a[$0]++'  file.txt
 
 # from stdin
 echo "..." | awk '!a[$0]++'  </pre>
+
+<details><summary>example</summary>
+
+
+<div class="example">$ echo -e "hello\nhello\nhi\nhello" | awk '!a[$0]++'
+hello
+hi</div>
+
+
+
+
+</details>
 
 </td>
 </tr>
@@ -1103,8 +1727,14 @@ GITLAB_PERSONAL_ACCESS_TOKEN=...
 curl --silent --header "PRIVATE-TOKEN: $GITLAB_PERSONAL_ACCESS_TOKEN" \
   -XPOST "https://gitlab.example.com/api/v4/projects?name=$PROJECT_NAME&visibility=private&initialize_with_readme=true"</pre>
 
-<details><summary>output</summary>
-<pre class="output">{"id":132638,"description":null,"name":"test","name_with_namespace":"Tran, Annie / test","path":"test","path_with_namespace":"Annie_Tran/test","created_at":"2022-05-20T20:52:21.886Z","default_branch":"main","tag_list":[],"topics":[],"ssh_url_to_repo":"git@gitlab.example.com:Annie_Tran/test.git","http_url_to_repo":"https://gitlab.example.com/Annie_Tran/test.git","web_url":"https://gitlab.example.com/Annie_Tran/test","readme_url":"https://gitlab.example.com/Annie_Tran/test/-/blob/main/README.md","avatar_url":null,"forks_count":0,"star_count":0,"last_activity_at":"2022-05-20T20:52:21.886Z","namespace":{"id":25694,"name":"Tran, Annie","path":"Annie_Tran","kind":"user","full_path":"Annie_Tran","parent_id":null,"avatar_url":"/uploads/-/system/user/avatar/15958/avatar.png","web_url":"https://gitlab.example.com/Annie_Tran"},"_links":{"self":"https://gitlab.example.com/api/v4/projects/132638","issues":"https://gitlab.example.com/api/v4/projects/132638/issues","merge_requests":"https://gitlab.example.com/api/v4/projects/132638/merge_requests","repo_branches":"https://gitlab.example.com/api/v4/projects/132638/repository/branches","labels":"https://gitlab.example.com/api/v4/projects/132638/labels","events":"https://gitlab.example.com/api/v4/projects/132638/events","members":"https://gitlab.example.com/api/v4/projects/132638/members"},"packages_enabled":true,"empty_repo":false,"archived":false,"visibility":"private","owner":{"id":15958,"username":"Annie_Tran","name":"Tran, Annie","state":"active","avatar_url":"https://gitlab.example.com/uploads/-/system/user/avatar/15958/avatar.png","web_url":"https://gitlab.example.com/Annie_Tran"},"resolve_outdated_diff_discussions":false,"container_expiration_policy":{"cadence":"1d","enabled":false,"keep_n":10,"older_than":"90d","name_regex":".*","name_regex_keep":null,"next_run_at":"2022-05-21T20:52:21.916Z"},"issues_enabled":true,"merge_requests_enabled":true,"wiki_enabled":true,"jobs_enabled":true,"snippets_enabled":true,"container_registry_enabled":true,"service_desk_enabled":false,"service_desk_address":null,"can_create_merge_request_in":true,"issues_access_level":"enabled","repository_access_level":"enabled","merge_requests_access_level":"enabled","forking_access_level":"enabled","wiki_access_level":"enabled","builds_access_level":"enabled","snippets_access_level":"enabled","pages_access_level":"private","operations_access_level":"enabled","analytics_access_level":"enabled","container_registry_access_level":"enabled","emails_disabled":null,"shared_runners_enabled":true,"lfs_enabled":true,"creator_id":15958,"import_status":"none","import_error":null,"open_issues_count":0,"runners_token":"GR1348941HFqJJiSjZmRBkZeixhiT","ci_default_git_depth":20,"ci_forward_deployment_enabled":true,"ci_job_token_scope_enabled":false,"public_jobs":true,"build_git_strategy":"fetch","build_timeout":3600,"auto_cancel_pending_pipelines":"enabled","build_coverage_regex":null,"ci_config_path":"","shared_with_groups":[],"only_allow_merge_if_pipeline_succeeds":false,"allow_merge_on_skipped_pipeline":null,"restrict_user_defined_variables":false,"request_access_enabled":true,"only_allow_merge_if_all_discussions_are_resolved":false,"remove_source_branch_after_merge":true,"printing_merge_request_link_enabled":true,"merge_method":"merge","squash_option":"default_off","suggestion_commit_message":null,"merge_commit_template":null,"squash_commit_template":null,"auto_devops_enabled":false,"auto_devops_deploy_strategy":"continuous","autoclose_referenced_issues":true,"keep_latest_artifact":true,"runner_token_expiration_interval":null,"approvals_before_merge":0,"mirror":false,"external_authorization_classification_label":"","marked_for_deletion_at":null,"marked_for_deletion_on":null,"requirements_enabled":false,"requirements_access_level":"enabled","security_and_compliance_enabled":true,"compliance_frameworks":[],"issues_template":null,"merge_requests_template":null,"merge_pipelines_enabled":false,"merge_trains_enabled":false}</pre>
+<details><summary>example</summary>
+
+
+
+
+<div class="output">{&#34;id&#34;:132638,&#34;description&#34;:null,&#34;name&#34;:&#34;test&#34;,&#34;name_with_namespace&#34;:&#34;Tran, Annie / test&#34;,&#34;path&#34;:&#34;test&#34;,&#34;path_with_namespace&#34;:&#34;Annie_Tran/test&#34;,&#34;created_at&#34;:&#34;2022-05-20T20:52:21.886Z&#34;,&#34;default_branch&#34;:&#34;main&#34;,&#34;tag_list&#34;:[],&#34;topics&#34;:[],&#34;ssh_url_to_repo&#34;:&#34;git@gitlab.example.com:Annie_Tran/test.git&#34;,&#34;http_url_to_repo&#34;:&#34;https://gitlab.example.com/Annie_Tran/test.git&#34;,&#34;web_url&#34;:&#34;https://gitlab.example.com/Annie_Tran/test&#34;,&#34;readme_url&#34;:&#34;https://gitlab.example.com/Annie_Tran/test/-/blob/main/README.md&#34;,&#34;avatar_url&#34;:null,&#34;forks_count&#34;:0,&#34;star_count&#34;:0,&#34;last_activity_at&#34;:&#34;2022-05-20T20:52:21.886Z&#34;,&#34;namespace&#34;:{&#34;id&#34;:25694,&#34;name&#34;:&#34;Tran, Annie&#34;,&#34;path&#34;:&#34;Annie_Tran&#34;,&#34;kind&#34;:&#34;user&#34;,&#34;full_path&#34;:&#34;Annie_Tran&#34;,&#34;parent_id&#34;:null,&#34;avatar_url&#34;:&#34;/uploads/-/system/user/avatar/15958/avatar.png&#34;,&#34;web_url&#34;:&#34;https://gitlab.example.com/Annie_Tran&#34;},&#34;_links&#34;:{&#34;self&#34;:&#34;https://gitlab.example.com/api/v4/projects/132638&#34;,&#34;issues&#34;:&#34;https://gitlab.example.com/api/v4/projects/132638/issues&#34;,&#34;merge_requests&#34;:&#34;https://gitlab.example.com/api/v4/projects/132638/merge_requests&#34;,&#34;repo_branches&#34;:&#34;https://gitlab.example.com/api/v4/projects/132638/repository/branches&#34;,&#34;labels&#34;:&#34;https://gitlab.example.com/api/v4/projects/132638/labels&#34;,&#34;events&#34;:&#34;https://gitlab.example.com/api/v4/projects/132638/events&#34;,&#34;members&#34;:&#34;https://gitlab.example.com/api/v4/projects/132638/members&#34;},&#34;packages_enabled&#34;:true,&#34;empty_repo&#34;:false,&#34;archived&#34;:false,&#34;visibility&#34;:&#34;private&#34;,&#34;owner&#34;:{&#34;id&#34;:15958,&#34;username&#34;:&#34;Annie_Tran&#34;,&#34;name&#34;:&#34;Tran, Annie&#34;,&#34;state&#34;:&#34;active&#34;,&#34;avatar_url&#34;:&#34;https://gitlab.example.com/uploads/-/system/user/avatar/15958/avatar.png&#34;,&#34;web_url&#34;:&#34;https://gitlab.example.com/Annie_Tran&#34;},&#34;resolve_outdated_diff_discussions&#34;:false,&#34;container_expiration_policy&#34;:{&#34;cadence&#34;:&#34;1d&#34;,&#34;enabled&#34;:false,&#34;keep_n&#34;:10,&#34;older_than&#34;:&#34;90d&#34;,&#34;name_regex&#34;:&#34;.*&#34;,&#34;name_regex_keep&#34;:null,&#34;next_run_at&#34;:&#34;2022-05-21T20:52:21.916Z&#34;},&#34;issues_enabled&#34;:true,&#34;merge_requests_enabled&#34;:true,&#34;wiki_enabled&#34;:true,&#34;jobs_enabled&#34;:true,&#34;snippets_enabled&#34;:true,&#34;container_registry_enabled&#34;:true,&#34;service_desk_enabled&#34;:false,&#34;service_desk_address&#34;:null,&#34;can_create_merge_request_in&#34;:true,&#34;issues_access_level&#34;:&#34;enabled&#34;,&#34;repository_access_level&#34;:&#34;enabled&#34;,&#34;merge_requests_access_level&#34;:&#34;enabled&#34;,&#34;forking_access_level&#34;:&#34;enabled&#34;,&#34;wiki_access_level&#34;:&#34;enabled&#34;,&#34;builds_access_level&#34;:&#34;enabled&#34;,&#34;snippets_access_level&#34;:&#34;enabled&#34;,&#34;pages_access_level&#34;:&#34;private&#34;,&#34;operations_access_level&#34;:&#34;enabled&#34;,&#34;analytics_access_level&#34;:&#34;enabled&#34;,&#34;container_registry_access_level&#34;:&#34;enabled&#34;,&#34;emails_disabled&#34;:null,&#34;shared_runners_enabled&#34;:true,&#34;lfs_enabled&#34;:true,&#34;creator_id&#34;:15958,&#34;import_status&#34;:&#34;none&#34;,&#34;import_error&#34;:null,&#34;open_issues_count&#34;:0,&#34;runners_token&#34;:&#34;GR1348941HFqJJiSjZmRBkZeixhiT&#34;,&#34;ci_default_git_depth&#34;:20,&#34;ci_forward_deployment_enabled&#34;:true,&#34;ci_job_token_scope_enabled&#34;:false,&#34;public_jobs&#34;:true,&#34;build_git_strategy&#34;:&#34;fetch&#34;,&#34;build_timeout&#34;:3600,&#34;auto_cancel_pending_pipelines&#34;:&#34;enabled&#34;,&#34;build_coverage_regex&#34;:null,&#34;ci_config_path&#34;:&#34;&#34;,&#34;shared_with_groups&#34;:[],&#34;only_allow_merge_if_pipeline_succeeds&#34;:false,&#34;allow_merge_on_skipped_pipeline&#34;:null,&#34;restrict_user_defined_variables&#34;:false,&#34;request_access_enabled&#34;:true,&#34;only_allow_merge_if_all_discussions_are_resolved&#34;:false,&#34;remove_source_branch_after_merge&#34;:true,&#34;printing_merge_request_link_enabled&#34;:true,&#34;merge_method&#34;:&#34;merge&#34;,&#34;squash_option&#34;:&#34;default_off&#34;,&#34;suggestion_commit_message&#34;:null,&#34;merge_commit_template&#34;:null,&#34;squash_commit_template&#34;:null,&#34;auto_devops_enabled&#34;:false,&#34;auto_devops_deploy_strategy&#34;:&#34;continuous&#34;,&#34;autoclose_referenced_issues&#34;:true,&#34;keep_latest_artifact&#34;:true,&#34;runner_token_expiration_interval&#34;:null,&#34;approvals_before_merge&#34;:0,&#34;mirror&#34;:false,&#34;external_authorization_classification_label&#34;:&#34;&#34;,&#34;marked_for_deletion_at&#34;:null,&#34;marked_for_deletion_on&#34;:null,&#34;requirements_enabled&#34;:false,&#34;requirements_access_level&#34;:&#34;enabled&#34;,&#34;security_and_compliance_enabled&#34;:true,&#34;compliance_frameworks&#34;:[],&#34;issues_template&#34;:null,&#34;merge_requests_template&#34;:null,&#34;merge_pipelines_enabled&#34;:false,&#34;merge_trains_enabled&#34;:false}</div>
+
+
 </details>
 
 </td>
@@ -1127,9 +1757,19 @@ curl --silent --header "PRIVATE-TOKEN: $GITLAB_PERSONAL_ACCESS_TOKEN" \
 <pre before="BASH">echo '[{"name":"JSON", "good":true}, {"name":"XML", "good":false}]' |
   jq -r '.[] | map(.) | @csv'</pre>
 
-<details><summary>output</summary>
-<pre class="output">"JSON",true
-"XML",false</pre>
+<details><summary>example</summary>
+
+
+<div class="example">$ curl -s https://sports.core.api.espn.com/v2/sports/football/leagues/nfl/seasons/2021/futures >futures.json
+
+$ cat futures.json | jq -r '.items[].futures[].provider| map(.) |@csv'</div>
+
+
+
+<div class="output">"JSON",true
+"XML",false</div>
+
+
 </details>
 
 </td>
@@ -1151,6 +1791,31 @@ curl --silent --header "PRIVATE-TOKEN: $GITLAB_PERSONAL_ACCESS_TOKEN" \
 <td colspan="3">
 <pre before="BASH">grep -vFxf file1.txt file2.txt</pre>
 
+<details><summary>example</summary>
+
+
+<div class="example">$ cat <<EOF >first.txt
+a
+b
+c
+EOF
+
+$ cat <<EOF >second.txt
+a
+b
+1
+4
+EOF
+
+$ grep -vFxf first.txt second.txt
+1
+4</div>
+
+
+
+
+</details>
+
 </td>
 </tr>
 <tr><td colspan="3"><div class="flex">
@@ -1170,8 +1835,12 @@ curl --silent --header "PRIVATE-TOKEN: $GITLAB_PERSONAL_ACCESS_TOKEN" \
 <td colspan="3">
 <pre before="BASH">declare -F</pre>
 
-<details><summary>output</summary>
-<pre class="output">declare -f __expand_tilde_by_ref
+<details><summary>example</summary>
+
+
+
+
+<div class="output">declare -f __expand_tilde_by_ref
 declare -f __get_cword_at_cursor_by_ref
 declare -f __git_aliased_command
 declare -f __git_aliases
@@ -1184,7 +1853,9 @@ declare -f __git_complete_remote_or_refspec
 declare -f __git_complete_revlist
 declare -f __git_complete_revlist_file
 declare -f __git_complete_strategy
-declare -f __git_compute_all_commands</pre>
+declare -f __git_compute_all_commands</div>
+
+
 </details>
 
 </td>
@@ -1225,6 +1896,35 @@ declare -f __git_compute_all_commands</pre>
 <td colspan="3">
 <pre before="BASH">csplit --suppress-matched $FILENAME '/^$/' '{*}'</pre>
 
+<details><summary>example</summary>
+
+
+<div class="example">$ cat <<EOF >file.txt
+  one
+
+  two
+
+  three
+EOF
+
+$ csplit --suppress-matched --prefix 'file-' file.txt '/^$/' '{*}'
+
+$ ls file-*
+file-00  file-01  file-02
+
+$ find . -type f -name "file-*" -print -exec cat {} \;
+./file-00
+  one
+./file-01
+  two
+./file-02
+  three</div>
+
+
+
+
+</details>
+
 </td>
 </tr>
 <tr><td colspan="3"><div class="flex">
@@ -1243,6 +1943,25 @@ declare -f __git_compute_all_commands</pre>
 <tr>
 <td colspan="3">
 <pre before="BASH">rpm -qa -d</pre>
+
+<details><summary>example</summary>
+
+
+<div class="example">$ rpm -qa -d | head -n 10 
+/usr/share/doc/make-3.82/AUTHORS
+/usr/share/doc/make-3.82/COPYING
+/usr/share/doc/make-3.82/NEWS
+/usr/share/doc/make-3.82/README
+/usr/share/info/make.info-1.gz
+/usr/share/info/make.info-2.gz
+/usr/share/info/make.info.gz
+/usr/share/man/man1/gmake.1.gz
+/usr/share/man/man1/make.1.gz</div>
+
+
+
+
+</details>
 
 </td>
 </tr>
@@ -1263,6 +1982,29 @@ declare -f __git_compute_all_commands</pre>
 <td colspan="3">
 <pre before="BASH">xargs -n 1 -0 </proc/$PID/environ</pre>
 
+<details><summary>example</summary>
+
+
+<div class="example">$ echo ${PID:=$$}
+35179
+
+$ cat "/proc/$PID/environ"
+TERM=xtermHOME=/rootSHELL=/bin/bashUSER=rootLOGNAME=rootPATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/binXDG_SESSION_ID=c20
+
+$ xargs -n 1 -0 <"/proc/$$/environ"
+TERM=xterm
+HOME=/root
+SHELL=/bin/bash
+USER=root
+LOGNAME=root
+PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin
+XDG_SESSION_ID=c20</div>
+
+
+
+
+</details>
+
 </td>
 </tr>
 <tr><td colspan="3"><div class="flex">
@@ -1281,6 +2023,36 @@ declare -f __git_compute_all_commands</pre>
 <tr>
 <td colspan="3">
 <pre before="BASH">nmap -p 443 $HOSTNAME</pre>
+
+<details><summary>example</summary>
+
+
+<div class="example">$ nmap -p 80 proxy.us.example.com
+
+    Starting Nmap 6.40 ( http://nmap.org ) at 2022-05-10 22:38 CDT
+    Nmap scan report for proxy.us.example.com (10.284.20.472)
+    Host is up (0.00037s latency).
+    rDNS record for 10.170.24.135: server.us.example.com
+    PORT   STATE SERVICE
+    80/tcp open  http
+
+    Nmap done: 1 IP address (1 host up) scanned in 0.47 seconds
+
+$ nmap -p 443 proxy.us.example.com
+
+    Starting Nmap 6.40 ( http://nmap.org ) at 2022-05-10 22:38 CDT
+    Nmap scan report for proxy.us.example.com (10.284.20.472)
+    Host is up (0.00038s latency).
+    rDNS record for 10.170.24.135: server.us.example.com
+    PORT    STATE  SERVICE
+    443/tcp closed https
+
+    Nmap done: 1 IP address (1 host up) scanned in 0.47 seconds</div>
+
+
+
+
+</details>
 
 </td>
 </tr>
@@ -1301,8 +2073,13 @@ declare -f __git_compute_all_commands</pre>
 <td colspan="3">
 <pre before="BASH">echo '[{"foo": 1, "bar": 123}, {"foo": 1, "bar": 123}, {"foo": 4, "bar": 123}]' | jq 'unique_by(.foo)'</pre>
 
-<details><summary>output</summary>
-<pre class="output">[
+<details><summary>example</summary>
+
+
+<div class="example">$ JSONSTRING='[{"foo": 1, "bar": 123}, {"foo": 1, "bar": 123}, {"foo": 4, "bar": 123}]'
+
+$ echo "$JSONSTRING" | jq 'unique_by(.foo)'
+[
   {
     "foo": 1,
     "bar": 123
@@ -1311,7 +2088,30 @@ declare -f __git_compute_all_commands</pre>
     "foo": 4,
     "bar": 123
   }
-]</pre>
+]
+
+$ echo "$JSONSTRING" | jq 'unique_by(.bar)'
+[
+  {
+    "foo": 1,
+    "bar": 123
+  }
+]</div>
+
+
+
+<div class="output">[
+  {
+    "foo": 1,
+    "bar": 123
+  },
+  {
+    "foo": 4,
+    "bar": 123
+  }
+]</div>
+
+
 </details>
 
 </td>
@@ -1333,10 +2133,34 @@ declare -f __git_compute_all_commands</pre>
 <td colspan="3">
 <pre before="BASH">git remote show origin | sed -n '/Remote branches/,/Local/p' | grep -v ':' | awk '{print $1}'</pre>
 
-<details><summary>output</summary>
-<pre class="output">data
+<details><summary>example</summary>
+
+
+<div class="example">$ git remote show origin
+* remote origin
+  Fetch URL: https://github.com/nntrn/sshell.git
+  Push  URL: https://github.com/nntrn/sshell.git
+  HEAD branch: main
+  Remote branches:
+    data     tracked
+    gh-pages new (next fetch will store in remotes/origin)
+    main     new (next fetch will store in remotes/origin)
+  Local branch configured for 'git pull':
+    data merges with remote data
+  Local ref configured for 'git push':
+
+$ git remote show origin | sed -n '/Remote branches/,/Local/p' | grep -v ':' | awk '{print $1}'
+data
 gh-pages
-main</pre>
+main</div>
+
+
+
+<div class="output">data
+gh-pages
+main</div>
+
+
 </details>
 
 </td>
@@ -1361,6 +2185,18 @@ git log -2 --pretty=%h
 
 # get all
 git log --pretty=%h </pre>
+
+<details><summary>example</summary>
+
+
+<div class="example">$  git log -2 --pretty=%h 
+c51538a
+2090d93</div>
+
+
+
+
+</details>
 
 </td>
 </tr>
@@ -1399,6 +2235,43 @@ git log --pretty=%h </pre>
 <tr>
 <td colspan="3">
 <pre before="BASH">curl -sL -X POST --data-binary @readme.md  https://api.github.com/markdown/raw --header "Content-Type:text/x-markdown" </pre>
+
+<details><summary>example</summary>
+
+
+<div class="example">$ curl -sL -X POST --data-binary @readme.md  https://api.github.com/markdown/raw --header "Content-Type:text/x-markdown" 
+<h1>
+<a id="user-content-sshell" class="anchor" href="#sshell" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>sshell</h1>
+<p><a href="http://nntrn.github.io/sshell" rel="nofollow">nntrn.github.io/sshell</a></p>
+<h2>
+<a id="user-content-download" class="anchor" href="#download" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Download</h2>
+<div class="highlight highlight-source-shell"><pre>git clone https://github.com/nntrn/sshell.git
+<span class="pl-c1">cd</span> sshell</pre></div>
+<h2>
+<a id="user-content-local-serve" class="anchor" href="#local-serve" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Local serve</h2>
+<div class="highlight highlight-source-shell"><pre><span class="pl-c"><span class="pl-c">#</span> python2</span>
+<span class="pl-c1">cd</span> public <span class="pl-k">&amp;&amp;</span> python2 -m SimpleHTTPServer 3000
+
+<span class="pl-c"><span class="pl-c">#</span> python3</span>
+python3 -m http.server --directory public 3000
+
+<span class="pl-c"><span class="pl-c">#</span> php</span>
+php -S localhost:3000 -t public/
+
+<span class="pl-c"><span class="pl-c">#</span> serve (npm install -g serve)</span>
+serve public</pre></div>
+<h2>
+<a id="user-content-scripts" class="anchor" href="#scripts" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Scripts</h2>
+<div class="highlight highlight-source-shell"><pre><span class="pl-c"><span class="pl-c">#</span> update snippets.json in data branch</span>
+cat updated-snippets.json <span class="pl-k">|</span> ./scripts/update-snippets.sh
+
+<span class="pl-c"><span class="pl-c">#</span> publish changes in public/* to gh-pages branch</span>
+./scripts/publish</pre></div></div>
+
+
+
+
+</details>
 
 </td>
 </tr>
@@ -1446,6 +2319,72 @@ openssl req -new \
 # Verifying CSR Information
 openssl req -text -in $HOSTNAME.csr -noout -verify</pre>
 
+<details><summary>example</summary>
+
+
+<div class="example">$ openssl req -new \
+-newkey rsa:2048 -nodes -keyout $HOSTNAME.key \
+-out $HOSTNAME.csr \
+-subj "/C=US/ST=Texas/L=Austin/O=$USER, Inc./OU=IT/CN=localhost"
+Generating a RSA private key
+...........................................................+++++
+.....................+++++
+writing new private key to 'W101TL8YD3.key'
+-----
+
+$ openssl req -text -in $HOSTNAME.csr -noout -verify
+verify OK
+Certificate Request:
+    Data:
+        Version: 1 (0x0)
+        Subject: C = US, ST = Texas, L = Austin, O = "Annie_Tran, Inc.", OU = IT, CN = localhost
+        Subject Public Key Info:
+            Public Key Algorithm: rsaEncryption
+                RSA Public-Key: (2048 bit)
+                Modulus:
+                    00:ba:f1:62:a1:26:05:08:45:76:05:28:a3:64:97:
+                    a9:b5:30:4c:93:62:a0:0d:27:03:c4:84:53:54:04:
+                    15:84:6a:1f:50:31:2c:3c:80:9e:7b:ac:d7:f5:0b:
+                    c0:6e:56:19:05:db:07:e4:4e:f5:da:06:68:d6:11:
+                    a5:74:d3:08:76:8f:cb:77:45:bf:01:c5:4e:8a:4f:
+                    66:89:eb:55:9b:77:eb:ad:c0:57:15:ae:16:46:5a:
+                    1a:c8:37:36:18:dc:47:91:20:ef:85:c5:07:f1:4d:
+                    76:b3:b9:24:a0:cf:8e:fd:fe:28:d4:78:1c:48:86:
+                    7e:ae:17:80:9f:e6:eb:a8:2b:96:e9:1f:8e:f6:83:
+                    64:c1:87:73:1c:6d:ea:ab:ce:12:53:30:80:ce:bf:
+                    53:36:52:02:96:24:d6:5e:aa:64:f5:0a:42:5a:c6:
+                    8f:a2:7a:2c:9b:f4:6a:5e:ba:93:61:6d:62:85:d2:
+                    cd:ac:6f:57:0e:14:80:60:5c:1a:15:7e:84:7b:3b:
+                    46:ea:62:92:f4:5f:bc:e0:d4:dd:23:29:43:ed:63:
+                    0b:4e:9b:75:f3:1d:05:b5:16:c2:fb:72:08:73:85:
+                    e5:e4:8c:54:99:26:2d:bf:d5:bc:72:a2:8a:e6:99:
+                    1f:c9:8e:94:ca:f9:4d:b5:52:56:f5:42:1f:ad:7a:
+                    e3:bf
+                Exponent: 65537 (0x10001)
+        Attributes:
+            a0:00
+    Signature Algorithm: sha256WithRSAEncryption
+         93:a6:5f:f6:f0:b7:0d:6b:d7:00:e2:87:ce:29:d2:26:ca:e2:
+         3f:23:15:c8:59:8d:a5:be:6f:69:b4:5b:11:a3:20:23:69:44:
+         14:94:86:97:29:20:51:38:a0:7f:64:f0:73:8d:51:76:8f:80:
+         bc:07:a9:d4:b6:2d:61:b7:a1:a6:5b:5a:bc:92:92:21:fc:e6:
+         aa:d1:8f:45:ce:c0:c9:db:13:fb:42:72:7d:da:65:0e:6e:9b:
+         d4:63:b2:6b:a3:47:93:1f:71:dc:3d:43:73:32:4f:cc:24:95:
+         2d:2e:8f:ab:dc:21:79:86:0a:76:fb:34:c7:cd:e9:68:12:14:
+         0b:3c:a4:0d:ff:2a:03:59:25:d8:76:4e:a7:78:d8:0c:c3:f5:
+         da:a4:5f:67:0e:a0:88:a6:4e:32:24:4c:5a:e4:05:82:b7:bf:
+         8b:b9:37:5b:c2:9c:c8:cf:61:74:98:d4:03:48:d7:60:8c:2d:
+         be:d2:7f:6d:1f:40:4e:69:df:9a:fd:54:d6:f9:60:f6:e3:ef:
+         35:4c:d4:61:d3:37:64:7f:cf:a6:c6:8c:68:24:cb:17:4c:78:
+         51:09:20:97:d2:53:ee:11:71:2a:5e:df:c9:42:9d:3b:f2:fa:
+         32:df:5d:5c:70:86:cf:53:e2:ad:e4:f3:9c:76:4a:d7:6f:95:
+         8c:8e:28:7a</div>
+
+
+
+
+</details>
+
 </td>
 </tr>
 <tr><td colspan="3"><div class="flex">
@@ -1465,8 +2404,12 @@ openssl req -text -in $HOSTNAME.csr -noout -verify</pre>
 <td colspan="3">
 <pre before="CMD">fsutil resource info C:</pre>
 
-<details><summary>output</summary>
-<pre class="output">Resource Manager Identifier :      F3292104-1D58-11EC-96F2-381428BEAE7E
+<details><summary>example</summary>
+
+
+
+
+<div class="output">Resource Manager Identifier :      F3292104-1D58-11EC-96F2-381428BEAE7E
 KTM Log Path for RM:  \Device\HarddiskVolume3\$Extend\$RmMetadata\$TxfLog\$TxfLog::KtmLog
 Space used by TOPS:   1 Mb
 TOPS free space:      100%
@@ -1486,7 +2429,9 @@ Maximum containers:   20
 Log growth increment: 2 container(s)
 Auto shrink:          Not enabled
 
-RM prefers availability over conserver.</pre>
+RM prefers availability over conserver.</div>
+
+
 </details>
 
 </td>
@@ -1527,8 +2472,12 @@ RM prefers availability over conserver.</pre>
 <td colspan="3">
 <pre before="POWERSHELL">Get-WindowsUpdateLog </pre>
 
-<details><summary>output</summary>
-<pre class="output">$ Get-WindowsUpdateLog
+<details><summary>example</summary>
+
+
+
+
+<div class="output">$ Get-WindowsUpdateLog
 
 Converting C:\WINDOWS\logs\WindowsUpdate into C:\Users\annie_tran.AMERICAS\Desktop\WindowsUpdate.log ...
 
@@ -1544,7 +2493,9 @@ File(s):
      C:\WINDOWS\logs\WindowsUpdate\WindowsUpdate.20220503.231030.187.1.etl
      C:\WINDOWS\logs\WindowsUpdate\WindowsUpdate.20220503.231030.187.2.etl
      C:\WINDOWS\logs\WindowsUpdate\WindowsUpdate.20220503.231030.187.3.etl
-     C:\WINDOWS\logs\WindowsUpdate\WindowsUpdate.20220503.232525.203.1.etl</pre>
+     C:\WINDOWS\logs\WindowsUpdate\WindowsUpdate.20220503.232525.203.1.etl</div>
+
+
 </details>
 
 </td>
@@ -1566,11 +2517,17 @@ File(s):
 <td colspan="3">
 <pre before="POWERSHELL">Get-AdmPwdPassword -ComputerName:AT01488YD3 | Format-List *</pre>
 
-<details><summary>output</summary>
-<pre class="output">ComputerName        : AT01488YD3
+<details><summary>example</summary>
+
+
+
+
+<div class="output">ComputerName        : AT01488YD3
 DistinguishedName   : CN=W101TL8YD3,OU=Workstations,OU=Computers,OU=Austin,DC=amer,DC=nntrn,DC=com
 Password            :
-ExpirationTimestamp : 5/5/2022 3:07:06 PM</pre>
+ExpirationTimestamp : 5/5/2022 3:07:06 PM</div>
+
+
 </details>
 
 </td>
@@ -1612,8 +2569,12 @@ ExpirationTimestamp : 5/5/2022 3:07:06 PM</pre>
 <pre before="BASH">#C:/Windows/System32/WindowsPowerShell/v1.0/Modules
 find . -type f -name "*.psd1" -print -exec cat {} \; | tr -d '\r' | tr -d '\0' | grep -Eo 'Get-[a-zA-Z\-]+' | sort -u | tee ~/all_powershell_get.txt</pre>
 
-<details><summary>output</summary>
-<pre class="output">Get-Acl
+<details><summary>example</summary>
+
+
+
+
+<div class="output">Get-Acl
 Get-ADAccountAuthorizationGroup
 Get-ADAccountResultantPasswordReplicationPolicy
 Get-ADAuthenticationPolicy
@@ -2261,7 +3222,9 @@ Get-WsusUpdate
 Get-WUAVersion
 Get-WUIsPendingReboot
 Get-WULastInstallationDate
-Get-WULastScanSuccessDate</pre>
+Get-WULastScanSuccessDate</div>
+
+
 </details>
 
 </td>
@@ -2283,12 +3246,18 @@ Get-WULastScanSuccessDate</pre>
 <td colspan="3">
 <pre before="POWERSHELL">Get-NetAdapter | Format-Table  -AutoSize -Wrap</pre>
 
-<details><summary>output</summary>
-<pre class="output">Name                       InterfaceDescription              ifIndex Status MacAddress         LinkSpeed
+<details><summary>example</summary>
+
+
+
+
+<div class="output">Name                       InterfaceDescription              ifIndex Status MacAddress         LinkSpeed
 ----                       --------------------              ------- ------ ----------         ---------
 vEthernet (Default Switch) Hyper-V Virtual Ethernet Adapter       45 Up     00-15-5D-G3-85-46    10 Gbps
 Wi-Fi                      Intel(R) Wi-Fi 6 AX201 160MHz          18 Up     FE-D9-C4-E6-18-B1 866.7 Mbps
-Ethernet 3                 PANGP Virtual Ethernet Adapter #2       7 Up     01-50-41-40-42-01     2 Gbps</pre>
+Ethernet 3                 PANGP Virtual Ethernet Adapter #2       7 Up     01-50-41-40-42-01     2 Gbps</div>
+
+
 </details>
 
 </td>
@@ -2310,8 +3279,12 @@ Ethernet 3                 PANGP Virtual Ethernet Adapter #2       7 Up     01-5
 <td colspan="3">
 <pre before="POWERSHELL">Get-WmiObject win32_networkadapterconfiguration | Format-Table DHCPEnabled,ServiceName,Description -AutoSize -Wrap | Format-Wide -Column 3</pre>
 
-<details><summary>output</summary>
-<pre class="output">DHCPEnabled ServiceName  Description
+<details><summary>example</summary>
+
+
+
+
+<div class="output">DHCPEnabled ServiceName  Description
 ----------- -----------  -----------
        True kdnic        Microsoft Kernel Debug Network Adapter
       False VMSMP        Hyper-V Virtual Switch Extension Adapter
@@ -2327,7 +3300,9 @@ Ethernet 3                 PANGP Virtual Ethernet Adapter #2       7 Up     01-5
       False RasPppoe     WAN Miniport (PPPOE)
       False NdisWan      WAN Miniport (IP)
       False NdisWan      WAN Miniport (IPv6)
-      False NdisWan      WAN Miniport (Network Monitor)</pre>
+      False NdisWan      WAN Miniport (Network Monitor)</div>
+
+
 </details>
 
 </td>
@@ -2353,8 +3328,12 @@ curl dict://dict.org/show:db
 # search word in a specific dictionary
 curl dict://dict.org/d:computer:fd-eng-tur</pre>
 
-<details><summary>output</summary>
-<pre class="output">$ curl dict://dict.org/d:nfs:foldoc
+<details><summary>example</summary>
+
+
+
+
+<div class="output">$ curl dict://dict.org/d:nfs:foldoc
 220 dict.dict.org dictd 1.12.1/rf on Linux 4.19.0-10-amd64 <auth.mime> <113630767.10835.1651568641@dict.dict.org>
 250 ok
 150 1 definitions retrieved
@@ -2548,7 +3527,9 @@ trans "Translating Dictionaries"
 all "All Dictionaries (English-Only and Translating)"
 .
 250 ok
-221 bye [d/m/c = 0/0/0; 0.000r 0.000u 0.000s]</pre>
+221 bye [d/m/c = 0/0/0; 0.000r 0.000u 0.000s]</div>
+
+
 </details>
 
 </td>
@@ -2589,11 +3570,17 @@ all "All Dictionaries (English-Only and Translating)"
 <td colspan="3">
 <pre before="BASH">echo '[{"id": "first", "val": 1}, {"id": "second", "val": 2}]' | jq '.[] | select(.id == "second")'</pre>
 
-<details><summary>output</summary>
-<pre class="output">{
+<details><summary>example</summary>
+
+
+
+
+<div class="output">{
   "id": "second",
   "val": 2
-}</pre>
+}</div>
+
+
 </details>
 
 </td>
@@ -2619,8 +3606,51 @@ $newProcess = New-Object System.Diagnostics.ProcessStartInfo "PowerShell";
 
  echo $myWindowsID</pre>
 
-<details><summary>output</summary>
-<pre class="output">$ echo $myWindowsID 
+<details><summary>example</summary>
+
+
+<div class="example"># Get the ID and security principal of the current user account
+$myWindowsID = [System.Security.Principal.WindowsIdentity]::GetCurrent();
+$myWindowsPrincipal = New-Object System.Security.Principal.WindowsPrincipal($myWindowsID);
+
+# Get the security principal for the administrator role
+$adminRole = [System.Security.Principal.WindowsBuiltInRole]::Administrator;
+
+# Check to see if we are currently running as an administrator
+if ($myWindowsPrincipal.IsInRole($adminRole))
+{
+    # We are running as an administrator, so change the title and background colour to indicate this
+    $Host.UI.RawUI.WindowTitle = $myInvocation.MyCommand.Definition + "(Elevated)";
+    $Host.UI.RawUI.BackgroundColor = "DarkBlue";
+    Clear-Host;
+}
+else {
+    # We are not running as an administrator, so relaunch as administrator
+
+    # Create a new process object that starts PowerShell
+    $newProcess = New-Object System.Diagnostics.ProcessStartInfo "PowerShell";
+
+    # Specify the current script path and name as a parameter with added scope and support for scripts with spaces in it's path
+    $newProcess.Arguments = "& '" + $script:MyInvocation.MyCommand.Path + "'"
+
+    # Indicate that the process should be elevated
+    $newProcess.Verb = "runas";
+
+    # Start the new process
+    [System.Diagnostics.Process]::Start($newProcess);
+
+    # Exit from the current, unelevated, process
+    Exit;
+}
+
+# Run your code that needs to be elevated here...
+
+Write-Host -NoNewLine "Press any key to continue...";
+$null = $Host.UI.RawUI.ReadKey("NoEcho,IncludeKeyDown");</div>
+
+
+
+<div class="output">$ echo $myWindowsID 
 AuthenticationType : Kerberos
 ImpersonationLevel : None
 IsAuthenticated    : True
@@ -2647,7 +3677,9 @@ NameClaimType      : http://schemas.xmlsoap.org/ws/9112/12/identity/claims/name
 RoleClaimType      : http://schemas.microsoft.com/ws/9110/11/identity/claims/groupsid
 
 $ echo adminRole 
-Administrator</pre>
+Administrator</div>
+
+
 </details>
 
 </td>
@@ -2692,8 +3724,12 @@ Administrator</pre>
 randomnumstring=$RANDOM$RANDOM$RANDOM
 echo "$text-to-scramble-numbers"  | tr "0123456789" $( echo ${randomnumstring:0:9})</pre>
 
-<details><summary>output</summary>
-<pre class="output">AuthenticationType : Kerberos
+<details><summary>example</summary>
+
+
+
+
+<div class="output">AuthenticationType : Kerberos
 ImpersonationLevel : None
 IsAuthenticated    : True
 IsGuest            : False
@@ -2716,7 +3752,9 @@ Actor              :
 BootstrapContext   :
 Label              :
 NameClaimType      : http://schemas.xmlsoap.org/ws/3112/12/identity/claims/name
-RoleClaimType      : http://schemas.microsoft.com/ws/3118/12/identity/claims/groupsid</pre>
+RoleClaimType      : http://schemas.microsoft.com/ws/3118/12/identity/claims/groupsid</div>
+
+
 </details>
 
 </td>
@@ -2738,8 +3776,12 @@ RoleClaimType      : http://schemas.microsoft.com/ws/3118/12/identity/claims/gro
 <td colspan="3">
 <pre before="BASH">netsh http show servicestate view=requestq verbose=no</pre>
 
-<details><summary>output</summary>
-<pre class="output">Snapshot of HTTP service state (Request Queue View):
+<details><summary>example</summary>
+
+
+
+
+<div class="output">Snapshot of HTTP service state (Request Queue View):
 -----------------------------------------------------
 
 Request queue name: DefaultAppPool
@@ -2850,7 +3892,9 @@ Request queue name: Request queue is unnamed.
                 HTTP://127.0.0.1:8884:127.0.0.1/
         Server session ID: FD00000220000001
             Version: 2.0
-            State: Active</pre>
+            State: Active</div>
+
+
 </details>
 
 </td>
@@ -2872,8 +3916,16 @@ Request queue name: Request queue is unnamed.
 <td colspan="3">
 <pre before="BASH">netsh show helper</pre>
 
-<details><summary>output</summary>
-<pre class="output">Helper GUID                             DLL Filename  Command
+<details><summary>example</summary>
+
+
+<div class="example">$ which netsh
+/cygdrive/c/WINDOWS/system32/netsh
+</div>
+
+
+
+<div class="output">Helper GUID                             DLL Filename  Command
 --------------------------------------  ------------  -------
 {02BC1F81-D927-4EC5-8CBC-8DD65E3E38E8}  AUTserver.DLL  advfirewall
 {FB10CBCA-5430-46CE-B732-079B4E23BE24}  AUTserver.DLL    consec
@@ -2938,7 +3990,9 @@ Request queue name: Request queue is unnamed.
 {3BB6DA1D-AC0C-4972-AC05-B22F49DEA9B6}  NSHWFP.DLL    wfp
 {0BFDC146-56A3-4311-A7D5-7D9953F8326E}  WHHELPER.DLL  winhttp
 {B2C0EEF4-CCE5-4F55-934E-ABF60F3DCF56}  WSHELPER.DLL  winsock
-{D424E730-1DB7-4287-8C9B-0774F5AD0576}  WLANCFG.DLL   wlan</pre>
+{D424E730-1DB7-4287-8C9B-0774F5AD0576}  WLANCFG.DLL   wlan</div>
+
+
 </details>
 
 </td>
@@ -2960,8 +4014,12 @@ Request queue name: Request queue is unnamed.
 <td colspan="3">
 <pre before="BASH">pidstat -C "awx | postgres" -r -p ALL</pre>
 
-<details><summary>output</summary>
-<pre class="output">Linux 5.4.17-2136.304.4.1.el7uek.x86_64 (awxplprod02.us.example.com)       04/22/2022      _x86_64_        (2 CPU)
+<details><summary>example</summary>
+
+
+
+
+<div class="output">Linux 5.4.17-2136.304.4.1.el7uek.x86_64 (awxplprod02.us.example.com)       04/22/2022      _x86_64_        (2 CPU)
 
 02:01:07 AM   UID       PID  minflt/s  majflt/s     VSZ    RSS   %MEM  Command
 02:01:07 AM     0     10804      0.09      0.00       0      0   0.00  awx-manage
@@ -2992,7 +4050,9 @@ Request queue name: Request queue is unnamed.
 02:01:07 AM   999     71901      0.01      0.00  215908  16680   0.07  postgres
 02:01:07 AM   999     71902      0.01      0.00  215020  16908   0.07  postgres
 02:01:07 AM   999     71903      0.02      0.00  215988  20760   0.09  postgres
-02:01:07 AM   999     71904      0.01      0.00  214868  14408   0.06  postgres</pre>
+02:01:07 AM   999     71904      0.01      0.00  214868  14408   0.06  postgres</div>
+
+
 </details>
 
 </td>
@@ -3033,8 +4093,12 @@ Request queue name: Request queue is unnamed.
 <td colspan="3">
 <pre before="POWERSHELL">Get-ADGroupMember -Identity group,name | Select-Object name</pre>
 
-<details><summary>output</summary>
-<pre class="output">name
+<details><summary>example</summary>
+
+
+
+
+<div class="output">name
 ----
 Lou Carter
 Margaret Warren
@@ -3045,7 +4109,9 @@ Spencer Gutierrez
 Danielle Kimball
 Joyce Clay
 Eunice Wolfe
-Mildred Pearson</pre>
+Mildred Pearson</div>
+
+
 </details>
 
 </td>
@@ -3067,8 +4133,12 @@ Mildred Pearson</pre>
 <td colspan="3">
 <pre before="BASH">nmap -sT -O  10.171.230.150</pre>
 
-<details><summary>output</summary>
-<pre class="output">Starting Nmap 6.40 ( http://nmap.org ) at 2022-04-21 11:31 CDT
+<details><summary>example</summary>
+
+
+
+
+<div class="output">Starting Nmap 6.40 ( http://nmap.org ) at 2022-04-21 11:31 CDT
 Nmap scan report for server.us.example.com (10.123.123.123)
 Host is up (0.00047s latency).
 Not shown: 992 closed ports
@@ -3080,7 +4150,9 @@ PORT     STATE SERVICE
 3389/tcp open  ms-wbt-server
 7937/tcp open  nsrexecd
 7938/tcp open  lgtomapper
-9100/tcp open  jetdirect</pre>
+9100/tcp open  jetdirect</div>
+
+
 </details>
 
 </td>
@@ -3102,8 +4174,12 @@ PORT     STATE SERVICE
 <td colspan="3">
 <pre before="VIM">:set all</pre>
 
-<details><summary>output</summary>
-<pre class="output">--- Options ---
+<details><summary>example</summary>
+
+
+
+
+<div class="output">--- Options ---
   ambiwidth=single    endofline         noinsertmode          mousetime=500       shellxescape=       tags=./tags,tags  novisualbell
 noautoindent          equalalways         isprint=@,161-255 nonumber            noshiftround          tagstack            warn
 noautoread            equalprg=           joinspaces          operatorfunc=       shiftwidth=8        term=xterm        noweirdinvert
@@ -3152,7 +4228,9 @@ ine,S:StatusLineNC,t:Title,v:Visual,w:WarningMsg,W:WildMenu,>:SignColumn,*:TabLi
   selection=inclusive
   shellredir=>%s 2>&1
   shortmess=filnxtToO
-  suffixes=.bak,~,.o,.h,.info,.swp,.obj</pre>
+  suffixes=.bak,~,.o,.h,.info,.swp,.obj</div>
+
+
 </details>
 
 </td>
@@ -3174,8 +4252,12 @@ ine,S:StatusLineNC,t:Title,v:Visual,w:WarningMsg,W:WildMenu,>:SignColumn,*:TabLi
 <td colspan="3">
 <pre before="BASH">systemctl status --type=service</pre>
 
-<details><summary>output</summary>
-<pre class="output">● awxserver.us.example.com
+<details><summary>example</summary>
+
+
+
+
+<div class="output">● awxserver.us.example.com
     State: running
      Jobs: 0 queued
    Failed: 0 units
@@ -3192,7 +4274,9 @@ ine,S:StatusLineNC,t:Title,v:Visual,w:WarningMsg,W:WildMenu,>:SignColumn,*:TabLi
            │ │ ├─2819 /var/lib/awx/venv/awx/bin/uwsgi --socket 127.0.0.1:8050 --module=awx.wsgi:application --vacuum --processes=5 --harakiri=120 --no-orphans --master --max-requests=1000 --master-fifo=/var/lib/awx/awxfifo --lazy-apps -b 32768
            │ │ ├─2820 /var/lib/awx/venv/awx/bin/python3 /var/lib/awx/venv/awx/bin/daphne -b 127.0.0.1 -p 8051 --websocket_timeout -1 awx.asgi:channel_layer
            │ │ ├─2821 /var/lib/awx/venv/awx/bin/python3 /usr/bin/awx-manage run_wsbroadcast
-           │ │ ├─2824 nginx: worker process</pre>
+           │ │ ├─2824 nginx: worker process</div>
+
+
 </details>
 
 </td>
@@ -3213,6 +4297,16 @@ ine,S:StatusLineNC,t:Title,v:Visual,w:WarningMsg,W:WildMenu,>:SignColumn,*:TabLi
 <tr>
 <td colspan="3">
 <pre before="BASH">journalctl -u  <service></pre>
+
+<details><summary>example</summary>
+
+
+<div class="example"> journalctl -u  systemd-logind.service</div>
+
+
+
+
+</details>
 
 </td>
 </tr>
@@ -3277,8 +4371,12 @@ for N in $(seq $AQUO $ADQUEM); do
   openssl prime $N | awk '/is prime/ {print "ibase=16;"$1}' | bc
 done</pre>
 
-<details><summary>output</summary>
-<pre class="output">10007
+<details><summary>example</summary>
+
+
+
+
+<div class="output">10007
 10009
 10037
 10039
@@ -3288,7 +4386,9 @@ done</pre>
 10079
 10091
 10093
-10099</pre>
+10099</div>
+
+
 </details>
 
 </td>
@@ -3375,8 +4475,12 @@ SHA1 Fingerprint=E3:EB:7B:6B:01:2D:CE:3A:AD:63:00:AA:0B:60:08:F8:64:9F:1E:D9</pr
 <td colspan="3">
 <pre before="BASH">openssl ciphers -V 'AES+HIGH'</pre>
 
-<details><summary>output</summary>
-<pre class="output">          0x13,0x02 - TLS_AES_256_GCM_SHA384  TLSv1.3 Kx=any      Au=any  Enc=AESGCM(256) Mac=AEAD
+<details><summary>example</summary>
+
+
+
+
+<div class="output">          0x13,0x02 - TLS_AES_256_GCM_SHA384  TLSv1.3 Kx=any      Au=any  Enc=AESGCM(256) Mac=AEAD
           0x13,0x03 - TLS_CHACHA20_POLY1305_SHA256 TLSv1.3 Kx=any      Au=any  Enc=CHACHA20/POLY1305(256) Mac=AEAD
           0x13,0x01 - TLS_AES_128_GCM_SHA256  TLSv1.3 Kx=any      Au=any  Enc=AESGCM(128) Mac=AEAD
           0xC0,0x2C - ECDHE-ECDSA-AES256-GCM-SHA384 TLSv1.2 Kx=ECDH     Au=ECDSA Enc=AESGCM(256) Mac=AEAD
@@ -3464,7 +4568,9 @@ SHA1 Fingerprint=E3:EB:7B:6B:01:2D:CE:3A:AD:63:00:AA:0B:60:08:F8:64:9F:1E:D9</pr
           0x00,0x90 - DHE-PSK-AES128-CBC-SHA  SSLv3 Kx=DHEPSK   Au=PSK  Enc=AES(128)  Mac=SHA1
           0x00,0x2F - AES128-SHA              SSLv3 Kx=RSA      Au=RSA  Enc=AES(128)  Mac=SHA1
           0x00,0xAE - PSK-AES128-CBC-SHA256   TLSv1 Kx=PSK      Au=PSK  Enc=AES(128)  Mac=SHA256
-          0x00,0x8C - PSK-AES128-CBC-SHA      SSLv3 Kx=PSK      Au=PSK  Enc=AES(128)  Mac=SHA1</pre>
+          0x00,0x8C - PSK-AES128-CBC-SHA      SSLv3 Kx=PSK      Au=PSK  Enc=AES(128)  Mac=SHA1</div>
+
+
 </details>
 
 </td>
@@ -3508,8 +4614,12 @@ Get-ADUser  -Filter "dellOwnerID -like $EID"  -Properties * | sort-object -prope
 <td colspan="3">
 <pre before="BASH">sssctl --help</pre>
 
-<details><summary>output</summary>
-<pre class="output">Usage:
+<details><summary>example</summary>
+
+
+
+
+<div class="output">Usage:
 sssctl COMMAND COMMAND-ARGS
 
 Available commands:
@@ -3543,7 +4653,9 @@ Configuration files tools:
 Help options:
   -?, --help             Show this for a command
   --usage                Show brief usage message for a command
-</pre>
+</div>
+
+
 </details>
 
 </td>
@@ -3565,11 +4677,100 @@ Help options:
 <td colspan="3">
 <pre before="BASH">curl -s 'https://api.github.com/repos/nntrn/dvt/commits?per_page=1' | jq '.[] | {message: .commit.message, date: .commit.committer.date}'</pre>
 
-<details><summary>output</summary>
-<pre class="output">{
+<details><summary>example</summary>
+
+
+<div class="example">$ curl -s 'https://api.github.com/repos/nntrn/dvt/commits?per_page=1' 
+[
+  {
+    "sha": "6e42802dcd22548be5c2d93c8a5b9939c42a10f9",
+    "node_id": "C_kwDOGlqnl9oAKDZlNDI4MDJkY2QyMjU0OGJlNWMyZDkzYzhhNWI5OTM5YzQyYTEwZjk",
+    "commit": {
+      "author": {
+        "name": "annie tran",
+        "email": "17685332+nntrn@users.noreply.github.com",
+        "date": "2021-12-27T12:13:16Z"
+      },
+      "committer": {
+        "name": "annie tran",
+        "email": "17685332+nntrn@users.noreply.github.com",
+        "date": "2021-12-27T12:13:16Z"
+      },
+      "message": "1.2.0",
+      "tree": {
+        "sha": "0ff39c1a1781376b44b352f4d3ad7b0703d05812",
+        "url": "https://api.github.com/repos/nntrn/dvt/git/trees/0ff39c1a1781376b44b352f4d3ad7b0703d05812"
+      },
+      "url": "https://api.github.com/repos/nntrn/dvt/git/commits/6e42802dcd22548be5c2d93c8a5b9939c42a10f9",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null
+      }
+    },
+    "url": "https://api.github.com/repos/nntrn/dvt/commits/6e42802dcd22548be5c2d93c8a5b9939c42a10f9",
+    "html_url": "https://github.com/nntrn/dvt/commit/6e42802dcd22548be5c2d93c8a5b9939c42a10f9",
+    "comments_url": "https://api.github.com/repos/nntrn/dvt/commits/6e42802dcd22548be5c2d93c8a5b9939c42a10f9/comments",
+    "author": {
+      "login": "nntrn",
+      "id": 17685332,
+      "node_id": "MDQ6VXNlcjE3Njg1MzMy",
+      "avatar_url": "https://avatars.githubusercontent.com/u/17685332?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/nntrn",
+      "html_url": "https://github.com/nntrn",
+      "followers_url": "https://api.github.com/users/nntrn/followers",
+      "following_url": "https://api.github.com/users/nntrn/following{/other_user}",
+      "gists_url": "https://api.github.com/users/nntrn/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/nntrn/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/nntrn/subscriptions",
+      "organizations_url": "https://api.github.com/users/nntrn/orgs",
+      "repos_url": "https://api.github.com/users/nntrn/repos",
+      "events_url": "https://api.github.com/users/nntrn/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/nntrn/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "nntrn",
+      "id": 17685332,
+      "node_id": "MDQ6VXNlcjE3Njg1MzMy",
+      "avatar_url": "https://avatars.githubusercontent.com/u/17685332?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/nntrn",
+      "html_url": "https://github.com/nntrn",
+      "followers_url": "https://api.github.com/users/nntrn/followers",
+      "following_url": "https://api.github.com/users/nntrn/following{/other_user}",
+      "gists_url": "https://api.github.com/users/nntrn/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/nntrn/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/nntrn/subscriptions",
+      "organizations_url": "https://api.github.com/users/nntrn/orgs",
+      "repos_url": "https://api.github.com/users/nntrn/repos",
+      "events_url": "https://api.github.com/users/nntrn/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/nntrn/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "be0297653a3b4e355c8b28746032cca861304401",
+        "url": "https://api.github.com/repos/nntrn/dvt/commits/be0297653a3b4e355c8b28746032cca861304401",
+        "html_url": "https://github.com/nntrn/dvt/commit/be0297653a3b4e355c8b28746032cca861304401"
+      }
+    ]
+  }
+]</div>
+
+
+
+<div class="output">{
   "message": "1.2.0",
   "date": "2021-12-27T12:13:16Z"
-}</pre>
+}</div>
+
+
 </details>
 
 </td>
@@ -3649,12 +4850,18 @@ cat "$POWERSHELL_HISTORY" | sed 's/^[ \t]*//'</pre>
 <td colspan="3">
 <pre before="BASH">echo "A,B,C,D,E,F,G,H,I,J,K,L,M,N,O" | awk -v RS='[,\n]' '{a=$0;getline b; getline c; print a,b,c}' OFS=,</pre>
 
-<details><summary>output</summary>
-<pre class="output">A,B,C
+<details><summary>example</summary>
+
+
+
+
+<div class="output">A,B,C
 D,E,F
 G,H,I
 J,K,L
-M,N,O</pre>
+M,N,O</div>
+
+
 </details>
 
 </td>
@@ -3782,8 +4989,12 @@ openssl enc -d -aes-256-cbc -md sha512 -pbkdf2 -iter 100000 -base64 -salt -in $E
 <td colspan="3">
 <pre before="BASH">ls -lptr --time-style='+%s %FT%T' --no-group --group-directories-first </pre>
 
-<details><summary>output</summary>
-<pre class="output">total 11276
+<details><summary>example</summary>
+
+
+
+
+<div class="output">total 11276
 drwxr-xr-x 3 annie_tran     123 1628039419 2021-08-03T20:10:19 awx_setup/
 drwxr-xr-x 3 annie_tran      17 1634845874 2021-10-21T14:51:14 shfmt-v3.4.0/
 drwxr-x--- 2 annie_tran      28 1639676924 2021-12-16T11:48:44 scripts/
@@ -3791,7 +5002,9 @@ drwxr-x--- 2 annie_tran       6 1640722310 2021-12-28T14:11:50 linux_scripts/
 drwxr-xr-x 3 annie_tran      65 1642781441 2022-01-21T10:10:41 admin_scripts/
 drwxrwxr-x 2 annie_tran      54 1643173909 2022-01-25T23:11:49 ansible/
 drwxr-xr-x 2 annie_tran      55 1643180329 2022-01-26T00:58:49 bin/
-drwxrwxr-x 4 annie_tran      45 1648750176 2022-03-31T13:09:36 devops-git/</pre>
+drwxrwxr-x 4 annie_tran      45 1648750176 2022-03-31T13:09:36 devops-git/</div>
+
+
 </details>
 
 </td>
@@ -3834,6 +5047,17 @@ vault write auth/userpass/users/annie_tran password=secret</pre>
 <pre before="BASH">${!prefix*}
 ${!prefix@}</pre>
 
+<details><summary>example</summary>
+
+
+<div class="example">$ echo "${!VAULT*}"
+VAULT_ADDR VAULT_NAMESPACE VAULT_TOKEN</div>
+
+
+
+
+</details>
+
 </td>
 </tr>
 <tr><td colspan="3"><div class="flex">
@@ -3852,6 +5076,26 @@ ${!prefix@}</pre>
 <tr>
 <td colspan="3">
 <pre before="PYTHON">python3 -c "import yaml, json, sys; sys.stdout.write(yaml.dump(json.load(sys.stdin)))"</pre>
+
+<details><summary>example</summary>
+
+
+<div class="example"># run in shell
+cat file.json | python -c 'import yaml, json, sys; sys.stdout.write(yaml.dump(json.load(sys.stdin)))'
+
+# create alias
+alias json2yaml="python -c 'import yaml, json, sys; sys.stdout.write(yaml.dump(json.load(sys.stdin)))'"
+
+$ echo '{"dirs": [1,2,3]}' | python3 -c "import yaml, json, sys; sys.stdout.write(yaml.dump(json.load(sys.stdin)))"
+dirs:
+- 1
+- 2
+- 3</div>
+
+
+
+
+</details>
 
 </td>
 </tr>
@@ -3977,8 +5221,12 @@ source .venv/bin/activate</pre>
 <td colspan="3">
 <pre before="BASH">vault kv put 'kv/path/to/secrets' @file-with-object.json</pre>
 
-<details><summary>output</summary>
-<pre class="output">=============== Secret Path ===============
+<details><summary>example</summary>
+
+
+
+
+<div class="output">=============== Secret Path ===============
 kv/path/to/secrets
 
 ======= Metadata =======
@@ -3988,7 +5236,9 @@ created_time       2022-03-28T21:36:45.242626484Z
 custom_metadata    <nil>
 deletion_time      n/a
 destroyed          false
-version            2</pre>
+version            2</div>
+
+
 </details>
 
 </td>
@@ -4029,6 +5279,20 @@ version            2</pre>
 <td colspan="3">
 <pre before="BASH">git rev-parse --show-toplevel</pre>
 
+<details><summary>example</summary>
+
+
+<div class="example">$ pwd
+/u01/devops-dbaas/sysadmin
+
+$ git rev-parse --show-toplevel
+/u01/devops-dbaas</div>
+
+
+
+
+</details>
+
 </td>
 </tr>
 <tr><td colspan="3"><div class="flex">
@@ -4048,6 +5312,16 @@ version            2</pre>
 <td colspan="3">
 <pre before="BASH">alias prettier-xml='prettier --bracket-same-line true --xml-whitespace-sensitivity ignore --tab-width 2 --print-width 120 --stdin-filepath  *.xml'</pre>
 
+<details><summary>example</summary>
+
+
+<div class="example">cat file.xml | prettier-xml</div>
+
+
+
+
+</details>
+
 </td>
 </tr>
 <tr><td colspan="3"><div class="flex">
@@ -4066,6 +5340,16 @@ version            2</pre>
 <tr>
 <td colspan="3">
 <pre before="BASH">powershell -noprofile -command "<command to run>"</pre>
+
+<details><summary>example</summary>
+
+
+<div class="example">powershell -noprofile -command &#34;Get-ADUser -Identity Annie_Tran -Properties *&#34;</div>
+
+
+
+
+</details>
 
 </td>
 </tr>
@@ -4111,8 +5395,12 @@ version            2</pre>
 <td colspan="3">
 <pre before="POWERSHELL">Get-ADUser  -Filter 'description -like "*Annie_Tran"'  -Properties *  | Sort-Object -Property PasswordLastSet | Format-Table Name,PasswordLastSet -AutoSize -Wrap</pre>
 
-<details><summary>output</summary>
-<pre class="output">Name               PasswordLastSet
+<details><summary>example</summary>
+
+
+
+
+<div class="output">Name               PasswordLastSet
 ----               ---------------
 svc_account      4/11/2021 11:11:32 AM
 svc_account     4/11/2021 11:11:32 AM
@@ -4128,7 +5416,9 @@ svc_account  4/11/2021 2:47:40 PM
 svc_account   4/11/2021 2:47:40 PM
 svc_account 4/11/2021 2:47:41 PM
 svc_account  4/11/2021 2:47:43 PM
-</pre>
+</div>
+
+
 </details>
 
 </td>
@@ -4150,15 +5440,21 @@ svc_account  4/11/2021 2:47:43 PM
 <td colspan="3">
 <pre before="BASH">echo -n 'letmein' | ansible-vault encrypt_string --vault-id dev@a_password_file --stdin-name 'db_password'</pre>
 
-<details><summary>output</summary>
-<pre class="output">Reading plaintext input from stdin. (ctrl-d to end input, twice if your content does not already have a new line)
+<details><summary>example</summary>
+
+
+
+
+<div class="output">Reading plaintext input from stdin. (ctrl-d to end input, twice if your content does not already have a new line)
 db_password: !vault |
 ANSIBLE_VAULT;1.2;AES256;dev
           61323931353866666336306139373937316366366138656131323863373866376666353364373761
           3539633234313836346435323766306164626134376564330a373530313635343535343133316133
           36643666306434616266376434363239346433643238336464643566386135356334303736353136
           6565633133366366360a326566323363363936613664616364623437336130623133343530333739
-          3039</pre>
+          3039</div>
+
+
 </details>
 
 </td>
@@ -4179,6 +5475,17 @@ ANSIBLE_VAULT;1.2;AES256;dev
 <tr>
 <td colspan="3">
 <pre before="BASH">uuidgen --sha1 --namespace @dns --name "string_to_hash"</pre>
+
+<details><summary>example</summary>
+
+
+<div class="example">$ uuidgen --sha1 --namespace @dns --name "1626044030000"
+1faa6f1b-f538-5d91-8aaa-1f96de461a16</div>
+
+
+
+
+</details>
 
 </td>
 </tr>
@@ -4218,8 +5525,14 @@ ANSIBLE_VAULT;1.2;AES256;dev
 <td colspan="3">
 <pre before="BASH">systemd-escape -u 'Hall\xc3\xb6chen\x2c\x20Meister'</pre>
 
-<details><summary>output</summary>
-<pre class="output">Hallöchen, Meister</pre>
+<details><summary>example</summary>
+
+
+
+
+<div class="output">Hallöchen, Meister</div>
+
+
 </details>
 
 </td>
@@ -4304,6 +5617,26 @@ openssl enc -aes256 -base64 -salt -in .secrets -out .secrets.enc -pass file:./.v
 #decrypt
 openssl enc -d -aes256 -a -in .secrets.enc -pass file:./.vault-password</pre>
 
+<details><summary>example</summary>
+
+
+<div class="example">$ echo 'example' >.vault-password
+$ echo 'username: password' >.secrets
+
+# encrypt:
+$ openssl enc -aes256 -base64 -salt -in .secrets -out .secrets.enc -pass file:./.vault-password
+
+$ cat .secrets.enc
+U2FsdGVkX1/VrT+ty1Q+InEZp6O+2AJYG/axMT4PUXoGgiq0rFA+mAGWFwRDAcYG
+
+$ openssl enc -d -aes256 -a -in .secrets.enc -pass file:./.vault-password 2>/dev/null
+username: password</div>
+
+
+
+
+</details>
+
 </td>
 </tr>
 <tr><td colspan="3"><div class="flex">
@@ -4365,10 +5698,18 @@ $ openssl passwd -salt 8E MySecret
 <td colspan="3">
 <pre before="BASH">stat --printf='%U\n%G\n%z\n' $FILEORDIR</pre>
 
-<details><summary>output</summary>
-<pre class="output">annie_tran
+<details><summary>example</summary>
+
+
+<div class="example">stat --printf=&#39;%U\n%G\n%z\n&#39; .git</div>
+
+
+
+<div class="output">annie_tran
 wheel
-2022-03-08 18:39:51.177925946 -0600</pre>
+2022-03-08 18:39:51.177925946 -0600</div>
+
+
 </details>
 
 </td>
@@ -4466,8 +5807,14 @@ journalctl -k                 # Show only kernel messages</pre>
 <td colspan="3">
 <pre before="BASH">prtstat $PID</pre>
 
-<details><summary>output</summary>
-<pre class="output">Process: awx-manage             State: S (sleeping)
+<details><summary>example</summary>
+
+
+<div class="example">$ prtstat 3216</div>
+
+
+
+<div class="output">Process: awx-manage             State: S (sleeping)
   CPU#:  1              TTY: 0:0        Threads: 1
 Process, Group and Session IDs
   Process ID: 3216                Parent ID: 3153
@@ -4488,7 +5835,9 @@ Memory
   Stack Pointer (ESP):          0        Inst Pointer (EIP):          0
 Scheduling
   Policy: normal
-  Nice:   0        </pre>
+  Nice:   0        </div>
+
+
 </details>
 
 </td>
@@ -4510,8 +5859,12 @@ Scheduling
 <td colspan="3">
 <pre before="BASH">mpstat 2 5</pre>
 
-<details><summary>output</summary>
-<pre class="output">Linux 5.4.17-2102.202.5.el7uek.x86_64 (server.us.example.com)         03/03/2022      _x86_64_        (2 CPU)
+<details><summary>example</summary>
+
+
+
+
+<div class="output">Linux 5.4.17-2102.202.5.el7uek.x86_64 (server.us.example.com)         03/03/2022      _x86_64_        (2 CPU)
 
 03:22:33 PM  CPU    %usr   %nice    %sys %iowait    %irq   %soft  %steal  %guest  %gnice   %idle
 03:22:35 PM  all    1.01    0.00    1.51    0.00    0.25    0.00    0.00    0.00    0.00   97.24
@@ -4519,7 +5872,9 @@ Scheduling
 03:22:39 PM  all    0.50    0.00    0.50    0.00    0.00    0.00    0.00    0.00    0.00   98.99
 03:22:41 PM  all    0.75    0.00    0.50    0.25    0.00    0.50    0.00    0.00    0.00   98.01
 03:22:43 PM  all    0.50    0.00    0.75    0.00    0.50    0.00    0.00    0.00    0.00   98.25
-Average:     all    0.70    0.00    0.85    0.05    0.15    0.10    0.00    0.00    0.00   98.15</pre>
+Average:     all    0.70    0.00    0.85    0.05    0.15    0.10    0.00    0.00    0.00   98.15</div>
+
+
 </details>
 
 </td>
@@ -4541,8 +5896,12 @@ Average:     all    0.70    0.00    0.85    0.05    0.15    0.10    0.00    0.00
 <td colspan="3">
 <pre before="BASH">ifstat -j -p</pre>
 
-<details><summary>output</summary>
-<pre class="output">{
+<details><summary>example</summary>
+
+
+
+
+<div class="output">{
     "kernel": {
         "lo": {
             "rx_packets": 28327,
@@ -4641,7 +6000,9 @@ Average:     all    0.70    0.00    0.85    0.05    0.15    0.10    0.00    0.00
             "collisions": 0
         }
     }
-}</pre>
+}</div>
+
+
 </details>
 
 </td>
@@ -4663,8 +6024,12 @@ Average:     all    0.70    0.00    0.85    0.05    0.15    0.10    0.00    0.00
 <td colspan="3">
 <pre before="BASH">procinfo -a</pre>
 
-<details><summary>output</summary>
-<pre class="output">Linux 5.4.17-2102.202.5.el7uek.x86_64 (mockbuild@host-100-100-224-35) (gcc 4.8.5 20150623) #2 2CPU [awxplprod02]
+<details><summary>example</summary>
+
+
+
+
+<div class="output">Linux 5.4.17-2102.202.5.el7uek.x86_64 (mockbuild@host-100-100-224-35) (gcc 4.8.5 20150623) #2 2CPU [awxplprod02]
 
 Memory:      Total        Used        Free      Shared     Buffers
 Mem:      24307332     5810164    18497168           0       14604
@@ -4720,7 +6085,9 @@ Modules:
  24 *cryptd          16 *glue_helper     16  pcspkr          24  joydev          36  sg
  72 *vmw_vmci        28  i2c_piix4       92  auth_rpcgss    380 *sunrpc          24 *binfmt_misc
  28 *ip_tables      1428 *xfs             16 *libcrc32c       24  sr_mod          68 *cdrom
- 52 *sd_Segmentation fault</pre>
+ 52 *sd_Segmentation fault</div>
+
+
 </details>
 
 </td>
@@ -4742,8 +6109,12 @@ Modules:
 <td colspan="3">
 <pre before="BASH">dstat --top-cpu</pre>
 
-<details><summary>output</summary>
-<pre class="output">-most-expensive-
+<details><summary>example</summary>
+
+
+
+
+<div class="output">-most-expensive-
   cpu process
 zabbix_agent20.4
 python3      0.5
@@ -4754,7 +6125,9 @@ python3      0.5
 redis-server 0.5
 zabbix_agent21.0
 lldpad       0.5
-zabbix_agent20.5^C</pre>
+zabbix_agent20.5^C</div>
+
+
 </details>
 
 </td>
@@ -4795,8 +6168,12 @@ zabbix_agent20.5^C</pre>
 <td colspan="3">
 <pre before="BASH">lsblk -a -p</pre>
 
-<details><summary>output</summary>
-<pre class="output">NAME                                MAJ:MIN RM  SIZE RO TYPE MOUNTPOINT
+<details><summary>example</summary>
+
+
+
+
+<div class="output">NAME                                MAJ:MIN RM  SIZE RO TYPE MOUNTPOINT
 /dev/sdb                              8:16   0  100G  0 disk
 └─/dev/sdb1                           8:17   0  100G  0 part
   └─/dev/mapper/datavg-u01          252:4    0   99G  0 lvm  /u01
@@ -4815,7 +6192,9 @@ zabbix_agent20.5^C</pre>
 │ ├─/dev/mapper/osvg-varlogaudit.fs 252:5    0 1000M  0 lvm  /var/log/audit
 │ └─/dev/mapper/osvg-tmp.fs         252:3    0 1000M  0 lvm  /tmp
 ├─/dev/sda3                           8:3    0    8G  0 part [SWAP]
-└─/dev/sda1                           8:1    0 1000M  0 part /boot</pre>
+└─/dev/sda1                           8:1    0 1000M  0 part /boot</div>
+
+
 </details>
 
 </td>
@@ -4896,8 +6275,12 @@ bcdef</pre>
 <td colspan="3">
 <pre before="BASH">ansible-config dump | grep -v '\(default\)' | sed 's,(.*cfg),,g'</pre>
 
-<details><summary>output</summary>
-<pre class="output">ANSIBLE_SSH_ARGS = -C -o ControlMaster=auto -o ControlPersist=60s -o StrictHostKeyChecking=no
+<details><summary>example</summary>
+
+
+
+
+<div class="output">ANSIBLE_SSH_ARGS = -C -o ControlMaster=auto -o ControlPersist=60s -o StrictHostKeyChecking=no
 ANSIBLE_SSH_CONTROL_PATH = %(directory)s/%%h-%%r
 ANSIBLE_SSH_CONTROL_PATH_DIR = ~/.ansible/cp
 ANSIBLE_SSH_RETRIES = 1
@@ -4916,7 +6299,9 @@ INVENTORY_IGNORE_EXTS = ['.pyc', '.pyo', '.swp', '.bak', '~', '.rpm', '.md', '.t
 MAX_FILE_SIZE_FOR_DIFF = 3145728
 RETRY_FILES_ENABLED = True
 RETRY_FILES_SAVE_PATH = ~/.ansible-retry
-SYSTEM_WARNINGS = False</pre>
+SYSTEM_WARNINGS = False</div>
+
+
 </details>
 
 </td>
@@ -5014,8 +6399,12 @@ SYSTEM_WARNINGS = False</pre>
 <td colspan="3">
 <pre before="BASH">$ docker top awx_task</pre>
 
-<details><summary>output</summary>
-<pre class="output">UID                 PID                 PPID                C                   STIME               TTY                 TIME                CMD
+<details><summary>example</summary>
+
+
+
+
+<div class="output">UID                 PID                 PPID                C                   STIME               TTY                 TIME                CMD
 root                2083                2043                0                   13:16               ?                   00:00:00            /usr/bin/tini -- /usr/bin/launch_awx_task.sh
 root                2270                2083                0                   13:16               ?                   00:00:00            bash /usr/bin/launch_awx_task.sh
 root                3142                2270                0                   13:17               ?                   00:00:00            /usr/bin/python3.6 /usr/local/bin/supervisord -c /etc/supervisord_task.conf
@@ -5031,7 +6420,9 @@ root                3223                3153                0                   
 root                3224                3153                0                   13:17               ?                   00:00:00            /var/lib/awx/venv/awx/bin/python3 /usr/bin/awx-manage run_dispatcher
 root                3225                3153                0                   13:17               ?                   00:00:00            /var/lib/awx/venv/awx/bin/python3 /usr/bin/awx-manage run_dispatcher
 root                3226                3153                0                   13:17               ?                   00:00:00            /var/lib/awx/venv/awx/bin/python3 /usr/bin/awx-manage run_dispatcher
-</pre>
+</div>
+
+
 </details>
 
 </td>
@@ -5053,8 +6444,12 @@ root                3226                3153                0                   
 <td colspan="3">
 <pre before="BASH">nstat -a -t 60</pre>
 
-<details><summary>output</summary>
-<pre class="output">#kernel
+<details><summary>example</summary>
+
+
+
+
+<div class="output">#kernel
 IpInReceives                    11726853           0.0
 IpInAddrErrors                  1                  0.0
 IpForwDatagrams                 10112              0.0
@@ -5160,7 +6555,9 @@ IpExtOutOctets                  1162118535         0.0
 IpExtInMcastOctets              218700             0.0
 IpExtOutMcastOctets             560                0.0
 IpExtInBcastOctets              177442505          0.0
-IpExtInNoECTPkts                11733275           0.0</pre>
+IpExtInNoECTPkts                11733275           0.0</div>
+
+
 </details>
 
 </td>
@@ -5182,8 +6579,12 @@ IpExtInNoECTPkts                11733275           0.0</pre>
 <td colspan="3">
 <pre before="BASH">systemd-cgls</pre>
 
-<details><summary>output</summary>
-<pre class="output">$ systemd-cgls
+<details><summary>example</summary>
+
+
+
+
+<div class="output">$ systemd-cgls
 ├─1 /usr/lib/systemd/systemd --switched-root --system --deserialize 22
 ├─docker
 │ ├─7142b4ac8ec33c172b6877d435bbcbca20394816308d6fb124064e584e7aed44
@@ -5235,7 +6636,9 @@ IpExtInNoECTPkts                11733275           0.0</pre>
 │   ├─38994 /var/lib/awx/venv/awx/bin/python3 /usr/bin/awx-manage run_dispatcher
 │   ├─38995 /var/lib/awx/venv/awx/bin/python3 /usr/bin/awx-manage run_callback_receiver
 │   ├─38996 /var/lib/awx/venv/awx/bin/python3 /usr/bin/awx-manage run_callback_receiver
-│   └─38997 /var/lib/awx/venv/awx/bin/python3 /usr/bin/awx-manage run_callback_receiver</pre>
+│   └─38997 /var/lib/awx/venv/awx/bin/python3 /usr/bin/awx-manage run_callback_receiver</div>
+
+
 </details>
 
 </td>
@@ -5257,8 +6660,12 @@ IpExtInNoECTPkts                11733275           0.0</pre>
 <td colspan="3">
 <pre before="BASH">netstat -ln --inet --program</pre>
 
-<details><summary>output</summary>
-<pre class="output">Active Internet connections (only servers)
+<details><summary>example</summary>
+
+
+
+
+<div class="output">Active Internet connections (only servers)
 Proto Recv-Q Send-Q Local Address           Foreign Address         State       PID/Program name
 tcp        0      0 0.0.0.0:9100            0.0.0.0:*               LISTEN      1317/node_exporter
 tcp        0      0 0.0.0.0:4750            0.0.0.0:*               LISTEN      1462/bin/rscd
@@ -5288,7 +6695,9 @@ udp        0      0 127.0.0.1:123           0.0.0.0:*                           
 udp        0      0 0.0.0.0:123             0.0.0.0:*                           80791/ntpd
 udp        0      0 127.0.0.1:659           0.0.0.0:*                           1331/rpc.statd
 udp        0      0 0.0.0.0:800             0.0.0.0:*                           1054/rpcbind
-udp        0      0 0.0.0.0:21989           0.0.0.0:*                           1331/rpc.statd</pre>
+udp        0      0 0.0.0.0:21989           0.0.0.0:*                           1331/rpc.statd</div>
+
+
 </details>
 
 </td>
@@ -5310,8 +6719,12 @@ udp        0      0 0.0.0.0:21989           0.0.0.0:*                           
 <td colspan="3">
 <pre before="BASH">ps xawf -eo pid,user,cgroup,args</pre>
 
-<details><summary>output</summary>
-<pre class="output">35899 root     10:devices:/system.slice/co  \_ containerd-shim -namespace moby -workdir /var/lib/containerd/io.containerd.runtime.v1
+<details><summary>example</summary>
+
+
+
+
+<div class="output">35899 root     10:devices:/system.slice/co  \_ containerd-shim -namespace moby -workdir /var/lib/containerd/io.containerd.runtime.v1
  35916 root     11:hugetlb:/docker/cd279976  |   \_ /usr/bin/tini -- /bin/sh -c /usr/bin/launch_awx.sh
  35964 root     11:hugetlb:/docker/cd279976  |       \_ bash /usr/bin/launch_awx.sh
  36237 root     11:hugetlb:/docker/cd279976  |           \_ /usr/bin/python3.6 /usr/local/bin/supervisord -c /etc/supervisord.conf
@@ -5342,7 +6755,9 @@ udp        0      0 0.0.0.0:21989           0.0.0.0:*                           
  36441 root     11:hugetlb:/docker/12e8d10b                      \_ /var/lib/awx/venv/awx/bin/python3 /usr/bin/awx-manage run_callbac
  36442 root     11:hugetlb:/docker/12e8d10b                      \_ /var/lib/awx/venv/awx/bin/python3 /usr/bin/awx-manage run_callbac
  36443 root     11:hugetlb:/docker/12e8d10b                      \_ /var/lib/awx/venv/awx/bin/python3 /usr/bin/awx-manage run_callbac
- 34665 root     10:devices:/system.slice/do /usr/bin/dockerd -H fd:// --containerd=/run/containerd/containerd.sock</pre>
+ 34665 root     10:devices:/system.slice/do /usr/bin/dockerd -H fd:// --containerd=/run/containerd/containerd.sock</div>
+
+
 </details>
 
 </td>
@@ -5523,8 +6938,12 @@ echo "TOWER_HOST=http://$1" >
 <td colspan="3">
 <pre before="BASH">du -h -d 1 .</pre>
 
-<details><summary>output</summary>
-<pre class="output">132K    ./.ssh
+<details><summary>example</summary>
+
+
+
+
+<div class="output">132K    ./.ssh
 2.6M    ./.ansible
 0       ./.local
 43M     ./playbooks
@@ -5546,7 +6965,9 @@ echo "TOWER_HOST=http://$1" >
 36K     ./.secrets
 20K     ./ssh-expect
 362M    ./.vscode-server
-890M    .</pre>
+890M    .</div>
+
+
 </details>
 
 </td>
@@ -5587,8 +7008,16 @@ echo "TOWER_HOST=http://$1" >
 <td colspan="3">
 <pre before="BASH">date -d @$TIMESTAMP</pre>
 
-<details><summary>output</summary>
-<pre class="output">Sun Nov 28 23:22:16 CST 2021</pre>
+<details><summary>example</summary>
+
+
+<div class="example">$ date -d @1638163336</div>
+
+
+
+<div class="output">Sun Nov 28 23:22:16 CST 2021</div>
+
+
 </details>
 
 </td>
@@ -5616,8 +7045,12 @@ for i in ${lstype[@]}; do
   cat files.json | jq ".$i[.$i|length] |= . + {\"date\": \"$(date +%F%X)\"}" >files.json
 done</pre>
 
-<details><summary>output</summary>
-<pre class="output">{
+<details><summary>example</summary>
+
+
+
+
+<div class="output">{
   "delete": [
     {
       "date": "2022-02-0502:49:06 AM"
@@ -5642,7 +7075,9 @@ done</pre>
       "date": "2022-02-0502:49:06 AM"
     }
   ]
-}</pre>
+}</div>
+
+
 </details>
 
 </td>
@@ -5664,8 +7099,12 @@ done</pre>
 <td colspan="3">
 <pre before="BASH">wget -qO- http://programminghistorian.org/assets/jq_rkm.json | jq -r '.artObjects[] | [.id, .title, .principalOrFirstMaker, .webImage.url] | @csv'</pre>
 
-<details><summary>output</summary>
-<pre class="output">"nl-SK-C-5","Schutters van wijk II onder leiding van kapitein Frans Banninck Cocq, bekend als de ‘Nachtwacht’","Rembrandt Harmensz. van Rijn","http://lh6.ggpht.com/ZYWwML8mVFonXzbmg2rQBulNuCSr3rAaf5ppNcUc2Id8qXqudDL1NSYxaqjEXyDLSbeNFzOHRu0H7rbIws0Js4d7s_M=s0"
+<details><summary>example</summary>
+
+
+
+
+<div class="output">"nl-SK-C-5","Schutters van wijk II onder leiding van kapitein Frans Banninck Cocq, bekend als de ‘Nachtwacht’","Rembrandt Harmensz. van Rijn","http://lh6.ggpht.com/ZYWwML8mVFonXzbmg2rQBulNuCSr3rAaf5ppNcUc2Id8qXqudDL1NSYxaqjEXyDLSbeNFzOHRu0H7rbIws0Js4d7s_M=s0"
 "nl-SK-A-1505","Een molen aan een poldervaart, bekend als ‘In de maand juli’","Paul Joseph Constantin Gabriël","http://lh4.ggpht.com/PkQr-nNqzn0OVXVd4-hdJ6PPdWZ6-DQ_74WfBT3MZIV4LNYA-q8LUrtReXNstuzl9k6gKWkaBwG-LcFZ7zWU9Ch92g=s0"
 "nl-SK-A-180","Een vrolijke vioolspeler","Gerard van Honthorst","http://lh4.ggpht.com/iIwEcQp7nB5xmV6WctDIG-HRFWwMuegCw7j2On9lTksv9Mwl-nllpaQx_0BORbJiqyks4dR_E4K7AGnNur8hkoJ7WNkz=s0"
 "nl-SK-A-2205","Vanitas stilleven","Gerrit van Vucht","http://lh3.ggpht.com/ltkNYBL4U__3FerjWvcmZlOWhZ5kCh5Bxtl0FlkCiTDjYGzO1G4AkyA_5OxLjXiGJJr1qDvvw5_uPGP7kiZYuLef9cA=s0"
@@ -5674,7 +7113,9 @@ done</pre>
 "nl-SK-A-690","Een schrijver die zijn pen versnijdt","Jan Ekels (II)","http://lh4.ggpht.com/e2kmNV3E-YMFjH1zYsRnN7VrsQh5U7PtzJhAeIADmE-C-fw_s5tRkfZid9AIOuUs-6e36YmAylTl2btxkpIoU_3b5K4=s0"
 "nl-SK-A-2983","Eendennesten","Paul Joseph Constantin Gabriël","http://lh6.ggpht.com/-Ul_3YE8q2CPw44SRBdz3X3HEqCfMDEqUONqvVWRwHZvIG05D_PerehgIvfy_di71bLX_467GOkR99jFJ3uzsWysqQk=s0"
 "nl-SK-A-3924","Pompeius Occo","Dirck Jacobsz.","http://lh3.ggpht.com/bCIqIe6jDaZTe9ABLEbMKQXSFCQMMkPalrqur82zq691y2jpbyJRjpbCtYrsUT1IHgIAQO1stRRDDVErmGlVOzO7IWs=s0"
-"nl-SK-A-3246","De visvrouw","Adriaen van Ostade","http://lh4.ggpht.com/I5AaMSHTtQT2s7nFoBDYmKCi77zPvc-i4pssHS_lLlEuadlZ3gRv7vZri1qOog3_ofVS11LvyqZJ_LP-deIFIO7chjs=s0"</pre>
+"nl-SK-A-3246","De visvrouw","Adriaen van Ostade","http://lh4.ggpht.com/I5AaMSHTtQT2s7nFoBDYmKCi77zPvc-i4pssHS_lLlEuadlZ3gRv7vZri1qOog3_ofVS11LvyqZJ_LP-deIFIO7chjs=s0"</div>
+
+
 </details>
 
 </td>
@@ -5696,15 +7137,21 @@ done</pre>
 <td colspan="3">
 <pre before="BASH">ps -o pid=''</pre>
 
-<details><summary>output</summary>
-<pre class="output">$ ps -o pid=X
+<details><summary>example</summary>
+
+
+
+
+<div class="output">$ ps -o pid=X
      X
  29015
  70109
 
 $ ps -o pid=''
  29015
- 70138</pre>
+ 70138</div>
+
+
 </details>
 
 </td>
@@ -5726,12 +7173,18 @@ $ ps -o pid=''
 <td colspan="3">
 <pre before="BASH">ps -efo pid</pre>
 
-<details><summary>output</summary>
-<pre class="output">   PID
+<details><summary>example</summary>
+
+
+
+
+<div class="output">   PID
  64822
  67490
  64835
- 68072</pre>
+ 68072</div>
+
+
 </details>
 
 </td>
@@ -5780,8 +7233,12 @@ esac</pre>
 <td colspan="3">
 <pre before="BASH"> host -t ns example.com</pre>
 
-<details><summary>output</summary>
-<pre class="output">example.com name server uslserver.us.example.com.
+<details><summary>example</summary>
+
+
+
+
+<div class="output">example.com name server uslserver.us.example.com.
 example.com name server uslserver.us.example.com.
 example.com name server ausserver.us.example.com.
 example.com name server ausserver.us.example.com.
@@ -5789,7 +7246,9 @@ example.com name server ausserver.us.example.com.
 example.com name server uslserver.us.example.com.
 example.com name server ausserver.us.example.com.
 example.com name server ausserver.us.example.com.
-example.com name server uslserver.us.example.com.</pre>
+example.com name server uslserver.us.example.com.</div>
+
+
 </details>
 
 </td>
@@ -5811,10 +7270,16 @@ example.com name server uslserver.us.example.com.</pre>
 <td colspan="3">
 <pre before="BASH">echo '' | openssl s_client -connect awxserver.us.example.com:443 2>/dev/null | openssl x509 -text -noout | grep -A 1 "Public Key Algorithm"</pre>
 
-<details><summary>output</summary>
-<pre class="output">$ echo '' | openssl s_client -connect awxserver.us.example.com:443 2>/dev/null | openssl x509 -text -noout | grep -A 1 "Public Key Algorithm"
+<details><summary>example</summary>
+
+
+
+
+<div class="output">$ echo '' | openssl s_client -connect awxserver.us.example.com:443 2>/dev/null | openssl x509 -text -noout | grep -A 1 "Public Key Algorithm"
             Public Key Algorithm: rsaEncryption
-                RSA Public-Key: (2048 bit)</pre>
+                RSA Public-Key: (2048 bit)</div>
+
+
 </details>
 
 </td>
@@ -5944,8 +7409,12 @@ fi</pre>
 <td colspan="3">
 <pre before="POWERSHELL">gcm -module DISM</pre>
 
-<details><summary>output</summary>
-<pre class="output">CommandType     Name                                               Version    Source
+<details><summary>example</summary>
+
+
+
+
+<div class="output">CommandType     Name                                               Version    Source
 -----------     ----                                               -------    ------
 Alias           Add-AppProvisionedPackage                          3.0        Dism
 Alias           Add-ProvisionedAppPackage                          3.0        Dism
@@ -5972,7 +7441,9 @@ Cmdlet          Clear-WindowsCorruptMountPoint                     3.0        Di
 Cmdlet          Disable-WindowsOptionalFeature                     3.0        Dism
 Cmdlet          Dismount-WindowsImage                              3.0        Dism
 Cmdlet          Enable-WindowsOptionalFeature                      3.0        Dism
-Cmdlet          Expand-WindowsCustomDataImage                      3.0        Dism</pre>
+Cmdlet          Expand-WindowsCustomDataImage                      3.0        Dism</div>
+
+
 </details>
 
 </td>
@@ -6022,8 +7493,12 @@ miscellaneous=(bc cal expr lp od sleep true false)</pre>
 <pre before="SQL">select jsonb_pretty(extra_data::jsonb) 
 from main_joblaunchconfig where extra_data <> '{}';</pre>
 
-<details><summary>output</summary>
-<pre class="output">awx=# select jsonb_pretty(extra_data::jsonb) from main_joblaunchconfig where extra_data <> '{}';
+<details><summary>example</summary>
+
+
+
+
+<div class="output">awx=# select jsonb_pretty(extra_data::jsonb) from main_joblaunchconfig where extra_data <> '{}';
 -[ RECORD 1 ]+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 jsonb_pretty | {                                                                                                                                                                     +
              |     "tower_webhook_payload": {                                                                                                                                        +
@@ -6049,7 +7524,9 @@ jsonb_pretty | {                                                                
              |                 ],                                                                                                                                                    +
              |                 "timestamp": "2021-06-15T00:00:07-05:00"                                                                                                              +
              |             }                                                                                                                                                         +
-             |         ],                                                              </pre>
+             |         ],                                                              </div>
+
+
 </details>
 
 </td>
@@ -6074,8 +7551,12 @@ from infserver.tables
 where table_schema = 'public'
 order by pg_relation_size(quote_ident(table_name)) desc;</pre>
 
-<details><summary>output</summary>
-<pre class="output">                        table_name                         | pg_size_pretty
+<details><summary>example</summary>
+
+
+
+
+<div class="output">                        table_name                         | pg_size_pretty
 -----------------------------------------------------------+----------------
  main_projectupdateevent                                   | 372 MB
  main_adhoccommandevent                                    | 16 MB
@@ -6086,7 +7567,9 @@ order by pg_relation_size(quote_ident(table_name)) desc;</pre>
  main_projectupdate                                        | 1912 kB
  main_joblaunchconfig                                      | 1696 kB
  main_usersessionmembership                                | 1144 kB
- main_host                                                 | 992 k</pre>
+ main_host                                                 | 992 k</div>
+
+
 </details>
 
 </td>
@@ -6153,8 +7636,12 @@ order by c.reltuples desc;</pre>
 <td colspan="3">
 <pre before="BASH">ls -lptr --time-style='+%s %F %T' --group-directories-first -o</pre>
 
-<details><summary>output</summary>
-<pre class="output">total 11276
+<details><summary>example</summary>
+
+
+
+
+<div class="output">total 11276
 drwxr-xr-x 3 annie_tran     123 1628039419 2021-08-03 20:10:19 awx_setup/
 drwxr-xr-x 3 annie_tran      17 1634845874 2021-10-21 14:51:14 shfmt-v3.4.0/
 drwxr-x--- 2 annie_tran      28 1639676924 2021-12-16 11:48:44 scripts/
@@ -6171,7 +7658,9 @@ lrwxrwxrwx 1 annie_tran      27 1641318862 2022-01-04 11:54:22 database -> /repo
 lrwxrwxrwx 1 annie_tran      34 1641408690 2022-01-05 12:51:30 devops -> /repository/images/database/devops/
 -rw-r----- 1 annie_tran    4674 1642003245 2022-01-12 10:00:45 vscserver.sh
 -rw-r----- 1 annie_tran 5748865 1642004213 2022-01-12 10:16:53 proc2.txt
--rw-r----- 1 annie_tran 5749109 1642011987 2022-01-12 12:26:27 proc.txt</pre>
+-rw-r----- 1 annie_tran 5749109 1642011987 2022-01-12 12:26:27 proc.txt</div>
+
+
 </details>
 
 </td>
@@ -6193,13 +7682,19 @@ lrwxrwxrwx 1 annie_tran      34 1641408690 2022-01-05 12:51:30 devops -> /reposi
 <td colspan="3">
 <pre before="POWERSHELL">Get-WmiObject -Class Win32_ComputerSystem -Property *</pre>
 
-<details><summary>output</summary>
-<pre class="output">Domain              : amer.example.com
+<details><summary>example</summary>
+
+
+
+
+<div class="output">Domain              : amer.example.com
 Manufacturer        : Example Inc.
 Model               : Precision 5560
 Name                : W101TL8YD3
 PrimaryOwnerName    : nntrn, Inc.
-TotalPhysicalMemory : 34065952768</pre>
+TotalPhysicalMemory : 34065952768</div>
+
+
 </details>
 
 </td>
@@ -6259,8 +7754,17 @@ TotalPhysicalMemory : 34065952768</pre>
 <td colspan="3">
 <pre before="BASH">echo "random: $RANDOM"</pre>
 
-<details><summary>output</summary>
-<pre class="output">random27790</pre>
+<details><summary>example</summary>
+
+
+<div class="example">$ TMPFILE='random'$RANDOM
+$ echo $TMPFILE</div>
+
+
+
+<div class="output">random27790</div>
+
+
 </details>
 
 </td>
@@ -6281,6 +7785,22 @@ TotalPhysicalMemory : 34065952768</pre>
 <tr>
 <td colspan="3">
 <pre before="BASH">date -d "$date -7 days" +"%Y-%m-%d"</pre>
+
+<details><summary>example</summary>
+
+
+<div class="example"># date today
+$ date +"%Y-%m-%d"
+2022-03-23
+
+# date 7 days ago
+$ date -d "$date -7 days" +"%Y-%m-%d"
+2022-03-16</div>
+
+
+
+
+</details>
 
 </td>
 </tr>
@@ -6329,8 +7849,14 @@ bash --login -i -c "eval \"cd '$CURRENTDIR'\";$SHELL"</pre>
 <td colspan="3">
 <pre before="BASH">type</pre>
 
-<details><summary>output</summary>
-<pre class="output">cd_func is a function
+<details><summary>example</summary>
+
+
+<div class="example">$ type cd_func</div>
+
+
+
+<div class="output">cd_func is a function
 cd_func ()
 {
     local x2 the_new_dir adir index;
@@ -6364,7 +7890,9 @@ cd_func ()
         fi;
     done;
     return 0
-}</pre>
+}</div>
+
+
 </details>
 
 </td>
@@ -6492,8 +8020,12 @@ systemctl start docker</pre>
 <td colspan="3">
 <pre before="BASH">du -h | sort -rh</pre>
 
-<details><summary>output</summary>
-<pre class="output">3.3G    ./.awx
+<details><summary>example</summary>
+
+
+
+
+<div class="output">3.3G    ./.awx
 3.3G    .
 3.2G    ./.awx/pgdocker/12/data/base
 3.2G    ./.awx/pgdocker/12/data
@@ -6517,7 +8049,9 @@ systemctl start docker</pre>
 5.7M    ./.awx/awxcompose
 5.6M    ./.cache/pip/http/f/8/1/8/f
 5.6M    ./.cache/pip/http/f/8/1/8
-5.6M    ./.cache/pip/http/f/8/1</pre>
+5.6M    ./.cache/pip/http/f/8/1</div>
+
+
 </details>
 
 </td>
@@ -6539,8 +8073,12 @@ systemctl start docker</pre>
 <td colspan="3">
 <pre before="BASH">$ openssl s_client -showcerts -connect awxserver.us.example.com:80</pre>
 
-<details><summary>output</summary>
-<pre class="output">
+<details><summary>example</summary>
+
+
+
+
+<div class="output">
 CONNECTED(00000003)
 140075051997072:error:140770FC:SSL routines:SSL23_GET_SERVER_HELLO:unknown protocol:s23_clnt.c:794:
 ---
@@ -6569,7 +8107,9 @@ SSL-Session:
     Timeout   : 300 (sec)
     Verify return code: 0 (ok)
 ---
-</pre>
+</div>
+
+
 </details>
 
 </td>
@@ -6688,8 +8228,12 @@ curl -H "X-Vault-Namespace: infrastructure/database/engineering/tools/dbaasv2/db
 <td colspan="3">
 <pre before="POWERSHELL">Get-ADDomainController</pre>
 
-<details><summary>output</summary>
-<pre class="output">ComputerObjectDN           : CN=AUSDC16AMER39,OU=Domain Controllers,DC=amer,DC=nntrn,DC=com
+<details><summary>example</summary>
+
+
+
+
+<div class="output">ComputerObjectDN           : CN=AUSDC16AMER39,OU=Domain Controllers,DC=amer,DC=nntrn,DC=com
 DefaultPartition           : DC=amer,DC=nntrn,DC=com
 Domain                     : amer.example.com
 Enabled                    : True
@@ -6714,7 +8258,9 @@ Partitions                 : {DC=amer,DC=nntrn,DC=com, CN=Schema,CN=Configuratio
 ServerObjectDN             : CN=AUSDC16AMER39,CN=Servers,CN=AMERAustin,CN=Sites,CN=Configuration,DC=nntrn,DC=com
 ServerObjectGuid           : f5abce4b-53f6-4474-b660-876ad0f7d322
 Site                       : AMERAustin
-SslPort                    : 636</pre>
+SslPort                    : 636</div>
+
+
 </details>
 
 </td>
@@ -6782,8 +8328,12 @@ SslPort                    : 636</pre>
 <td colspan="3">
 <pre before="BASH">ansible-doc awx.awx.tower_ad_hoc_command --snippet</pre>
 
-<details><summary>output</summary>
-<pre class="output">- name: create, update, or destroy Ansible Tower ad hoc commands.
+<details><summary>example</summary>
+
+
+
+
+<div class="output">- name: create, update, or destroy Ansible Tower ad hoc commands.
   tower_ad_hoc_command:
       become_enabled:        # If the become flag should be set.
       credential:            # (required) Credential to use for ad hoc command.
@@ -6807,7 +8357,9 @@ SslPort                    : 636</pre>
       validate_certs:        # Whether to allow insecure connections to Tower or AWX. If `no', SSL certificates will not be valserver. This should only be used on personally controlled sites using self-
                                signed cerserver. If value not set, will try environment variable `TOWER_VERIFY_SSL' and then config files
       verbosity:             # Verbosity level for this ad hoc command run
-      wait:                  # Wait for the command to complete.</pre>
+      wait:                  # Wait for the command to complete.</div>
+
+
 </details>
 
 </td>
@@ -6847,6 +8399,27 @@ SslPort                    : 636</pre>
 <tr>
 <td colspan="3">
 <pre before="BASH">cat /proc/$$/environ | sed 's/\([A-Z_]*=\)/\n\1/g'</pre>
+
+<details><summary>example</summary>
+
+
+<div class="example">$ cat /proc/$$/environ
+USER=annieLOGNAME=annieHOME=/home/anniePATH=/usr/local/bin:/usr/binMAIL=/var/mail/annieSHELL=/bin/bashTERM=xtermDISPLAY=localhost:10.0
+
+$ cat /proc/$$/environ | sed 's,\([A-Z_]*=\),\n\1,g'
+USER=annie
+LOGNAME=annie
+HOME=/home/annie
+PATH=/usr/local/bin:/usr/bin
+MAIL=/var/mail/annie
+SHELL=/bin/bash
+TERM=xterm
+DISPLAY=localhost:10.0</div>
+
+
+
+
+</details>
 
 </td>
 </tr>
@@ -6931,8 +8504,14 @@ comm -12 file1 file2 </pre>
 <td colspan="3">
 <pre before="BASH">find . -maxdepth 3 -type f -name "*.js" \( -path "*/src/*" -and ! -regex "*(node_modules|.git)*" \) -print</pre>
 
-<details><summary>output</summary>
-<pre class="output">./ansible-servicenow/src/linux-servers.js
+<details><summary>example</summary>
+
+
+<div class="example">$ find . -maxdepth 3 -type f -name &#34;*.js&#34; \( -path &#34;*/src/*&#34; -and ! -regex &#34;*(node_modules|.git)*&#34; \) -print</div>
+
+
+
+<div class="output">./ansible-servicenow/src/linux-servers.js
 ./ansible-servicenow/src/parse.js
 ./ansible-servicenow/src/summary.js
 ./ansible-servicenow/src/utils.js
@@ -6941,7 +8520,9 @@ comm -12 file1 file2 </pre>
 ./dbaasv2-tests/src/utils.js
 ./pandoc-test/src/build.js
 ./pandoc-test/src/imagemin.js
-./pandoc-test/src/utils.js</pre>
+./pandoc-test/src/utils.js</div>
+
+
 </details>
 
 </td>
@@ -6962,6 +8543,19 @@ comm -12 file1 file2 </pre>
 <tr>
 <td colspan="3">
 <pre before="BASH">echo "${VAR1:=default}"</pre>
+
+<details><summary>example</summary>
+
+
+<div class="example">$ echo "${VAR1:=default}"
+default
+$ echo "$VAR1"
+default</div>
+
+
+
+
+</details>
 
 </td>
 </tr>
@@ -7048,8 +8642,12 @@ comm -12 file1 file2 </pre>
 <td colspan="3">
 <pre before="BASH">yum list docker-engine --showduplicates</pre>
 
-<details><summary>output</summary>
-<pre class="output">Loaded plugins: ulninfo
+<details><summary>example</summary>
+
+
+
+
+<div class="output">Loaded plugins: ulninfo
 Available Packages
 docker-engine.x86_64                    1.8.2-1.0.2.el7                          artifactory7-pass-through
 docker-engine.x86_64                    1.8.3-1.0.1.el7                          artifactory7-pass-through
@@ -7082,7 +8680,9 @@ docker-engine.x86_64                    19.03.11.ol-8.el7                       
 docker-engine.x86_64                    19.03.11.ol-9.el7                        artifactory7-pass-through
 docker-engine.x86_64                    19.03.11.ol-11.el7                       artifactory7-pass-through
 docker-engine.x86_64                    19.03.11.ol-12.el7                       artifactory7-pass-through
-docker-engine.x86_64                    19.03.11.ol-13.el7                       artifactory7-pass-through</pre>
+docker-engine.x86_64                    19.03.11.ol-13.el7                       artifactory7-pass-through</div>
+
+
 </details>
 
 </td>
@@ -7104,8 +8704,14 @@ docker-engine.x86_64                    19.03.11.ol-13.el7                      
 <td colspan="3">
 <pre before="BASH">grep '^Umask:' "/proc/$$/status"</pre>
 
-<details><summary>output</summary>
-<pre class="output">Umask:  0027</pre>
+<details><summary>example</summary>
+
+
+
+
+<div class="output">Umask:  0027</div>
+
+
 </details>
 
 </td>
@@ -7127,13 +8733,19 @@ docker-engine.x86_64                    19.03.11.ol-13.el7                      
 <td colspan="3">
 <pre before="BASH">getfacl linux</pre>
 
-<details><summary>output</summary>
-<pre class="output"># file: linux
+<details><summary>example</summary>
+
+
+
+
+<div class="output"># file: linux
 # owner: annie_tran
 # group: annie_tran
 user::rwx
 group::rwx
-other::r-x</pre>
+other::r-x</div>
+
+
 </details>
 
 </td>
@@ -7174,6 +8786,20 @@ other::r-x</pre>
 <td colspan="3">
 <pre before="BASH">realpath --relative-to=$DIR1 $DIR2</pre>
 
+<details><summary>example</summary>
+
+
+<div class="example">$ realpath --relative-to=/home/annie_tran /tmp
+../../tmp
+
+$ realpath --relative-to=/tmp /home/annie_tran
+../home/annie_tran</div>
+
+
+
+
+</details>
+
 </td>
 </tr>
 <tr><td colspan="3"><div class="flex">
@@ -7212,8 +8838,16 @@ other::r-x</pre>
 <td colspan="3">
 <pre before="BASH">printf '%*.0s\n' 10 "" | tr " " "#"</pre>
 
-<details><summary>output</summary>
-<pre class="output">##########</pre>
+<details><summary>example</summary>
+
+
+<div class="example">REPEAT=10; printf &#39;%*.0s\n&#39; $REPEAT&#34;&#34; | tr &#34; &#34; &#34;#&#34;</div>
+
+
+
+<div class="output">##########</div>
+
+
 </details>
 
 </td>
@@ -7273,12 +8907,20 @@ other::r-x</pre>
 <td colspan="3">
 <pre before="BASH">awk -F\' '$1=="menuentry " {print i++ " : " $2}' /etc/grub2.cfg</pre>
 
-<details><summary>output</summary>
-<pre class="output">0 : Oracle Linux Server 7.6, with Unbreakable Enterprise Kernel 5.4.17-2102.202.5.el7uek.x86_64
+<details><summary>example</summary>
+
+
+<div class="example">$ awk -F\&#39; &#39;$1==&#34;menuentry &#34; {print i++ &#34; : &#34; $2}&#39; /etc/grub2.cfg</div>
+
+
+
+<div class="output">0 : Oracle Linux Server 7.6, with Unbreakable Enterprise Kernel 5.4.17-2102.202.5.el7uek.x86_64
 1 : Oracle Linux Server 7.6, with Unbreakable Enterprise Kernel 4.1.12-61.1.18.el7uek.x86_64
 2 : Oracle Linux Server 7.6, with Linux 3.10.0-1160.15.2.el7.x86_64
 3 : Oracle Linux Server 7.6, with Linux 3.10.0-1127.18.2.el7.x86_64
-4 : Oracle Linux Server 7.6, with Linux 0-rescue-21e762519e7246a4b97b5fa8e94a7ed1</pre>
+4 : Oracle Linux Server 7.6, with Linux 0-rescue-21e762519e7246a4b97b5fa8e94a7ed1</div>
+
+
 </details>
 
 </td>
@@ -7300,6 +8942,18 @@ other::r-x</pre>
 <td colspan="3">
 <pre before="BASH">awk -F\' /^menuentry/{print\$2} /etc/grub2.cfg | grep -vE "(uek|rescue)" | sort | tail -n 1</pre>
 
+<details><summary>example</summary>
+
+
+<div class="example">$ awk -F\' /^menuentry/{print\$2} /etc/grub2.cfg | grep -vE "(uek|rescue)" | sort | tail -n 1
+Oracle Linux Server 7.9, with Linux 3.10.0-1160.36.2.el7.x86_64
+</div>
+
+
+
+
+</details>
+
 </td>
 </tr>
 <tr><td colspan="3"><div class="flex">
@@ -7318,6 +8972,22 @@ other::r-x</pre>
 <tr>
 <td colspan="3">
 <pre before="BASH">awk -F\' /^menuentry/{print\$2} /etc/grub2.cfg</pre>
+
+<details><summary>example</summary>
+
+
+<div class="example">$ awk -F\' /^menuentry/{print\$2} /etc/grub2.cfg
+Oracle Linux Server 7.9, with Unbreakable Enterprise Kernel 5.4.17-2102.202.5.el7uek.x86_64
+Oracle Linux Server 7.9, with Unbreakable Enterprise Kernel 4.1.12-61.1.18.el7uek.x86_64
+Oracle Linux Server 7.9, with Linux 3.10.0-1160.36.2.el7.x86_64
+Oracle Linux Server 7.9, with Linux 3.10.0-1160.15.2.el7.x86_64
+Oracle Linux Server 7.9, with Linux 0-rescue-21e762519e7246a4b97b5fa8e94a7ed1
+</div>
+
+
+
+
+</details>
 
 </td>
 </tr>
@@ -7360,10 +9030,16 @@ other::r-x</pre>
 # another way:
 Get-WMIObject -Class Win32_Bios</pre>
 
-<details><summary>output</summary>
-<pre class="output">serialnumber
+<details><summary>example</summary>
+
+
+
+
+<div class="output">serialnumber
 ------------
-1TL8YD3</pre>
+1TL8YD3</div>
+
+
 </details>
 
 </td>
@@ -7403,6 +9079,16 @@ Get-WMIObject -Class Win32_Bios</pre>
 <tr>
 <td colspan="3">
 <pre before="BASH">ps -o etimes -p $PID</pre>
+
+<details><summary>example</summary>
+
+
+<div class="example">ps -o etimes -p 1</div>
+
+
+
+
+</details>
 
 </td>
 </tr>
@@ -7448,11 +9134,19 @@ Get-WMIObject -Class Win32_Bios</pre>
 <td colspan="3">
 <pre before="BASH">/usr/sbin/ip a | grep inet</pre>
 
-<details><summary>output</summary>
-<pre class="output">    inet 127.0.0.1/8 scope host lo
+<details><summary>example</summary>
+
+
+<div class="example">$ ip a | grep inet</div>
+
+
+
+<div class="output">    inet 127.0.0.1/8 scope host lo
     inet 10.171.230.150/22 brd 10.171.231.255 scope global noprefixroute em1
     inet 172.17.0.1/16 brd 172.17.255.255 scope global docker0
-    inet 172.24.0.1/16 brd 172.24.255.255 scope global br-7ee3b3ed5e09</pre>
+    inet 172.24.0.1/16 brd 172.24.255.255 scope global br-7ee3b3ed5e09</div>
+
+
 </details>
 
 </td>
@@ -7519,8 +9213,12 @@ for svc in cred_names:
 <td colspan="3">
 <pre before="POWERSHELL">Get-ADUser -Filter 'CN -like "svc_*dbaas*"'  -Properties * | Where-Object {$_.dellOwnerId -eq "314810"} | Sort-Object -Property PasswordLastSet | Format-Table Name,PasswordLastSet,Description,Modified,LastLogonDate,@{N='MemberOf';E={$_.MemberOf[0]}} -AutoSize -Wrap</pre>
 
-<details><summary>output</summary>
-<pre class="output">
+<details><summary>example</summary>
+
+
+
+
+<div class="output">
 Name               PasswordLastSet       Description         Modified              LastLogonDate         MemberOf
 ----               ---------------       -----------         --------              -------------         --------
 svc_account     11/30/2020 8:33:07 AM Owner :Thomas_Smith 5/17/2021 12:33:30 PM 1/3/2021 6:27:47 AM   CN=VRA_users,OU=Groups,DC=amer,DC=nntrn,DC=com
@@ -7534,7 +9232,9 @@ svc_account  12/9/2020 11:33:06 AM Owner :Thomas_Smith 9/26/2021 7:16:42 PM  9/2
 svc_account   9/25/2021 11:24:59 PM Owner :Thomas_Smith 9/25/2021 11:45:51 PM 9/24/2021 5:32:16 PM  CN=unv_np_oracle_dbaas,OU=Groups,DC=amer,DC=nntrn,DC=com
 svc_account  9/25/2021 11:32:30 PM Owner :Thomas_Smith 9/28/2021 9:10:48 AM  9/28/2021 9:06:59 AM  CN=unv_np_mongo_dbaas,OU=Groups,DC=amer,DC=nntrn,DC=com
 svc_account    9/25/2021 11:37:27 PM Owner :Thomas_Smith 9/28/2021 11:00:29 PM 9/24/2021 10:18:48 AM CN=unv_np_postgres_dbaas,OU=Groups,DC=amer,DC=nntrn,DC=com
-svc_account   9/25/2021 11:39:02 PM Owner :Thomas_Smith 9/28/2021 7:14:56 PM  9/23/2021 2:50:13 PM  CN=unv_np_sql_dbaas,OU=Groups,DC=amer,DC=nntrn,DC=com</pre>
+svc_account   9/25/2021 11:39:02 PM Owner :Thomas_Smith 9/28/2021 7:14:56 PM  9/23/2021 2:50:13 PM  CN=unv_np_sql_dbaas,OU=Groups,DC=amer,DC=nntrn,DC=com</div>
+
+
 </details>
 
 </td>
@@ -7556,8 +9256,12 @@ svc_account   9/25/2021 11:39:02 PM Owner :Thomas_Smith 9/28/2021 7:14:56 PM  9/
 <td colspan="3">
 <pre before="POWERSHELL">Get-ADUser -Filter 'CN -like "svc_*dbaas*"'  -Properties * | Where-Object {$_.dellOwnerId -eq "314810"} | Format-Table Name,PasswordLastSet,Description,Modified -AutoSize -Wrap</pre>
 
-<details><summary>output</summary>
-<pre class="output">Name               PasswordLastSet       Description         Modified
+<details><summary>example</summary>
+
+
+
+
+<div class="output">Name               PasswordLastSet       Description         Modified
 ----               ---------------       -----------         --------
 svc_account  9/25/2021 11:32:30 PM Owner :Thomas_Smith 9/28/2021 9:10:41 AM
 svc_account      11/30/2020 1:37:46 PM Owner :Thomas_Smith 9/21/2021 8:55:24 AM
@@ -7570,7 +9274,9 @@ svc_account     11/30/2020 1:38:22 PM Owner :Thomas_Smith 9/28/2021 11:41:45 PM
 svc_account  12/9/2020 11:33:06 AM Owner :Thomas_Smith 9/26/2021 7:17:29 PM
 svc_account   12/9/2020 11:32:38 AM Owner :Thomas_Smith 9/23/2021 7:04:22 PM
 svc_account  12/9/2020 11:32:38 AM Owner :Thomas_Smith 9/23/2021 1:10:52 AM
-svc_account    11/30/2020 1:37:21 PM Owner :Thomas_Smith 9/15/2021 2:10:41 AM</pre>
+svc_account    11/30/2020 1:37:21 PM Owner :Thomas_Smith 9/15/2021 2:10:41 AM</div>
+
+
 </details>
 
 </td>
@@ -7655,6 +9361,17 @@ find / -xdev -type d \( -perm -0002 -a ! -perm -1000 \) -print</pre>
 <td colspan="3">
 <pre before="BASH">mkpasswd -l 15 -d 3 -C 5</pre>
 
+<details><summary>example</summary>
+
+
+<div class="example">$ mkpasswd -l 20 -d 5 -C 3
+p10i5nzya3Ebdlj,8XLf</div>
+
+
+
+
+</details>
+
 </td>
 </tr>
 <tr><td colspan="3"><div class="flex">
@@ -7674,8 +9391,14 @@ find / -xdev -type d \( -perm -0002 -a ! -perm -1000 \) -print</pre>
 <td colspan="3">
 <pre before="BASH">ps -ax -o pid=,ppid=,pcpu=,pmem=,command=</pre>
 
-<details><summary>output</summary>
-<pre class="output">     1      0  0.0  0.0 /usr/lib/systemd/systemd --switched-root --system --deserialize 22
+<details><summary>example</summary>
+
+
+<div class="example">$ ps -ax -o pid=,ppid=,pcpu=,pmem=,command= | grep -v &#39;\[&#39;</div>
+
+
+
+<div class="output">     1      0  0.0  0.0 /usr/lib/systemd/systemd --switched-root --system --deserialize 22
    696      1  0.0  0.3 /usr/lib/systemd/systemd-journald
    728      1  0.0  0.0 /usr/sbin/lvmetad -f
    742      1  0.0  0.0 /usr/lib/systemd/systemd-udevd
@@ -7691,7 +9414,9 @@ find / -xdev -type d \( -perm -0002 -a ! -perm -1000 \) -print</pre>
   1076      1  0.0  0.0 /usr/sbin/nscd
   1086      1  0.0  0.0 /usr/sbin/gssproxy -D
   1094      1  0.0  0.0 /usr/sbin/rpc.gssd
-  1307      1  0.0  0.0 /usr/bin/python2 -Es /usr/sbin/tuned -l -P</pre>
+  1307      1  0.0  0.0 /usr/bin/python2 -Es /usr/sbin/tuned -l -P</div>
+
+
 </details>
 
 </td>
@@ -7808,6 +9533,25 @@ cat /proc/modules</pre>
 <td colspan="3">
 <pre before="BASH">cat file.txt | awk -F '\t' '{print "\n"$2,$3}' OFS='\n'</pre>
 
+<details><summary>example</summary>
+
+
+<div class="example">$ cat Downloads/servicess.txt | awk -F '\t' '{print "\n"$2,$3}' OFS='\n'
+
+IPsec Policy Agent
+Internet Protocol security (IPsec) supports network-level peer authentication, data origin authentication, data integrity, data confidentiality (encryption), and replay proserver.  This service enforces IPsec policies created through the IP Security Policies snap-in or the command-line tool "netsh ipsec".  If you stop this service, you may experience network connectivity issues if your policy requires that connections use IPsec.  Also,remote management of Windows Defender Firewall is not available when this service is stopped.
+
+Network Connection Broker
+Brokers connections that allow Windows Store Apps to receive notifications from the internet.
+
+Sensor Monitoring Service
+Monitors various sensors in order to expose data and adapt to system and user state.  If this service is stopped or disabled, the display brightness will not adapt to lighting conserver. Stopping this service may affect other system functionality and features as well.</div>
+
+
+
+
+</details>
+
 </td>
 </tr>
 <tr><td colspan="3"><div class="flex">
@@ -7827,8 +9571,14 @@ cat /proc/modules</pre>
 <td colspan="3">
 <pre before="BASH">printf '=%.0s' {1..80}</pre>
 
-<details><summary>output</summary>
-<pre class="output">================================================================================</pre>
+<details><summary>example</summary>
+
+
+
+
+<div class="output">================================================================================</div>
+
+
 </details>
 
 </td>
@@ -7978,6 +9728,37 @@ SETCOLOR_RESET="echo -en \\033[0;39m"</pre>
 <td colspan="3">
 <pre before="BASH">ss -a</pre>
 
+<details><summary>example</summary>
+
+
+<div class="example">USAGE EXAMPLES
+
+# Display all TCP sockets.
+ss -t -a
+
+# Display all TCP sockets with process SELinux security contexts.
+ss -t -a -Z
+
+# Display all UDP sockets.
+ss -u -a
+
+# Display all established ssh conserver.
+ss -o state established '( dport = :ssh or sport = :ssh )'
+
+# Find all local processes connected to X server.
+ss -x src /tmp/.X11-unix/*
+
+# List all the tcp sockets in state FIN-WAIT-1 for our apache to network 193.233.7/24 and look at their timers.
+ss -o state fin-wait-1 '( sport = :http or sport = :https )' dst 193.233.7/24
+
+# List sockets in all states from all socket tables but TCP.
+ss -a -A 'all,!tcp'</div>
+
+
+
+
+</details>
+
 </td>
 </tr>
 <tr><td colspan="3"><div class="flex">
@@ -8028,6 +9809,30 @@ EOF</pre>
 <td colspan="3">
 <pre before="BASH">awk -F= '/^BUILDTYPE=/ {print tolower($2)}' /etc/example.cfg</pre>
 
+<details><summary>example</summary>
+
+
+<div class="example">$ awk -F= '/^BUILDTYPE=/ {print tolower($2)}' /etc/example.cfg
+dellit
+
+$ cat /etc/example.cfg
+ONCALLSHORT="svc_account"
+BUSINESSSHORT="svc_account"
+XINSTALLED=0
+STAFF_EMAIL=svc_account@example.com
+PRODUCTION=PRD
+ENVIRONMENT=PRD
+SUPPORTGROUP=AMER
+SMTPGATEWAY=smtp-out.us.example.com
+HOSTNAME=awxserver.us.example.com
+BUILDTYPE=DELLIT
+APPLICATIONID=1003150</div>
+
+
+
+
+</details>
+
 </td>
 </tr>
 <tr><td colspan="3"><div class="flex">
@@ -8047,6 +9852,20 @@ EOF</pre>
 <td colspan="3">
 <pre before="BASH">bash -c 'echo $$ ; ls -l /proc/self ; echo foo'</pre>
 
+<details><summary>example</summary>
+
+
+<div class="example">$ bash -c 'echo $$ ; ls -l /proc/self ; echo foo ; echo $$'
+68800
+lrwxrwxrwx 1 root root 0 Jun 28 05:35 /proc/self -> 68801
+foo
+68800</div>
+
+
+
+
+</details>
+
 </td>
 </tr>
 <tr><td colspan="3"><div class="flex">
@@ -8065,6 +9884,18 @@ EOF</pre>
 <tr>
 <td colspan="3">
 <pre before="BASH">bash -c 'echo $$ ; exec ls -l /proc/self ; echo foo'</pre>
+
+<details><summary>example</summary>
+
+
+<div class="example">$ bash -c 'echo $$ ; exec ls -l /proc/self ; echo foo'
+4315
+lrwxrwxrwx 1 root root 0 Aug 17 09:15 /proc/self -> 4315</div>
+
+
+
+
+</details>
 
 </td>
 </tr>
@@ -8123,6 +9954,19 @@ EOF</pre>
 <td colspan="3">
 <pre before="BASH">sudo --list | grep -ws User -A 1000 | sed 's/,/\n/g' | sed 's/:/:\n/g' | grep -E '^\s+?/' | sed -e 's/^[[:space:]]*//'</pre>
 
+<details><summary>example</summary>
+
+
+<div class="example">$ sudo --list | grep -ws User -A 1000 | sed 's/,/\n/g' | sed 's/:/:\n/g' | grep -E '^\s+?/' | sed -e 's/^[[:space:]]*//'
+/bin/docker
+/bin/su
+/usr/local/bin/gitlab-runner</div>
+
+
+
+
+</details>
+
 </td>
 </tr>
 <tr><td colspan="3"><div class="flex">
@@ -8161,12 +10005,18 @@ EOF</pre>
 <td colspan="3">
 <pre before="BASH">ps -elf | grep Z</pre>
 
-<details><summary>output</summary>
-<pre class="output">$ ps -elf | grep Z
+<details><summary>example</summary>
+
+
+
+
+<div class="output">$ ps -elf | grep Z
 F S UID         PID   PPID  C PRI  NI ADDR SZ WCHAN  STIME TTY          TIME CMD
 0 Z root       6703   6695  0  80   0 -     0 do_exi Jun28 ?        00:00:00 [sh] <defunct>
 0 S root      13833   7005  0  80   0 - 28571 pipe_w 13:51 pts/1    00:00:00 grep --color=auto Z
-5 Z root     106273  61791  0  80   0 -     0 do_exi 11:45 ?        00:00:04 [awx-manage] <defunct></pre>
+5 Z root     106273  61791  0  80   0 -     0 do_exi 11:45 ?        00:00:04 [awx-manage] <defunct></div>
+
+
 </details>
 
 </td>
@@ -8257,6 +10107,20 @@ ps -eo user,pid,size,pcpu,cmd --sort=-pcpu</pre>
 # view all
 systemctl show grafana-agent.service</pre>
 
+<details><summary>example</summary>
+
+
+<div class="example">$ systemctl show -p WantedBy docker.service
+WantedBy=multi-user.target
+
+$ systemctl show -p MemoryCurrent docker.service
+MemoryCurrent=147226624</div>
+
+
+
+
+</details>
+
 </td>
 </tr>
 <tr><td colspan="3"><div class="flex">
@@ -8297,8 +10161,12 @@ systemctl show grafana-agent.service</pre>
 $ abc=$(echo {a..z} {A..Z} {0..9} "$special" | tr -d ' ')
 $ key=$(echo "$abc" | sed 's,\(.\),\1\n,g' | shuf | tr -d '\n')</pre>
 
-<details><summary>output</summary>
-<pre class="output">$ echo "$abc"
+<details><summary>example</summary>
+
+
+
+
+<div class="output">$ echo "$abc"
 abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#%^&*()_+=[]{}<>./?
 
 $ echo "$key"
@@ -8307,7 +10175,9 @@ $ echo "$key"
 $ cryptic_msg=$(echo "i love cary" | tr "$abc" "$key")
 
 $ echo "$cryptic_msg" | tr "$key" "$abc"
-i love cary</pre>
+i love cary</div>
+
+
 </details>
 
 </td>
@@ -8425,6 +10295,19 @@ i love cary</pre>
 <pre before="BASH">openssl req -new -newkey rsa:4096 -nodes -keyout "private.key" -out "$(hostname -f).csr" -subj "/C=US/ST=Texas/L=Round Rock/O=nntrn/OU=Example /CN=$(hostname -f)"
 
 openssl x509 -signkey private.key -in $(hostname -f).csr -req -days 365 -out $(hostname).crt</pre>
+
+<details><summary>example</summary>
+
+
+<div class="example">openssl req -x509 -out locserver.crt -keyout locserver.key \
+  -newkey rsa:2048 -nodes -sha256 \
+  -subj '/CN=localhost' -extensions EXT -config <( \
+   printf "[dn]\nCN=localhost\n[req]\ndistinguished_name = dn\n[EXT]\nsubjectAltName=DNS:localhost\nkeyUsage=digitalSignature\nextendedKeyUsage=serverAuth")</div>
+
+
+
+
+</details>
 
 </td>
 </tr>
@@ -8901,6 +10784,42 @@ done</pre>
 <td colspan="3">
 <pre before="BASH">iptables --list-rules -v</pre>
 
+<details><summary>example</summary>
+
+
+<div class="example">$ iptables --list-rules
+-P INPUT ACCEPT
+-P FORWARD DROP
+-P OUTPUT ACCEPT
+-N DOCKER
+-N DOCKER-ISOLATION-STAGE-1
+-N DOCKER-ISOLATION-STAGE-2
+-N DOCKER-USER
+-A FORWARD -j DOCKER-USER
+-A FORWARD -j DOCKER-ISOLATION-STAGE-1
+-A FORWARD -o docker0 -m conntrack --ctstate RELATED,ESTABLISHED -j ACCEPT
+-A FORWARD -o docker0 -j DOCKER
+-A FORWARD -i docker0 ! -o docker0 -j ACCEPT
+-A FORWARD -i docker0 -o docker0 -j ACCEPT
+-A FORWARD -o br-a86456b5e096 -m conntrack --ctstate RELATED,ESTABLISHED -j ACCEPT
+-A FORWARD -o br-a86456b5e096 -j DOCKER
+-A FORWARD -i br-a86456b5e096 ! -o br-a86456b5e096 -j ACCEPT
+-A FORWARD -i br-a86456b5e096 -o br-a86456b5e096 -j ACCEPT
+-A DOCKER -d 172.31.0.5/32 ! -i br-a86456b5e096 -o br-a86456b5e096 -p tcp -m tcp --dport 8052 -j ACCEPT
+-A DOCKER -d 172.31.0.5/32 ! -i br-a86456b5e096 -o br-a86456b5e096 -p tcp -m tcp --dport 443 -j ACCEPT
+-A DOCKER-ISOLATION-STAGE-1 -i docker0 ! -o docker0 -j DOCKER-ISOLATION-STAGE-2
+-A DOCKER-ISOLATION-STAGE-1 -i br-a86456b5e096 ! -o br-a86456b5e096 -j DOCKER-ISOLATION-STAGE-2
+-A DOCKER-ISOLATION-STAGE-1 -j RETURN
+-A DOCKER-ISOLATION-STAGE-2 -o docker0 -j DROP
+-A DOCKER-ISOLATION-STAGE-2 -o br-a86456b5e096 -j DROP
+-A DOCKER-ISOLATION-STAGE-2 -j RETURN
+-A DOCKER-USER -j RETURN</div>
+
+
+
+
+</details>
+
 </td>
 </tr>
 <tr><td colspan="3"><div class="flex">
@@ -8925,6 +10844,19 @@ done</pre>
   echo ${string1:0:$((first_diff_char - 1))}
 }</pre>
 
+<details><summary>example</summary>
+
+
+<div class="example">$ path1=kv/SERVICE_ACCOUNT/SQLSERVER
+$ path2=kv/SERVICE_ACCOUNT/MSSQL
+$ getsame $path1 $path2
+kv/SERVICE_ACCOUNT/</div>
+
+
+
+
+</details>
+
 </td>
 </tr>
 <tr><td colspan="3"><div class="flex">
@@ -8944,8 +10876,17 @@ done</pre>
 <td colspan="3">
 <pre before="BASH">echo foo | sed 's/o*/EEE/'</pre>
 
-<details><summary>output</summary>
-<pre class="output">will generate 'EEEfoo', not 'fEEE' as one might expect. This is because /o*/ matches the null string at the beginning of the word.</pre>
+<details><summary>example</summary>
+
+
+<div class="example">$ echo foo | sed 's/o*/EEE/'
+EEEfoo</div>
+
+
+
+<div class="output">will generate &#39;EEEfoo&#39;, not &#39;fEEE&#39; as one might expect. This is because /o*/ matches the null string at the beginning of the word.</div>
+
+
 </details>
 
 </td>
@@ -8989,8 +10930,12 @@ done</pre>
   echo -e "${mod%%\ *}, ${pb##\.\/}"
 done</pre>
 
-<details><summary>output</summary>
-<pre class="output">2021-07-06, add-delete-userdb-mongodb.yml
+<details><summary>example</summary>
+
+
+
+
+<div class="output">2021-07-06, add-delete-userdb-mongodb.yml
 2021-04-07, add-delete-userdb-mssql.yml
 2021-04-07, add-delete-userdb-oracle.yml
 2021-03-09, add-delete-userdb-postgres-role.yml
@@ -8999,7 +10944,9 @@ done</pre>
 2021-04-21, add-patching-db-oracle-sanity.yml
 2021-04-21, add-patching-db-oracle.yml
 2021-02-11, ansible-gather-facts.yml
-2021-04-07, backupschedule-create-mongo.ym</pre>
+2021-04-07, backupschedule-create-mongo.ym</div>
+
+
 </details>
 
 </td>
@@ -9021,8 +10968,12 @@ done</pre>
 <td colspan="3">
 <pre before="BASH">net config workstation</pre>
 
-<details><summary>output</summary>
-<pre class="output">Computer name                        \\W106697SN2
+<details><summary>example</summary>
+
+
+
+
+<div class="output">Computer name                        \\W106697SN2
 Full Computer name                   W10server.aus.amer.example.com
 User name                            Annie_Tran
 
@@ -9040,7 +10991,9 @@ Logon domain                         AMERICAS
 COM Open Timeout (sec)               0
 COM Send Count (byte)                16
 COM Send Timeout (msec)              250
-The command completed sucserver.</pre>
+The command completed sucserver.</div>
+
+
 </details>
 
 </td>
@@ -9164,8 +11117,12 @@ chroot env nice nohup stdbuf timeout</pre>
 <td colspan="3">
 <pre before="BASH">du -h --max-depth=1 | sort -h</pre>
 
-<details><summary>output</summary>
-<pre class="output">0       ./.pki
+<details><summary>example</summary>
+
+
+
+
+<div class="output">0       ./.pki
 0       ./.rapid7_tmp
 0       ./t
 4.0K    ./.ssh
@@ -9173,7 +11130,9 @@ chroot env nice nohup stdbuf timeout</pre>
 4.4M    ./fcron-3.2.1
 12M     ./.cache
 442M    ./.awx
-463M    .</pre>
+463M    .</div>
+
+
 </details>
 
 </td>
@@ -9197,6 +11156,20 @@ chroot env nice nohup stdbuf timeout</pre>
 sysctl net.bridge.bridge-nf-call-iptables=1
 sysctl net.bridge.bridge-nf-call-ip6tables=1</pre>
 
+<details><summary>example</summary>
+
+
+<div class="example">$ docker info
+...
+
+WARNING: bridge-nf-call-iptables is disabled
+WARNING: bridge-nf-call-ip6tables is disabled</div>
+
+
+
+
+</details>
+
 </td>
 </tr>
 <tr><td colspan="3"><div class="flex">
@@ -9216,8 +11189,12 @@ sysctl net.bridge.bridge-nf-call-ip6tables=1</pre>
 <td colspan="3">
 <pre before="BASH">df --block-size=1 | numfmt --field 2 --header --to=iec</pre>
 
-<details><summary>output</summary>
-<pre class="output">Filesystem                                                         1B-blocks         Used    Available Use% Mounted on
+<details><summary>example</summary>
+
+
+
+
+<div class="output">Filesystem                                                         1B-blocks         Used    Available Use% Mounted on
 devtmpfs                                                                 12G            0  12533854208   0% /dev
 tmpfs                                                                    12G         4096  12546101248   1% /dev/shm
 tmpfs                                                                    12G    801607680  11744497664   7% /run
@@ -9235,7 +11212,9 @@ tmpfs                                                                    12G    
 /dev/sda1                                                               997M    209358848    835723264  21% /boot
 /dev/mapper/osvg-oswatcher.fs                                           3.0G    365981696   2844758016  12% /oswatcher
 tmpfs                                                                   2.4G            0   2509221888   0% /run/user/0
-tmpfs                                                                   2.4G            0   2509221888   0% /run/user/1000</pre>
+tmpfs                                                                   2.4G            0   2509221888   0% /run/user/1000</div>
+
+
 </details>
 
 </td>
@@ -9265,10 +11244,22 @@ alias c7="awk '{print \$7}'"
 alias c8="awk '{print \$8}'"
 alias c9="awk '{print \$9}'"</pre>
 
-<details><summary>output</summary>
-<pre class="output">a1
+<details><summary>example</summary>
+
+
+<div class="example">demo=' a1 a2 a3
+b1 b2 b3
+c1 c2 c3'
+
+echo "$demo" | c1</div>
+
+
+
+<div class="output">a1
 b1
-c1</pre>
+c1</div>
+
+
 </details>
 
 </td>
@@ -9328,13 +11319,21 @@ c1</pre>
 <td colspan="3">
 <pre before="BASH">df -Ph . </pre>
 
-<details><summary>output</summary>
-<pre class="output">$ df -Ph . | tail -1 | awk '{print $4}'
+<details><summary>example</summary>
+
+
+<div class="example">df -Ph . | tail -1 | awk &#39;{print $4}&#39;</div>
+
+
+
+<div class="output">$ df -Ph . | tail -1 | awk '{print $4}'
 16G
 
 $ df -Ph .
 Filesystem      Size  Used Avail Use% Mounted on
-overlay          20G  4.4G   16G  23% /</pre>
+overlay          20G  4.4G   16G  23% /</div>
+
+
 </details>
 
 </td>
@@ -9356,13 +11355,19 @@ overlay          20G  4.4G   16G  23% /</pre>
 <td colspan="3">
 <pre before="BASH">df -Ph . </pre>
 
-<details><summary>output</summary>
-<pre class="output">$ df -Ph . | tail -1 | awk '{print $4}'
+<details><summary>example</summary>
+
+
+
+
+<div class="output">$ df -Ph . | tail -1 | awk '{print $4}'
 16G
 
 $ df -Ph .
 Filesystem      Size  Used Avail Use% Mounted on
-overlay          20G  4.4G   16G  23% /</pre>
+overlay          20G  4.4G   16G  23% /</div>
+
+
 </details>
 
 </td>
@@ -9422,6 +11427,16 @@ overlay          20G  4.4G   16G  23% /</pre>
 <td colspan="3">
 <pre before="BASH">ps -ef | awk -v m="\x01" -v N="8" '{$N=m$N ;print substr($0, index($0,m)+1)}'</pre>
 
+<details><summary>example</summary>
+
+
+<div class="example">ps -ef | awk -v m=&#34;\x01&#34; -v N=&#34;8&#34; &#39;{$N=m$N ;print substr($0, index($0,m)+1)}&#39;</div>
+
+
+
+
+</details>
+
 </td>
 </tr>
 <tr><td colspan="3"><div class="flex">
@@ -9440,6 +11455,17 @@ overlay          20G  4.4G   16G  23% /</pre>
 <tr>
 <td colspan="3">
 <pre before="BASH">/bin/timeout -s 2 10 /path/to/your/script.sh</pre>
+
+<details><summary>example</summary>
+
+
+<div class="example">crontab -l
+* * * * * /bin/timeout -s 2 10 /path/to/your/script.sh</div>
+
+
+
+
+</details>
 
 </td>
 </tr>
@@ -9655,13 +11681,19 @@ done < "$dockerimagedir/docker-images.list"</pre>
 <td colspan="3">
 <pre before="BASH">env | grep -o '^S[^=]*'</pre>
 
-<details><summary>output</summary>
-<pre class="output">SHELL
+<details><summary>example</summary>
+
+
+
+
+<div class="output">SHELL
 SSH_CLIENT
 SSH_TTY
 SSH_AUTH_SOCK
 SHLVL
-SSH_CONNECTION</pre>
+SSH_CONNECTION</div>
+
+
 </details>
 
 </td>
@@ -9802,6 +11834,16 @@ rsync -avr --exclude={'dbaasv2-awx','ansible'} -o -g dbaas annie_tran@ausserver.
   <(git ls-tree -r branch01--name-only) \
   <(git ls-tree -r branch02 --name-only)</pre>
 
+<details><summary>example</summary>
+
+
+<div class="example">diff -y --color=always --width=180 --suppress-common-lines &lt;(git ls-tree -r 17.0.1 --name-only) &lt;(git ls-tree -r 17.1.0 --name-only)</div>
+
+
+
+
+</details>
+
 </td>
 </tr>
 <tr><td colspan="3"><div class="flex">
@@ -9821,8 +11863,14 @@ rsync -avr --exclude={'dbaasv2-awx','ansible'} -o -g dbaas annie_tran@ausserver.
 <td colspan="3">
 <pre before="BASH">wget <url> -O filserver.json</pre>
 
-<details><summary>output</summary>
-<pre class="output">--2021-04-02 10:00:58--  https://example.service-now.com/api/now/ui/date_time/legacy
+<details><summary>example</summary>
+
+
+<div class="example">wget https://example.service-now.com/api/now/ui/date_time/legacy -O snoserver.json</div>
+
+
+
+<div class="output">--2021-04-02 10:00:58--  https://example.service-now.com/api/now/ui/date_time/legacy
 Resolving example.service-now.com (example.service-now.com)... 149.96.224.242
 Connecting to example.service-now.com (example.service-now.com)|149.96.224.242|:443... conserver.
 HTTP request sent, awaiting response... 200 OK
@@ -9831,7 +11879,9 @@ Saving to: ‘snow_date.json’
 
 snow_date.json                         [ <=>                                                           ]  11.65K  --.-KB/s    in 0.007s
 
-2021-04-02 10:01:00 (1.72 MB/s) - ‘snow_date.json’ saved [11926]</pre>
+2021-04-02 10:01:00 (1.72 MB/s) - ‘snow_date.json’ saved [11926]</div>
+
+
 </details>
 
 </td>
@@ -9873,8 +11923,12 @@ snow_date.json                         [ <=>                                    
 <pre before="BASH">COLUMN=4
 history | awk '{a[$COLUMN]++}END{for(i in a){print a[i] " " i}}' | sort -rn | head</pre>
 
-<details><summary>output</summary>
-<pre class="output">149 ls
+<details><summary>example</summary>
+
+
+
+
+<div class="output">149 ls
 64 cat
 53 pstree
 53 find
@@ -9883,7 +11937,9 @@ history | awk '{a[$COLUMN]++}END{for(i in a){print a[i] " " i}}' | sort -rn | he
 43 history
 22 echo
 19 myproxy
-19 if</pre>
+19 if</div>
+
+
 </details>
 
 </td>
@@ -9905,14 +11961,20 @@ history | awk '{a[$COLUMN]++}END{for(i in a){print a[i] " " i}}' | sort -rn | he
 <td colspan="3">
 <pre before="BASH">netstat -an | grep ESTABLISHED | awk '{print $5}' | awk -F: '{print $1}' | sort | uniq -c | awk '{ printf("%s\t%s\t",$2,$1) ; for (i = 0; i < $1; i++) {printf("*")}; print "" }'</pre>
 
-<details><summary>output</summary>
-<pre class="output">10.143.6.25     1       *
+<details><summary>example</summary>
+
+
+
+
+<div class="output">10.143.6.25     1       *
 10.170.24.53    2       **
 10.174.116.158  1       *
 10.191.3.236    1       *
 10.58.67.40     1       *
 10.58.77.30     1       *
-127.0.0.1       4       ****</pre>
+127.0.0.1       4       ****</div>
+
+
 </details>
 
 </td>
@@ -9934,6 +11996,52 @@ history | awk '{a[$COLUMN]++}END{for(i in a){print a[i] " " i}}' | sort -rn | he
 <td colspan="3">
 <pre before="BASH">ps aux
 ps -e</pre>
+
+<details><summary>example</summary>
+
+
+<div class="example">
+# To see every process on the system using standard syntax:
+    ps -e
+    ps -ef
+    ps -eF
+    ps -ely
+
+# To see every process on the system using BSD syntax:
+    ps ax
+    ps axu
+
+# To print a process tree:
+    ps -ejH
+    ps axjf
+
+# To get info about threads:
+    ps -eLf
+    ps axms
+
+# To get security info:
+    ps -eo euser,ruser,suser,fuser,f,comm,label
+    ps axZ
+    ps -eM
+
+# To see every process running as root (real & effective ID) in user format:
+    ps -U root -u root u
+
+# To see every process with a user-defined format:
+    ps -eo pid,tid,class,rtprio,ni,pri,psr,pcpu,stat,wchan:14,comm
+    ps axo stat,euid,ruid,tty,tpgid,sess,pgrp,ppid,pid,pcpu,comm
+    ps -Ao pid,tt,user,fname,tmout,f,wchan
+
+# Print only the process IDs of syslogd:
+    ps -C syslogd -o pid=
+
+# Print only the name of PID 42:
+    ps -q 42 -o comm=</div>
+
+
+
+
+</details>
 
 </td>
 </tr>
@@ -10000,8 +12108,19 @@ EOF</pre>
 <td colspan="3">
 <pre before="BASH">sed "s@+@ @g;s@%@\\\\x@g" | xargs -0 printf "%b"</pre>
 
-<details><summary>output</summary>
-<pre class="output">http://www</pre>
+<details><summary>example</summary>
+
+
+<div class="example">alias urldecode='sed "s@+@ @g;s@%@\\\\x@g" | xargs -0 printf "%b"'
+
+echo "http%3A%2F%2Fwww" | urldecode
+http://www</div>
+
+
+
+<div class="output">http://www</div>
+
+
 </details>
 
 </td>
@@ -10023,9 +12142,17 @@ EOF</pre>
 <td colspan="3">
 <pre before="BASH">wget --no-parent -r https://url.com</pre>
 
-<details><summary>output</summary>
-<pre class="output">recursively creates the directory and files to:
-./images-http.us.example.com/images/repository/apps/git/git29_for_OL7.x</pre>
+<details><summary>example</summary>
+
+
+<div class="example">wget --no-parent -r http://images-http.us.example.com/images/repository/apps/git/git29_for_OL7.x/</div>
+
+
+
+<div class="output">recursively creates the directory and files to:
+./images-http.us.example.com/images/repository/apps/git/git29_for_OL7.x</div>
+
+
 </details>
 
 </td>
@@ -10047,6 +12174,18 @@ EOF</pre>
 <td colspan="3">
 <pre before="BASH">useradd -p $(openssl passwd -1 $PASS) $USER</pre>
 
+<details><summary>example</summary>
+
+
+<div class="example">USER=noreply
+PASS=password
+useradd -p $(openssl passwd -1 $PASS) $USER</div>
+
+
+
+
+</details>
+
 </td>
 </tr>
 <tr><td colspan="3"><div class="flex">
@@ -10065,6 +12204,28 @@ EOF</pre>
 <tr>
 <td colspan="3">
 <pre before="BASH">mail -s "$(echo -e "SAR files\nContent-Type: text/html")" annie_tran@example.com <allsar.txt</pre>
+
+<details><summary>example</summary>
+
+
+<div class="example">mail -s "Test" -a vatserver.html annie_tran@example.com </dev/null
+
+mail -s "`hostname`" -a `ls -lrt *.html |tail -1|head -n 1 |awk '{printf $9}'` annie_tran@example.com </dev/null
+
+mail -s "`hostname`" -a `ls -lrt *.txt |tail -1|head -n 1 |awk '{printf $9}'` annie_tran@example.com </dev/null
+
+mail -s "`hostname`" -a <file> annie_tran@example.com </dev/null
+
+mail -s "$(echo -e "This is Subject\nContent-Type: text/html")" annie_tran@example.com <omegap_hc_TUE_sum.html
+
+mail -s "$(echo -e "SAR files\nContent-Type: text/html")" annie_tran@example.com <allsar.txt
+
+mail -s "`hostname`" -a /home/annie_tran/email-test.txt annie_tran@example.com </dev/null</div>
+
+
+
+
+</details>
 
 </td>
 </tr>
@@ -10085,9 +12246,15 @@ EOF</pre>
 <td colspan="3">
 <pre before="BASH">netstat -pW</pre>
 
-<details><summary>output</summary>
-<pre class="output">Active Internet connections (w/o servers)
-Proto Recv-Q Send-Q Local Address           Foreign Address         State       PID/Program name</pre>
+<details><summary>example</summary>
+
+
+
+
+<div class="output">Active Internet connections (w/o servers)
+Proto Recv-Q Send-Q Local Address           Foreign Address         State       PID/Program name</div>
+
+
 </details>
 
 </td>
@@ -10109,6 +12276,17 @@ Proto Recv-Q Send-Q Local Address           Foreign Address         State       
 <td colspan="3">
 <pre before="BASH">sed ':a;N;$!{/\n$/!ba}; s/[[:blank:]]*\n[[:blank:]]*/ /g' textfile.txt</pre>
 
+<details><summary>example</summary>
+
+
+<div class="example"># unwrap sudo.log file
+sed ':a;N;$!{/\n$/!ba}; s/[[:blank:]]*\n[[:blank:]]*/ /g' /var/log/sudo.log | sed 's/COMMAND/\nCOMMAND/g'</div>
+
+
+
+
+</details>
+
 </td>
 </tr>
 <tr><td colspan="3"><div class="flex">
@@ -10127,6 +12305,16 @@ Proto Recv-Q Send-Q Local Address           Foreign Address         State       
 <tr>
 <td colspan="3">
 <pre before="BASH">find . | grep -E "(__pycache__|\.pyc|\.pyo$)" | xargs rm -rf</pre>
+
+<details><summary>example</summary>
+
+
+<div class="example">alias pyclear=&#39;find . | grep -E &#34;(__pycache__|\.pyc|\.pyo$)&#34; | xargs rm -rf&#39;</div>
+
+
+
+
+</details>
 
 </td>
 </tr>
@@ -10185,6 +12373,28 @@ Proto Recv-Q Send-Q Local Address           Foreign Address         State       
 <td colspan="3">
 <pre before="BASH">ls -R | grep ":$" | sed -e 's/:$//' -e 's/[^-][^\/]*\//--/g' -e 's/^/   /' -e 's/-/|/'</pre>
 
+<details><summary>example</summary>
+
+
+<div class="example">$ ls -R | grep ":$" | sed -e 's/:$//' -e 's/[^-][^\/]*\//--/g' -e 's/^/   /' -e 's/-/|/'
+   .
+   |-inventory
+   |-roles
+   |---dummy
+   |-----defaults
+   |-----files
+   |-----handlers
+   |-----meta
+   |-----tasks
+   |-----templates
+   |-----tests
+   |-----vars</div>
+
+
+
+
+</details>
+
 </td>
 </tr>
 <tr><td colspan="3"><div class="flex">
@@ -10206,6 +12416,19 @@ Proto Recv-Q Send-Q Local Address           Foreign Address         State       
 /:$/&&f{s=$0;f=0}
 /:$/&&!f{sub(/:$/,"");s=$0;f=1;next}
 NF&&f{ print s"/"$0 }' | grep docx</pre>
+
+<details><summary>example</summary>
+
+
+<div class="example">ls -R . | awk '
+/:$/&&f{s=$0;f=0}
+/:$/&&!f{sub(/:$/,"");s=$0;f=1;next}
+NF&&f{ print s"/"$0 }' | grep docx</div>
+
+
+
+
+</details>
 
 </td>
 </tr>
@@ -10245,6 +12468,16 @@ NF&&f{ print s"/"$0 }' | grep docx</pre>
 <td colspan="3">
 <pre before="BASH">usermod -aG wheel username</pre>
 
+<details><summary>example</summary>
+
+
+<div class="example">usermod -aG wheel annie_tran</div>
+
+
+
+
+</details>
+
 </td>
 </tr>
 <tr><td colspan="3"><div class="flex">
@@ -10263,6 +12496,35 @@ NF&&f{ print s"/"$0 }' | grep docx</pre>
 <tr>
 <td colspan="3">
 <pre before="BASH">cat /etc/os-release</pre>
+
+<details><summary>example</summary>
+
+
+<div class="example">$ cat /etc/os-release
+
+NAME="Oracle Linux Server"
+VERSION="8.3"
+ID="ol"
+ID_LIKE="fedora"
+VARIANT="Server"
+VARIANT_ID="server"
+VERSION_ID="8.3"
+PLATFORM_ID="platform:el8"
+PRETTY_NAME="Oracle Linux Server 8.3"
+ANSI_COLOR="0;31"
+CPE_NAME="cpe:/o:oracle:linux:8:3:server"
+HOME_URL="https://linux.oracle.com/"
+BUG_REPORT_URL="https://bugzilla.oracle.com/"
+
+ORACLE_BUGZILLA_PRODUCT="Oracle Linux 8"
+ORACLE_BUGZILLA_PRODUCT_VERSION=8.3
+ORACLE_SUPPORT_PRODUCT="Oracle Linux"
+ORACLE_SUPPORT_PRODUCT_VERSION=8.3</div>
+
+
+
+
+</details>
 
 </td>
 </tr>
@@ -10303,6 +12565,16 @@ NF&&f{ print s"/"$0 }' | grep docx</pre>
 <pre before="BASH">RPMURL='https://...'
 rpm -ivh $RPMURL</pre>
 
+<details><summary>example</summary>
+
+
+<div class="example">rpm -ivh http://images-http.us.example.com/images/repository/linux/apps/cloudfoundry/cf-cli-installer_6.51.0_x86-64.rpm</div>
+
+
+
+
+</details>
+
 </td>
 </tr>
 <tr><td colspan="3"><div class="flex">
@@ -10341,8 +12613,12 @@ rpm -ivh $RPMURL</pre>
 <td colspan="3">
 <pre before="BASH">lscpu</pre>
 
-<details><summary>output</summary>
-<pre class="output">Architecture:        x86_64
+<details><summary>example</summary>
+
+
+
+
+<div class="output">Architecture:        x86_64
 CPU op-mode(s):      32-bit, 64-bit
 Byte Order:          Little Endian
 CPU(s):              1
@@ -10365,7 +12641,9 @@ L1i cache:           32K
 L2 cache:            256K
 L3 cache:            35840K
 NUMA node0 CPU(s):   0
-Flags:               fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts mmx fxsr sse sse2 ss syscall nx pdpe1gb rdtscp lm constant_tsc arch_perfmon pebs bts nopl xtopology tsc_reliable nonstop_tsc cpuid pni pclmulqdq ssse3 fma cx16 pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand hypervisor lahf_lm abm 3dnowprefetch cpuid_fault invpcid_single pti ssbd ibrs ibpb stibp fsgsbase tsc_adjust bmi1 avx2 smep bmi2 invpcid rdseed adx smap xsaveopt arat md_clear flush_l1d arch_capabilities</pre>
+Flags:               fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts mmx fxsr sse sse2 ss syscall nx pdpe1gb rdtscp lm constant_tsc arch_perfmon pebs bts nopl xtopology tsc_reliable nonstop_tsc cpuid pni pclmulqdq ssse3 fma cx16 pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand hypervisor lahf_lm abm 3dnowprefetch cpuid_fault invpcid_single pti ssbd ibrs ibpb stibp fsgsbase tsc_adjust bmi1 avx2 smep bmi2 invpcid rdseed adx smap xsaveopt arat md_clear flush_l1d arch_capabilities</div>
+
+
 </details>
 
 </td>
@@ -10392,6 +12670,18 @@ sudo systemctl start sshd
 sudo firewall-cmd --permanent --add-service=http
 sudo firewall-cmd --permanent --add-service=https
 sudo systemctl reload firewalld</pre>
+
+<details><summary>example</summary>
+
+
+<div class="example">systemctl status firewalld
+service firewalld start
+#service firewalld stop</div>
+
+
+
+
+</details>
 
 </td>
 </tr>
@@ -10432,6 +12722,17 @@ lsof -i | grep $STRING_MATCH |  awk '{print $2}' | xargs kill</pre>
 <td colspan="3">
 <pre before="BASH">host -w hostname</pre>
 
+<details><summary>example</summary>
+
+
+<div class="example">$ host -w awxserver.amer.example.com
+AWXNLSUSANDBOX.amer.example.com has address 10.179.177.76</div>
+
+
+
+
+</details>
+
 </td>
 </tr>
 <tr><td colspan="3"><div class="flex">
@@ -10450,6 +12751,16 @@ lsof -i | grep $STRING_MATCH |  awk '{print $2}' | xargs kill</pre>
 <tr>
 <td colspan="3">
 <pre before="BASH">pstree</pre>
+
+<details><summary>example</summary>
+
+
+<div class="example">$ pstree</div>
+
+
+
+
+</details>
 
 </td>
 </tr>

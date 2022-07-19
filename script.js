@@ -32,7 +32,6 @@ function escapeHtml(s) {
   })
 }
 
-
 function searchItems(string) {
   Array.from(document.querySelectorAll('.item')).forEach(e => {
     if(e.textContent.includes(string)) {
@@ -63,33 +62,17 @@ function eventFilter(e) {
   }
 }
 
-function hidePopup() {
-  document.querySelector('#popup').classList.remove('show')
-  Array.from(document.querySelectorAll('#popup [data-key]')).forEach(e => (e.textContent = ''))
-  removeHash()
-}
-
-function getLocationId() {
-  return location.hash.slice(1)
-}
-
-function editPopupText(obj) {
-  $$('#popup [data-key]').forEach(e => {
-    if(e.nodeName.toLowerCase() === 'a') {
-      e.href = obj[e.dataset.key]
-    }
-    e.textContent = [obj[e.dataset.key]].flat(2).join('\n')
-  })
-}
-
-function showPopup(id = getLocationId()) {
-  editPopupText(JSON.parse(document.querySelector(`#data-${id} .filter`).textContent))
-  document.querySelector('#popup').classList.add('show')
-}
-
 document.querySelector('#searchbar').addEventListener('keyup', eventFilter)
 
 document.querySelector('#searchbar').addEventListener('click', unhideAllItems)
+
+$$('details').forEach(el => {
+  el.addEventListener('click', function () {
+    if(el.getAttribute('open').length > 0 || el.open) {
+      el.open = false
+    } else { el.open = true }
+  })
+})
 
 // document.onkeydown = function (evt) {
 //   if(evt.keyCode === 27) {

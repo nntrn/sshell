@@ -1,0 +1,18 @@
+{
+  "id": "361",
+  "title": "zip - create zip file from list piped in stdin",
+  "modified": "2022-07-14T17:25:09Z",
+  "created": "2022-07-14T17:25:09Z",
+  "guid": "a4908548-8b43-4108-b632-8eec97c26718",
+  "cli": "<list of files> | zip name.zip --names-stdin",
+  "example": [
+    "# zip files smaller than 2M",
+    "find /var/log -type f -not -size +2M | zip name.zip --names-stdin",
+    "",
+    "# zip only shell scripts",
+    "ls -1 *.sh | zip shell-files.zip --names-stdin"
+  ],
+  "language": "bash",
+  "category": "zip",
+  "code_type": "command"
+}
