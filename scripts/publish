@@ -18,8 +18,10 @@ if [[ -d public ]]; then
   cd $TMPDIR
   git clone -b gh-pages $REMOTE_URL && cd "$(basename "$_" .git)"
 
-  cp -r $DIR/public/{index.html,api} .
   cp $DIR/templates/static/* .
+  cp -r $DIR/public/{index.html,api} .
+
+  jq -s 'sort_by( .created )' api/*.json >snippets.json
 
   git add .
   git commit -m "Republish gh-pages"
