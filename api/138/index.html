@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="refresh" content="0; url='https://raw.githubusercontent.com/nntrn/sshell/gh-pages/api/138.json'" />
+  </head>
+  <body>
+   <pre>{
+  "id": "138",
+  "title": "sha256",
+  "modified": "2022-01-10T18:38:39Z",
+  "created": "2021-10-04T19:45:12Z",
+  "guid": "74a8528f-6445-4bdf-b136-94712bc8d3e4",
+  "cli": [
+    "sha256() {",
+    "  if which sha256sum >/dev/null 2>&1; then",
+    "    sha256sum \"$1\" | awk '{ print $1 }'",
+    "  else",
+    "    shasum -a256 \"$1\" | awk '{ print $1 }'",
+    "  fi",
+    "}"
+  ],
+  "url": "https://github.com/containerd/containerd/blob/main/test/utils.sh",
+  "language": "bash",
+  "category": "error;#1"
+}</pre>
+  </body>
+</html>

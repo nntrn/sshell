@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="refresh" content="0; url='https://raw.githubusercontent.com/nntrn/sshell/gh-pages/api/143.json'" />
+  </head>
+  <body>
+   <pre>{
+  "id": "143",
+  "title": "get installed kernels",
+  "modified": "2022-01-10T15:57:13Z",
+  "created": "2021-10-18T16:25:00Z",
+  "guid": "60462c12-1365-48ec-9012-8220859006be",
+  "cli": "awk -F\\' /^menuentry/{print\\$2} /etc/grub2.cfg",
+  "tags": "admin",
+  "example": [
+    "$ awk -F\\' /^menuentry/{print\\$2} /etc/grub2.cfg",
+    "Oracle Linux Server 7.9, with Unbreakable Enterprise Kernel 5.4.17-2102.202.5.el7uek.x86_64",
+    "Oracle Linux Server 7.9, with Unbreakable Enterprise Kernel 4.1.12-61.1.18.el7uek.x86_64",
+    "Oracle Linux Server 7.9, with Linux 3.10.0-1160.36.2.el7.x86_64",
+    "Oracle Linux Server 7.9, with Linux 3.10.0-1160.15.2.el7.x86_64",
+    "Oracle Linux Server 7.9, with Linux 0-rescue-21e762519e7246a4b97b5fa8e94a7ed1",
+    ""
+  ],
+  "language": "bash",
+  "category": "get"
+}</pre>
+  </body>
+</html>

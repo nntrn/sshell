@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="refresh" content="0; url='https://raw.githubusercontent.com/nntrn/sshell/gh-pages/api/113.json'" />
+  </head>
+  <body>
+   <pre>{
+  "id": "113",
+  "title": "awk - get value only",
+  "modified": "2022-01-19T15:47:48Z",
+  "created": "2021-09-10T02:44:20Z",
+  "guid": "cd022262-a550-4e8e-aa4b-469410b072f1",
+  "cli": "awk -F= '/^BUILDTYPE=/ {print tolower($2)}' /etc/example.cfg",
+  "tags": "nntrn",
+  "example": [
+    "$ awk -F= '/^BUILDTYPE=/ {print tolower($2)}' /etc/example.cfg",
+    "dellit",
+    "",
+    "$ cat /etc/example.cfg",
+    "ONCALLSHORT=\"svc_account\"",
+    "BUSINESSSHORT=\"svc_account\"",
+    "XINSTALLED=0",
+    "STAFF_EMAIL=svc_account@example.com",
+    "PRODUCTION=PRD",
+    "ENVIRONMENT=PRD",
+    "SUPPORTGROUP=AMER",
+    "SMTPGATEWAY=smtp-out.us.example.com",
+    "HOSTNAME=awxserver.us.example.com",
+    "BUILDTYPE=DELLIT",
+    "APPLICATIONID=1003150"
+  ],
+  "language": "bash",
+  "category": "awk"
+}</pre>
+  </body>
+</html>

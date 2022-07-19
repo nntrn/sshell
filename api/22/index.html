@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="refresh" content="0; url='https://raw.githubusercontent.com/nntrn/sshell/gh-pages/api/22.json'" />
+  </head>
+  <body>
+   <pre>{
+  "id": "22",
+  "title": "creating a user with pass",
+  "modified": "2021-12-30T19:44:08Z",
+  "created": "2021-03-26T18:34:51Z",
+  "guid": "23111957-6020-4702-8ff6-7ee9d2828bff",
+  "cli": "useradd -p $(openssl passwd -1 $PASS) $USER",
+  "tags": "coreutils",
+  "url": "https://stackoverflow.com/a/2328528",
+  "example": [
+    "USER=noreply",
+    "PASS=password",
+    "useradd -p $(openssl passwd -1 $PASS) $USER"
+  ],
+  "language": "bash",
+  "category": "creating"
+}</pre>
+  </body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="refresh" content="0; url='https://raw.githubusercontent.com/nntrn/sshell/gh-pages/api/259.json'" />
+  </head>
+  <body>
+   <pre>{
+  "id": "259",
+  "title": "investigate sockets & processes",
+  "modified": "2022-03-29T22:22:31Z",
+  "created": "2022-03-29T22:22:31Z",
+  "guid": "8fa018a4-a8f2-4eb7-bf6a-e86711527047",
+  "cli": [
+    "$ ss -tulnp",
+    ".. users:((\"node_exporter\",pid=58451,fd=3))",
+    "",
+    "$ PID=58451",
+    "$ cat /proc/$PID/cmdline",
+    "/opt/prometheus/exporters/node_exporter_current/node_exporter--no-collector.xfs--no-collector.mdadm--no-collector.textfile--web.listen-address=0.0.0.0:9100--log.level=info",
+    "",
+    "$  procinfo $PID"
+  ],
+  "tags": "network",
+  "url": "https://www.linuxshelltips.com/find-and-close-open-ports-in-linux/",
+  "language": "bash",
+  "category": "investigate",
+  "code_type": "command"
+}</pre>
+  </body>
+</html>

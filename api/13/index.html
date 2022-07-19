@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="refresh" content="0; url='https://raw.githubusercontent.com/nntrn/sshell/gh-pages/api/13.json'" />
+  </head>
+  <body>
+   <pre>{
+  "id": "13",
+  "title": "Updating Multiple Repos With One Command",
+  "modified": "2021-12-30T19:44:08Z",
+  "created": "2021-03-09T20:28:39Z",
+  "guid": "fcc7cd7b-9748-402a-bd9e-1d0dc8b1bb32",
+  "cli": "find . -maxdepth 3 -name .git -type d | rev | cut -c 6- | rev | xargs -I {} git -C {} pull",
+  "description": "This command will find all git repos in your current directory with a max depth of 3. Afterwards it will perform a git pull on the current branch for each of those repserver.",
+  "tags": "git",
+  "url": "https://medium.com/@codenameyau/updating-multiple-repos-with-one-command-9768c8cdfe46",
+  "language": "bash",
+  "category": "Updating"
+}</pre>
+  </body>
+</html>

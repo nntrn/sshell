@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="refresh" content="0; url='https://raw.githubusercontent.com/nntrn/sshell/gh-pages/api/108.json'" />
+  </head>
+  <body>
+   <pre>{
+  "id": "108",
+  "title": "run sudosu",
+  "modified": "2022-01-19T15:48:05Z",
+  "created": "2021-09-09T23:30:08Z",
+  "guid": "d6041891-c86f-491d-ae53-6ca155be01d0",
+  "cli": "eval \"sudo $(sudo --list | grep -ws User -A 1000 | sed 's/,/\\n/g' | sed 's/:/:\\n/g' | grep '/bin/su' | sort | tail -n 1)\"",
+  "language": "bash",
+  "category": "run"
+}</pre>
+  </body>
+</html>

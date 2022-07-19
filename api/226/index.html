@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="refresh" content="0; url='https://raw.githubusercontent.com/nntrn/sshell/gh-pages/api/226.json'" />
+  </head>
+  <body>
+   <pre>{
+  "id": "226",
+  "title": "restart failed services",
+  "modified": "2022-03-03T16:21:28Z",
+  "created": "2022-03-01T01:40:06Z",
+  "guid": "5dd5def4-3058-4d4b-93e4-889a0c85ec73",
+  "cli": "systemctl list-units --failed --no-legend | awk '{print $1}'| xargs -I % systemctl status % && systemctl restart %",
+  "tags": "service",
+  "language": "bash",
+  "category": "restart"
+}</pre>
+  </body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="refresh" content="0; url='https://raw.githubusercontent.com/nntrn/sshell/gh-pages/api/111.json'" />
+  </head>
+  <body>
+   <pre>{
+  "id": "111",
+  "title": "exec cmd",
+  "modified": "2022-01-19T15:47:59Z",
+  "created": "2021-09-10T00:25:17Z",
+  "guid": "7a97b008-0a32-41e0-80af-bbf18fd54899",
+  "cli": "bash -c 'echo $$ ; exec ls -l /proc/self ; echo foo'",
+  "description": "What exec cmd does, is exactly the same as just running cmd, except that the current shell is replaced with the command, instead of a separate process being run.",
+  "url": "https://unix.stackexchange.com/a/296852",
+  "example": [
+    "$ bash -c 'echo $$ ; exec ls -l /proc/self ; echo foo'",
+    "4315",
+    "lrwxrwxrwx 1 root root 0 Aug 17 09:15 /proc/self -> 4315"
+  ],
+  "language": "bash",
+  "category": "exec"
+}</pre>
+  </body>
+</html>

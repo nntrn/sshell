@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="refresh" content="0; url='https://raw.githubusercontent.com/nntrn/sshell/gh-pages/api/270.json'" />
+  </head>
+  <body>
+   <pre>{
+  "id": "270",
+  "title": "awk - split string into maxtrix-like table",
+  "modified": "2022-04-06T18:02:24Z",
+  "created": "2022-04-06T18:02:24Z",
+  "guid": "dc31fe6b-acce-4438-8f9b-626a42de14f2",
+  "cli": "echo \"A,B,C,D,E,F,G,H,I,J,K,L,M,N,O\" | awk -v RS='[,\\n]' '{a=$0;getline b; getline c; print a,b,c}' OFS=,",
+  "url": "https://unix.stackexchange.com/a/430556",
+  "output": [
+    "A,B,C",
+    "D,E,F",
+    "G,H,I",
+    "J,K,L",
+    "M,N,O"
+  ],
+  "language": "bash",
+  "category": "awk",
+  "code_type": "command"
+}</pre>
+  </body>
+</html>

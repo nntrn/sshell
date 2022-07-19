@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="refresh" content="0; url='https://raw.githubusercontent.com/nntrn/sshell/gh-pages/api/316.json'" />
+  </head>
+  <body>
+   <pre>{
+  "id": "316",
+  "title": "csplit - split text in file on empty lines",
+  "modified": "2022-05-13T16:52:40Z",
+  "created": "2022-05-13T16:52:40Z",
+  "guid": "d4ef54f2-aba2-430e-b231-b61a9d661170",
+  "cli": "csplit --suppress-matched $FILENAME '/^$/' '{*}'",
+  "url": "https://www.gnu.org/software/coreutils/manual/html_node/csplit-invocation.html#csplit-invocation",
+  "example": [
+    "$ cat <<EOF >file.txt",
+    "  one",
+    "",
+    "  two",
+    "",
+    "  three",
+    "EOF",
+    "",
+    "$ csplit --suppress-matched --prefix 'file-' file.txt '/^$/' '{*}'",
+    "",
+    "$ ls file-*",
+    "file-00  file-01  file-02",
+    "",
+    "$ find . -type f -name \"file-*\" -print -exec cat {} \\;",
+    "./file-00",
+    "  one",
+    "./file-01",
+    "  two",
+    "./file-02",
+    "  three"
+  ],
+  "language": "bash",
+  "category": "csplit",
+  "code_type": "command"
+}</pre>
+  </body>
+</html>

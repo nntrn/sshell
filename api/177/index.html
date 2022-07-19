@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="refresh" content="0; url='https://raw.githubusercontent.com/nntrn/sshell/gh-pages/api/177.json'" />
+  </head>
+  <body>
+   <pre>{
+  "id": "177",
+  "title": "docker - resolve no space on device",
+  "modified": "2022-03-17T00:27:23Z",
+  "created": "2021-12-29T18:00:23Z",
+  "guid": "ec882fbd-c066-4bdf-ad84-d7e670866378",
+  "cli": [
+    "systemctl stop docker",
+    "mv /u01/docker /u01/docker.bkp-$(date +%F)",
+    "mv /var/lib/docker /u01",
+    "mkdir -p /var/lib/docker",
+    "mount --rbind /u01/docker /var/lib/docker",
+    "systemctl start docker"
+  ],
+  "description": [
+    "ERROR: failed to register layer: Error processing tar file(exit status 1):",
+    "no space left on device"
+  ],
+  "tags": "docker",
+  "language": "bash",
+  "category": "docker"
+}</pre>
+  </body>
+</html>

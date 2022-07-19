@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="refresh" content="0; url='https://raw.githubusercontent.com/nntrn/sshell/gh-pages/api/44.json'" />
+  </head>
+  <body>
+   <pre>{
+  "id": "44",
+  "title": "capturing group grep",
+  "modified": "2021-12-30T19:44:09Z",
+  "created": "2021-05-06T15:51:59Z",
+  "guid": "4a68f83a-d230-4662-942e-27cc67983fed",
+  "cli": [
+    "shopt -s extglob",
+    "shopt -s nullglob",
+    "shopt -s nocaseglob",
+    "",
+    "ls +(.*) | while read file; do",
+    "  echo $file",
+    "  set -- $file",
+    "  [[ ! -z $2 ]] && echo \"$1$2\"",
+    "done"
+  ],
+  "url": "https://stackoverflow.com/questions/1891797/capturing-groups-from-a-grep-regex",
+  "language": "bash",
+  "category": "capturing"
+}</pre>
+  </body>
+</html>

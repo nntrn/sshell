@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="refresh" content="0; url='https://raw.githubusercontent.com/nntrn/sshell/gh-pages/api/319.json'" />
+  </head>
+  <body>
+   <pre>{
+  "id": "319",
+  "title": "grep - display lines in file1 that aren't in file2 (similar to comm)",
+  "modified": "2022-05-17T19:56:35Z",
+  "created": "2022-05-17T19:56:35Z",
+  "guid": "47447d4c-baad-4a55-9974-664c1f042564",
+  "cli": "grep -vFxf file1.txt file2.txt",
+  "description": [
+    "Options are:",
+    "-v: Selected lines are those not matching any of the specified patterns",
+    "-F: Fixed string search",
+    "-x: Exact match",
+    "-f: Use a file for patterns"
+  ],
+  "url": "https://stackoverflow.com/a/72278813/7460613",
+  "example": [
+    "$ cat <<EOF >first.txt",
+    "a",
+    "b",
+    "c",
+    "EOF",
+    "",
+    "$ cat <<EOF >second.txt",
+    "a",
+    "b",
+    "1",
+    "4",
+    "EOF",
+    "",
+    "$ grep -vFxf first.txt second.txt",
+    "1",
+    "4"
+  ],
+  "language": "bash",
+  "category": "grep",
+  "code_type": "command"
+}</pre>
+  </body>
+</html>

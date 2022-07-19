@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="refresh" content="0; url='https://raw.githubusercontent.com/nntrn/sshell/gh-pages/api/260.json'" />
+  </head>
+  <body>
+   <pre>{
+  "id": "260",
+  "title": "Get the parent directory of where this script is.",
+  "modified": "2022-03-29T22:30:56Z",
+  "created": "2022-03-29T22:30:56Z",
+  "guid": "e663ceac-0ec7-4ce6-80ff-36e6375c2dbf",
+  "cli": [
+    "SOURCE=\"${BASH_SOURCE[0]}\"",
+    "while [ -h \"$SOURCE\" ] ; do SOURCE=\"$(readlink \"$SOURCE\")\"; done",
+    "DIR=\"$( cd -P \"$( dirname \"$SOURCE\" )/..\" && pwd )\""
+  ],
+  "url": "https://github.com/hashicorp/vault/blob/3dc8ef76b670aeb91654a7f7df709c8fd08ca1d0/scripts/build.sh",
+  "language": "bash",
+  "category": "Get",
+  "code_type": "command"
+}</pre>
+  </body>
+</html>
