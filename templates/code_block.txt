@@ -5,10 +5,18 @@
 <tr><th colspan="3"><h4><a href="api/{{ id }}.json" onclick="showPopup({{ id }})">{{ title }}</a></h4></th></tr>
 <tr>
 <td colspan="3">
-<pre before="{{language|upper}}">{% if cli is string %}{{ cli|safe }}{% else %}{{ cli|join("\n")|safe }}{% endif %}</pre>
+<pre before="{{language|upper}}">{% if cli is string %}{{ cli|safe|e }}{% else %}{{ cli|join("\n")|safe|e }}{% endif %}</pre>
+{% if output or example %}
+<details><summary>example</summary>
+
+{% if example %}
+<div class="example">{% if example is string %}{{ example|e }}{% else %}{{ example|join("\n")|safe|e }}{% endif %}</div>
+{% endif %}
+
 {% if output %}
-<details><summary>output</summary>
-<pre class="output">{% if output is string %}{{ output }}{% else %}{{ output|join("\n")|safe }}{% endif %}</pre>
+<div class="output">{% if output is string %}{{ output|e }}{% else %}{{ output|join("\n")|safe|e }}{% endif %}</div>
+{% endif %}
+
 </details>
 {% endif %}
 </td>
