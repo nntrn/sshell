@@ -7,11 +7,10 @@
    <pre>{
   "id": "362",
   "title": "curl awx - view api ",
-  "modified": "2022-07-18T23:08:49Z",
+  "modified": "2022-07-20T19:40:34Z",
   "created": "2022-07-18T23:08:37Z",
   "guid": "35d58334-d9b3-43b0-b516-c6989bc6cb52",
-  "cli": "$ curl -s -k -u \"admin:$(cat /root/awx_admin_pass.txt)\" https://$HOSTNAME/api/v2/me/| python3 -m json.tool",
-  "tags": "awx",
+  "cli": "curl -s -k -u \"admin:password\" https://awxserver.example.com/api/v2/me/ | python -m json.tool",
   "output": [
     "{",
     "    \"count\": 1,",
