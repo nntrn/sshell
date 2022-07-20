@@ -1,0 +1,48 @@
+<script>
+(function () {
+  const $$ = query => Array.from(document.querySelectorAll(query))
+  const $ = query => document.querySelector(query)
+
+  function searchItems(string) {
+    Array.from(document.querySelectorAll('.item')).forEach(e => {
+      if(e.textContent.includes(string)) {
+        e.classList.remove('hidden')
+      } else {
+        e.classList.add('hidden')
+      }
+    })
+  }
+
+  function unhideAllItems(e) {
+    console.log(e)
+    Array.from(document.querySelectorAll('.item .hidden')).forEach(e => {
+      e.classList.remove('hidden')
+    })
+  }
+
+  function eventFilter(e) {
+    const keycodes = {
+      enter: 13,
+      space: 32,
+      backspace: 8,
+    }
+    if(Object.values(keycodes).includes(e.keyCode)) {
+      console.log(e.keyCode, e.key)
+      const searchString = e.target.value.toLowerCase().trim()
+      searchItems(searchString)
+    }
+  }
+  document.querySelector('#searchbar').addEventListener('keyup', eventFilter)
+
+  document.querySelector('#searchbar').addEventListener('click', unhideAllItems)
+
+  $$('details').forEach(el => {
+    el.addEventListener('click', function () {
+      if(el.getAttribute('open').length > 0 || el.open) {
+        el.open = false
+      } else { el.open = true }
+    })
+  })
+
+}())
+</script>

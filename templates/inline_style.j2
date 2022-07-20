@@ -1,18 +1,18 @@
- *,:before,:after{box-sizing:border-box}
+<style>
+*,:before,:after{box-sizing:border-box}
 #searchbar:focus,#searchbar:hover{outline:none}
 #searchbar:focus{background:#fff;border-bottom:3px solid #222}
-#searchbar{background:#eee}
-#searchbar{width:100%;font-size:15px;line-height:150%;padding:10px 2%;border:0;background:#fff;box-shadow:inset 0 0 3px rgba(0,0,0,.09)}
+#searchbar{border-bottom:3px solid #fff;width:100%;font-size:15px;line-height:150%;padding:10px;border:0;background:#fff;box-shadow:inset 0 0 3px rgba(0,0,0,.09)}
 a{color:#222;text-decoration:none}
 body,html,h1,h2,h3,h4,h5,pre{margin:unset;padding:0}
 body{font-family:sans-serif;font-weight:500;line-height:110%}
 body{font-size:12px;line-height:140%;word-break:break-word;max-width:100%;overflow-x:hidden}
-details{padding:6px;border:2px solid #222}
+details.expand{padding:6px;border:2px solid #222}
 h1,h2,h3,h4{font-family:monospace}
 h1{font-weight:400;font-family:monospace}
 h4{font-weight:700;font-size:110%}
 h5{font-weight:400;text-transform:uppercase}
-header{background:#fff;line-height:100%;font-size:.9em;}
+header{background:#fff;line-height:100%;font-size:.9em;box-shadow:inset 0 0 3px rgba(0,0,0,.09)}
 main{font-size:clamp(12px,.8vw,1.4rem);line-height:140%}
 main{width:100%;margin:auto;overflow-x:hidden}
 main{padding:0 2%}
@@ -27,10 +27,27 @@ td,th{border:2px solid #fff;border-left:none;border-right:none}
 .example,.output{white-space:pre-wrap}
 .example{font-weight:700}
 .flex{display:flex}
+.flex.column{flex-direction:column}
 .hidden{display:none!important}
 .item{margin:1em 0}
 .output{background:#fff;color:#222}
 [before]:before{content:attr(before)}
-
+.expand{font-family:monospace}
 .icon{background:#fff;width:40px;}
 .icon svg{width:100%;height:100%;padding:7px;}
+
+.description{position:relative;}
+.description summary{display:block;cursor:pointer;}
+.description summary:focus{outline:none}
+.description[open]{display:block;animation:open .2s linear}
+.description[open] summary{position:absolute;bottom:0;right:0}
+.description[open] #open{display:none}
+.description #close{display:none}
+.description[open] #close{display:block}
+
+::-webkit-details-marker{display:none}
+@keyframes open {
+0%{opacity:0;transform:translateY(-10px)}
+100%{opacity:1;transform:translateY(0)}
+}
+</style>
