@@ -1,7 +1,7 @@
 <div class="item" data-lang="{{ language }}" data-id="{{ id }}">
+{% set tagsArr = (tags|default("", true) ).split(',') %}
 
 <table>
-{% set tagsArr = (tags|default("", true) ).split(',') %}
 <tr><td colspan="2"><h4>{{ title }}</h4></td>
 <td style="text-align:right"><a href="api/{{ id }}.json">[api]</a></td>
 </tr>
@@ -11,9 +11,9 @@
 <details class="description">
 <summary>
    <span id="open">description</span>
-   <span id="close">close</span>
+   <span id="close">[x]</span>
  </summary>
-{{description|join("\n<br>")}}
+ <div class="description">{% if description is string %}{{ description|e }}{% else %}{{ description|join("<br>\n") }}{% endif %}</div>
 </details>
 </td></tr>
 {% endif %}

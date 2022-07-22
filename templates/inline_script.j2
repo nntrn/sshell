@@ -38,7 +38,7 @@
 
   $$('details').forEach(el => {
     el.addEventListener('click', function () {
-      if(el.getAttribute('open').length > 0 || el.open) {
+      if(el.getAttribute('open') || el.open) {
         el.open = false
       } else { el.open = true }
     })
