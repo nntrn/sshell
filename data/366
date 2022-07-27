@@ -1,0 +1,11 @@
+{
+  "id": "366",
+  "title": "get source of minified javascript script",
+  "modified": "2022-07-22T23:31:43Z",
+  "created": "2022-07-22T23:31:43Z",
+  "guid": "5f6a98fe-837c-4551-8a2e-bf7f51de3937",
+  "cli": "cat file.js.map | tr -d '\\r' | jq -cr '.sourcesContent[]'",
+  "language": "bash",
+  "category": "get",
+  "code_type": "command"
+}

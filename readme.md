@@ -1,6 +1,6 @@
 # data
 
-- [bash](#bash) (301)
+- [bash](#bash) (308)
 - [powershell](#powershell) (25)
 - [python](#python) (12)
 - [sql](#sql) (4)
@@ -14,6 +14,13 @@
 
 ## bash
 
+- [367](data/367): pandoc - for loop to convert files
+- [366](data/366): get source of minified javascript script
+- [365](data/365): dstat - get expensive processes
+- [364](data/364): openssl enc -encoding with iter
+- [363](data/363): openssl-s_client, s_client - SSL/TLS client program
+- [362](data/362): curl awx - view api 
+- [361](data/361): zip - create zip file from list piped in stdin
 - [360](data/360): set allexport - sourcing key/value .env files (without prefixing export)
 - [359](data/359): github release api - upload asset file
 - [358](data/358): docker - get IP address of a running container

@@ -1,0 +1,25 @@
+{
+  "id": "364",
+  "title": "openssl enc -encoding with iter",
+  "modified": "2022-07-22T21:53:10Z",
+  "created": "2022-07-22T21:53:10Z",
+  "guid": "fe574f61-f953-4524-a5d7-fd9669f8416b",
+  "cli": [
+    "$ echo \"password\" | openssl enc -aes256 -k passphrase_aka_salt -base64 -iter 1000",
+    "U2FsdGVkX18vCTkI4x3csNp2FERhbXWY6HNSpyshkRY=",
+    "",
+    "$ echo \"U2FsdGVkX18vCTkI4x3csNp2FERhbXWY6HNSpyshkRY=\" | openssl enc -aes256 -k passphrase_aka_salt -base64 -iter 1000 -d",
+    "password"
+  ],
+  "tags": "security",
+  "example": [
+    "$ echo -n \"password\" | openssl enc -aes256 -k salt -base64 -iter 1000",
+    "U2FsdGVkX18iY8nu2te4KoNXSYW7hzDaCN2uOSQVm6w=",
+    "",
+    "$ echo 'U2FsdGVkX18iY8nu2te4KoNXSYW7hzDaCN2uOSQVm6w=' | openssl enc -d -aes256 -k salt -base64 -iter 1000",
+    "password"
+  ],
+  "language": "bash",
+  "category": "openssl",
+  "code_type": "command"
+}

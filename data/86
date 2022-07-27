@@ -1,16 +1,9 @@
 {
   "id": "86",
   "title": "psql table size",
-  "language": "bash",
-  "category": "psql",
-  "guid": "0c4500e5-64ef-4243-bcd3-45f94a202ded",
-  "url": "",
-  "modified": "2021-12-30T19:44:10Z",
+  "modified": "2022-07-20T04:10:47Z",
   "created": "2021-07-27T04:59:01Z",
-  "tags": [
-    "db"
-  ],
-  "description": [],
+  "guid": "0c4500e5-64ef-4243-bcd3-45f94a202ded",
   "cli": [
     "psql -U awx -d awx -c \"\\dt+\" -P pager=off |",
     "  awk -F \"|\" '{print $2,$5}' |",
@@ -18,6 +11,7 @@
     "  sort -k2 -rh |",
     "  tee /tmp/awx_table_size.txt"
   ],
-  "example": [],
-  "output": []
+  "tags": "db",
+  "language": "bash",
+  "category": "psql"
 }

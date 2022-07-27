@@ -1,0 +1,11 @@
+{
+  "id": "367",
+  "title": "pandoc - for loop to convert files",
+  "modified": "2022-07-23T15:22:11Z",
+  "created": "2022-07-23T15:22:11Z",
+  "guid": "aa56c235-bd9a-4f98-ba81-d2da0132799e",
+  "cli": "for f in *.html; do pandoc \"$f\" -t markdown_mmd-raw_html -o \"${f%.*}.md\"; done",
+  "language": "bash",
+  "category": "pandoc",
+  "code_type": "command"
+}
