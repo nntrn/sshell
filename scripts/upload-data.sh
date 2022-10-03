@@ -5,7 +5,7 @@ cd $(realpath ${0%/*})
 PARENTDIR="$(git rev-parse --show-toplevel)"
 REMOTE_URL=$(git config --get-regexp '^remote.*url' | awk '{print $2}' | head -n 1)
 BRANCH=data
-REPO=$REPO
+REPO=sshell
 
 TMPDIR=$(mktemp -d)
 cat $1 | tr -d '\r' >$TMPDIR/data.json
