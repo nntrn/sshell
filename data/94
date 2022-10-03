@@ -1,18 +1,15 @@
 {
-  "id": "94",
+  "id": 94,
   "title": "sort .bash_history",
-  "language": "bash",
-  "category": "sort",
-  "guid": "e87183c2-86ce-414c-abaa-d5d779a65da3",
-  "url": "",
-  "modified": "2022-01-19T15:49:51Z",
   "created": "2021-08-09T17:52:39Z",
-  "tags": [],
-  "description": [],
-  "cli": [
+  "modified": "2022-01-19T15:49:51Z",
+  "code": [
     "cat .bash_history | grep -vE \"^#[0-9]+\" | sort | uniq -c | sort -k 1 -n | less",
     ""
   ],
-  "example": [],
-  "output": []
+  "example": "",
+  "output": "",
+  "description": "",
+  "language": "bash",
+  "tags": null
 }

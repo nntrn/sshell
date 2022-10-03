@@ -1,18 +1,9 @@
 {
-  "id": "311",
+  "id": 311,
   "title": "git - get remote branches",
-  "language": "bash",
-  "category": "git",
-  "type": "command",
-  "guid": "8ef2771a-ed05-4c26-822a-38e7eaca6abc",
-  "url": "",
-  "modified": "2022-05-11T03:21:21Z",
   "created": "2022-05-11T03:20:46Z",
-  "tags": [
-    "git"
-  ],
-  "description": [],
-  "cli": [
+  "modified": "2022-05-11T03:21:21Z",
+  "code": [
     "git remote show origin | sed -n '/Remote branches/,/Local/p' | grep -v ':' | awk '{print $1}'"
   ],
   "example": [
@@ -38,5 +29,10 @@
     "data",
     "gh-pages",
     "main"
+  ],
+  "description": "",
+  "language": "bash",
+  "tags": [
+    "git"
   ]
 }

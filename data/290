@@ -1,18 +1,9 @@
 {
-  "id": "290",
+  "id": 290,
   "title": "netsh -  Lists all defined aliases",
-  "language": "bash",
-  "category": "netsh",
-  "type": "command",
-  "guid": "44694182-c016-49e5-af9a-5d0a638ebb89",
-  "url": "https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2008-r2-and-2008/cc754753(v=ws.10)",
-  "modified": "2022-05-09T17:34:57Z",
   "created": "2022-04-27T16:24:07Z",
-  "tags": [],
-  "description": [
-    "Network shell (netsh) is a command-line utility that allows you to configure and display the status of various network communications server roles and components after they are installed on computers running Windows Server® 2008 R2 and Windows Server® 2008."
-  ],
-  "cli": [
+  "modified": "2022-05-09T17:34:57Z",
+  "code": [
     "netsh show helper"
   ],
   "example": [
@@ -88,5 +79,14 @@
     "{0BFDC146-56A3-4311-A7D5-7D9953F8326E}  WHHELPER.DLL  winhttp",
     "{B2C0EEF4-CCE5-4F55-934E-ABF60F3DCF56}  WSHELPER.DLL  winsock",
     "{D424E730-1DB7-4287-8C9B-0774F5AD0576}  WLANCFG.DLL   wlan"
-  ]
+  ],
+  "description": [
+    "Network shell (netsh) is a command-line utility that allows you to configure and display the status of various network communications server roles and components after they are installed on computers running Windows Server® 2008 R2 and Windows Server® 2008."
+  ],
+  "language": "bash",
+  "tags": [
+    "windows",
+    "network"
+  ],
+  "url": "https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2008-r2-and-2008/cc754753(v=ws.10)"
 }

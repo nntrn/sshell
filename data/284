@@ -1,21 +1,14 @@
 {
-  "id": "284",
+  "id": 284,
   "title": "systemctl - view status for every loaded service on the system",
-  "language": "bash",
-  "category": "systemctl",
-  "type": "command",
-  "guid": "98bfb78e-785b-426d-8138-a8d605d43265",
-  "url": "https://linuxconfig.org/how-to-use-systemctl-to-list-services-on-systemd-linux",
-  "modified": "2022-04-14T22:21:31Z",
   "created": "2022-04-14T22:15:58Z",
-  "tags": [],
-  "description": [],
-  "cli": [
+  "modified": "2022-04-14T22:21:31Z",
+  "code": [
     "systemctl status --type=service"
   ],
-  "example": [],
+  "example": "",
   "output": [
-    "● awxserver.us.example.com",
+    "● awxnldev01.us.dell.com",
     "    State: running",
     "     Jobs: 0 queued",
     "   Failed: 0 units",
@@ -34,5 +27,9 @@
     "           │ │ ├─2821 /var/lib/awx/venv/awx/bin/python3 /usr/bin/awx-manage run_wsbroadcast",
     "           │ │ ├─2824 nginx: worker process",
     ""
-  ]
+  ],
+  "description": "",
+  "language": "bash",
+  "tags": null,
+  "url": "https://linuxconfig.org/how-to-use-systemctl-to-list-services-on-systemd-linux"
 }

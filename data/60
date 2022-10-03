@@ -1,15 +1,22 @@
 {
-  "id": "60",
+  "id": 60,
   "title": "Resolve warning that bridge-nf-call-iptables is disabled",
-  "language": "bash",
-  "category": "Resolve",
-  "guid": "4d0f2567-8244-449f-97fb-e98db27afadf",
-  "url": "https://docs.oracle.com/en/operating-systems/oracle-linux/docker/docker-issues.html#docker-issue-28396501",
-  "modified": "2021-12-30T19:44:09Z",
   "created": "2021-06-19T07:09:25Z",
-  "tags": [
-    "docker"
+  "modified": "2021-12-30T19:44:09Z",
+  "code": [
+    "modprobe br_netfilter",
+    "sysctl net.bridge.bridge-nf-call-iptables=1",
+    "sysctl net.bridge.bridge-nf-call-ip6tables=1"
   ],
+  "example": [
+    "$ docker info",
+    "...",
+    "",
+    "WARNING: bridge-nf-call-iptables is disabled",
+    "WARNING: bridge-nf-call-ip6tables is disabled",
+    ""
+  ],
+  "output": "",
   "description": [
     "Warning messages may be displayed by Docker Engine when a user performs some actions, such as running docker info if the system kernel on a host system is configured to disable the net.bridge.bridge-nf-call-iptables and net.bridge.bridge-nf-call-ip6tables options. For example, the user may see an error similar to:",
     "",
@@ -27,18 +34,9 @@
     "net.bridge.bridge-nf-call-ip6tables = 1",
     ""
   ],
-  "cli": [
-    "modprobe br_netfilter",
-    "sysctl net.bridge.bridge-nf-call-iptables=1",
-    "sysctl net.bridge.bridge-nf-call-ip6tables=1"
+  "language": "bash",
+  "tags": [
+    "docker"
   ],
-  "example": [
-    "$ docker info",
-    "...",
-    "",
-    "WARNING: bridge-nf-call-iptables is disabled",
-    "WARNING: bridge-nf-call-ip6tables is disabled",
-    ""
-  ],
-  "output": []
+  "url": "https://docs.oracle.com/en/operating-systems/oracle-linux/docker/docker-issues.html#docker-issue-28396501"
 }

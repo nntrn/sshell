@@ -1,18 +1,16 @@
 {
-  "id": "283",
+  "id": 283,
   "title": "journalctl - get entries for service",
-  "language": "bash",
-  "category": "journalctl",
-  "type": "command",
-  "guid": "258d4c0a-7b9d-41c9-bd6e-74e9a63030db",
-  "url": "",
-  "modified": "2022-04-14T03:15:59Z",
   "created": "2022-04-14T03:15:59Z",
-  "tags": [],
-  "description": [],
-  "cli": [
+  "modified": "2022-04-14T03:15:59Z",
+  "code": [
     "journalctl -u  <service>"
   ],
-  "example": " journalctl -u  systemd-logind.service",
-  "output": []
+  "example": [
+    " journalctl -u  systemd-logind.service"
+  ],
+  "output": "",
+  "description": "",
+  "language": "bash",
+  "tags": null
 }

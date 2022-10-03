@@ -1,15 +1,14 @@
 {
-  "id": "245",
+  "id": 245,
   "title": "systemd-escape - escape strings ",
-  "language": "bash",
-  "category": "systemd-escape",
-  "type": "command",
-  "guid": "212183ba-ffde-4b98-b211-a19d8b6d4917",
-  "url": "",
-  "modified": "2022-03-17T00:31:57Z",
   "created": "2022-03-14T22:59:20Z",
-  "tags": [
-    "text"
+  "modified": "2022-03-17T00:31:57Z",
+  "code": [
+    "systemd-escape -u 'Hall\\xc3\\xb6chen\\x2c\\x20Meister'"
+  ],
+  "example": "",
+  "output": [
+    "Hallöchen, Meister"
   ],
   "description": [
     "Escape a single string:",
@@ -34,9 +33,8 @@
     "",
     ""
   ],
-  "cli": [
-    "systemd-escape -u 'Hall\\xc3\\xb6chen\\x2c\\x20Meister'"
-  ],
-  "example": [],
-  "output": "Hallöchen, Meister"
+  "language": "bash",
+  "tags": [
+    "text"
+  ]
 }

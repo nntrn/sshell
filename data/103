@@ -1,19 +1,16 @@
 {
-  "id": "103",
+  "id": 103,
   "title": "compress directory using tar",
-  "language": "bash",
-  "category": "compress",
-  "guid": "b4dedb70-0f14-49da-a188-b5dbfe48f94c",
-  "url": "",
-  "modified": "2022-01-19T00:17:13Z",
   "created": "2021-08-27T23:26:58Z",
-  "tags": [],
-  "description": [],
-  "cli": [
+  "modified": "2022-01-19T00:17:13Z",
+  "code": [
     "tar cjvf image_backup.tar.bz2 dirname",
     "",
     "tar zcvf image_backup.tar.gz dirname"
   ],
-  "example": [],
-  "output": []
+  "example": "",
+  "output": "",
+  "description": "",
+  "language": "bash",
+  "tags": null
 }

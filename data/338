@@ -1,18 +1,15 @@
 {
-  "id": "338",
+  "id": 338,
   "title": "cp - brace expansion to copy/backup file",
-  "language": "bash",
-  "category": "cp",
-  "type": "command",
-  "guid": "aa5b784a-b73a-4c00-b606-7d39e0cf8f99",
-  "url": "https://askubuntu.com/a/962511",
-  "modified": "2022-06-01T23:11:38Z",
   "created": "2022-06-01T01:14:50Z",
-  "tags": [],
-  "description": [],
-  "cli": [
+  "modified": "2022-06-01T23:11:38Z",
+  "code": [
     "cp snippets.json{,.bkp}"
   ],
-  "example": [],
-  "output": []
+  "example": "",
+  "output": "",
+  "description": "",
+  "language": "bash",
+  "tags": null,
+  "url": "https://askubuntu.com/a/962511"
 }

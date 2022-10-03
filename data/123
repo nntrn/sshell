@@ -1,15 +1,9 @@
 {
-  "id": "123",
+  "id": 123,
   "title": "Use awk to display text and insert blank line before",
-  "language": "bash",
-  "category": "Use",
-  "guid": "f4d5ab71-3d74-48c4-b2a3-7eda2c964b4f",
-  "url": "",
-  "modified": "2022-01-19T00:10:24Z",
   "created": "2021-09-13T15:31:41Z",
-  "tags": [],
-  "description": [],
-  "cli": [
+  "modified": "2022-01-19T00:10:24Z",
+  "code": [
     "cat file.txt | awk -F '\\t' '{print \"\\n\"$2,$3}' OFS='\\n'"
   ],
   "example": [
@@ -24,5 +18,8 @@
     "Sensor Monitoring Service",
     "Monitors various sensors in order to expose data and adapt to system and user state.  If this service is stopped or disabled, the display brightness will not adapt to lighting conditions. Stopping this service may affect other system functionality and features as well."
   ],
-  "output": []
+  "output": "",
+  "description": "",
+  "language": "bash",
+  "tags": null
 }

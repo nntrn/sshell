@@ -1,18 +1,9 @@
 {
-  "id": "253",
+  "id": 253,
   "title": "git - get top level directory",
-  "language": "bash",
-  "category": "git",
-  "type": "command",
-  "guid": "a05c557e-2bce-4ea0-b7c0-16ac45b9a9ea",
-  "url": "https://superuser.com/a/1351600",
-  "modified": "2022-05-12T21:08:32Z",
   "created": "2022-03-25T18:30:04Z",
-  "tags": [
-    "git"
-  ],
-  "description": [],
-  "cli": [
+  "modified": "2022-05-12T21:08:32Z",
+  "code": [
     "git rev-parse --show-toplevel"
   ],
   "example": [
@@ -22,5 +13,11 @@
     "$ git rev-parse --show-toplevel",
     "/u01/devops-dbaas"
   ],
-  "output": []
+  "output": "",
+  "description": "",
+  "language": "bash",
+  "tags": [
+    "git"
+  ],
+  "url": "https://superuser.com/a/1351600"
 }

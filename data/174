@@ -1,21 +1,18 @@
 {
-  "id": "174",
+  "id": 174,
   "title": "curl vault secrets",
-  "language": "bash",
-  "category": "curl",
-  "guid": "23e05e93-898c-428a-8cd1-5a7863f33f85",
-  "url": "",
-  "modified": "2022-03-03T20:46:35Z",
   "created": "2021-12-29T02:15:12Z",
-  "tags": [
-    "vault"
-  ],
-  "description": [],
-  "cli": [
+  "modified": "2022-03-03T20:46:35Z",
+  "code": [
     "VAULT_TOKEN=...",
     "",
-    "curl -H \"X-Vault-Namespace: infrastructure/database/engineering/tools/dbaasv2/dbaasv2/\" -H \"X-Vault-Request: true\" -H \"X-Vault-Token: $VAULT_TOKEN\" https://hcvault-nonprod.example.com/v1/kv/data/SERVICE_ACCOUNT/MONGO/NONPROD"
+    "curl -H \"X-Vault-Namespace: infrastructure/database/engineering/tools/dbaasv2/dbaasv2/\" -H \"X-Vault-Request: true\" -H \"X-Vault-Token: $VAULT_TOKEN\" https://hcvault-nonprod.dell.com/v1/kv/data/SERVICE_ACCOUNT/MONGO/NONPROD"
   ],
-  "example": [],
-  "output": []
+  "example": "",
+  "output": "",
+  "description": "",
+  "language": "bash",
+  "tags": [
+    "vault"
+  ]
 }

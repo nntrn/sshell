@@ -1,16 +1,9 @@
 {
-  "id": "315",
+  "id": 315,
   "title": "rpm - get all installed doc files for packages",
-  "language": "bash",
-  "category": "rpm",
-  "type": "command",
-  "guid": "e0bf2033-dd8a-4c20-b7e7-3e93c61b1be0",
-  "url": "",
-  "modified": "2022-05-12T23:57:41Z",
   "created": "2022-05-12T23:57:41Z",
-  "tags": [],
-  "description": [],
-  "cli": [
+  "modified": "2022-05-12T23:57:41Z",
+  "code": [
     "rpm -qa -d"
   ],
   "example": [
@@ -25,5 +18,8 @@
     "/usr/share/man/man1/gmake.1.gz",
     "/usr/share/man/man1/make.1.gz"
   ],
-  "output": []
+  "output": "",
+  "description": "",
+  "language": "bash",
+  "tags": null
 }

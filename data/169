@@ -1,16 +1,9 @@
 {
-  "id": "169",
+  "id": 169,
   "title": "set existing variables only",
-  "language": "bash",
-  "category": "set",
-  "type": "reference",
-  "guid": "50746400-aecd-4550-b4cf-3e1457f9076b",
-  "url": "",
-  "modified": "2022-03-17T00:28:27Z",
   "created": "2021-12-03T00:14:58Z",
-  "tags": [],
-  "description": [],
-  "cli": [
+  "modified": "2022-03-17T00:28:27Z",
+  "code": [
     ": ${SETLANG=\"env LANG= LC_MESSAGES= LC_ALL= LANGUAGE=\"}",
     ": ${MAKEINFO=\"makeinfo\"}",
     ": ${TEXI2DVI=\"texi2dvi\"}",
@@ -21,6 +14,9 @@
     ": ${PERL='perl'}",
     ": ${TEXI2HTML=\"texi2html\"}"
   ],
-  "example": [],
-  "output": []
+  "example": "",
+  "output": "",
+  "description": "",
+  "language": "bash",
+  "tags": null
 }

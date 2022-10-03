@@ -1,10 +1,13 @@
 {
-  "id": "343",
+  "id": 343,
   "title": "gitlab - clone using personal token",
-  "modified": "2022-06-20T16:10:26Z",
   "created": "2022-06-20T16:10:26Z",
-  "guid": "7c3153c6-baf0-4786-9869-2c52a48b26bc",
-  "cli": "git clone https://oauth2:personal_token@gitlab.com/username/project.git ",
+  "modified": "2022-06-20T16:10:26Z",
+  "code": [
+    "git clone https://oauth2:personal_token@gitlab.com/username/project.git "
+  ],
+  "example": "",
+  "output": "",
   "description": [
     "update git config file:",
     "",
@@ -14,8 +17,10 @@
     "  fetch = +refs/heads/*:refs/remotes/origin/*",
     "```"
   ],
-  "url": "https://dev.to/abbazs/how-to-access-gitlab-from-git-cli-using-personal-access-token-2gh0",
   "language": "bash",
-  "category": "gitlab",
-  "code_type": "command"
+  "tags": [
+    "api",
+    "git"
+  ],
+  "url": "https://dev.to/abbazs/how-to-access-gitlab-from-git-cli-using-personal-access-token-2gh0"
 }

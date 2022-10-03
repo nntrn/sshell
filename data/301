@@ -1,14 +1,13 @@
 {
-  "id": "301",
+  "id": 301,
   "title": "find - search files modified in last 24 hours",
-  "language": "bash",
-  "category": "find",
-  "type": "command",
-  "guid": "5fb3c036-1908-453f-8e93-ebed078410db",
-  "url": "",
-  "modified": "2022-05-03T18:55:01Z",
   "created": "2022-05-03T18:55:01Z",
-  "tags": [],
+  "modified": "2022-05-03T18:55:01Z",
+  "code": [
+    "find $HOME -mtime 0"
+  ],
+  "example": "",
+  "output": "",
   "description": [
     "Search for files in your home directory which have been modified in the last twenty-four hours. ",
     "This command works this way because the time since each file was last modified is divided by 24 hours and any remainder is discarded. ",
@@ -16,9 +15,6 @@
     "",
     ""
   ],
-  "cli": [
-    "find $HOME -mtime 0"
-  ],
-  "example": [],
-  "output": []
+  "language": "bash",
+  "tags": null
 }

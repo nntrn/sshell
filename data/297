@@ -1,16 +1,9 @@
 {
-  "id": "297",
+  "id": 297,
   "title": "curl - search dictionaries ",
-  "language": "bash",
-  "category": "curl",
-  "type": "command",
-  "guid": "da567996-3882-4be8-b117-f850d48bedef",
-  "url": "https://csonuryilmaz.github.io/curl/dict/2018/03/25/search-dictionary-from-command-line-(part1).html",
-  "modified": "2022-05-03T09:05:14Z",
   "created": "2022-05-03T09:05:14Z",
-  "tags": [],
-  "description": [],
-  "cli": [
+  "modified": "2022-05-03T09:05:14Z",
+  "code": [
     "# list dictionaries",
     "curl dict://dict.org/show:db",
     "",
@@ -18,7 +11,7 @@
     "curl dict://dict.org/d:computer:fd-eng-tur",
     ""
   ],
-  "example": [],
+  "example": "",
   "output": [
     "$ curl dict://dict.org/d:nfs:foldoc",
     "220 dict.dict.org dictd 1.12.1/rf on Linux 4.19.0-10-amd64 <auth.mime> <113630767.10835.1651568641@dict.dict.org>",
@@ -216,5 +209,9 @@
     "250 ok",
     "221 bye [d/m/c = 0/0/0; 0.000r 0.000u 0.000s]",
     ""
-  ]
+  ],
+  "description": "",
+  "language": "bash",
+  "tags": null,
+  "url": "https://csonuryilmaz.github.io/curl/dict/2018/03/25/search-dictionary-from-command-line-(part1).html"
 }

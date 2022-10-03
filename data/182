@@ -1,36 +1,14 @@
 {
-  "id": "182",
+  "id": 182,
   "title": "type - display information about command",
-  "language": "bash",
-  "category": "type",
-  "guid": "7209ccf6-1723-4e3a-a64e-c7c096f43512",
-  "url": "",
-  "modified": "2022-03-17T00:26:45Z",
   "created": "2022-01-04T19:28:06Z",
-  "tags": [
-    "shell"
-  ],
-  "description": [
-    "Options:",
-    "  -a        display all locations containing an executable named NAME;",
-    "            includes aliases, builtins, and functions, if and only if",
-    "            the `-p' option is not also used",
-    "  -f        suppress shell function lookup",
-    "  -P        force a PATH search for each NAME, even if it is an alias,",
-    "            builtin, or function, and returns the name of the disk file",
-    "            that would be executed",
-    "  -p        returns either the name of the disk file that would be executed,",
-    "            or nothing if `type -t NAME' would not return `file'",
-    "  -t        output a single word which is one of `alias', `keyword',",
-    "            `function', `builtin', `file' or `', if NAME is an alias,",
-    "            shell reserved word, shell function, shell builtin, disk file,",
-    "            or not found, respectively",
-    ""
-  ],
-  "cli": [
+  "modified": "2022-03-17T00:26:45Z",
+  "code": [
     "type"
   ],
-  "example": "$ type cd_func",
+  "example": [
+    "$ type cd_func"
+  ],
   "output": [
     "cd_func is a function",
     "cd_func ()",
@@ -68,5 +46,26 @@
     "    return 0",
     "}",
     ""
+  ],
+  "description": [
+    "Options:",
+    "  -a        display all locations containing an executable named NAME;",
+    "            includes aliases, builtins, and functions, if and only if",
+    "            the `-p' option is not also used",
+    "  -f        suppress shell function lookup",
+    "  -P        force a PATH search for each NAME, even if it is an alias,",
+    "            builtin, or function, and returns the name of the disk file",
+    "            that would be executed",
+    "  -p        returns either the name of the disk file that would be executed,",
+    "            or nothing if `type -t NAME' would not return `file'",
+    "  -t        output a single word which is one of `alias', `keyword',",
+    "            `function', `builtin', `file' or `', if NAME is an alias,",
+    "            shell reserved word, shell function, shell builtin, disk file,",
+    "            or not found, respectively",
+    ""
+  ],
+  "language": "bash",
+  "tags": [
+    "shell"
   ]
 }

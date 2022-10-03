@@ -1,17 +1,15 @@
 {
-  "id": "125",
+  "id": 125,
   "title": "print files with timestamp",
-  "language": "bash",
-  "category": "print",
-  "guid": "fd7db8ce-4238-49aa-9537-a6da4d3ef3a1",
-  "url": "https://stackoverflow.com/a/44415319",
-  "modified": "2022-01-19T00:09:53Z",
   "created": "2021-09-15T19:07:05Z",
-  "tags": [],
-  "description": [],
-  "cli": [
+  "modified": "2022-01-19T00:09:53Z",
+  "code": [
     " find . -type f -printf '%TFT%TT %p\\n'"
   ],
-  "example": [],
-  "output": []
+  "example": "",
+  "output": "",
+  "description": "",
+  "language": "bash",
+  "tags": null,
+  "url": "https://stackoverflow.com/a/44415319"
 }

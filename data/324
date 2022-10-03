@@ -1,18 +1,9 @@
 {
-  "id": "324",
+  "id": 324,
   "title": "awk - remove duplicates without sorting",
-  "language": "bash",
-  "category": "awk",
-  "type": "command",
-  "guid": "4d89a0d3-a2fa-4356-a58b-021d1568c6ab",
-  "url": "",
-  "modified": "2022-05-25T08:47:01Z",
   "created": "2022-05-25T08:47:01Z",
-  "tags": [],
-  "description": [
-    "Use awk to remove duplicate lines if sorting is not needed. It's a lot faster "
-  ],
-  "cli": [
+  "modified": "2022-05-25T08:47:01Z",
+  "code": [
     "# from file",
     "awk '!a[$0]++'  file.txt",
     "",
@@ -24,5 +15,10 @@
     "hello",
     "hi"
   ],
-  "output": []
+  "output": "",
+  "description": [
+    "Use awk to remove duplicate lines if sorting is not needed. It's a lot faster "
+  ],
+  "language": "bash",
+  "tags": null
 }

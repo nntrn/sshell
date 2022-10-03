@@ -1,13 +1,17 @@
 {
-  "id": "129",
+  "id": 129,
   "title": "password generator",
-  "language": "bash",
-  "category": "password",
-  "guid": "0908fd70-dee2-414a-b3d3-838042620cfe",
-  "url": "",
-  "modified": "2022-03-03T21:05:57Z",
   "created": "2021-09-22T02:12:08Z",
-  "tags": [],
+  "modified": "2022-03-03T21:05:57Z",
+  "code": [
+    "mkpasswd -l 15 -d 3 -C 5"
+  ],
+  "example": [
+    "$ mkpasswd -l 20 -d 5 -C 3",
+    "p10i5nzya3Ebdlj,8XLf",
+    ""
+  ],
+  "output": "",
   "description": [
     "The -l flag defines the length of the password.  The default is 9.  The following example  creates  a  20",
     "character password.",
@@ -28,13 +32,6 @@
     "The -s flag defines the minimum number of special characters that must be in the password.   The  default",
     "is 1."
   ],
-  "cli": [
-    "mkpasswd -l 15 -d 3 -C 5"
-  ],
-  "example": [
-    "$ mkpasswd -l 20 -d 5 -C 3",
-    "p10i5nzya3Ebdlj,8XLf",
-    ""
-  ],
-  "output": []
+  "language": "bash",
+  "tags": null
 }

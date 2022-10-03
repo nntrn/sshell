@@ -1,19 +1,13 @@
 {
-  "id": "29",
+  "id": 29,
   "title": "get list of most used commands",
-  "language": "bash",
-  "category": "get",
-  "guid": "9162e9cb-858a-4b10-8f70-795b087a5b63",
-  "url": "",
-  "modified": "2021-12-30T19:44:09Z",
   "created": "2021-03-31T00:14:14Z",
-  "tags": [],
-  "description": [],
-  "cli": [
+  "modified": "2021-12-30T19:44:09Z",
+  "code": [
     "COLUMN=4",
     "history | awk '{a[$COLUMN]++}END{for(i in a){print a[i] \" \" i}}' | sort -rn | head"
   ],
-  "example": [],
+  "example": "",
   "output": [
     "149 ls",
     "64 cat",
@@ -25,5 +19,8 @@
     "22 echo",
     "19 myproxy",
     "19 if"
-  ]
+  ],
+  "description": "",
+  "language": "bash",
+  "tags": null
 }

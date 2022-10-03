@@ -1,10 +1,13 @@
 {
-  "id": "362",
+  "id": 362,
   "title": "curl awx - view api ",
-  "modified": "2022-07-20T19:40:34Z",
   "created": "2022-07-18T23:08:37Z",
-  "guid": "35d58334-d9b3-43b0-b516-c6989bc6cb52",
-  "cli": "curl -s -k -u \"admin:password\" https://awxserver.example.com/api/v2/me/ | python -m json.tool",
+  "modified": "2022-07-20T19:40:34Z",
+  "code": [
+    "curl -s -k -u \"admin:password\" https://awxserver.example.com/api/v2/me/ | python -m json.tool",
+    ""
+  ],
+  "example": "",
   "output": [
     "{",
     "    \"count\": 1,",
@@ -47,9 +50,13 @@
     "            \"auth\": []",
     "        }",
     "    ]",
-    "}"
+    "}",
+    ""
   ],
+  "description": "",
   "language": "bash",
-  "category": "curl",
-  "code_type": "command"
+  "tags": [
+    "awx",
+    "api"
+  ]
 }

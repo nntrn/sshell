@@ -1,15 +1,9 @@
 {
-  "id": "207",
+  "id": 207,
   "title": "build json using jq",
-  "language": "bash",
-  "category": "build",
-  "guid": "0499d2c2-4976-4dfb-a1b1-7119132d22c1",
-  "url": "",
-  "modified": "2022-02-05T08:56:09Z",
   "created": "2022-02-05T08:56:09Z",
-  "tags": [],
-  "description": [],
-  "cli": [
+  "modified": "2022-02-05T08:56:09Z",
+  "code": [
     "str='delete delete modified other other other'",
     "lstype=($(echo \"$str\"))",
     "echo '{}' > files.json",
@@ -18,7 +12,7 @@
     "  cat files.json | jq \".$i[.$i|length] |= . + {\\\"date\\\": \\\"$(date +%F%X)\\\"}\" >files.json",
     "done"
   ],
-  "example": [],
+  "example": "",
   "output": [
     "{",
     "  \"delete\": [",
@@ -47,5 +41,8 @@
     "  ]",
     "}",
     ""
-  ]
+  ],
+  "description": "",
+  "language": "bash",
+  "tags": null
 }

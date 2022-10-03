@@ -1,22 +1,9 @@
 {
-  "id": "319",
+  "id": 319,
   "title": "grep - display lines in file1 that aren't in file2 (similar to comm)",
-  "language": "bash",
-  "category": "grep",
-  "type": "command",
-  "guid": "47447d4c-baad-4a55-9974-664c1f042564",
-  "url": "https://stackoverflow.com/a/72278813/7460613",
-  "modified": "2022-05-17T19:56:35Z",
   "created": "2022-05-17T19:56:35Z",
-  "tags": [],
-  "description": [
-    "Options are:",
-    "-v: Selected lines are those not matching any of the specified patterns",
-    "-F: Fixed string search",
-    "-x: Exact match",
-    "-f: Use a file for patterns"
-  ],
-  "cli": [
+  "modified": "2022-05-17T19:56:35Z",
+  "code": [
     "grep -vFxf file1.txt file2.txt"
   ],
   "example": [
@@ -38,5 +25,15 @@
     "4",
     ""
   ],
-  "output": []
+  "output": "",
+  "description": [
+    "Options are:",
+    "-v: Selected lines are those not matching any of the specified patterns",
+    "-F: Fixed string search",
+    "-x: Exact match",
+    "-f: Use a file for patterns"
+  ],
+  "language": "bash",
+  "tags": null,
+  "url": "https://stackoverflow.com/a/72278813/7460613"
 }

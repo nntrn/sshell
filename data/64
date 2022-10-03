@@ -1,23 +1,15 @@
 {
-  "id": "64",
+  "id": 64,
   "title": "view workstation details",
-  "language": "bash",
-  "category": "view",
-  "guid": "a442d014-3af0-4907-b609-feb30db74220",
-  "url": "",
-  "modified": "2021-12-30T19:44:09Z",
   "created": "2021-06-30T13:47:02Z",
-  "tags": [
-    "nntrn"
-  ],
-  "description": [],
-  "cli": [
+  "modified": "2021-12-30T19:44:09Z",
+  "code": [
     "net config workstation"
   ],
-  "example": [],
+  "example": "",
   "output": [
     "Computer name                        \\\\W106697SN2",
-    "Full Computer name                   W106697SN2.aus.amer.example.com",
+    "Full Computer name                   W106697SN2.aus.amer.dell.com",
     "User name                            Annie_Tran",
     "",
     "Workstation active on",
@@ -28,12 +20,17 @@
     "Software version                     Windows 10 Enterprise",
     "",
     "Workstation domain                   AMERICAS",
-    "Workstation Domain DNS Name          amer.example.com",
+    "Workstation Domain DNS Name          amer.dell.com",
     "Logon domain                         AMERICAS",
     "",
     "COM Open Timeout (sec)               0",
     "COM Send Count (byte)                16",
     "COM Send Timeout (msec)              250",
     "The command completed successfully."
+  ],
+  "description": "",
+  "language": "bash",
+  "tags": [
+    "dell"
   ]
 }

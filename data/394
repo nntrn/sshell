@@ -1,0 +1,21 @@
+{
+  "id": 394,
+  "title": "jq - select objects with given key name",
+  "created": "2022-09-16T00:57:53Z",
+  "modified": "2022-09-16T00:57:53Z",
+  "code": [
+    "jq '..|objects|select(has(\"updateDate\"))|.updateDate'"
+  ],
+  "example": [
+    "$ curl -s 'https://api.github.com/repos/ansible/awx/commits?per_page=3' | jq -r '..|objects|select(has(\"committer\"))|([.author.date,.author.name,.message]|join(\"\\t\"))'",
+    "",
+    "2022-09-15T20:28:56Z    Sarah Akus  Merge pull request #12778 from keithjgrant/12542-schedule-exceptions",
+    "2022-09-15T16:37:03Z    Keith J. Grant  adjust DetailList spacing when two appear in succession",
+    "2022-09-14T22:33:00Z    Keith J. Grant  improve frequency validation performance"
+  ],
+  "output": "",
+  "description": "",
+  "language": "bash",
+  "tags": null,
+  "url": "https://stackoverflow.com/a/53676048"
+}

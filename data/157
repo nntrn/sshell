@@ -1,19 +1,17 @@
 {
-  "id": "157",
+  "id": 157,
   "title": "ssh-keygen - generate public key from prviate key",
-  "language": "bash",
-  "category": "ssh-keygen",
-  "guid": "10827a56-d7c0-4371-9972-8e95dc89e9b0",
-  "url": "https://blog.tinned-software.net/generate-public-ssh-key-from-private-ssh-key/",
-  "modified": "2022-03-17T00:30:13Z",
   "created": "2021-11-05T21:37:54Z",
+  "modified": "2022-03-17T00:30:13Z",
+  "code": [
+    "ssh-keygen -y -f ~/.ssh/windows_login"
+  ],
+  "example": "",
+  "output": "",
+  "description": "",
+  "language": "bash",
   "tags": [
     "devops"
   ],
-  "description": [],
-  "cli": [
-    "ssh-keygen -y -f ~/.ssh/windows_login"
-  ],
-  "example": [],
-  "output": []
+  "url": "https://blog.tinned-software.net/generate-public-ssh-key-from-private-ssh-key/"
 }

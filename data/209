@@ -1,19 +1,17 @@
 {
-  "id": "209",
+  "id": 209,
   "title": "check memory usage per process",
-  "language": "bash",
-  "category": "check",
-  "guid": "f74242b6-6877-4a15-97b0-bae599b5637c",
-  "url": "https://www.golinuxcloud.com/check-memory-usage-per-process-linux/",
-  "modified": "2022-02-10T09:51:17Z",
   "created": "2022-02-10T09:51:17Z",
-  "tags": [],
+  "modified": "2022-02-10T09:51:17Z",
+  "code": [
+    "ps -eo pid,tid,class,rtprio,stat,vsz,rss,comm"
+  ],
+  "example": "",
+  "output": "",
   "description": [
     "These simple commands give you a feel of the memory usage and give the first indication that you have a memory leak when you see that the Rss of a process keeps on increasing. However, they are not very accurate in the absolute measurements of memory usage."
   ],
-  "cli": [
-    "ps -eo pid,tid,class,rtprio,stat,vsz,rss,comm"
-  ],
-  "example": [],
-  "output": []
+  "language": "bash",
+  "tags": null,
+  "url": "https://www.golinuxcloud.com/check-memory-usage-per-process-linux/"
 }

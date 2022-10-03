@@ -1,19 +1,17 @@
 {
-  "id": "166",
+  "id": 166,
   "title": "Get commits that have deleted files",
-  "language": "bash",
-  "category": "Get",
-  "guid": "13d692e8-4665-4675-8239-1d957564a933",
-  "url": "https://stackoverflow.com/a/953573",
-  "modified": "2022-01-03T06:11:31Z",
   "created": "2021-11-18T18:38:39Z",
+  "modified": "2022-01-03T06:11:31Z",
+  "code": [
+    "git log --diff-filter=D --summary"
+  ],
+  "example": "",
+  "output": "",
+  "description": "",
+  "language": "bash",
   "tags": [
     "git"
   ],
-  "description": [],
-  "cli": [
-    "git log --diff-filter=D --summary"
-  ],
-  "example": [],
-  "output": []
+  "url": "https://stackoverflow.com/a/953573"
 }

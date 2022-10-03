@@ -1,23 +1,22 @@
 {
-  "id": "252",
+  "id": 252,
   "title": "prettier - alias for stdin formatting for xml files",
-  "language": "bash",
-  "category": "prettier",
-  "type": "command",
-  "guid": "9ad18d15-12a2-489c-bb20-ad0e4457e783",
-  "url": "https://github.com/prettier/plugin-xml",
-  "modified": "2022-03-24T22:13:31Z",
   "created": "2022-03-23T21:25:43Z",
-  "tags": [
-    "linter"
+  "modified": "2022-03-24T22:13:31Z",
+  "code": [
+    "alias prettier-xml='prettier --bracket-same-line true --xml-whitespace-sensitivity ignore --tab-width 2 --print-width 120 --stdin-filepath  *.xml'"
   ],
+  "example": [
+    "cat file.xml | prettier-xml"
+  ],
+  "output": "",
   "description": [
     "prereq:",
     "npm install -g  @prettier/plugin-xml prettier"
   ],
-  "cli": [
-    "alias prettier-xml='prettier --bracket-same-line true --xml-whitespace-sensitivity ignore --tab-width 2 --print-width 120 --stdin-filepath  *.xml'"
+  "language": "bash",
+  "tags": [
+    "linter"
   ],
-  "example": "cat file.xml | prettier-xml",
-  "output": []
+  "url": "https://github.com/prettier/plugin-xml"
 }

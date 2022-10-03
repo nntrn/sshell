@@ -1,15 +1,13 @@
 {
-  "id": "232",
+  "id": 232,
   "title": "gnu tools",
-  "language": "bash",
-  "category": "gnu",
-  "guid": "075ba58f-ccf5-43d3-81db-41830353d5e4",
-  "url": "",
-  "modified": "2022-03-03T17:11:18Z",
   "created": "2022-03-03T17:11:18Z",
-  "tags": [
-    "reference"
+  "modified": "2022-03-03T17:11:18Z",
+  "code": [
+    "man dstat"
   ],
+  "example": "",
+  "output": "",
   "description": [
     "   Performance tools",
     "       ifstat(1), iftop(8), iostat(1), mpstat(1), netstat(1), nfsstat(1), nstat, vmstat(1), xosview(1)",
@@ -43,9 +41,8 @@
     "",
     ""
   ],
-  "cli": [
-    "man dstat"
-  ],
-  "example": [],
-  "output": []
+  "language": "bash",
+  "tags": [
+    "reference"
+  ]
 }

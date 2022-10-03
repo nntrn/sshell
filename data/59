@@ -1,18 +1,12 @@
 {
-  "id": "59",
+  "id": 59,
   "title": "Get size of mounted filesystems",
-  "language": "bash",
-  "category": "Get",
-  "guid": "88ad5665-49f6-4271-8ff7-eedfff0cd01f",
-  "url": "",
-  "modified": "2021-12-30T19:44:09Z",
   "created": "2021-06-18T16:19:38Z",
-  "tags": [],
-  "description": [],
-  "cli": [
+  "modified": "2021-12-30T19:44:09Z",
+  "code": [
     "df --block-size=1 | numfmt --field 2 --header --to=iec"
   ],
-  "example": [],
+  "example": "",
   "output": [
     "Filesystem                                                         1B-blocks         Used    Available Use% Mounted on",
     "devtmpfs                                                                 12G            0  12533854208   0% /dev",
@@ -34,5 +28,8 @@
     "tmpfs                                                                   2.4G            0   2509221888   0% /run/user/0",
     "tmpfs                                                                   2.4G            0   2509221888   0% /run/user/1000",
     ""
-  ]
+  ],
+  "description": "",
+  "language": "bash",
+  "tags": null
 }

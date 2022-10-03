@@ -1,19 +1,16 @@
 {
-  "id": "34",
+  "id": 34,
   "title": "print name + content",
-  "language": "bash",
-  "category": "print",
-  "guid": "ebb90c0a-bbaf-4765-afdb-b1632b256b91",
-  "url": "",
-  "modified": "2021-12-30T19:44:09Z",
   "created": "2021-04-13T23:55:19Z",
-  "tags": [
-    "info"
-  ],
-  "description": [],
-  "cli": [
+  "modified": "2021-12-30T19:44:09Z",
+  "code": [
     "find . -type f -print -exec cat {} \\; "
   ],
-  "example": [],
-  "output": []
+  "example": "",
+  "output": "",
+  "description": "",
+  "language": "bash",
+  "tags": [
+    "info"
+  ]
 }

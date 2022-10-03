@@ -1,19 +1,17 @@
 {
-  "id": "238",
+  "id": 238,
   "title": "openssl - verify checksum",
-  "language": "bash",
-  "category": "openssl",
-  "guid": "a77d916d-8794-4735-a0a2-4a7773b3f6b2",
-  "url": "https://raw.githubusercontent.com/helm/helm/master/scripts/get-helm-3",
-  "modified": "2022-03-16T19:32:35Z",
   "created": "2022-03-04T18:32:12Z",
+  "modified": "2022-03-16T19:32:35Z",
+  "code": [
+    "openssl sha1 -sha256 file.txt | awk '{print $2}'"
+  ],
+  "example": "",
+  "output": "",
+  "description": "",
+  "language": "bash",
   "tags": [
     "security"
   ],
-  "description": [],
-  "cli": [
-    "openssl sha1 -sha256 file.txt | awk '{print $2}'"
-  ],
-  "example": [],
-  "output": []
+  "url": "https://raw.githubusercontent.com/helm/helm/master/scripts/get-helm-3"
 }

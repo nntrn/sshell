@@ -1,26 +1,14 @@
 {
-  "id": "289",
+  "id": 289,
   "title": "pidstat - display global page faults and memory statistics",
-  "language": "bash",
-  "category": "pidstat",
-  "type": "command",
-  "guid": "1dd22def-5759-451f-9eb0-1595c09ac8d6",
-  "url": "http://man.he.net/man1/pidstat",
-  "modified": "2022-04-22T07:03:15Z",
   "created": "2022-04-22T07:03:15Z",
-  "tags": [],
-  "description": [
-    "pidstat -C \"fox|bird\" -r -p ALL",
-    "  Display global page faults and memory  statistics  for  all  the",
-    "  processes  whose  command  name  includes  the  string  \"fox\" or",
-    "  \"bird\"."
-  ],
-  "cli": [
+  "modified": "2022-04-22T07:03:15Z",
+  "code": [
     "pidstat -C \"awx | postgres\" -r -p ALL"
   ],
-  "example": [],
+  "example": "",
   "output": [
-    "Linux 5.4.17-2136.304.4.1.el7uek.x86_64 (awxserver.us.example.com)       04/22/2022      _x86_64_        (2 CPU)",
+    "Linux 5.4.17-2136.304.4.1.el7uek.x86_64 (awxplprod02.us.dell.com)       04/22/2022      _x86_64_        (2 CPU)",
     "",
     "02:01:07 AM   UID       PID  minflt/s  majflt/s     VSZ    RSS   %MEM  Command",
     "02:01:07 AM     0     10804      0.09      0.00       0      0   0.00  awx-manage",
@@ -53,5 +41,14 @@
     "02:01:07 AM   999     71903      0.02      0.00  215988  20760   0.09  postgres",
     "02:01:07 AM   999     71904      0.01      0.00  214868  14408   0.06  postgres",
     ""
-  ]
+  ],
+  "description": [
+    "pidstat -C \"fox|bird\" -r -p ALL",
+    "  Display global page faults and memory  statistics  for  all  the",
+    "  processes  whose  command  name  includes  the  string  \"fox\" or",
+    "  \"bird\"."
+  ],
+  "language": "bash",
+  "tags": null,
+  "url": "http://man.he.net/man1/pidstat"
 }

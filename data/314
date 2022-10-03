@@ -1,16 +1,9 @@
 {
-  "id": "314",
+  "id": 314,
   "title": "xargs - pretty print process environment",
-  "language": "bash",
-  "category": "xargs",
-  "type": "command",
-  "guid": "92568c2f-4bf4-4cdf-b2dd-e2424abb6c99",
-  "url": "",
-  "modified": "2022-05-12T21:52:49Z",
   "created": "2022-05-12T21:52:49Z",
-  "tags": [],
-  "description": [],
-  "cli": [
+  "modified": "2022-05-12T21:52:49Z",
+  "code": [
     "xargs -n 1 -0 </proc/$PID/environ"
   ],
   "example": [
@@ -30,5 +23,8 @@
     "XDG_SESSION_ID=c20",
     ""
   ],
-  "output": []
+  "output": "",
+  "description": "",
+  "language": "bash",
+  "tags": null
 }

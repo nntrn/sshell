@@ -1,20 +1,17 @@
 {
-  "id": "281",
+  "id": 281,
   "title": "systemd - files and tools that manage the Linux startup sequence",
-  "language": "bash",
-  "category": "systemd",
-  "type": "command",
-  "guid": "559ba8fc-8fd5-4655-b812-650f0ba911fa",
-  "url": "https://opensource.com/article/20/5/systemd-startup",
-  "modified": "2022-04-14T02:09:40Z",
   "created": "2022-04-14T02:09:40Z",
+  "modified": "2022-04-14T02:09:40Z",
+  "code": [
+    "ll /etc/systemd/system/multi-user.target.wants"
+  ],
+  "example": "",
+  "output": "",
+  "description": "",
+  "language": "bash",
   "tags": [
     "service"
   ],
-  "description": [],
-  "cli": [
-    "ll /etc/systemd/system/multi-user.target.wants"
-  ],
-  "example": [],
-  "output": []
+  "url": "https://opensource.com/article/20/5/systemd-startup"
 }

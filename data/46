@@ -1,18 +1,15 @@
 {
-  "id": "46",
+  "id": 46,
   "title": "umask create file with permissions",
-  "language": "bash",
-  "category": "umask",
-  "guid": "462309eb-6d71-4529-ae64-6e80b9f59072",
-  "url": "",
-  "modified": "2021-12-30T19:44:09Z",
   "created": "2021-05-06T23:59:24Z",
-  "tags": [],
-  "description": [],
-  "cli": [
-    "(umask 077; touch file)  # creates a 600 (rw-------) file",
-    "(umask 002; touch file)  # creates a 664 (rw-rw-r--) file"
+  "modified": "2021-12-30T19:44:09Z",
+  "code": [
+    "(umask 077; touch file)  # creates a 600 (rw-------) file",
+    "(umask 002; touch file)  # creates a 664 (rw-rw-r--) file"
   ],
-  "example": [],
-  "output": []
+  "example": "",
+  "output": "",
+  "description": "",
+  "language": "bash",
+  "tags": null
 }

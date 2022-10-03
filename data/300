@@ -1,21 +1,14 @@
 {
-  "id": "300",
+  "id": 300,
   "title": "powershell - get all Get- commands",
-  "language": "bash",
-  "category": "powershell",
-  "type": "command",
-  "guid": "147b9be8-b3f9-43d1-bfab-83f65da62979",
-  "url": "",
-  "modified": "2022-05-09T17:34:41Z",
   "created": "2022-05-03T18:07:51Z",
-  "tags": [],
-  "description": [],
-  "cli": [
+  "modified": "2022-05-09T17:34:41Z",
+  "code": [
     "#C:/Windows/System32/WindowsPowerShell/v1.0/Modules",
     "find . -type f -name \"*.psd1\" -print -exec cat {} \\; | tr -d '\\r' | tr -d '\\0' | grep -Eo 'Get-[a-zA-Z\\-]+' | sort -u | tee ~/all_powershell_get.txt",
     ""
   ],
-  "example": [],
+  "example": "",
   "output": [
     "Get-Acl",
     "Get-ADAccountAuthorizationGroup",
@@ -666,5 +659,8 @@
     "Get-WUIsPendingReboot",
     "Get-WULastInstallationDate",
     "Get-WULastScanSuccessDate"
-  ]
+  ],
+  "description": "",
+  "language": "bash",
+  "tags": null
 }

@@ -1,18 +1,12 @@
 {
-  "id": "195",
+  "id": 195,
   "title": "List available powershell commands",
-  "language": "powershell",
-  "category": "List",
-  "guid": "388332e9-fc6f-4f44-8302-d1a7155433e7",
-  "url": "https://stackoverflow.com/a/34537239/7460613",
-  "modified": "2022-01-27T21:42:54Z",
   "created": "2022-01-27T21:42:54Z",
-  "tags": [],
-  "description": [],
-  "cli": [
+  "modified": "2022-01-27T21:42:54Z",
+  "code": [
     "gcm -module DISM"
   ],
-  "example": [],
+  "example": "",
   "output": [
     "CommandType     Name                                               Version    Source",
     "-----------     ----                                               -------    ------",
@@ -42,5 +36,9 @@
     "Cmdlet          Dismount-WindowsImage                              3.0        Dism",
     "Cmdlet          Enable-WindowsOptionalFeature                      3.0        Dism",
     "Cmdlet          Expand-WindowsCustomDataImage                      3.0        Dism"
-  ]
+  ],
+  "description": "",
+  "language": "powershell",
+  "tags": null,
+  "url": "https://stackoverflow.com/a/34537239/7460613"
 }

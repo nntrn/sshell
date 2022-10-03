@@ -1,14 +1,13 @@
 {
-  "id": "296",
+  "id": 296,
   "title": "wget2 - get site stats and download files",
-  "language": "bash",
-  "category": "wget2",
-  "type": "command",
-  "guid": "7af0885c-62f6-469f-89a1-079ef1cc890e",
-  "url": "https://github.com/rockdaboot/wget2/blob/master/docs/wget2.md",
-  "modified": "2022-05-03T08:53:32Z",
   "created": "2022-05-03T08:53:19Z",
-  "tags": [],
+  "modified": "2022-05-03T08:53:32Z",
+  "code": [
+    "wget2 --stats-site=csv:out.csv --recursive kernel.org/doc/Documentation/process/"
+  ],
+  "example": "",
+  "output": "",
   "description": [
     "--stats-site=[FORMAT:]FILE",
     "Save Site stats in format FORMAT, in file FILE.",
@@ -32,9 +31,7 @@
     "- **Encoding** - 0,1,2,3,4,5 mean server side compression was 'identity', 'gzip', 'deflate', 'lzma/xz', 'bzip2', 'brotli', 'zstd', 'lzip'",
     "- **Verification** - PGP verification status. 0,1,2,3 mean 'none',  'valid', 'invalid', 'bad', 'missing'."
   ],
-  "cli": [
-    "wget2 --stats-site=csv:out.csv --recursive kernel.org/doc/Documentation/process/"
-  ],
-  "example": [],
-  "output": []
+  "language": "bash",
+  "tags": null,
+  "url": "https://github.com/rockdaboot/wget2/blob/master/docs/wget2.md"
 }

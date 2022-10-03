@@ -1,19 +1,16 @@
 {
-  "id": "282",
+  "id": 282,
   "title": "ps - find service using the most memory",
-  "language": "bash",
-  "category": "ps",
-  "type": "command",
-  "guid": "1f8f0b28-4ef6-484a-8f72-1fab1bde68c7",
-  "url": "https://unix.stackexchange.com/a/393198",
-  "modified": "2022-04-14T03:08:22Z",
   "created": "2022-04-14T03:08:22Z",
-  "tags": [],
-  "description": [],
-  "cli": [
+  "modified": "2022-04-14T03:08:22Z",
+  "code": [
     "ps aux --sort=-%mem",
     ""
   ],
-  "example": [],
-  "output": []
+  "example": "",
+  "output": "",
+  "description": "",
+  "language": "bash",
+  "tags": null,
+  "url": "https://unix.stackexchange.com/a/393198"
 }

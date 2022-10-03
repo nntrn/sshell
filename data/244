@@ -1,18 +1,9 @@
 {
-  "id": "244",
+  "id": 244,
   "title": "ansible playbook variables",
-  "language": "yaml",
-  "category": "ansible",
-  "type": "reference",
-  "guid": "cc998324-cf78-4d98-8a04-40c2d7d2612f",
-  "url": "https://www.cl.cam.ac.uk/~jw35/docs/ansible/ansible-summary.html",
-  "modified": "2022-03-17T00:23:37Z",
   "created": "2022-03-10T01:16:48Z",
-  "tags": [
-    "ansible"
-  ],
-  "description": [],
-  "cli": [
+  "modified": "2022-03-17T00:23:37Z",
+  "code": [
     "- \"{{ var | to_nice_json }}\"",
     "- \"{{ var | to_json }}\"",
     "- \"{{ var | from_json }}\"",
@@ -52,6 +43,12 @@
     "- \"{{ var | regex }}\"",
     "- \"{{ var | regexp_replace('from', 'to' ) }}\""
   ],
-  "example": [],
-  "output": []
+  "example": "",
+  "output": "",
+  "description": "",
+  "language": "yaml",
+  "tags": [
+    "ansible"
+  ],
+  "url": "https://www.cl.cam.ac.uk/~jw35/docs/ansible/ansible-summary.html"
 }

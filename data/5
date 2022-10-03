@@ -1,19 +1,9 @@
 {
-  "id": "5",
+  "id": 5,
   "title": "start firewalld",
-  "language": "bash",
-  "category": "start",
-  "guid": "1e5a65c2-bc30-43a4-aa52-10b6146bdd7d",
-  "url": "https://about.gitlab.com/install/#centos-8",
-  "modified": "2021-12-30T19:44:08Z",
   "created": "2021-02-23T19:52:28Z",
-  "tags": [
-    "network"
-  ],
-  "description": [
-    "On CentOS 8 (and RedHat 8), the commands below will also open HTTP, HTTPS and SSH access in the system firewall."
-  ],
-  "cli": [
+  "modified": "2021-12-30T19:44:08Z",
+  "code": [
     "sudo dnf install -y curl policycoreutils openssh-server perl",
     "sudo systemctl enable sshd",
     "sudo systemctl start sshd",
@@ -28,5 +18,13 @@
     "service firewalld start",
     "#service firewalld stop"
   ],
-  "output": []
+  "output": "",
+  "description": [
+    "On CentOS 8 (and RedHat 8), the commands below will also open HTTP, HTTPS and SSH access in the system firewall."
+  ],
+  "language": "bash",
+  "tags": [
+    "network"
+  ],
+  "url": "https://about.gitlab.com/install/#centos-8"
 }

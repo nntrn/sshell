@@ -1,16 +1,19 @@
 {
-  "id": "250",
+  "id": 250,
   "title": "git - remove commits matching pattern in message",
-  "language": "bash",
-  "category": "git",
-  "type": "command",
-  "guid": "a7acf910-b9cf-4295-9be2-389da3068de2",
-  "url": "https://stackoverflow.com/a/9543606",
-  "modified": "2022-04-15T17:49:47Z",
   "created": "2022-03-22T21:14:08Z",
-  "tags": [
-    "git"
+  "modified": "2022-04-15T17:49:47Z",
+  "code": [
+    "git filter-branch --commit-filter '",
+    "    if [ `git rev-list --all --grep \"<PATTERN TO REMOVE>\" | grep -c \"$GIT_COMMIT\"` -gt 0 ]",
+    "    then",
+    "        skip_commit \"$@\";",
+    "    else",
+    "        git commit-tree \"$@\";",
+    "    fi' HEAD"
   ],
+  "example": "",
+  "output": "",
   "description": [
     "fast solution that uses filter-branch instead of rebase",
     "",
@@ -18,15 +21,9 @@
     "git reflog expire --expire=now",
     "git gc --prune=now"
   ],
-  "cli": [
-    "git filter-branch --commit-filter '",
-    "  if [ `git rev-list --all --grep \"<PATTERN TO REMOVE>\" | grep -c \"$GIT_COMMIT\"` -gt 0 ]",
-    "  then",
-    "    skip_commit \"$@\";",
-    "  else",
-    "    git commit-tree \"$@\";",
-    "  fi' HEAD"
+  "language": "bash",
+  "tags": [
+    "git"
   ],
-  "example": [],
-  "output": []
+  "url": "https://stackoverflow.com/a/9543606"
 }

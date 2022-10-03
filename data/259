@@ -1,18 +1,9 @@
 {
-  "id": "259",
+  "id": 259,
   "title": "investigate sockets & processes",
-  "language": "bash",
-  "category": "investigate",
-  "type": "command",
-  "guid": "8fa018a4-a8f2-4eb7-bf6a-e86711527047",
-  "url": "https://www.linuxshelltips.com/find-and-close-open-ports-in-linux/",
-  "modified": "2022-03-29T22:22:31Z",
   "created": "2022-03-29T22:22:31Z",
-  "tags": [
-    "network"
-  ],
-  "description": [],
-  "cli": [
+  "modified": "2022-03-29T22:22:31Z",
+  "code": [
     "$ ss -tulnp",
     ".. users:((\"node_exporter\",pid=58451,fd=3))",
     "",
@@ -22,6 +13,12 @@
     "",
     "$  procinfo $PID"
   ],
-  "example": [],
-  "output": []
+  "example": "",
+  "output": "",
+  "description": "",
+  "language": "bash",
+  "tags": [
+    "network"
+  ],
+  "url": "https://www.linuxshelltips.com/find-and-close-open-ports-in-linux/"
 }

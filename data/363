@@ -1,13 +1,14 @@
 {
-  "id": "363",
+  "id": 363,
   "title": "openssl-s_client, s_client - SSL/TLS client program",
-  "modified": "2022-07-20T19:39:37Z",
   "created": "2022-07-20T19:29:59Z",
-  "guid": "7809afe2-e200-413c-a51a-b7143f3fb43c",
-  "cli": "echo -n | openssl s_client -connect $HOSTNAME:443",
-  "description": "The s_client command implements a generic SSL/TLS client which connects to a remote host using SSL/TLS. It is a very useful diagnostic tool for SSL servers.",
-  "tags": "security",
-  "example": "$ echo -n | openssl s_client -connect api.github.com:443|tee /dev/clipboard",
+  "modified": "2022-07-20T19:39:37Z",
+  "code": [
+    "echo -n | openssl s_client -connect $HOSTNAME:443"
+  ],
+  "example": [
+    "$ echo -n | openssl s_client -connect api.github.com:443|tee /dev/clipboard"
+  ],
   "output": [
     "CONNECTED(00000004)",
     "---",
@@ -70,9 +71,14 @@
     "No ALPN negotiated",
     "Early data was not sent",
     "Verify return code: 0 (ok)",
-    "---"
+    "---",
+    ""
+  ],
+  "description": [
+    "The s_client command implements a generic SSL/TLS client which connects to a remote host using SSL/TLS. It is a very useful diagnostic tool for SSL servers."
   ],
   "language": "bash",
-  "category": "openssl-s_client,",
-  "code_type": "command"
+  "tags": [
+    "security"
+  ]
 }

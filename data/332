@@ -1,16 +1,9 @@
 {
-  "id": "332",
+  "id": 332,
   "title": "${0%/*} - get directory of running script",
-  "language": "bash",
-  "category": "${0%/*}",
-  "type": "command",
-  "guid": "93fa9aba-c766-42b7-a41d-b14c37689d4f",
-  "url": "https://github.com/git/git/blob/master/ci/run-docker-build.sh",
-  "modified": "2022-05-27T08:07:07Z",
   "created": "2022-05-27T08:07:07Z",
-  "tags": [],
-  "description": [],
-  "cli": [
+  "modified": "2022-05-27T08:07:07Z",
+  "code": [
     "echo \"${0%/*}\""
   ],
   "example": [
@@ -34,5 +27,9 @@
     "└── util",
     "    └── extract-trash-dirs.sh       "
   ],
-  "output": []
+  "output": "",
+  "description": "",
+  "language": "bash",
+  "tags": null,
+  "url": "https://github.com/git/git/blob/master/ci/run-docker-build.sh"
 }

@@ -1,19 +1,17 @@
 {
-  "id": "56",
+  "id": 56,
   "title": "fetch all git tags",
-  "language": "bash",
-  "category": "fetch",
-  "guid": "3bb80161-cb57-4ffc-8165-10521d327628",
-  "url": "https://devconnected.com/how-to-checkout-git-tags/",
-  "modified": "2021-12-30T19:44:09Z",
   "created": "2021-06-10T16:26:06Z",
+  "modified": "2021-12-30T19:44:09Z",
+  "code": [
+    "git fetch --all --tags"
+  ],
+  "example": "",
+  "output": "",
+  "description": "",
+  "language": "bash",
   "tags": [
     "git"
   ],
-  "description": [],
-  "cli": [
-    "git fetch --all --tags"
-  ],
-  "example": [],
-  "output": []
+  "url": "https://devconnected.com/how-to-checkout-git-tags/"
 }

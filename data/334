@@ -1,18 +1,9 @@
 {
-  "id": "334",
+  "id": 334,
   "title": "jq - extract keys/values from object",
-  "language": "bash",
-  "category": "jq",
-  "type": "command",
-  "guid": "04db2993-543a-4a72-a64f-51bef5784cb1",
-  "url": "https://cameronnokes.com/blog/working-with-json-in-bash-using-jq/",
-  "modified": "2022-05-31T02:41:18Z",
   "created": "2022-05-31T02:41:18Z",
-  "tags": [
-    "jq"
-  ],
-  "description": [],
-  "cli": [
+  "modified": "2022-05-31T02:41:18Z",
+  "code": [
     "# get values",
     "echo '{ \"a\": 1, \"b\": 2 }' | jq '.[]'",
     "",
@@ -29,5 +20,11 @@
     "\"b\"",
     ""
   ],
-  "output": []
+  "output": "",
+  "description": "",
+  "language": "bash",
+  "tags": [
+    "jq"
+  ],
+  "url": "https://cameronnokes.com/blog/working-with-json-in-bash-using-jq/"
 }

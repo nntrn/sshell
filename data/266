@@ -1,18 +1,14 @@
 {
-  "id": "266",
+  "id": 266,
   "title": "get-adgroup - get all members for AD group",
-  "language": "powershell",
-  "category": "get-adgroup",
-  "type": "command",
-  "guid": "90791f6f-a397-4e22-85c3-185d85d24d7e",
-  "url": "",
-  "modified": "2022-03-31T19:53:02Z",
   "created": "2022-03-31T19:53:02Z",
-  "tags": [],
-  "description": [],
-  "cli": [
+  "modified": "2022-03-31T19:53:02Z",
+  "code": [
     "get-adgroup -Identity amerunixteam -properties *|Select -ExpandProperty member"
   ],
-  "example": [],
-  "output": []
+  "example": "",
+  "output": "",
+  "description": "",
+  "language": "powershell",
+  "tags": null
 }

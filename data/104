@@ -1,20 +1,18 @@
 {
-  "id": "104",
+  "id": 104,
   "title": "extract in a different directory",
-  "language": "bash",
-  "category": "extract",
-  "guid": "bfa19bc8-bd87-4d0d-9503-3a4ce5277f82",
-  "url": "https://help.dreamhost.com/hc/en-us/articles/115002768331-UNIX-commands-Decompressing-files",
-  "modified": "2022-01-19T15:48:29Z",
   "created": "2021-08-27T23:27:43Z",
-  "tags": [],
-  "description": [],
-  "cli": [
+  "modified": "2022-01-19T15:48:29Z",
+  "code": [
     "tar xvf filename.tar -C /home/username/",
     "",
     "# extract to current directory",
     "tar xvf filename.tar"
   ],
-  "example": [],
-  "output": []
+  "example": "",
+  "output": "",
+  "description": "",
+  "language": "bash",
+  "tags": null,
+  "url": "https://help.dreamhost.com/hc/en-us/articles/115002768331-UNIX-commands-Decompressing-files"
 }

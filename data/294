@@ -1,22 +1,9 @@
 {
-  "id": "294",
+  "id": 294,
   "title": "WindowsIdentity- get current user in powershell",
-  "language": "powershell",
-  "category": "WindowsIdentity-",
-  "type": "command",
-  "guid": "7ab82a98-0cf6-4011-80a1-057b69b4c33d",
-  "url": "https://stackoverflow.com/a/27872686",
-  "modified": "2022-04-28T05:35:58Z",
   "created": "2022-04-27T19:01:32Z",
-  "tags": [
-    "security"
-  ],
-  "description": [
-    "Benjamin Armstrong posted an excellent article about self-elevating PowerShell scripts. There a few minor issue with his code; a modified version based on fixes suggested in the comment is below.",
-    "",
-    "Basically it gets the identity associated with the current process, checks whether it is an administrator, and if it isn't, creates a new PowerShell process with administrator privileges and terminates the old process."
-  ],
-  "cli": [
+  "modified": "2022-04-28T05:35:58Z",
+  "code": [
     "$myWindowsID = [System.Security.Principal.WindowsIdentity]::GetCurrent();",
     "$adminRole = [System.Security.Principal.WindowsBuiltInRole]::Administrator;",
     "$newProcess = New-Object System.Diagnostics.ProcessStartInfo \"PowerShell\";",
@@ -92,5 +79,15 @@
     "",
     "$ echo adminRole ",
     "Administrator"
-  ]
+  ],
+  "description": [
+    "Benjamin Armstrong posted an excellent article about self-elevating PowerShell scripts. There a few minor issue with his code; a modified version based on fixes suggested in the comment is below.",
+    "",
+    "Basically it gets the identity associated with the current process, checks whether it is an administrator, and if it isn't, creates a new PowerShell process with administrator privileges and terminates the old process."
+  ],
+  "language": "powershell",
+  "tags": [
+    "security"
+  ],
+  "url": "https://stackoverflow.com/a/27872686"
 }

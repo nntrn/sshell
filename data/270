@@ -1,24 +1,21 @@
 {
-  "id": "270",
+  "id": 270,
   "title": "awk - split string into maxtrix-like table",
-  "language": "bash",
-  "category": "awk",
-  "type": "command",
-  "guid": "dc31fe6b-acce-4438-8f9b-626a42de14f2",
-  "url": "https://unix.stackexchange.com/a/430556",
-  "modified": "2022-04-06T18:02:24Z",
   "created": "2022-04-06T18:02:24Z",
-  "tags": [],
-  "description": [],
-  "cli": [
+  "modified": "2022-04-06T18:02:24Z",
+  "code": [
     "echo \"A,B,C,D,E,F,G,H,I,J,K,L,M,N,O\" | awk -v RS='[,\\n]' '{a=$0;getline b; getline c; print a,b,c}' OFS=,"
   ],
-  "example": [],
+  "example": "",
   "output": [
     "A,B,C",
     "D,E,F",
     "G,H,I",
     "J,K,L",
     "M,N,O"
-  ]
+  ],
+  "description": "",
+  "language": "bash",
+  "tags": null,
+  "url": "https://unix.stackexchange.com/a/430556"
 }

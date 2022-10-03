@@ -1,0 +1,20 @@
+{
+  "id": 380,
+  "title": "generate ansible-vault like hash",
+  "created": "2022-08-13T01:56:25Z",
+  "modified": "2022-08-13T01:56:25Z",
+  "code": [
+    "$ openssl passwd -5 -salt VAULT  password",
+    "$5$VAULT$QuHvYEpH9XsW9SVsKimTvMdRykrd2g3UiAi.fO7MAhB",
+    ""
+  ],
+  "example": [
+    "$ openssl passwd -5 -salt VAULT  password",
+    "$5$VAULT$QuHvYEpH9XsW9SVsKimTvMdRykrd2g3UiAi.fO7MAhB",
+    ""
+  ],
+  "output": "",
+  "description": "",
+  "language": "bash",
+  "tags": null
+}

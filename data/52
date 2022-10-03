@@ -1,17 +1,15 @@
 {
-  "id": "52",
+  "id": 52,
   "title": "echo shell commands as they are executed",
-  "language": "bash",
-  "category": "echo",
-  "guid": "51e9976e-4632-4003-b583-5715dd999265",
-  "url": "https://stackoverflow.com/a/23342259/7460613",
-  "modified": "2021-12-30T19:44:09Z",
   "created": "2021-06-04T12:34:10Z",
-  "tags": [],
-  "description": [],
-  "cli": [
+  "modified": "2021-12-30T19:44:09Z",
+  "code": [
     "exe() { echo \"\\$ $@\" ; \"$@\" ; }"
   ],
-  "example": [],
-  "output": []
+  "example": "",
+  "output": "",
+  "description": "",
+  "language": "bash",
+  "tags": null,
+  "url": "https://stackoverflow.com/a/23342259/7460613"
 }

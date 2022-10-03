@@ -1,19 +1,9 @@
 {
-  "id": "67",
+  "id": 67,
   "title": "greedy *",
-  "language": "bash",
-  "category": "greedy",
-  "guid": "7b301aca-9d38-4f15-bb89-6989f7155b0b",
-  "url": "",
-  "modified": "2021-12-30T19:44:09Z",
   "created": "2021-07-08T01:06:33Z",
-  "tags": [],
-  "description": [
-    "The '*' metacharacter represents zero or more instances of the",
-    "   previous expression. The '*' metacharacter looks for the leftmost",
-    "   possible match first and will match zero characters. Thus,"
-  ],
-  "cli": [
+  "modified": "2021-12-30T19:44:09Z",
+  "code": [
     "echo foo | sed 's/o*/EEE/'"
   ],
   "example": [
@@ -23,5 +13,12 @@
   "output": [
     "will generate 'EEEfoo', not 'fEEE' as one might expect. This is because /o*/ matches the null string at the beginning of the word.",
     ""
-  ]
+  ],
+  "description": [
+    "The '*' metacharacter represents zero or more instances of the",
+    "   previous expression. The '*' metacharacter looks for the leftmost",
+    "   possible match first and will match zero characters. Thus,"
+  ],
+  "language": "bash",
+  "tags": null
 }

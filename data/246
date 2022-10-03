@@ -1,16 +1,13 @@
 {
-  "id": "246",
+  "id": 246,
   "title": "find files created in the last hour",
-  "language": "bash",
-  "category": "find",
-  "type": "command",
-  "guid": "52a95c3b-2744-4db2-977b-3ee5d8919843",
-  "url": "https://stackoverflow.com/a/5242992",
-  "modified": "2022-03-16T20:04:40Z",
   "created": "2022-03-15T17:32:11Z",
-  "tags": [
-    "fs"
+  "modified": "2022-03-16T20:04:40Z",
+  "code": [
+    "find . -mindepth 1 -maxdepth 1 -type d -ctime 0 -print"
   ],
+  "example": "",
+  "output": "",
   "description": [
     "-amin, -atime, -cmin, -ctime, -mmin, and -mtime",
     "",
@@ -20,9 +17,9 @@
     "-ctime n",
     "File's status was last changed n*24 hours ago. "
   ],
-  "cli": [
-    "find . -mindepth 1 -maxdepth 1 -type d -ctime 0 -print"
+  "language": "bash",
+  "tags": [
+    "fs"
   ],
-  "example": [],
-  "output": []
+  "url": "https://stackoverflow.com/a/5242992"
 }

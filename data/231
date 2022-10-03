@@ -1,21 +1,13 @@
 {
-  "id": "231",
+  "id": 231,
   "title": "list block devices",
-  "language": "bash",
-  "category": "list",
-  "guid": "e730e2fc-8a1a-4e05-bc4d-99742154a02b",
-  "url": "",
-  "modified": "2022-03-23T21:26:37Z",
   "created": "2022-03-03T17:04:25Z",
-  "tags": [
-    "system"
-  ],
-  "description": [],
-  "cli": [
+  "modified": "2022-03-23T21:26:37Z",
+  "code": [
     "lsblk -a -p",
     ""
   ],
-  "example": [],
+  "example": "",
   "output": [
     "NAME                                MAJ:MIN RM  SIZE RO TYPE MOUNTPOINT",
     "/dev/sdb                              8:16   0  100G  0 disk",
@@ -37,5 +29,10 @@
     "│ └─/dev/mapper/osvg-tmp.fs         252:3    0 1000M  0 lvm  /tmp",
     "├─/dev/sda3                           8:3    0    8G  0 part [SWAP]",
     "└─/dev/sda1                           8:1    0 1000M  0 part /boot"
+  ],
+  "description": "",
+  "language": "bash",
+  "tags": [
+    "system"
   ]
 }

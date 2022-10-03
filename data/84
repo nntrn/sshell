@@ -1,28 +1,25 @@
 {
-  "id": "84",
+  "id": 84,
   "title": "print all commands in $PATH (windows bash)",
-  "language": "bash",
-  "category": "print",
-  "guid": "3962d10b-4e3f-444f-a9a7-4125d096f4e5",
-  "url": "",
-  "modified": "2021-12-30T19:44:10Z",
   "created": "2021-07-27T00:15:24Z",
-  "tags": [],
-  "description": [],
-  "cli": [
+  "modified": "2021-12-30T19:44:10Z",
+  "code": [
     "printcommands() {",
     "  for i in $(echo \"$PATH\" | sed 's/:/\\n/g' | grep -v ' '); do",
-    "  echo \"#######################################################\"",
-    "  echo \"$i\"",
-    "  echo \"#######################################################\"",
-    "  echo \"$(find $i -maxdepth 2 -type f ! -name '*.dll' 2>&1 | grep -E \"\\/[a-z0-9]*$|*.exe$\" | grep -v license)\"",
-    "  echo \"\"",
+    "    echo \"#######################################################\"",
+    "    echo \"$i\"",
+    "    echo \"#######################################################\"",
+    "    echo \"$(find $i -maxdepth 2 -type f ! -name '*.dll' 2>&1 | grep -E \"\\/[a-z0-9]*$|*.exe$\" | grep -v license)\"",
+    "    echo \"\"",
     "  done",
     "}",
     "",
     "printcommands | tee /tmp/window-commands.txt",
     ""
   ],
-  "example": [],
-  "output": []
+  "example": "",
+  "output": "",
+  "description": "",
+  "language": "bash",
+  "tags": null
 }

@@ -1,19 +1,16 @@
 {
-  "id": "73",
+  "id": 73,
   "title": "print commands from sudo log",
-  "language": "bash",
-  "category": "print",
-  "guid": "2a36a764-31ce-4ccc-aa73-7e79a104a80a",
-  "url": "",
-  "modified": "2021-12-30T19:44:10Z",
   "created": "2021-07-12T20:47:34Z",
-  "tags": [
-    "admin"
-  ],
-  "description": [],
-  "cli": [
+  "modified": "2021-12-30T19:44:10Z",
+  "code": [
     "cat /var/log/sudo.log | grep \"LANG=C;LANGUAGE=en\" | cut -d';' -f3 | sort -u "
   ],
-  "example": [],
-  "output": []
+  "example": "",
+  "output": "",
+  "description": "",
+  "language": "bash",
+  "tags": [
+    "admin"
+  ]
 }

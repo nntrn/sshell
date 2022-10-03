@@ -1,15 +1,9 @@
 {
-  "id": "159",
+  "id": 159,
   "title": "Check and assign variables",
-  "language": "bash",
-  "category": "Check",
-  "guid": "9cb360e3-2778-4baa-9d1e-fcf1fcbfc774",
-  "url": "",
-  "modified": "2022-01-03T06:12:41Z",
   "created": "2021-11-08T19:49:50Z",
-  "tags": [],
-  "description": [],
-  "cli": [
+  "modified": "2022-01-03T06:12:41Z",
+  "code": [
     "echo \"${VAR1:=default}\""
   ],
   "example": [
@@ -18,5 +12,8 @@
     "$ echo \"$VAR1\"",
     "default"
   ],
-  "output": []
+  "output": "",
+  "description": "",
+  "language": "bash",
+  "tags": null
 }

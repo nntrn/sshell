@@ -1,15 +1,9 @@
 {
-  "id": "62",
+  "id": 62,
   "title": "coreutils",
-  "language": "bash",
-  "category": "error;#1",
-  "guid": "f616ddaa-33bf-40d4-87f8-d6b5ae69b299",
-  "url": "",
-  "modified": "2021-12-30T19:44:09Z",
   "created": "2021-06-22T00:19:34Z",
-  "tags": [],
-  "description": [],
-  "cli": [
+  "modified": "2021-12-30T19:44:09Z",
+  "code": [
     "# Output of entire files",
     "cat tac nl od base64",
     "",
@@ -74,6 +68,9 @@
     "chroot env nice nohup stdbuf timeout",
     ""
   ],
-  "example": [],
-  "output": []
+  "example": "",
+  "output": "",
+  "description": "",
+  "language": "bash",
+  "tags": null
 }

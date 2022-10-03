@@ -1,22 +1,20 @@
 {
-  "id": "186",
+  "id": 186,
   "title": "zip directory",
-  "language": "bash",
-  "category": "zip",
-  "guid": "f95389b4-b2c8-40c4-89c2-8a0d886399e5",
-  "url": "https://renenyffenegger.ch/notes/Linux/shell/commands/zip",
-  "modified": "2022-01-10T18:55:33Z",
   "created": "2022-01-10T18:55:33Z",
-  "tags": [
-    "shell"
+  "modified": "2022-01-10T18:55:33Z",
+  "code": [
+    "zip $ZIP_NAME.zip -r $DIRNAME"
   ],
+  "example": "",
+  "output": "",
   "description": [
     "Creating a zip archive from a directory",
     "The command line option -r adds files recursively. Thus, it allows to create a zip file from an entire (sub-)directory:"
   ],
-  "cli": [
-    "zip $ZIP_NAME.zip -r $DIRNAME"
+  "language": "bash",
+  "tags": [
+    "shell"
   ],
-  "example": [],
-  "output": []
+  "url": "https://renenyffenegger.ch/notes/Linux/shell/commands/zip"
 }

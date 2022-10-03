@@ -1,20 +1,12 @@
 {
-  "id": "205",
+  "id": 205,
   "title": "ps do not print columns",
-  "language": "bash",
-  "category": "ps",
-  "guid": "601159b4-ffa4-461a-916a-6f458af07a0d",
-  "url": "",
-  "modified": "2022-02-05T07:16:24Z",
   "created": "2022-02-05T07:16:24Z",
-  "tags": [
-    "utils"
-  ],
-  "description": [],
-  "cli": [
+  "modified": "2022-02-05T07:16:24Z",
+  "code": [
     "ps -o pid=''"
   ],
-  "example": [],
+  "example": "",
   "output": [
     "$ ps -o pid=X",
     "     X",
@@ -24,5 +16,10 @@
     "$ ps -o pid=''",
     " 29015",
     " 70138"
+  ],
+  "description": "",
+  "language": "bash",
+  "tags": [
+    "utils"
   ]
 }

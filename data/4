@@ -1,20 +1,17 @@
 {
-  "id": "4",
+  "id": 4,
   "title": "find and kill processes",
-  "language": "bash",
-  "category": "find",
-  "guid": "498d7f2c-d9d0-47e6-a896-9e7d053e33c8",
-  "url": "",
-  "modified": "2021-12-30T19:44:08Z",
   "created": "2021-02-23T16:37:25Z",
-  "tags": [
-    "system"
-  ],
-  "description": [],
-  "cli": [
+  "modified": "2021-12-30T19:44:08Z",
+  "code": [
     "STRING_MATCH=\"\"",
     "lsof -i | grep $STRING_MATCH |  awk '{print $2}' | xargs kill"
   ],
-  "example": [],
-  "output": []
+  "example": "",
+  "output": "",
+  "description": "",
+  "language": "bash",
+  "tags": [
+    "system"
+  ]
 }

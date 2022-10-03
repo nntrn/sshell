@@ -1,10 +1,9 @@
 {
-  "id": "345",
+  "id": 345,
   "title": "document.cookie - convert key=value string to JSON string",
-  "modified": "2022-06-24T05:45:06Z",
   "created": "2022-06-24T05:45:06Z",
-  "guid": "ef9518b1-f823-4cb6-8c9d-27d4148d5789",
-  "cli": [
+  "modified": "2022-06-24T05:45:06Z",
+  "code": [
     "Object.fromEntries(document.cookie.split('; ').map(e => e.split('=').map((s) => {",
     "  let ret = unescape(decodeURI(s)).replace(/'/g, '\"')",
     "  try {",
@@ -13,7 +12,6 @@
     "  return ret",
     "})))"
   ],
-  "url": "https://developer.mozilla.org/en-US/docs/Web/API/Document/cookie",
   "example": [
     "> document.cookie",
     "",
@@ -37,7 +35,9 @@
     "  \"ai_session\": \"pwphoYvaRZgwAq3bBU7MUJ|1656047614115|1656047632593\"",
     "}"
   ],
+  "output": "",
+  "description": "",
   "language": "javascript",
-  "category": "document.cookie",
-  "code_type": "command"
+  "tags": null,
+  "url": "https://developer.mozilla.org/en-US/docs/Web/API/Document/cookie"
 }

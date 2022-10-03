@@ -1,27 +1,25 @@
 {
-  "id": "203",
+  "id": 203,
   "title": "os detection",
-  "language": "bash",
-  "category": "os",
-  "guid": "29c62023-053a-478a-acaf-fb6c966af063",
-  "url": "https://stackoverflow.com/a/18434831/7460613",
-  "modified": "2022-02-05T02:53:47Z",
   "created": "2022-02-05T02:51:12Z",
-  "tags": [
-    "utils"
-  ],
-  "description": [],
-  "cli": [
+  "modified": "2022-02-05T02:53:47Z",
+  "code": [
     "case \"$OSTYPE\" in",
     "  solaris*) echo \"SOLARIS\" ;;",
     "  darwin*)  echo \"OSX\" ;; ",
     "  linux*)   echo \"LINUX\" ;;",
-    "  bsd*)   echo \"BSD\" ;;",
-    "  msys*)  echo \"WINDOWS\" ;;",
+    "  bsd*)     echo \"BSD\" ;;",
+    "  msys*)    echo \"WINDOWS\" ;;",
     "  cygwin*)  echo \"ALSO WINDOWS\" ;;",
-    "  *)    echo \"unknown: $OSTYPE\" ;;",
+    "  *)        echo \"unknown: $OSTYPE\" ;;",
     "esac"
   ],
-  "example": [],
-  "output": []
+  "example": "",
+  "output": "",
+  "description": "",
+  "language": "bash",
+  "tags": [
+    "utils"
+  ],
+  "url": "https://stackoverflow.com/a/18434831/7460613"
 }

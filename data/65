@@ -1,24 +1,16 @@
 {
-  "id": "65",
+  "id": 65,
   "title": "get modification date for files in directory",
-  "language": "bash",
-  "category": "get",
-  "guid": "3ea43061-9823-4220-a083-cfb567d0b099",
-  "url": "",
-  "modified": "2021-12-30T19:44:09Z",
   "created": "2021-07-06T21:09:04Z",
-  "tags": [
-    "coreutils"
-  ],
-  "description": [],
-  "cli": [
+  "modified": "2021-12-30T19:44:09Z",
+  "code": [
     "for pb in $(find . -maxdepth 1 -type f -name \"*.yml\"); do",
     "  mod=$(stat -c %y $pb)",
     "  echo -e \"${mod%%\\ *}, ${pb##\\.\\/}\"",
     "done",
     ""
   ],
-  "example": [],
+  "example": "",
   "output": [
     "2021-07-06, add-delete-userdb-mongodb.yml",
     "2021-04-07, add-delete-userdb-mssql.yml",
@@ -30,5 +22,10 @@
     "2021-04-21, add-patching-db-oracle.yml",
     "2021-02-11, ansible-gather-facts.yml",
     "2021-04-07, backupschedule-create-mongo.ym"
+  ],
+  "description": "",
+  "language": "bash",
+  "tags": [
+    "coreutils"
   ]
 }

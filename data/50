@@ -1,24 +1,22 @@
 {
-  "id": "50",
+  "id": 50,
   "title": "set timeout for script ",
-  "language": "bash",
-  "category": "set",
-  "guid": "96d856d5-989c-43ee-82ef-f0fed2714523",
-  "url": "https://ma.ttias.be/limit-runtime-cronjob-script/",
-  "modified": "2021-12-30T19:44:09Z",
   "created": "2021-06-03T18:09:47Z",
-  "tags": [],
-  "description": [
-    "* /bin/timeout: the command.",
-    "* -s 2: the signal to send when the timer has exceeded, it can be a number or the name. Equally valid would have been -s SIGINT (more on the kill signals below)",
-    "* 10: the duration the script can run, before the kill signal described above is sent to it."
-  ],
-  "cli": [
+  "modified": "2021-12-30T19:44:09Z",
+  "code": [
     "/bin/timeout -s 2 10 /path/to/your/script.sh"
   ],
   "example": [
     "crontab -l",
     "* * * * * /bin/timeout -s 2 10 /path/to/your/script.sh"
   ],
-  "output": []
+  "output": "",
+  "description": [
+    "* /bin/timeout: the command.",
+    "* -s 2: the signal to send when the timer has exceeded, it can be a number or the name. Equally valid would have been -s SIGINT (more on the kill signals below)",
+    "* 10: the duration the script can run, before the kill signal described above is sent to it."
+  ],
+  "language": "bash",
+  "tags": null,
+  "url": "https://ma.ttias.be/limit-runtime-cronjob-script/"
 }

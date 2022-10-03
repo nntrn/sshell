@@ -1,22 +1,18 @@
 {
-  "id": "258",
+  "id": 258,
   "title": "vault - list secrets in path",
-  "language": "bash",
-  "category": "vault",
-  "type": "command",
-  "guid": "66fa1c58-7641-475e-993f-4bf3c17c7149",
-  "url": "",
-  "modified": "2022-04-09T07:53:35Z",
   "created": "2022-03-28T23:24:29Z",
-  "tags": [
-    "vault"
+  "modified": "2022-04-09T07:53:35Z",
+  "code": [
+    "vault kv list -format=json 'kv/awx/svc_accounts/'"
   ],
+  "example": "",
+  "output": "",
   "description": [
     "slash at the end is very important"
   ],
-  "cli": [
-    "vault kv list -format=json 'kv/awx/svc_account/'"
-  ],
-  "example": [],
-  "output": []
+  "language": "bash",
+  "tags": [
+    "vault"
+  ]
 }

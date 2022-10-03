@@ -1,22 +1,18 @@
 {
-  "id": "273",
+  "id": 273,
   "title": "read powershell history and trim leading whitespace",
-  "language": "powershell",
-  "category": "read",
-  "type": "command",
-  "guid": "02ac4f9f-bacd-4bfe-acac-d4b6efb388c0",
-  "url": "",
-  "modified": "2022-04-09T07:25:00Z",
   "created": "2022-04-09T07:20:37Z",
-  "tags": [],
-  "description": [
-    "%USERPROFILE%\\AppData\\Roaming\\Microsoft\\Windows\\PowerShell\\PSReadLine\\ConsoleHost_history.txt"
-  ],
-  "cli": [
+  "modified": "2022-04-09T07:25:00Z",
+  "code": [
     "POWERSHELL_HISTORY=${USERPROFILE,\\\\,\\/,g}/AppData/Roaming/Microsoft/Windows/PowerShell/PSReadLine/ConsoleHost_history.txt",
     "cat \"$POWERSHELL_HISTORY\" | sed 's/^[ \\t]*//'",
     ""
   ],
-  "example": [],
-  "output": []
+  "example": "",
+  "output": "",
+  "description": [
+    "%USERPROFILE%\\AppData\\Roaming\\Microsoft\\Windows\\PowerShell\\PSReadLine\\ConsoleHost_history.txt"
+  ],
+  "language": "powershell",
+  "tags": null
 }

@@ -1,16 +1,17 @@
 {
-  "id": "242",
+  "id": 242,
   "title": "openssl crypt-style password hash",
-  "language": "bash",
-  "category": "openssl",
-  "type": "command",
-  "guid": "53c9b777-31ae-4a1a-a86a-9ec23e5920fa",
-  "url": "",
-  "modified": "2022-03-17T00:31:46Z",
   "created": "2022-03-09T01:24:57Z",
-  "tags": [
-    "security"
+  "modified": "2022-03-17T00:31:46Z",
+  "code": [
+    "$ openssl passwd MySecret",
+    "8E4vqBR4UOYF.",
+    "",
+    "$ openssl passwd -salt 8E MySecret",
+    "8E4vqBR4UOYF."
   ],
+  "example": "",
+  "output": "",
   "description": [
     "Using the `passwd` option, you can generate password hashes that interoperate with traditional `/etc/passwd` files, newer-style `/etc/shadow` files, and Apache password files.",
     "",
@@ -21,18 +22,13 @@
     "    $ openssl passwd MySecret",
     "    8E4vqBR4UOYF.",
     "",
-    "If you know an existing password's “salt,” you can duplicate the hash.",
+    "If you know an existing password’s “salt,” you can duplicate the hash.",
     "",
     "    $ openssl passwd -salt 8E MySecret",
     "    8E4vqBR4UOYF."
   ],
-  "cli": [
-    "$ openssl passwd MySecret",
-    "8E4vqBR4UOYF.",
-    "",
-    "$ openssl passwd -salt 8E MySecret",
-    "8E4vqBR4UOYF."
-  ],
-  "example": [],
-  "output": []
+  "language": "bash",
+  "tags": [
+    "security"
+  ]
 }

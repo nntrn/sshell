@@ -1,20 +1,17 @@
 {
-  "id": "161",
+  "id": 161,
   "title": "rbind mount docker",
-  "language": "bash",
-  "category": "rbind",
-  "guid": "9d51fc09-d806-496a-8ae2-45f2fdf26718",
-  "url": "",
-  "modified": "2022-01-21T19:00:56Z",
   "created": "2021-11-10T22:13:28Z",
-  "tags": [
-    "docker"
-  ],
-  "description": [],
-  "cli": [
+  "modified": "2022-01-21T19:00:56Z",
+  "code": [
     "mount --rbind /u01/docker /var/lib/docker",
     ""
   ],
-  "example": [],
-  "output": []
+  "example": "",
+  "output": "",
+  "description": "",
+  "language": "bash",
+  "tags": [
+    "docker"
+  ]
 }

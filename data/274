@@ -1,32 +1,9 @@
 {
-  "id": "274",
+  "id": 274,
   "title": "jq - get ",
-  "language": "bash",
-  "category": "jq",
-  "type": "command",
-  "guid": "bb8fdd21-0aaa-4c22-a4a8-673f3ad5dd0c",
-  "url": "https://stedolan.github.io/jq/tutorial/",
-  "modified": "2022-04-09T07:53:06Z",
   "created": "2022-04-09T07:52:51Z",
-  "tags": [
-    "vault"
-  ],
-  "description": [
-    "We can use jq to extract just the first commit.",
-    "$ curl 'https://api.github.com/repos/stedolan/jq/commits?per_page=5' | jq '.[0]'",
-    "",
-    "For the rest of the examples, I'll leave out the curl command - it's not going to change.",
-    "",
-    "There's a lot of info we don't care about there, so we'll restrict it down to the most interesting fields.",
-    "$ jq '.[0] | {message: .commit.message, name: .commit.committer.name}'",
-    "",
-    "The | operator in jq feeds the output of one filter (.[0] which gets the first element of the array in the response) into the input of another ({...} which builds an object out of those fields). You can access nested attributes, such as .commit.message.",
-    "",
-    "Now let's get the rest of the commits.",
-    "",
-    "$ jq '.[] | {message: .commit.message, name: .commit.committer.name}'"
-  ],
-  "cli": [
+  "modified": "2022-04-09T07:53:06Z",
+  "code": [
     "curl -s 'https://api.github.com/repos/nntrn/dvt/commits?per_page=1' | jq '.[] | {message: .commit.message, date: .commit.committer.date}'"
   ],
   "example": [
@@ -120,5 +97,25 @@
     "  \"date\": \"2021-12-27T12:13:16Z\"",
     "}",
     ""
-  ]
+  ],
+  "description": [
+    "We can use jq to extract just the first commit.",
+    "$ curl 'https://api.github.com/repos/stedolan/jq/commits?per_page=5' | jq '.[0]'",
+    "",
+    "For the rest of the examples, I'll leave out the curl command - it's not going to change.",
+    "",
+    "There's a lot of info we don't care about there, so we'll restrict it down to the most interesting fields.",
+    "$ jq '.[0] | {message: .commit.message, name: .commit.committer.name}'",
+    "",
+    "The | operator in jq feeds the output of one filter (.[0] which gets the first element of the array in the response) into the input of another ({...} which builds an object out of those fields). You can access nested attributes, such as .commit.message.",
+    "",
+    "Now let's get the rest of the commits.",
+    "",
+    "$ jq '.[] | {message: .commit.message, name: .commit.committer.name}'"
+  ],
+  "language": "bash",
+  "tags": [
+    "vault"
+  ],
+  "url": "https://stedolan.github.io/jq/tutorial/"
 }

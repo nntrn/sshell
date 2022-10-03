@@ -1,20 +1,9 @@
 {
-  "id": "14",
+  "id": 14,
   "title": "List full paths for recursive files with grep and awk",
-  "language": "bash",
-  "category": "List",
-  "guid": "64caf573-d593-4a51-ae6d-17d946b27463",
-  "url": "https://stackoverflow.com/a/1767559",
-  "modified": "2021-12-30T19:44:08Z",
   "created": "2021-03-10T23:55:33Z",
-  "tags": [
-    "system"
-  ],
-  "description": [
-    "ls command: get a recursive full-path listing, one line per file",
-    ""
-  ],
-  "cli": [
+  "modified": "2021-12-30T19:44:08Z",
+  "code": [
     "ls -R /path | awk '",
     "/:$/&&f{s=$0;f=0}",
     "/:$/&&!f{sub(/:$/,\"\");s=$0;f=1;next}",
@@ -26,5 +15,14 @@
     "/:$/&&!f{sub(/:$/,\"\");s=$0;f=1;next}",
     "NF&&f{ print s\"/\"$0 }' | grep docx"
   ],
-  "output": []
+  "output": "",
+  "description": [
+    "ls command: get a recursive full-path listing, one line per file",
+    ""
+  ],
+  "language": "bash",
+  "tags": [
+    "system"
+  ],
+  "url": "https://stackoverflow.com/a/1767559"
 }

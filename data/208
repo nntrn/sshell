@@ -1,22 +1,21 @@
 {
-  "id": "208",
+  "id": 208,
   "title": "date unix timestamp to format",
-  "language": "bash",
-  "category": "date",
-  "guid": "6a7ef469-419e-4216-9c5b-2f8c203fadcb",
-  "url": "",
-  "modified": "2022-03-17T00:34:01Z",
   "created": "2022-02-05T10:32:18Z",
-  "tags": [
-    "date"
-  ],
-  "description": [],
-  "cli": [
+  "modified": "2022-03-17T00:34:01Z",
+  "code": [
     "date -d @$TIMESTAMP"
   ],
-  "example": "$ date -d @1638163336",
+  "example": [
+    "$ date -d @1638163336"
+  ],
   "output": [
     "Sun Nov 28 23:22:16 CST 2021",
     ""
+  ],
+  "description": "",
+  "language": "bash",
+  "tags": [
+    "date"
   ]
 }

@@ -1,39 +1,35 @@
 {
-  "id": "249",
+  "id": 249,
   "title": "password last reset",
-  "language": "powershell",
-  "category": "password",
-  "type": "command",
-  "guid": "ef54b1ec-2881-4b0e-b394-362691bfd635",
-  "url": "",
-  "modified": "2022-04-11T22:10:30Z",
   "created": "2022-03-18T19:36:58Z",
-  "tags": [
-    "AD"
-  ],
-  "description": [],
-  "cli": [
+  "modified": "2022-04-11T22:10:30Z",
+  "code": [
     "Get-ADUser  -Filter 'description -like \"*Annie_Tran\"'  -Properties *  | Sort-Object -Property PasswordLastSet | Format-Table Name,PasswordLastSet -AutoSize -Wrap"
   ],
-  "example": [],
+  "example": "",
   "output": [
     "Name               PasswordLastSet",
     "----               ---------------",
-    "svc_account      4/11/2021 11:11:32 AM",
-    "svc_account     4/11/2021 11:11:32 AM",
-    "svc_account  4/11/2021 11:39:26 AM",
-    "svc_account   4/11/2021 11:39:26 AM",
-    "svc_account    4/11/2021 11:39:26 AM",
-    "svc_account   4/11/2021 11:39:28 AM",
-    "svc_account     4/11/2021 11:39:37 AM",
-    "svc_account     4/11/2021 2:46:01 PM",
-    "svc_account    4/11/2021 2:46:01 PM",
-    "svc_account    4/11/2021 2:46:01 PM",
-    "svc_account  4/11/2021 2:47:40 PM",
-    "svc_account   4/11/2021 2:47:40 PM",
-    "svc_account 4/11/2021 2:47:41 PM",
-    "svc_account  4/11/2021 2:47:43 PM",
+    "svc_npexamplemt      4/11/2021 11:11:32 AM",
+    "svc_npexampleawx     4/11/2021 11:11:32 AM",
+    "svc_npexamplemongos  4/11/2021 11:39:26 AM",
+    "svc_npexampleoraos   4/11/2021 11:39:26 AM",
+    "svc_npexamplepgos    4/11/2021 11:39:26 AM",
+    "svc_npexamplesqlos   4/11/2021 11:39:28 AM",
+    "svc_npexamplevra     4/11/2021 11:39:37 AM",
+    "svc_prdexamplemt     4/11/2021 2:46:01 PM",
+    "svc_prdexampleawx    4/11/2021 2:46:01 PM",
+    "svc_prdexamplevra    4/11/2021 2:46:01 PM",
+    "svc_prdexampleoraos  4/11/2021 2:47:40 PM",
+    "svc_prdexamplepgos   4/11/2021 2:47:40 PM",
+    "svc_prdexamplemongos 4/11/2021 2:47:41 PM",
+    "svc_prdexamplesqlos  4/11/2021 2:47:43 PM",
     "",
     ""
+  ],
+  "description": "",
+  "language": "powershell",
+  "tags": [
+    "AD"
   ]
 }

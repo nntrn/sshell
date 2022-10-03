@@ -1,15 +1,24 @@
 {
-  "id": "236",
+  "id": 236,
   "title": "mpstat - processors related statistics.",
-  "language": "bash",
-  "category": "mpstat",
-  "type": "command",
-  "guid": "0e4f1149-cd71-4313-945e-90c4c2cdbf9f",
-  "url": "",
-  "modified": "2022-03-17T00:24:02Z",
   "created": "2022-03-03T21:23:52Z",
-  "tags": [
-    "system"
+  "modified": "2022-03-17T00:24:02Z",
+  "code": [
+    "mpstat 2 5",
+    ""
+  ],
+  "example": "",
+  "output": [
+    "Linux 5.4.17-2102.202.5.el7uek.x86_64 (server.us.example.com)         03/03/2022      _x86_64_        (2 CPU)",
+    "",
+    "03:22:33 PM  CPU    %usr   %nice    %sys %iowait    %irq   %soft  %steal  %guest  %gnice   %idle",
+    "03:22:35 PM  all    1.01    0.00    1.51    0.00    0.25    0.00    0.00    0.00    0.00   97.24",
+    "03:22:37 PM  all    0.75    0.00    1.00    0.00    0.00    0.00    0.00    0.00    0.00   98.25",
+    "03:22:39 PM  all    0.50    0.00    0.50    0.00    0.00    0.00    0.00    0.00    0.00   98.99",
+    "03:22:41 PM  all    0.75    0.00    0.50    0.25    0.00    0.50    0.00    0.00    0.00   98.01",
+    "03:22:43 PM  all    0.50    0.00    0.75    0.00    0.50    0.00    0.00    0.00    0.00   98.25",
+    "Average:     all    0.70    0.00    0.85    0.05    0.15    0.10    0.00    0.00    0.00   98.15",
+    ""
   ],
   "description": [
     "The mpstat command writes to standard output activities for each available processor, processor  0  being",
@@ -25,21 +34,8 @@
     "reports continuously.",
     ""
   ],
-  "cli": [
-    "mpstat 2 5",
-    ""
-  ],
-  "example": [],
-  "output": [
-    "Linux 5.4.17-2102.202.5.el7uek.x86_64 (serserver.us.example.com)         03/03/2022      _x86_64_        (2 CPU)",
-    "",
-    "03:22:33 PM  CPU    %usr   %nice    %sys %iowait    %irq   %soft  %steal  %guest  %gnice   %idle",
-    "03:22:35 PM  all    1.01    0.00    1.51    0.00    0.25    0.00    0.00    0.00    0.00   97.24",
-    "03:22:37 PM  all    0.75    0.00    1.00    0.00    0.00    0.00    0.00    0.00    0.00   98.25",
-    "03:22:39 PM  all    0.50    0.00    0.50    0.00    0.00    0.00    0.00    0.00    0.00   98.99",
-    "03:22:41 PM  all    0.75    0.00    0.50    0.25    0.00    0.50    0.00    0.00    0.00   98.01",
-    "03:22:43 PM  all    0.50    0.00    0.75    0.00    0.50    0.00    0.00    0.00    0.00   98.25",
-    "Average:     all    0.70    0.00    0.85    0.05    0.15    0.10    0.00    0.00    0.00   98.15",
-    ""
+  "language": "bash",
+  "tags": [
+    "system"
   ]
 }

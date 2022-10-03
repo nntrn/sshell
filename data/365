@@ -1,10 +1,12 @@
 {
-  "id": "365",
+  "id": 365,
   "title": "dstat - get expensive processes",
-  "modified": "2022-07-22T21:55:25Z",
   "created": "2022-07-22T21:55:25Z",
-  "guid": "82eabef6-8b59-46aa-a7de-ac8331b3c7df",
-  "cli": "dstat -tcndylp --top-cpu",
+  "modified": "2022-07-22T21:55:25Z",
+  "code": [
+    "dstat -tcndylp --top-cpu"
+  ],
+  "example": "",
   "output": [
     "----system---- ----total-cpu-usage---- -net/total- -dsk/total- ---system-- ---load-avg--- ---procs--- -most-expensive-",
     "     time     |usr sys idl wai hiq siq| recv  send| read  writ| int   csw | 1m   5m  15m |run blk new|  cpu process",
@@ -14,9 +16,10 @@
     "22-07 16:52:35|  2   1  98   0   0   0|2638B 2728B|   0  5120B| 480   753 |0.10 0.10 0.09|  0   0 1.0|zabbix_agent21.0",
     "22-07 16:52:36|  1   1  98   0   0   1| 690B 1297B|   0    12k| 635  1109 |0.10 0.10 0.09|  0   0 1.0|lldpad       0.5",
     "22-07 16:52:37|  2   1  97   0   0   0| 638B  264B|   0  8192B| 473   753 |0.10 0.10 0.09|  0   0 1.0|python3      0.5^C",
+    "",
     ""
   ],
+  "description": "",
   "language": "bash",
-  "category": "dstat",
-  "code_type": "command"
+  "tags": null
 }

@@ -1,17 +1,9 @@
 {
-  "id": "58",
+  "id": 58,
   "title": "alias for easy column extraction",
-  "language": "bash",
-  "category": "alias",
-  "guid": "badccd2a-4d53-479f-8b88-bf0859e7bf7b",
-  "url": "",
-  "modified": "2021-12-30T19:44:09Z",
   "created": "2021-06-16T20:25:21Z",
-  "tags": [
-    "gnu"
-  ],
-  "description": [],
-  "cli": [
+  "modified": "2021-12-30T19:44:09Z",
+  "code": [
     "alias c1=\"awk '{print \\$1}'\"",
     "alias c2=\"awk '{print \\$2}'\"",
     "alias c3=\"awk '{print \\$3}'\"",
@@ -34,5 +26,10 @@
     "a1",
     "b1",
     "c1"
+  ],
+  "description": "",
+  "language": "bash",
+  "tags": [
+    "gnu"
   ]
 }

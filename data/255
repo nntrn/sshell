@@ -1,26 +1,12 @@
 {
-  "id": "255",
+  "id": 255,
   "title": "vault - update secret with file",
-  "language": "bash",
-  "category": "vault",
-  "type": "command",
-  "guid": "a161316c-da2f-47c6-af0d-f332044d3016",
-  "url": "",
-  "modified": "2022-03-28T21:45:25Z",
   "created": "2022-03-28T21:45:25Z",
-  "tags": [],
-  "description": [
-    "The following variables need to be set in the environment",
-    "VAULT_TOKEN, VAULT_NAMESPACE, VAULT_ADDR",
-    "---",
-    "VAULT_TOKEN=s.zb5oBfjEnOLP5ZbNg",
-    "VAULT_NAMESPACE=infrastructure/database/engineering",
-    "VAULT_ADDR=https://hcvault.example.com"
-  ],
-  "cli": [
+  "modified": "2022-03-28T21:45:25Z",
+  "code": [
     "vault kv put 'kv/path/to/secrets' @file-with-object.json"
   ],
-  "example": [],
+  "example": "",
   "output": [
     "=============== Secret Path ===============",
     "kv/path/to/secrets",
@@ -33,5 +19,18 @@
     "deletion_time      n/a",
     "destroyed          false",
     "version            2"
+  ],
+  "description": [
+    "The following variables need to be set in the environment",
+    "VAULT_TOKEN, VAULT_NAMESPACE, VAULT_ADDR",
+    "---",
+    "VAULT_TOKEN=s.zb5oBfjEnOLP5ZbNg",
+    "VAULT_NAMESPACE=infrastructure/database/engineering",
+    "VAULT_ADDR=https://hcvault.example.com"
+  ],
+  "language": "bash",
+  "tags": [
+    "hc-vault",
+    "vault"
   ]
 }

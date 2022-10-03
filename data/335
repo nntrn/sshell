@@ -1,16 +1,9 @@
 {
-  "id": "335",
+  "id": 335,
   "title": "jq - convert json to environment variables",
-  "language": "bash",
-  "category": "jq",
-  "type": "command",
-  "guid": "4ca4939e-bd36-4551-a228-d23de35b9277",
-  "url": "https://www.dormant.ninja/export-json-to-env/",
-  "modified": "2022-05-31T05:45:01Z",
   "created": "2022-05-31T05:45:01Z",
-  "tags": [],
-  "description": [],
-  "cli": [
+  "modified": "2022-05-31T05:45:01Z",
+  "code": [
     "jq -rc 'to_entries | map(\"\\(.key)=\\(.value)\")"
   ],
   "example": [
@@ -48,5 +41,9 @@
     "created_at=2016-03-06T11:27:35Z",
     "updated_at=2022-03-15T20:41:03Z"
   ],
-  "output": []
+  "output": "",
+  "description": "",
+  "language": "bash",
+  "tags": null,
+  "url": "https://www.dormant.ninja/export-json-to-env/"
 }

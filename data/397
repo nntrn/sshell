@@ -1,0 +1,33 @@
+{
+  "id": 397,
+  "title": "hex/ascii text conversion",
+  "created": "2022-09-20T20:18:26Z",
+  "modified": "2022-09-20T20:19:00Z",
+  "code": [
+    "HEX_TEXT=68656c6c6f20776f726c64",
+    "ASCII_TEXT=\"hello world\"",
+    "",
+    "# hex to ascii",
+    "echo -n \"$HEX_TEXT\" | sed 's/\\([0-9A-F]\\{2\\}\\)/\\\\\\\\\\\\x\\1/gI' | xargs printf && echo ''",
+    "",
+    "# ascii to hex",
+    "echo -n \"$ASCII_TEXT\" | od -A n -t x1 | tr -d ' '",
+    ""
+  ],
+  "example": [
+    "$ echo -n \"hello world\" | od -A n -t x1 | tr -d ' '",
+    "68656c6c6f20776f726c64",
+    "",
+    "$ echo '68656c6c6f20776f726c64'|sed 's/\\([0-9A-F]\\{2\\}\\)/\\\\\\\\\\\\x\\1/gI' | xargs printf && echo ''",
+    "hello world",
+    ""
+  ],
+  "output": "",
+  "description": [
+    "- https://www.commandlinefu.com/commands/view/6081/convert-ascii-string-to-hex",
+    "- https://www.linuxshelltips.com/convert-hex-to-ascii-characters-linux/"
+  ],
+  "language": "bash",
+  "tags": null,
+  "url": "https://www.linuxshelltips.com/convert-hex-to-ascii-characters-linux/"
+}

@@ -1,18 +1,9 @@
 {
-  "id": "194",
+  "id": 194,
   "title": "util linux",
-  "language": "bash",
-  "category": "util",
-  "type": "reference",
-  "guid": "c53974db-f4fd-4f65-8e94-27e60dca18f8",
-  "url": "https://en.wikipedia.org/wiki/Util-linux",
-  "modified": "2022-03-17T00:25:33Z",
   "created": "2022-01-21T18:49:43Z",
-  "tags": [
-    "gnu"
-  ],
-  "description": [],
-  "cli": [
+  "modified": "2022-03-17T00:25:33Z",
+  "code": [
     "file_system=(cat chmod chown chgrp cksum cmp cp dd du df file fuser ln ls mkdir mv pax pwd rm rmdir split tee touch type umask)",
     "processes=(at bg crontab fg kill nice ps time)",
     "user_environment=(env exit logname mesg talk tput uname who write)",
@@ -23,6 +14,12 @@
     "software_development=(ar ctags lex make nm strip yacc)",
     "miscellaneous=(bc cal expr lp od sleep true false)"
   ],
-  "example": [],
-  "output": []
+  "example": "",
+  "output": "",
+  "description": "",
+  "language": "bash",
+  "tags": [
+    "gnu"
+  ],
+  "url": "https://en.wikipedia.org/wiki/Util-linux"
 }

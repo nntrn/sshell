@@ -1,19 +1,17 @@
 {
-  "id": "217",
+  "id": 217,
   "title": "Delete Orphaned Docker Volumes",
-  "language": "bash",
-  "category": "Delete",
-  "guid": "6e61d862-765a-46b2-95b8-69d135257bc2",
-  "url": "https://medium.com/@wlarch/no-space-left-on-device-when-using-docker-compose-why-c4a2c783c6f6",
-  "modified": "2022-02-24T03:43:58Z",
   "created": "2022-02-24T03:37:55Z",
+  "modified": "2022-02-24T03:43:58Z",
+  "code": [
+    "docker volume rm $(docker volume ls -qf dangling=true)"
+  ],
+  "example": "",
+  "output": "",
+  "description": "",
+  "language": "bash",
   "tags": [
     "docker"
   ],
-  "description": [],
-  "cli": [
-    "docker volume rm $(docker volume ls -qf dangling=true)"
-  ],
-  "example": [],
-  "output": []
+  "url": "https://medium.com/@wlarch/no-space-left-on-device-when-using-docker-compose-why-c4a2c783c6f6"
 }

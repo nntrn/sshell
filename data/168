@@ -1,17 +1,14 @@
 {
-  "id": "168",
+  "id": 168,
   "title": "delete null value",
-  "language": "bash",
-  "category": "delete",
-  "guid": "3592303c-5fb8-4525-9147-2dd98e40376f",
-  "url": "",
-  "modified": "2022-01-03T06:10:34Z",
   "created": "2021-12-01T22:57:09Z",
-  "tags": [],
-  "description": [],
-  "cli": [
+  "modified": "2022-01-03T06:10:34Z",
+  "code": [
     "tr -d '\\0'"
   ],
-  "example": [],
-  "output": []
+  "example": "",
+  "output": "",
+  "description": "",
+  "language": "bash",
+  "tags": null
 }

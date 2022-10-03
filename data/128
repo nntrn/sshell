@@ -1,21 +1,14 @@
 {
-  "id": "128",
+  "id": 128,
   "title": "pmem (vscode mimics ps)",
-  "language": "bash",
-  "category": "pmem",
-  "guid": "27e644e2-6a0a-4388-9c81-2c9d1f95ed90",
-  "url": [
-    "/home/ansible/.vscode-server/bin/379476f0e13988d90fab105c5c19e7abc8b1dea8/out/vs/base/node/ps.sh",
-    "https://nntrn-my.sharepoint.com/home/ansible/.vscode-server/bin/379476f0e13988d90fab105c5c19e7abc8b1dea8/out/vs/base/node/ps.sh"
-  ],
-  "modified": "2022-01-10T16:02:12Z",
   "created": "2021-09-21T17:43:41Z",
-  "tags": [],
-  "description": [],
-  "cli": [
+  "modified": "2022-01-10T16:02:12Z",
+  "code": [
     "ps -ax -o pid=,ppid=,pcpu=,pmem=,command="
   ],
-  "example": "$ ps -ax -o pid=,ppid=,pcpu=,pmem=,command= | grep -v '\\['",
+  "example": [
+    "$ ps -ax -o pid=,ppid=,pcpu=,pmem=,command= | grep -v '\\['"
+  ],
   "output": [
     "     1      0  0.0  0.0 /usr/lib/systemd/systemd --switched-root --system --deserialize 22",
     "   696      1  0.0  0.3 /usr/lib/systemd/systemd-journald",
@@ -34,5 +27,9 @@
     "  1086      1  0.0  0.0 /usr/sbin/gssproxy -D",
     "  1094      1  0.0  0.0 /usr/sbin/rpc.gssd",
     "  1307      1  0.0  0.0 /usr/bin/python2 -Es /usr/sbin/tuned -l -P"
-  ]
+  ],
+  "description": "",
+  "language": "bash",
+  "tags": null,
+  "url": "https://dell-my.sharepoint.com/home/ansible/.vscode-server/bin/379476f0e13988d90fab105c5c19e7abc8b1dea8/out/vs/base/node/ps.sh"
 }

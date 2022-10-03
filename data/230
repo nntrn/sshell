@@ -1,37 +1,9 @@
 {
-  "id": "230",
+  "id": 230,
   "title": "examples illustrating substring expansion",
-  "language": "bash",
-  "category": "examples",
-  "guid": "d551b702-ff8b-4ca8-94f5-acd3b514aa38",
-  "url": "",
-  "modified": "2022-03-03T16:38:03Z",
   "created": "2022-03-03T16:38:03Z",
-  "tags": [
-    "text"
-  ],
-  "description": [
-    "'${PARAMETER:OFFSET:LENGTH}'",
-    "     This is referred to as Substring Expansion.  It expands to up to",
-    "     LENGTH characters of the value of PARAMETER starting at the",
-    "     character specified by OFFSET.  If PARAMETER is '@', an indexed",
-    "     array subscripted by '@' or '*', or an associative array name, the",
-    "     results differ as described below.  If LENGTH is omitted, it",
-    "     expands to the substring of the value of PARAMETER starting at the",
-    "     character specified by OFFSET and extending to the end of the",
-    "     value.  LENGTH and OFFSET are arithmetic expressions (*note Shell",
-    "     Arithmetic::).",
-    "",
-    "     If OFFSET evaluates to a number less than zero, the value is used",
-    "     as an offset in characters from the end of the value of PARAMETER.",
-    "     If LENGTH evaluates to a number less than zero, it is interpreted",
-    "     as an offset in characters from the end of the value of PARAMETER",
-    "     rather than a number of characters, and the expansion is the",
-    "     characters between OFFSET and that result.  Note that a negative",
-    "     offset must be separated from the colon by at least one space to",
-    "     avoid being confused with the ':-' expansion."
-  ],
-  "cli": [
+  "modified": "2022-03-03T16:38:03Z",
+  "code": [
     "$ set -- 01234567890abcdefgh",
     "",
     "$ echo ${1:7}",
@@ -55,6 +27,31 @@
     "$ echo ${1: -7:-2}",
     "bcdef"
   ],
-  "example": [],
-  "output": []
+  "example": "",
+  "output": "",
+  "description": [
+    "'${PARAMETER:OFFSET:LENGTH}'",
+    "     This is referred to as Substring Expansion.  It expands to up to",
+    "     LENGTH characters of the value of PARAMETER starting at the",
+    "     character specified by OFFSET.  If PARAMETER is '@', an indexed",
+    "     array subscripted by '@' or '*', or an associative array name, the",
+    "     results differ as described below.  If LENGTH is omitted, it",
+    "     expands to the substring of the value of PARAMETER starting at the",
+    "     character specified by OFFSET and extending to the end of the",
+    "     value.  LENGTH and OFFSET are arithmetic expressions (*note Shell",
+    "     Arithmetic::).",
+    "",
+    "     If OFFSET evaluates to a number less than zero, the value is used",
+    "     as an offset in characters from the end of the value of PARAMETER.",
+    "     If LENGTH evaluates to a number less than zero, it is interpreted",
+    "     as an offset in characters from the end of the value of PARAMETER",
+    "     rather than a number of characters, and the expansion is the",
+    "     characters between OFFSET and that result.  Note that a negative",
+    "     offset must be separated from the colon by at least one space to",
+    "     avoid being confused with the ':-' expansion."
+  ],
+  "language": "bash",
+  "tags": [
+    "text"
+  ]
 }

@@ -1,17 +1,17 @@
 {
-  "id": "154",
+  "id": 154,
   "title": "umask - get umask for current process",
-  "language": "bash",
-  "category": "umask",
-  "guid": "03755538-cad5-498a-813f-b1f12c40f112",
-  "url": "https://unix.stackexchange.com/a/354303",
-  "modified": "2022-03-17T00:30:46Z",
   "created": "2021-11-04T00:28:59Z",
-  "tags": [],
-  "description": [],
-  "cli": [
+  "modified": "2022-03-17T00:30:46Z",
+  "code": [
     "grep '^Umask:' \"/proc/$$/status\""
   ],
-  "example": [],
-  "output": "Umask:  0027"
+  "example": "",
+  "output": [
+    "Umask:  0027"
+  ],
+  "description": "",
+  "language": "bash",
+  "tags": null,
+  "url": "https://unix.stackexchange.com/a/354303"
 }

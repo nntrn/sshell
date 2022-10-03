@@ -1,19 +1,16 @@
 {
-  "id": "88",
+  "id": 88,
   "title": "get ldap group related to ADUser",
-  "language": "powershell",
-  "category": "get",
-  "guid": "2a909c20-22bc-4566-aa59-ec3e1b17a818",
-  "url": "",
-  "modified": "2021-12-30T19:55:20Z",
   "created": "2021-07-28T15:47:23Z",
-  "tags": [
-    "powershell"
-  ],
-  "description": [],
-  "cli": [
+  "modified": "2021-12-30T19:55:20Z",
+  "code": [
     "Get-ADUser -Identity Annie_Tran -Properties * | Select -ExpandProperty MemberOf"
   ],
-  "example": [],
-  "output": []
+  "example": "",
+  "output": "",
+  "description": "",
+  "language": "powershell",
+  "tags": [
+    "powershell"
+  ]
 }

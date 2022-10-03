@@ -1,21 +1,13 @@
 {
-  "id": "167",
+  "id": 167,
   "title": "ansible-doc snippet",
-  "language": "bash",
-  "category": "ansible-doc",
-  "guid": "829afe48-9435-4774-8a89-3be36f15d843",
-  "url": "https://www.oreilly.com/library/view/learn-ansible/9781788998758/6fc4eb99-e58e-46d3-b9d5-0370f293ec54.xhtml",
-  "modified": "2022-01-03T06:11:18Z",
   "created": "2021-11-29T16:35:32Z",
-  "tags": [
-    "ansible"
-  ],
-  "description": [],
-  "cli": [
+  "modified": "2022-01-03T06:11:18Z",
+  "code": [
     "ansible-doc awx.awx.tower_ad_hoc_command --snippet",
     ""
   ],
-  "example": [],
+  "example": "",
   "output": [
     "- name: create, update, or destroy Ansible Tower ad hoc commands.",
     "  tower_ad_hoc_command:",
@@ -43,5 +35,11 @@
     "      verbosity:             # Verbosity level for this ad hoc command run",
     "      wait:                  # Wait for the command to complete.",
     ""
-  ]
+  ],
+  "description": "",
+  "language": "bash",
+  "tags": [
+    "ansible"
+  ],
+  "url": "https://www.oreilly.com/library/view/learn-ansible/9781788998758/6fc4eb99-e58e-46d3-b9d5-0370f293ec54.xhtml"
 }

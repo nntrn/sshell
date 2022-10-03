@@ -1,33 +1,30 @@
 {
-  "id": "133",
+  "id": 133,
   "title": "Get service accounts owned by user and display in table",
-  "language": "powershell",
-  "category": "Get",
-  "guid": "d2be0fb9-2a61-4a05-a98e-91b51deaa93e",
-  "url": "",
-  "modified": "2022-03-03T16:34:34Z",
   "created": "2021-09-29T15:54:29Z",
-  "tags": [],
-  "description": [],
-  "cli": [
-    "Get-ADUser -Filter 'CN -like \"svc_*dbaas*\"'  -Properties * | Where-Object {$_.companyOwnerId -eq \"314810\"} | Format-Table Name,PasswordLastSet,Description,Modified -AutoSize -Wrap"
+  "modified": "2022-03-03T16:34:34Z",
+  "code": [
+    "Get-ADUser -Filter 'CN -like \"svc_*dbaas*\"'  -Properties * | Where-Object {$_.dellOwnerId -eq \"314810\"} | Format-Table Name,PasswordLastSet,Description,Modified -AutoSize -Wrap"
   ],
-  "example": [],
+  "example": "",
   "output": [
     "Name               PasswordLastSet       Description         Modified",
     "----               ---------------       -----------         --------",
-    "svc_account  9/25/2021 11:32:30 PM Owner :Thomas_Smith 9/28/2021 9:10:41 AM",
-    "svc_account      11/30/2020 1:37:46 PM Owner :Thomas_Smith 9/21/2021 8:55:24 AM",
-    "svc_account   9/25/2021 11:24:59 PM Owner :Thomas_Smith 9/25/2021 11:45:44 PM",
-    "svc_account    9/25/2021 11:37:27 PM Owner :Thomas_Smith 9/28/2021 11:00:29 PM",
-    "svc_account   9/25/2021 11:39:02 PM Owner :Thomas_Smith 9/28/2021 7:15:32 PM",
-    "svc_account     11/30/2020 8:33:07 AM Owner :Thomas_Smith 5/17/2021 12:33:15 PM",
-    "svc_account 12/9/2020 11:33:04 AM Owner :Thomas_Smith 9/26/2021 7:26:35 PM",
-    "svc_account     11/30/2020 1:38:22 PM Owner :Thomas_Smith 9/28/2021 11:41:45 PM",
-    "svc_account  12/9/2020 11:33:06 AM Owner :Thomas_Smith 9/26/2021 7:17:29 PM",
-    "svc_account   12/9/2020 11:32:38 AM Owner :Thomas_Smith 9/23/2021 7:04:22 PM",
-    "svc_account  12/9/2020 11:32:38 AM Owner :Thomas_Smith 9/23/2021 1:10:52 AM",
-    "svc_account    11/30/2020 1:37:21 PM Owner :Thomas_Smith 9/15/2021 2:10:41 AM",
+    "svc_npdbaasmongos  9/25/2021 11:32:30 PM Owner :Thomas_Barta 9/28/2021 9:10:41 AM",
+    "svc_npdbaasmt      11/30/2020 1:37:46 PM Owner :Thomas_Barta 9/21/2021 8:55:24 AM",
+    "svc_npdbaasoraos   9/25/2021 11:24:59 PM Owner :Thomas_Barta 9/25/2021 11:45:44 PM",
+    "svc_npdbaaspgos    9/25/2021 11:37:27 PM Owner :Thomas_Barta 9/28/2021 11:00:29 PM",
+    "svc_npdbaassqlos   9/25/2021 11:39:02 PM Owner :Thomas_Barta 9/28/2021 7:15:32 PM",
+    "svc_npdbaasvra     11/30/2020 8:33:07 AM Owner :Thomas_Barta 5/17/2021 12:33:15 PM",
+    "svc_prddbaasmongos 12/9/2020 11:33:04 AM Owner :Thomas_Barta 9/26/2021 7:26:35 PM",
+    "svc_prddbaasmt     11/30/2020 1:38:22 PM Owner :Thomas_Barta 9/28/2021 11:41:45 PM",
+    "svc_prddbaasoraos  12/9/2020 11:33:06 AM Owner :Thomas_Barta 9/26/2021 7:17:29 PM",
+    "svc_prddbaaspgos   12/9/2020 11:32:38 AM Owner :Thomas_Barta 9/23/2021 7:04:22 PM",
+    "svc_prddbaassqlos  12/9/2020 11:32:38 AM Owner :Thomas_Barta 9/23/2021 1:10:52 AM",
+    "svc_prddbaasvra    11/30/2020 1:37:21 PM Owner :Thomas_Barta 9/15/2021 2:10:41 AM",
     ""
-  ]
+  ],
+  "description": "",
+  "language": "powershell",
+  "tags": null
 }

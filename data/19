@@ -1,22 +1,20 @@
 {
-  "id": "19",
+  "id": 19,
   "title": "unwrap text file (useful for logs)",
-  "language": "bash",
-  "category": "unwrap",
-  "guid": "536deb2f-f4fe-4a4b-b41d-f395315a3fd2",
-  "url": "https://unix.stackexchange.com/a/291047",
-  "modified": "2021-12-30T19:44:08Z",
   "created": "2021-03-23T17:17:47Z",
-  "tags": [
-    "root"
-  ],
-  "description": [],
-  "cli": [
+  "modified": "2021-12-30T19:44:08Z",
+  "code": [
     "sed ':a;N;$!{/\\n$/!ba}; s/[[:blank:]]*\\n[[:blank:]]*/ /g' textfile.txt"
   ],
   "example": [
     "# unwrap sudo.log file",
     "sed ':a;N;$!{/\\n$/!ba}; s/[[:blank:]]*\\n[[:blank:]]*/ /g' /var/log/sudo.log | sed 's/COMMAND/\\nCOMMAND/g'"
   ],
-  "output": []
+  "output": "",
+  "description": "",
+  "language": "bash",
+  "tags": [
+    "root"
+  ],
+  "url": "https://unix.stackexchange.com/a/291047"
 }

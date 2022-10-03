@@ -1,15 +1,9 @@
 {
-  "id": "164",
+  "id": 164,
   "title": "proc environ - format for readability",
-  "language": "bash",
-  "category": "proc",
-  "guid": "61502a97-28f3-4050-88f6-209c42e2f1cf",
-  "url": "",
-  "modified": "2022-03-17T00:29:41Z",
   "created": "2021-11-12T21:34:39Z",
-  "tags": [],
-  "description": [],
-  "cli": [
+  "modified": "2022-03-17T00:29:41Z",
+  "code": [
     "cat /proc/$$/environ | sed 's/\\([A-Z_]*=\\)/\\n\\1/g'",
     ""
   ],
@@ -27,5 +21,8 @@
     "TERM=xterm",
     "DISPLAY=localhost:10.0"
   ],
-  "output": []
+  "output": "",
+  "description": "",
+  "language": "bash",
+  "tags": null
 }

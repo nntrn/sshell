@@ -1,19 +1,12 @@
 {
-  "id": "318",
+  "id": 318,
   "title": "declare - list all function names",
-  "language": "bash",
-  "category": "declare",
-  "type": "command",
-  "guid": "c012bfab-4669-4fe1-b5a2-c91537fb7daf",
-  "url": "",
-  "modified": "2022-05-17T00:20:28Z",
   "created": "2022-05-17T00:20:28Z",
-  "tags": [],
-  "description": [],
-  "cli": [
+  "modified": "2022-05-17T00:20:28Z",
+  "code": [
     "declare -F"
   ],
-  "example": [],
+  "example": "",
   "output": [
     "declare -f __expand_tilde_by_ref",
     "declare -f __get_cword_at_cursor_by_ref",
@@ -30,5 +23,8 @@
     "declare -f __git_complete_strategy",
     "declare -f __git_compute_all_commands",
     ""
-  ]
+  ],
+  "description": "",
+  "language": "bash",
+  "tags": null
 }

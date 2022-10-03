@@ -1,10 +1,9 @@
 {
-  "id": "349",
+  "id": 349,
   "title": "nginx -  common configurations to block sql injections and other attacks",
-  "modified": "2022-07-02T04:14:02Z",
   "created": "2022-06-29T22:41:01Z",
-  "guid": "1a8b4010-b6cc-4eb6-aabe-e8883c1e497d",
-  "cli": [
+  "modified": "2022-07-02T04:14:02Z",
+  "code": [
     "# common nginx configuration to block sql injection and other attacks",
     "location ~* \"(eval\\()\" {",
     "    deny all;",
@@ -63,9 +62,12 @@
     "    deny all;",
     "}"
   ],
-  "description": "https://www.acunetix.com/blog/web-security-zone/hardening-nginx/",
-  "url": "https://gist.github.com/nfsarmento/57db5abba08b315b67f174cd178bea88",
+  "example": "",
+  "output": "",
+  "description": [
+    "https://www.acunetix.com/blog/web-security-zone/hardening-nginx/"
+  ],
   "language": "nginx",
-  "category": "nginx",
-  "code_type": "command"
+  "tags": null,
+  "url": "https://gist.github.com/nfsarmento/57db5abba08b315b67f174cd178bea88"
 }

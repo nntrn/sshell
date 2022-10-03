@@ -1,17 +1,9 @@
 {
-  "id": "101",
+  "id": 101,
   "title": "Get systemctl property",
-  "language": "bash",
-  "category": "Get",
-  "guid": "59e91c3a-7c00-4de4-b972-0b5d7853be64",
-  "url": "",
-  "modified": "2022-03-03T21:08:00Z",
   "created": "2021-08-26T07:24:52Z",
-  "tags": [
-    "service"
-  ],
-  "description": [],
-  "cli": [
+  "modified": "2022-03-03T21:08:00Z",
+  "code": [
     "systemctl show -p WantedBy grafana-agent.service",
     "",
     "# view all",
@@ -25,5 +17,10 @@
     "MemoryCurrent=147226624",
     ""
   ],
-  "output": []
+  "output": "",
+  "description": "",
+  "language": "bash",
+  "tags": [
+    "service"
+  ]
 }

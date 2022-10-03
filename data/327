@@ -1,14 +1,28 @@
 {
-  "id": "327",
+  "id": 327,
   "title": "cProfile - Performance Profiling Python One-Liner",
-  "language": "python",
-  "category": "cProfile",
-  "type": "command",
-  "guid": "c3d67cc6-ace6-424e-b934-7b6ed5bd653f",
-  "url": "",
-  "modified": "2022-05-25T12:44:27Z",
   "created": "2022-05-25T12:36:32Z",
-  "tags": [],
+  "modified": "2022-05-26T23:53:58Z",
+  "code": [
+    "python -m cProfile file.py",
+    "",
+    "python -m profile file.py"
+  ],
+  "example": "",
+  "output": [
+    "         1347 function calls (1290 primitive calls) in 0.003 seconds",
+    "",
+    "   Ordered by: standard name",
+    "",
+    "   ncalls  tottime  percall  cumtime  percall filename:lineno(function)",
+    "        1    0.000    0.000    0.002    0.002 <frozen importlib._bootstrap>:1002(_find_and_load)",
+    "        1    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:112(release)",
+    "        1    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:152(__init__)",
+    "        1    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:156(__enter__)",
+    "        1    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:160(__exit__)",
+    "        1    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:166(_get_module_lock)",
+    "        1    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:185(cb)"
+  ],
   "description": [
     "To profile a function that takes a single argument, you can do:",
     "",
@@ -56,25 +70,6 @@
     "When there are two numbers in the first column (for example 3/1), it means that the function recursed. The second value is the number of primitive calls and the former is the total number of calls. Note that when the function does not recurse, these two values are the same, and only the single figure is printed.",
     ""
   ],
-  "cli": [
-    "python -m cProfile file.py",
-    "",
-    "python -m profile file.py"
-  ],
-  "example": [],
-  "output": [
-    "$ python -m cProfile rbql/csv_utils.py|tee /dev/clipboard",
-    "         1347 function calls (1290 primitive calls) in 0.003 seconds",
-    "",
-    "   Ordered by: standard name",
-    "",
-    "   ncalls  tottime  percall  cumtime  percall filename:lineno(function)",
-    "        1    0.000    0.000    0.002    0.002 <frozen importlib._bootstrap>:1002(_find_and_load)",
-    "        1    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:112(release)",
-    "        1    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:152(__init__)",
-    "        1    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:156(__enter__)",
-    "        1    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:160(__exit__)",
-    "        1    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:166(_get_module_lock)",
-    "        1    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:185(cb)"
-  ]
+  "language": "python",
+  "tags": null
 }

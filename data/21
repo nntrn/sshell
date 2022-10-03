@@ -1,34 +1,31 @@
 {
-  "id": "21",
+  "id": 21,
   "title": "sending email",
-  "language": "bash",
-  "category": "sending",
-  "guid": "2e0b88cd-4291-44d8-b133-425f4a8ac854",
-  "url": "",
-  "modified": "2021-12-30T19:44:08Z",
   "created": "2021-03-26T17:57:58Z",
-  "tags": [
-    "coreutils"
-  ],
-  "description": [],
-  "cli": [
-    "mail -s \"$(echo -e \"SAR files\\nContent-Type: text/html\")\" annie_tran@example.com <allsar.txt",
+  "modified": "2021-12-30T19:44:08Z",
+  "code": [
+    "mail -s \"$(echo -e \"SAR files\\nContent-Type: text/html\")\" annie_tran@dell.com <allsar.txt",
     ""
   ],
   "example": [
-    "mail -s \"Test\" -a vatp2s_hc_WED_vm_sizing.html annie_tran@example.com </dev/null",
+    "mail -s \"Test\" -a vatp2s_hc_WED_vm_sizing.html annie_tran@dell.com </dev/null",
     "",
-    "mail -s \"`hostname`\" -a `ls -lrt *.html |tail -1|head -n 1 |awk '{printf $9}'` annie_tran@example.com </dev/null",
+    "mail -s \"`hostname`\" -a `ls -lrt *.html |tail -1|head -n 1 |awk '{printf $9}'` annie_tran@dell.com </dev/null",
     "",
-    "mail -s \"`hostname`\" -a `ls -lrt *.txt |tail -1|head -n 1 |awk '{printf $9}'` annie_tran@example.com </dev/null",
+    "mail -s \"`hostname`\" -a `ls -lrt *.txt |tail -1|head -n 1 |awk '{printf $9}'` annie_tran@dell.com </dev/null",
     "",
-    "mail -s \"`hostname`\" -a <file> annie_tran@example.com </dev/null",
+    "mail -s \"`hostname`\" -a <file> annie_tran@dell.com </dev/null",
     "",
-    "mail -s \"$(echo -e \"This is Subject\\nContent-Type: text/html\")\" annie_tran@example.com <omegap_hc_TUE_sum.html",
+    "mail -s \"$(echo -e \"This is Subject\\nContent-Type: text/html\")\" annie_tran@dell.com <omegap_hc_TUE_sum.html",
     "",
-    "mail -s \"$(echo -e \"SAR files\\nContent-Type: text/html\")\" annie_tran@example.com <allsar.txt",
+    "mail -s \"$(echo -e \"SAR files\\nContent-Type: text/html\")\" annie_tran@dell.com <allsar.txt",
     "",
-    "mail -s \"`hostname`\" -a /home/annie_tran/email-test.txt annie_tran@example.com </dev/null"
+    "mail -s \"`hostname`\" -a /home/annie_tran/email-test.txt annie_tran@dell.com </dev/null"
   ],
-  "output": []
+  "output": "",
+  "description": "",
+  "language": "bash",
+  "tags": [
+    "coreutils"
+  ]
 }

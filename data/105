@@ -1,18 +1,12 @@
 {
-  "id": "105",
+  "id": 105,
   "title": "find zombie processes",
-  "language": "bash",
-  "category": "find",
-  "guid": "5a674f87-83ce-472e-9ce4-119db6757e65",
-  "url": "https://bencane.com/2012/07/02/when-zombies-invade-linux-what-are-zombie-processes-and-what-to-do-about-them/",
-  "modified": "2022-01-19T15:48:23Z",
   "created": "2021-08-31T18:52:13Z",
-  "tags": [],
-  "description": [],
-  "cli": [
+  "modified": "2022-01-19T15:48:23Z",
+  "code": [
     "ps -elf | grep Z"
   ],
-  "example": [],
+  "example": "",
   "output": [
     "$ ps -elf | grep Z",
     "F S UID         PID   PPID  C PRI  NI ADDR SZ WCHAN  STIME TTY          TIME CMD",
@@ -20,5 +14,9 @@
     "0 S root      13833   7005  0  80   0 - 28571 pipe_w 13:51 pts/1    00:00:00 grep --color=auto Z",
     "5 Z root     106273  61791  0  80   0 -     0 do_exi 11:45 ?        00:00:04 [awx-manage] <defunct>",
     ""
-  ]
+  ],
+  "description": "",
+  "language": "bash",
+  "tags": null,
+  "url": "https://bencane.com/2012/07/02/when-zombies-invade-linux-what-are-zombie-processes-and-what-to-do-about-them/"
 }

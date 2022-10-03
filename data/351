@@ -1,17 +1,10 @@
 {
-  "id": "351",
+  "id": 351,
   "title": "last reboot -  list of the times and dates when the system was recently rebooted",
-  "modified": "2022-06-30T04:15:30Z",
   "created": "2022-06-30T04:15:30Z",
-  "guid": "c8075591-932e-4518-8ebe-f4eb81a9a7db",
-  "cli": "last reboot",
-  "description": [
-    "To get a list of the times and dates when the system was recently rebooted, give `reboot' as an argument to last (see Listing the Last Times a User Logged In).",
-    "",
-    "To output a list of times when the system was rebooted, type:",
-    "$ last reboot [RET]",
-    "",
-    "NOTE: An operating system capable of running constantly for a long time without crashes or freeze-ups is a good one, and so having a high uptime value is a matter of pride for many Linux users. It is not uncommon to hear of systems that have been running for months and sometimes even years non-stop -- one Linux administrator reported on the Internet about one of his work systems, which had been running continuously without reboot for three years!"
+  "modified": "2022-06-30T04:15:30Z",
+  "code": [
+    "last reboot"
   ],
   "example": [
     "$ last reboot",
@@ -22,9 +15,18 @@
     "reboot   system boot  5.4.17-2136.304. Thu Jun  2 09:55 - 18:35 (1+08:40)",
     "",
     "wtmp begins Wed Jun  1 09:54:13 2022",
+    "",
     ""
   ],
+  "output": "",
+  "description": [
+    "To get a list of the times and dates when the system was recently rebooted, give `reboot' as an argument to last (see Listing the Last Times a User Logged In).",
+    "",
+    "To output a list of times when the system was rebooted, type:",
+    "$ last reboot [RET]",
+    "",
+    "NOTE: An operating system capable of running constantly for a long time without crashes or freeze-ups is a good one, and so having a high uptime value is a matter of pride for many Linux users. It is not uncommon to hear of systems that have been running for months and sometimes even years non-stop -- one Linux administrator reported on the Internet about one of his work systems, which had been running continuously without reboot for three years!"
+  ],
   "language": "bash",
-  "category": "last",
-  "code_type": "command"
+  "tags": null
 }

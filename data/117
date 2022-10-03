@@ -1,27 +1,24 @@
 {
-  "id": "117",
+  "id": 117,
   "title": "string slicing",
-  "language": "bash",
-  "category": "string",
-  "guid": "e5321ab0-c914-4f67-90d6-3b7ef26dd6f7",
-  "url": "",
-  "modified": "2022-03-03T21:10:21Z",
   "created": "2021-09-10T19:56:06Z",
-  "tags": [
-    "text"
-  ],
-  "description": [],
-  "cli": [
+  "modified": "2022-03-03T21:10:21Z",
+  "code": [
     "name=\"John\"",
     "echo ${name}",
-    "echo ${name/J/j}  #=> \"john\" (substitution)",
-    "echo ${name:0:2}  #=> \"Jo\" (slicing)",
-    "echo ${name::2}   #=> \"Jo\" (slicing)",
-    "echo ${name::-1}  #=> \"Joh\" (slicing)",
+    "echo ${name/J/j}    #=> \"john\" (substitution)",
+    "echo ${name:0:2}    #=> \"Jo\" (slicing)",
+    "echo ${name::2}     #=> \"Jo\" (slicing)",
+    "echo ${name::-1}    #=> \"Joh\" (slicing)",
     "echo ${name:(-1)}   #=> \"n\" (slicing from right)",
     "echo ${name:(-2):1} #=> \"h\" (slicing from right)",
     "echo ${food:-Cake}  #=> $food or \"Cake"
   ],
-  "example": [],
-  "output": []
+  "example": "",
+  "output": "",
+  "description": "",
+  "language": "bash",
+  "tags": [
+    "text"
+  ]
 }

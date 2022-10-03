@@ -1,17 +1,18 @@
 {
-  "id": "148",
+  "id": 148,
   "title": "Print border",
-  "language": "bash",
-  "category": "Print",
-  "guid": "f2258bab-15fc-4e07-8a64-e43e19dcdce8",
-  "url": "",
-  "modified": "2022-01-07T18:17:11Z",
   "created": "2021-11-02T17:23:10Z",
-  "tags": [],
-  "description": [],
-  "cli": [
+  "modified": "2022-01-07T18:17:11Z",
+  "code": [
     "printf '%*.0s\\n' 10 \"\" | tr \" \" \"#\""
   ],
-  "example": "REPEAT=10; printf '%*.0s\\n' $REPEAT\"\" | tr \" \" \"#\"",
-  "output": "##########"
+  "example": [
+    "REPEAT=10; printf '%*.0s\\n' $REPEAT\"\" | tr \" \" \"#\""
+  ],
+  "output": [
+    "##########"
+  ],
+  "description": "",
+  "language": "bash",
+  "tags": null
 }

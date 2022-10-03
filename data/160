@@ -1,19 +1,15 @@
 {
-  "id": "160",
+  "id": 160,
   "title": "find js files in src/",
-  "language": "bash",
-  "category": "find",
-  "guid": "30215798-4178-4d68-a35f-5286570fcaf3",
-  "url": "",
-  "modified": "2022-01-21T19:00:30Z",
   "created": "2021-11-08T23:23:08Z",
-  "tags": [],
-  "description": [],
-  "cli": [
+  "modified": "2022-01-21T19:00:30Z",
+  "code": [
     "find . -maxdepth 3 -type f -name \"*.js\" \\( -path \"*/src/*\" -and ! -regex \"*(node_modules|.git)*\" \\) -print",
     ""
   ],
-  "example": "$ find . -maxdepth 3 -type f -name \"*.js\" \\( -path \"*/src/*\" -and ! -regex \"*(node_modules|.git)*\" \\) -print",
+  "example": [
+    "$ find . -maxdepth 3 -type f -name \"*.js\" \\( -path \"*/src/*\" -and ! -regex \"*(node_modules|.git)*\" \\) -print"
+  ],
   "output": [
     "./ansible-servicenow/src/linux-servers.js",
     "./ansible-servicenow/src/parse.js",
@@ -25,5 +21,8 @@
     "./pandoc-test/src/build.js",
     "./pandoc-test/src/imagemin.js",
     "./pandoc-test/src/utils.js"
-  ]
+  ],
+  "description": "",
+  "language": "bash",
+  "tags": null
 }

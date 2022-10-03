@@ -1,23 +1,16 @@
 {
-  "id": "292",
+  "id": 292,
   "title": "naive string encryption - scramble numbers in string to hide sensitive data",
-  "language": "bash",
-  "category": "naive",
-  "type": "command",
-  "guid": "1aef9dc0-3220-42ca-8bcf-9c45c3a00bb8",
-  "url": "",
-  "modified": "2022-04-27T17:26:29Z",
   "created": "2022-04-27T17:26:29Z",
-  "tags": [],
-  "description": [],
-  "cli": [
+  "modified": "2022-04-27T17:26:29Z",
+  "code": [
     "echo \"$text-to-scramble-numbers\"  | tr \"0123456789\" \"$RANDOM$RANDOM\"",
     "",
     "# or",
     "randomnumstring=$RANDOM$RANDOM$RANDOM",
     "echo \"$text-to-scramble-numbers\"  | tr \"0123456789\" $( echo ${randomnumstring:0:9})"
   ],
-  "example": [],
+  "example": "",
   "output": [
     "AuthenticationType : Kerberos",
     "ImpersonationLevel : None",
@@ -44,5 +37,11 @@
     "NameClaimType      : http://schemas.xmlsoap.org/ws/3112/12/identity/claims/name",
     "RoleClaimType      : http://schemas.microsoft.com/ws/3118/12/identity/claims/groupsid",
     ""
+  ],
+  "description": "",
+  "language": "bash",
+  "tags": [
+    "crypto",
+    "security"
   ]
 }

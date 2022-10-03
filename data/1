@@ -1,19 +1,17 @@
 {
-  "id": "1",
+  "id": 1,
   "title": "generate RSA key",
-  "language": "bash",
-  "category": "generate",
-  "guid": "1874430b-1706-4bd5-98f9-ef1db7d370b9",
-  "url": "https://www.feistyduck.com/library/openssl-cookbook/online/ch-openssl.html",
-  "modified": "2021-12-30T19:44:08Z",
   "created": "2021-02-23T05:07:43Z",
+  "modified": "2021-12-30T19:44:08Z",
+  "code": [
+    "openssl genpkey -out fd.key -algorithm RSA -pkeyopt rsa_keygen_bits:2048 -aes-128-cbc"
+  ],
+  "example": "",
+  "output": "",
+  "description": "",
+  "language": "bash",
   "tags": [
     "network"
   ],
-  "description": [],
-  "cli": [
-    "openssl genpkey -out fd.key -algorithm RSA -pkeyopt rsa_keygen_bits:2048 -aes-128-cbc"
-  ],
-  "example": [],
-  "output": []
+  "url": "https://www.feistyduck.com/library/openssl-cookbook/online/ch-openssl.html"
 }

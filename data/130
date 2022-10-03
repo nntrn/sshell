@@ -1,19 +1,16 @@
 {
-  "id": "130",
+  "id": 130,
   "title": "find world writable files",
-  "language": "bash",
-  "category": "find",
-  "guid": "581a2a4b-838d-49d7-bf41-89d7a979d55b",
-  "url": "",
-  "modified": "2021-12-30T19:47:16Z",
   "created": "2021-09-22T08:48:59Z",
-  "tags": [],
-  "description": [],
-  "cli": [
+  "modified": "2021-12-30T19:47:16Z",
+  "code": [
     "find / -type d -path \"/misc*\" -prune -o -type d -perm /o=w -print",
     "",
     "find / -xdev -type d \\( -perm -0002 -a ! -perm -1000 \\) -print"
   ],
-  "example": [],
-  "output": []
+  "example": "",
+  "output": "",
+  "description": "",
+  "language": "bash",
+  "tags": null
 }

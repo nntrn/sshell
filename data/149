@@ -1,20 +1,18 @@
 {
-  "id": "149",
+  "id": 149,
   "title": "ansible-playbook in crontab",
-  "language": "plain",
-  "category": "ansible-playbook",
-  "guid": "270cb127-8e78-45e6-b043-c07afc845285",
-  "url": "https://github.com/ansible/ansible/issues/1210#issuecomment-172298551",
-  "modified": "2022-01-07T18:15:21Z",
   "created": "2021-11-03T18:02:57Z",
+  "modified": "2022-01-07T18:15:21Z",
+  "code": [
+    "*/15 * * * *    if ! out=`ansible-playbook yourplaybook.yaml`; then echo $out; fi",
+    ""
+  ],
+  "example": "",
+  "output": "",
+  "description": "",
+  "language": "plain",
   "tags": [
     "ansible"
   ],
-  "description": [],
-  "cli": [
-    "*/15 * * * *  if ! out=`ansible-playbook yourplaybook.yaml`; then echo $out; fi",
-    ""
-  ],
-  "example": [],
-  "output": []
+  "url": "https://github.com/ansible/ansible/issues/1210#issuecomment-172298551"
 }

@@ -1,17 +1,14 @@
 {
-  "id": "78",
+  "id": 78,
   "title": "generate ed25519 private key",
-  "language": "bash",
-  "category": "generate",
-  "guid": "c525a260-ba89-4136-b5f5-062761380dae",
-  "url": "",
-  "modified": "2021-12-30T19:44:10Z",
   "created": "2021-07-15T18:32:34Z",
-  "tags": [],
-  "description": [],
-  "cli": [
+  "modified": "2021-12-30T19:44:10Z",
+  "code": [
     "openssl genpkey -algorithm ed25519"
   ],
-  "example": [],
-  "output": []
+  "example": "",
+  "output": "",
+  "description": "",
+  "language": "bash",
+  "tags": null
 }

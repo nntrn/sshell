@@ -1,21 +1,15 @@
 {
-  "id": "99",
+  "id": 99,
   "title": "generating crypto quote",
-  "language": "bash",
-  "category": "generating",
-  "guid": "7031bb4a-239d-4164-9a76-151d47a7103b",
-  "url": "",
-  "modified": "2022-02-03T21:30:35Z",
   "created": "2021-08-18T00:46:46Z",
-  "tags": [],
-  "description": [],
-  "cli": [
+  "modified": "2022-02-03T21:30:35Z",
+  "code": [
     "$ special='! @ # % ^ & * ( ) _ + = [ ] { } < > . / ?'",
     "$ abc=$(echo {a..z} {A..Z} {0..9} \"$special\" | tr -d ' ')",
     "$ key=$(echo \"$abc\" | sed 's,\\(.\\),\\1\\n,g' | shuf | tr -d '\\n')",
     ""
   ],
-  "example": [],
+  "example": "",
   "output": [
     "$ echo \"$abc\"",
     "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#%^&*()_+=[]{}<>./?",
@@ -27,5 +21,8 @@
     "",
     "$ echo \"$cryptic_msg\" | tr \"$key\" \"$abc\"",
     "i love cary"
-  ]
+  ],
+  "description": "",
+  "language": "bash",
+  "tags": null
 }

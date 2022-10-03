@@ -1,23 +1,12 @@
 {
-  "id": "222",
+  "id": 222,
   "title": "nstat (better way of getting network statistics)",
-  "language": "bash",
-  "category": "nstat",
-  "guid": "139d18c2-8be5-4593-95d3-5d66c5f98fac",
-  "url": "https://www.redhat.com/sysadmin/nstat-command-linux",
-  "modified": "2022-03-03T16:14:29Z",
   "created": "2022-02-24T20:55:47Z",
-  "tags": [
-    "network"
-  ],
-  "description": [
-    "https://loicpefferkorn.net/2018/09/linux-network-statistics-reference/",
-    "https://www.kernel.org/doc/html/latest/networking/"
-  ],
-  "cli": [
+  "modified": "2022-03-03T16:14:29Z",
+  "code": [
     "nstat -a -t 60"
   ],
-  "example": [],
+  "example": "",
   "output": [
     "#kernel",
     "IpInReceives                    11726853           0.0",
@@ -127,5 +116,14 @@
     "IpExtInBcastOctets              177442505          0.0",
     "IpExtInNoECTPkts                11733275           0.0",
     ""
-  ]
+  ],
+  "description": [
+    "https://loicpefferkorn.net/2018/09/linux-network-statistics-reference/",
+    "https://www.kernel.org/doc/html/latest/networking/"
+  ],
+  "language": "bash",
+  "tags": [
+    "network"
+  ],
+  "url": "https://www.redhat.com/sysadmin/nstat-command-linux"
 }

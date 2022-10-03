@@ -1,14 +1,14 @@
 {
-  "id": "307",
+  "id": 307,
   "title": "fuser - close tcp ports ",
-  "language": "bash",
-  "category": "fuser",
-  "type": "command",
-  "guid": "47955284-96a7-4aca-a907-391ccfbef10e",
-  "url": "https://superuser.com/a/389252",
-  "modified": "2022-05-09T21:25:48Z",
   "created": "2022-05-09T21:25:38Z",
-  "tags": [],
+  "modified": "2022-05-09T21:25:48Z",
+  "code": [
+    "fuser -v -k -n tcp 443",
+    "fuser -v -k -n tcp 80"
+  ],
+  "example": "",
+  "output": "",
   "description": [
     "       fuser -km /home",
     "              kills all processes accessing the file system /home in any way.",
@@ -20,10 +20,7 @@
     "              shows all processes at the (local) TELNET port.",
     ""
   ],
-  "cli": [
-    "fuser -v -k -n tcp 443",
-    "fuser -v -k -n tcp 80"
-  ],
-  "example": [],
-  "output": []
+  "language": "bash",
+  "tags": null,
+  "url": "https://superuser.com/a/389252"
 }

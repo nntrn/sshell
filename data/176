@@ -1,20 +1,12 @@
 {
-  "id": "176",
+  "id": 176,
   "title": "list files and sort by size",
-  "language": "bash",
-  "category": "list",
-  "guid": "6f2caf71-5f03-4055-bb86-d8796fd174a3",
-  "url": "https://unix.stackexchange.com/a/53738/464659",
-  "modified": "2021-12-29T20:52:33Z",
   "created": "2021-12-29T17:31:57Z",
-  "tags": [],
-  "description": [
-    "Following @StéphaneChazelas, this works for me: find . -type f -print0 | xargs -0 du -h | sort -rh. If you just want say the largest 30 files: find . -type f -print0 | xargs -0 du -h | sort -rh | head -n 30"
-  ],
-  "cli": [
+  "modified": "2021-12-29T20:52:33Z",
+  "code": [
     "du -h | sort -rh"
   ],
-  "example": [],
+  "example": "",
   "output": [
     "3.3G    ./.awx",
     "3.3G    .",
@@ -42,5 +34,11 @@
     "5.6M    ./.cache/pip/http/f/8/1/8",
     "5.6M    ./.cache/pip/http/f/8/1",
     ""
-  ]
+  ],
+  "description": [
+    "Following @StéphaneChazelas, this works for me: find . -type f -print0 | xargs -0 du -h | sort -rh. If you just want say the largest 30 files: find . -type f -print0 | xargs -0 du -h | sort -rh | head -n 30"
+  ],
+  "language": "bash",
+  "tags": null,
+  "url": "https://unix.stackexchange.com/a/53738/464659"
 }

@@ -1,24 +1,13 @@
 {
-  "id": "291",
+  "id": 291,
   "title": "netsh - find the processId for the registered urls ",
-  "language": "bash",
-  "category": "netsh",
-  "type": "command",
-  "guid": "5c330f7d-4498-4e5a-80dd-053d3a7fb155",
-  "url": "https://stackoverflow.com/a/61965725",
-  "modified": "2022-04-27T16:36:08Z",
   "created": "2022-04-27T16:36:08Z",
-  "tags": [],
-  "description": [
-    "You can find the processId for the registered urls using the following command:",
-    "",
-    ""
-  ],
-  "cli": [
+  "modified": "2022-04-27T16:36:08Z",
+  "code": [
     "netsh http show servicestate view=requestq verbose=no",
     ""
   ],
-  "example": [],
+  "example": "",
   "output": [
     "Snapshot of HTTP service state (Request Queue View):",
     "-----------------------------------------------------",
@@ -133,5 +122,16 @@
     "            Version: 2.0",
     "            State: Active",
     ""
-  ]
+  ],
+  "description": [
+    "You can find the processId for the registered urls using the following command:",
+    "",
+    ""
+  ],
+  "language": "bash",
+  "tags": [
+    "windows,",
+    "network"
+  ],
+  "url": "https://stackoverflow.com/a/61965725"
 }

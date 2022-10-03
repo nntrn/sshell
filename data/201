@@ -1,23 +1,21 @@
 {
-  "id": "201",
+  "id": 201,
   "title": "Check client certificate",
-  "language": "bash",
-  "category": "Check",
-  "guid": "a464f96f-ea8f-409f-ac98-53ee19287843",
-  "url": "https://access.redhat.com/discussions/4524081",
-  "modified": "2022-02-03T03:24:11Z",
   "created": "2022-02-03T03:24:11Z",
+  "modified": "2022-02-03T03:24:11Z",
+  "code": [
+    "echo '' | openssl s_client -connect awxpluat02.us.dell.com:443 2>/dev/null | openssl x509 -text -noout | grep -A 1 \"Public Key Algorithm\""
+  ],
+  "example": "",
+  "output": [
+    "$ echo '' | openssl s_client -connect awxpluat02.us.dell.com:443 2>/dev/null | openssl x509 -text -noout | grep -A 1 \"Public Key Algorithm\"",
+    "            Public Key Algorithm: rsaEncryption",
+    "                RSA Public-Key: (2048 bit)"
+  ],
+  "description": "",
+  "language": "bash",
   "tags": [
     "network"
   ],
-  "description": [],
-  "cli": [
-    "echo '' | openssl s_client -connect awxserver.us.example.com:443 2>/dev/null | openssl x509 -text -noout | grep -A 1 \"Public Key Algorithm\""
-  ],
-  "example": [],
-  "output": [
-    "$ echo '' | openssl s_client -connect awxserver.us.example.com:443 2>/dev/null | openssl x509 -text -noout | grep -A 1 \"Public Key Algorithm\"",
-    "            Public Key Algorithm: rsaEncryption",
-    "                RSA Public-Key: (2048 bit)"
-  ]
+  "url": "https://access.redhat.com/discussions/4524081"
 }

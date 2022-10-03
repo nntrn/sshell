@@ -1,20 +1,12 @@
 {
-  "id": "220",
+  "id": 220,
   "title": "Gather listening ports",
-  "language": "bash",
-  "category": "Gather",
-  "guid": "98561987-01a9-431e-8302-e03ff2d3fac4",
-  "url": "https://github.com/openstack/openstack-ansible/blob/master/playbooks/listening-port-report.yml",
-  "modified": "2022-03-03T16:27:10Z",
   "created": "2022-02-24T09:15:34Z",
-  "tags": [
-    "network"
-  ],
-  "description": [],
-  "cli": [
+  "modified": "2022-03-03T16:27:10Z",
+  "code": [
     "netstat -ln --inet --program"
   ],
-  "example": [],
+  "example": "",
   "output": [
     "Active Internet connections (only servers)",
     "Proto Recv-Q Send-Q Local Address           Foreign Address         State       PID/Program name",
@@ -48,5 +40,11 @@
     "udp        0      0 0.0.0.0:800             0.0.0.0:*                           1054/rpcbind",
     "udp        0      0 0.0.0.0:21989           0.0.0.0:*                           1331/rpc.statd",
     ""
-  ]
+  ],
+  "description": "",
+  "language": "bash",
+  "tags": [
+    "network"
+  ],
+  "url": "https://github.com/openstack/openstack-ansible/blob/master/playbooks/listening-port-report.yml"
 }

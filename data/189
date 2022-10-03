@@ -1,22 +1,12 @@
 {
-  "id": "189",
+  "id": 189,
   "title": "list files with time style & hides groups",
-  "language": "bash",
-  "category": "list",
-  "guid": "be28e029-6eb0-445f-91bc-5f716560cc48",
-  "url": "",
-  "modified": "2022-01-19T19:37:55Z",
   "created": "2022-01-19T19:37:55Z",
-  "tags": [
-    "shell"
-  ],
-  "description": [
-    "       -o     like -l, but do not list group information"
-  ],
-  "cli": [
+  "modified": "2022-01-19T19:37:55Z",
+  "code": [
     "ls -lptr --time-style='+%s %F %T' --group-directories-first -o"
   ],
-  "example": [],
+  "example": "",
   "output": [
     "total 11276",
     "drwxr-xr-x 3 annie_tran     123 1628039419 2021-08-03 20:10:19 awx_setup/",
@@ -36,5 +26,12 @@
     "-rw-r----- 1 annie_tran    4674 1642003245 2022-01-12 10:00:45 vscodescripts.sh",
     "-rw-r----- 1 annie_tran 5748865 1642004213 2022-01-12 10:16:53 proc2.txt",
     "-rw-r----- 1 annie_tran 5749109 1642011987 2022-01-12 12:26:27 proc.txt"
+  ],
+  "description": [
+    "       -o     like -l, but do not list group information"
+  ],
+  "language": "bash",
+  "tags": [
+    "shell"
   ]
 }

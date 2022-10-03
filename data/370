@@ -1,0 +1,32 @@
+{
+  "id": 370,
+  "title": "Format-Table -GroupBy - Format processes by BasePriority",
+  "created": "2022-07-29T23:50:49Z",
+  "modified": "2022-07-29T23:50:49Z",
+  "code": [
+    "Get-Process | Sort-Object -Property BasePriority | Format-Table -GroupBy BasePriority -Wrap"
+  ],
+  "example": "",
+  "output": [
+    "   BasePriority: 0",
+    "",
+    "Handles  NPM(K)    PM(K)      WS(K)     CPU(s)     Id  SI ProcessName",
+    "-------  ------    -----      -----     ------     --  -- -----------",
+    "      0       0       60          8                 0   0 Idle",
+    "",
+    "",
+    "   BasePriority: 4",
+    "",
+    "Handles  NPM(K)    PM(K)      WS(K)     CPU(s)     Id  SI ProcessName",
+    "-------  ------    -----      -----     ------     --  -- -----------",
+    "    310      21    26584       3500       2.03  25564   1 msedge",
+    "    405      22    41672       4216       6.53  25676   1 msedge",
+    "    478      27   187940     234400      26.73  25516   1 msedge",
+    "    328      22    25940       3796       4.95   9096   1 msedge",
+    "[...]"
+  ],
+  "description": "",
+  "language": "powershell",
+  "tags": null,
+  "url": "https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.utility/format-table?view=powershell-7.2#example-2-format-processes-by-basepriority"
+}

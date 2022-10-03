@@ -1,18 +1,9 @@
 {
-  "id": "310",
+  "id": 310,
   "title": "git log - get commit hash list",
-  "language": "bash",
-  "category": "git",
-  "type": "command",
-  "guid": "25bcd397-70ad-453f-94d8-4e7b634e1d6b",
-  "url": "",
-  "modified": "2022-05-11T02:50:30Z",
   "created": "2022-05-11T02:50:30Z",
-  "tags": [
-    "git"
-  ],
-  "description": [],
-  "cli": [
+  "modified": "2022-05-11T02:50:30Z",
+  "code": [
     "# get last 2 ",
     "git log -2 --pretty=%h ",
     "",
@@ -24,5 +15,10 @@
     "c51538a",
     "2090d93"
   ],
-  "output": []
+  "output": "",
+  "description": "",
+  "language": "bash",
+  "tags": [
+    "git"
+  ]
 }

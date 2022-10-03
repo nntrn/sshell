@@ -1,15 +1,9 @@
 {
-  "id": "112",
+  "id": 112,
   "title": "view process id",
-  "language": "bash",
-  "category": "view",
-  "guid": "35fe6c2e-7cd8-4b81-9ed7-e3d113b83037",
-  "url": "https://unix.stackexchange.com/a/296852",
-  "modified": "2022-01-19T15:47:55Z",
   "created": "2021-09-10T00:27:36Z",
-  "tags": [],
-  "description": [],
-  "cli": [
+  "modified": "2022-01-19T15:47:55Z",
+  "code": [
     "bash -c 'echo $$ ; ls -l /proc/self ; echo foo'"
   ],
   "example": [
@@ -20,5 +14,9 @@
     "68800",
     ""
   ],
-  "output": []
+  "output": "",
+  "description": "",
+  "language": "bash",
+  "tags": null,
+  "url": "https://unix.stackexchange.com/a/296852"
 }

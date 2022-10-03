@@ -1,20 +1,13 @@
 {
-  "id": "287",
+  "id": 287,
   "title": "Get-ADGroupMember",
-  "language": "powershell",
-  "category": "error;#256",
-  "type": "command",
-  "guid": "3237f31e-84b7-42fa-825d-8a62c54740ca",
-  "url": "https://www.lepide.com/how-to/export-members-of-a-particular-ad-group-using-poweshell.html#:~:text=The%20PowerShell%20Get%2DADGroupMember%20cmdlet,group%20you%20want%20to%20use.",
-  "modified": "2022-04-22T01:10:49Z",
   "created": "2022-04-22T01:10:49Z",
-  "tags": [],
-  "description": [],
-  "cli": [
+  "modified": "2022-04-22T01:10:49Z",
+  "code": [
     "Get-ADGroupMember -Identity group,name | Select-Object name",
     ""
   ],
-  "example": [],
+  "example": "",
   "output": [
     "name",
     "----",
@@ -28,5 +21,9 @@
     "Joyce Clay",
     "Eunice Wolfe",
     "Mildred Pearson"
-  ]
+  ],
+  "description": "",
+  "language": "powershell",
+  "tags": null,
+  "url": "https://www.lepide.com/how-to/export-members-of-a-particular-ad-group-using-poweshell.html#:~:text=The%20PowerShell%20Get%2DADGroupMember%20cmdlet,group%20you%20want%20to%20use."
 }

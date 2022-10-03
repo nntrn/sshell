@@ -1,34 +1,31 @@
 {
-  "id": "134",
+  "id": 134,
   "title": "Powershell get calculated property",
-  "language": "powershell",
-  "category": "Powershell",
-  "guid": "52760533-48df-4e67-86ca-0338d9653ca1",
-  "url": "",
-  "modified": "2022-03-03T16:34:26Z",
   "created": "2021-09-29T16:44:53Z",
-  "tags": [],
-  "description": [],
-  "cli": [
-    "Get-ADUser -Filter 'CN -like \"svc_*dbaas*\"'  -Properties * | Where-Object {$_.companyOwnerId -eq \"314810\"} | Sort-Object -Property PasswordLastSet | Format-Table Name,PasswordLastSet,Description,Modified,LastLogonDate,@{N='MemberOf';E={$_.MemberOf[0]}} -AutoSize -Wrap"
+  "modified": "2022-03-03T16:34:26Z",
+  "code": [
+    "Get-ADUser -Filter 'CN -like \"svc_*dbaas*\"'  -Properties * | Where-Object {$_.dellOwnerId -eq \"314810\"} | Sort-Object -Property PasswordLastSet | Format-Table Name,PasswordLastSet,Description,Modified,LastLogonDate,@{N='MemberOf';E={$_.MemberOf[0]}} -AutoSize -Wrap"
   ],
-  "example": [],
+  "example": "",
   "output": [
     "",
     "Name               PasswordLastSet       Description         Modified              LastLogonDate         MemberOf",
     "----               ---------------       -----------         --------              -------------         --------",
-    "svc_account     11/30/2020 8:33:07 AM Owner :Thomas_Smith 5/17/2021 12:33:30 PM 1/3/2021 6:27:47 AM   CN=VRA_users,OU=Groups,DC=amer,DC=nntrn,DC=com",
-    "svc_account    11/30/2020 1:37:21 PM Owner :Thomas_Smith 9/15/2021 2:10:55 AM  9/15/2021 1:59:43 AM  CN=VRA_users,OU=Groups,DC=amer,DC=nntrn,DC=com",
-    "svc_account      11/30/2020 1:37:46 PM Owner :Thomas_Smith 9/21/2021 8:55:30 AM  9/21/2021 8:43:05 AM  CN=AmerUnixUsers,OU=Groups,OU=Users,OU=Austin,DC=amer,DC=nntrn,DC=com",
-    "svc_account     11/30/2020 1:38:22 PM Owner :Thomas_Smith 9/28/2021 11:41:35 PM 9/28/2021 11:30:52 PM CN=AmerUnixUsers,OU=Groups,OU=Users,OU=Austin,DC=amer,DC=nntrn,DC=com",
-    "svc_account  12/9/2020 11:32:38 AM Owner :Thomas_Smith 9/23/2021 1:11:02 AM  9/23/2021 1:00:32 AM  CN=unv_prd_sql_dbaas,OU=PrivilegedGroups,OU=AdmAccounts,DC=amer,DC=nntrn,DC=com",
-    "svc_account   12/9/2020 11:32:38 AM Owner :Thomas_Smith 9/23/2021 7:03:50 PM  9/23/2021 7:03:35 PM  CN=unv_prd_postgres_dbaas,OU=PrivilegedGroups,OU=AdmAccounts,DC=amer,DC=nntrn,DC=com",
-    "svc_account 12/9/2020 11:33:04 AM Owner :Thomas_Smith 9/26/2021 7:26:09 PM  9/26/2021 7:10:44 PM  CN=unv_prd_mongo_dbaas,OU=PrivilegedGroups,OU=AdmAccounts,DC=amer,DC=nntrn,DC=com",
-    "svc_account  12/9/2020 11:33:06 AM Owner :Thomas_Smith 9/26/2021 7:16:42 PM  9/26/2021 7:16:26 PM  CN=unv_prd_oracle_dbaas,OU=PrivilegedGroups,OU=AdmAccounts,DC=amer,DC=nntrn,DC=com",
-    "svc_account   9/25/2021 11:24:59 PM Owner :Thomas_Smith 9/25/2021 11:45:51 PM 9/24/2021 5:32:16 PM  CN=unv_np_oracle_dbaas,OU=Groups,DC=amer,DC=nntrn,DC=com",
-    "svc_account  9/25/2021 11:32:30 PM Owner :Thomas_Smith 9/28/2021 9:10:48 AM  9/28/2021 9:06:59 AM  CN=unv_np_mongo_dbaas,OU=Groups,DC=amer,DC=nntrn,DC=com",
-    "svc_account    9/25/2021 11:37:27 PM Owner :Thomas_Smith 9/28/2021 11:00:29 PM 9/24/2021 10:18:48 AM CN=unv_np_postgres_dbaas,OU=Groups,DC=amer,DC=nntrn,DC=com",
-    "svc_account   9/25/2021 11:39:02 PM Owner :Thomas_Smith 9/28/2021 7:14:56 PM  9/23/2021 2:50:13 PM  CN=unv_np_sql_dbaas,OU=Groups,DC=amer,DC=nntrn,DC=com",
+    "svc_npdbaasvra     11/30/2020 8:33:07 AM Owner :Thomas_Barta 5/17/2021 12:33:30 PM 1/3/2021 6:27:47 AM   CN=VRA_users,OU=Groups,DC=amer,DC=dell,DC=com",
+    "svc_prddbaasvra    11/30/2020 1:37:21 PM Owner :Thomas_Barta 9/15/2021 2:10:55 AM  9/15/2021 1:59:43 AM  CN=VRA_users,OU=Groups,DC=amer,DC=dell,DC=com",
+    "svc_npdbaasmt      11/30/2020 1:37:46 PM Owner :Thomas_Barta 9/21/2021 8:55:30 AM  9/21/2021 8:43:05 AM  CN=AmerUnixUsers,OU=Groups,OU=Users,OU=Austin,DC=amer,DC=dell,DC=com",
+    "svc_prddbaasmt     11/30/2020 1:38:22 PM Owner :Thomas_Barta 9/28/2021 11:41:35 PM 9/28/2021 11:30:52 PM CN=AmerUnixUsers,OU=Groups,OU=Users,OU=Austin,DC=amer,DC=dell,DC=com",
+    "svc_prddbaassqlos  12/9/2020 11:32:38 AM Owner :Thomas_Barta 9/23/2021 1:11:02 AM  9/23/2021 1:00:32 AM  CN=unv_prd_sql_dbaas,OU=PrivilegedGroups,OU=AdmAccounts,DC=amer,DC=dell,DC=com",
+    "svc_prddbaaspgos   12/9/2020 11:32:38 AM Owner :Thomas_Barta 9/23/2021 7:03:50 PM  9/23/2021 7:03:35 PM  CN=unv_prd_postgres_dbaas,OU=PrivilegedGroups,OU=AdmAccounts,DC=amer,DC=dell,DC=com",
+    "svc_prddbaasmongos 12/9/2020 11:33:04 AM Owner :Thomas_Barta 9/26/2021 7:26:09 PM  9/26/2021 7:10:44 PM  CN=unv_prd_mongo_dbaas,OU=PrivilegedGroups,OU=AdmAccounts,DC=amer,DC=dell,DC=com",
+    "svc_prddbaasoraos  12/9/2020 11:33:06 AM Owner :Thomas_Barta 9/26/2021 7:16:42 PM  9/26/2021 7:16:26 PM  CN=unv_prd_oracle_dbaas,OU=PrivilegedGroups,OU=AdmAccounts,DC=amer,DC=dell,DC=com",
+    "svc_npdbaasoraos   9/25/2021 11:24:59 PM Owner :Thomas_Barta 9/25/2021 11:45:51 PM 9/24/2021 5:32:16 PM  CN=unv_np_oracle_dbaas,OU=Groups,DC=amer,DC=dell,DC=com",
+    "svc_npdbaasmongos  9/25/2021 11:32:30 PM Owner :Thomas_Barta 9/28/2021 9:10:48 AM  9/28/2021 9:06:59 AM  CN=unv_np_mongo_dbaas,OU=Groups,DC=amer,DC=dell,DC=com",
+    "svc_npdbaaspgos    9/25/2021 11:37:27 PM Owner :Thomas_Barta 9/28/2021 11:00:29 PM 9/24/2021 10:18:48 AM CN=unv_np_postgres_dbaas,OU=Groups,DC=amer,DC=dell,DC=com",
+    "svc_npdbaassqlos   9/25/2021 11:39:02 PM Owner :Thomas_Barta 9/28/2021 7:14:56 PM  9/23/2021 2:50:13 PM  CN=unv_np_sql_dbaas,OU=Groups,DC=amer,DC=dell,DC=com",
     ""
-  ]
+  ],
+  "description": "",
+  "language": "powershell",
+  "tags": null
 }

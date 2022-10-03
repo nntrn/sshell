@@ -1,19 +1,13 @@
 {
-  "id": "193",
+  "id": 193,
   "title": "psql: cast json and pretty print",
-  "language": "sql",
-  "category": "psql",
-  "guid": "9ce733cd-62c2-49ca-a52a-569c623b3f16",
-  "url": "https://stackoverflow.com/a/68679549/7460613",
-  "modified": "2022-03-16T18:53:10Z",
   "created": "2022-01-21T05:53:13Z",
-  "tags": [],
-  "description": [],
-  "cli": [
+  "modified": "2022-03-16T18:53:10Z",
+  "code": [
     "select jsonb_pretty(extra_data::jsonb) ",
     "from main_joblaunchconfig where extra_data <> '{}';"
   ],
-  "example": [],
+  "example": "",
   "output": [
     "awx=# select jsonb_pretty(extra_data::jsonb) from main_joblaunchconfig where extra_data <> '{}';",
     "-[ RECORD 1 ]+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------",
@@ -25,13 +19,13 @@
     "             |         \"commits\": [                                                                                                                                                  +",
     "             |             {                                                                                                                                                         +",
     "             |                 \"id\": \"7586902a37c4458883f9e812804acdae0e42939b\",                                                                                                     +",
-    "             |                 \"url\": \"https://gitlab.example.com/infrastructure/database/engineering/tools/dbaasv2/awx_inventory/-/commit/7586902a37c4458883f9e812804acdae0e42939b\",   +",
+    "             |                 \"url\": \"https://gitlab.dell.com/infrastructure/database/engineering/tools/dbaasv2/awx_inventory/-/commit/7586902a37c4458883f9e812804acdae0e42939b\",   +",
     "             |                 \"added\": [                                                                                                                                            +",
     "             |                 ],                                                                                                                                                    +",
     "             |                 \"title\": \"Update inventory\",                                                                                                                          +",
     "             |                 \"author\": {                                                                                                                                           +",
-    "             |                     \"name\": \"svc_account\",                                                                                                                       +",
-    "             |                     \"email\": \"svc_account@amer.example.com\"                                                                                                         +",
+    "             |                     \"name\": \"svc_npnpdbaasvra\",                                                                                                                       +",
+    "             |                     \"email\": \"svc_npnpdbaasvra@amer.dell.com\"                                                                                                         +",
     "             |                 },                                                                                                                                                    +",
     "             |                 \"message\": \"Update inventory\\n\",                                                                                                                      +",
     "             |                 \"removed\": [                                                                                                                                          +",
@@ -42,5 +36,13 @@
     "             |                 \"timestamp\": \"2021-06-15T00:00:07-05:00\"                                                                                                              +",
     "             |             }                                                                                                                                                         +",
     "             |         ],                                                              "
-  ]
+  ],
+  "description": "",
+  "language": "sql",
+  "tags": [
+    "db",
+    "postgres",
+    "psql"
+  ],
+  "url": "https://stackoverflow.com/a/68679549/7460613"
 }

@@ -1,20 +1,19 @@
 {
-  "id": "32",
+  "id": 32,
   "title": "diff project structures for git branches",
-  "language": "bash",
-  "category": "diff",
-  "guid": "00e7fb90-6194-4196-ae2f-2e1f11042f2e",
-  "url": "",
-  "modified": "2021-12-30T19:44:09Z",
   "created": "2021-04-06T15:58:48Z",
-  "tags": [],
-  "description": [],
-  "cli": [
+  "modified": "2021-12-30T19:44:09Z",
+  "code": [
     "diff --side-by-side --color=always --width=200 --suppress-common-lines \\",
     "  <(git ls-tree -r branch01--name-only) \\",
     "  <(git ls-tree -r branch02 --name-only)",
     ""
   ],
-  "example": "diff -y --color=always --width=180 --suppress-common-lines <(git ls-tree -r 17.0.1 --name-only) <(git ls-tree -r 17.1.0 --name-only)",
-  "output": []
+  "example": [
+    "diff -y --color=always --width=180 --suppress-common-lines <(git ls-tree -r 17.0.1 --name-only) <(git ls-tree -r 17.1.0 --name-only)"
+  ],
+  "output": "",
+  "description": "",
+  "language": "bash",
+  "tags": null
 }

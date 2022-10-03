@@ -1,20 +1,18 @@
 {
-  "id": "91",
+  "id": 91,
   "title": "Get services with search string",
-  "language": "powershell",
-  "category": "Get",
-  "guid": "865478ab-7c1f-4c82-848c-d9f237246817",
-  "url": "https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.management/get-service?view=powershell-7.1",
-  "modified": "2022-03-03T21:08:17Z",
   "created": "2021-07-30T10:13:42Z",
-  "tags": [],
-  "description": [],
-  "cli": [
+  "modified": "2022-03-03T21:08:17Z",
+  "code": [
     "Get-Service -Displayname \"*network*\"",
     "",
     "Get-Service | Where-Object {$_.Status -eq \"Running\"}",
     ""
   ],
-  "example": [],
-  "output": []
+  "example": "",
+  "output": "",
+  "description": "",
+  "language": "powershell",
+  "tags": null,
+  "url": "https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.management/get-service?view=powershell-7.1"
 }

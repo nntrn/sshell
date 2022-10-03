@@ -1,21 +1,14 @@
 {
-  "id": "237",
+  "id": 237,
   "title": "print statistics of a process",
-  "language": "bash",
-  "category": "print",
-  "guid": "a633b675-2e67-4732-b422-fad34f6409c5",
-  "url": "",
-  "modified": "2022-03-04T00:39:31Z",
   "created": "2022-03-04T00:39:31Z",
-  "tags": [],
-  "description": [
-    "prtstat  prints  the statistics of the specified process.  This information comes from the /proc/PID/stat file.",
-    ""
-  ],
-  "cli": [
+  "modified": "2022-03-04T00:39:31Z",
+  "code": [
     "prtstat $PID"
   ],
-  "example": "$ prtstat 3216",
+  "example": [
+    "$ prtstat 3216"
+  ],
   "output": [
     "Process: awx-manage             State: S (sleeping)",
     "  CPU#:  1              TTY: 0:0        Threads: 1",
@@ -39,5 +32,11 @@
     "Scheduling",
     "  Policy: normal",
     "  Nice:   0        "
-  ]
+  ],
+  "description": [
+    "prtstat  prints  the statistics of the specified process.  This information comes from the /proc/PID/stat file.",
+    ""
+  ],
+  "language": "bash",
+  "tags": null
 }

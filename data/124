@@ -1,17 +1,15 @@
 {
-  "id": "124",
+  "id": 124,
   "title": "awk - remove duplicates without sorting",
-  "language": "bash",
-  "category": "awk",
-  "guid": "2d0af3f5-6ed0-4f57-9f80-88673f4c4881",
-  "url": "https://stackoverflow.com/a/11532197",
-  "modified": "2022-05-12T19:27:48Z",
   "created": "2021-09-15T17:08:17Z",
-  "tags": [],
-  "description": [],
-  "cli": [
+  "modified": "2022-05-12T19:27:48Z",
+  "code": [
     "awk '!x[$0]++'"
   ],
-  "example": [],
-  "output": []
+  "example": "",
+  "output": "",
+  "description": "",
+  "language": "bash",
+  "tags": null,
+  "url": "https://stackoverflow.com/a/11532197"
 }

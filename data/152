@@ -1,17 +1,14 @@
 {
-  "id": "152",
+  "id": 152,
   "title": "add user to group",
-  "language": "bash",
-  "category": "add",
-  "guid": "d8dbfb46-4c63-4537-84bb-d6ce77c560da",
-  "url": "",
-  "modified": "2022-01-10T15:56:31Z",
   "created": "2021-11-03T23:36:59Z",
-  "tags": [],
-  "description": [],
-  "cli": [
+  "modified": "2022-01-10T15:56:31Z",
+  "code": [
     "usermod -a -G wheel annie_tran"
   ],
-  "example": [],
-  "output": []
+  "example": "",
+  "output": "",
+  "description": "",
+  "language": "bash",
+  "tags": null
 }

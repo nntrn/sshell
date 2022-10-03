@@ -1,19 +1,17 @@
 {
-  "id": "90",
+  "id": 90,
   "title": "get all available data about a process",
-  "language": "powershell",
-  "category": "get",
-  "guid": "cb9d5775-1c9f-4c40-b60c-66fd2157100c",
-  "url": "https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.management/get-process?view=powershell-7.1",
-  "modified": "2022-01-18T17:11:23Z",
   "created": "2021-07-30T10:12:34Z",
+  "modified": "2022-01-18T17:11:23Z",
+  "code": [
+    "Get-Process atom | Format-List *"
+  ],
+  "example": "",
+  "output": "",
+  "description": "",
+  "language": "powershell",
   "tags": [
     "powershell"
   ],
-  "description": [],
-  "cli": [
-    "Get-Process atom | Format-List *"
-  ],
-  "example": [],
-  "output": []
+  "url": "https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.management/get-process?view=powershell-7.1"
 }

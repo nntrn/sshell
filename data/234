@@ -1,35 +1,12 @@
 {
-  "id": "234",
+  "id": 234,
   "title": "procinfo: display all system status gathered from /proc",
-  "language": "bash",
-  "category": "procinfo",
-  "guid": "b3fb137f-663a-4794-9ffd-8b293d5b2d2e",
-  "url": "",
-  "modified": "2022-03-03T17:16:31Z",
   "created": "2022-03-03T17:16:31Z",
-  "tags": [],
-  "description": [
-    "usage: procinfo [-fsmadiDSbhv] [-nN] [-Ffile]",
-    "",
-    "        -s      display memory, disk, IRQ & DMA info (default)",
-    "        -m      display module and device info",
-    "        -a      display all info",
-    "        -f      run full screen",
-    "",
-    "        -i      show all IRQ channels, not just those used",
-    "        -nN     pause N second between updates (implies -f)",
-    "        -d      show differences rather than totals (implies -f)",
-    "        -D      show current memory/swap usage, differences on rest",
-    "        -S      with -nN and -d/-D, always show values per second",
-    "        -r      show memory usage -/+ buffers/cache",
-    "        -Ffile  print output to file -- normally a tty",
-    "        -v      print version info",
-    "        -h      print this help"
-  ],
-  "cli": [
+  "modified": "2022-03-03T17:16:31Z",
+  "code": [
     "procinfo -a"
   ],
-  "example": [],
+  "example": "",
   "output": [
     "Linux 5.4.17-2102.202.5.el7uek.x86_64 (mockbuild@host-100-100-224-35) (gcc 4.8.5 20150623) #2 2CPU [awxplprod02]",
     "",
@@ -89,5 +66,25 @@
     " 28 *ip_tables      1428 *xfs             16 *libcrc32c       24  sr_mod          68 *cdrom",
     " 52 *sd_Segmentation fault",
     ""
-  ]
+  ],
+  "description": [
+    "usage: procinfo [-fsmadiDSbhv] [-nN] [-Ffile]",
+    "",
+    "        -s      display memory, disk, IRQ & DMA info (default)",
+    "        -m      display module and device info",
+    "        -a      display all info",
+    "        -f      run full screen",
+    "",
+    "        -i      show all IRQ channels, not just those used",
+    "        -nN     pause N second between updates (implies -f)",
+    "        -d      show differences rather than totals (implies -f)",
+    "        -D      show current memory/swap usage, differences on rest",
+    "        -S      with -nN and -d/-D, always show values per second",
+    "        -r      show memory usage -/+ buffers/cache",
+    "        -Ffile  print output to file -- normally a tty",
+    "        -v      print version info",
+    "        -h      print this help"
+  ],
+  "language": "bash",
+  "tags": null
 }

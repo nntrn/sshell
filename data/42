@@ -1,33 +1,31 @@
 {
-  "id": "42",
+  "id": 42,
   "title": "docker save images",
-  "language": "bash",
-  "category": "docker",
-  "guid": "f6f63f9a-4497-474f-bacd-191e0f56e06b",
-  "url": "https://stackoverflow.com/a/37650072",
-  "modified": "2021-12-30T19:44:09Z",
   "created": "2021-05-05T11:08:21Z",
-  "tags": [
-    "docker"
-  ],
-  "description": [],
-  "cli": [
+  "modified": "2021-12-30T19:44:09Z",
+  "code": [
     "dockerimagedir=\"docker-images-$(date +%F)\"",
     "",
     "mkdir -p dockerimagedir",
     "docker save $(docker images -q) -o \"$dockerimagedir/$(hostname -a).tar\"",
     "docker images | sed '1d' | awk '{print $1 \" \" $2 \" \" $3}' >  \"$dockerimagedir/docker-images.list\"",
     "",
-    "rsync -avr  -o -g $dockerimagedir servicedbaas@awxserver.us.example.com:/home/servicedbaas",
+    "rsync -avr  -o -g $dockerimagedir servicedbaas@awxpluat02.us.dell.com:/home/servicedbaas",
     "",
     "docker load -i /path/to/save/mydockersimages.tar",
     "",
     "while read REPOSITORY TAG IMAGE_ID",
     "do",
-    "    echo \"== Tagging $REPOSITORY $TAG $IMAGE_ID ==\"",
-    "    docker tag \"$IMAGE_ID\" \"$REPOSITORY:$TAG\"",
+    "        echo \"== Tagging $REPOSITORY $TAG $IMAGE_ID ==\"",
+    "        docker tag \"$IMAGE_ID\" \"$REPOSITORY:$TAG\"",
     "done < \"$dockerimagedir/docker-images.list\""
   ],
-  "example": [],
-  "output": []
+  "example": "",
+  "output": "",
+  "description": "",
+  "language": "bash",
+  "tags": [
+    "docker"
+  ],
+  "url": "https://stackoverflow.com/a/37650072"
 }

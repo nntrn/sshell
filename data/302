@@ -1,14 +1,18 @@
 {
-  "id": "302",
+  "id": 302,
   "title": "Finds local admin password and password expiration timestamp for given computer",
-  "language": "powershell",
-  "category": "Finds",
-  "type": "command",
-  "guid": "f353e5b3-8762-4897-be77-60675442ef81",
-  "url": "",
-  "modified": "2022-05-11T02:04:49Z",
   "created": "2022-05-04T21:25:05Z",
-  "tags": [],
+  "modified": "2022-05-11T02:04:49Z",
+  "code": [
+    "Get-AdmPwdPassword -ComputerName:AT01488YD3 | Format-List *"
+  ],
+  "example": "",
+  "output": [
+    "ComputerName        : AT01488YD3",
+    "DistinguishedName   : CN=W101TL8YD3,OU=Workstations,OU=Computers,OU=Austin,DC=amer,DC=dell,DC=com",
+    "Password            :",
+    "ExpirationTimestamp : 5/5/2022 3:07:06 PM"
+  ],
   "description": [
     "NAME",
     "    Get-AdmPwdPassword",
@@ -23,14 +27,6 @@
     "",
     "    Gets password of local administrator on computer MyComputer"
   ],
-  "cli": [
-    "Get-AdmPwdPassword -ComputerName:AT01488YD3 | Format-List *"
-  ],
-  "example": [],
-  "output": [
-    "ComputerName        : AT01488YD3",
-    "DistinguishedName   : CN=W101TL8YD3,OU=Workstations,OU=Computers,OU=Austin,DC=amer,DC=nntrn,DC=com",
-    "Password            :",
-    "ExpirationTimestamp : 5/5/2022 3:07:06 PM"
-  ]
+  "language": "powershell",
+  "tags": null
 }

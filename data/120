@@ -1,19 +1,17 @@
 {
-  "id": "120",
+  "id": 120,
   "title": "get arguments after first",
-  "language": "bash",
-  "category": "get",
-  "guid": "4a42c4db-c969-45f7-8f3a-108e02d22f79",
-  "url": "https://stackoverflow.com/a/9057392",
-  "modified": "2022-01-19T00:11:21Z",
   "created": "2021-09-11T00:08:22Z",
-  "tags": [],
-  "description": [],
-  "cli": [
+  "modified": "2022-01-19T00:11:21Z",
+  "code": [
     "echo \"${@:2}\"",
     "echo \"${*:2}\"",
     ""
   ],
-  "example": [],
-  "output": []
+  "example": "",
+  "output": "",
+  "description": "",
+  "language": "bash",
+  "tags": null,
+  "url": "https://stackoverflow.com/a/9057392"
 }

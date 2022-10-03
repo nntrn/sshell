@@ -1,17 +1,15 @@
 {
-  "id": "127",
+  "id": 127,
   "title": "remove trailing whitespace",
-  "language": "bash",
-  "category": "remove",
-  "guid": "a6564b8e-371f-4288-8981-2448ff64f54f",
-  "url": "https://unix.stackexchange.com/a/205854",
-  "modified": "2022-01-10T18:39:34Z",
   "created": "2021-09-15T23:02:38Z",
-  "tags": [],
-  "description": [],
-  "cli": [
+  "modified": "2022-01-10T18:39:34Z",
+  "code": [
     "awk '{$1=$1};1'"
   ],
-  "example": [],
-  "output": []
+  "example": "",
+  "output": "",
+  "description": "",
+  "language": "bash",
+  "tags": null,
+  "url": "https://unix.stackexchange.com/a/205854"
 }

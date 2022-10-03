@@ -1,16 +1,9 @@
 {
-  "id": "261",
+  "id": 261,
   "title": "convert json to yaml from stdin",
-  "language": "python",
-  "category": "convert",
-  "type": "script",
-  "guid": "07cc2000-b9de-4037-b19e-bad66ded4172",
-  "url": "https://gist.github.com/noahcoad/46909253a5891af3699580b8f17baba8",
-  "modified": "2022-06-01T23:11:22Z",
   "created": "2022-03-30T15:49:09Z",
-  "tags": [],
-  "description": [],
-  "cli": [
+  "modified": "2022-06-01T23:11:22Z",
+  "code": [
     "python3 -c \"import yaml, json, sys; sys.stdout.write(yaml.dump(json.load(sys.stdin)))\""
   ],
   "example": [
@@ -26,5 +19,9 @@
     "- 2",
     "- 3"
   ],
-  "output": []
+  "output": "",
+  "description": "",
+  "language": "python",
+  "tags": null,
+  "url": "https://gist.github.com/noahcoad/46909253a5891af3699580b8f17baba8"
 }

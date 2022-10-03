@@ -1,20 +1,19 @@
 {
-  "id": "256",
+  "id": 256,
   "title": "curl - renew vault token",
-  "language": "bash",
-  "category": "curl",
-  "type": "command",
-  "guid": "69bf2164-1ea3-4f42-b3fd-37026e18f93d",
-  "url": "",
-  "modified": "2022-03-28T22:02:57Z",
   "created": "2022-03-28T22:02:57Z",
-  "tags": [],
+  "modified": "2022-03-28T22:02:57Z",
+  "code": [
+    "curl -X PUT -H \"X-Vault-Namespace: infrastructure/database/engineering\" -H \"X-Vault-Request: true\" -H \"X-Vault-Token: $VAULT_TOKEN)\" -d '{\"increment\":\"24h\"}' https://hcvault.example.com/v1/auth/token/renew-self"
+  ],
+  "example": "",
+  "output": "",
   "description": [
     "taken from `vault token renew -increment=24h -output-curl-string`"
   ],
-  "cli": [
-    "curl -X PUT -H \"X-Vault-Namespace: infrastructure/database/engineering\" -H \"X-Vault-Request: true\" -H \"X-Vault-Token: $VAULT_TOKEN)\" -d '{\"increment\":\"24h\"}' https://hcvault.example.com/v1/auth/token/renew-self"
-  ],
-  "example": [],
-  "output": []
+  "language": "bash",
+  "tags": [
+    "hc-vault",
+    "vault"
+  ]
 }

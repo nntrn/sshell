@@ -1,34 +1,9 @@
 {
-  "id": "306",
+  "id": 306,
   "title": "openssl - create and verify CSR ",
-  "language": "bash",
-  "category": "openssl",
-  "type": "command",
-  "guid": "3f5d6ab1-44d5-4169-92a3-444f10267503",
-  "url": "https://www.digicert.com/kb/ssl-support/openssl-quick-reference-guide.htm",
-  "modified": "2022-05-07T12:22:05Z",
   "created": "2022-05-07T12:22:05Z",
-  "tags": [],
-  "description": [
-    "Creating Your CSR with One Command",
-    "Instead of generating a private key and then creating a CSR in two separate steps, you can actually perform both tasks at once.",
-    "",
-    "Use the following command to create both the private key and CSR:",
-    "",
-    "openssl req -new \\",
-    "-newkey rsa:2048 -nodes -keyout yourdomain.key \\",
-    "-out yourdomain.csr \\",
-    "-subj \"/C=US/ST=Utah/L=Lehi/O=Your Company, Inc./OU=IT/CN=yourdomain.com\"",
-    "This command generates a new private key (-newkey) using the RSA algorithm with a 2048-bit key length (rsa:2048) without using a passphrase (-nodes) and then creates the key file with a name of yourdomain.key (-keyout yourdomain.key).",
-    "",
-    "The command then generates the CSR with a filename of yourdomain.csr (-out yourdomain.csr) and the information for the CSR is supplied (-subj).",
-    "",
-    "Note: While it is possible to add a subject alternative name (SAN) to a CSR using OpenSSL, the process is a bit complicated and involved. If you do need to add a SAN to your certificate, this can easily be done by adding them to the order form when purchasing your DigiCert certificate.",
-    "",
-    "Verifying CSR Information",
-    "After creating your CSR using your private key, we recommend verifying that the information contained in the CSR is correct and that the file hasn't been modified or corrupted."
-  ],
-  "cli": [
+  "modified": "2022-05-07T12:22:05Z",
+  "code": [
     "# Creating Your CSR with One Command",
     "openssl req -new \\",
     "-newkey rsa:2048 -nodes -keyout $HOSTNAME.key \\",
@@ -98,5 +73,27 @@
     "         8c:8e:28:7a",
     ""
   ],
-  "output": []
+  "output": "",
+  "description": [
+    "Creating Your CSR with One Command",
+    "Instead of generating a private key and then creating a CSR in two separate steps, you can actually perform both tasks at once.",
+    "",
+    "Use the following command to create both the private key and CSR:",
+    "",
+    "openssl req -new \\",
+    "-newkey rsa:2048 -nodes -keyout yourdomain.key \\",
+    "-out yourdomain.csr \\",
+    "-subj \"/C=US/ST=Utah/L=Lehi/O=Your Company, Inc./OU=IT/CN=yourdomain.com\"",
+    "This command generates a new private key (-newkey) using the RSA algorithm with a 2048-bit key length (rsa:2048) without using a passphrase (-nodes) and then creates the key file with a name of yourdomain.key (-keyout yourdomain.key).",
+    "",
+    "The command then generates the CSR with a filename of yourdomain.csr (-out yourdomain.csr) and the information for the CSR is supplied (-subj).",
+    "",
+    "Note: While it is possible to add a subject alternative name (SAN) to a CSR using OpenSSL, the process is a bit complicated and involved. If you do need to add a SAN to your certificate, this can easily be done by adding them to the order form when purchasing your DigiCert certificate.",
+    "",
+    "Verifying CSR Information",
+    "After creating your CSR using your private key, we recommend verifying that the information contained in the CSR is correct and that the file hasn't been modified or corrupted."
+  ],
+  "language": "bash",
+  "tags": null,
+  "url": "https://www.digicert.com/kb/ssl-support/openssl-quick-reference-guide.htm"
 }

@@ -1,19 +1,15 @@
 {
-  "id": "257",
+  "id": 257,
   "title": "venv ",
-  "language": "python",
-  "category": "venv",
-  "type": "command",
-  "guid": "d61d46bb-a971-456a-b876-86d0ad041e73",
-  "url": "",
-  "modified": "2022-03-28T23:24:52Z",
   "created": "2022-03-28T23:23:58Z",
-  "tags": [],
-  "description": [],
-  "cli": [
+  "modified": "2022-03-28T23:24:52Z",
+  "code": [
     "python -m venv .venv",
     "source .venv/bin/activate"
   ],
-  "example": [],
-  "output": []
+  "example": "",
+  "output": "",
+  "description": "",
+  "language": "python",
+  "tags": null
 }

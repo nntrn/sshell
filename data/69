@@ -1,17 +1,9 @@
 {
-  "id": "69",
+  "id": 69,
   "title": "list all ip rules",
-  "language": "bash",
-  "category": "list",
-  "guid": "0c9f2558-03ec-4ffb-b0fa-a2dfbc162e42",
-  "url": "https://sites.google.com/site/mrxpalmeiras/linux/iptables-basics",
-  "modified": "2022-03-03T21:09:04Z",
   "created": "2021-07-09T02:17:59Z",
-  "tags": [
-    "network"
-  ],
-  "description": [],
-  "cli": [
+  "modified": "2022-03-03T21:09:04Z",
+  "code": [
     "iptables --list-rules -v"
   ],
   "example": [
@@ -44,5 +36,11 @@
     "-A DOCKER-USER -j RETURN",
     ""
   ],
-  "output": []
+  "output": "",
+  "description": "",
+  "language": "bash",
+  "tags": [
+    "network"
+  ],
+  "url": "https://sites.google.com/site/mrxpalmeiras/linux/iptables-basics"
 }

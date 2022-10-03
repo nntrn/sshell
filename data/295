@@ -1,15 +1,17 @@
 {
-  "id": "295",
+  "id": 295,
   "title": "jq - target objects in array using key",
-  "language": "bash",
-  "category": "jq",
-  "type": "command",
-  "guid": "5bebb6a1-817d-4877-96c4-27fd6fdfbcb2",
-  "url": "",
-  "modified": "2022-04-27T20:54:01Z",
   "created": "2022-04-27T20:54:01Z",
-  "tags": [
-    "jq"
+  "modified": "2022-04-27T20:54:01Z",
+  "code": [
+    "echo '[{\"id\": \"first\", \"val\": 1}, {\"id\": \"second\", \"val\": 2}]' | jq '.[] | select(.id == \"second\")'"
+  ],
+  "example": "",
+  "output": [
+    "{",
+    "  \"id\": \"second\",",
+    "  \"val\": 2",
+    "}"
   ],
   "description": [
     "   select(boolean_expression)",
@@ -25,14 +27,8 @@
     "              [{\"id\": \"first\", \"val\": 1}, {\"id\": \"second\", \"val\": 2}]",
     "           => {\"id\": \"second\", \"val\": 2}"
   ],
-  "cli": [
-    "echo '[{\"id\": \"first\", \"val\": 1}, {\"id\": \"second\", \"val\": 2}]' | jq '.[] | select(.id == \"second\")'"
-  ],
-  "example": [],
-  "output": [
-    "{",
-    "  \"id\": \"second\",",
-    "  \"val\": 2",
-    "}"
+  "language": "bash",
+  "tags": [
+    "jq"
   ]
 }

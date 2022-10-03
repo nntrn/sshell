@@ -1,14 +1,21 @@
 {
-  "id": "267",
+  "id": 267,
   "title": "openssl - for versions >1.1.1",
-  "language": "bash",
-  "category": "openssl",
-  "type": "command",
-  "guid": "fab9df3d-6767-48f4-952a-574f729c8a5b",
-  "url": "https://askubuntu.com/a/1126882",
-  "modified": "2022-04-01T03:59:15Z",
   "created": "2022-04-01T03:59:15Z",
-  "tags": [],
+  "modified": "2022-04-01T03:59:15Z",
+  "code": [
+    "ENCRYPTEDFILE=.secrets.enc",
+    "SALTFILE=.vault-password",
+    "SECRETSFILE=.env",
+    "",
+    "# encrypt",
+    "openssl enc -aes-256-cbc -md sha512 -pbkdf2 -iter 100000 -base64 -salt -in $SECRETSFILE -out $ENCRYPTEDFILE -pass file:$SALTFILE",
+    "",
+    "# decrypt",
+    "openssl enc -d -aes-256-cbc -md sha512 -pbkdf2 -iter 100000 -base64 -salt -in $ENCRYPTEDFILE -pass file:$SALTFILE"
+  ],
+  "example": "",
+  "output": "",
   "description": [
     "Comparing the Synopsys of the two main and recent versions of OpenSSL, let me quote the man pages.",
     "",
@@ -36,17 +43,7 @@
     "-iter 100000 is overriding the default count of iterations for the password, quoting the man page:",
     "Use a given number of iterations on the password in deriving the encryption key. High values increase the time required to brute-force the resulting file. This option enables the use of PBKDF2 algorithm to derive the key."
   ],
-  "cli": [
-    "ENCRYPTEDFILE=.secrets.enc",
-    "SALTFILE=.vault-password",
-    "SECRETSFILE=.env",
-    "",
-    "# encrypt",
-    "openssl enc -aes-256-cbc -md sha512 -pbkdf2 -iter 100000 -base64 -salt -in $SECRETSFILE -out $ENCRYPTEDFILE -pass file:$SALTFILE",
-    "",
-    "# decrypt",
-    "openssl enc -d -aes-256-cbc -md sha512 -pbkdf2 -iter 100000 -base64 -salt -in $ENCRYPTEDFILE -pass file:$SALTFILE"
-  ],
-  "example": [],
-  "output": []
+  "language": "bash",
+  "tags": null,
+  "url": "https://askubuntu.com/a/1126882"
 }

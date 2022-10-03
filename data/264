@@ -1,19 +1,12 @@
 {
-  "id": "264",
+  "id": 264,
   "title": "ls - sortable ls",
-  "language": "bash",
-  "category": "ls",
-  "type": "command",
-  "guid": "e37fe954-139d-413a-8265-defc09feadaf",
-  "url": "",
-  "modified": "2022-03-31T18:24:32Z",
   "created": "2022-03-31T18:24:32Z",
-  "tags": [],
-  "description": [],
-  "cli": [
+  "modified": "2022-03-31T18:24:32Z",
+  "code": [
     "ls -lptr --time-style='+%s %FT%T' --no-group --group-directories-first "
   ],
-  "example": [],
+  "example": "",
   "output": [
     "total 11276",
     "drwxr-xr-x 3 annie_tran     123 1628039419 2021-08-03T20:10:19 awx_setup/",
@@ -25,5 +18,8 @@
     "drwxr-xr-x 2 annie_tran      55 1643180329 2022-01-26T00:58:49 bin/",
     "drwxrwxr-x 4 annie_tran      45 1648750176 2022-03-31T13:09:36 devops-git/",
     ""
-  ]
+  ],
+  "description": "",
+  "language": "bash",
+  "tags": null
 }

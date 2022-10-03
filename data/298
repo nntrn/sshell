@@ -1,19 +1,12 @@
 {
-  "id": "298",
+  "id": 298,
   "title": "Get-WmiObject - get network adapter config",
-  "language": "powershell",
-  "category": "Get-WmiObject",
-  "type": "command",
-  "guid": "30d8adcc-e943-4089-8cc4-48d340817fcd",
-  "url": "",
-  "modified": "2022-05-03T17:51:56Z",
   "created": "2022-05-03T17:51:56Z",
-  "tags": [],
-  "description": [],
-  "cli": [
+  "modified": "2022-05-03T17:51:56Z",
+  "code": [
     "Get-WmiObject win32_networkadapterconfiguration | Format-Table DHCPEnabled,ServiceName,Description -AutoSize -Wrap | Format-Wide -Column 3"
   ],
-  "example": [],
+  "example": "",
   "output": [
     "DHCPEnabled ServiceName  Description",
     "----------- -----------  -----------",
@@ -33,5 +26,8 @@
     "      False NdisWan      WAN Miniport (IPv6)",
     "      False NdisWan      WAN Miniport (Network Monitor)",
     ""
-  ]
+  ],
+  "description": "",
+  "language": "powershell",
+  "tags": null
 }

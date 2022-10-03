@@ -1,21 +1,18 @@
 {
-  "id": "269",
+  "id": 269,
   "title": "sed - prepending and appending to file/line",
-  "language": "bash",
-  "category": "sed",
-  "type": "reference",
-  "guid": "691966b9-514f-4f91-802e-cf044e0c5b26",
-  "url": "https://stackoverflow.com/a/59580100",
-  "modified": "2022-04-06T17:46:21Z",
   "created": "2022-04-06T17:46:21Z",
-  "tags": [],
-  "description": [],
-  "cli": [
+  "modified": "2022-04-06T17:46:21Z",
+  "code": [
     "s/^/\"/g; - prepend double quotes to each line",
     "s/$/\"/g; - append double quotes to each line",
     "1s/^/export json = \\n/; - prepend to file",
     "$s/$/\\n); - append to file"
   ],
-  "example": [],
-  "output": []
+  "example": "",
+  "output": "",
+  "description": "",
+  "language": "bash",
+  "tags": null,
+  "url": "https://stackoverflow.com/a/59580100"
 }

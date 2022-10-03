@@ -1,16 +1,9 @@
 {
-  "id": "316",
+  "id": 316,
   "title": "csplit - split text in file on empty lines",
-  "language": "bash",
-  "category": "csplit",
-  "type": "command",
-  "guid": "d4ef54f2-aba2-430e-b231-b61a9d661170",
-  "url": "https://www.gnu.org/software/coreutils/manual/html_node/csplit-invocation.html#csplit-invocation",
-  "modified": "2022-05-13T16:52:40Z",
   "created": "2022-05-13T16:52:40Z",
-  "tags": [],
-  "description": [],
-  "cli": [
+  "modified": "2022-05-13T16:52:40Z",
+  "code": [
     "csplit --suppress-matched $FILENAME '/^$/' '{*}'"
   ],
   "example": [
@@ -35,5 +28,9 @@
     "./file-02",
     "  three"
   ],
-  "output": []
+  "output": "",
+  "description": "",
+  "language": "bash",
+  "tags": null,
+  "url": "https://www.gnu.org/software/coreutils/manual/html_node/csplit-invocation.html#csplit-invocation"
 }

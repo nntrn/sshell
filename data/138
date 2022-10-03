@@ -1,23 +1,21 @@
 {
-  "id": "138",
+  "id": 138,
   "title": "sha256",
-  "language": "bash",
-  "category": "error;#1",
-  "guid": "74a8528f-6445-4bdf-b136-94712bc8d3e4",
-  "url": "https://github.com/containerd/containerd/blob/main/test/utils.sh",
-  "modified": "2022-01-10T18:38:39Z",
   "created": "2021-10-04T19:45:12Z",
-  "tags": [],
-  "description": [],
-  "cli": [
+  "modified": "2022-01-10T18:38:39Z",
+  "code": [
     "sha256() {",
     "  if which sha256sum >/dev/null 2>&1; then",
-    "  sha256sum \"$1\" | awk '{ print $1 }'",
+    "    sha256sum \"$1\" | awk '{ print $1 }'",
     "  else",
-    "  shasum -a256 \"$1\" | awk '{ print $1 }'",
+    "    shasum -a256 \"$1\" | awk '{ print $1 }'",
     "  fi",
     "}"
   ],
-  "example": [],
-  "output": []
+  "example": "",
+  "output": "",
+  "description": "",
+  "language": "bash",
+  "tags": null,
+  "url": "https://github.com/containerd/containerd/blob/main/test/utils.sh"
 }

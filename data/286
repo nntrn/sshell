@@ -1,24 +1,15 @@
 {
-  "id": "286",
+  "id": 286,
   "title": "nmap - list open TCP ports ",
-  "language": "bash",
-  "category": "nmap",
-  "type": "command",
-  "guid": "512b5716-5a1b-4ec0-abeb-112598571bcb",
-  "url": "https://www.cyberciti.biz/faq/unix-linux-check-if-port-is-in-use-command/",
-  "modified": "2022-04-21T16:41:59Z",
   "created": "2022-04-21T16:41:59Z",
-  "tags": [
-    "network"
-  ],
-  "description": [],
-  "cli": [
+  "modified": "2022-04-21T16:41:59Z",
+  "code": [
     "nmap -sT -O  10.171.230.150"
   ],
-  "example": [],
+  "example": "",
   "output": [
     "Starting Nmap 6.40 ( http://nmap.org ) at 2022-04-21 11:31 CDT",
-    "Nmap scan report for serserver.us.example.com (10.123.123.123)",
+    "Nmap scan report for server.us.example.com (10.123.123.123)",
     "Host is up (0.00047s latency).",
     "Not shown: 992 closed ports",
     "PORT     STATE SERVICE",
@@ -31,5 +22,11 @@
     "7938/tcp open  lgtomapper",
     "9100/tcp open  jetdirect",
     ""
-  ]
+  ],
+  "description": "",
+  "language": "bash",
+  "tags": [
+    "network"
+  ],
+  "url": "https://www.cyberciti.biz/faq/unix-linux-check-if-port-is-in-use-command/"
 }

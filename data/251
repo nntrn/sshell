@@ -1,18 +1,16 @@
 {
-  "id": "251",
+  "id": 251,
   "title": "powershell - run noprofile command in shell (bash)",
-  "language": "bash",
-  "category": "powershell",
-  "type": "command",
-  "guid": "06517a2a-373b-46b6-b337-401031208672",
-  "url": "",
-  "modified": "2022-03-23T19:09:20Z",
   "created": "2022-03-23T16:58:39Z",
-  "tags": [],
-  "description": [],
-  "cli": [
+  "modified": "2022-03-23T19:09:20Z",
+  "code": [
     "powershell -noprofile -command \"<command to run>\""
   ],
-  "example": "powershell -noprofile -command \"Get-ADUser -Identity Annie_Tran -Properties *\"",
-  "output": []
+  "example": [
+    "powershell -noprofile -command \"Get-ADUser -Identity Annie_Tran -Properties *\""
+  ],
+  "output": "",
+  "description": "",
+  "language": "bash",
+  "tags": null
 }

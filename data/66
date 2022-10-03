@@ -1,17 +1,14 @@
 {
-  "id": "66",
+  "id": 66,
   "title": "hack for exporting env variables",
-  "language": "bash",
-  "category": "hack",
-  "guid": "3ba6a77e-6f06-4f85-b611-8996aa047603",
-  "url": "",
-  "modified": "2021-12-30T19:44:09Z",
   "created": "2021-07-08T00:33:18Z",
-  "tags": [],
-  "description": [],
-  "cli": [
+  "modified": "2021-12-30T19:44:09Z",
+  "code": [
     "export $(cat /path/to/file.txt | grep -vE \"^(#|export)\" | grep \".\")"
   ],
-  "example": [],
-  "output": []
+  "example": "",
+  "output": "",
+  "description": "",
+  "language": "bash",
+  "tags": null
 }

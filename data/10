@@ -1,17 +1,9 @@
 {
-  "id": "10",
+  "id": 10,
   "title": "view os-release",
-  "language": "bash",
-  "category": "view",
-  "guid": "958e4424-11f6-439e-b98b-7ff8159614d2",
-  "url": "",
-  "modified": "2021-12-30T19:44:08Z",
   "created": "2021-03-03T19:39:58Z",
-  "tags": [
-    "system"
-  ],
-  "description": [],
-  "cli": [
+  "modified": "2021-12-30T19:44:08Z",
+  "code": [
     "cat /etc/os-release"
   ],
   "example": [
@@ -36,5 +28,10 @@
     "ORACLE_SUPPORT_PRODUCT=\"Oracle Linux\"",
     "ORACLE_SUPPORT_PRODUCT_VERSION=8.3"
   ],
-  "output": []
+  "output": "",
+  "description": "",
+  "language": "bash",
+  "tags": [
+    "system"
+  ]
 }

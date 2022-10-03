@@ -1,25 +1,23 @@
 {
-  "id": "44",
+  "id": 44,
   "title": "capturing group grep",
-  "language": "bash",
-  "category": "capturing",
-  "guid": "4a68f83a-d230-4662-942e-27cc67983fed",
-  "url": "https://stackoverflow.com/questions/1891797/capturing-groups-from-a-grep-regex",
-  "modified": "2021-12-30T19:44:09Z",
   "created": "2021-05-06T15:51:59Z",
-  "tags": [],
-  "description": [],
-  "cli": [
+  "modified": "2021-12-30T19:44:09Z",
+  "code": [
     "shopt -s extglob",
     "shopt -s nullglob",
     "shopt -s nocaseglob",
     "",
     "ls +(.*) | while read file; do",
-    "  echo $file",
-    "  set -- $file",
-    "  [[ ! -z $2 ]] && echo \"$1$2\"",
+    "  echo $file",
+    "  set -- $file",
+    "  [[ ! -z $2 ]] && echo \"$1$2\"",
     "done"
   ],
-  "example": [],
-  "output": []
+  "example": "",
+  "output": "",
+  "description": "",
+  "language": "bash",
+  "tags": null,
+  "url": "https://stackoverflow.com/questions/1891797/capturing-groups-from-a-grep-regex"
 }

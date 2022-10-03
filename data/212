@@ -1,25 +1,22 @@
 {
-  "id": "212",
+  "id": 212,
   "title": "awx - get token",
-  "language": "bash",
-  "category": "awx",
-  "guid": "a230b99e-c4ca-4c92-bbcb-5d3612805e97",
-  "url": "",
-  "modified": "2022-03-17T00:33:54Z",
   "created": "2022-02-16T01:26:48Z",
-  "tags": [
-    "ansible"
-  ],
-  "description": [],
-  "cli": [
+  "modified": "2022-03-17T00:33:54Z",
+  "code": [
     "get_token() {",
     "echo \"TOWER_HOST=http://$1\" > ",
     "  TOWER_HOST=http://$1 \\",
-    "  TOWER_USERNAME=$2 \\",
-    "  TOWER_PASSWORD=$3 \\",
-    "  awx login -f human | sed 's,export ,,g' | tee -a \".${1%%.*}\"",
+    "    TOWER_USERNAME=$2 \\",
+    "    TOWER_PASSWORD=$3 \\",
+    "    awx login -f human | sed 's,export ,,g' | tee -a \".${1%%.*}\"",
     "}"
   ],
-  "example": [],
-  "output": []
+  "example": "",
+  "output": "",
+  "description": "",
+  "language": "bash",
+  "tags": [
+    "ansible"
+  ]
 }

@@ -1,27 +1,32 @@
 {
-  "id": "357",
+  "id": 357,
   "title": "awx_postgres - get hostname ids for api",
-  "modified": "2022-07-05T17:36:16Z",
   "created": "2022-07-05T17:36:16Z",
-  "guid": "3139f2c0-976b-4dd1-a67d-2a0f5d61ce65",
-  "cli": [
+  "modified": "2022-07-05T17:36:16Z",
+  "code": [
     "docker exec -it awx_postgres /bin/bash \\",
     "  -c 'psql -t -A -F \",\" -U awx -d awx -c \"select id,name from main_host;\"|cat'",
     "",
     "psql -t -A -F \",\" -U awx -d awx -c \"select id,name from main_host;\"|cat"
-  ],
-  "description": [
-    "https://awxserver.example.com/api/v2/hosts/<ID>/",
-    "https://awxserver.example.com/api/v2/hosts/4613/"
   ],
   "example": [
     "$ psql -t -A -F \",\" -U awx -d awx -c \"select id,name from main_host;\"|cat",
     "4611,server10.amer.example.com",
     "4613,server11.us.example.com",
     "4614,server12.us.example.com",
-    "5311,server13.us.example.com"
+    "5311,server13.us.example.com",
+    ""
+  ],
+  "output": "",
+  "description": [
+    "https://awxserver.example.com/api/v2/hosts/<ID>/",
+    "https://awxserver.example.com/api/v2/hosts/4613/"
   ],
   "language": "sql",
-  "category": "awx_postgres",
-  "code_type": "command"
+  "tags": [
+    "db",
+    "ansible",
+    "docker",
+    "api"
+  ]
 }

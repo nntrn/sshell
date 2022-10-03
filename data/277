@@ -1,21 +1,12 @@
 {
-  "id": "277",
+  "id": 277,
   "title": "openssl - list high encryption ciphers using the AES algorithm",
-  "language": "bash",
-  "category": "openssl",
-  "type": "command",
-  "guid": "8083e7de-4934-4604-ba21-2db95ba1c2b9",
-  "url": "https://www.madboa.com/geek/openssl/#introduction",
-  "modified": "2022-05-11T02:06:58Z",
   "created": "2022-04-12T23:51:12Z",
-  "tags": [
-    "security"
-  ],
-  "description": [],
-  "cli": [
+  "modified": "2022-05-11T02:06:58Z",
+  "code": [
     "openssl ciphers -V 'AES+HIGH'"
   ],
-  "example": [],
+  "example": "",
   "output": [
     "          0x13,0x02 - TLS_AES_256_GCM_SHA384  TLSv1.3 Kx=any      Au=any  Enc=AESGCM(256) Mac=AEAD",
     "          0x13,0x03 - TLS_CHACHA20_POLY1305_SHA256 TLSv1.3 Kx=any      Au=any  Enc=CHACHA20/POLY1305(256) Mac=AEAD",
@@ -107,5 +98,11 @@
     "          0x00,0xAE - PSK-AES128-CBC-SHA256   TLSv1 Kx=PSK      Au=PSK  Enc=AES(128)  Mac=SHA256",
     "          0x00,0x8C - PSK-AES128-CBC-SHA      SSLv3 Kx=PSK      Au=PSK  Enc=AES(128)  Mac=SHA1",
     ""
-  ]
+  ],
+  "description": "",
+  "language": "bash",
+  "tags": [
+    "security"
+  ],
+  "url": "https://www.madboa.com/geek/openssl/#introduction"
 }

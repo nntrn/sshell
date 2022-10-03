@@ -1,20 +1,12 @@
 {
-  "id": "228",
+  "id": 228,
   "title": "get non default values for ansible config",
-  "language": "bash",
-  "category": "get",
-  "guid": "c17b9fa0-a5d9-4c4d-937b-2409ff8f8a99",
-  "url": "",
-  "modified": "2022-03-03T16:14:00Z",
   "created": "2022-03-03T16:14:00Z",
-  "tags": [
-    "ansible"
-  ],
-  "description": [],
-  "cli": [
+  "modified": "2022-03-03T16:14:00Z",
+  "code": [
     "ansible-config dump | grep -v '\\(default\\)' | sed 's,(.*cfg),,g'"
   ],
-  "example": [],
+  "example": "",
   "output": [
     "ANSIBLE_SSH_ARGS = -C -o ControlMaster=auto -o ControlPersist=60s -o StrictHostKeyChecking=no",
     "ANSIBLE_SSH_CONTROL_PATH = %(directory)s/%%h-%%r",
@@ -37,5 +29,10 @@
     "RETRY_FILES_SAVE_PATH = ~/.ansible-retry",
     "SYSTEM_WARNINGS = False",
     ""
+  ],
+  "description": "",
+  "language": "bash",
+  "tags": [
+    "ansible"
   ]
 }

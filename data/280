@@ -1,18 +1,9 @@
 {
-  "id": "280",
+  "id": 280,
   "title": "openssl - generate a set of prime numbers",
-  "language": "bash",
-  "category": "openssl",
-  "type": "command",
-  "guid": "99a89fb9-a892-4b3c-bbac-066c8ca64db2",
-  "url": "https://www.madboa.com/geek/openssl/#introduction",
-  "modified": "2022-04-13T00:29:52Z",
   "created": "2022-04-13T00:29:52Z",
-  "tags": [
-    "security"
-  ],
-  "description": [],
-  "cli": [
+  "modified": "2022-04-13T00:29:52Z",
+  "code": [
     "# define start and ending points",
     "AQUO=10000",
     "ADQUEM=10100",
@@ -21,7 +12,7 @@
     "  openssl prime $N | awk '/is prime/ {print \"ibase=16;\"$1}' | bc",
     "done"
   ],
-  "example": [],
+  "example": "",
   "output": [
     "10007",
     "10009",
@@ -35,5 +26,11 @@
     "10093",
     "10099",
     ""
-  ]
+  ],
+  "description": "",
+  "language": "bash",
+  "tags": [
+    "security"
+  ],
+  "url": "https://www.madboa.com/geek/openssl/#introduction"
 }

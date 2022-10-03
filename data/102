@@ -1,21 +1,19 @@
 {
-  "id": "102",
+  "id": 102,
   "title": "get top memory/cpu hog",
-  "language": "bash",
-  "category": "get",
-  "guid": "204f35ff-fce5-4bc8-ae07-82a62662d0fa",
-  "url": "https://github.com/ansible/product-demos/blob/master/playbooks/infrastructure/debug_info.yml",
-  "modified": "2022-01-19T15:48:39Z",
   "created": "2021-08-26T08:34:04Z",
-  "tags": [],
-  "description": [],
-  "cli": [
+  "modified": "2022-01-19T15:48:39Z",
+  "code": [
     "# get top memory hog",
     "ps -eo user,pid,size,pcpu,cmd --sort=-size",
     "",
     "# get top CPU hog",
     "ps -eo user,pid,size,pcpu,cmd --sort=-pcpu"
   ],
-  "example": [],
-  "output": []
+  "example": "",
+  "output": "",
+  "description": "",
+  "language": "bash",
+  "tags": null,
+  "url": "https://github.com/ansible/product-demos/blob/master/playbooks/infrastructure/debug_info.yml"
 }

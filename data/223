@@ -1,25 +1,12 @@
 {
-  "id": "223",
+  "id": 223,
   "title": "Display the running processes of a container",
-  "language": "bash",
-  "category": "Display",
-  "guid": "44a74e9c-e3a8-41f2-944f-77349090a4a9",
-  "url": "",
-  "modified": "2022-03-23T21:27:40Z",
   "created": "2022-02-28T19:22:41Z",
-  "tags": [
-    "docker"
-  ],
-  "description": [
-    "Usage:  docker top CONTAINER [ps OPTIONS]",
-    "",
-    "Display the running processes of a container",
-    ""
-  ],
-  "cli": [
+  "modified": "2022-03-23T21:27:40Z",
+  "code": [
     "$ docker top awx_task"
   ],
-  "example": [],
+  "example": "",
   "output": [
     "UID                 PID                 PPID                C                   STIME               TTY                 TIME                CMD",
     "root                2083                2043                0                   13:16               ?                   00:00:00            /usr/bin/tini -- /usr/bin/launch_awx_task.sh",
@@ -39,5 +26,15 @@
     "root                3226                3153                0                   13:17               ?                   00:00:00            /var/lib/awx/venv/awx/bin/python3 /usr/bin/awx-manage run_dispatcher",
     "",
     ""
+  ],
+  "description": [
+    "Usage:  docker top CONTAINER [ps OPTIONS]",
+    "",
+    "Display the running processes of a container",
+    ""
+  ],
+  "language": "bash",
+  "tags": [
+    "docker"
   ]
 }

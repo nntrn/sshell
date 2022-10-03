@@ -1,18 +1,12 @@
 {
-  "id": "221",
+  "id": 221,
   "title": "systemd-cgls: recursively show control group contents.",
-  "language": "bash",
-  "category": "systemd-cgls",
-  "guid": "835964d2-ed2a-41eb-b30e-e9e8773c5bae",
-  "url": "http://0pointer.de/blog/projects/systemd-for-admins-2.html",
-  "modified": "2022-02-24T09:27:47Z",
   "created": "2022-02-24T09:27:47Z",
-  "tags": [],
-  "description": [],
-  "cli": [
+  "modified": "2022-02-24T09:27:47Z",
+  "code": [
     "systemd-cgls"
   ],
-  "example": [],
+  "example": "",
   "output": [
     "$ systemd-cgls",
     "├─1 /usr/lib/systemd/systemd --switched-root --system --deserialize 22",
@@ -68,5 +62,9 @@
     "│   ├─38996 /var/lib/awx/venv/awx/bin/python3 /usr/bin/awx-manage run_callback_receiver",
     "│   └─38997 /var/lib/awx/venv/awx/bin/python3 /usr/bin/awx-manage run_callback_receiver",
     ""
-  ]
+  ],
+  "description": "",
+  "language": "bash",
+  "tags": null,
+  "url": "http://0pointer.de/blog/projects/systemd-for-admins-2.html"
 }

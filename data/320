@@ -1,16 +1,9 @@
 {
-  "id": "320",
+  "id": 320,
   "title": "jq - convert json to csv",
-  "language": "bash",
-  "category": "jq",
-  "type": "command",
-  "guid": "c1ef3a0a-db12-4f76-a758-f4eb78274dfb",
-  "url": "",
-  "modified": "2022-05-17T20:16:22Z",
   "created": "2022-05-17T20:16:22Z",
-  "tags": [],
-  "description": [],
-  "cli": [
+  "modified": "2022-05-17T20:16:22Z",
+  "code": [
     "echo '[{\"name\":\"JSON\", \"good\":true}, {\"name\":\"XML\", \"good\":false}]' |",
     "  jq -r '.[] | map(.) | @csv'",
     ""
@@ -24,5 +17,8 @@
   "output": [
     "\"JSON\",true",
     "\"XML\",false"
-  ]
+  ],
+  "description": "",
+  "language": "bash",
+  "tags": null
 }

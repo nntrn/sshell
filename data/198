@@ -1,27 +1,25 @@
 {
-  "id": "198",
+  "id": 198,
   "title": "start ssh agent on login",
-  "language": "bash",
-  "category": "start",
-  "guid": "3e4d3538-e853-4476-ad99-341320711a87",
-  "url": "https://code.visualstudio.com/docs/remote/troubleshooting#_enabling-alternate-ssh-authentication-methods",
-  "modified": "2022-02-02T06:30:53Z",
   "created": "2022-02-02T06:30:53Z",
-  "tags": [],
-  "description": [
-    "To start the SSH Agent automatically on login, add these lines to your ~/.bash_profile"
-  ],
-  "cli": [
+  "modified": "2022-02-02T06:30:53Z",
+  "code": [
     "if [ -z \"$SSH_AUTH_SOCK\" ]; then",
     "   # Check for a currently running instance of the agent",
     "   RUNNING_AGENT=\"`ps -ax | grep 'ssh-agent -s' | grep -v grep | wc -l | tr -d '[:space:]'`\"",
     "   if [ \"$RUNNING_AGENT\" = \"0\" ]; then",
-    "    # Launch a new instance of the agent",
-    "    ssh-agent -s &> .ssh/ssh-agent",
+    "        # Launch a new instance of the agent",
+    "        ssh-agent -s &> .ssh/ssh-agent",
     "   fi",
     "   eval `cat .ssh/ssh-agent`",
     "fi"
   ],
-  "example": [],
-  "output": []
+  "example": "",
+  "output": "",
+  "description": [
+    "To start the SSH Agent automatically on login, add these lines to your ~/.bash_profile"
+  ],
+  "language": "bash",
+  "tags": null,
+  "url": "https://code.visualstudio.com/docs/remote/troubleshooting#_enabling-alternate-ssh-authentication-methods"
 }

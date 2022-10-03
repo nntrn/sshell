@@ -1,17 +1,14 @@
 {
-  "id": "89",
+  "id": 89,
   "title": "prune unwritable files from find",
-  "language": "bash",
-  "category": "prune",
-  "guid": "40e25456-d6e1-49ff-a510-2abed4c5b057",
-  "url": "",
-  "modified": "2021-12-30T19:44:10Z",
   "created": "2021-07-29T17:03:52Z",
-  "tags": [],
-  "description": [],
-  "cli": [
+  "modified": "2021-12-30T19:44:10Z",
+  "code": [
     "find /repository/images/database -type d ! -writable -prune -o -type f -group $USER -print -exec chown -c $USER.dbcore {} \\;"
   ],
-  "example": [],
-  "output": []
+  "example": "",
+  "output": "",
+  "description": "",
+  "language": "bash",
+  "tags": null
 }

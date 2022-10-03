@@ -1,19 +1,16 @@
 {
-  "id": "98",
+  "id": 98,
   "title": "git diff tags",
-  "language": "bash",
-  "category": "git",
-  "guid": "f8bbe6a7-13c7-4198-af4c-325aca111c91",
-  "url": "",
-  "modified": "2022-01-19T15:49:08Z",
   "created": "2021-08-13T00:31:46Z",
-  "tags": [
-    "git"
-  ],
-  "description": [],
-  "cli": [
+  "modified": "2022-01-19T15:49:08Z",
+  "code": [
     " git diff --minimal -w -b 17.0.1 17.1.0 installer"
   ],
-  "example": [],
-  "output": []
+  "example": "",
+  "output": "",
+  "description": "",
+  "language": "bash",
+  "tags": [
+    "git"
+  ]
 }

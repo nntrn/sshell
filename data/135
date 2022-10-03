@@ -1,27 +1,24 @@
 {
-  "id": "135",
+  "id": 135,
   "title": "awx-manage shell_plus",
-  "language": "python",
-  "category": "awx-manage",
-  "guid": "f100d5be-b805-48cf-badb-559fd759748a",
-  "url": "",
-  "modified": "2022-03-10T02:05:09Z",
   "created": "2021-09-29T18:50:59Z",
-  "tags": [
-    "ansible"
-  ],
-  "description": [],
-  "cli": [
+  "modified": "2022-03-10T02:05:09Z",
+  "code": [
     "from awx.main.utils import decrypt_field",
     "",
     "cred_names=[\"ad-svc-mongodb-nonprod\",\"ad-svc-mongodb-prod\",\"ad-svc-oracle-nonprod\",\"ad-svc-oracle-prod\",\"ad-svc-postgres-nonprod\",\"ad-svc-postgres-prod\",\"ad-svc-sql-nonprod\",\"ad-svc-sql-prod\"]",
     "",
     "for svc in cred_names:",
-    "  cred = Credential.objects.get(name=svc)",
-    "  print(svc)",
-    "  print(decrypt_field(cred, \"password\"))",
+    "    cred = Credential.objects.get(name=svc)",
+    "    print(svc)",
+    "    print(decrypt_field(cred, \"password\"))",
     ""
   ],
-  "example": [],
-  "output": []
+  "example": "",
+  "output": "",
+  "description": "",
+  "language": "python",
+  "tags": [
+    "ansible"
+  ]
 }

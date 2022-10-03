@@ -1,17 +1,15 @@
 {
-  "id": "39",
+  "id": 39,
   "title": "Parse a .env (dotenv) file directly using bash",
-  "language": "bash",
-  "category": "Parse",
-  "guid": "3b6f9efa-e23d-4152-af57-ef7b1810e2c6",
-  "url": "https://gist.github.com/judy2k/7656bfe3b322d669ef75364a46327836",
-  "modified": "2021-12-30T19:44:09Z",
   "created": "2021-04-27T16:42:30Z",
-  "tags": [],
-  "description": [],
-  "cli": [
+  "modified": "2021-12-30T19:44:09Z",
+  "code": [
     "export $(egrep -v '^#' .env | xargs)"
   ],
-  "example": [],
-  "output": []
+  "example": "",
+  "output": "",
+  "description": "",
+  "language": "bash",
+  "tags": null,
+  "url": "https://gist.github.com/judy2k/7656bfe3b322d669ef75364a46327836"
 }

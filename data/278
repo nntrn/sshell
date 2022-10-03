@@ -1,31 +1,22 @@
 {
-  "id": "278",
+  "id": 278,
   "title": "openssl - extract information from a certificate",
-  "language": "bash",
-  "category": "openssl",
-  "type": "command",
-  "guid": "34279ec4-76ba-4579-9b2f-1fe7ad185284",
-  "url": "https://www.madboa.com/geek/openssl/#introduction",
-  "modified": "2022-04-12T23:58:16Z",
   "created": "2022-04-12T23:58:16Z",
-  "tags": [
-    "security"
-  ],
-  "description": [],
-  "cli": [
+  "modified": "2022-04-12T23:58:16Z",
+  "code": [
     "$ openssl x509 -noout -in cert.pem -issuer",
-    "issuer= /C=US/ST=Texas/L=Round Rock/O=Example Technologies/CN=Example Technologies Issuing CA 101",
+    "issuer= /C=US/ST=Texas/L=Round Rock/O=Dell Technologies/CN=Dell Technologies Issuing CA 101",
     "",
     "$ openssl x509 -noout -in cert.pem -subject",
-    "subject= /C=US/ST=Texas/L=Round Rock/O=nntrn/OU=Example /CN=awxserver.us.example.com",
+    "subject= /C=US/ST=Texas/L=Round Rock/O=Dell/OU=Dell Digital/CN=awxplprod02.us.dell.com",
     "",
     "$ openssl x509 -noout -in cert.pem -dates",
     "notBefore=Jul 14 18:17:08 2021 GMT",
     "notAfter=Jul 14 18:17:08 2023 GMT",
     "",
     "$ openssl x509 -noout -in cert.pem -issuer -subject -dates",
-    "issuer= /C=US/ST=Texas/L=Round Rock/O=Example Technologies/CN=Example Technologies Issuing CA 101",
-    "subject= /C=US/ST=Texas/L=Round Rock/O=nntrn/OU=Example /CN=awxserver.us.example.com",
+    "issuer= /C=US/ST=Texas/L=Round Rock/O=Dell Technologies/CN=Dell Technologies Issuing CA 101",
+    "subject= /C=US/ST=Texas/L=Round Rock/O=Dell/OU=Dell Digital/CN=awxplprod02.us.dell.com",
     "notBefore=Jul 14 18:17:08 2021 GMT",
     "notAfter=Jul 14 18:17:08 2023 GMT",
     "",
@@ -36,6 +27,12 @@
     "SHA1 Fingerprint=E3:EB:7B:6B:01:2D:CE:3A:AD:63:00:AA:0B:60:08:F8:64:9F:1E:D9",
     ""
   ],
-  "example": [],
-  "output": []
+  "example": "",
+  "output": "",
+  "description": "",
+  "language": "bash",
+  "tags": [
+    "security"
+  ],
+  "url": "https://www.madboa.com/geek/openssl/#introduction"
 }

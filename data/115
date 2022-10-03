@@ -1,15 +1,9 @@
 {
-  "id": "115",
+  "id": 115,
   "title": "ss -  investigate sockets",
-  "language": "bash",
-  "category": "ss",
-  "guid": "48b82e5a-9fb9-4d3d-b168-ae23410365cb",
-  "url": "",
-  "modified": "2021-12-30T19:47:46Z",
   "created": "2021-09-10T16:43:43Z",
-  "tags": [],
-  "description": [],
-  "cli": [
+  "modified": "2021-12-30T19:47:46Z",
+  "code": [
     "ss -a"
   ],
   "example": [
@@ -36,5 +30,8 @@
     "# List sockets in all states from all socket tables but TCP.",
     "ss -a -A 'all,!tcp'"
   ],
-  "output": []
+  "output": "",
+  "description": "",
+  "language": "bash",
+  "tags": null
 }

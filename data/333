@@ -1,24 +1,9 @@
 {
-  "id": "333",
+  "id": 333,
   "title": "lvm - increase capacity of partition",
-  "language": "bash",
-  "category": "lvm",
-  "type": "command",
-  "guid": "6a52199e-823f-45ef-9702-4ff3435d4eb0",
-  "url": "https://www.redhat.com/sysadmin/resize-lvm-simple",
-  "modified": "2022-06-02T17:50:10Z",
   "created": "2022-05-28T05:50:22Z",
-  "tags": [
-    "sysadmin"
-  ],
-  "description": [
-    "Attach the new storage to the system. Next, create a new Physical Volume (PV) from that storage. ",
-    "Add the PV to the Volume Group (VG) and then extend the Logical Volume (LV).",
-    "",
-    "More info:",
-    "https://tldp.org/HOWTO/LVM-HOWTO/index.html"
-  ],
-  "cli": [
+  "modified": "2022-06-02T17:50:10Z",
+  "code": [
     "FILESYSTEM_PATH=/dev/mapper/osvg-var.fs",
     "",
     "# get max allocation size to expand later",
@@ -105,5 +90,17 @@
     "",
     "    /dev/mapper/osvg-var.fs                    15G   10G  5.0G  67% /var"
   ],
-  "output": []
+  "output": "",
+  "description": [
+    "Attach the new storage to the system. Next, create a new Physical Volume (PV) from that storage. ",
+    "Add the PV to the Volume Group (VG) and then extend the Logical Volume (LV).",
+    "",
+    "More info:",
+    "https://tldp.org/HOWTO/LVM-HOWTO/index.html"
+  ],
+  "language": "bash",
+  "tags": [
+    "sysadmin"
+  ],
+  "url": "https://www.redhat.com/sysadmin/resize-lvm-simple"
 }

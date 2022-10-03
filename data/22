@@ -1,17 +1,9 @@
 {
-  "id": "22",
+  "id": 22,
   "title": "creating a user with pass",
-  "language": "bash",
-  "category": "creating",
-  "guid": "23111957-6020-4702-8ff6-7ee9d2828bff",
-  "url": "https://stackoverflow.com/a/2328528",
-  "modified": "2021-12-30T19:44:08Z",
   "created": "2021-03-26T18:34:51Z",
-  "tags": [
-    "coreutils"
-  ],
-  "description": [],
-  "cli": [
+  "modified": "2021-12-30T19:44:08Z",
+  "code": [
     "useradd -p $(openssl passwd -1 $PASS) $USER"
   ],
   "example": [
@@ -19,5 +11,11 @@
     "PASS=password",
     "useradd -p $(openssl passwd -1 $PASS) $USER"
   ],
-  "output": []
+  "output": "",
+  "description": "",
+  "language": "bash",
+  "tags": [
+    "coreutils"
+  ],
+  "url": "https://stackoverflow.com/a/2328528"
 }

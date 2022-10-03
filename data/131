@@ -1,21 +1,18 @@
 {
-  "id": "131",
+  "id": 131,
   "title": "python to encode and decode",
-  "language": "bash",
-  "category": "python",
-  "guid": "ac961582-ad28-4f1b-8540-0c65277fb3e9",
-  "url": "",
-  "modified": "2022-03-03T17:01:29Z",
   "created": "2021-09-25T06:23:58Z",
-  "tags": [],
-  "description": [],
-  "cli": [
+  "modified": "2022-03-03T17:01:29Z",
+  "code": [
     "# encode",
     "python -m base64 -e <<< \"sample string\"",
     "",
     "# decode",
     "python -m base64 -d <<< \"dGhpcyBpcyBlbmNvZGVkCg==\""
   ],
-  "example": [],
-  "output": []
+  "example": "",
+  "output": "",
+  "description": "",
+  "language": "bash",
+  "tags": null
 }

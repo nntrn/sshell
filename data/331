@@ -1,22 +1,12 @@
 {
-  "id": "331",
+  "id": 331,
   "title": "python - select keys in json to print",
-  "language": "python",
-  "category": "python",
-  "type": "command",
-  "guid": "ab5c4001-5375-4f36-ade0-f5bce621e9dc",
-  "url": "",
-  "modified": "2022-05-27T03:43:16Z",
   "created": "2022-05-27T00:03:26Z",
-  "tags": [],
-  "description": [
-    "similar to ",
-    "jq 'with_entries(.[]|select([.key] | inside([\"id\", \"title\"])))'"
-  ],
-  "cli": [
+  "modified": "2022-05-27T03:43:16Z",
+  "code": [
     "curl -s \"https://jsonplaceholder.typicode.com/posts\" | python3 -c \"import sys, json; data=json.load(sys.stdin); x = [{'id': d['id'], 'title': d['title']} for d in data]; print(json.dumps(x, indent=2))\""
   ],
-  "example": [],
+  "example": "",
   "output": [
     "[",
     "  {",
@@ -36,5 +26,11 @@
     "    \"title\": \"eum et est occaecati\"",
     "  }",
     "]"
-  ]
+  ],
+  "description": [
+    "similar to ",
+    "jq 'with_entries(.[]|select([.key] | inside([\"id\", \"title\"])))'"
+  ],
+  "language": "python",
+  "tags": null
 }

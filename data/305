@@ -1,31 +1,12 @@
 {
-  "id": "305",
+  "id": 305,
   "title": "fsutil resource info",
-  "language": "cmd",
-  "category": "fsutil",
-  "type": "command",
-  "guid": "5466cccc-610e-44f3-b301-d4898c5d3197",
-  "url": "",
-  "modified": "2022-05-05T01:13:33Z",
   "created": "2022-05-05T01:13:33Z",
-  "tags": [],
-  "description": [
-    "fsutil resource",
-    "---- RESOURCE Commands Supported ----",
-    "",
-    "create          Create a Secondary Transactional Resource Manager",
-    "info            Display information relating to a Transactional Resource Manager",
-    "setAutoReset    Set whether a default Transactional Resource Manager will clean its transactional metadata on next mount",
-    "setAvailable    Set a Transactional Resource Manager to prefer availability over consistency",
-    "setConsistent   Set a Transactional Resource Manager to prefer consistency over availability",
-    "setLog          Change characteristics of a running Transactional Resource Manager",
-    "start           Start a Transactional Resource Manager",
-    "stop            Stop a Transactional Resource Manager"
-  ],
-  "cli": [
+  "modified": "2022-05-05T01:13:33Z",
+  "code": [
     "fsutil resource info C:"
   ],
-  "example": [],
+  "example": "",
   "output": [
     "Resource Manager Identifier :      F3292104-1D58-11EC-96F2-381428BEAE7E",
     "KTM Log Path for RM:  \\Device\\HarddiskVolume3\\$Extend\\$RmMetadata\\$TxfLog\\$TxfLog::KtmLog",
@@ -48,5 +29,20 @@
     "Auto shrink:          Not enabled",
     "",
     "RM prefers availability over consistency."
-  ]
+  ],
+  "description": [
+    "fsutil resource",
+    "---- RESOURCE Commands Supported ----",
+    "",
+    "create          Create a Secondary Transactional Resource Manager",
+    "info            Display information relating to a Transactional Resource Manager",
+    "setAutoReset    Set whether a default Transactional Resource Manager will clean its transactional metadata on next mount",
+    "setAvailable    Set a Transactional Resource Manager to prefer availability over consistency",
+    "setConsistent   Set a Transactional Resource Manager to prefer consistency over availability",
+    "setLog          Change characteristics of a running Transactional Resource Manager",
+    "start           Start a Transactional Resource Manager",
+    "stop            Stop a Transactional Resource Manager"
+  ],
+  "language": "cmd",
+  "tags": null
 }

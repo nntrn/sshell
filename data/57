@@ -1,19 +1,16 @@
 {
-  "id": "57",
+  "id": 57,
   "title": "view service account owner",
-  "language": "bash",
-  "category": "view",
-  "guid": "c4c7e471-dc07-4d85-a772-9c2fffcce787",
-  "url": "",
-  "modified": "2021-12-30T19:44:09Z",
   "created": "2021-06-16T14:34:11Z",
+  "modified": "2021-12-30T19:44:09Z",
+  "code": [
+    "net user /domain svc_npdbaasoraos"
+  ],
+  "example": "",
+  "output": "",
+  "description": "",
+  "language": "bash",
   "tags": [
-    "nntrn"
-  ],
-  "description": [],
-  "cli": [
-    "net user /domain svc_account"
-  ],
-  "example": [],
-  "output": []
+    "dell"
+  ]
 }

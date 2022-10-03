@@ -1,21 +1,18 @@
 {
-  "id": "263",
+  "id": 263,
   "title": "vault - enable and write userpass",
-  "language": "bash",
-  "category": "vault",
-  "type": "command",
-  "guid": "cacd537b-97f0-440e-987b-82ae0263f1fa",
-  "url": "https://github.com/hashicorp/vault/blob/main/website/content/docs/commands/auth/enable.mdx",
-  "modified": "2022-03-31T00:12:08Z",
   "created": "2022-03-31T00:12:08Z",
-  "tags": [
-    "vault"
-  ],
-  "description": [],
-  "cli": [
+  "modified": "2022-03-31T00:12:08Z",
+  "code": [
     "vault auth enable userpass",
     "vault write auth/userpass/users/annie_tran password=secret"
   ],
-  "example": [],
-  "output": []
+  "example": "",
+  "output": "",
+  "description": "",
+  "language": "bash",
+  "tags": [
+    "vault"
+  ],
+  "url": "https://github.com/hashicorp/vault/blob/main/website/content/docs/commands/auth/enable.mdx"
 }

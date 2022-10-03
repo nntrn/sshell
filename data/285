@@ -1,19 +1,12 @@
 {
-  "id": "285",
+  "id": 285,
   "title": "vim - display all possible runtime config settings for vim",
-  "language": "vim",
-  "category": "vim",
-  "type": "command",
-  "guid": "5505f885-6690-405e-8dba-d0e88b807077",
-  "url": "",
-  "modified": "2022-04-14T22:22:37Z",
   "created": "2022-04-14T22:22:37Z",
-  "tags": [],
-  "description": [],
-  "cli": [
+  "modified": "2022-04-14T22:22:37Z",
+  "code": [
     ":set all"
   ],
-  "example": [],
+  "example": "",
   "output": [
     "--- Options ---",
     "  ambiwidth=single    endofline         noinsertmode          mousetime=500       shellxescape=       tags=./tags,tags  novisualbell",
@@ -66,5 +59,8 @@
     "  shortmess=filnxtToO",
     "  suffixes=.bak,~,.o,.h,.info,.swp,.obj",
     ""
-  ]
+  ],
+  "description": "",
+  "language": "vim",
+  "tags": null
 }

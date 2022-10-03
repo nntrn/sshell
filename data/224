@@ -1,17 +1,15 @@
 {
-  "id": "224",
+  "id": 224,
   "title": "zip files in current directory",
-  "language": "bash",
-  "category": "zip",
-  "guid": "decfc64e-abdc-4bcd-9a25-a7b758dc558a",
-  "url": "https://devconnected.com/how-to-zip-folder-on-linux/",
-  "modified": "2022-02-28T20:18:55Z",
   "created": "2022-02-28T20:14:56Z",
-  "tags": [],
-  "description": [],
-  "cli": [
+  "modified": "2022-02-28T20:18:55Z",
+  "code": [
     "find . -maxdepth 1 -type d -exec zip archive.zip {} +"
   ],
-  "example": [],
-  "output": []
+  "example": "",
+  "output": "",
+  "description": "",
+  "language": "bash",
+  "tags": null,
+  "url": "https://devconnected.com/how-to-zip-folder-on-linux/"
 }

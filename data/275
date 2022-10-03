@@ -1,19 +1,12 @@
 {
-  "id": "275",
+  "id": 275,
   "title": "sssctl - get command usage from help",
-  "language": "bash",
-  "category": "sssctl",
-  "type": "command",
-  "guid": "dca57770-ed70-42c7-a131-2106aff0b87f",
-  "url": "",
-  "modified": "2022-04-11T19:59:56Z",
   "created": "2022-04-11T19:59:56Z",
-  "tags": [],
-  "description": [],
-  "cli": [
+  "modified": "2022-04-11T19:59:56Z",
+  "code": [
     "sssctl --help"
   ],
-  "example": [],
+  "example": "",
   "output": [
     "Usage:",
     "sssctl COMMAND COMMAND-ARGS",
@@ -51,5 +44,8 @@
     "  --usage                Show brief usage message for a command",
     "",
     ""
-  ]
+  ],
+  "description": "",
+  "language": "bash",
+  "tags": null
 }

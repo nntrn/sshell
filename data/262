@@ -1,14 +1,17 @@
 {
-  "id": "262",
+  "id": 262,
   "title": "get environment names matching prefix",
-  "language": "bash",
-  "category": "get",
-  "type": "command",
-  "guid": "f813b166-40d4-447e-9830-0411dbda04af",
-  "url": "",
-  "modified": "2022-03-30T16:22:08Z",
   "created": "2022-03-30T16:22:08Z",
-  "tags": [],
+  "modified": "2022-03-30T16:22:08Z",
+  "code": [
+    "${!prefix*}",
+    "${!prefix@}"
+  ],
+  "example": [
+    "$ echo \"${!VAULT*}\"",
+    "VAULT_ADDR VAULT_NAMESPACE VAULT_TOKEN"
+  ],
+  "output": "",
   "description": [
     "${!prefix*}",
     "${!prefix@}",
@@ -19,13 +22,6 @@
     "",
     "When @ is used and the expansion appears within double quotes, each variable name expands to a separate word."
   ],
-  "cli": [
-    "${!prefix*}",
-    "${!prefix@}"
-  ],
-  "example": [
-    "$ echo \"${!VAULT*}\"",
-    "VAULT_ADDR VAULT_NAMESPACE VAULT_TOKEN"
-  ],
-  "output": []
+  "language": "bash",
+  "tags": null
 }

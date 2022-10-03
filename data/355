@@ -1,32 +1,11 @@
 {
-  "id": "355",
+  "id": 355,
   "title": "docker format results",
-  "modified": "2022-07-05T03:02:13Z",
   "created": "2022-07-05T03:02:13Z",
-  "guid": "da9be9ef-407c-401a-ae1c-df2520db8db6",
-  "cli": "docker ps --format \"{{json .}}\"",
-  "description": [
-    "To inspect containers:",
-    "",
-    "docker container inspect <container>",
-    "docker inspect <container>",
-    "",
-    "This displays detailed information for a container, including the following:",
-    "",
-    "ID - the full unique identifier of the conserver.",
-    "",
-    "Image - the image the container is running.",
-    "",
-    "NetworkSettings - the network information including the Ports, IPAddress, and any Aliases.",
-    "",
-    "LogPath - the file system path to the container's log file.",
-    "",
-    "Volumes - displays any volume mappings between the host system and the conserver.",
-    "",
-    "WorkingDir - this is where you are dropped when running an interactive shell in the conserver."
+  "modified": "2022-07-05T03:02:13Z",
+  "code": [
+    "docker ps --format \"{{json .}}\""
   ],
-  "tags": "docker",
-  "url": "https://doc.sitecore.com/xp/en/developers/101/developer-tools/sitecore-docker-cheat-sheet.html",
   "example": [
     "$ docker inspect --format='{{json .NetworkSettings}}' awx_task | jq",
     "{",
@@ -70,9 +49,33 @@
     "    }",
     "  }",
     "}",
+    "",
     ""
   ],
+  "output": "",
+  "description": [
+    "To inspect containers:",
+    "",
+    "docker container inspect <container>",
+    "docker inspect <container>",
+    "",
+    "This displays detailed information for a container, including the following:",
+    "",
+    "ID - the full unique identifier of the container.",
+    "",
+    "Image - the image the container is running.",
+    "",
+    "NetworkSettings - the network information including the Ports, IPAddress, and any Aliases.",
+    "",
+    "LogPath - the file system path to the container's log file.",
+    "",
+    "Volumes - displays any volume mappings between the host system and the container.",
+    "",
+    "WorkingDir - this is where you are dropped when running an interactive shell in the container."
+  ],
   "language": "bash",
-  "category": "docker",
-  "code_type": "command"
+  "tags": [
+    "docker"
+  ],
+  "url": "https://doc.sitecore.com/xp/en/developers/101/developer-tools/sitecore-docker-cheat-sheet.html"
 }

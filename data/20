@@ -1,25 +1,22 @@
 {
-  "id": "20",
+  "id": 20,
   "title": "Get active internet connections and domain sockets",
-  "language": "bash",
-  "category": "Get",
-  "guid": "b16dc389-0557-409b-b7e2-365f18e60ad2",
-  "url": "",
-  "modified": "2021-12-30T19:44:08Z",
   "created": "2021-03-25T15:42:51Z",
-  "tags": [
-    "network"
+  "modified": "2021-12-30T19:44:08Z",
+  "code": [
+    "netstat -pW"
+  ],
+  "example": "",
+  "output": [
+    "Active Internet connections (w/o servers)",
+    "Proto Recv-Q Send-Q Local Address           Foreign Address         State       PID/Program name"
   ],
   "description": [
     "-p displays",
     "-W print wide (no trim)"
   ],
-  "cli": [
-    "netstat -pW"
-  ],
-  "example": [],
-  "output": [
-    "Active Internet connections (w/o servers)",
-    "Proto Recv-Q Send-Q Local Address           Foreign Address         State       PID/Program name"
+  "language": "bash",
+  "tags": [
+    "network"
   ]
 }

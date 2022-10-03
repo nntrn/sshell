@@ -1,21 +1,12 @@
 {
-  "id": "299",
-  "title": "Get-NetAdapter |",
-  "language": "powershell",
-  "category": "Get-NetAdapter",
-  "type": "command",
-  "guid": "f7edeef2-2083-4c50-bbde-06e1a17e1d20",
-  "url": "",
-  "modified": "2022-05-07T10:31:02Z",
+  "id": 299,
+  "title": "Get-NetAdapter",
   "created": "2022-05-03T17:53:44Z",
-  "tags": [
-    "network"
-  ],
-  "description": [],
-  "cli": [
+  "modified": "2022-05-25T19:07:39Z",
+  "code": [
     "Get-NetAdapter | Format-Table  -AutoSize -Wrap"
   ],
-  "example": [],
+  "example": "",
   "output": [
     "Name                       InterfaceDescription              ifIndex Status MacAddress         LinkSpeed",
     "----                       --------------------              ------- ------ ----------         ---------",
@@ -23,5 +14,10 @@
     "Wi-Fi                      Intel(R) Wi-Fi 6 AX201 160MHz          18 Up     FE-D9-C4-E6-18-B1 866.7 Mbps",
     "Ethernet 3                 PANGP Virtual Ethernet Adapter #2       7 Up     01-50-41-40-42-01     2 Gbps",
     ""
+  ],
+  "description": "",
+  "language": "powershell",
+  "tags": [
+    "network"
   ]
 }

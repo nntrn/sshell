@@ -1,20 +1,23 @@
 {
-  "id": "348",
+  "id": 348,
   "title": "limit_except",
-  "modified": "2022-06-30T02:12:56Z",
   "created": "2022-06-29T22:37:51Z",
-  "guid": "5df3e8f9-82a4-43be-9ff3-a7c44a1d30c3",
-  "cli": [
+  "modified": "2022-06-30T02:12:56Z",
+  "code": [
     "location / { ",
     "    limit_except GET { ",
     "      allow 192.168.1.0/24; ",
     "      deny all; ",
     "    } ",
-    "} "
+    "} ",
+    ""
   ],
-  "description": "This directive allows you to prevent the use of all HTTP methods, except the ones that you explicitly allow. Within a location block, you may want to restrict the use of some HTTP methods, such as forbidding clients from sending POST requests. You need to define two elements: first, the methods that are not forbidden (the allowed methods; all others will be forbidden); and second, the audience that is affected by the restriction",
-  "url": "https://www.oreilly.com/library/view/nginx-http-server/9781788623551/75c3c065-0311-4c4c-a191-31fd1e344f78.xhtml",
+  "example": "",
+  "output": "",
+  "description": [
+    "This directive allows you to prevent the use of all HTTP methods, except the ones that you explicitly allow. Within a location block, you may want to restrict the use of some HTTP methods, such as forbidding clients from sending POST requests. You need to define two elements: first, the methods that are not forbidden (the allowed methods; all others will be forbidden); and second, the audience that is affected by the restriction"
+  ],
   "language": "nginx",
-  "category": "error;#256",
-  "code_type": "config"
+  "tags": null,
+  "url": "https://www.oreilly.com/library/view/nginx-http-server/9781788623551/75c3c065-0311-4c4c-a191-31fd1e344f78.xhtml"
 }
