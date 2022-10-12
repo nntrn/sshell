@@ -8,11 +8,11 @@
   ],
   "example": "",
   "output": [
-    "Domain              : amer.dell.com",
+    "Domain              : amer.server.com",
     "Manufacturer        : Dell Inc.",
     "Model               : Precision 5560",
     "Name                : W101TL8YD3",
-    "PrimaryOwnerName    : Dell, Inc.",
+    "PrimaryOwnerName    : server, Inc.",
     "TotalPhysicalMemory : 34065952768",
     ""
   ],

@@ -9,7 +9,7 @@
   "example": "",
   "output": [
     "ComputerName        : AT01488YD3",
-    "DistinguishedName   : CN=W101TL8YD3,OU=Workstations,OU=Computers,OU=Austin,DC=amer,DC=dell,DC=com",
+    "DistinguishedName   : CN=W101TL8YD3,OU=Workstations,OU=Computers,OU=Austin,DC=amer,DC=server,DC=com",
     "Password            :",
     "ExpirationTimestamp : 5/5/2022 3:07:06 PM"
   ],

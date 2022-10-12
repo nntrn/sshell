@@ -25,7 +25,7 @@
     "8.0K    ./.gnupg",
     "304K    ./oradiag_ansible",
     "82M     ./scm",
-    "160K    ./dell_ansible_starter",
+    "160K    ./server_ansible_starter",
     "1.6M    ./ansible_dbaseceng",
     "36K     ./.secrets",
     "20K     ./ssh-expect",

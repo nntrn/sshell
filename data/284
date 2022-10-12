@@ -8,7 +8,7 @@
   ],
   "example": "",
   "output": [
-    "● awxnldev01.us.dell.com",
+    "● awxnldev01.us.server.com",
     "    State: running",
     "     Jobs: 0 queued",
     "   Failed: 0 units",

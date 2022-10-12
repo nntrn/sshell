@@ -4,7 +4,7 @@
   "created": "2021-02-24T09:16:13Z",
   "modified": "2021-12-30T19:44:08Z",
   "code": [
-    "cf login -a https://api.sr2.pcf.dell.com"
+    "cf login -a https://api.sr2.pcf.server.com"
   ],
   "example": "",
   "output": "",
@@ -12,10 +12,10 @@
     "Sustaining team has the following PCF Environments (change api to apps if you want to access the panel)",
     "",
     "PROD",
-    "PC1: https://api.sausmpc01.pcf.dell.com",
-    "S3B: https://api.sausmsc01.pcf.dell.com",
+    "PC1: https://api.sausmpc01.pcf.server.com",
+    "S3B: https://api.sausmsc01.pcf.server.com",
     "NON-PROD",
-    "http://api.sr2.pcf.dell.com",
+    "http://api.sr2.pcf.server.com",
     "PCF Org"
   ],
   "language": "bash",

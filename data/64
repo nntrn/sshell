@@ -9,7 +9,7 @@
   "example": "",
   "output": [
     "Computer name                        \\\\W106697SN2",
-    "Full Computer name                   W106697SN2.aus.amer.dell.com",
+    "Full Computer name                   W106697SN2.aus.amer.server.com",
     "User name                            Annie_Tran",
     "",
     "Workstation active on",
@@ -20,7 +20,7 @@
     "Software version                     Windows 10 Enterprise",
     "",
     "Workstation domain                   AMERICAS",
-    "Workstation Domain DNS Name          amer.dell.com",
+    "Workstation Domain DNS Name          amer.server.com",
     "Logon domain                         AMERICAS",
     "",
     "COM Open Timeout (sec)               0",

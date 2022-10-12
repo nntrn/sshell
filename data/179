@@ -4,7 +4,7 @@
   "created": "2022-01-04T01:19:04Z",
   "modified": "2022-03-17T00:11:45Z",
   "code": [
-    "echo \"To: annie_tran@dell.com",
+    "echo \"To: annie_tran@server.com",
     "Subject: my subject",
     "Content-Type: text/html",
     "",

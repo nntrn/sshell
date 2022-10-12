@@ -7,11 +7,11 @@
     "wget --no-parent -r https://url.com"
   ],
   "example": [
-    "wget --no-parent -r http://images-http.us.dell.com/images/repository/apps/git/git29_for_OL7.x/"
+    "wget --no-parent -r http://images-http.us.server.com/images/repository/apps/git/git29_for_OL7.x/"
   ],
   "output": [
     "recursively creates the directory and files to:",
-    "./images-http.us.dell.com/images/repository/apps/git/git29_for_OL7.x"
+    "./images-http.us.server.com/images/repository/apps/git/git29_for_OL7.x"
   ],
   "description": [
     "recursively download a page ",

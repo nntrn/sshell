@@ -1,5 +1,33 @@
 [
   {
+    "id": 401,
+    "title": "jq group by example",
+    "created": "2022-10-12T16:53:23Z",
+    "modified": "2022-10-12T16:53:23Z",
+    "code": [
+      "jq 'group_by(.language)| map( {\"\\(.[0].language)\":length}) |add'",
+      ""
+    ],
+    "example": [
+      "$ curl -s https://api.github.com/users/nntrn/repos | jq 'group_by(.language)| map( {\"\\(.[0].language)\":length}) |add'",
+      "{",
+      "  \"null\": 7,",
+      "  \"HTML\": 4,",
+      "  \"Java\": 1,",
+      "  \"JavaScript\": 11,",
+      "  \"Jinja\": 2,",
+      "  \"R\": 1,",
+      "  \"SCSS\": 1",
+      "}"
+    ],
+    "output": "",
+    "description": "",
+    "language": "bash",
+    "tags": [
+      "jq"
+    ]
+  },
+  {
     "id": 400,
     "title": "jq - recursively slice array values to get first child only",
     "created": "2022-09-30T04:49:10Z",
@@ -1790,14 +1818,14 @@
       "GITLAB_PROJECT_TOKEN=glpat-9eAicfQ9HoLp2ilItrVZ",
       "git clone https://gitlab-ci-token:$GITLAB_PROJECT_TOKEN@gitlab.example.com/path/to/project.git",
       "",
-      "git clone -c http.sslVerify=false  https://gitlab-ci-token:$GITLAB_PROJECT_TOKEN@gitlab.dell.com/infrastructure/database/devops/tower/inventory.git"
+      "git clone -c http.sslVerify=false  https://gitlab-ci-token:$GITLAB_PROJECT_TOKEN@gitlab.server.com/infrastructure/database/devops/tower/inventory.git"
     ],
     "example": [
-      "$ git clone https://project_136765_bot:glpat-H5rsFBozrntDhZoLWuC6@gitlab.dell.com/infrastructure/database/devops/tower/inventory.git",
+      "$ git clone https://project_136765_bot:glpat-H5rsFBozrntDhZoLWuC6@gitlab.server.com/infrastructure/database/devops/tower/inventory.git",
       "Cloning into 'inventory'...",
-      "fatal: unable to access 'https://gitlab.dell.com/infrastructure/database/devops/tower/inventory.git/': SSL certificate problem: self signed certificate in certificate chain",
+      "fatal: unable to access 'https://gitlab.server.com/infrastructure/database/devops/tower/inventory.git/': SSL certificate problem: self signed certificate in certificate chain",
       "",
-      "$ git clone -c http.sslVerify=false  https://project_136765_bot:glpat-H5rsFBozrntDhZoLWuC6@gitlab.dell.com/infrastructure/database/devops/tower/inventory.git",
+      "$ git clone -c http.sslVerify=false  https://project_136765_bot:glpat-H5rsFBozrntDhZoLWuC6@gitlab.server.com/infrastructure/database/devops/tower/inventory.git",
       "Cloning into 'inventory'...",
       "remote: Enumerating objects: 15, done.",
       "remote: Counting objects: 100% (15/15), done.",
@@ -2743,12 +2771,12 @@
       "GITLAB_PERSONAL_ACCESS_TOKEN=...",
       "",
       "curl --silent --header \"PRIVATE-TOKEN: $GITLAB_PERSONAL_ACCESS_TOKEN\" \\",
-      "  -XPOST \"https://gitlab.dell.com/api/v4/projects?name=$PROJECT_NAME&visibility=private&initialize_with_readme=true\"",
+      "  -XPOST \"https://gitlab.server.com/api/v4/projects?name=$PROJECT_NAME&visibility=private&initialize_with_readme=true\"",
       ""
     ],
     "example": "",
     "output": [
-      "{\"id\":132638,\"description\":null,\"name\":\"test\",\"name_with_namespace\":\"Tran, Annie / test\",\"path\":\"test\",\"path_with_namespace\":\"Annie_Tran/test\",\"created_at\":\"2022-05-20T20:52:21.886Z\",\"default_branch\":\"main\",\"tag_list\":[],\"topics\":[],\"ssh_url_to_repo\":\"git@gitlab.dell.com:Annie_Tran/test.git\",\"http_url_to_repo\":\"https://gitlab.dell.com/Annie_Tran/test.git\",\"web_url\":\"https://gitlab.dell.com/Annie_Tran/test\",\"readme_url\":\"https://gitlab.dell.com/Annie_Tran/test/-/blob/main/README.md\",\"avatar_url\":null,\"forks_count\":0,\"star_count\":0,\"last_activity_at\":\"2022-05-20T20:52:21.886Z\",\"namespace\":{\"id\":25694,\"name\":\"Tran, Annie\",\"path\":\"Annie_Tran\",\"kind\":\"user\",\"full_path\":\"Annie_Tran\",\"parent_id\":null,\"avatar_url\":\"/uploads/-/system/user/avatar/15958/avatar.png\",\"web_url\":\"https://gitlab.dell.com/Annie_Tran\"},\"_links\":{\"self\":\"https://gitlab.dell.com/api/v4/projects/132638\",\"issues\":\"https://gitlab.dell.com/api/v4/projects/132638/issues\",\"merge_requests\":\"https://gitlab.dell.com/api/v4/projects/132638/merge_requests\",\"repo_branches\":\"https://gitlab.dell.com/api/v4/projects/132638/repository/branches\",\"labels\":\"https://gitlab.dell.com/api/v4/projects/132638/labels\",\"events\":\"https://gitlab.dell.com/api/v4/projects/132638/events\",\"members\":\"https://gitlab.dell.com/api/v4/projects/132638/members\"},\"packages_enabled\":true,\"empty_repo\":false,\"archived\":false,\"visibility\":\"private\",\"owner\":{\"id\":15958,\"username\":\"Annie_Tran\",\"name\":\"Tran, Annie\",\"state\":\"active\",\"avatar_url\":\"https://gitlab.dell.com/uploads/-/system/user/avatar/15958/avatar.png\",\"web_url\":\"https://gitlab.dell.com/Annie_Tran\"},\"resolve_outdated_diff_discussions\":false,\"container_expiration_policy\":{\"cadence\":\"1d\",\"enabled\":false,\"keep_n\":10,\"older_than\":\"90d\",\"name_regex\":\".*\",\"name_regex_keep\":null,\"next_run_at\":\"2022-05-21T20:52:21.916Z\"},\"issues_enabled\":true,\"merge_requests_enabled\":true,\"wiki_enabled\":true,\"jobs_enabled\":true,\"snippets_enabled\":true,\"container_registry_enabled\":true,\"service_desk_enabled\":false,\"service_desk_address\":null,\"can_create_merge_request_in\":true,\"issues_access_level\":\"enabled\",\"repository_access_level\":\"enabled\",\"merge_requests_access_level\":\"enabled\",\"forking_access_level\":\"enabled\",\"wiki_access_level\":\"enabled\",\"builds_access_level\":\"enabled\",\"snippets_access_level\":\"enabled\",\"pages_access_level\":\"private\",\"operations_access_level\":\"enabled\",\"analytics_access_level\":\"enabled\",\"container_registry_access_level\":\"enabled\",\"emails_disabled\":null,\"shared_runners_enabled\":true,\"lfs_enabled\":true,\"creator_id\":15958,\"import_status\":\"none\",\"import_error\":null,\"open_issues_count\":0,\"runners_token\":\"GR1348941HFqJJiSjZmRBkZeixhiT\",\"ci_default_git_depth\":20,\"ci_forward_deployment_enabled\":true,\"ci_job_token_scope_enabled\":false,\"public_jobs\":true,\"build_git_strategy\":\"fetch\",\"build_timeout\":3600,\"auto_cancel_pending_pipelines\":\"enabled\",\"build_coverage_regex\":null,\"ci_config_path\":\"\",\"shared_with_groups\":[],\"only_allow_merge_if_pipeline_succeeds\":false,\"allow_merge_on_skipped_pipeline\":null,\"restrict_user_defined_variables\":false,\"request_access_enabled\":true,\"only_allow_merge_if_all_discussions_are_resolved\":false,\"remove_source_branch_after_merge\":true,\"printing_merge_request_link_enabled\":true,\"merge_method\":\"merge\",\"squash_option\":\"default_off\",\"suggestion_commit_message\":null,\"merge_commit_template\":null,\"squash_commit_template\":null,\"auto_devops_enabled\":false,\"auto_devops_deploy_strategy\":\"continuous\",\"autoclose_referenced_issues\":true,\"keep_latest_artifact\":true,\"runner_token_expiration_interval\":null,\"approvals_before_merge\":0,\"mirror\":false,\"external_authorization_classification_label\":\"\",\"marked_for_deletion_at\":null,\"marked_for_deletion_on\":null,\"requirements_enabled\":false,\"requirements_access_level\":\"enabled\",\"security_and_compliance_enabled\":true,\"compliance_frameworks\":[],\"issues_template\":null,\"merge_requests_template\":null,\"merge_pipelines_enabled\":false,\"merge_trains_enabled\":false}"
+      "{\"id\":132638,\"description\":null,\"name\":\"test\",\"name_with_namespace\":\"Tran, Annie / test\",\"path\":\"test\",\"path_with_namespace\":\"Annie_Tran/test\",\"created_at\":\"2022-05-20T20:52:21.886Z\",\"default_branch\":\"main\",\"tag_list\":[],\"topics\":[],\"ssh_url_to_repo\":\"git@gitlab.server.com:Annie_Tran/test.git\",\"http_url_to_repo\":\"https://gitlab.server.com/Annie_Tran/test.git\",\"web_url\":\"https://gitlab.server.com/Annie_Tran/test\",\"readme_url\":\"https://gitlab.server.com/Annie_Tran/test/-/blob/main/README.md\",\"avatar_url\":null,\"forks_count\":0,\"star_count\":0,\"last_activity_at\":\"2022-05-20T20:52:21.886Z\",\"namespace\":{\"id\":25694,\"name\":\"Tran, Annie\",\"path\":\"Annie_Tran\",\"kind\":\"user\",\"full_path\":\"Annie_Tran\",\"parent_id\":null,\"avatar_url\":\"/uploads/-/system/user/avatar/15958/avatar.png\",\"web_url\":\"https://gitlab.server.com/Annie_Tran\"},\"_links\":{\"self\":\"https://gitlab.server.com/api/v4/projects/132638\",\"issues\":\"https://gitlab.server.com/api/v4/projects/132638/issues\",\"merge_requests\":\"https://gitlab.server.com/api/v4/projects/132638/merge_requests\",\"repo_branches\":\"https://gitlab.server.com/api/v4/projects/132638/repository/branches\",\"labels\":\"https://gitlab.server.com/api/v4/projects/132638/labels\",\"events\":\"https://gitlab.server.com/api/v4/projects/132638/events\",\"members\":\"https://gitlab.server.com/api/v4/projects/132638/members\"},\"packages_enabled\":true,\"empty_repo\":false,\"archived\":false,\"visibility\":\"private\",\"owner\":{\"id\":15958,\"username\":\"Annie_Tran\",\"name\":\"Tran, Annie\",\"state\":\"active\",\"avatar_url\":\"https://gitlab.server.com/uploads/-/system/user/avatar/15958/avatar.png\",\"web_url\":\"https://gitlab.server.com/Annie_Tran\"},\"resolve_outdated_diff_discussions\":false,\"container_expiration_policy\":{\"cadence\":\"1d\",\"enabled\":false,\"keep_n\":10,\"older_than\":\"90d\",\"name_regex\":\".*\",\"name_regex_keep\":null,\"next_run_at\":\"2022-05-21T20:52:21.916Z\"},\"issues_enabled\":true,\"merge_requests_enabled\":true,\"wiki_enabled\":true,\"jobs_enabled\":true,\"snippets_enabled\":true,\"container_registry_enabled\":true,\"service_desk_enabled\":false,\"service_desk_address\":null,\"can_create_merge_request_in\":true,\"issues_access_level\":\"enabled\",\"repository_access_level\":\"enabled\",\"merge_requests_access_level\":\"enabled\",\"forking_access_level\":\"enabled\",\"wiki_access_level\":\"enabled\",\"builds_access_level\":\"enabled\",\"snippets_access_level\":\"enabled\",\"pages_access_level\":\"private\",\"operations_access_level\":\"enabled\",\"analytics_access_level\":\"enabled\",\"container_registry_access_level\":\"enabled\",\"emails_disabled\":null,\"shared_runners_enabled\":true,\"lfs_enabled\":true,\"creator_id\":15958,\"import_status\":\"none\",\"import_error\":null,\"open_issues_count\":0,\"runners_token\":\"GR1348941HFqJJiSjZmRBkZeixhiT\",\"ci_default_git_depth\":20,\"ci_forward_deployment_enabled\":true,\"ci_job_token_scope_enabled\":false,\"public_jobs\":true,\"build_git_strategy\":\"fetch\",\"build_timeout\":3600,\"auto_cancel_pending_pipelines\":\"enabled\",\"build_coverage_regex\":null,\"ci_config_path\":\"\",\"shared_with_groups\":[],\"only_allow_merge_if_pipeline_succeeds\":false,\"allow_merge_on_skipped_pipeline\":null,\"restrict_user_defined_variables\":false,\"request_access_enabled\":true,\"only_allow_merge_if_all_discussions_are_resolved\":false,\"remove_source_branch_after_merge\":true,\"printing_merge_request_link_enabled\":true,\"merge_method\":\"merge\",\"squash_option\":\"default_off\",\"suggestion_commit_message\":null,\"merge_commit_template\":null,\"squash_commit_template\":null,\"auto_devops_enabled\":false,\"auto_devops_deploy_strategy\":\"continuous\",\"autoclose_referenced_issues\":true,\"keep_latest_artifact\":true,\"runner_token_expiration_interval\":null,\"approvals_before_merge\":0,\"mirror\":false,\"external_authorization_classification_label\":\"\",\"marked_for_deletion_at\":null,\"marked_for_deletion_on\":null,\"requirements_enabled\":false,\"requirements_access_level\":\"enabled\",\"security_and_compliance_enabled\":true,\"compliance_frameworks\":[],\"issues_template\":null,\"merge_requests_template\":null,\"merge_pipelines_enabled\":false,\"merge_trains_enabled\":false}"
     ],
     "description": [
       "name",
@@ -3666,7 +3694,7 @@
     "example": "",
     "output": [
       "ComputerName        : AT01488YD3",
-      "DistinguishedName   : CN=W101TL8YD3,OU=Workstations,OU=Computers,OU=Austin,DC=amer,DC=dell,DC=com",
+      "DistinguishedName   : CN=W101TL8YD3,OU=Workstations,OU=Computers,OU=Austin,DC=amer,DC=server,DC=com",
       "Password            :",
       "ExpirationTimestamp : 5/5/2022 3:07:06 PM"
     ],
@@ -5111,7 +5139,7 @@
     ],
     "example": "",
     "output": [
-      "Linux 5.4.17-2136.304.4.1.el7uek.x86_64 (awxplprod02.us.dell.com)       04/22/2022      _x86_64_        (2 CPU)",
+      "Linux 5.4.17-2136.304.4.1.el7uek.x86_64 (awxplprod02.us.server.com)       04/22/2022      _x86_64_        (2 CPU)",
       "",
       "02:01:07 AM   UID       PID  minflt/s  majflt/s     VSZ    RSS   %MEM  Command",
       "02:01:07 AM     0     10804      0.09      0.00       0      0   0.00  awx-manage",
@@ -5175,26 +5203,12 @@
     "id": 287,
     "title": "Get-ADGroupMember",
     "created": "2022-04-22T01:10:49Z",
-    "modified": "2022-04-22T01:10:49Z",
+    "modified": "2022-10-04T02:48:37Z",
     "code": [
-      "Get-ADGroupMember -Identity group,name | Select-Object name",
-      ""
+      "Get-ADGroupMember -Identity <Group_Name> "
     ],
     "example": "",
-    "output": [
-      "name",
-      "----",
-      "Lou Carter",
-      "Margaret Warren",
-      "Vicki Mosley",
-      "Mark French",
-      "Adrian Bush",
-      "Spencer Gutierrez",
-      "Danielle Kimball",
-      "Joyce Clay",
-      "Eunice Wolfe",
-      "Mildred Pearson"
-    ],
+    "output": "",
     "description": "",
     "language": "powershell",
     "tags": null,
@@ -5308,7 +5322,7 @@
     ],
     "example": "",
     "output": [
-      "● awxnldev01.us.dell.com",
+      "● awxnldev01.us.server.com",
       "    State: running",
       "     Jobs: 0 queued",
       "   Failed: 0 units",
@@ -5459,7 +5473,7 @@
       "issuer= /C=US/ST=Texas/L=Round Rock/O=Dell Technologies/CN=Dell Technologies Issuing CA 101",
       "",
       "$ openssl x509 -noout -in cert.pem -subject",
-      "subject= /C=US/ST=Texas/L=Round Rock/O=Dell/OU=Dell Digital/CN=awxplprod02.us.dell.com",
+      "subject= /C=US/ST=Texas/L=Round Rock/O=server/OU=Dell Digital/CN=awxplprod02.us.server.com",
       "",
       "$ openssl x509 -noout -in cert.pem -dates",
       "notBefore=Jul 14 18:17:08 2021 GMT",
@@ -5467,7 +5481,7 @@
       "",
       "$ openssl x509 -noout -in cert.pem -issuer -subject -dates",
       "issuer= /C=US/ST=Texas/L=Round Rock/O=Dell Technologies/CN=Dell Technologies Issuing CA 101",
-      "subject= /C=US/ST=Texas/L=Round Rock/O=Dell/OU=Dell Digital/CN=awxplprod02.us.dell.com",
+      "subject= /C=US/ST=Texas/L=Round Rock/O=server/OU=Dell Digital/CN=awxplprod02.us.server.com",
       "notBefore=Jul 14 18:17:08 2021 GMT",
       "notAfter=Jul 14 18:17:08 2023 GMT",
       "",
@@ -5604,7 +5618,7 @@
       "$Self = Get-ADUser -Identity $Env:Username -Properties *",
       "$EID = $Self.EmployeeId",
       "",
-      "Get-ADUser  -Filter \"dellOwnerID -like $EID\"  -Properties * | sort-object -property PasswordLastSet | Format-Table Name,PasswordLastSet -AutoSize -Wrap"
+      "Get-ADUser  -Filter \"serverOwnerID -like $EID\"  -Properties * | sort-object -property PasswordLastSet | Format-Table Name,PasswordLastSet -AutoSize -Wrap"
     ],
     "example": "",
     "output": "",
@@ -7841,7 +7855,7 @@
       "8.0K    ./.gnupg",
       "304K    ./oradiag_ansible",
       "82M     ./scm",
-      "160K    ./dell_ansible_starter",
+      "160K    ./server_ansible_starter",
       "1.6M    ./ansible_dbaseceng",
       "36K     ./.secrets",
       "20K     ./ssh-expect",
@@ -7862,7 +7876,7 @@
     "created": "2022-02-15T19:24:34Z",
     "modified": "2022-09-30T00:58:21Z",
     "code": [
-      "Get-ADUser -Filter 'Enabled -eq \"False\"' -Properties * |  Select CN,Description,dellEmployeeStatus, Country, Department,dellEmployeeJobDescription | Export-CSV enabled.csv"
+      "Get-ADUser -Filter 'Enabled -eq \"False\"' -Properties * |  Select CN,Description,serverEmployeeStatus, Country, Department,serverEmployeeJobDescription | Export-CSV enabled.csv"
     ],
     "example": [
       "$ cat enabled.csv | grep 2022 | column -s\\\" -t| sort -k 3"
@@ -8064,19 +8078,19 @@
     "created": "2022-02-03T03:40:35Z",
     "modified": "2022-02-10T16:14:52Z",
     "code": [
-      " host -t ns dell.com"
+      " host -t ns server.com"
     ],
     "example": "",
     "output": [
-      "dell.com name server uslas06bcdnsdhcp01.us.dell.com.",
-      "dell.com name server uslas06bcdnsdhcp02.us.dell.com.",
-      "dell.com name server aus01dns02.us.dell.com.",
-      "dell.com name server aus01intmstr01.us.dell.com.",
-      "dell.com name server aus01dns01.us.dell.com.",
-      "dell.com name server uslhs03bcdnsdhcp02.us.dell.com.",
-      "dell.com name server aus08dns01.us.dell.com.",
-      "dell.com name server aus08dns02.us.dell.com.",
-      "dell.com name server uslhs03bcdnsdhcp01.us.dell.com.",
+      "server.com name server uslas06bcdnsdhcp01.us.server.com.",
+      "server.com name server uslas06bcdnsdhcp02.us.server.com.",
+      "server.com name server aus01dns02.us.server.com.",
+      "server.com name server aus01intmstr01.us.server.com.",
+      "server.com name server aus01dns01.us.server.com.",
+      "server.com name server uslhs03bcdnsdhcp02.us.server.com.",
+      "server.com name server aus08dns01.us.server.com.",
+      "server.com name server aus08dns02.us.server.com.",
+      "server.com name server uslhs03bcdnsdhcp01.us.server.com.",
       ""
     ],
     "description": "",
@@ -8092,11 +8106,11 @@
     "created": "2022-02-03T03:24:11Z",
     "modified": "2022-02-03T03:24:11Z",
     "code": [
-      "echo '' | openssl s_client -connect awxpluat02.us.dell.com:443 2>/dev/null | openssl x509 -text -noout | grep -A 1 \"Public Key Algorithm\""
+      "echo '' | openssl s_client -connect awxpluat02.us.server.com:443 2>/dev/null | openssl x509 -text -noout | grep -A 1 \"Public Key Algorithm\""
     ],
     "example": "",
     "output": [
-      "$ echo '' | openssl s_client -connect awxpluat02.us.dell.com:443 2>/dev/null | openssl x509 -text -noout | grep -A 1 \"Public Key Algorithm\"",
+      "$ echo '' | openssl s_client -connect awxpluat02.us.server.com:443 2>/dev/null | openssl x509 -text -noout | grep -A 1 \"Public Key Algorithm\"",
       "            Public Key Algorithm: rsaEncryption",
       "                RSA Public-Key: (2048 bit)"
     ],
@@ -8308,13 +8322,13 @@
       "             |         \"commits\": [                                                                                                                                                  +",
       "             |             {                                                                                                                                                         +",
       "             |                 \"id\": \"7586902a37c4458883f9e812804acdae0e42939b\",                                                                                                     +",
-      "             |                 \"url\": \"https://gitlab.dell.com/infrastructure/database/engineering/tools/dbaasv2/awx_inventory/-/commit/7586902a37c4458883f9e812804acdae0e42939b\",   +",
+      "             |                 \"url\": \"https://gitlab.server.com/infrastructure/database/engineering/tools/dbaasv2/awx_inventory/-/commit/7586902a37c4458883f9e812804acdae0e42939b\",   +",
       "             |                 \"added\": [                                                                                                                                            +",
       "             |                 ],                                                                                                                                                    +",
       "             |                 \"title\": \"Update inventory\",                                                                                                                          +",
       "             |                 \"author\": {                                                                                                                                           +",
       "             |                     \"name\": \"svc_npnpdbaasvra\",                                                                                                                       +",
-      "             |                     \"email\": \"svc_npnpdbaasvra@amer.dell.com\"                                                                                                         +",
+      "             |                     \"email\": \"svc_npnpdbaasvra@amer.server.com\"                                                                                                         +",
       "             |                 },                                                                                                                                                    +",
       "             |                 \"message\": \"Update inventory\\n\",                                                                                                                      +",
       "             |                 \"removed\": [                                                                                                                                          +",
@@ -8454,11 +8468,11 @@
     ],
     "example": "",
     "output": [
-      "Domain              : amer.dell.com",
+      "Domain              : amer.server.com",
       "Manufacturer        : Dell Inc.",
       "Model               : Precision 5560",
       "Name                : W101TL8YD3",
-      "PrimaryOwnerName    : Dell, Inc.",
+      "PrimaryOwnerName    : server, Inc.",
       "TotalPhysicalMemory : 34065952768",
       ""
     ],
@@ -8693,7 +8707,7 @@
     "created": "2022-01-04T01:19:04Z",
     "modified": "2022-03-17T00:11:45Z",
     "code": [
-      "echo \"To: annie_tran@dell.com",
+      "echo \"To: annie_tran@server.com",
       "Subject: my subject",
       "Content-Type: text/html",
       "",
@@ -8712,7 +8726,7 @@
     "created": "2022-01-03T16:40:44Z",
     "modified": "2022-03-17T00:27:45Z",
     "code": [
-      "sshpass -f .secrets/sshpass/svc_npdbaasmongos ssh -o StrictHostKeyChecking=no svc_npdbaasmongos@cfinlmdrprf17.us.dell.com"
+      "sshpass -f .secrets/sshpass/svc_npdbaasmongos ssh -o StrictHostKeyChecking=no svc_npdbaasmongos@cfinlmdrprf17.us.server.com"
     ],
     "example": "",
     "output": "",
@@ -8797,7 +8811,7 @@
     "created": "2021-12-29T03:08:27Z",
     "modified": "2022-01-03T06:10:01Z",
     "code": [
-      "$ openssl s_client -showcerts -connect awxpluat02.us.dell.com:80"
+      "$ openssl s_client -showcerts -connect awxpluat02.us.server.com:80"
     ],
     "example": "",
     "output": [
@@ -8848,7 +8862,7 @@
     "code": [
       "VAULT_TOKEN=...",
       "",
-      "curl -H \"X-Vault-Namespace: infrastructure/database/engineering/tools/dbaasv2/dbaasv2/\" -H \"X-Vault-Request: true\" -H \"X-Vault-Token: $VAULT_TOKEN\" https://hcvault-nonprod.dell.com/v1/kv/data/SERVICE_ACCOUNT/MONGO/NONPROD"
+      "curl -H \"X-Vault-Namespace: infrastructure/database/engineering/tools/dbaasv2/dbaasv2/\" -H \"X-Vault-Request: true\" -H \"X-Vault-Token: $VAULT_TOKEN\" https://hcvault-nonprod.server.com/v1/kv/data/SERVICE_ACCOUNT/MONGO/NONPROD"
     ],
     "example": "",
     "output": "",
@@ -8915,7 +8929,7 @@
     "created": "2021-12-06T22:06:14Z",
     "modified": "2022-03-17T00:28:02Z",
     "code": [
-      "Get-ADUser -Server amer.dell.com -Identity annie_tran -Properties *"
+      "Get-ADUser -Server amer.server.com -Identity annie_tran -Properties *"
     ],
     "example": "",
     "output": "",
@@ -8935,12 +8949,12 @@
     ],
     "example": "",
     "output": [
-      "ComputerObjectDN           : CN=AUSDC16AMER39,OU=Domain Controllers,DC=amer,DC=dell,DC=com",
-      "DefaultPartition           : DC=amer,DC=dell,DC=com",
-      "Domain                     : amer.dell.com",
+      "ComputerObjectDN           : CN=AUSDC16AMER39,OU=Domain Controllers,DC=amer,DC=server,DC=com",
+      "DefaultPartition           : DC=amer,DC=server,DC=com",
+      "Domain                     : amer.server.com",
       "Enabled                    : True",
-      "Forest                     : dell.com",
-      "HostName                   : AUSDC16AMER39.amer.dell.com",
+      "Forest                     : server.com",
+      "HostName                   : AUSDC16AMER39.amer.server.com",
       "InvocationId               : a04c78dc-8532-48c9-ab0b-2a0dc5403070",
       "IPv4Address                : 10.58.68.115",
       "IPv6Address                :",
@@ -8955,9 +8969,9 @@
       "OperatingSystemServicePack :",
       "OperatingSystemVersion     : 10.0 (14393)",
       "OperationMasterRoles       : {PDCEmulator, RIDMaster, InfrastructureMaster}",
-      "Partitions                 : {DC=amer,DC=dell,DC=com, CN=Schema,CN=Configuration,DC=dell,DC=com,",
-      "                             CN=Configuration,DC=dell,DC=com, DC=emea,DC=dell,DC=com...}",
-      "ServerObjectDN             : CN=AUSDC16AMER39,CN=Servers,CN=AMERAustin,CN=Sites,CN=Configuration,DC=dell,DC=com",
+      "Partitions                 : {DC=amer,DC=server,DC=com, CN=Schema,CN=Configuration,DC=server,DC=com,",
+      "                             CN=Configuration,DC=server,DC=com, DC=emea,DC=server,DC=com...}",
+      "ServerObjectDN             : CN=AUSDC16AMER39,CN=Servers,CN=AMERAustin,CN=Sites,CN=Configuration,DC=server,DC=com",
       "ServerObjectGuid           : f5abce4b-53f6-4474-b660-876ad0f7d322",
       "Site                       : AMERAustin",
       "SslPort                    : 636"
@@ -9694,25 +9708,25 @@
     "created": "2021-09-29T16:44:53Z",
     "modified": "2022-03-03T16:34:26Z",
     "code": [
-      "Get-ADUser -Filter 'CN -like \"svc_*dbaas*\"'  -Properties * | Where-Object {$_.dellOwnerId -eq \"314810\"} | Sort-Object -Property PasswordLastSet | Format-Table Name,PasswordLastSet,Description,Modified,LastLogonDate,@{N='MemberOf';E={$_.MemberOf[0]}} -AutoSize -Wrap"
+      "Get-ADUser -Filter 'CN -like \"svc_*dbaas*\"'  -Properties * | Where-Object {$_.serverOwnerId -eq \"314810\"} | Sort-Object -Property PasswordLastSet | Format-Table Name,PasswordLastSet,Description,Modified,LastLogonDate,@{N='MemberOf';E={$_.MemberOf[0]}} -AutoSize -Wrap"
     ],
     "example": "",
     "output": [
       "",
       "Name               PasswordLastSet       Description         Modified              LastLogonDate         MemberOf",
       "----               ---------------       -----------         --------              -------------         --------",
-      "svc_npdbaasvra     11/30/2020 8:33:07 AM Owner :Thomas_Barta 5/17/2021 12:33:30 PM 1/3/2021 6:27:47 AM   CN=VRA_users,OU=Groups,DC=amer,DC=dell,DC=com",
-      "svc_prddbaasvra    11/30/2020 1:37:21 PM Owner :Thomas_Barta 9/15/2021 2:10:55 AM  9/15/2021 1:59:43 AM  CN=VRA_users,OU=Groups,DC=amer,DC=dell,DC=com",
-      "svc_npdbaasmt      11/30/2020 1:37:46 PM Owner :Thomas_Barta 9/21/2021 8:55:30 AM  9/21/2021 8:43:05 AM  CN=AmerUnixUsers,OU=Groups,OU=Users,OU=Austin,DC=amer,DC=dell,DC=com",
-      "svc_prddbaasmt     11/30/2020 1:38:22 PM Owner :Thomas_Barta 9/28/2021 11:41:35 PM 9/28/2021 11:30:52 PM CN=AmerUnixUsers,OU=Groups,OU=Users,OU=Austin,DC=amer,DC=dell,DC=com",
-      "svc_prddbaassqlos  12/9/2020 11:32:38 AM Owner :Thomas_Barta 9/23/2021 1:11:02 AM  9/23/2021 1:00:32 AM  CN=unv_prd_sql_dbaas,OU=PrivilegedGroups,OU=AdmAccounts,DC=amer,DC=dell,DC=com",
-      "svc_prddbaaspgos   12/9/2020 11:32:38 AM Owner :Thomas_Barta 9/23/2021 7:03:50 PM  9/23/2021 7:03:35 PM  CN=unv_prd_postgres_dbaas,OU=PrivilegedGroups,OU=AdmAccounts,DC=amer,DC=dell,DC=com",
-      "svc_prddbaasmongos 12/9/2020 11:33:04 AM Owner :Thomas_Barta 9/26/2021 7:26:09 PM  9/26/2021 7:10:44 PM  CN=unv_prd_mongo_dbaas,OU=PrivilegedGroups,OU=AdmAccounts,DC=amer,DC=dell,DC=com",
-      "svc_prddbaasoraos  12/9/2020 11:33:06 AM Owner :Thomas_Barta 9/26/2021 7:16:42 PM  9/26/2021 7:16:26 PM  CN=unv_prd_oracle_dbaas,OU=PrivilegedGroups,OU=AdmAccounts,DC=amer,DC=dell,DC=com",
-      "svc_npdbaasoraos   9/25/2021 11:24:59 PM Owner :Thomas_Barta 9/25/2021 11:45:51 PM 9/24/2021 5:32:16 PM  CN=unv_np_oracle_dbaas,OU=Groups,DC=amer,DC=dell,DC=com",
-      "svc_npdbaasmongos  9/25/2021 11:32:30 PM Owner :Thomas_Barta 9/28/2021 9:10:48 AM  9/28/2021 9:06:59 AM  CN=unv_np_mongo_dbaas,OU=Groups,DC=amer,DC=dell,DC=com",
-      "svc_npdbaaspgos    9/25/2021 11:37:27 PM Owner :Thomas_Barta 9/28/2021 11:00:29 PM 9/24/2021 10:18:48 AM CN=unv_np_postgres_dbaas,OU=Groups,DC=amer,DC=dell,DC=com",
-      "svc_npdbaassqlos   9/25/2021 11:39:02 PM Owner :Thomas_Barta 9/28/2021 7:14:56 PM  9/23/2021 2:50:13 PM  CN=unv_np_sql_dbaas,OU=Groups,DC=amer,DC=dell,DC=com",
+      "svc_npdbaasvra     11/30/2020 8:33:07 AM Owner :Thomas_Barta 5/17/2021 12:33:30 PM 1/3/2021 6:27:47 AM   CN=VRA_users,OU=Groups,DC=amer,DC=server,DC=com",
+      "svc_prddbaasvra    11/30/2020 1:37:21 PM Owner :Thomas_Barta 9/15/2021 2:10:55 AM  9/15/2021 1:59:43 AM  CN=VRA_users,OU=Groups,DC=amer,DC=server,DC=com",
+      "svc_npdbaasmt      11/30/2020 1:37:46 PM Owner :Thomas_Barta 9/21/2021 8:55:30 AM  9/21/2021 8:43:05 AM  CN=AmerUnixUsers,OU=Groups,OU=Users,OU=Austin,DC=amer,DC=server,DC=com",
+      "svc_prddbaasmt     11/30/2020 1:38:22 PM Owner :Thomas_Barta 9/28/2021 11:41:35 PM 9/28/2021 11:30:52 PM CN=AmerUnixUsers,OU=Groups,OU=Users,OU=Austin,DC=amer,DC=server,DC=com",
+      "svc_prddbaassqlos  12/9/2020 11:32:38 AM Owner :Thomas_Barta 9/23/2021 1:11:02 AM  9/23/2021 1:00:32 AM  CN=unv_prd_sql_dbaas,OU=PrivilegedGroups,OU=AdmAccounts,DC=amer,DC=server,DC=com",
+      "svc_prddbaaspgos   12/9/2020 11:32:38 AM Owner :Thomas_Barta 9/23/2021 7:03:50 PM  9/23/2021 7:03:35 PM  CN=unv_prd_postgres_dbaas,OU=PrivilegedGroups,OU=AdmAccounts,DC=amer,DC=server,DC=com",
+      "svc_prddbaasmongos 12/9/2020 11:33:04 AM Owner :Thomas_Barta 9/26/2021 7:26:09 PM  9/26/2021 7:10:44 PM  CN=unv_prd_mongo_dbaas,OU=PrivilegedGroups,OU=AdmAccounts,DC=amer,DC=server,DC=com",
+      "svc_prddbaasoraos  12/9/2020 11:33:06 AM Owner :Thomas_Barta 9/26/2021 7:16:42 PM  9/26/2021 7:16:26 PM  CN=unv_prd_oracle_dbaas,OU=PrivilegedGroups,OU=AdmAccounts,DC=amer,DC=server,DC=com",
+      "svc_npdbaasoraos   9/25/2021 11:24:59 PM Owner :Thomas_Barta 9/25/2021 11:45:51 PM 9/24/2021 5:32:16 PM  CN=unv_np_oracle_dbaas,OU=Groups,DC=amer,DC=server,DC=com",
+      "svc_npdbaasmongos  9/25/2021 11:32:30 PM Owner :Thomas_Barta 9/28/2021 9:10:48 AM  9/28/2021 9:06:59 AM  CN=unv_np_mongo_dbaas,OU=Groups,DC=amer,DC=server,DC=com",
+      "svc_npdbaaspgos    9/25/2021 11:37:27 PM Owner :Thomas_Barta 9/28/2021 11:00:29 PM 9/24/2021 10:18:48 AM CN=unv_np_postgres_dbaas,OU=Groups,DC=amer,DC=server,DC=com",
+      "svc_npdbaassqlos   9/25/2021 11:39:02 PM Owner :Thomas_Barta 9/28/2021 7:14:56 PM  9/23/2021 2:50:13 PM  CN=unv_np_sql_dbaas,OU=Groups,DC=amer,DC=server,DC=com",
       ""
     ],
     "description": "",
@@ -9725,7 +9739,7 @@
     "created": "2021-09-29T15:54:29Z",
     "modified": "2022-03-03T16:34:34Z",
     "code": [
-      "Get-ADUser -Filter 'CN -like \"svc_*dbaas*\"'  -Properties * | Where-Object {$_.dellOwnerId -eq \"314810\"} | Format-Table Name,PasswordLastSet,Description,Modified -AutoSize -Wrap"
+      "Get-ADUser -Filter 'CN -like \"svc_*dbaas*\"'  -Properties * | Where-Object {$_.serverOwnerId -eq \"314810\"} | Format-Table Name,PasswordLastSet,Description,Modified -AutoSize -Wrap"
     ],
     "example": "",
     "output": [
@@ -10203,23 +10217,23 @@
     "created": "2021-09-10T02:44:20Z",
     "modified": "2022-01-19T15:47:48Z",
     "code": [
-      "awk -F= '/^BUILDTYPE=/ {print tolower($2)}' /etc/dell.cfg"
+      "awk -F= '/^BUILDTYPE=/ {print tolower($2)}' /etc/server.cfg"
     ],
     "example": [
-      "$ awk -F= '/^BUILDTYPE=/ {print tolower($2)}' /etc/dell.cfg",
-      "dellit",
+      "$ awk -F= '/^BUILDTYPE=/ {print tolower($2)}' /etc/server.cfg",
+      "serverit",
       "",
-      "$ cat /etc/dell.cfg",
+      "$ cat /etc/server.cfg",
       "ONCALLSHORT=\"svc_prdvmaas\"",
       "BUSINESSSHORT=\"svc_prdvmaas\"",
       "XINSTALLED=0",
-      "STAFF_EMAIL=svc_prdvmaas@dell.com",
+      "STAFF_EMAIL=svc_prdvmaas@server.com",
       "PRODUCTION=PRD",
       "ENVIRONMENT=PRD",
       "SUPPORTGROUP=AMER",
-      "SMTPGATEWAY=smtp-out.us.dell.com",
-      "HOSTNAME=awxplprod02.us.dell.com",
-      "BUILDTYPE=DELLIT",
+      "SMTPGATEWAY=smtp-out.us.server.com",
+      "HOSTNAME=awxplprod02.us.server.com",
+      "BUILDTYPE=serverIT",
       "APPLICATIONID=1003150"
     ],
     "output": "",
@@ -10565,7 +10579,7 @@
     "created": "2021-07-31T04:50:38Z",
     "modified": "2022-01-19T00:17:26Z",
     "code": [
-      "openssl req -new -newkey rsa:4096 -nodes -keyout \"private.key\" -out \"$(hostname -f).csr\" -subj \"/C=US/ST=Texas/L=Round Rock/O=Dell/OU=Dell Digital/CN=$(hostname -f)\"",
+      "openssl req -new -newkey rsa:4096 -nodes -keyout \"private.key\" -out \"$(hostname -f).csr\" -subj \"/C=US/ST=Texas/L=Round Rock/O=server/OU=Dell Digital/CN=$(hostname -f)\"",
       "",
       "openssl x509 -signkey private.key -in $(hostname -f).csr -req -days 365 -out $(hostname).crt"
     ],
@@ -10841,7 +10855,7 @@
     "created": "2021-07-14T16:54:27Z",
     "modified": "2021-12-30T19:44:10Z",
     "code": [
-      "rsync -avr -o -g filename.txt user@hostname.us.dell.com:/home/annie_tran"
+      "rsync -avr -o -g filename.txt user@hostname.us.server.com:/home/annie_tran"
     ],
     "example": "",
     "output": "",
@@ -10855,7 +10869,7 @@
     "created": "2021-07-13T20:01:54Z",
     "modified": "2021-12-30T19:44:10Z",
     "code": [
-      "openssl req -new -newkey rsa:4096 -nodes -keyout \"private.key\" -out \"$(hostname -f).csr\" -subj \"/C=US/ST=Texas/L=Round Rock/O=Dell/OU=Dell Digital/CN=$(hostname -f)\""
+      "openssl req -new -newkey rsa:4096 -nodes -keyout \"private.key\" -out \"$(hostname -f).csr\" -subj \"/C=US/ST=Texas/L=Round Rock/O=server/OU=Dell Digital/CN=$(hostname -f)\""
     ],
     "example": "",
     "output": "",
@@ -11113,7 +11127,7 @@
     "example": "",
     "output": [
       "Computer name                        \\\\W106697SN2",
-      "Full Computer name                   W106697SN2.aus.amer.dell.com",
+      "Full Computer name                   W106697SN2.aus.amer.server.com",
       "User name                            Annie_Tran",
       "",
       "Workstation active on",
@@ -11124,7 +11138,7 @@
       "Software version                     Windows 10 Enterprise",
       "",
       "Workstation domain                   AMERICAS",
-      "Workstation Domain DNS Name          amer.dell.com",
+      "Workstation Domain DNS Name          amer.server.com",
       "Logon domain                         AMERICAS",
       "",
       "COM Open Timeout (sec)               0",
@@ -11658,7 +11672,7 @@
       "docker save $(docker images -q) -o \"$dockerimagedir/$(hostname -a).tar\"",
       "docker images | sed '1d' | awk '{print $1 \" \" $2 \" \" $3}' >  \"$dockerimagedir/docker-images.list\"",
       "",
-      "rsync -avr  -o -g $dockerimagedir servicedbaas@awxpluat02.us.dell.com:/home/servicedbaas",
+      "rsync -avr  -o -g $dockerimagedir servicedbaas@awxpluat02.us.server.com:/home/servicedbaas",
       "",
       "docker load -i /path/to/save/mydockersimages.tar",
       "",
@@ -11750,9 +11764,9 @@
     "created": "2021-04-20T20:56:26Z",
     "modified": "2021-12-30T19:44:09Z",
     "code": [
-      "rsync -avr --exclude={'dbaasv2-awx','*.rpm'} -o -g /home/servicedbaas servicedbaas@awxplprod02.us.dell.com:/home/servicedbaas/01",
+      "rsync -avr --exclude={'dbaasv2-awx','*.rpm'} -o -g /home/servicedbaas servicedbaas@awxplprod02.us.server.com:/home/servicedbaas/01",
       "",
-      "rsync -avr --exclude={'dbaasv2-awx','ansible'} -o -g dbaas annie_tran@auspslpltinf1.us.dell.com:/home/annie_tran",
+      "rsync -avr --exclude={'dbaasv2-awx','ansible'} -o -g dbaas annie_tran@auspslpltinf1.us.server.com:/home/annie_tran",
       "",
       ""
     ],
@@ -11837,12 +11851,12 @@
       "wget <url> -O file_name.json"
     ],
     "example": [
-      "wget https://dell.service-now.com/api/now/ui/date_time/legacy -O snow_date.json"
+      "wget https://server.service-now.com/api/now/ui/date_time/legacy -O snow_date.json"
     ],
     "output": [
-      "--2021-04-02 10:00:58--  https://dell.service-now.com/api/now/ui/date_time/legacy",
-      "Resolving dell.service-now.com (dell.service-now.com)... 149.96.224.242",
-      "Connecting to dell.service-now.com (dell.service-now.com)|149.96.224.242|:443... connected.",
+      "--2021-04-02 10:00:58--  https://server.service-now.com/api/now/ui/date_time/legacy",
+      "Resolving server.service-now.com (server.service-now.com)... 149.96.224.242",
+      "Connecting to server.service-now.com (server.service-now.com)|149.96.224.242|:443... connected.",
       "HTTP request sent, awaiting response... 200 OK",
       "Length: unspecified [application/json]",
       "Saving to: ‘snow_date.json’",
@@ -12080,11 +12094,11 @@
       "wget --no-parent -r https://url.com"
     ],
     "example": [
-      "wget --no-parent -r http://images-http.us.dell.com/images/repository/apps/git/git29_for_OL7.x/"
+      "wget --no-parent -r http://images-http.us.server.com/images/repository/apps/git/git29_for_OL7.x/"
     ],
     "output": [
       "recursively creates the directory and files to:",
-      "./images-http.us.dell.com/images/repository/apps/git/git29_for_OL7.x"
+      "./images-http.us.server.com/images/repository/apps/git/git29_for_OL7.x"
     ],
     "description": [
       "recursively download a page ",
@@ -12122,23 +12136,23 @@
     "created": "2021-03-26T17:57:58Z",
     "modified": "2021-12-30T19:44:08Z",
     "code": [
-      "mail -s \"$(echo -e \"SAR files\\nContent-Type: text/html\")\" annie_tran@dell.com <allsar.txt",
+      "mail -s \"$(echo -e \"SAR files\\nContent-Type: text/html\")\" annie_tran@server.com <allsar.txt",
       ""
     ],
     "example": [
-      "mail -s \"Test\" -a vatp2s_hc_WED_vm_sizing.html annie_tran@dell.com </dev/null",
+      "mail -s \"Test\" -a vatp2s_hc_WED_vm_sizing.html annie_tran@server.com </dev/null",
       "",
-      "mail -s \"`hostname`\" -a `ls -lrt *.html |tail -1|head -n 1 |awk '{printf $9}'` annie_tran@dell.com </dev/null",
+      "mail -s \"`hostname`\" -a `ls -lrt *.html |tail -1|head -n 1 |awk '{printf $9}'` annie_tran@server.com </dev/null",
       "",
-      "mail -s \"`hostname`\" -a `ls -lrt *.txt |tail -1|head -n 1 |awk '{printf $9}'` annie_tran@dell.com </dev/null",
+      "mail -s \"`hostname`\" -a `ls -lrt *.txt |tail -1|head -n 1 |awk '{printf $9}'` annie_tran@server.com </dev/null",
       "",
-      "mail -s \"`hostname`\" -a <file> annie_tran@dell.com </dev/null",
+      "mail -s \"`hostname`\" -a <file> annie_tran@server.com </dev/null",
       "",
-      "mail -s \"$(echo -e \"This is Subject\\nContent-Type: text/html\")\" annie_tran@dell.com <omegap_hc_TUE_sum.html",
+      "mail -s \"$(echo -e \"This is Subject\\nContent-Type: text/html\")\" annie_tran@server.com <omegap_hc_TUE_sum.html",
       "",
-      "mail -s \"$(echo -e \"SAR files\\nContent-Type: text/html\")\" annie_tran@dell.com <allsar.txt",
+      "mail -s \"$(echo -e \"SAR files\\nContent-Type: text/html\")\" annie_tran@server.com <allsar.txt",
       "",
-      "mail -s \"`hostname`\" -a /home/annie_tran/email-test.txt annie_tran@dell.com </dev/null"
+      "mail -s \"`hostname`\" -a /home/annie_tran/email-test.txt annie_tran@server.com </dev/null"
     ],
     "output": "",
     "description": "",
@@ -12380,7 +12394,7 @@
     "created": "2021-02-24T09:16:13Z",
     "modified": "2021-12-30T19:44:08Z",
     "code": [
-      "cf login -a https://api.sr2.pcf.dell.com"
+      "cf login -a https://api.sr2.pcf.server.com"
     ],
     "example": "",
     "output": "",
@@ -12388,10 +12402,10 @@
       "Sustaining team has the following PCF Environments (change api to apps if you want to access the panel)",
       "",
       "PROD",
-      "PC1: https://api.sausmpc01.pcf.dell.com",
-      "S3B: https://api.sausmsc01.pcf.dell.com",
+      "PC1: https://api.sausmpc01.pcf.server.com",
+      "S3B: https://api.sausmsc01.pcf.server.com",
       "NON-PROD",
-      "http://api.sr2.pcf.dell.com",
+      "http://api.sr2.pcf.server.com",
       "PCF Org"
     ],
     "language": "bash",
@@ -12410,7 +12424,7 @@
       "rpm -ivh $RPMURL"
     ],
     "example": [
-      "rpm -ivh http://images-http.us.dell.com/images/repository/linux/apps/cloudfoundry/cf-cli-installer_6.51.0_x86-64.rpm"
+      "rpm -ivh http://images-http.us.server.com/images/repository/linux/apps/cloudfoundry/cf-cli-installer_6.51.0_x86-64.rpm"
     ],
     "output": "",
     "description": "",
@@ -12537,8 +12551,8 @@
       "host -w hostname"
     ],
     "example": [
-      "$ host -w awxnlsusandbox.amer.dell.com",
-      "AWXNLSUSANDBOX.amer.dell.com has address 10.179.177.76"
+      "$ host -w awxnlsusandbox.amer.server.com",
+      "AWXNLSUSANDBOX.amer.server.com has address 10.179.177.76"
     ],
     "output": "",
     "description": "",

@@ -7,14 +7,14 @@
     "GITLAB_PROJECT_TOKEN=glpat-9eAicfQ9HoLp2ilItrVZ",
     "git clone https://gitlab-ci-token:$GITLAB_PROJECT_TOKEN@gitlab.example.com/path/to/project.git",
     "",
-    "git clone -c http.sslVerify=false  https://gitlab-ci-token:$GITLAB_PROJECT_TOKEN@gitlab.dell.com/infrastructure/database/devops/tower/inventory.git"
+    "git clone -c http.sslVerify=false  https://gitlab-ci-token:$GITLAB_PROJECT_TOKEN@gitlab.server.com/infrastructure/database/devops/tower/inventory.git"
   ],
   "example": [
-    "$ git clone https://project_136765_bot:glpat-H5rsFBozrntDhZoLWuC6@gitlab.dell.com/infrastructure/database/devops/tower/inventory.git",
+    "$ git clone https://project_136765_bot:glpat-H5rsFBozrntDhZoLWuC6@gitlab.server.com/infrastructure/database/devops/tower/inventory.git",
     "Cloning into 'inventory'...",
-    "fatal: unable to access 'https://gitlab.dell.com/infrastructure/database/devops/tower/inventory.git/': SSL certificate problem: self signed certificate in certificate chain",
+    "fatal: unable to access 'https://gitlab.server.com/infrastructure/database/devops/tower/inventory.git/': SSL certificate problem: self signed certificate in certificate chain",
     "",
-    "$ git clone -c http.sslVerify=false  https://project_136765_bot:glpat-H5rsFBozrntDhZoLWuC6@gitlab.dell.com/infrastructure/database/devops/tower/inventory.git",
+    "$ git clone -c http.sslVerify=false  https://project_136765_bot:glpat-H5rsFBozrntDhZoLWuC6@gitlab.server.com/infrastructure/database/devops/tower/inventory.git",
     "Cloning into 'inventory'...",
     "remote: Enumerating objects: 15, done.",
     "remote: Counting objects: 100% (15/15), done.",

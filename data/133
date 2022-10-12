@@ -4,7 +4,7 @@
   "created": "2021-09-29T15:54:29Z",
   "modified": "2022-03-03T16:34:34Z",
   "code": [
-    "Get-ADUser -Filter 'CN -like \"svc_*dbaas*\"'  -Properties * | Where-Object {$_.dellOwnerId -eq \"314810\"} | Format-Table Name,PasswordLastSet,Description,Modified -AutoSize -Wrap"
+    "Get-ADUser -Filter 'CN -like \"svc_*dbaas*\"'  -Properties * | Where-Object {$_.serverOwnerId -eq \"314810\"} | Format-Table Name,PasswordLastSet,Description,Modified -AutoSize -Wrap"
   ],
   "example": "",
   "output": [

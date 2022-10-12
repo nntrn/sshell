@@ -7,8 +7,8 @@
     "host -w hostname"
   ],
   "example": [
-    "$ host -w awxnlsusandbox.amer.dell.com",
-    "AWXNLSUSANDBOX.amer.dell.com has address 10.179.177.76"
+    "$ host -w awxnlsusandbox.amer.server.com",
+    "AWXNLSUSANDBOX.amer.server.com has address 10.179.177.76"
   ],
   "output": "",
   "description": "",

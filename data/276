@@ -7,7 +7,7 @@
     "$Self = Get-ADUser -Identity $Env:Username -Properties *",
     "$EID = $Self.EmployeeId",
     "",
-    "Get-ADUser  -Filter \"dellOwnerID -like $EID\"  -Properties * | sort-object -property PasswordLastSet | Format-Table Name,PasswordLastSet -AutoSize -Wrap"
+    "Get-ADUser  -Filter \"serverOwnerID -like $EID\"  -Properties * | sort-object -property PasswordLastSet | Format-Table Name,PasswordLastSet -AutoSize -Wrap"
   ],
   "example": "",
   "output": "",

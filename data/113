@@ -4,23 +4,23 @@
   "created": "2021-09-10T02:44:20Z",
   "modified": "2022-01-19T15:47:48Z",
   "code": [
-    "awk -F= '/^BUILDTYPE=/ {print tolower($2)}' /etc/dell.cfg"
+    "awk -F= '/^BUILDTYPE=/ {print tolower($2)}' /etc/server.cfg"
   ],
   "example": [
-    "$ awk -F= '/^BUILDTYPE=/ {print tolower($2)}' /etc/dell.cfg",
-    "dellit",
+    "$ awk -F= '/^BUILDTYPE=/ {print tolower($2)}' /etc/server.cfg",
+    "serverit",
     "",
-    "$ cat /etc/dell.cfg",
+    "$ cat /etc/server.cfg",
     "ONCALLSHORT=\"svc_prdvmaas\"",
     "BUSINESSSHORT=\"svc_prdvmaas\"",
     "XINSTALLED=0",
-    "STAFF_EMAIL=svc_prdvmaas@dell.com",
+    "STAFF_EMAIL=svc_prdvmaas@server.com",
     "PRODUCTION=PRD",
     "ENVIRONMENT=PRD",
     "SUPPORTGROUP=AMER",
-    "SMTPGATEWAY=smtp-out.us.dell.com",
-    "HOSTNAME=awxplprod02.us.dell.com",
-    "BUILDTYPE=DELLIT",
+    "SMTPGATEWAY=smtp-out.us.server.com",
+    "HOSTNAME=awxplprod02.us.server.com",
+    "BUILDTYPE=serverIT",
     "APPLICATIONID=1003150"
   ],
   "output": "",

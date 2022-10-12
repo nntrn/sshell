@@ -4,7 +4,7 @@
   "created": "2022-01-03T16:40:44Z",
   "modified": "2022-03-17T00:27:45Z",
   "code": [
-    "sshpass -f .secrets/sshpass/svc_npdbaasmongos ssh -o StrictHostKeyChecking=no svc_npdbaasmongos@cfinlmdrprf17.us.dell.com"
+    "sshpass -f .secrets/sshpass/svc_npdbaasmongos ssh -o StrictHostKeyChecking=no svc_npdbaasmongos@cfinlmdrprf17.us.server.com"
   ],
   "example": "",
   "output": "",

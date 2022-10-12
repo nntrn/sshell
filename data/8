@@ -8,7 +8,7 @@
     "rpm -ivh $RPMURL"
   ],
   "example": [
-    "rpm -ivh http://images-http.us.dell.com/images/repository/linux/apps/cloudfoundry/cf-cli-installer_6.51.0_x86-64.rpm"
+    "rpm -ivh http://images-http.us.server.com/images/repository/linux/apps/cloudfoundry/cf-cli-installer_6.51.0_x86-64.rpm"
   ],
   "output": "",
   "description": "",

@@ -4,7 +4,7 @@
   "created": "2021-12-06T22:06:14Z",
   "modified": "2022-03-17T00:28:02Z",
   "code": [
-    "Get-ADUser -Server amer.dell.com -Identity annie_tran -Properties *"
+    "Get-ADUser -Server amer.server.com -Identity annie_tran -Properties *"
   ],
   "example": "",
   "output": "",

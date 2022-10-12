@@ -10,7 +10,7 @@
     "docker save $(docker images -q) -o \"$dockerimagedir/$(hostname -a).tar\"",
     "docker images | sed '1d' | awk '{print $1 \" \" $2 \" \" $3}' >  \"$dockerimagedir/docker-images.list\"",
     "",
-    "rsync -avr  -o -g $dockerimagedir servicedbaas@awxpluat02.us.dell.com:/home/servicedbaas",
+    "rsync -avr  -o -g $dockerimagedir servicedbaas@awxpluat02.us.server.com:/home/servicedbaas",
     "",
     "docker load -i /path/to/save/mydockersimages.tar",
     "",

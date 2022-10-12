@@ -4,9 +4,9 @@
   "created": "2021-04-20T20:56:26Z",
   "modified": "2021-12-30T19:44:09Z",
   "code": [
-    "rsync -avr --exclude={'dbaasv2-awx','*.rpm'} -o -g /home/servicedbaas servicedbaas@awxplprod02.us.dell.com:/home/servicedbaas/01",
+    "rsync -avr --exclude={'dbaasv2-awx','*.rpm'} -o -g /home/servicedbaas servicedbaas@awxplprod02.us.server.com:/home/servicedbaas/01",
     "",
-    "rsync -avr --exclude={'dbaasv2-awx','ansible'} -o -g dbaas annie_tran@auspslpltinf1.us.dell.com:/home/annie_tran",
+    "rsync -avr --exclude={'dbaasv2-awx','ansible'} -o -g dbaas annie_tran@auspslpltinf1.us.server.com:/home/annie_tran",
     "",
     ""
   ],

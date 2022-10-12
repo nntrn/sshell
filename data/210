@@ -4,7 +4,7 @@
   "created": "2022-02-15T19:24:34Z",
   "modified": "2022-09-30T00:58:21Z",
   "code": [
-    "Get-ADUser -Filter 'Enabled -eq \"False\"' -Properties * |  Select CN,Description,dellEmployeeStatus, Country, Department,dellEmployeeJobDescription | Export-CSV enabled.csv"
+    "Get-ADUser -Filter 'Enabled -eq \"False\"' -Properties * |  Select CN,Description,serverEmployeeStatus, Country, Department,serverEmployeeJobDescription | Export-CSV enabled.csv"
   ],
   "example": [
     "$ cat enabled.csv | grep 2022 | column -s\\\" -t| sort -k 3"

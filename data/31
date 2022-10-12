@@ -7,12 +7,12 @@
     "wget <url> -O file_name.json"
   ],
   "example": [
-    "wget https://dell.service-now.com/api/now/ui/date_time/legacy -O snow_date.json"
+    "wget https://server.service-now.com/api/now/ui/date_time/legacy -O snow_date.json"
   ],
   "output": [
-    "--2021-04-02 10:00:58--  https://dell.service-now.com/api/now/ui/date_time/legacy",
-    "Resolving dell.service-now.com (dell.service-now.com)... 149.96.224.242",
-    "Connecting to dell.service-now.com (dell.service-now.com)|149.96.224.242|:443... connected.",
+    "--2021-04-02 10:00:58--  https://server.service-now.com/api/now/ui/date_time/legacy",
+    "Resolving server.service-now.com (server.service-now.com)... 149.96.224.242",
+    "Connecting to server.service-now.com (server.service-now.com)|149.96.224.242|:443... connected.",
     "HTTP request sent, awaiting response... 200 OK",
     "Length: unspecified [application/json]",
     "Saving to: ‘snow_date.json’",

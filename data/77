@@ -4,7 +4,7 @@
   "created": "2021-07-14T16:54:27Z",
   "modified": "2021-12-30T19:44:10Z",
   "code": [
-    "rsync -avr -o -g filename.txt user@hostname.us.dell.com:/home/annie_tran"
+    "rsync -avr -o -g filename.txt user@hostname.us.server.com:/home/annie_tran"
   ],
   "example": "",
   "output": "",
