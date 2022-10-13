@@ -1,0 +1,16 @@
+{
+  "id": 214,
+  "title": "find files created on this date",
+  "created": "2022-02-16T21:22:22Z",
+  "modified": "2022-03-17T00:33:36Z",
+  "code": [
+    "find /tmp -maxdepth 1 -type f -newermt 2022-02-02 ! -newermt 2022-02-04 -print -exec rm -rf {} \\;"
+  ],
+  "example": "",
+  "output": "",
+  "description": "",
+  "language": "bash",
+  "tags": [
+    "fs"
+  ]
+}

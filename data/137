@@ -1,0 +1,20 @@
+{
+  "id": 137,
+  "title": "get ip address",
+  "created": "2021-10-02T04:34:57Z",
+  "modified": "2022-03-03T21:10:49Z",
+  "code": [
+    "/usr/sbin/ip a | grep inet"
+  ],
+  "example": [
+    "$ ip a | grep inet",
+    ""
+  ],
+  "output": "",
+  "description": "",
+  "language": "bash",
+  "tags": [
+    "network"
+  ],
+  "url": "https://github.com/kuritaka/ansible-examples/blob/master/playbooks/shell_test.yml"
+}

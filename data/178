@@ -1,0 +1,16 @@
+{
+  "id": 178,
+  "title": "sshpass - read ssh password from file",
+  "created": "2022-01-03T16:40:44Z",
+  "modified": "2022-03-17T00:27:45Z",
+  "code": [
+    "sshpass -f .secrets/sshpass/svc_npdbmongos ssh -o StrictHostKeyChecking=no svc_npdbmongos@cfinlmdrprf17.us.example.com"
+  ],
+  "example": "",
+  "output": "",
+  "description": "",
+  "language": "bash",
+  "tags": [
+    "ssh"
+  ]
+}

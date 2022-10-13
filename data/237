@@ -1,0 +1,19 @@
+{
+  "id": 237,
+  "title": "print statistics of a process",
+  "created": "2022-03-04T00:39:31Z",
+  "modified": "2022-03-04T00:39:31Z",
+  "code": [
+    "prtstat $PID"
+  ],
+  "example": [
+    "$ prtstat 3216"
+  ],
+  "output": "",
+  "description": [
+    "prtstat  prints  the statistics of the specified process.  This information comes from the /proc/PID/stat file.",
+    ""
+  ],
+  "language": "bash",
+  "tags": []
+}

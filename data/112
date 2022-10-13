@@ -1,0 +1,22 @@
+{
+  "id": 112,
+  "title": "view process id",
+  "created": "2021-09-10T00:27:36Z",
+  "modified": "2022-01-19T15:47:55Z",
+  "code": [
+    "bash -c 'echo $$ ; ls -l /proc/self ; echo foo'"
+  ],
+  "example": [
+    "$ bash -c 'echo $$ ; ls -l /proc/self ; echo foo ; echo $$'",
+    "68800",
+    "lrwxrwxrwx 1 root root 0 Jun 28 05:35 /proc/self -> 68801",
+    "foo",
+    "68800",
+    ""
+  ],
+  "output": "",
+  "description": "",
+  "language": "bash",
+  "tags": [],
+  "url": "https://unix.stackexchange.com/a/296852"
+}

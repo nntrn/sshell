@@ -1,0 +1,17 @@
+{
+  "id": 81,
+  "title": "encrypt/decrypt gpg",
+  "created": "2021-07-21T14:59:17Z",
+  "modified": "2021-12-30T19:44:10Z",
+  "code": [
+    "encrypt () { gpg -ac --no-options \"$1\"; }",
+    "decrypt () { gpg --no-options \"$1\"; }"
+  ],
+  "example": "",
+  "output": "",
+  "description": "",
+  "language": "bash",
+  "tags": [
+    "admin"
+  ]
+}

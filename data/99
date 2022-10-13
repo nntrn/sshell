@@ -1,0 +1,17 @@
+{
+  "id": 99,
+  "title": "generating crypto quote",
+  "created": "2021-08-18T00:46:46Z",
+  "modified": "2022-02-03T21:30:35Z",
+  "code": [
+    "$ special='! @ # % ^ & * ( ) _ + = [ ] { } < > . / ?'",
+    "$ abc=$(echo {a..z} {A..Z} {0..9} \"$special\" | tr -d ' ')",
+    "$ key=$(echo \"$abc\" | sed 's,\\(.\\),\\1\\n,g' | shuf | tr -d '\\n')",
+    ""
+  ],
+  "example": "",
+  "output": "",
+  "description": "",
+  "language": "bash",
+  "tags": []
+}

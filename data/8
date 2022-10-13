@@ -1,0 +1,20 @@
+{
+  "id": 8,
+  "title": "rpm",
+  "created": "2021-02-24T07:40:51Z",
+  "modified": "2021-12-30T19:44:08Z",
+  "code": [
+    "RPMURL='https://...'",
+    "rpm -ivh $RPMURL"
+  ],
+  "example": [
+    "rpm -ivh http://images-http.us.example.com/images/repository/linux/apps/cloudfoundry/cf-cli-installer_6.51.0_x86-64.rpm"
+  ],
+  "output": "",
+  "description": "",
+  "language": "bash",
+  "tags": [
+    "pkg"
+  ],
+  "url": "http://images-http.us.example.com/images/repository/linux/apps/"
+}

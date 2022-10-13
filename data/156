@@ -1,0 +1,25 @@
+{
+  "id": 156,
+  "title": "docker history",
+  "created": "2021-11-04T22:58:17Z",
+  "modified": "2022-01-10T15:56:14Z",
+  "code": [
+    "dockerprettyhist() {",
+    "  local imageid=${1:-44187ed3a967}",
+    "  docker history --no-trunc $imageid |",
+    "    tac | tr -s ' ' | cut -d \" \" -f 5- |",
+    "    sed 's,^/bin/sh -c #(nop) ,,g' | sed 's,^/bin/sh -c,RUN,g' |",
+    "    sed 's, && ,\\n  & ,g' |",
+    "    sed 's,\\s*[0-9]*[\\.]*[0-9]*\\s*[kMG]*B\\s*$,\\n,g' |",
+    "    head -n -1",
+    "  echo \"\"",
+    "}"
+  ],
+  "example": "",
+  "output": "",
+  "description": "",
+  "language": "bash",
+  "tags": [
+    "docker"
+  ]
+}

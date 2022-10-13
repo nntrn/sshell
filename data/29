@@ -1,0 +1,15 @@
+{
+  "id": 29,
+  "title": "get list of most used commands",
+  "created": "2021-03-31T00:14:14Z",
+  "modified": "2021-12-30T19:44:09Z",
+  "code": [
+    "COLUMN=4",
+    "history | awk '{a[$COLUMN]++}END{for(i in a){print a[i] \" \" i}}' | sort -rn | head"
+  ],
+  "example": "",
+  "output": "",
+  "description": "",
+  "language": "bash",
+  "tags": []
+}

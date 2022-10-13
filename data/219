@@ -1,0 +1,19 @@
+{
+  "id": 219,
+  "title": "map view of pids owned by services",
+  "created": "2022-02-24T08:50:50Z",
+  "modified": "2022-03-17T00:24:31Z",
+  "code": [
+    "ps xawf -eo pid,user,cgroup,args"
+  ],
+  "example": "",
+  "output": "",
+  "description": [
+    "n systemd we place every process that is spawned in a control group named after its service. Control groups (or cgroups) at their most basic are simply groups of processes that can be arranged in a hierarchy and labelled individually. When processes spawn other processes these children are automatically made members of the parents cgroup. Leaving a cgroup is not possible for unprivileged processes. Thus, cgroups can be used as an effective way to label processes after the service they belong to and be sure that the service cannot escape from the label, regardless how often it forks or renames itself. Furthermore this can be used to safely kill a service and all processes it created, again with no chance of escaping."
+  ],
+  "language": "bash",
+  "tags": [
+    "system"
+  ],
+  "url": "http://0pointer.de/blog/projects/systemd-for-admins-2.html"
+}

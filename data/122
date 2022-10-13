@@ -1,0 +1,17 @@
+{
+  "id": 122,
+  "title": "repeat string N times",
+  "created": "2021-09-11T06:43:21Z",
+  "modified": "2022-03-03T21:10:29Z",
+  "code": [
+    "printf '=%.0s' {1..80}",
+    ""
+  ],
+  "example": "",
+  "output": "",
+  "description": "",
+  "language": "bash",
+  "tags": [
+    "text"
+  ]
+}

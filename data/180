@@ -1,0 +1,24 @@
+{
+  "id": 180,
+  "title": "List Network Facing Services",
+  "created": "2022-01-04T01:56:35Z",
+  "modified": "2022-03-04T18:49:21Z",
+  "code": [
+    "ss -atpu"
+  ],
+  "example": "",
+  "output": "",
+  "description": [
+    "TCP",
+    "See the Peer Address:Port column of the ss readout. The process sshd is listening on *:*, which translates into any incoming IPv4 address to any port, and over any network interface. The next line shows an established SSH connection from IP address 198.51.100.2 via ephemeral port 54820. The last line, :::* denotes the sshd process listening for any incoming SSH connections over IPv6 to any port, and again over any network interface.",
+    "",
+    "UDP",
+    "UDP sockets are stateless, meaning they are either open or closed and every process’s connection is independent of those which occurred before and after. This is in contrast to TCP connection states such as LISTEN, ESTABLISHED and CLOSE_WAIT. The ss output above shows no UDP connections.",
+    ""
+  ],
+  "language": "bash",
+  "tags": [
+    "network"
+  ],
+  "url": "https://www.linode.com/docs/guides/securing-your-server/"
+}

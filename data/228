@@ -1,0 +1,16 @@
+{
+  "id": 228,
+  "title": "get non default values for ansible config",
+  "created": "2022-03-03T16:14:00Z",
+  "modified": "2022-03-03T16:14:00Z",
+  "code": [
+    "ansible-config dump | grep -v '\\(default\\)' | sed 's,(.*cfg),,g'"
+  ],
+  "example": "",
+  "output": "",
+  "description": "",
+  "language": "bash",
+  "tags": [
+    "ansible"
+  ]
+}

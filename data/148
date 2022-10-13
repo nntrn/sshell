@@ -1,0 +1,16 @@
+{
+  "id": 148,
+  "title": "Print border",
+  "created": "2021-11-02T17:23:10Z",
+  "modified": "2022-01-07T18:17:11Z",
+  "code": [
+    "printf '%*.0s\\n' 10 \"\" | tr \" \" \"#\""
+  ],
+  "example": [
+    "REPEAT=10; printf '%*.0s\\n' $REPEAT\"\" | tr \" \" \"#\""
+  ],
+  "output": "",
+  "description": "",
+  "language": "bash",
+  "tags": []
+}

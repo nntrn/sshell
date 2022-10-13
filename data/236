@@ -1,0 +1,30 @@
+{
+  "id": 236,
+  "title": "mpstat - processors related statistics.",
+  "created": "2022-03-03T21:23:52Z",
+  "modified": "2022-03-17T00:24:02Z",
+  "code": [
+    "mpstat 2 5",
+    ""
+  ],
+  "example": "",
+  "output": "",
+  "description": [
+    "The mpstat command writes to standard output activities for each available processor, processor  0  being",
+    "the first one.  Global average activities among all processors are also reported.  The mpstat command can",
+    "be used both on SMP and UP machines, but in the latter, only global average activities will  be  printed.",
+    "If no activity has been selected, then the default report is the CPU utilization report.",
+    "",
+    "The  interval parameter specifies the amount of time in seconds between each report.  A value of 0 (or no",
+    "parameters at all) indicates that processors statistics are to be reported  for  the  time  since  system",
+    "startup  (boot).  The count parameter can be specified in conjunction with the interval parameter if this",
+    "one is not set to zero. The value of count determines the number of reports generated at interval seconds",
+    "apart.  If  the interval parameter is specified without the count parameter, the mpstat command generates",
+    "reports continuously.",
+    ""
+  ],
+  "language": "bash",
+  "tags": [
+    "system"
+  ]
+}

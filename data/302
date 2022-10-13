@@ -1,0 +1,27 @@
+{
+  "id": 302,
+  "title": "Finds local admin password and password expiration timestamp for given computer",
+  "created": "2022-05-04T21:25:05Z",
+  "modified": "2022-10-13T00:16:32Z",
+  "code": [
+    "Get-AdmPwdPassword -ComputerName:AT01488YD3 | Format-List *"
+  ],
+  "example": "",
+  "output": "",
+  "description": [
+    "NAME",
+    "    Get-AdmPwdPassword",
+    "",
+    "SYNOPSIS",
+    "    Finds admin password for given computer",
+    "",
+    "",
+    "    --------------------------  Example 1  --------------------------",
+    "",
+    "    Get-AdmPwdPassword -ComputerName:MyComputer",
+    "",
+    "    Gets password of local administrator on computer MyComputer"
+  ],
+  "language": "powershell",
+  "tags": []
+}

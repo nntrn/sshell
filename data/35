@@ -1,0 +1,15 @@
+{
+  "id": 35,
+  "title": "hash directory ",
+  "created": "2021-04-14T00:18:25Z",
+  "modified": "2021-12-30T19:44:09Z",
+  "code": [
+    "find . -type f -print0 | sort -z | xargs -r0 sha256sum  sha256SumOutput",
+    ""
+  ],
+  "example": "",
+  "output": "",
+  "description": "",
+  "language": "bash",
+  "tags": []
+}

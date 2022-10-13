@@ -1,0 +1,32 @@
+{
+  "id": 337,
+  "title": "() - subshell and variable assignment",
+  "created": "2022-05-31T23:31:35Z",
+  "modified": "2022-05-31T23:31:35Z",
+  "code": [
+    "$ ANNIE=isme",
+    "",
+    "$ (echo $ANNIE; export ANNIE=nntrn; echo $ANNIE)",
+    "isme",
+    "nntrn",
+    "",
+    "$ echo $ANNIE",
+    "isme",
+    ""
+  ],
+  "example": "",
+  "output": "",
+  "description": [
+    "When you define a function with (), you are right: it will create sub-shell. That sub-shell will contain the same values the original had, but won't be able to modify them. So that you are losing that resource of changing global scope variables.",
+    "",
+    "There are numerous things you can't do from a sub-shell, including:",
+    "",
+    "Change global variables. Variables changes will not propagate to the parent shell.",
+    "Exit the script. An exit statement will exit only the sub-shell.",
+    "Starting a sub-shell can also be a serious performance hit. You're launching a new process each time you call the function.",
+    ""
+  ],
+  "language": "bash",
+  "tags": [],
+  "url": "https://stackoverflow.com/a/27802054"
+}

@@ -1,0 +1,17 @@
+{
+  "id": 329,
+  "title": "python module calendar",
+  "created": "2022-05-25T18:32:12Z",
+  "modified": "2022-05-26T17:53:19Z",
+  "code": [
+    "python -m calendar"
+  ],
+  "example": "",
+  "output": "",
+  "description": "",
+  "language": "python",
+  "tags": [
+    "python-oneliner"
+  ],
+  "url": "https://en.wikibooks.org/wiki/Python_Programming/Command-line_one-liners"
+}

@@ -1,0 +1,16 @@
+{
+  "id": 79,
+  "title": "See the list of available plugins",
+  "created": "2021-07-16T07:15:47Z",
+  "modified": "2021-12-30T19:44:10Z",
+  "code": [
+    "ansible-doc -t become -l"
+  ],
+  "example": "",
+  "output": "",
+  "description": "",
+  "language": "bash",
+  "tags": [
+    "ansible"
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "id": 359,
+  "title": "github release api - upload asset file",
+  "created": "2022-07-09T18:11:46Z",
+  "modified": "2022-07-09T18:11:46Z",
+  "code": [
+    "curl -H \"Authorization: token $GITHUB_TOKEN\" \\",
+    "  -H \"Content-Type: $(file -b --mime-type $FILE)\" \\",
+    "  --data-binary @$FILE \\",
+    "  \"https://uploads.github.com/repos/$GITHUB_OWNER/$GITHUB_REPO/releases/$GITHUB_RELEASE/assets?name=$(basename $FILE)\""
+  ],
+  "example": "",
+  "output": "",
+  "description": "",
+  "language": "bash",
+  "tags": [
+    "api"
+  ],
+  "url": "https://stackoverflow.com/a/40216228"
+}

@@ -1,0 +1,31 @@
+{
+  "id": 234,
+  "title": "procinfo: display all system status gathered from /proc",
+  "created": "2022-03-03T17:16:31Z",
+  "modified": "2022-03-03T17:16:31Z",
+  "code": [
+    "procinfo -a"
+  ],
+  "example": "",
+  "output": "",
+  "description": [
+    "usage: procinfo [-fsmadiDSbhv] [-nN] [-Ffile]",
+    "",
+    "        -s      display memory, disk, IRQ & DMA info (default)",
+    "        -m      display module and device info",
+    "        -a      display all info",
+    "        -f      run full screen",
+    "",
+    "        -i      show all IRQ channels, not just those used",
+    "        -nN     pause N second between updates (implies -f)",
+    "        -d      show differences rather than totals (implies -f)",
+    "        -D      show current memory/swap usage, differences on rest",
+    "        -S      with -nN and -d/-D, always show values per second",
+    "        -r      show memory usage -/+ buffers/cache",
+    "        -Ffile  print output to file -- normally a tty",
+    "        -v      print version info",
+    "        -h      print this help"
+  ],
+  "language": "bash",
+  "tags": []
+}

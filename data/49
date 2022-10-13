@@ -1,0 +1,14 @@
+{
+  "id": 49,
+  "title": "git make files executable",
+  "created": "2021-05-28T17:01:12Z",
+  "modified": "2021-12-30T19:44:09Z",
+  "code": [
+    "find . -type f -name \"*.sh\" | xargs -I {} git add --chmod=+x {}"
+  ],
+  "example": "",
+  "output": "",
+  "description": "",
+  "language": "bash",
+  "tags": []
+}

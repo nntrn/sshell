@@ -1,0 +1,25 @@
+{
+  "id": 177,
+  "title": "docker - resolve no space on device",
+  "created": "2021-12-29T18:00:23Z",
+  "modified": "2022-03-17T00:27:23Z",
+  "code": [
+    "systemctl stop docker",
+    "mv /u01/docker /u01/docker.bkp-$(date +%F)",
+    "mv /var/lib/docker /u01",
+    "mkdir -p /var/lib/docker",
+    "mount --rbind /u01/docker /var/lib/docker",
+    "systemctl start docker"
+  ],
+  "example": "",
+  "output": "",
+  "description": [
+    "ERROR: failed to register layer: Error processing tar file(exit status 1):",
+    "no space left on device",
+    ""
+  ],
+  "language": "bash",
+  "tags": [
+    "docker"
+  ]
+}

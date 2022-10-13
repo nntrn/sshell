@@ -1,0 +1,15 @@
+{
+  "id": 389,
+  "title": "create and delete temp directory",
+  "created": "2022-08-30T19:36:32Z",
+  "modified": "2022-08-30T19:36:32Z",
+  "code": [
+    "dir=$(mktemp -d dist.XXXXXX)",
+    "trap 'rm -r \"$dir\"' EXIT"
+  ],
+  "example": "",
+  "output": "",
+  "description": "",
+  "language": "bash",
+  "tags": []
+}

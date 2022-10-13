@@ -1,0 +1,15 @@
+{
+  "id": 284,
+  "title": "systemctl - view status for every loaded service on the system",
+  "created": "2022-04-14T22:15:58Z",
+  "modified": "2022-04-14T22:21:31Z",
+  "code": [
+    "systemctl status --type=service"
+  ],
+  "example": "",
+  "output": "",
+  "description": "",
+  "language": "bash",
+  "tags": [],
+  "url": "https://linuxconfig.org/how-to-use-systemctl-to-list-services-on-systemd-linux"
+}

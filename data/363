@@ -1,0 +1,20 @@
+{
+  "id": 363,
+  "title": "openssl-s_client, s_client - SSL/TLS client program",
+  "created": "2022-07-20T19:29:59Z",
+  "modified": "2022-07-20T19:39:37Z",
+  "code": [
+    "echo -n | openssl s_client -connect $HOSTNAME:443"
+  ],
+  "example": [
+    "$ echo -n | openssl s_client -connect api.github.com:443|tee /dev/clipboard"
+  ],
+  "output": "",
+  "description": [
+    "The s_client command implements a generic SSL/TLS client which connects to a remote host using SSL/TLS. It is a very useful diagnostic tool for SSL servers."
+  ],
+  "language": "bash",
+  "tags": [
+    "security"
+  ]
+}

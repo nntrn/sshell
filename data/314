@@ -1,0 +1,30 @@
+{
+  "id": 314,
+  "title": "xargs - pretty print process environment",
+  "created": "2022-05-12T21:52:49Z",
+  "modified": "2022-05-12T21:52:49Z",
+  "code": [
+    "xargs -n 1 -0 </proc/$PID/environ"
+  ],
+  "example": [
+    "$ echo ${PID:=$$}",
+    "35179",
+    "",
+    "$ cat \"/proc/$PID/environ\"",
+    "TERM=xtermHOME=/rootSHELL=/bin/bashUSER=rootLOGNAME=rootPATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/binXDG_SESSION_ID=c20",
+    "",
+    "$ xargs -n 1 -0 <\"/proc/$$/environ\"",
+    "TERM=xterm",
+    "HOME=/root",
+    "SHELL=/bin/bash",
+    "USER=root",
+    "LOGNAME=root",
+    "PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin",
+    "XDG_SESSION_ID=c20",
+    ""
+  ],
+  "output": "",
+  "description": "",
+  "language": "bash",
+  "tags": []
+}

@@ -1,0 +1,14 @@
+{
+  "id": 188,
+  "title": "Get-WmiObject - get computer system properties",
+  "created": "2022-01-18T16:42:19Z",
+  "modified": "2022-10-13T00:05:37Z",
+  "code": [
+    "Get-WmiObject -Class Win32_ComputerSystem -Property *"
+  ],
+  "example": "",
+  "output": "",
+  "description": "",
+  "language": "powershell",
+  "tags": []
+}

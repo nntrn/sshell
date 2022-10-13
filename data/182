@@ -1,0 +1,34 @@
+{
+  "id": 182,
+  "title": "type - display information about command",
+  "created": "2022-01-04T19:28:06Z",
+  "modified": "2022-03-17T00:26:45Z",
+  "code": [
+    "type"
+  ],
+  "example": [
+    "$ type cd_func"
+  ],
+  "output": "",
+  "description": [
+    "Options:",
+    "  -a        display all locations containing an executable named NAME;",
+    "            includes aliases, builtins, and functions, if and only if",
+    "            the `-p' option is not also used",
+    "  -f        suppress shell function lookup",
+    "  -P        force a PATH search for each NAME, even if it is an alias,",
+    "            builtin, or function, and returns the name of the disk file",
+    "            that would be executed",
+    "  -p        returns either the name of the disk file that would be executed,",
+    "            or nothing if `type -t NAME' would not return `file'",
+    "  -t        output a single word which is one of `alias', `keyword',",
+    "            `function', `builtin', `file' or `', if NAME is an alias,",
+    "            shell reserved word, shell function, shell builtin, disk file,",
+    "            or not found, respectively",
+    ""
+  ],
+  "language": "bash",
+  "tags": [
+    "shell"
+  ]
+}

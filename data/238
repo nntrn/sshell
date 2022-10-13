@@ -1,0 +1,17 @@
+{
+  "id": 238,
+  "title": "openssl - verify checksum",
+  "created": "2022-03-04T18:32:12Z",
+  "modified": "2022-03-16T19:32:35Z",
+  "code": [
+    "openssl sha1 -sha256 file.txt | awk '{print $2}'"
+  ],
+  "example": "",
+  "output": "",
+  "description": "",
+  "language": "bash",
+  "tags": [
+    "security"
+  ],
+  "url": "https://raw.githubusercontent.com/helm/helm/master/scripts/get-helm-3"
+}

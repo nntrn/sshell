@@ -1,0 +1,17 @@
+{
+  "id": 187,
+  "title": "Start a static HTTP server",
+  "created": "2022-01-17T16:59:05Z",
+  "modified": "2022-03-17T00:21:51Z",
+  "code": [
+    "python -m SimpleHTTPServer 8080"
+  ],
+  "example": "",
+  "output": "",
+  "description": "",
+  "language": "python",
+  "tags": [
+    "http"
+  ],
+  "url": "https://chromium.googlesource.com/catapult/+/refs/heads/main/netlog_viewer/bin/serve_static"
+}

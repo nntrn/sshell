@@ -1,0 +1,16 @@
+{
+  "id": 288,
+  "title": "get docker gateway",
+  "created": "2022-04-22T03:10:37Z",
+  "modified": "2022-04-22T03:10:37Z",
+  "code": [
+    "ip route show | grep docker0 | awk '{print $9}'"
+  ],
+  "example": "",
+  "output": "",
+  "description": "",
+  "language": "bash",
+  "tags": [
+    "network"
+  ]
+}

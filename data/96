@@ -1,0 +1,14 @@
+{
+  "id": 96,
+  "title": "sed - delete rows after pattern ",
+  "created": "2021-08-11T21:54:54Z",
+  "modified": "2022-01-19T15:49:35Z",
+  "code": [
+    "cat playbooks/hosts/prod.ini | sed -e '/^\\[mongo:children/,+5000d'"
+  ],
+  "example": "",
+  "output": "",
+  "description": "",
+  "language": "bash",
+  "tags": []
+}

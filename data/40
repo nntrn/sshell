@@ -1,0 +1,15 @@
+{
+  "id": 40,
+  "title": "print env variables that start with S",
+  "created": "2021-04-27T22:31:37Z",
+  "modified": "2021-12-30T19:44:09Z",
+  "code": [
+    "env | grep -o '^S[^=]*'"
+  ],
+  "example": "",
+  "output": "",
+  "description": "",
+  "language": "bash",
+  "tags": [],
+  "url": "https://stackoverflow.com/a/43126805"
+}

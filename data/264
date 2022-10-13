@@ -1,0 +1,14 @@
+{
+  "id": 264,
+  "title": "ls - sortable ls",
+  "created": "2022-03-31T18:24:32Z",
+  "modified": "2022-03-31T18:24:32Z",
+  "code": [
+    "ls -lptr --time-style='+%s %FT%T' --no-group --group-directories-first "
+  ],
+  "example": "",
+  "output": "",
+  "description": "",
+  "language": "bash",
+  "tags": []
+}

@@ -1,0 +1,17 @@
+{
+  "id": 196,
+  "title": "env reduced environment",
+  "created": "2022-01-28T23:59:27Z",
+  "modified": "2022-01-28T23:59:27Z",
+  "code": [
+    "env - PATH=\"$PATH\" foo"
+  ],
+  "example": "",
+  "output": "",
+  "description": [
+    "Run foo with a reduced environment, preserving only the original PATH to avoid problems in locating foo."
+  ],
+  "language": "bash",
+  "tags": [],
+  "url": "https://www.gnu.org/software/coreutils/manual/coreutils.html#env-invocation"
+}

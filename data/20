@@ -1,0 +1,19 @@
+{
+  "id": 20,
+  "title": "Get active internet connections and domain sockets",
+  "created": "2021-03-25T15:42:51Z",
+  "modified": "2021-12-30T19:44:08Z",
+  "code": [
+    "netstat -pW"
+  ],
+  "example": "",
+  "output": "",
+  "description": [
+    "-p displays",
+    "-W print wide (no trim)"
+  ],
+  "language": "bash",
+  "tags": [
+    "network"
+  ]
+}

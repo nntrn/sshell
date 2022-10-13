@@ -1,0 +1,17 @@
+{
+  "id": 211,
+  "title": "du - aggregate directory size",
+  "created": "2022-02-15T21:25:40Z",
+  "modified": "2022-03-17T00:33:46Z",
+  "code": [
+    "du -h -d 1 ."
+  ],
+  "example": "",
+  "output": "",
+  "description": "",
+  "language": "bash",
+  "tags": [
+    "fs"
+  ],
+  "url": "https://stackoverflow.com/questions/16661982/check-folder-size-in-bash"
+}

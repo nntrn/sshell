@@ -1,0 +1,18 @@
+{
+  "id": 131,
+  "title": "python to encode and decode",
+  "created": "2021-09-25T06:23:58Z",
+  "modified": "2022-03-03T17:01:29Z",
+  "code": [
+    "# encode",
+    "python -m base64 -e <<< \"sample string\"",
+    "",
+    "# decode",
+    "python -m base64 -d <<< \"dGhpcyBpcyBlbmNvZGVkCg==\""
+  ],
+  "example": "",
+  "output": "",
+  "description": "",
+  "language": "bash",
+  "tags": []
+}

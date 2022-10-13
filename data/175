@@ -1,0 +1,17 @@
+{
+  "id": 175,
+  "title": "Getting Server Certificate",
+  "created": "2021-12-29T03:08:27Z",
+  "modified": "2022-01-03T06:10:01Z",
+  "code": [
+    "$ openssl s_client -showcerts -connect awxserver02.us.example.com:80"
+  ],
+  "example": "",
+  "output": "",
+  "description": "",
+  "language": "bash",
+  "tags": [
+    "network"
+  ],
+  "url": "https://www.baeldung.com/linux/curl-https-connection"
+}

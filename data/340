@@ -1,0 +1,25 @@
+{
+  "id": 340,
+  "title": "&& and || - compare strings using logical operators",
+  "created": "2022-06-02T18:39:19Z",
+  "modified": "2022-06-02T18:39:34Z",
+  "code": [
+    "[[ \"string1\" == \"string2\" ]] && echo \"Equal\" || echo \"Not equal\""
+  ],
+  "example": [
+    "$ [[ \"string1\" == \"string1\" ]] && echo \"Equal\" || echo \"Not equal\"",
+    "Equal",
+    "",
+    "$ [[ \"string1\" == \"string2\" ]] && echo \"Equal\" || echo \"Not equal\"",
+    "Not equal"
+  ],
+  "output": "",
+  "description": [
+    "use the logical and && and or || to compare strings:",
+    "",
+    ""
+  ],
+  "language": "bash",
+  "tags": [],
+  "url": "https://linuxize.com/post/how-to-compare-strings-in-bash/"
+}

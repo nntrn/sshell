@@ -1,0 +1,17 @@
+{
+  "id": 176,
+  "title": "list files and sort by size",
+  "created": "2021-12-29T17:31:57Z",
+  "modified": "2021-12-29T20:52:33Z",
+  "code": [
+    "du -h | sort -rh"
+  ],
+  "example": "",
+  "output": "",
+  "description": [
+    "Following @StéphaneChazelas, this works for me: find . -type f -print0 | xargs -0 du -h | sort -rh. If you just want say the largest 30 files: find . -type f -print0 | xargs -0 du -h | sort -rh | head -n 30"
+  ],
+  "language": "bash",
+  "tags": [],
+  "url": "https://unix.stackexchange.com/a/53738/464659"
+}

@@ -1,0 +1,20 @@
+{
+  "id": 289,
+  "title": "pidstat - display global page faults and memory statistics",
+  "created": "2022-04-22T07:03:15Z",
+  "modified": "2022-04-22T07:03:15Z",
+  "code": [
+    "pidstat -C \"awx | postgres\" -r -p ALL"
+  ],
+  "example": "",
+  "output": "",
+  "description": [
+    "pidstat -C \"fox|bird\" -r -p ALL",
+    "  Display global page faults and memory  statistics  for  all  the",
+    "  processes  whose  command  name  includes  the  string  \"fox\" or",
+    "  \"bird\"."
+  ],
+  "language": "bash",
+  "tags": [],
+  "url": "http://man.he.net/man1/pidstat"
+}

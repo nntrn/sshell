@@ -1,0 +1,14 @@
+{
+  "id": 155,
+  "title": "yum list docker-engine --showduplicates",
+  "created": "2021-11-04T13:56:21Z",
+  "modified": "2021-12-30T19:45:31Z",
+  "code": [
+    "yum list docker-engine --showduplicates"
+  ],
+  "example": "",
+  "output": "",
+  "description": "",
+  "language": "bash",
+  "tags": []
+}

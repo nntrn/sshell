@@ -1,0 +1,29 @@
+{
+  "id": 250,
+  "title": "git - remove commits matching pattern in message",
+  "created": "2022-03-22T21:14:08Z",
+  "modified": "2022-04-15T17:49:47Z",
+  "code": [
+    "git filter-branch --commit-filter '",
+    "    if [ `git rev-list --all --grep \"<PATTERN TO REMOVE>\" | grep -c \"$GIT_COMMIT\"` -gt 0 ]",
+    "    then",
+    "        skip_commit \"$@\";",
+    "    else",
+    "        git commit-tree \"$@\";",
+    "    fi' HEAD"
+  ],
+  "example": "",
+  "output": "",
+  "description": [
+    "fast solution that uses filter-branch instead of rebase",
+    "",
+    "clean up with:",
+    "git reflog expire --expire=now",
+    "git gc --prune=now"
+  ],
+  "language": "bash",
+  "tags": [
+    "git"
+  ],
+  "url": "https://stackoverflow.com/a/9543606"
+}

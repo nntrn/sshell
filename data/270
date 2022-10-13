@@ -1,0 +1,15 @@
+{
+  "id": 270,
+  "title": "awk - split string into maxtrix-like table",
+  "created": "2022-04-06T18:02:24Z",
+  "modified": "2022-04-06T18:02:24Z",
+  "code": [
+    "echo \"A,B,C,D,E,F,G,H,I,J,K,L,M,N,O\" | awk -v RS='[,\\n]' '{a=$0;getline b; getline c; print a,b,c}' OFS=,"
+  ],
+  "example": "",
+  "output": "",
+  "description": "",
+  "language": "bash",
+  "tags": [],
+  "url": "https://unix.stackexchange.com/a/430556"
+}

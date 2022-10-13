@@ -1,0 +1,25 @@
+{
+  "id": 290,
+  "title": "netsh -  Lists all defined aliases",
+  "created": "2022-04-27T16:24:07Z",
+  "modified": "2022-05-09T17:34:57Z",
+  "code": [
+    "netsh show helper"
+  ],
+  "example": [
+    "$ which netsh",
+    "/cygdrive/c/WINDOWS/system32/netsh",
+    "",
+    ""
+  ],
+  "output": "",
+  "description": [
+    "Network shell (netsh) is a command-line utility that allows you to configure and display the status of various network communications server roles and components after they are installed on computers running Windows Server® 2008 R2 and Windows Server® 2008."
+  ],
+  "language": "bash",
+  "tags": [
+    "windows",
+    "network"
+  ],
+  "url": "https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2008-r2-and-2008/cc754753(v=ws.10)"
+}

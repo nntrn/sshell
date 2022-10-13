@@ -1,0 +1,18 @@
+{
+  "id": 167,
+  "title": "ansible-doc snippet",
+  "created": "2021-11-29T16:35:32Z",
+  "modified": "2022-01-03T06:11:18Z",
+  "code": [
+    "ansible-doc awx.awx.tower_ad_hoc_command --snippet",
+    ""
+  ],
+  "example": "",
+  "output": "",
+  "description": "",
+  "language": "bash",
+  "tags": [
+    "ansible"
+  ],
+  "url": "https://www.oreilly.com/library/view/learn-ansible/9781788998758/6fc4eb99-e58e-46d3-b9d5-0370f293ec54.xhtml"
+}

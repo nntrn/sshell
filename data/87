@@ -1,0 +1,16 @@
+{
+  "id": 87,
+  "title": "get AD User (powershell)",
+  "created": "2021-07-28T15:42:59Z",
+  "modified": "2021-12-30T19:55:29Z",
+  "code": [
+    "Get-ADUser -Identity Annie_Tran -Properties *"
+  ],
+  "example": "",
+  "output": "",
+  "description": "",
+  "language": "powershell",
+  "tags": [
+    "powershell"
+  ]
+}

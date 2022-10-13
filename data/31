@@ -1,0 +1,19 @@
+{
+  "id": 31,
+  "title": "download & save as json",
+  "created": "2021-04-02T15:09:18Z",
+  "modified": "2021-12-30T19:44:09Z",
+  "code": [
+    "wget <url> -O file_name.json"
+  ],
+  "example": [
+    "wget https://example.service-now.com/api/now/ui/date_time/legacy -O snow_date.json"
+  ],
+  "output": "",
+  "description": "",
+  "language": "bash",
+  "tags": [
+    "file"
+  ],
+  "url": "https://stackoverflow.com/a/3040917/7460613"
+}

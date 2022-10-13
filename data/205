@@ -1,0 +1,16 @@
+{
+  "id": 205,
+  "title": "ps do not print columns",
+  "created": "2022-02-05T07:16:24Z",
+  "modified": "2022-02-05T07:16:24Z",
+  "code": [
+    "ps -o pid=''"
+  ],
+  "example": "",
+  "output": "",
+  "description": "",
+  "language": "bash",
+  "tags": [
+    "utils"
+  ]
+}

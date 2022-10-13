@@ -1,0 +1,16 @@
+{
+  "id": 300,
+  "title": "powershell - get all Get- commands",
+  "created": "2022-05-03T18:07:51Z",
+  "modified": "2022-05-09T17:34:41Z",
+  "code": [
+    "#C:/Windows/System32/WindowsPowerShell/v1.0/Modules",
+    "find . -type f -name \"*.psd1\" -print -exec cat {} \\; | tr -d '\\r' | tr -d '\\0' | grep -Eo 'Get-[a-zA-Z\\-]+' | sort -u | tee ~/all_powershell_get.txt",
+    ""
+  ],
+  "example": "",
+  "output": "",
+  "description": "",
+  "language": "bash",
+  "tags": []
+}

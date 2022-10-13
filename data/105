@@ -1,0 +1,15 @@
+{
+  "id": 105,
+  "title": "find zombie processes",
+  "created": "2021-08-31T18:52:13Z",
+  "modified": "2022-01-19T15:48:23Z",
+  "code": [
+    "ps -elf | grep Z"
+  ],
+  "example": "",
+  "output": "",
+  "description": "",
+  "language": "bash",
+  "tags": [],
+  "url": "https://bencane.com/2012/07/02/when-zombies-invade-linux-what-are-zombie-processes-and-what-to-do-about-them/"
+}

@@ -1,0 +1,14 @@
+{
+  "id": 285,
+  "title": "vim - display all possible runtime config settings for vim",
+  "created": "2022-04-14T22:22:37Z",
+  "modified": "2022-04-14T22:22:37Z",
+  "code": [
+    ":set all"
+  ],
+  "example": "",
+  "output": "",
+  "description": "",
+  "language": "vim",
+  "tags": []
+}

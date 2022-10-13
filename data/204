@@ -1,0 +1,14 @@
+{
+  "id": 204,
+  "title": "only get pid",
+  "created": "2022-02-05T07:08:34Z",
+  "modified": "2022-02-05T07:08:34Z",
+  "code": [
+    "ps -efo pid"
+  ],
+  "example": "",
+  "output": "",
+  "description": "",
+  "language": "bash",
+  "tags": []
+}

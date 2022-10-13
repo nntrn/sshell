@@ -1,0 +1,19 @@
+{
+  "id": 51,
+  "title": "print all the columns after a particular number using awk",
+  "created": "2021-06-03T18:23:30Z",
+  "modified": "2021-12-30T19:44:09Z",
+  "code": [
+    "ps -ef | awk -v m=\"\\x01\" -v N=\"8\" '{$N=m$N ;print substr($0, index($0,m)+1)}'",
+    ""
+  ],
+  "example": [
+    "ps -ef | awk -v m=\"\\x01\" -v N=\"8\" '{$N=m$N ;print substr($0, index($0,m)+1)}'",
+    ""
+  ],
+  "output": "",
+  "description": "",
+  "language": "bash",
+  "tags": [],
+  "url": "https://stackoverflow.com/a/23118210"
+}

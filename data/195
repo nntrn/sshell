@@ -1,0 +1,15 @@
+{
+  "id": 195,
+  "title": "List available powershell commands",
+  "created": "2022-01-27T21:42:54Z",
+  "modified": "2022-01-27T21:42:54Z",
+  "code": [
+    "gcm -module DISM"
+  ],
+  "example": "",
+  "output": "",
+  "description": "",
+  "language": "powershell",
+  "tags": [],
+  "url": "https://stackoverflow.com/a/34537239/7460613"
+}

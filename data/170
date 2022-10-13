@@ -1,0 +1,16 @@
+{
+  "id": 170,
+  "title": "get AD domain controller (amer.example.com)",
+  "created": "2021-12-06T22:04:12Z",
+  "modified": "2022-10-13T00:07:55Z",
+  "code": [
+    "Get-ADDomainController"
+  ],
+  "example": "",
+  "output": "",
+  "description": "",
+  "language": "powershell",
+  "tags": [
+    "AD"
+  ]
+}

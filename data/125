@@ -1,0 +1,15 @@
+{
+  "id": 125,
+  "title": "print files with timestamp",
+  "created": "2021-09-15T19:07:05Z",
+  "modified": "2022-01-19T00:09:53Z",
+  "code": [
+    " find . -type f -printf '%TFT%TT %p\\n'"
+  ],
+  "example": "",
+  "output": "",
+  "description": "",
+  "language": "bash",
+  "tags": [],
+  "url": "https://stackoverflow.com/a/44415319"
+}

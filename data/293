@@ -1,0 +1,15 @@
+{
+  "id": 293,
+  "title": "env - get all environment items in powershell",
+  "created": "2022-04-27T19:00:35Z",
+  "modified": "2022-04-27T19:00:35Z",
+  "code": [
+    "Get-ChildItem env:"
+  ],
+  "example": "",
+  "output": "",
+  "description": "",
+  "language": "powershell",
+  "tags": [],
+  "url": "https://devblogs.microsoft.com/scripting/powertip-use-windows-powershell-to-display-all-environment-variables/"
+}

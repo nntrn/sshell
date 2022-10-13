@@ -1,0 +1,16 @@
+{
+  "id": 110,
+  "title": "generate random password",
+  "created": "2021-09-09T23:46:59Z",
+  "modified": "2022-01-19T00:16:34Z",
+  "code": [
+    "tr -dc 'a-zA-Z0-9' < /dev/urandom | head -c 32"
+  ],
+  "example": "",
+  "output": "",
+  "description": "",
+  "language": "bash",
+  "tags": [
+    "admin"
+  ]
+}

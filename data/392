@@ -1,0 +1,17 @@
+{
+  "id": 392,
+  "title": "echo text N times ",
+  "created": "2022-08-31T06:24:56Z",
+  "modified": "2022-08-31T06:24:56Z",
+  "code": [
+    "echo text{,,,,,,,,,,}"
+  ],
+  "example": [
+    "$ echo boo{,,,,,,,,,,}",
+    "boo boo boo boo boo boo boo boo boo boo boo"
+  ],
+  "output": "",
+  "description": "",
+  "language": "bash",
+  "tags": []
+}

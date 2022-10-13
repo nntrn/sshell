@@ -1,0 +1,34 @@
+{
+  "id": 197,
+  "title": "enable ssh controlmaster - ssh sessions",
+  "created": "2022-02-02T03:38:50Z",
+  "modified": "2022-03-03T16:40:39Z",
+  "code": [
+    "Host *",
+    "    ControlMaster auto",
+    "    ControlPath  ~/.ssh/sockets/%r@%h-%p",
+    "    ControlPersist  600"
+  ],
+  "example": "",
+  "output": "",
+  "description": [
+    "If you are on macOS and Linux and want to reduce how often you have to enter a password or token, you can enable the ControlMaster feature on your local machine so that OpenSSH runs multiple SSH sessions over a single connection.",
+    "",
+    "To enable ControlMaster:",
+    "",
+    "Add an entry like this to your SSH config file:",
+    "",
+    "Host *",
+    "    ControlMaster auto",
+    "    ControlPath  ~/.ssh/sockets/%r@%h-%p",
+    "    ControlPersist  600",
+    "Then run mkdir -p ~/.ssh/sockets to create the sockets folder.",
+    "",
+    "Setting up the SSH Agent#"
+  ],
+  "language": "config",
+  "tags": [
+    "network"
+  ],
+  "url": "https://code.visualstudio.com/docs/remote/troubleshooting#_enabling-alternate-ssh-authentication-methods"
+}

@@ -1,0 +1,19 @@
+{
+  "id": 240,
+  "title": "stat - display file properties",
+  "created": "2022-03-09T00:44:04Z",
+  "modified": "2022-03-17T00:23:45Z",
+  "code": [
+    "stat --printf='%U\\n%G\\n%z\\n' $FILEORDIR"
+  ],
+  "example": [
+    "stat --printf='%U\\n%G\\n%z\\n' .git"
+  ],
+  "output": "",
+  "description": "",
+  "language": "bash",
+  "tags": [
+    "text",
+    "gnu"
+  ]
+}

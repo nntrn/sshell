@@ -1,0 +1,22 @@
+{
+  "id": 372,
+  "title": "git reset - basic undo",
+  "created": "2022-08-03T06:46:43Z",
+  "modified": "2022-08-03T06:46:43Z",
+  "code": [
+    "# undo `git commit`",
+    "git reset --soft HEAD^",
+    "",
+    "# undo `git add`",
+    "#    *  will untrack new files",
+    "git reset HEAD ."
+  ],
+  "example": "",
+  "output": "",
+  "description": "",
+  "language": "bash",
+  "tags": [
+    "security",
+    "git"
+  ]
+}

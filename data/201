@@ -1,0 +1,17 @@
+{
+  "id": 201,
+  "title": "Check client certificate",
+  "created": "2022-02-03T03:24:11Z",
+  "modified": "2022-02-03T03:24:11Z",
+  "code": [
+    "echo '' | openssl s_client -connect awxserver02.us.example.com:443 2>/dev/null | openssl x509 -text -noout | grep -A 1 \"Public Key Algorithm\""
+  ],
+  "example": "",
+  "output": "",
+  "description": "",
+  "language": "bash",
+  "tags": [
+    "network"
+  ],
+  "url": "https://access.redhat.com/discussions/4524081"
+}

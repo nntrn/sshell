@@ -1,0 +1,14 @@
+{
+  "id": 134,
+  "title": "get all service accounts owned by user",
+  "created": "2021-09-29T16:44:53Z",
+  "modified": "2022-10-13T00:18:35Z",
+  "code": [
+    "Get-ADUser -Filter \"employeeType -eq 'Service' -and OwnerID -eq 123456\" -Properties * | FT Name,PasswordLastSet"
+  ],
+  "example": "",
+  "output": "",
+  "description": "",
+  "language": "powershell",
+  "tags": []
+}

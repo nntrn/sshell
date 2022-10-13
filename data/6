@@ -1,0 +1,19 @@
+{
+  "id": 6,
+  "title": "display information about the CPU architecture",
+  "created": "2021-02-24T07:10:02Z",
+  "modified": "2021-12-30T19:44:08Z",
+  "code": [
+    "lscpu"
+  ],
+  "example": "",
+  "output": "",
+  "description": [
+    "To test whether your Linux computer has a 32-bit or 64-bit CPU and to see what version of Linux is installed, open your terminal, type the following command at the prompt, and then hit Enter:"
+  ],
+  "language": "bash",
+  "tags": [
+    "coreutils"
+  ],
+  "url": "https://www.howtogeek.com/198615/how-to-check-if-your-linux-system-is-32-bit-or-64-bit/"
+}

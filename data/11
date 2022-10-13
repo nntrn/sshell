@@ -1,0 +1,19 @@
+{
+  "id": 11,
+  "title": "append group to a user",
+  "created": "2021-03-03T20:06:00Z",
+  "modified": "2021-12-30T19:44:08Z",
+  "code": [
+    "usermod -aG wheel username"
+  ],
+  "example": [
+    "usermod -aG wheel annie_tran"
+  ],
+  "output": "",
+  "description": "",
+  "language": "bash",
+  "tags": [
+    "root"
+  ],
+  "url": "https://www.digitalocean.com/community/tutorials/how-to-create-a-sudo-user-on-centos-quickstart"
+}

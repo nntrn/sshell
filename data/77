@@ -1,0 +1,14 @@
+{
+  "id": 77,
+  "title": "rsync",
+  "created": "2021-07-14T16:54:27Z",
+  "modified": "2021-12-30T19:44:10Z",
+  "code": [
+    "rsync -avr -o -g filename.txt user@hostname.us.example.com:/home/annie_tran"
+  ],
+  "example": "",
+  "output": "",
+  "description": "",
+  "language": "bash",
+  "tags": []
+}

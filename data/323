@@ -1,0 +1,17 @@
+{
+  "id": 323,
+  "title": "ignore carriage return in windows ",
+  "created": "2022-05-25T06:37:28Z",
+  "modified": "2022-05-25T06:37:28Z",
+  "code": [
+    "set -o igncr"
+  ],
+  "example": "",
+  "output": "",
+  "description": [
+    "set -o igncr causes the shell ignore windows line endings (skip \\r). Another solution would be to fix the script by running dos2unix on it."
+  ],
+  "language": "bash",
+  "tags": [],
+  "url": "https://stackoverflow.com/a/35870173"
+}

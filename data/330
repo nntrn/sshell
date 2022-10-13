@@ -1,0 +1,36 @@
+{
+  "id": 330,
+  "title": "curl - display information after transfer",
+  "created": "2022-05-26T23:53:05Z",
+  "modified": "2022-05-27T03:44:33Z",
+  "code": [
+    "curl -s -o snippets.json -w '%{json}' https://raw.githubusercontent.com/nntrn/sshell/data/snippets.json | jq"
+  ],
+  "example": "",
+  "output": "",
+  "description": [
+    "use `%{json}` to display all available keys",
+    "",
+    "-w, --write-out <format>",
+    "Make curl display information on stdout after a completed transfer. ",
+    "The format is a string that may contain  plain  text  mixed",
+    "with  any  number of variables. The format can be specified as a",
+    "literal \"string\", or you can have curl read the  format  from  a",
+    "file  with  \"@filename\" and to tell curl to read the format from",
+    "stdin you write \"@-\".",
+    "",
+    "The variables present in the output format will  be  substituted",
+    "by  the  value or text that curl thinks fit, as described below.",
+    "All variables are specified as %{variable_name} and to output  a",
+    "normal  % you just write them as %%. You can output a newline by",
+    "using \\n, a carriage return with \\r and a tab space with \\t.",
+    "",
+    "The output will be written to standard output, but this  can  be",
+    "switched to standard error by using %{stderr}.",
+    "",
+    "NOTE: The %-symbol is a special symbol in the win32-environment,",
+    "where all occurrences of % must be doubled when using  this  option."
+  ],
+  "language": "bash",
+  "tags": []
+}

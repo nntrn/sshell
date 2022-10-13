@@ -1,0 +1,19 @@
+{
+  "id": 145,
+  "title": "system boot menu entries",
+  "created": "2021-10-18T17:52:54Z",
+  "modified": "2022-03-03T20:45:07Z",
+  "code": [
+    "awk -F\\' '$1==\"menuentry \" {print i++ \" : \" $2}' /etc/grub2.cfg"
+  ],
+  "example": [
+    "$ awk -F\\' '$1==\"menuentry \" {print i++ \" : \" $2}' /etc/grub2.cfg"
+  ],
+  "output": "",
+  "description": [
+    "To list all the menu entries that will be displayed at system boot"
+  ],
+  "language": "bash",
+  "tags": [],
+  "url": "https://wiki.centos.org/HowTos/Grub2"
+}

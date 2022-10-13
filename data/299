@@ -1,0 +1,16 @@
+{
+  "id": 299,
+  "title": "Get-NetAdapter",
+  "created": "2022-05-03T17:53:44Z",
+  "modified": "2022-05-25T19:07:39Z",
+  "code": [
+    "Get-NetAdapter | Format-Table  -AutoSize -Wrap"
+  ],
+  "example": "",
+  "output": "",
+  "description": "",
+  "language": "powershell",
+  "tags": [
+    "network"
+  ]
+}

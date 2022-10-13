@@ -1,0 +1,17 @@
+{
+  "id": 220,
+  "title": "Gather listening ports",
+  "created": "2022-02-24T09:15:34Z",
+  "modified": "2022-03-03T16:27:10Z",
+  "code": [
+    "netstat -ln --inet --program"
+  ],
+  "example": "",
+  "output": "",
+  "description": "",
+  "language": "bash",
+  "tags": [
+    "network"
+  ],
+  "url": "https://github.com/openstack/openstack-ansible/blob/master/playbooks/listening-port-report.yml"
+}

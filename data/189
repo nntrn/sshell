@@ -1,0 +1,18 @@
+{
+  "id": 189,
+  "title": "list files with time style & hides groups",
+  "created": "2022-01-19T19:37:55Z",
+  "modified": "2022-01-19T19:37:55Z",
+  "code": [
+    "ls -lptr --time-style='+%s %F %T' --group-directories-first -o"
+  ],
+  "example": "",
+  "output": "",
+  "description": [
+    "       -o     like -l, but do not list group information"
+  ],
+  "language": "bash",
+  "tags": [
+    "shell"
+  ]
+}

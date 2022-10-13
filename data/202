@@ -1,0 +1,17 @@
+{
+  "id": 202,
+  "title": "get name server",
+  "created": "2022-02-03T03:40:35Z",
+  "modified": "2022-02-10T16:14:52Z",
+  "code": [
+    " host -t ns example.com"
+  ],
+  "example": "",
+  "output": "",
+  "description": "",
+  "language": "bash",
+  "tags": [
+    "network"
+  ],
+  "url": "https://serverfault.com/a/413129"
+}

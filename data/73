@@ -1,0 +1,16 @@
+{
+  "id": 73,
+  "title": "print commands from sudo log",
+  "created": "2021-07-12T20:47:34Z",
+  "modified": "2021-12-30T19:44:10Z",
+  "code": [
+    "cat /var/log/sudo.log | grep \"LANG=C;LANGUAGE=en\" | cut -d';' -f3 | sort -u "
+  ],
+  "example": "",
+  "output": "",
+  "description": "",
+  "language": "bash",
+  "tags": [
+    "admin"
+  ]
+}

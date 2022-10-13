@@ -1,0 +1,15 @@
+{
+  "id": 370,
+  "title": "Format-Table -GroupBy - Format processes by BasePriority",
+  "created": "2022-07-29T23:50:49Z",
+  "modified": "2022-07-29T23:50:49Z",
+  "code": [
+    "Get-Process | Sort-Object -Property BasePriority | Format-Table -GroupBy BasePriority -Wrap"
+  ],
+  "example": "",
+  "output": "",
+  "description": "",
+  "language": "powershell",
+  "tags": [],
+  "url": "https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.utility/format-table?view=powershell-7.2#example-2-format-processes-by-basepriority"
+}

@@ -1,0 +1,15 @@
+{
+  "id": 46,
+  "title": "umask create file with permissions",
+  "created": "2021-05-06T23:59:24Z",
+  "modified": "2021-12-30T19:44:09Z",
+  "code": [
+    "(umask 077; touch file)  # creates a 600 (rw-------) file",
+    "(umask 002; touch file)  # creates a 664 (rw-rw-r--) file"
+  ],
+  "example": "",
+  "output": "",
+  "description": "",
+  "language": "bash",
+  "tags": []
+}

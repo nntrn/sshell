@@ -1,0 +1,17 @@
+{
+  "id": 165,
+  "title": "windows - repair health",
+  "created": "2021-11-17T04:50:57Z",
+  "modified": "2022-01-03T06:24:38Z",
+  "code": [
+    "dism /online /cleanup-image /restorehealth"
+  ],
+  "example": "",
+  "output": "",
+  "description": "",
+  "language": "cmd",
+  "tags": [
+    "example"
+  ],
+  "url": "https://support.microsoft.com/en-us/topic/system-file-checker-finds-corrupt-files-after-installing-kb2821895-12d6d944-25f5-fc42-551b-05607a026e9d"
+}

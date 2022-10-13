@@ -1,0 +1,14 @@
+{
+  "id": 298,
+  "title": "Get-WmiObject - get network adapter config",
+  "created": "2022-05-03T17:51:56Z",
+  "modified": "2022-05-03T17:51:56Z",
+  "code": [
+    "Get-WmiObject win32_networkadapterconfiguration | Format-Table DHCPEnabled,ServiceName,Description -AutoSize -Wrap | Format-Wide -Column 3"
+  ],
+  "example": "",
+  "output": "",
+  "description": "",
+  "language": "powershell",
+  "tags": []
+}

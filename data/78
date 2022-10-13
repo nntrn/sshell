@@ -1,0 +1,14 @@
+{
+  "id": 78,
+  "title": "generate ed25519 private key",
+  "created": "2021-07-15T18:32:34Z",
+  "modified": "2021-12-30T19:44:10Z",
+  "code": [
+    "openssl genpkey -algorithm ed25519"
+  ],
+  "example": "",
+  "output": "",
+  "description": "",
+  "language": "bash",
+  "tags": []
+}

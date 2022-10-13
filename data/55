@@ -1,0 +1,17 @@
+{
+  "id": 55,
+  "title": "get free space on directory",
+  "created": "2021-06-08T00:04:52Z",
+  "modified": "2021-12-30T19:44:09Z",
+  "code": [
+    "df -Ph . "
+  ],
+  "example": [
+    "df -Ph . | tail -1 | awk '{print $4}'",
+    ""
+  ],
+  "output": "",
+  "description": "",
+  "language": "bash",
+  "tags": []
+}

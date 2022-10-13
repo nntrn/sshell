@@ -1,0 +1,14 @@
+{
+  "id": 59,
+  "title": "Get size of mounted filesystems",
+  "created": "2021-06-18T16:19:38Z",
+  "modified": "2021-12-30T19:44:09Z",
+  "code": [
+    "df --block-size=1 | numfmt --field 2 --header --to=iec"
+  ],
+  "example": "",
+  "output": "",
+  "description": "",
+  "language": "bash",
+  "tags": []
+}

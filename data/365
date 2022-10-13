@@ -1,0 +1,14 @@
+{
+  "id": 365,
+  "title": "dstat - get expensive processes",
+  "created": "2022-07-22T21:55:25Z",
+  "modified": "2022-07-22T21:55:25Z",
+  "code": [
+    "dstat -tcndylp --top-cpu"
+  ],
+  "example": "",
+  "output": "",
+  "description": "",
+  "language": "bash",
+  "tags": []
+}

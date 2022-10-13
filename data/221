@@ -1,0 +1,15 @@
+{
+  "id": 221,
+  "title": "systemd-cgls: recursively show control group contents.",
+  "created": "2022-02-24T09:27:47Z",
+  "modified": "2022-02-24T09:27:47Z",
+  "code": [
+    "systemd-cgls"
+  ],
+  "example": "",
+  "output": "",
+  "description": "",
+  "language": "bash",
+  "tags": [],
+  "url": "http://0pointer.de/blog/projects/systemd-for-admins-2.html"
+}

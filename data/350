@@ -1,0 +1,20 @@
+{
+  "id": 350,
+  "title": "MemAvailable - memory tracker: get reclaimable memory from /proc/meminfo",
+  "created": "2022-06-30T02:10:32Z",
+  "modified": "2022-06-30T04:15:38Z",
+  "code": [
+    "awk '/^MemAvailable:/ {print $2}' /proc/meminfo"
+  ],
+  "example": "",
+  "output": "",
+  "description": [
+    "MemAvailable is the best estimation and has built-in heuristics",
+    "around reclaimable memory.  However, it is not available until 3.14",
+    "kernel (i.e. Ubuntu LTS Trusty misses it).  In that case, we fall",
+    "back to free+buffers+cache as the available memory."
+  ],
+  "language": "bash",
+  "tags": [],
+  "url": "https://opendev.org/openstack/devstack/src/branch/master/tools/memory_tracker.sh#L39"
+}

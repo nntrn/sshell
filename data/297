@@ -1,0 +1,20 @@
+{
+  "id": 297,
+  "title": "curl - search dictionaries ",
+  "created": "2022-05-03T09:05:14Z",
+  "modified": "2022-05-03T09:05:14Z",
+  "code": [
+    "# list dictionaries",
+    "curl dict://dict.org/show:db",
+    "",
+    "# search word in a specific dictionary",
+    "curl dict://dict.org/d:computer:fd-eng-tur",
+    ""
+  ],
+  "example": "",
+  "output": "",
+  "description": "",
+  "language": "bash",
+  "tags": [],
+  "url": "https://csonuryilmaz.github.io/curl/dict/2018/03/25/search-dictionary-from-command-line-(part1).html"
+}

@@ -1,0 +1,17 @@
+{
+  "id": 231,
+  "title": "list block devices",
+  "created": "2022-03-03T17:04:25Z",
+  "modified": "2022-03-23T21:26:37Z",
+  "code": [
+    "lsblk -a -p",
+    ""
+  ],
+  "example": "",
+  "output": "",
+  "description": "",
+  "language": "bash",
+  "tags": [
+    "system"
+  ]
+}

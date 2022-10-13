@@ -1,0 +1,20 @@
+{
+  "id": 193,
+  "title": "psql: cast json and pretty print",
+  "created": "2022-01-21T05:53:13Z",
+  "modified": "2022-03-16T18:53:10Z",
+  "code": [
+    "select jsonb_pretty(extra_data::jsonb) ",
+    "from main_joblaunchconfig where extra_data <> '{}';"
+  ],
+  "example": "",
+  "output": "",
+  "description": "",
+  "language": "sql",
+  "tags": [
+    "db",
+    "postgres",
+    "psql"
+  ],
+  "url": "https://stackoverflow.com/a/68679549/7460613"
+}

@@ -1,0 +1,16 @@
+{
+  "id": 171,
+  "title": "Get AD User from another domain (ldap)",
+  "created": "2021-12-06T22:06:14Z",
+  "modified": "2022-10-13T00:08:09Z",
+  "code": [
+    "Get-ADUser -Server amer.example.com -Identity annie_tran -Properties *"
+  ],
+  "example": "",
+  "output": "",
+  "description": "",
+  "language": "powershell",
+  "tags": [
+    "AD"
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "id": 160,
+  "title": "find js files in src/",
+  "created": "2021-11-08T23:23:08Z",
+  "modified": "2022-01-21T19:00:30Z",
+  "code": [
+    "find . -maxdepth 3 -type f -name \"*.js\" \\( -path \"*/src/*\" -and ! -regex \"*(node_modules|.git)*\" \\) -print",
+    ""
+  ],
+  "example": [
+    "$ find . -maxdepth 3 -type f -name \"*.js\" \\( -path \"*/src/*\" -and ! -regex \"*(node_modules|.git)*\" \\) -print"
+  ],
+  "output": "",
+  "description": "",
+  "language": "bash",
+  "tags": []
+}

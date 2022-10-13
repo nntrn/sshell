@@ -1,0 +1,15 @@
+{
+  "id": 17,
+  "title": "print = across the screen",
+  "created": "2021-03-14T19:01:21Z",
+  "modified": "2021-12-30T19:44:08Z",
+  "code": [
+    "printf '=%.0s' $(seq 1 $(tput cols))"
+  ],
+  "example": "",
+  "output": "",
+  "description": "",
+  "language": "bash",
+  "tags": [],
+  "url": "https://stackoverflow.com/a/60087216"
+}

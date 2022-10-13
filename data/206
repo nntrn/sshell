@@ -1,0 +1,16 @@
+{
+  "id": 206,
+  "title": "create csv from json (jq)",
+  "created": "2022-02-05T07:40:54Z",
+  "modified": "2022-02-05T07:40:54Z",
+  "code": [
+    "wget -qO- http://programminghistorian.org/assets/jq_rkm.json | jq -r '.artObjects[] | [.id, .title, .principalOrFirstMaker, .webImage.url] | @csv'",
+    ""
+  ],
+  "example": "",
+  "output": "",
+  "description": "",
+  "language": "bash",
+  "tags": [],
+  "url": "https://programminghistorian.org/en/lessons/json-and-jq"
+}

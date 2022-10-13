@@ -1,0 +1,20 @@
+{
+  "id": 192,
+  "title": "postgresql list and order tables by size",
+  "created": "2022-01-21T05:26:05Z",
+  "modified": "2022-01-24T17:16:06Z",
+  "code": [
+    "select table_name, pg_size_pretty( pg_relation_size(quote_ident(table_name)) )",
+    "from information_schema.tables",
+    "where table_schema = 'public'",
+    "order by pg_relation_size(quote_ident(table_name)) desc;"
+  ],
+  "example": "",
+  "output": "",
+  "description": "",
+  "language": "sql",
+  "tags": [
+    "db"
+  ],
+  "url": "https://stackoverflow.com/a/58916394/7460613"
+}

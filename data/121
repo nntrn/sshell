@@ -1,0 +1,14 @@
+{
+  "id": 121,
+  "title": "get all processes for user",
+  "created": "2021-09-11T06:29:56Z",
+  "modified": "2022-01-19T00:11:13Z",
+  "code": [
+    "ps -U $USER -u $USER u"
+  ],
+  "example": "",
+  "output": "",
+  "description": "",
+  "language": "bash",
+  "tags": []
+}

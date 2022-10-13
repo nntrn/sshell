@@ -1,0 +1,20 @@
+{
+  "id": 65,
+  "title": "get modification date for files in directory",
+  "created": "2021-07-06T21:09:04Z",
+  "modified": "2021-12-30T19:44:09Z",
+  "code": [
+    "for pb in $(find . -maxdepth 1 -type f -name \"*.yml\"); do",
+    "  mod=$(stat -c %y $pb)",
+    "  echo -e \"${mod%%\\ *}, ${pb##\\.\\/}\"",
+    "done",
+    ""
+  ],
+  "example": "",
+  "output": "",
+  "description": "",
+  "language": "bash",
+  "tags": [
+    "coreutils"
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "id": 128,
+  "title": "pmem (vscode mimics ps)",
+  "created": "2021-09-21T17:43:41Z",
+  "modified": "2022-01-10T16:02:12Z",
+  "code": [
+    "ps -ax -o pid=,ppid=,pcpu=,pmem=,command="
+  ],
+  "example": [
+    "$ ps -ax -o pid=,ppid=,pcpu=,pmem=,command= | grep -v '\\['"
+  ],
+  "output": "",
+  "description": "",
+  "language": "bash",
+  "tags": [],
+  "url": "https://example-my.sharepoint.com/home/ansible/.vscode-server/bin/379476f0e13988d90fab105c5c19e7abc8b1dea8/out/vs/base/node/ps.sh"
+}

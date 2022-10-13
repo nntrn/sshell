@@ -1,0 +1,14 @@
+{
+  "id": 275,
+  "title": "sssctl - get command usage from help",
+  "created": "2022-04-11T19:59:56Z",
+  "modified": "2022-04-11T19:59:56Z",
+  "code": [
+    "sssctl --help"
+  ],
+  "example": "",
+  "output": "",
+  "description": "",
+  "language": "bash",
+  "tags": []
+}

@@ -1,0 +1,36 @@
+{
+  "id": 312,
+  "title": "jq - get unique items based on key",
+  "created": "2022-05-11T03:26:14Z",
+  "modified": "2022-05-13T15:15:57Z",
+  "code": [
+    "echo '[{\"foo\": 1, \"bar\": 123}, {\"foo\": 1, \"bar\": 123}, {\"foo\": 4, \"bar\": 123}]' | jq 'unique_by(.foo)'"
+  ],
+  "example": [
+    "$ JSONSTRING='[{\"foo\": 1, \"bar\": 123}, {\"foo\": 1, \"bar\": 123}, {\"foo\": 4, \"bar\": 123}]'",
+    "",
+    "$ echo \"$JSONSTRING\" | jq 'unique_by(.foo)'",
+    "[",
+    "  {",
+    "    \"foo\": 1,",
+    "    \"bar\": 123",
+    "  },",
+    "  {",
+    "    \"foo\": 4,",
+    "    \"bar\": 123",
+    "  }",
+    "]",
+    "",
+    "$ echo \"$JSONSTRING\" | jq 'unique_by(.bar)'",
+    "[",
+    "  {",
+    "    \"foo\": 1,",
+    "    \"bar\": 123",
+    "  }",
+    "]"
+  ],
+  "output": "",
+  "description": "",
+  "language": "bash",
+  "tags": []
+}

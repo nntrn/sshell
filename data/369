@@ -1,0 +1,17 @@
+{
+  "id": 369,
+  "title": "Get-ADUser - get last password set for service accounts",
+  "created": "2022-07-29T23:43:23Z",
+  "modified": "2022-07-29T23:43:23Z",
+  "code": [
+    "Get-ADUser -Filter \"ownerID -eq 123456 -and employeeType -like 'Service'\"  -Properties * | FT  Name,PasswordLastSet"
+  ],
+  "example": "",
+  "output": "",
+  "description": "",
+  "language": "powershell",
+  "tags": [
+    "AD",
+    "ActiveDirectory"
+  ]
+}

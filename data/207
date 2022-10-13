@@ -1,0 +1,20 @@
+{
+  "id": 207,
+  "title": "build json using jq",
+  "created": "2022-02-05T08:56:09Z",
+  "modified": "2022-02-05T08:56:09Z",
+  "code": [
+    "str='delete delete modified other other other'",
+    "lstype=($(echo \"$str\"))",
+    "echo '{}' > files.json",
+    "",
+    "for i in ${lstype[@]}; do",
+    "  cat files.json | jq \".$i[.$i|length] |= . + {\\\"date\\\": \\\"$(date +%F%X)\\\"}\" >files.json",
+    "done"
+  ],
+  "example": "",
+  "output": "",
+  "description": "",
+  "language": "bash",
+  "tags": []
+}

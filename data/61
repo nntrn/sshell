@@ -1,0 +1,20 @@
+{
+  "id": 61,
+  "title": "get sorted size of directories in current working directory",
+  "created": "2021-06-19T08:57:57Z",
+  "modified": "2021-12-30T19:44:09Z",
+  "code": [
+    "du -h --max-depth=1 | sort -h"
+  ],
+  "example": "",
+  "output": "",
+  "description": [
+    "du: estimates file space usage recursively for directories",
+    "-h: human readable",
+    "--max-depth=1: so you only check for the directories within the current directory",
+    "",
+    "sort -hr: sorts it decreasingly"
+  ],
+  "language": "bash",
+  "tags": []
+}

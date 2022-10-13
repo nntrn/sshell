@@ -1,0 +1,17 @@
+{
+  "id": 286,
+  "title": "nmap - list open TCP ports ",
+  "created": "2022-04-21T16:41:59Z",
+  "modified": "2022-04-21T16:41:59Z",
+  "code": [
+    "nmap -sT -O  10.171.230.150"
+  ],
+  "example": "",
+  "output": "",
+  "description": "",
+  "language": "bash",
+  "tags": [
+    "network"
+  ],
+  "url": "https://www.cyberciti.biz/faq/unix-linux-check-if-port-is-in-use-command/"
+}

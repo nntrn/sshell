@@ -1,0 +1,16 @@
+{
+  "id": 64,
+  "title": "view workstation details",
+  "created": "2021-06-30T13:47:02Z",
+  "modified": "2021-12-30T19:44:09Z",
+  "code": [
+    "net config workstation"
+  ],
+  "example": "",
+  "output": "",
+  "description": "",
+  "language": "bash",
+  "tags": [
+    "example"
+  ]
+}

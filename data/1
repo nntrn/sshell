@@ -1,0 +1,17 @@
+{
+  "id": 1,
+  "title": "generate RSA key",
+  "created": "2021-02-23T05:07:43Z",
+  "modified": "2021-12-30T19:44:08Z",
+  "code": [
+    "openssl genpkey -out fd.key -algorithm RSA -pkeyopt rsa_keygen_bits:2048 -aes-128-cbc"
+  ],
+  "example": "",
+  "output": "",
+  "description": "",
+  "language": "bash",
+  "tags": [
+    "network"
+  ],
+  "url": "https://www.feistyduck.com/library/openssl-cookbook/online/ch-openssl.html"
+}
