@@ -7,7 +7,7 @@ REPO=$(basename ${REMOTE_URL%.git})
 BRANCH=data
 
 TMPDIR=$(mktemp -d)
-cat | tr -d '\r' >$TMPDIR/data.json
+cat $1 | tr -d '\r' >$TMPDIR/data.json
 cat $TMPDIR/data.json | jq -rc '.[]' >$TMPDIR/data.txt
 
 cd $TMPDIR || exit
@@ -32,7 +32,6 @@ cat $TMPDIR/$REPO/data.json | jq -r 'group_by(.language)|map({"\(.[0].language)"
 
 jq -r 'sort_by(.modified)|.[-1]|{"last_modified":.modified}' $TMPDIR/$REPO/data.json >$TMPDIR/$REPO/meta.json
 
-git config --local --list
 git add -A .
 git commit -m "Commit changes"
 git push
