@@ -12,6 +12,9 @@
   "example": "",
   "output": "",
   "description": "",
+  "command": [
+    "curl"
+  ],
   "language": "bash",
   "tags": [
     "api"

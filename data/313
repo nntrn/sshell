@@ -39,6 +39,9 @@
     "",
     "You can also use `telnet onofri.org 80`, as suggested in one of the other answers (It will give an error if the port is closed or filtered)."
   ],
+  "command": [
+    "nmap"
+  ],
   "language": "bash",
   "tags": [],
   "url": "https://superuser.com/a/769543/1608083"

@@ -23,6 +23,9 @@
     "Returns the hashed password as a string, which will be composed of characters from the same alphabet as the salt.",
     ""
   ],
+  "command": [
+    "python"
+  ],
   "language": "python",
   "tags": [],
   "url": "https://docs.python.org/3/library/crypt.html#crypt.crypt"

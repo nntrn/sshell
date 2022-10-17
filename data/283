@@ -11,6 +11,9 @@
   ],
   "output": "",
   "description": "",
+  "command": [
+    "journalctl"
+  ],
   "language": "bash",
   "tags": []
 }

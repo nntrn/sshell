@@ -24,6 +24,12 @@
   ],
   "output": "",
   "description": "",
+  "command": [
+    "ls",
+    "grep",
+    "sed",
+    "/'"
+  ],
   "language": "bash",
   "tags": [
     "system"

@@ -9,6 +9,10 @@
   "example": "",
   "output": "",
   "description": "",
+  "command": [
+    "export",
+    "xargs)"
+  ],
   "language": "bash",
   "tags": []
 }

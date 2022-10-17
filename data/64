@@ -7,8 +7,31 @@
     "net config workstation"
   ],
   "example": "",
-  "output": "",
+  "output": [
+    "Computer name                        \\\\W106697SN2",
+    "Full Computer name                   W106697SN2.aus.amer.example.com",
+    "User name                            Annie_Tran",
+    "",
+    "Workstation active on",
+    "        NetBT_Tcpip_{7DA4F954-2D1F-4BE8-A9D5-51D2B8AF6CA3} (025041000001)",
+    "        NetBT_Tcpip_{2A84C404-62BB-4AAE-A56E-D5ABB59695CE} (0A0027000008)",
+    "        NetBT_Tcpip_{4DA68DAB-C991-4242-9650-FDC527F75365} (7C7635661575)",
+    "",
+    "Software version                     Windows 10 Enterprise",
+    "",
+    "Workstation domain                   AMERICAS",
+    "Workstation Domain DNS Name          amer.example.com",
+    "Logon domain                         AMERICAS",
+    "",
+    "COM Open Timeout (sec)               0",
+    "COM Send Count (byte)                16",
+    "COM Send Timeout (msec)              250",
+    "The command completed successfully."
+  ],
   "description": "",
+  "command": [
+    "net"
+  ],
   "language": "bash",
   "tags": [
     "example"

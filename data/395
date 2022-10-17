@@ -15,6 +15,12 @@
   "example": "",
   "output": "",
   "description": "",
+  "command": [
+    "architecture=\"\"\ncase",
+    "grep",
+    "",
+    "architecture=\"arm\""
+  ],
   "language": "bash",
   "tags": [
     "arm",

@@ -7,8 +7,18 @@
     "echo '' | openssl s_client -connect awxserver02.us.example.com:443 2>/dev/null | openssl x509 -text -noout | grep -A 1 \"Public Key Algorithm\""
   ],
   "example": "",
-  "output": "",
+  "output": [
+    "$ echo '' | openssl s_client -connect awxserver02.us.example.com:443 2>/dev/null | openssl x509 -text -noout | grep -A 1 \"Public Key Algorithm\"",
+    "            Public Key Algorithm: rsaEncryption",
+    "                RSA Public-Key: (2048 bit)"
+  ],
   "description": "",
+  "command": [
+    "echo",
+    "openssl",
+    "openssl",
+    "grep"
+  ],
   "language": "bash",
   "tags": [
     "network"

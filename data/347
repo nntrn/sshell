@@ -13,6 +13,9 @@
   ],
   "output": "",
   "description": "",
+  "command": [
+    "python3"
+  ],
   "language": "python",
   "tags": []
 }

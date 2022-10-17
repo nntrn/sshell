@@ -18,6 +18,9 @@
   "example": "",
   "output": "",
   "description": "",
+  "command": [
+    "@echo"
+  ],
   "language": "cmd",
   "tags": [
     "example",

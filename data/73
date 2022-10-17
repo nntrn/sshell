@@ -9,6 +9,12 @@
   "example": "",
   "output": "",
   "description": "",
+  "command": [
+    "cat",
+    "grep",
+    "cut",
+    "sort"
+  ],
   "language": "bash",
   "tags": [
     "admin"

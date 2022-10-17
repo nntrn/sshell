@@ -12,6 +12,9 @@
     "Creating a zip archive from a directory",
     "The command line option -r adds files recursively. Thus, it allows to create a zip file from an entire (sub-)directory:"
   ],
+  "command": [
+    "zip"
+  ],
   "language": "bash",
   "tags": [
     "shell"

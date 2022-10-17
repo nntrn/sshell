@@ -11,6 +11,13 @@
   "description": [
     "This command will find all git repos in your current directory with a max depth of 3. Afterwards it will perform a git pull on the current branch for each of those repositories."
   ],
+  "command": [
+    "find",
+    "rev",
+    "cut",
+    "rev",
+    "xargs"
+  ],
   "language": "bash",
   "tags": [
     "git"

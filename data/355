@@ -73,6 +73,9 @@
     "",
     "WorkingDir - this is where you are dropped when running an interactive shell in the container."
   ],
+  "command": [
+    "docker"
+  ],
   "language": "bash",
   "tags": [
     "docker"

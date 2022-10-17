@@ -9,6 +9,9 @@
   "example": "",
   "output": "",
   "description": "",
+  "command": [
+    "cp"
+  ],
   "language": "bash",
   "tags": [],
   "url": "https://askubuntu.com/a/962511"

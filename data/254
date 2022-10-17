@@ -16,6 +16,9 @@
     "SGID = 2",
     "Sticky = 1"
   ],
+  "command": [
+    "find"
+  ],
   "language": "bash",
   "tags": [],
   "url": "https://www.redhat.com/sysadmin/suid-sgid-sticky-bit"

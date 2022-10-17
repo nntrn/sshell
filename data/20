@@ -7,10 +7,16 @@
     "netstat -pW"
   ],
   "example": "",
-  "output": "",
+  "output": [
+    "Active Internet connections (w/o servers)",
+    "Proto Recv-Q Send-Q Local Address           Foreign Address         State       PID/Program name"
+  ],
   "description": [
     "-p displays",
     "-W print wide (no trim)"
+  ],
+  "command": [
+    "netstat"
   ],
   "language": "bash",
   "tags": [

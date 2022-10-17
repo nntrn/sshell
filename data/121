@@ -9,6 +9,9 @@
   "example": "",
   "output": "",
   "description": "",
+  "command": [
+    "ps"
+  ],
   "language": "bash",
   "tags": []
 }

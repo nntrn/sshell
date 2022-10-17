@@ -10,8 +10,23 @@
   "example": [
     "$ find . -maxdepth 3 -type f -name \"*.js\" \\( -path \"*/src/*\" -and ! -regex \"*(node_modules|.git)*\" \\) -print"
   ],
-  "output": "",
+  "output": [
+    "./ansible-servicenow/src/linux-servers.js",
+    "./ansible-servicenow/src/parse.js",
+    "./ansible-servicenow/src/summary.js",
+    "./ansible-servicenow/src/utils.js",
+    "./dbv2-tests/src/change_request_data.js",
+    "./dbv2-tests/src/fetch.js",
+    "./dbv2-tests/src/utils.js",
+    "./pandoc-test/src/build.js",
+    "./pandoc-test/src/imagemin.js",
+    "./pandoc-test/src/utils.js"
+  ],
   "description": "",
+  "command": [
+    "find",
+    ".git)*\""
+  ],
   "language": "bash",
   "tags": []
 }

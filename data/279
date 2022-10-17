@@ -23,6 +23,9 @@
     "How do I create an MD5 or SHA1 digest of a file?",
     "Digests are created using the dgst option. I’ve seen several systems on which the OpenSSL dgst(1) man page does not accurately report the digest functions available via the local openssl binary. I suggest running openssl dgst -h to see which digests are actually available."
   ],
+  "command": [
+    "$"
+  ],
   "language": "bash",
   "tags": [
     "security"

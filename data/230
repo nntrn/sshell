@@ -50,6 +50,9 @@
     "     offset must be separated from the colon by at least one space to",
     "     avoid being confused with the ':-' expansion."
   ],
+  "command": [
+    "$"
+  ],
   "language": "bash",
   "tags": [
     "text"

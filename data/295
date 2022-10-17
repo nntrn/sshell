@@ -7,7 +7,12 @@
     "echo '[{\"id\": \"first\", \"val\": 1}, {\"id\": \"second\", \"val\": 2}]' | jq '.[] | select(.id == \"second\")'"
   ],
   "example": "",
-  "output": "",
+  "output": [
+    "{",
+    "  \"id\": \"second\",",
+    "  \"val\": 2",
+    "}"
+  ],
   "description": [
     "   select(boolean_expression)",
     "       The function select(foo) produces its input unchanged if foo returns true for that input, and produces no output otherwise.",
@@ -21,6 +26,11 @@
     "           jq ´.[] | select(.id == \"second\")´",
     "              [{\"id\": \"first\", \"val\": 1}, {\"id\": \"second\", \"val\": 2}]",
     "           => {\"id\": \"second\", \"val\": 2}"
+  ],
+  "command": [
+    "echo",
+    "jq",
+    "select(.id"
   ],
   "language": "bash",
   "tags": [

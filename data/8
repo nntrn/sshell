@@ -12,6 +12,9 @@
   ],
   "output": "",
   "description": "",
+  "command": [
+    "RPMURL='https://...'\nrpm"
+  ],
   "language": "bash",
   "tags": [
     "pkg"

@@ -29,6 +29,9 @@
   ],
   "output": "",
   "description": "",
+  "command": [
+    "echo"
+  ],
   "language": "bash",
   "tags": [],
   "url": "https://github.com/git/git/blob/master/ci/run-docker-build.sh"

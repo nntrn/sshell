@@ -24,6 +24,9 @@
   ],
   "output": "",
   "description": "",
+  "command": [
+    "GITLAB_PROJECT_TOKEN=glpat-9eAicfQ9HoLp2ilItrVZ\ngit"
+  ],
   "language": "bash",
   "tags": [
     "api",

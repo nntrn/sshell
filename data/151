@@ -15,6 +15,9 @@
   ],
   "output": "",
   "description": "",
+  "command": [
+    "realpath"
+  ],
   "language": "bash",
   "tags": []
 }

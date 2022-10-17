@@ -18,6 +18,9 @@
     "",
     "The third type of UUID is generated with the --md5 or --sha1 options, followed by --namespace namespace and --name name. The namespace may either be a well-known UUID, or else an alias to one of the well-known UUIDs defined in RFC 4122, that is @dns, @url, @oid, or @x500. The name is an arbitrary string value. The generated UUID is the digest of the concatenation of the namespace UUID and the name value, hashed with the MD5 or SHA1 algorithms. It is, therefore, a predictable value which may be useful when UUIDs are being used as handles or nonces for more complex values or values which shouldn’t be disclosed directly. See the RFC for more information."
   ],
+  "command": [
+    "uuidgen"
+  ],
   "language": "bash",
   "tags": [],
   "url": "https://github.com/util-linux/util-linux/blob/5de72a375cd59b55bde6243eb2e1fe62cc07e75e/misc-utils/uuidgen.1.adoc"

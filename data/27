@@ -77,6 +77,9 @@
     "       v     vsize        total VM size in KiB",
     "       y     priority     kernel scheduling priority"
   ],
+  "command": [
+    "ps"
+  ],
   "language": "bash",
   "tags": []
 }

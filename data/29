@@ -8,8 +8,25 @@
     "history | awk '{a[$COLUMN]++}END{for(i in a){print a[i] \" \" i}}' | sort -rn | head"
   ],
   "example": "",
-  "output": "",
+  "output": [
+    "149 ls",
+    "64 cat",
+    "53 pstree",
+    "53 find",
+    "50 ll",
+    "46 sed",
+    "43 history",
+    "22 echo",
+    "19 myproxy",
+    "19 if"
+  ],
   "description": "",
+  "command": [
+    "COLUMN=4\nhistory",
+    "awk",
+    "sort",
+    "head"
+  ],
   "language": "bash",
   "tags": []
 }

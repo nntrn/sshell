@@ -14,6 +14,13 @@
   ],
   "output": "",
   "description": "",
+  "command": [
+    "awk",
+    "grep",
+    "rescue)\"",
+    "sort",
+    "tail"
+  ],
   "language": "bash",
   "tags": [
     "admin"

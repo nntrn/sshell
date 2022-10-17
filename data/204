@@ -7,8 +7,17 @@
     "ps -efo pid"
   ],
   "example": "",
-  "output": "",
+  "output": [
+    "   PID",
+    " 64822",
+    " 67490",
+    " 64835",
+    " 68072"
+  ],
   "description": "",
+  "command": [
+    "ps"
+  ],
   "language": "bash",
   "tags": []
 }

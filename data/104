@@ -12,6 +12,9 @@
   "example": "",
   "output": "",
   "description": "",
+  "command": [
+    "tar"
+  ],
   "language": "bash",
   "tags": [],
   "url": "https://help.dreamhost.com/hc/en-us/articles/115002768331-UNIX-commands-Decompressing-files"

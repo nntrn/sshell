@@ -15,6 +15,9 @@
   ],
   "output": "",
   "description": "",
+  "command": [
+    "printf"
+  ],
   "language": "bash",
   "tags": [
     "date"

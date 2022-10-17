@@ -13,6 +13,9 @@
   "example": "",
   "output": "",
   "description": "",
+  "command": [
+    "#"
+  ],
   "language": "bash",
   "tags": [],
   "url": "https://github.com/ansible/product-demos/blob/master/playbooks/infrastructure/debug_info.yml"

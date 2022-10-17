@@ -11,6 +11,9 @@
   ],
   "output": "",
   "description": "",
+  "command": [
+    "iconv"
+  ],
   "language": "bash",
   "tags": []
 }

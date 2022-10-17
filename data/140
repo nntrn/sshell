@@ -9,6 +9,9 @@
   "example": "",
   "output": "",
   "description": "",
+  "command": [
+    "get-module"
+  ],
   "language": "powershell",
   "tags": []
 }

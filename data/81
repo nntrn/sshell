@@ -10,6 +10,9 @@
   "example": "",
   "output": "",
   "description": "",
+  "command": [
+    "encrypt"
+  ],
   "language": "bash",
   "tags": [
     "admin"

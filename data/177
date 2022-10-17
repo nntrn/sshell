@@ -18,6 +18,9 @@
     "no space left on device",
     ""
   ],
+  "command": [
+    "systemctl"
+  ],
   "language": "bash",
   "tags": [
     "docker"

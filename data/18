@@ -12,6 +12,13 @@
   ],
   "output": "",
   "description": "",
+  "command": [
+    "find",
+    "grep",
+    "\\.pyc",
+    "\\.pyo$)\"",
+    "xargs"
+  ],
   "language": "bash",
   "tags": [
     "python"

@@ -11,6 +11,10 @@
   "description": [
     "To encrypt the string ‘letmein’ read from stdin, add the vault ID ‘dev’ using the ‘dev’ vault password stored in a_password_file, and name the variable ‘db_password"
   ],
+  "command": [
+    "echo",
+    "ansible-vault"
+  ],
   "language": "bash",
   "tags": [],
   "url": "https://docs.ansible.com/ansible/latest/user_guide/vault.html"

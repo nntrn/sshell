@@ -18,6 +18,9 @@
     "http://api.sr2.pcf.example.com",
     "PCF Org"
   ],
+  "command": [
+    "cf"
+  ],
   "language": "bash",
   "tags": [
     "network"

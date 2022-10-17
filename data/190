@@ -16,6 +16,9 @@
   "example": "",
   "output": "",
   "description": "",
+  "command": [
+    "select"
+  ],
   "language": "sql",
   "tags": [
     "db"

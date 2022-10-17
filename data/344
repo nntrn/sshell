@@ -40,6 +40,9 @@
     "",
     "the command following exec didn't run, since the shell was replaced."
   ],
+  "command": [
+    "#"
+  ],
   "language": "bash",
   "tags": [],
   "url": "https://unix.stackexchange.com/a/296852/464659"

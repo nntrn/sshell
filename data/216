@@ -22,6 +22,9 @@
     "",
     "It is possible to change docker root directory by creating a systemd drop-in service file. This is useful when you want images and containers or docker generated files to be located in another partition or drive."
   ],
+  "command": [
+    "mkdir"
+  ],
   "language": "bash",
   "tags": [
     "docker"

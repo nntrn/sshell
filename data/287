@@ -9,6 +9,9 @@
   "example": "",
   "output": "",
   "description": "",
+  "command": [
+    "Get-ADGroupMember"
+  ],
   "language": "powershell",
   "tags": [],
   "url": "https://www.lepide.com/how-to/export-members-of-a-particular-ad-group-using-poweshell.html#:~:text=The%20PowerShell%20Get%2DADGroupMember%20cmdlet,group%20you%20want%20to%20use."

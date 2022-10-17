@@ -38,6 +38,9 @@
   ],
   "output": "",
   "description": "",
+  "command": [
+    "iptables"
+  ],
   "language": "bash",
   "tags": [
     "network"

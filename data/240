@@ -9,8 +9,15 @@
   "example": [
     "stat --printf='%U\\n%G\\n%z\\n' .git"
   ],
-  "output": "",
+  "output": [
+    "annie_tran",
+    "wheel",
+    "2022-03-08 18:39:51.177925946 -0600"
+  ],
   "description": "",
+  "command": [
+    "stat"
+  ],
   "language": "bash",
   "tags": [
     "text",

@@ -9,8 +9,14 @@
   "example": [
     "$ date -d @1638163336"
   ],
-  "output": "",
+  "output": [
+    "Sun Nov 28 23:22:16 CST 2021",
+    ""
+  ],
   "description": "",
+  "command": [
+    "date"
+  ],
   "language": "bash",
   "tags": [
     "date"

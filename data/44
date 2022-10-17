@@ -17,6 +17,10 @@
   "example": "",
   "output": "",
   "description": "",
+  "command": [
+    "shopt",
+    "while"
+  ],
   "language": "bash",
   "tags": [],
   "url": "https://stackoverflow.com/questions/1891797/capturing-groups-from-a-grep-regex"

@@ -17,6 +17,12 @@
   "example": "",
   "output": "",
   "description": "",
+  "command": [
+    "cat",
+    "grep",
+    "sed",
+    "sed"
+  ],
   "language": "bash",
   "tags": []
 }

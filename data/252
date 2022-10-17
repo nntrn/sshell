@@ -14,6 +14,9 @@
     "prereq:",
     "npm install -g  @prettier/plugin-xml prettier"
   ],
+  "command": [
+    "alias"
+  ],
   "language": "bash",
   "tags": [
     "linter"

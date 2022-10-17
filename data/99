@@ -10,8 +10,26 @@
     ""
   ],
   "example": "",
-  "output": "",
+  "output": [
+    "$ echo \"$abc\"",
+    "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#%^&*()_+=[]{}<>./?",
+    "",
+    "$ echo \"$key\"",
+    "9j/Ul!Tt*^37RXsONHu@WPMQ8Cy.1vw#=_BY%piJnh(+{r4KoF?zE]q&LZb5Ikcf0<aG>[mAd6)2xSgVD}e",
+    "",
+    "$ cryptic_msg=$(echo \"i love cary\" | tr \"$abc\" \"$key\")",
+    "",
+    "$ echo \"$cryptic_msg\" | tr \"$key\" \"$abc\"",
+    "i love cary"
+  ],
   "description": "",
+  "command": [
+    "$",
+    "tr",
+    "sed",
+    "shuf",
+    "tr"
+  ],
   "language": "bash",
   "tags": []
 }

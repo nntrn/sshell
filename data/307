@@ -20,6 +20,9 @@
     "              shows all processes at the (local) TELNET port.",
     ""
   ],
+  "command": [
+    "fuser"
+  ],
   "language": "bash",
   "tags": [],
   "url": "https://superuser.com/a/389252"

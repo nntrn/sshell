@@ -17,6 +17,9 @@
     "-ctime n",
     "File's status was last changed n*24 hours ago. "
   ],
+  "command": [
+    "find"
+  ],
   "language": "bash",
   "tags": [
     "fs"

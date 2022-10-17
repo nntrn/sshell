@@ -9,6 +9,13 @@
   "example": "",
   "output": "",
   "description": "",
+  "command": [
+    "unset",
+    "grep",
+    "export)\"",
+    "grep",
+    "cut"
+  ],
   "language": "bash",
   "tags": []
 }

@@ -12,6 +12,9 @@
   "example": "",
   "output": "",
   "description": "",
+  "command": [
+    "SOURCE=\"${BASH_SOURCE[0]}\"\nwhile"
+  ],
   "language": "bash",
   "tags": [],
   "url": "https://github.com/hashicorp/vault/blob/3dc8ef76b670aeb91654a7f7df709c8fd08ca1d0/scripts/build.sh"

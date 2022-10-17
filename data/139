@@ -11,6 +11,9 @@
   ],
   "output": "",
   "description": "",
+  "command": [
+    "ps"
+  ],
   "language": "bash",
   "tags": [],
   "url": "https://superuser.com/a/1352711"

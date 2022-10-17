@@ -9,6 +9,10 @@
   "example": "",
   "output": "",
   "description": "",
+  "command": [
+    "get-adgroup",
+    "Select"
+  ],
   "language": "powershell",
   "tags": []
 }

@@ -17,6 +17,9 @@
     "  fetch = +refs/heads/*:refs/remotes/origin/*",
     "```"
   ],
+  "command": [
+    "git"
+  ],
   "language": "bash",
   "tags": [
     "api",

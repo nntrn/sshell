@@ -11,6 +11,9 @@
   ],
   "output": "",
   "description": "",
+  "command": [
+    "powershell"
+  ],
   "language": "bash",
   "tags": []
 }

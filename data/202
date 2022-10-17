@@ -7,8 +7,22 @@
     " host -t ns example.com"
   ],
   "example": "",
-  "output": "",
+  "output": [
+    "example.com name server uslas06bcdnsdhcp01.us.example.com.",
+    "example.com name server uslas06bcdnsdhcp02.us.example.com.",
+    "example.com name server aus01dns02.us.example.com.",
+    "example.com name server aus01intmstr01.us.example.com.",
+    "example.com name server aus01dns01.us.example.com.",
+    "example.com name server uslhs03bcdnsdhcp02.us.example.com.",
+    "example.com name server aus08dns01.us.example.com.",
+    "example.com name server aus08dns02.us.example.com.",
+    "example.com name server uslhs03bcdnsdhcp01.us.example.com.",
+    ""
+  ],
   "description": "",
+  "command": [
+    "host"
+  ],
   "language": "bash",
   "tags": [
     "network"

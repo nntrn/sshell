@@ -12,6 +12,9 @@
   "example": "",
   "output": "",
   "description": "",
+  "command": [
+    "s/^/\"/g;"
+  ],
   "language": "bash",
   "tags": [],
   "url": "https://stackoverflow.com/a/59580100"

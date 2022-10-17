@@ -22,6 +22,12 @@
   ],
   "output": "",
   "description": "",
+  "command": [
+    "#",
+    "jq",
+    "jq",
+    ".[]'"
+  ],
   "language": "bash",
   "tags": [
     "jq"

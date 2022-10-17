@@ -10,6 +10,9 @@
   "example": "",
   "output": "",
   "description": "",
+  "command": [
+    "ps"
+  ],
   "language": "bash",
   "tags": [],
   "url": "https://unix.stackexchange.com/a/393198"

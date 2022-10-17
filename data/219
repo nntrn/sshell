@@ -7,9 +7,46 @@
     "ps xawf -eo pid,user,cgroup,args"
   ],
   "example": "",
-  "output": "",
+  "output": [
+    "35899 root     10:devices:/system.slice/co  \\_ containerd-shim -namespace moby -workdir /var/lib/containerd/io.containerd.runtime.v1",
+    " 35916 root     11:hugetlb:/docker/cd279976  |   \\_ /usr/bin/tini -- /bin/sh -c /usr/bin/launch_awx.sh",
+    " 35964 root     11:hugetlb:/docker/cd279976  |       \\_ bash /usr/bin/launch_awx.sh",
+    " 36237 root     11:hugetlb:/docker/cd279976  |           \\_ /usr/bin/python3.6 /usr/local/bin/supervisord -c /etc/supervisord.conf",
+    " 36244 root     11:hugetlb:/docker/cd279976  |               \\_ python3 /usr/bin/config-watcher",
+    " 36245 root     11:hugetlb:/docker/cd279976  |               \\_ nginx: master process nginx -g daemon off;",
+    " 36249 polkitd  11:hugetlb:/docker/cd279976  |               |   \\_ nginx: worker process",
+    " 36246 root     11:hugetlb:/docker/cd279976  |               \\_ /var/lib/awx/venv/awx/bin/uwsgi --socket 127.0.0.1:8050 --module=awx.",
+    " 36252 root     11:hugetlb:/docker/cd279976  |               |   \\_ /var/lib/awx/venv/awx/bin/uwsgi --socket 127.0.0.1:8050 --module=",
+    " 36253 root     11:hugetlb:/docker/cd279976  |               |   \\_ /var/lib/awx/venv/awx/bin/uwsgi --socket 127.0.0.1:8050 --module=",
+    " 36254 root     11:hugetlb:/docker/cd279976  |               |   \\_ /var/lib/awx/venv/awx/bin/uwsgi --socket 127.0.0.1:8050 --module=",
+    " 36255 root     11:hugetlb:/docker/cd279976  |               |   \\_ /var/lib/awx/venv/awx/bin/uwsgi --socket 127.0.0.1:8050 --module=",
+    " 36256 root     11:hugetlb:/docker/cd279976  |               |   \\_ /var/lib/awx/venv/awx/bin/uwsgi --socket 127.0.0.1:8050 --module=",
+    " 36247 root     11:hugetlb:/docker/cd279976  |               \\_ /var/lib/awx/venv/awx/bin/python3 /var/lib/awx/venv/awx/bin/daphne -b",
+    " 36248 root     11:hugetlb:/docker/cd279976  |               \\_ /var/lib/awx/venv/awx/bin/python3 /usr/bin/awx-manage run_wsbroadcast",
+    " 36051 root     10:devices:/system.slice/co  \\_ containerd-shim -namespace moby -workdir /var/lib/containerd/io.containerd.runtime.v1",
+    " 36068 root     11:hugetlb:/docker/12e8d10b      \\_ /usr/bin/tini -- /usr/bin/launch_awx_task.sh",
+    " 36125 root     11:hugetlb:/docker/12e8d10b          \\_ bash /usr/bin/launch_awx_task.sh",
+    " 36373 root     11:hugetlb:/docker/12e8d10b              \\_ /usr/bin/python3.6 /usr/local/bin/supervisord -c /etc/supervisord_task.co",
+    " 36411 root     11:hugetlb:/docker/12e8d10b                  \\_ python3 /usr/bin/config-watcher",
+    " 36412 root     11:hugetlb:/docker/12e8d10b                  \\_ /var/lib/awx/venv/awx/bin/python3 /usr/bin/awx-manage run_dispatcher",
+    " 36444 root     11:hugetlb:/docker/12e8d10b                  |   \\_ /var/lib/awx/venv/awx/bin/python3 /usr/bin/awx-manage run_dispatc",
+    " 36446 root     11:hugetlb:/docker/12e8d10b                  |   \\_ /var/lib/awx/venv/awx/bin/python3 /usr/bin/awx-manage run_dispatc",
+    " 36447 root     11:hugetlb:/docker/12e8d10b                  |   \\_ /var/lib/awx/venv/awx/bin/python3 /usr/bin/awx-manage run_dispatc",
+    " 36448 root     11:hugetlb:/docker/12e8d10b                  |   \\_ /var/lib/awx/venv/awx/bin/python3 /usr/bin/awx-manage run_dispatc",
+    " 36449 root     11:hugetlb:/docker/12e8d10b                  |   \\_ /var/lib/awx/venv/awx/bin/python3 /usr/bin/awx-manage run_dispatc",
+    " 36413 root     11:hugetlb:/docker/12e8d10b                  \\_ /var/lib/awx/venv/awx/bin/python3 /usr/bin/awx-manage run_callback_re",
+    " 36440 root     11:hugetlb:/docker/12e8d10b                      \\_ /var/lib/awx/venv/awx/bin/python3 /usr/bin/awx-manage run_callbac",
+    " 36441 root     11:hugetlb:/docker/12e8d10b                      \\_ /var/lib/awx/venv/awx/bin/python3 /usr/bin/awx-manage run_callbac",
+    " 36442 root     11:hugetlb:/docker/12e8d10b                      \\_ /var/lib/awx/venv/awx/bin/python3 /usr/bin/awx-manage run_callbac",
+    " 36443 root     11:hugetlb:/docker/12e8d10b                      \\_ /var/lib/awx/venv/awx/bin/python3 /usr/bin/awx-manage run_callbac",
+    " 34665 root     10:devices:/system.slice/do /usr/bin/dockerd -H fd:// --containerd=/run/containerd/containerd.sock",
+    ""
+  ],
   "description": [
     "n systemd we place every process that is spawned in a control group named after its service. Control groups (or cgroups) at their most basic are simply groups of processes that can be arranged in a hierarchy and labelled individually. When processes spawn other processes these children are automatically made members of the parents cgroup. Leaving a cgroup is not possible for unprivileged processes. Thus, cgroups can be used as an effective way to label processes after the service they belong to and be sure that the service cannot escape from the label, regardless how often it forks or renames itself. Furthermore this can be used to safely kill a service and all processes it created, again with no chance of escaping."
+  ],
+  "command": [
+    "ps"
   ],
   "language": "bash",
   "tags": [

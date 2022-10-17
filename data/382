@@ -14,6 +14,10 @@
   "example": "",
   "output": "",
   "description": "",
+  "command": [
+    "get-childitem",
+    "FL"
+  ],
   "language": "powershell",
   "tags": [
     "security"

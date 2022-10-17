@@ -9,6 +9,9 @@
   "example": "",
   "output": "",
   "description": "",
+  "command": [
+    "openssl"
+  ],
   "language": "bash",
   "tags": []
 }

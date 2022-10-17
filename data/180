@@ -16,6 +16,9 @@
     "UDP sockets are stateless, meaning they are either open or closed and every process’s connection is independent of those which occurred before and after. This is in contrast to TCP connection states such as LISTEN, ESTABLISHED and CLOSE_WAIT. The ss output above shows no UDP connections.",
     ""
   ],
+  "command": [
+    "ss"
+  ],
   "language": "bash",
   "tags": [
     "network"

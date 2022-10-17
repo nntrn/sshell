@@ -9,6 +9,11 @@
   "example": "",
   "output": "",
   "description": "",
+  "command": [
+    "docker",
+    "awk",
+    "tail"
+  ],
   "language": "bash",
   "tags": [
     "docker"

@@ -91,7 +91,13 @@
     "]",
     ""
   ],
-  "output": "",
+  "output": [
+    "{",
+    "  \"message\": \"1.2.0\",",
+    "  \"date\": \"2021-12-27T12:13:16Z\"",
+    "}",
+    ""
+  ],
   "description": [
     "We can use jq to extract just the first commit.",
     "$ curl 'https://api.github.com/repos/stedolan/jq/commits?per_page=5' | jq '.[0]'",
@@ -106,6 +112,11 @@
     "Now let's get the rest of the commits.",
     "",
     "$ jq '.[] | {message: .commit.message, name: .commit.committer.name}'"
+  ],
+  "command": [
+    "curl",
+    "jq",
+    "{message:"
   ],
   "language": "bash",
   "tags": [

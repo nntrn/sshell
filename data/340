@@ -19,6 +19,11 @@
     "",
     ""
   ],
+  "command": [
+    "[[",
+    "",
+    "echo"
+  ],
   "language": "bash",
   "tags": [],
   "url": "https://linuxize.com/post/how-to-compare-strings-in-bash/"

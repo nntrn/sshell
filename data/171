@@ -9,6 +9,9 @@
   "example": "",
   "output": "",
   "description": "",
+  "command": [
+    "Get-ADUser"
+  ],
   "language": "powershell",
   "tags": [
     "AD"

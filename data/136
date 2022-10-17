@@ -9,6 +9,9 @@
   "example": "",
   "output": "",
   "description": "",
+  "command": [
+    "Get-ADGroupMember"
+  ],
   "language": "powershell",
   "tags": [
     "ldap"

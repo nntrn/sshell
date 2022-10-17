@@ -9,6 +9,9 @@
   "example": "",
   "output": "",
   "description": "",
+  "command": [
+    "usermod"
+  ],
   "language": "bash",
   "tags": []
 }

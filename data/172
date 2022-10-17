@@ -10,6 +10,10 @@
   "example": "",
   "output": "",
   "description": "",
+  "command": [
+    "git",
+    "awk"
+  ],
   "language": "bash",
   "tags": [
     "git"

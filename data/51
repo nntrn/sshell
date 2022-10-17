@@ -13,6 +13,10 @@
   ],
   "output": "",
   "description": "",
+  "command": [
+    "ps",
+    "awk"
+  ],
   "language": "bash",
   "tags": [],
   "url": "https://stackoverflow.com/a/23118210"

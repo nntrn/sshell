@@ -20,6 +20,15 @@
   "example": "",
   "output": "",
   "description": "",
+  "command": [
+    "printcommands()",
+    "sed",
+    "grep",
+    "grep",
+    "*.exe$\"",
+    "grep",
+    "tee"
+  ],
   "language": "bash",
   "tags": []
 }

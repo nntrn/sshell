@@ -34,6 +34,9 @@
     "---",
     "URL: https://stackoverflow.com/a/5277575"
   ],
+  "command": [
+    "git"
+  ],
   "language": "bash",
   "tags": [
     "git"

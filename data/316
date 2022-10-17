@@ -30,6 +30,9 @@
   ],
   "output": "",
   "description": "",
+  "command": [
+    "csplit"
+  ],
   "language": "bash",
   "tags": [],
   "url": "https://www.gnu.org/software/coreutils/manual/html_node/csplit-invocation.html#csplit-invocation"

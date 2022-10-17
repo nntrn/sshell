@@ -16,6 +16,9 @@
     "",
     "To run a catchall benchmark, run it without any further options."
   ],
+  "command": [
+    "openssl"
+  ],
   "language": "bash",
   "tags": []
 }

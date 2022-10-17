@@ -48,6 +48,9 @@
     "-   This module should be run with elevated privileges on BSD systems to gather facts like ansible_product_version.",
     ""
   ],
+  "command": [
+    "#"
+  ],
   "language": "bash",
   "tags": [
     "ansible"

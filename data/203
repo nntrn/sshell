@@ -17,6 +17,9 @@
   "example": "",
   "output": "",
   "description": "",
+  "command": [
+    "case"
+  ],
   "language": "bash",
   "tags": [
     "utils"

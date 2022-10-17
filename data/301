@@ -15,6 +15,9 @@
     "",
     ""
   ],
+  "command": [
+    "find"
+  ],
   "language": "bash",
   "tags": []
 }

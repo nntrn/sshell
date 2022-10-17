@@ -11,6 +11,9 @@
   "description": [
     "slash at the end is very important"
   ],
+  "command": [
+    "vault"
+  ],
   "language": "bash",
   "tags": [
     "vault"

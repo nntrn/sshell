@@ -9,6 +9,9 @@
   "example": "",
   "output": "",
   "description": "",
+  "command": [
+    "docker"
+  ],
   "language": "bash",
   "tags": [
     "docker"

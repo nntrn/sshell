@@ -23,6 +23,11 @@
   "example": "",
   "output": "",
   "description": "",
+  "command": [
+    "dockerimagedir=\"docker-images-$(date",
+    "sed",
+    "awk"
+  ],
   "language": "bash",
   "tags": [
     "docker"

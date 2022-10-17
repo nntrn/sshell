@@ -23,6 +23,9 @@
   ],
   "output": "",
   "description": "",
+  "command": [
+    "function"
+  ],
   "language": "javascript",
   "tags": [
     "dom"

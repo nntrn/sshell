@@ -10,8 +10,19 @@
     "df -Ph . | tail -1 | awk '{print $4}'",
     ""
   ],
-  "output": "",
+  "output": [
+    "$ df -Ph . | tail -1 | awk '{print $4}'",
+    "16G",
+    "",
+    "$ df -Ph .",
+    "Filesystem      Size  Used Avail Use% Mounted on",
+    "overlay          20G  4.4G   16G  23% /",
+    ""
+  ],
   "description": "",
+  "command": [
+    "df"
+  ],
   "language": "bash",
   "tags": []
 }

@@ -13,6 +13,9 @@
   "example": "",
   "output": "",
   "description": "",
+  "command": [
+    "rsync"
+  ],
   "language": "bash",
   "tags": []
 }

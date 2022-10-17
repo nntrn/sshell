@@ -9,10 +9,16 @@
   "example": [
     "wget --no-parent -r http://images-http.us.example.com/images/repository/apps/git/git29_for_OL7.x/"
   ],
-  "output": "",
+  "output": [
+    "recursively creates the directory and files to:",
+    "./images-http.us.example.com/images/repository/apps/git/git29_for_OL7.x"
+  ],
   "description": [
     "recursively download a page ",
     "creates the "
+  ],
+  "command": [
+    "wget"
   ],
   "language": "bash",
   "tags": [

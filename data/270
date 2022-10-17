@@ -7,8 +7,18 @@
     "echo \"A,B,C,D,E,F,G,H,I,J,K,L,M,N,O\" | awk -v RS='[,\\n]' '{a=$0;getline b; getline c; print a,b,c}' OFS=,"
   ],
   "example": "",
-  "output": "",
+  "output": [
+    "A,B,C",
+    "D,E,F",
+    "G,H,I",
+    "J,K,L",
+    "M,N,O"
+  ],
   "description": "",
+  "command": [
+    "echo",
+    "awk"
+  ],
   "language": "bash",
   "tags": [],
   "url": "https://unix.stackexchange.com/a/430556"

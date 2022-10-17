@@ -20,6 +20,11 @@
   ],
   "output": "",
   "description": "",
+  "command": [
+    "$",
+    "openssl",
+    "openssl"
+  ],
   "language": "bash",
   "tags": [
     "security"

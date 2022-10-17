@@ -11,8 +11,22 @@
     ""
   ],
   "example": "",
-  "output": "",
+  "output": [
+    "2021-07-06, add-delete-userdb-mongodb.yml",
+    "2021-04-07, add-delete-userdb-mssql.yml",
+    "2021-04-07, add-delete-userdb-oracle.yml",
+    "2021-03-09, add-delete-userdb-postgres-role.yml",
+    "2021-06-17, add-delete-userdb-postgres.yml",
+    "2021-04-21, add-delete-userdb-postgres_old.yml",
+    "2021-04-21, add-patching-db-oracle-sanity.yml",
+    "2021-04-21, add-patching-db-oracle.yml",
+    "2021-02-11, ansible-gather-facts.yml",
+    "2021-04-07, backupschedule-create-mongo.ym"
+  ],
   "description": "",
+  "command": [
+    "for"
+  ],
   "language": "bash",
   "tags": [
     "coreutils"

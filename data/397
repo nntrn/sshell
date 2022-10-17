@@ -27,6 +27,13 @@
     "- https://www.commandlinefu.com/commands/view/6081/convert-ascii-string-to-hex",
     "- https://www.linuxshelltips.com/convert-hex-to-ascii-characters-linux/"
   ],
+  "command": [
+    "HEX_TEXT=68656c6c6f20776f726c64\nASCII_TEXT=\"hello",
+    "sed",
+    "xargs",
+    "od",
+    "tr"
+  ],
   "language": "bash",
   "tags": [],
   "url": "https://www.linuxshelltips.com/convert-hex-to-ascii-characters-linux/"

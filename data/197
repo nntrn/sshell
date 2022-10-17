@@ -26,6 +26,9 @@
     "",
     "Setting up the SSH Agent#"
   ],
+  "command": [
+    "Host"
+  ],
   "language": "config",
   "tags": [
     "network"

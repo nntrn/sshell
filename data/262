@@ -22,6 +22,9 @@
     "",
     "When @ is used and the expansion appears within double quotes, each variable name expands to a separate word."
   ],
+  "command": [
+    "${!prefix*}\n${!prefix@}"
+  ],
   "language": "bash",
   "tags": []
 }

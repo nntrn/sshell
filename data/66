@@ -9,6 +9,12 @@
   "example": "",
   "output": "",
   "description": "",
+  "command": [
+    "export",
+    "grep",
+    "export)\"",
+    "grep"
+  ],
   "language": "bash",
   "tags": []
 }

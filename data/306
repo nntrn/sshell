@@ -93,6 +93,9 @@
     "Verifying CSR Information",
     "After creating your CSR using your private key, we recommend verifying that the information contained in the CSR is correct and that the file hasn't been modified or corrupted."
   ],
+  "command": [
+    "#"
+  ],
   "language": "bash",
   "tags": [],
   "url": "https://www.digicert.com/kb/ssl-support/openssl-quick-reference-guide.htm"

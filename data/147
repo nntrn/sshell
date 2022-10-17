@@ -9,6 +9,13 @@
   "example": "",
   "output": "",
   "description": "",
+  "command": [
+    "rpm",
+    "awk",
+    "awk",
+    "sort",
+    "tail"
+  ],
   "language": "bash",
   "tags": []
 }

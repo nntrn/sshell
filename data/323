@@ -11,6 +11,9 @@
   "description": [
     "set -o igncr causes the shell ignore windows line endings (skip \\r). Another solution would be to fix the script by running dos2unix on it."
   ],
+  "command": [
+    "set"
+  ],
   "language": "bash",
   "tags": [],
   "url": "https://stackoverflow.com/a/35870173"

@@ -51,6 +51,9 @@
     "- /proc/net/ip_masquerade: masqueraded connections",
     "- /proc/net/snmp: statistics"
   ],
+  "command": [
+    "cat"
+  ],
   "language": "bash",
   "tags": []
 }

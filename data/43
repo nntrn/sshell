@@ -9,6 +9,17 @@
   "example": "",
   "output": "",
   "description": "",
+  "command": [
+    "docker",
+    "tac",
+    "tr",
+    "cut",
+    "sed",
+    "sed",
+    "sed",
+    "sed",
+    "head"
+  ],
   "language": "bash",
   "tags": [
     "docker"

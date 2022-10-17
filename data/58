@@ -22,8 +22,15 @@
     "echo \"$demo\" | c1",
     ""
   ],
-  "output": "",
+  "output": [
+    "a1",
+    "b1",
+    "c1"
+  ],
   "description": "",
+  "command": [
+    "alias"
+  ],
   "language": "bash",
   "tags": [
     "gnu"

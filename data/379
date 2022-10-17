@@ -23,6 +23,14 @@
   ],
   "output": "",
   "description": "",
+  "command": [
+    "eval",
+    "jq",
+    "to_entries",
+    ".[].value",
+    "@sh",
+    "tee"
+  ],
   "language": "bash",
   "tags": [
     "jq"

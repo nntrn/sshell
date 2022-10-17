@@ -9,6 +9,9 @@
   "example": "",
   "output": "",
   "description": "",
+  "command": [
+    "exe()"
+  ],
   "language": "bash",
   "tags": [],
   "url": "https://stackoverflow.com/a/23342259/7460613"

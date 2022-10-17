@@ -16,6 +16,9 @@
   ],
   "output": "",
   "description": "",
+  "command": [
+    "date"
+  ],
   "language": "bash",
   "tags": [
     "date"

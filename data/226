@@ -9,6 +9,11 @@
   "example": "",
   "output": "",
   "description": "",
+  "command": [
+    "systemctl",
+    "awk",
+    "xargs"
+  ],
   "language": "bash",
   "tags": [
     "service"

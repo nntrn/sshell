@@ -9,6 +9,9 @@
   "example": "",
   "output": "",
   "description": "",
+  "command": [
+    "ll"
+  ],
   "language": "bash",
   "tags": [
     "service"

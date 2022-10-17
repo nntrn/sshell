@@ -9,6 +9,11 @@
   "example": "",
   "output": "",
   "description": "",
+  "command": [
+    "sudo",
+    "grep",
+    "awk"
+  ],
   "language": "bash",
   "tags": []
 }

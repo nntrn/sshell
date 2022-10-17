@@ -17,6 +17,9 @@
     "",
     "unset \"${!myvarname@}\""
   ],
+  "command": [
+    "unset"
+  ],
   "language": "bash",
   "tags": [],
   "url": "https://stackoverflow.com/a/43126805"

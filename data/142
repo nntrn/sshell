@@ -9,6 +9,9 @@
   "example": "",
   "output": "",
   "description": "",
+  "command": [
+    "awx"
+  ],
   "language": "bash",
   "tags": [
     "ansible"

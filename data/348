@@ -17,6 +17,9 @@
   "description": [
     "This directive allows you to prevent the use of all HTTP methods, except the ones that you explicitly allow. Within a location block, you may want to restrict the use of some HTTP methods, such as forbidding clients from sending POST requests. You need to define two elements: first, the methods that are not forbidden (the allowed methods; all others will be forbidden); and second, the audience that is affected by the restriction"
   ],
+  "command": [
+    "location"
+  ],
   "language": "nginx",
   "tags": [],
   "url": "https://www.oreilly.com/library/view/nginx-http-server/9781788623551/75c3c065-0311-4c4c-a191-31fd1e344f78.xhtml"

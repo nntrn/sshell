@@ -16,6 +16,9 @@
   "description": [
     "What exec cmd does, is exactly the same as just running cmd, except that the current shell is replaced with the command, instead of a separate process being run."
   ],
+  "command": [
+    "bash"
+  ],
   "language": "bash",
   "tags": [],
   "url": "https://unix.stackexchange.com/a/296852"

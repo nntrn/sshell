@@ -13,6 +13,11 @@
     "",
     "Each netsh helper DLL provides an extensive set of features called a context, which is a group of commands specific to a networking server role or feature. These contexts extend the functionality of netsh by providing configuration and monitoring support for one or more services, utilities, or protocols. For example, Dhcpmon.dll provides netsh with the context and set of commands necessary to configure and manage DHCP servers."
   ],
+  "command": [
+    "netsh",
+    "grep",
+    "xargs"
+  ],
   "language": "cmd",
   "tags": [
     "windows"

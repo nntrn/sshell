@@ -11,6 +11,9 @@
   "example": "",
   "output": "",
   "description": "",
+  "command": [
+    "tar"
+  ],
   "language": "bash",
   "tags": []
 }

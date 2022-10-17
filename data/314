@@ -25,6 +25,9 @@
   ],
   "output": "",
   "description": "",
+  "command": [
+    "xargs"
+  ],
   "language": "bash",
   "tags": []
 }

@@ -43,6 +43,10 @@
   ],
   "output": "",
   "description": "",
+  "command": [
+    "jq",
+    "map(\"\\(.key)=\\(.value)\")"
+  ],
   "language": "bash",
   "tags": [],
   "url": "https://www.dormant.ninja/export-json-to-env/"

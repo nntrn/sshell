@@ -12,6 +12,11 @@
   "example": "",
   "output": "",
   "description": "",
+  "command": [
+    "$Self",
+    "sort-object",
+    "Format-Table"
+  ],
   "language": "powershell",
   "tags": [
     "AD"

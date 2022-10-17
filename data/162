@@ -9,6 +9,9 @@
   "example": "",
   "output": "",
   "description": "",
+  "command": [
+    "top"
+  ],
   "language": "bash",
   "tags": []
 }

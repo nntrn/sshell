@@ -9,6 +9,10 @@
   "example": "",
   "output": "",
   "description": "",
+  "command": [
+    "find",
+    "xargs"
+  ],
   "language": "bash",
   "tags": []
 }

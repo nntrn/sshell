@@ -16,6 +16,9 @@
   ],
   "output": "",
   "description": "",
+  "command": [
+    "openssl"
+  ],
   "language": "bash",
   "tags": [],
   "url": "https://letsencrypt.org/docs/certificates-for-localhost/"

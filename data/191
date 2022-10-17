@@ -9,6 +9,9 @@
   "example": "",
   "output": "",
   "description": "",
+  "command": [
+    "alias"
+  ],
   "language": "bash",
   "tags": [],
   "url": "https://linoxide.com/commands-clear-linux-terminal/"

@@ -10,8 +10,17 @@
     "$ ip a | grep inet",
     ""
   ],
-  "output": "",
+  "output": [
+    "    inet 127.0.0.1/8 scope host lo",
+    "    inet 10.171.230.150/22 brd 10.171.231.255 scope global noprefixroute em1",
+    "    inet 172.17.0.1/16 brd 172.17.255.255 scope global docker0",
+    "    inet 172.24.0.1/16 brd 172.24.255.255 scope global br-7ee3b3ed5e09"
+  ],
   "description": "",
+  "command": [
+    "/usr/sbin/ip",
+    "grep"
+  ],
   "language": "bash",
   "tags": [
     "network"

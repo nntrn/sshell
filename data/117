@@ -17,6 +17,9 @@
   "example": "",
   "output": "",
   "description": "",
+  "command": [
+    "name=\"John\"\necho"
+  ],
   "language": "bash",
   "tags": [
     "text"

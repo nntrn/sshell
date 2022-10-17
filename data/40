@@ -7,8 +7,19 @@
     "env | grep -o '^S[^=]*'"
   ],
   "example": "",
-  "output": "",
+  "output": [
+    "SHELL",
+    "SSH_CLIENT",
+    "SSH_TTY",
+    "SSH_AUTH_SOCK",
+    "SHLVL",
+    "SSH_CONNECTION"
+  ],
   "description": "",
+  "command": [
+    "env",
+    "grep"
+  ],
   "language": "bash",
   "tags": [],
   "url": "https://stackoverflow.com/a/43126805"

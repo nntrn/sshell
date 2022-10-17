@@ -23,6 +23,11 @@
   ],
   "output": "",
   "description": "",
+  "command": [
+    "CSV_FILE=https://raw.githubusercontent.com/jhsu98/json-csv-converter/master/MOCK_DATA.csv\n\n#",
+    "python",
+    "python"
+  ],
   "language": "python",
   "tags": []
 }

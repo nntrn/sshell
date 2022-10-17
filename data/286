@@ -7,8 +7,26 @@
     "nmap -sT -O  10.171.230.150"
   ],
   "example": "",
-  "output": "",
+  "output": [
+    "Starting Nmap 6.40 ( http://nmap.org ) at 2022-04-21 11:31 CDT",
+    "Nmap scan report for server.us.example.com (10.123.123.123)",
+    "Host is up (0.00047s latency).",
+    "Not shown: 992 closed ports",
+    "PORT     STATE SERVICE",
+    "22/tcp   open  ssh",
+    "80/tcp   open  http",
+    "111/tcp  open  rpcbind",
+    "443/tcp  open  https",
+    "3389/tcp open  ms-wbt-server",
+    "7937/tcp open  nsrexecd",
+    "7938/tcp open  lgtomapper",
+    "9100/tcp open  jetdirect",
+    ""
+  ],
   "description": "",
+  "command": [
+    "nmap"
+  ],
   "language": "bash",
   "tags": [
     "network"

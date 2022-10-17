@@ -17,6 +17,9 @@
   ],
   "output": "",
   "description": "",
+  "command": [
+    "date"
+  ],
   "language": "bash",
   "tags": [],
   "url": "https://stackoverflow.com/a/53326257/7460613"

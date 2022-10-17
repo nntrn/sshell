@@ -22,6 +22,9 @@
   "example": "",
   "output": "",
   "description": "",
+  "command": [
+    "$"
+  ],
   "language": "bash",
   "tags": [],
   "url": "https://stackoverflow.com/a/85903"

@@ -7,7 +7,9 @@
     "systemd-escape -u 'Hall\\xc3\\xb6chen\\x2c\\x20Meister'"
   ],
   "example": "",
-  "output": "",
+  "output": [
+    "Hallöchen, Meister"
+  ],
   "description": [
     "Escape a single string:",
     "",
@@ -30,6 +32,9 @@
     "systemd-nspawn@My\\x20Container\\x201.service systemd-nspawn@containerb.service systemd-nspawn@container-III.service",
     "",
     ""
+  ],
+  "command": [
+    "systemd-escape"
   ],
   "language": "bash",
   "tags": [

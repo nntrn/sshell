@@ -11,6 +11,9 @@
   ],
   "output": "",
   "description": "",
+  "command": [
+    "usermod"
+  ],
   "language": "bash",
   "tags": [
     "root"

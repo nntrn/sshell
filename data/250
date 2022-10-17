@@ -21,6 +21,10 @@
     "git reflog expire --expire=now",
     "git gc --prune=now"
   ],
+  "command": [
+    "git",
+    "grep"
+  ],
   "language": "bash",
   "tags": [
     "git"

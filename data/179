@@ -14,6 +14,10 @@
   "example": "",
   "output": "",
   "description": "",
+  "command": [
+    "echo",
+    "sendmail"
+  ],
   "language": "bash",
   "tags": []
 }

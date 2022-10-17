@@ -15,6 +15,11 @@
   "example": "",
   "output": "",
   "description": "",
+  "command": [
+    "tmppath=\"/tmp/$(date",
+    "sed",
+    "tee"
+  ],
   "language": "bash",
   "tags": []
 }

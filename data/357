@@ -22,6 +22,11 @@
     "https://awxserver.example.com/api/v2/hosts/<ID>/",
     "https://awxserver.example.com/api/v2/hosts/4613/"
   ],
+  "command": [
+    "docker",
+    "cat'\n\npsql",
+    "cat"
+  ],
   "language": "sql",
   "tags": [
     "db",

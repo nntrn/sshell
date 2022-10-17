@@ -22,6 +22,9 @@
   "description": [
     "On CentOS 8 (and RedHat 8), the commands below will also open HTTP, HTTPS and SSH access in the system firewall."
   ],
+  "command": [
+    "sudo"
+  ],
   "language": "bash",
   "tags": [
     "network"

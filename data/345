@@ -37,6 +37,9 @@
   ],
   "output": "",
   "description": "",
+  "command": [
+    "Object.fromEntries(document.cookie.split(';"
+  ],
   "language": "javascript",
   "tags": [],
   "url": "https://developer.mozilla.org/en-US/docs/Web/API/Document/cookie"

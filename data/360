@@ -16,6 +16,9 @@
     "",
     "easy way for sourcing key/value environment files "
   ],
+  "command": [
+    "set"
+  ],
   "language": "bash",
   "tags": [
     "environment"

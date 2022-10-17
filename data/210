@@ -11,6 +11,11 @@
   ],
   "output": "",
   "description": "",
+  "command": [
+    "Get-ADUser",
+    "Select",
+    "Export-CSV"
+  ],
   "language": "powershell",
   "tags": []
 }

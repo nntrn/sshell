@@ -33,6 +33,9 @@
     "-x: Exact match",
     "-f: Use a file for patterns"
   ],
+  "command": [
+    "grep"
+  ],
   "language": "bash",
   "tags": [],
   "url": "https://stackoverflow.com/a/72278813/7460613"

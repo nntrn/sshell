@@ -32,6 +32,9 @@
     "The -s flag defines the minimum number of special characters that must be in the password.   The  default",
     "is 1."
   ],
+  "command": [
+    "mkpasswd"
+  ],
   "language": "bash",
   "tags": []
 }

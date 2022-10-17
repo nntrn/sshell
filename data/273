@@ -13,6 +13,10 @@
   "description": [
     "%USERPROFILE%\\AppData\\Roaming\\Microsoft\\Windows\\PowerShell\\PSReadLine\\ConsoleHost_history.txt"
   ],
+  "command": [
+    "POWERSHELL_HISTORY=${USERPROFILE,\\\\,\\/,g}/AppData/Roaming/Microsoft/Windows/PowerShell/PSReadLine/ConsoleHost_history.txt\ncat",
+    "sed"
+  ],
   "language": "powershell",
   "tags": []
 }

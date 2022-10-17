@@ -21,6 +21,11 @@
   ],
   "output": "",
   "description": "",
+  "command": [
+    "jq",
+    "map(",
+    "add'"
+  ],
   "language": "bash",
   "tags": [
     "jq"

@@ -27,6 +27,9 @@
     "    $ openssl passwd -salt 8E MySecret",
     "    8E4vqBR4UOYF."
   ],
+  "command": [
+    "$"
+  ],
   "language": "bash",
   "tags": [
     "security"

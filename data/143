@@ -18,6 +18,9 @@
   ],
   "output": "",
   "description": "",
+  "command": [
+    "awk"
+  ],
   "language": "bash",
   "tags": [
     "admin"

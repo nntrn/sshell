@@ -9,6 +9,9 @@
   "example": "",
   "output": "",
   "description": "",
+  "command": [
+    "Get-ChildItem"
+  ],
   "language": "powershell",
   "tags": [],
   "url": "https://devblogs.microsoft.com/scripting/powertip-use-windows-powershell-to-display-all-environment-variables/"

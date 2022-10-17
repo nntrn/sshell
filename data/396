@@ -17,6 +17,9 @@
   "example": "",
   "output": "",
   "description": "",
+  "command": [
+    "cp"
+  ],
   "language": "bash",
   "tags": [
     "permissions",

@@ -26,6 +26,9 @@
     "Starting a sub-shell can also be a serious performance hit. You're launching a new process each time you call the function.",
     ""
   ],
+  "command": [
+    "$"
+  ],
   "language": "bash",
   "tags": [],
   "url": "https://stackoverflow.com/a/27802054"

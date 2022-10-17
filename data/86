@@ -13,6 +13,14 @@
   "example": "",
   "output": "",
   "description": "",
+  "command": [
+    "psql",
+    "awk",
+    "\"",
+    "grep",
+    "sort",
+    "tee"
+  ],
   "language": "bash",
   "tags": [
     "db"

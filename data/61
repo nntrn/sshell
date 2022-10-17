@@ -7,13 +7,28 @@
     "du -h --max-depth=1 | sort -h"
   ],
   "example": "",
-  "output": "",
+  "output": [
+    "0       ./.pki",
+    "0       ./.rapid7_tmp",
+    "0       ./t",
+    "4.0K    ./.ssh",
+    "116K    ./.ansible",
+    "4.4M    ./fcron-3.2.1",
+    "12M     ./.cache",
+    "442M    ./.awx",
+    "463M    .",
+    ""
+  ],
   "description": [
     "du: estimates file space usage recursively for directories",
     "-h: human readable",
     "--max-depth=1: so you only check for the directories within the current directory",
     "",
     "sort -hr: sorts it decreasingly"
+  ],
+  "command": [
+    "du",
+    "sort"
   ],
   "language": "bash",
   "tags": []

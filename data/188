@@ -7,8 +7,19 @@
     "Get-WmiObject -Class Win32_ComputerSystem -Property *"
   ],
   "example": "",
-  "output": "",
+  "output": [
+    "Domain              : amer.example.com",
+    "Manufacturer        : Inc.",
+    "Model               : Precision 5560",
+    "Name                : W101TL8YD3",
+    "PrimaryOwnerName    : example, Inc.",
+    "TotalPhysicalMemory : 34065952768",
+    ""
+  ],
   "description": "",
+  "command": [
+    "Get-WmiObject"
+  ],
   "language": "powershell",
   "tags": []
 }

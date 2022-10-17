@@ -18,6 +18,17 @@
   "example": "",
   "output": "",
   "description": "",
+  "command": [
+    "dockerprettyhist()",
+    "tac",
+    "tr",
+    "cut",
+    "sed",
+    "sed",
+    "sed",
+    "sed",
+    "head"
+  ],
   "language": "bash",
   "tags": [
     "docker"

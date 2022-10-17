@@ -15,6 +15,11 @@
   "example": "",
   "output": "",
   "description": "",
+  "command": [
+    "get_token()",
+    "sed",
+    "tee"
+  ],
   "language": "bash",
   "tags": [
     "ansible"

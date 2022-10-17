@@ -11,6 +11,9 @@
   "example": "",
   "output": "",
   "description": "",
+  "command": [
+    "git"
+  ],
   "language": "bash",
   "tags": [
     "git"

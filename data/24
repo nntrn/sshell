@@ -12,8 +12,14 @@
     "echo \"http%3A%2F%2Fwww\" | urldecode",
     "http://www"
   ],
-  "output": "",
+  "output": [
+    "http://www"
+  ],
   "description": "",
+  "command": [
+    "sed",
+    "xargs"
+  ],
   "language": "bash",
   "tags": [
     "coreutils"

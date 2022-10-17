@@ -23,6 +23,10 @@
   ],
   "output": "",
   "description": "",
+  "command": [
+    "cat",
+    "sed"
+  ],
   "language": "bash",
   "tags": []
 }

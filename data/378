@@ -23,6 +23,9 @@
   ],
   "output": "",
   "description": "",
+  "command": [
+    "find"
+  ],
   "language": "bash",
   "tags": [
     "filesys"

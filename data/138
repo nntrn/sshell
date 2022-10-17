@@ -15,6 +15,11 @@
   "example": "",
   "output": "",
   "description": "",
+  "command": [
+    "sha256()",
+    "awk",
+    "awk"
+  ],
   "language": "bash",
   "tags": [],
   "url": "https://github.com/containerd/containerd/blob/main/test/utils.sh"

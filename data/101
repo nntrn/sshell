@@ -19,6 +19,9 @@
   ],
   "output": "",
   "description": "",
+  "command": [
+    "systemctl"
+  ],
   "language": "bash",
   "tags": [
     "service"

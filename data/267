@@ -43,6 +43,9 @@
     "-iter 100000 is overriding the default count of iterations for the password, quoting the man page:",
     "Use a given number of iterations on the password in deriving the encryption key. High values increase the time required to brute-force the resulting file. This option enables the use of PBKDF2 algorithm to derive the key."
   ],
+  "command": [
+    "ENCRYPTEDFILE=.secrets.enc\nSALTFILE=.vault-password\nSECRETSFILE=.env\n\n#"
+  ],
   "language": "bash",
   "tags": [],
   "url": "https://askubuntu.com/a/1126882"

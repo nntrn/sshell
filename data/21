@@ -24,6 +24,9 @@
   ],
   "output": "",
   "description": "",
+  "command": [
+    "mail"
+  ],
   "language": "bash",
   "tags": [
     "coreutils"

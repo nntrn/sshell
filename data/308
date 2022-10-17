@@ -46,6 +46,9 @@
     "",
     "https://docs.github.com/en/rest/markdown#render-a-markdown-document"
   ],
+  "command": [
+    "curl"
+  ],
   "language": "bash",
   "tags": [
     "git"

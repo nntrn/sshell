@@ -14,6 +14,9 @@
     "kernel (i.e. Ubuntu LTS Trusty misses it).  In that case, we fall",
     "back to free+buffers+cache as the available memory."
   ],
+  "command": [
+    "awk"
+  ],
   "language": "bash",
   "tags": [],
   "url": "https://opendev.org/openstack/devstack/src/branch/master/tools/memory_tracker.sh#L39"

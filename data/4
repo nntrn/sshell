@@ -10,6 +10,12 @@
   "example": "",
   "output": "",
   "description": "",
+  "command": [
+    "STRING_MATCH=\"\"\nlsof",
+    "grep",
+    "awk",
+    "xargs"
+  ],
   "language": "bash",
   "tags": [
     "system"

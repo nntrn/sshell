@@ -27,6 +27,9 @@
     "",
     "NOTE: An operating system capable of running constantly for a long time without crashes or freeze-ups is a good one, and so having a high uptime value is a matter of pride for many Linux users. It is not uncommon to hear of systems that have been running for months and sometimes even years non-stop -- one Linux administrator reported on the Internet about one of his work systems, which had been running continuously without reboot for three years!"
   ],
+  "command": [
+    "last"
+  ],
   "language": "bash",
   "tags": []
 }

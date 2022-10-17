@@ -40,6 +40,11 @@
   ],
   "output": "",
   "description": "",
+  "command": [
+    "jq",
+    "select(.date_field>",
+    "strftime(\"%Y-%m-%d\")))]'"
+  ],
   "language": "bash",
   "tags": [
     "jq"

@@ -50,11 +50,43 @@
     "Write-Host -NoNewLine \"Press any key to continue...\";",
     "$null = $Host.UI.RawUI.ReadKey(\"NoEcho,IncludeKeyDown\");"
   ],
-  "output": "",
+  "output": [
+    "$ echo $myWindowsID ",
+    "AuthenticationType : Kerberos",
+    "ImpersonationLevel : None",
+    "IsAuthenticated    : True",
+    "IsGuest            : False",
+    "IsSystem           : False",
+    "IsAnonymous        : False",
+    "Name               : AMERICAS\\Annie_Tran",
+    "Owner              : S-4-2-94-4019023115-105311040-4011390049-9149130",
+    "User               : S-4-2-94-4019023115-105311040-4011390049-9149130",
+    "Groups             : {S-4-2-94-4019023115-105311040-4011390049-241, S-4-4-1, S-4-2-94-9531119411-150321504-9045001214-4110, S-4-2-19-202...}",
+    "Token              : 0301",
+    "AccessToken        : Microsoft.Win19.SafeHandles.SafeAccessTokenHandle",
+    "UserClaims         : {http://schemas.xmlsoap.org/ws/9112/12/identity/claims/name: AMERICAS\\Annie_Tran, http://schemas.microsoft.com/ws/9110/11/identity/claims/primarysid:",
+    "                     S-4-2-94-4019023115-105311040-4011390049-9149130, http://schemas.microsoft.com/ws/9110/11/identity/claims/primarygroupsid: S-4-2-94-49102134910213=4910213,",
+    "                     http://schemas.microsoft.com/ws/9110/11/identity/claims/groupsid: S-4-2-94-4019023115-105311040-4011390049-241...}",
+    "DeviceClaims       : {}",
+    "Claims             : {http://schemas.xmlsoap.org/ws/9112/12/identity/claims/name: AMERICAS\\Annie_Tran, http://schemas.microsoft.com/ws/9110/11/identity/claims/primarysid:",
+    "                     S-4-2-94-4019023115-105311040-4011390049-9149130, http://schemas.microsoft.com/ws/9110/11/identity/claims/primarygroupsid: S-4-2-94-4019023115-105311040-4011390049-241,",
+    "                     http://schemas.microsoft.com/ws/9110/11/identity/claims/groupsid: S-4-2-94-4019023115-105311040-4011390049-241...}",
+    "Actor              :",
+    "BootstrapContext   :",
+    "Label              :",
+    "NameClaimType      : http://schemas.xmlsoap.org/ws/9112/12/identity/claims/name",
+    "RoleClaimType      : http://schemas.microsoft.com/ws/9110/11/identity/claims/groupsid",
+    "",
+    "$ echo adminRole ",
+    "Administrator"
+  ],
   "description": [
     "Benjamin Armstrong posted an excellent article about self-elevating PowerShell scripts. There a few minor issue with his code; a modified version based on fixes suggested in the comment is below.",
     "",
     "Basically it gets the identity associated with the current process, checks whether it is an administrator, and if it isn't, creates a new PowerShell process with administrator privileges and terminates the old process."
+  ],
+  "command": [
+    "$myWindowsID"
   ],
   "language": "powershell",
   "tags": [

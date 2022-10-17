@@ -16,6 +16,9 @@
     "* -s 2: the signal to send when the timer has exceeded, it can be a number or the name. Equally valid would have been -s SIGINT (more on the kill signals below)",
     "* 10: the duration the script can run, before the kill signal described above is sent to it."
   ],
+  "command": [
+    "/bin/timeout"
+  ],
   "language": "bash",
   "tags": [],
   "url": "https://ma.ttias.be/limit-runtime-cronjob-script/"

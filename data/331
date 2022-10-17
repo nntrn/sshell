@@ -7,10 +7,33 @@
     "curl -s \"https://jsonplaceholder.typicode.com/posts\" | python3 -c \"import sys, json; data=json.load(sys.stdin); x = [{'id': d['id'], 'title': d['title']} for d in data]; print(json.dumps(x, indent=2))\""
   ],
   "example": "",
-  "output": "",
+  "output": [
+    "[",
+    "  {",
+    "    \"id\": 1,",
+    "    \"title\": \"sunt aut facere repellat provident occaecati excepturi optio reprehenderit\"",
+    "  },",
+    "  {",
+    "    \"id\": 2,",
+    "    \"title\": \"qui est esse\"",
+    "  },",
+    "  {",
+    "    \"id\": 3,",
+    "    \"title\": \"ea molestias quasi exercitationem repellat qui ipsa sit aut\"",
+    "  },",
+    "  {",
+    "    \"id\": 4,",
+    "    \"title\": \"eum et est occaecati\"",
+    "  }",
+    "]"
+  ],
   "description": [
     "similar to ",
     "jq 'with_entries(.[]|select([.key] | inside([\"id\", \"title\"])))'"
+  ],
+  "command": [
+    "curl",
+    "python3"
   ],
   "language": "python",
   "tags": []

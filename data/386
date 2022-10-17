@@ -16,6 +16,9 @@
   "example": "",
   "output": "",
   "description": "",
+  "command": [
+    "YUM_OPTIONS=\"--disablerepo=*"
+  ],
   "language": "bash",
   "tags": []
 }

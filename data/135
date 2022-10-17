@@ -17,6 +17,9 @@
   "example": "",
   "output": "",
   "description": "",
+  "command": [
+    "from"
+  ],
   "language": "python",
   "tags": [
     "ansible"

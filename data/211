@@ -7,8 +7,36 @@
     "du -h -d 1 ."
   ],
   "example": "",
-  "output": "",
+  "output": [
+    "132K    ./.ssh",
+    "2.6M    ./.ansible",
+    "0       ./.local",
+    "43M     ./playbooks",
+    "24K     ./host_vars2",
+    "14M     ./.cache",
+    "4.0K    ./.config",
+    "24M     ./.npm",
+    "0       ./.pki",
+    "0       ./.puppetlabs",
+    "4.0K    ./.docker",
+    "290M    ./ansible_setup",
+    "2.4M    ./ansible_db",
+    "62M     ./db-playbooks",
+    "8.0K    ./.gnupg",
+    "304K    ./oradiag_ansible",
+    "82M     ./scm",
+    "160K    ./example_ansible_starter",
+    "1.6M    ./ansible_dbaseceng",
+    "36K     ./.secrets",
+    "20K     ./ssh-expect",
+    "362M    ./.vscode-server",
+    "890M    .",
+    ""
+  ],
   "description": "",
+  "command": [
+    "du"
+  ],
   "language": "bash",
   "tags": [
     "fs"

@@ -16,6 +16,9 @@
   ],
   "output": "",
   "description": "",
+  "command": [
+    "bash"
+  ],
   "language": "bash",
   "tags": [],
   "url": "https://unix.stackexchange.com/a/296852"

@@ -10,6 +10,9 @@
   "example": "",
   "output": "",
   "description": "",
+  "command": [
+    "mount"
+  ],
   "language": "bash",
   "tags": [
     "docker"

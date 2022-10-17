@@ -10,8 +10,16 @@
     "Get-WMIObject -Class Win32_Bios"
   ],
   "example": "",
-  "output": "",
+  "output": [
+    "serialnumber",
+    "------------",
+    "1TL8YD3"
+  ],
   "description": "",
+  "command": [
+    "Get-WmiObject",
+    "select"
+  ],
   "language": "powershell",
   "tags": [
     "example"

@@ -9,6 +9,9 @@
   "example": "",
   "output": "",
   "description": "",
+  "command": [
+    "dism"
+  ],
   "language": "cmd",
   "tags": [
     "example"

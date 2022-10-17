@@ -13,6 +13,15 @@
   "description": [
     "The SSH extension provides a command for cleaning up the VS Code Server from the remote machine, Remote-SSH: Uninstall VS Code Server from Host.... The command does two things: it kills any running VS Code Server processes and it deletes the folder where the server was installed."
   ],
+  "command": [
+    "kill",
+    "grep",
+    "grep",
+    "awk",
+    "grep",
+    "grep",
+    "awk"
+  ],
   "language": "bash",
   "tags": [
     "vscode"

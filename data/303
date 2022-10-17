@@ -7,8 +7,30 @@
     "Get-WindowsUpdateLog "
   ],
   "example": "",
-  "output": "",
+  "output": [
+    "$ Get-WindowsUpdateLog",
+    "",
+    "Converting C:\\WINDOWS\\logs\\WindowsUpdate into C:\\Users\\annie_tran.AMERICAS\\Desktop\\WindowsUpdate.log ...",
+    "",
+    "Input",
+    "----------------",
+    "File(s):",
+    "     C:\\WINDOWS\\logs\\WindowsUpdate\\WindowsUpdate.20220503.214730.316.3.etl",
+    "     C:\\WINDOWS\\logs\\WindowsUpdate\\WindowsUpdate.20220503.214730.316.4.etl",
+    "     C:\\WINDOWS\\logs\\WindowsUpdate\\WindowsUpdate.20220503.214730.316.5.etl",
+    "     C:\\WINDOWS\\logs\\WindowsUpdate\\WindowsUpdate.20220503.214730.316.6.etl",
+    "     C:\\WINDOWS\\logs\\WindowsUpdate\\WindowsUpdate.20220503.214730.316.7.etl",
+    "     C:\\WINDOWS\\logs\\WindowsUpdate\\WindowsUpdate.20220503.222330.468.1.etl",
+    "     C:\\WINDOWS\\logs\\WindowsUpdate\\WindowsUpdate.20220503.231030.187.1.etl",
+    "     C:\\WINDOWS\\logs\\WindowsUpdate\\WindowsUpdate.20220503.231030.187.2.etl",
+    "     C:\\WINDOWS\\logs\\WindowsUpdate\\WindowsUpdate.20220503.231030.187.3.etl",
+    "     C:\\WINDOWS\\logs\\WindowsUpdate\\WindowsUpdate.20220503.232525.203.1.etl",
+    ""
+  ],
   "description": "",
+  "command": [
+    "Get-WindowsUpdateLog"
+  ],
   "language": "powershell",
   "tags": []
 }

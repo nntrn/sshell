@@ -9,6 +9,9 @@
   "example": "",
   "output": "",
   "description": "",
+  "command": [
+    "awk"
+  ],
   "language": "bash",
   "tags": [],
   "url": "https://stackoverflow.com/a/11532197"

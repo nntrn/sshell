@@ -2,6 +2,7 @@
 
 ## bash
 
+- [402](data/402): jq - convert kv to json froms stdin
 - [401](data/401): jq group by example
 - [400](data/400): jq - recursively slice array values to get first child only
 - [399](data/399): jq - merge files 

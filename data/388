@@ -7,8 +7,20 @@
     "ss -o state established '( dport = :ssh or sport = :ssh )'"
   ],
   "example": "",
-  "output": "",
+  "output": [
+    "Netid        Recv-Q        Send-Q                Local Address:Port                Peer Address:Port        Process",
+    "tcp          0             0                    10.171.232.150:ssh                10.135.192.91:59187        timer:(keepalive,114min,0)",
+    "tcp          0             0                    10.171.232.150:ssh                10.135.192.91:61393        timer:(keepalive,81min,0)",
+    "tcp          0             48                   10.171.232.150:ssh                10.135.192.91:55065        timer:(on,252ms,0)",
+    "mptcp        0             0                    10.171.232.150:ssh                10.135.192.91:59187        timer:(keepalive,114min,0)",
+    "mptcp        0             0                    10.171.232.150:ssh                10.135.192.91:61393        timer:(keepalive,81min,0)",
+    "mptcp        0             48                   10.171.232.150:ssh                10.135.192.91:55065        timer:(on,251ms,0)",
+    ""
+  ],
   "description": "",
+  "command": [
+    "ss"
+  ],
   "language": "bash",
   "tags": [
     "network"

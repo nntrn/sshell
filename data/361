@@ -15,6 +15,10 @@
   ],
   "output": "",
   "description": "",
+  "command": [
+    "<list",
+    "zip"
+  ],
   "language": "bash",
   "tags": []
 }

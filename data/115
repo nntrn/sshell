@@ -32,6 +32,9 @@
   ],
   "output": "",
   "description": "",
+  "command": [
+    "ss"
+  ],
   "language": "bash",
   "tags": []
 }

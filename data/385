@@ -38,6 +38,9 @@
   "example": "",
   "output": "",
   "description": "",
+  "command": [
+    "$"
+  ],
   "language": "bash",
   "tags": [],
   "url": "https://www.baeldung.com/linux/locale-environment-variables"

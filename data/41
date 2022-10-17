@@ -9,6 +9,10 @@
   "example": "",
   "output": "",
   "description": "",
+  "command": [
+    "pip",
+    "grep"
+  ],
   "language": "bash",
   "tags": [
     "python"

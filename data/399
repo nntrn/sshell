@@ -27,6 +27,9 @@
   ],
   "output": "",
   "description": "",
+  "command": [
+    "jq"
+  ],
   "language": "bash",
   "tags": [
     "jq"

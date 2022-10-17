@@ -12,6 +12,10 @@
   "example": "",
   "output": "",
   "description": "",
+  "command": [
+    "python3",
+    "python3"
+  ],
   "language": "bash",
   "tags": [
     "python"

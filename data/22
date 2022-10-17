@@ -13,6 +13,9 @@
   ],
   "output": "",
   "description": "",
+  "command": [
+    "useradd"
+  ],
   "language": "bash",
   "tags": [
     "coreutils"

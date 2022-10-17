@@ -11,6 +11,9 @@
   "example": "",
   "output": "",
   "description": "",
+  "command": [
+    "echo"
+  ],
   "language": "bash",
   "tags": [],
   "url": "https://stackoverflow.com/a/9057392"

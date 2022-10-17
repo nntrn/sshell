@@ -74,6 +74,9 @@
   "description": [
     "List the package specific scriptlet(s) that are used as part of the installation and uninstallation processes."
   ],
+  "command": [
+    "rpm"
+  ],
   "language": "bash",
   "tags": [
     "package"

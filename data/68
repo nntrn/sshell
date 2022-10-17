@@ -19,6 +19,11 @@
   ],
   "output": "",
   "description": "",
+  "command": [
+    "getsame()",
+    "cut",
+    "tr"
+  ],
   "language": "bash",
   "tags": [],
   "url": "https://stackoverflow.com/a/6973595/7460613"

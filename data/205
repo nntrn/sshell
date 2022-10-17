@@ -7,8 +7,20 @@
     "ps -o pid=''"
   ],
   "example": "",
-  "output": "",
+  "output": [
+    "$ ps -o pid=X",
+    "     X",
+    " 29015",
+    " 70109",
+    "",
+    "$ ps -o pid=''",
+    " 29015",
+    " 70138"
+  ],
   "description": "",
+  "command": [
+    "ps"
+  ],
   "language": "bash",
   "tags": [
     "utils"

@@ -7,8 +7,35 @@
     "ansible-config dump | grep -v '\\(default\\)' | sed 's,(.*cfg),,g'"
   ],
   "example": "",
-  "output": "",
+  "output": [
+    "ANSIBLE_SSH_ARGS = -C -o ControlMaster=auto -o ControlPersist=60s -o StrictHostKeyChecking=no",
+    "ANSIBLE_SSH_CONTROL_PATH = %(directory)s/%%h-%%r",
+    "ANSIBLE_SSH_CONTROL_PATH_DIR = ~/.ansible/cp",
+    "ANSIBLE_SSH_RETRIES = 1",
+    "COMMAND_WARNINGS = False",
+    "DEFAULT_BECOME_ASK_PASS = False",
+    "DEFAULT_GATHERING = explicit",
+    "DEFAULT_LOG_PATH(env: ANSIBLE_LOG_PATH) = /u01/ansible_logs/2022-03-03.log",
+    "DEFAULT_MANAGED_STR = Ansible managed: {file} modified on %Y-%m-%d %H:%M:%S by {uid} on {host}",
+    "DEFAULT_TIMEOUT = 10",
+    "DEFAULT_VAULT_PASSWORD_FILE = ~/.vault-password",
+    "DEPRECATION_WARNINGS = False",
+    "HOST_KEY_CHECKING = False",
+    "INTERPRETER_PYTHON = auto_silent",
+    "INVENTORY_ENABLED = ['ini', 'host_list', 'yaml', 'constructed']",
+    "INVENTORY_IGNORE_EXTS = ['.pyc', '.pyo', '.swp', '.bak', '~', '.rpm', '.md', '.txt', '~', '.orig', '.cfg', '.retry']",
+    "MAX_FILE_SIZE_FOR_DIFF = 3145728",
+    "RETRY_FILES_ENABLED = True",
+    "RETRY_FILES_SAVE_PATH = ~/.ansible-retry",
+    "SYSTEM_WARNINGS = False",
+    ""
+  ],
   "description": "",
+  "command": [
+    "ansible-config",
+    "grep",
+    "sed"
+  ],
   "language": "bash",
   "tags": [
     "ansible"

@@ -22,6 +22,9 @@
     "  else f",
     "  end;"
   ],
+  "command": [
+    "jq"
+  ],
   "language": "bash",
   "tags": [
     "jq"

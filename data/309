@@ -34,6 +34,9 @@
     "`--keep-largest-pack`",
     "All packs except the largest pack and those marked with a `.keep` files are consolidated into a single pack. When this option is used, `gc.bigPackThreshold` is ignored."
   ],
+  "command": [
+    "git"
+  ],
   "language": "bash",
   "tags": [
     "git"

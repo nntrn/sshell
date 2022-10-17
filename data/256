@@ -11,6 +11,9 @@
   "description": [
     "taken from `vault token renew -increment=24h -output-curl-string`"
   ],
+  "command": [
+    "curl"
+  ],
   "language": "bash",
   "tags": [
     "hc-vault",

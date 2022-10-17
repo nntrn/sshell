@@ -11,6 +11,9 @@
   "description": [
     "Run foo with a reduced environment, preserving only the original PATH to avoid problems in locating foo."
   ],
+  "command": [
+    "env"
+  ],
   "language": "bash",
   "tags": [],
   "url": "https://www.gnu.org/software/coreutils/manual/coreutils.html#env-invocation"

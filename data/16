@@ -9,6 +9,11 @@
   "example": "",
   "output": "",
   "description": "",
+  "command": [
+    "find",
+    "cut",
+    "xargs"
+  ],
   "language": "bash",
   "tags": [
     "system"

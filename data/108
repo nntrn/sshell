@@ -10,6 +10,15 @@
   "example": "",
   "output": "",
   "description": "",
+  "command": [
+    "eval",
+    "grep",
+    "sed",
+    "sed",
+    "grep",
+    "sort",
+    "tail"
+  ],
   "language": "bash",
   "tags": []
 }

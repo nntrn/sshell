@@ -20,6 +20,9 @@
   ],
   "output": "",
   "description": "",
+  "command": [
+    "rpm"
+  ],
   "language": "bash",
   "tags": []
 }

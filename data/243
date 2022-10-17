@@ -28,6 +28,9 @@
   ],
   "output": "",
   "description": "",
+  "command": [
+    "echo"
+  ],
   "language": "bash",
   "tags": [
     "security"

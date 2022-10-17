@@ -44,6 +44,9 @@
   ],
   "output": "",
   "description": "",
+  "command": [
+    "#"
+  ],
   "language": "bash",
   "tags": [
     "text",

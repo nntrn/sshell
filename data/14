@@ -20,6 +20,11 @@
     "ls command: get a recursive full-path listing, one line per file",
     ""
   ],
+  "command": [
+    "ls",
+    "awk",
+    "grep"
+  ],
   "language": "bash",
   "tags": [
     "system"

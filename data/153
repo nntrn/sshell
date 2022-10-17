@@ -7,8 +7,19 @@
     "getfacl linux"
   ],
   "example": "",
-  "output": "",
+  "output": [
+    "# file: linux",
+    "# owner: annie_tran",
+    "# group: annie_tran",
+    "user::rwx",
+    "group::rwx",
+    "other::r-x",
+    ""
+  ],
   "description": "",
+  "command": [
+    "getfacl"
+  ],
   "language": "bash",
   "tags": []
 }

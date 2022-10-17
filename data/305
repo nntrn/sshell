@@ -7,7 +7,29 @@
     "fsutil resource info C:"
   ],
   "example": "",
-  "output": "",
+  "output": [
+    "Resource Manager Identifier :      F3292104-1D58-11EC-96F2-381428BEAE7E",
+    "KTM Log Path for RM:  \\Device\\HarddiskVolume3\\$Extend\\$RmMetadata\\$TxfLog\\$TxfLog::KtmLog",
+    "Space used by TOPS:   1 Mb",
+    "TOPS free space:      100%",
+    "RM State:             Active",
+    "Running transactions: 0",
+    "One phase commits:    2",
+    "Two phase commits:    0",
+    "System initiated rollbacks: 0",
+    "Age of oldest transaction:  00:00:00",
+    "Logging Mode:         Simple",
+    "Number of containers: 2",
+    "Container size:       10 Mb",
+    "Total log capacity:   20 Mb",
+    "Total free log space: 11 Mb",
+    "Minimum containers:   2",
+    "Maximum containers:   20",
+    "Log growth increment: 2 container(s)",
+    "Auto shrink:          Not enabled",
+    "",
+    "RM prefers availability over consistency."
+  ],
   "description": [
     "fsutil resource",
     "---- RESOURCE Commands Supported ----",
@@ -20,6 +42,9 @@
     "setLog          Change characteristics of a running Transactional Resource Manager",
     "start           Start a Transactional Resource Manager",
     "stop            Stop a Transactional Resource Manager"
+  ],
+  "command": [
+    "fsutil"
   ],
   "language": "cmd",
   "tags": []

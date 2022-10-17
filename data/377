@@ -23,6 +23,9 @@
   ],
   "output": "",
   "description": "",
+  "command": [
+    "name=\"Annie"
+  ],
   "language": "bash",
   "tags": []
 }

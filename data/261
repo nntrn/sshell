@@ -21,6 +21,9 @@
   ],
   "output": "",
   "description": "",
+  "command": [
+    "python3"
+  ],
   "language": "python",
   "tags": [],
   "url": "https://gist.github.com/noahcoad/46909253a5891af3699580b8f17baba8"

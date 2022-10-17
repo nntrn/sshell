@@ -11,6 +11,9 @@
   "description": [
     "The sysconfig module provides access to Python’s configuration information like the list of installation paths and the configuration variables relevant for the current platform."
   ],
+  "command": [
+    "python"
+  ],
   "language": "python",
   "tags": [],
   "url": "https://docs.python.org/3.11/library/sysconfig.html"

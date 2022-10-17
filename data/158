@@ -11,6 +11,9 @@
   "description": [
     "To get a list of the currently installed security updates "
   ],
+  "command": [
+    "yum"
+  ],
   "language": "bash",
   "tags": [],
   "url": "https://access.redhat.com/solutions/10021"

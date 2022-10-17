@@ -14,6 +14,14 @@
   ],
   "output": "",
   "description": "",
+  "command": [
+    "sudo",
+    "grep",
+    "sed",
+    "sed",
+    "grep",
+    "sed"
+  ],
   "language": "bash",
   "tags": [
     "admin"

@@ -19,6 +19,13 @@
   "description": [
     "To start the SSH Agent automatically on login, add these lines to your ~/.bash_profile"
   ],
+  "command": [
+    "if",
+    "grep",
+    "grep",
+    "wc",
+    "tr"
+  ],
   "language": "bash",
   "tags": [],
   "url": "https://code.visualstudio.com/docs/remote/troubleshooting#_enabling-alternate-ssh-authentication-methods"

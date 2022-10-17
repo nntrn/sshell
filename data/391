@@ -22,6 +22,12 @@
   ],
   "output": "",
   "description": "",
+  "command": [
+    "yes",
+    "tr",
+    "fold",
+    "head"
+  ],
   "language": "bash",
   "tags": []
 }

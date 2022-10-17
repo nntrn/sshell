@@ -11,6 +11,9 @@
   "example": "",
   "output": "",
   "description": "",
+  "command": [
+    "VAULT_TOKEN=...\n\ncurl"
+  ],
   "language": "bash",
   "tags": [
     "vault"

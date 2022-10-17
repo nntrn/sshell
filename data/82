@@ -9,6 +9,9 @@
   "example": "",
   "output": "",
   "description": "",
+  "command": [
+    "ansible"
+  ],
   "language": "bash",
   "tags": [
     "ansible"

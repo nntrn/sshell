@@ -16,6 +16,12 @@
     "So, the answer is, while the processes have the files still opened, you shouldn't expect to get the space back. It's not freed, it's being actively used. This is also one of the reasons that applications should really close the files when they finish using them. In normal usage, you shouldn't think of that space as free, and this also shouldn't be very common at all - with the exception of temporary files that are unlinked on purpose, there shouldn't really be any files that you would consider being unused, but still open. Try to review if there is a process that does this a lot and consider how you use it, or just find more space.",
     ""
   ],
+  "command": [
+    "kill",
+    "grep",
+    "awk",
+    "sort"
+  ],
   "language": "bash",
   "tags": [],
   "url": "https://unix.stackexchange.com/a/182082/464659"

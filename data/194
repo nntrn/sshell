@@ -17,6 +17,9 @@
   "example": "",
   "output": "",
   "description": "",
+  "command": [
+    "file_system=(cat"
+  ],
   "language": "bash",
   "tags": [
     "gnu"

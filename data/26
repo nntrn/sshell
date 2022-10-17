@@ -12,6 +12,10 @@
     "Print filename before printing contents of file. ",
     "Same as `cat ./*.txt` but with filename"
   ],
+  "command": [
+    "find",
+    "less"
+  ],
   "language": "bash",
   "tags": [
     "coreutils"

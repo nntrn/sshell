@@ -98,6 +98,9 @@
     "More info:",
     "https://tldp.org/HOWTO/LVM-HOWTO/index.html"
   ],
+  "command": [
+    "FILESYSTEM_PATH=/dev/mapper/osvg-var.fs\n\n#"
+  ],
   "language": "bash",
   "tags": [
     "sysadmin"

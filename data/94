@@ -10,6 +10,14 @@
   "example": "",
   "output": "",
   "description": "",
+  "command": [
+    "cat",
+    "grep",
+    "sort",
+    "uniq",
+    "sort",
+    "less"
+  ],
   "language": "bash",
   "tags": []
 }

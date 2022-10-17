@@ -9,6 +9,10 @@
   "example": "",
   "output": "",
   "description": "",
+  "command": [
+    "sudo",
+    "sed"
+  ],
   "language": "bash",
   "tags": []
 }

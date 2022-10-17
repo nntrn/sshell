@@ -37,6 +37,10 @@
     "  Hex signatures cannot be verified using openssl.  Instead, use \"xxd -r\" or similar",
     "  program to transform the hex signature into a binary signature prior to verification."
   ],
+  "command": [
+    "echo",
+    "openssl"
+  ],
   "language": "bash",
   "tags": [
     "security"

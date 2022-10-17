@@ -20,6 +20,10 @@
   ],
   "output": "",
   "description": "",
+  "command": [
+    "cat",
+    "awk"
+  ],
   "language": "bash",
   "tags": []
 }

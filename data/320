@@ -14,8 +14,17 @@
     "$ cat futures.json | jq -r '.items[].futures[].provider| map(.) |@csv'",
     ""
   ],
-  "output": "",
+  "output": [
+    "\"JSON\",true",
+    "\"XML\",false"
+  ],
   "description": "",
+  "command": [
+    "echo",
+    "jq",
+    "map(.)",
+    "@csv'"
+  ],
   "language": "bash",
   "tags": []
 }

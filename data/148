@@ -9,8 +9,14 @@
   "example": [
     "REPEAT=10; printf '%*.0s\\n' $REPEAT\"\" | tr \" \" \"#\""
   ],
-  "output": "",
+  "output": [
+    "##########"
+  ],
   "description": "",
+  "command": [
+    "printf",
+    "tr"
+  ],
   "language": "bash",
   "tags": []
 }

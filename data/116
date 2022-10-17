@@ -24,6 +24,9 @@
     "SETCOLOR_NORMAL=\"echo -en \\\\033[0;39m\"",
     ""
   ],
+  "command": [
+    "SETCOLOR_SUCCESS=\"echo"
+  ],
   "language": "bash",
   "tags": []
 }

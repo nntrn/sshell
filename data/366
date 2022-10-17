@@ -9,6 +9,11 @@
   "example": "",
   "output": "",
   "description": "",
+  "command": [
+    "cat",
+    "tr",
+    "jq"
+  ],
   "language": "bash",
   "tags": []
 }

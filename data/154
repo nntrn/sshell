@@ -7,8 +7,13 @@
     "grep '^Umask:' \"/proc/$$/status\""
   ],
   "example": "",
-  "output": "",
+  "output": [
+    "Umask:  0027"
+  ],
   "description": "",
+  "command": [
+    "grep"
+  ],
   "language": "bash",
   "tags": [],
   "url": "https://unix.stackexchange.com/a/354303"

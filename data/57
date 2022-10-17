@@ -9,6 +9,9 @@
   "example": "",
   "output": "",
   "description": "",
+  "command": [
+    "net"
+  ],
   "language": "bash",
   "tags": [
     "example"

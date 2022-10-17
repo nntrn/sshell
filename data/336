@@ -47,6 +47,10 @@
     "",
     "    cat in | command | command2 > out"
   ],
+  "command": [
+    "#",
+    "awk"
+  ],
   "language": "bash",
   "tags": [],
   "url": "https://en.wikipedia.org/wiki/Cat_(Unix)#Useless_use_of_cat"

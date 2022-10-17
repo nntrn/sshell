@@ -7,8 +7,19 @@
     "Get-NetAdapter | Format-Table  -AutoSize -Wrap"
   ],
   "example": "",
-  "output": "",
+  "output": [
+    "Name                       InterfaceDescription              ifIndex Status MacAddress         LinkSpeed",
+    "----                       --------------------              ------- ------ ----------         ---------",
+    "vEthernet (Default Switch) Hyper-V Virtual Ethernet Adapter       45 Up     00-15-5D-G3-85-46    10 Gbps",
+    "Wi-Fi                      Intel(R) Wi-Fi 6 AX201 160MHz          18 Up     FE-D9-C4-E6-18-B1 866.7 Mbps",
+    "Ethernet 3                 PANGP Virtual Ethernet Adapter #2       7 Up     01-50-41-40-42-01     2 Gbps",
+    ""
+  ],
   "description": "",
+  "command": [
+    "Get-NetAdapter",
+    "Format-Table"
+  ],
   "language": "powershell",
   "tags": [
     "network"

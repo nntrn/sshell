@@ -25,6 +25,9 @@
   ],
   "output": "",
   "description": "",
+  "command": [
+    "awk"
+  ],
   "language": "bash",
   "tags": [
     "example"

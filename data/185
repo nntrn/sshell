@@ -10,8 +10,13 @@
     "$ TMPFILE='random'$RANDOM",
     "$ echo $TMPFILE"
   ],
-  "output": "",
+  "output": [
+    "random27790"
+  ],
   "description": "",
+  "command": [
+    "echo"
+  ],
   "language": "bash",
   "tags": [
     "shell"
