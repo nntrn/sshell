@@ -8,22 +8,24 @@ REMOTE_URL=$(git config --get-regexp '^remote.*url' | awk '{print $2}' | head -n
 REPO=$(basename ${REMOTE_URL%.git})
 BRANCH=gh-pages
 TMPDIR=$(mktemp -d)
-IFS=$'\n'
 
-cd $DIR
+echo "$TMPDIR"
+echo "$DIR"
+echo "$REPO"
+echo "$REMOTE_URL"
 
-if git ls-files --exclude-standard --full-name --modified --deleted --other public; then
-  git add public
-  git commit -m "Update web files before pushing to gh-pages"
-  git push
+if [[ $(git -C "$DIR" ls-files --modified public) ]]; then
+  git -C "$DIR" add public
+  git -C "$DIR" commit -m "Update web files before pushing to gh-pages"
+  git -C "$DIR" push
 fi
 
-(cd $TMPDIR && git clone -b $BRANCH $REMOTE_URL $REPO &>/dev/null && cd $REPO)
+cd $TMPDIR
+git clone -b $BRANCH $REMOTE_URL $REPO
+cd $REPO
 
-rm $TMPDIR/$REPO/*
+cp $DIR/public/* .
 
-cp -r $DIR/public/* $TMPDIR/$REPO/
-
-git add -A .
+git add .
 git commit -m "Update static files"
 git push
