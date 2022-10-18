@@ -1,24 +1,28 @@
 #!/usr/bin/env bash
 
-cd $(realpath ${0%/*}) || exit
+set -e
+
+cd "$(realpath ${0%/*})"
 
 REMOTE_URL=$(git config --get-regexp '^remote.*url' | awk '{print $2}' | head -n 1)
 REPO=$(basename ${REMOTE_URL%.git})
 BRANCH=data
-
 TMPDIR=$(mktemp -d)
-cat $1 | tr -d '\r' >$TMPDIR/data.json
+
+[[ -f $1 && $1 != "all" ]] && DATA_FILE=$1
+
+cat $DATA_FILE | tr -d '\r' >$TMPDIR/data.json
 cat $TMPDIR/data.json | jq -rc '.[]' >$TMPDIR/data.txt
 
-cd $TMPDIR || exit
+cd $TMPDIR
 git clone -b $BRANCH $REMOTE_URL $REPO &>/dev/null
-cd $REPO || exit
+cd $REPO
 
 if [[ $1 == all ]]; then
   rm -rf $TMPDIR/$REPO/data
 fi
 
-[[ ! -d $TMPDIR/$REPO/data ]] && mkdir -p $TMPDIR/$REPO/data
+mkdir -p $TMPDIR/$REPO/data
 
 while read -r line; do
   SNIPPET_ID=$(echo "$line" | jq -r '.id')

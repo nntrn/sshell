@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 
-cd "$(realpath ${0%/*})" || exit
+set -e
+cd "$(realpath ${0%/*})"
 
 DIR=$(git rev-parse --show-toplevel)
 REMOTE_URL=$(git config --get-regexp '^remote.*url' | awk '{print $2}' | head -n 1)
@@ -9,15 +10,15 @@ BRANCH=gh-pages
 TMPDIR=$(mktemp -d)
 IFS=$'\n'
 
-cd $DIR || exit
+cd $DIR
 
 if git ls-files --exclude-standard --full-name --modified --deleted --other public; then
   git add public
-  git commit -m "Update public before pushing to gh-pages"
+  git commit -m "Update web files before pushing to gh-pages"
   git push
 fi
 
-(cd $TMPDIR && git clone -b $BRANCH $REMOTE_URL $REPO &>/dev/null && cd $REPO) || exit
+(cd $TMPDIR && git clone -b $BRANCH $REMOTE_URL $REPO &>/dev/null && cd $REPO)
 
 rm $TMPDIR/$REPO/*
 
@@ -25,4 +26,4 @@ cp -r $DIR/public/* $TMPDIR/$REPO/
 
 git add -A .
 git commit -m "Update static files"
-git push origin $BRANCH
+git push
