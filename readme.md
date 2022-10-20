@@ -1,13 +1,19 @@
-# data
+# sshell/data
+
+```sh
+git clone -b data https://github.com/nntrn/sshell.git
+cd sshell
+```
+
 
 ## bash
 
 - [402](data/402): jq - convert kv to json froms stdin
-- [401](data/401): jq group by example
+- [401](data/401): jq group by with count
 - [400](data/400): jq - recursively slice array values to get first child only
 - [399](data/399): jq - merge files 
 - [398](data/398): jq - filter dates
-- [397](data/397): hex/ascii text conversion
+- [397](data/397): convert between hex and ascii text
 - [396](data/396): cvtsudoers - get all configured sudo policies
 - [395](data/395): get machine architecture.
 - [394](data/394): jq - select objects with given key name
@@ -142,7 +148,7 @@
 - [230](data/230): examples illustrating substring expansion
 - [229](data/229): systemctl - Get enabled services
 - [228](data/228): get non default values for ansible config
-- [227](data/227): disable ldap login for user
+- [227](data/227): disable login for domain user
 - [226](data/226): restart failed services
 - [225](data/225): kill all processes for user
 - [224](data/224): zip files in current directory
@@ -235,7 +241,6 @@
 - [116](data/116): set color
 - [115](data/115): ss -  investigate sockets
 - [114](data/114): sqlplus - set password
-- [113](data/113): awk - get value only
 - [112](data/112): view process id
 - [111](data/111): exec cmd
 - [110](data/110): generate random password
@@ -285,7 +290,6 @@
 - [60](data/60): Resolve warning that bridge-nf-call-iptables is disabled
 - [59](data/59): Get size of mounted filesystems
 - [58](data/58): alias for easy column extraction
-- [57](data/57): view service account owner
 - [56](data/56): fetch all git tags
 - [55](data/55): get free space on directory
 - [54](data/54): get free space in directory
@@ -347,6 +351,7 @@
 - [305](data/305): fsutil resource info
 - [183](data/183): bat file for opening cygwin in current directory
 - [165](data/165): windows - repair health
+- [57](data/57): view service account owner
 
 ## config
 

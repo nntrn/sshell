@@ -17,14 +17,6 @@
     ],
     "output": "",
     "description": "",
-    "command": [
-      "jq",
-      "split(\"",
-      ".[]",
-      "split(\"=\")",
-      "{key:",
-      "from_entries'"
-    ],
     "language": "bash",
     "tags": [
       "jq"
@@ -32,9 +24,9 @@
   },
   {
     "id": 401,
-    "title": "jq group by example",
+    "title": "jq group by with count",
     "created": "2022-10-12T16:53:23Z",
-    "modified": "2022-10-12T16:53:23Z",
+    "modified": "2022-10-20T00:31:16Z",
     "code": [
       "jq 'group_by(.language)| map( {\"\\(.[0].language)\":length}) |add'",
       ""
@@ -53,11 +45,6 @@
     ],
     "output": "",
     "description": "",
-    "command": [
-      "jq",
-      "map(",
-      "add'"
-    ],
     "language": "bash",
     "tags": [
       "jq"
@@ -86,9 +73,6 @@
       "  elif type == \"array\" then map( walk(f) ) | f",
       "  else f",
       "  end;"
-    ],
-    "command": [
-      "jq"
     ],
     "language": "bash",
     "tags": [
@@ -125,9 +109,6 @@
     ],
     "output": "",
     "description": "",
-    "command": [
-      "jq"
-    ],
     "language": "bash",
     "tags": [
       "jq"
@@ -176,11 +157,6 @@
     ],
     "output": "",
     "description": "",
-    "command": [
-      "jq",
-      "select(.date_field>",
-      "strftime(\"%Y-%m-%d\")))]'"
-    ],
     "language": "bash",
     "tags": [
       "jq"
@@ -189,9 +165,9 @@
   },
   {
     "id": 397,
-    "title": "hex/ascii text conversion",
+    "title": "convert between hex and ascii text",
     "created": "2022-09-20T20:18:26Z",
-    "modified": "2022-09-20T20:19:00Z",
+    "modified": "2022-10-20T00:32:02Z",
     "code": [
       "HEX_TEXT=68656c6c6f20776f726c64",
       "ASCII_TEXT=\"hello world\"",
@@ -216,15 +192,10 @@
       "- https://www.commandlinefu.com/commands/view/6081/convert-ascii-string-to-hex",
       "- https://www.linuxshelltips.com/convert-hex-to-ascii-characters-linux/"
     ],
-    "command": [
-      "HEX_TEXT=68656c6c6f20776f726c64\nASCII_TEXT=\"hello",
-      "sed",
-      "xargs",
-      "od",
-      "tr"
-    ],
     "language": "bash",
-    "tags": [],
+    "tags": [
+      "text"
+    ],
     "url": "https://www.linuxshelltips.com/convert-hex-to-ascii-characters-linux/"
   },
   {
@@ -246,9 +217,6 @@
     "example": "",
     "output": "",
     "description": "",
-    "command": [
-      "cp"
-    ],
     "language": "bash",
     "tags": [
       "permissions",
@@ -260,7 +228,7 @@
     "id": 395,
     "title": "get machine architecture.",
     "created": "2022-09-16T23:12:19Z",
-    "modified": "2022-09-16T23:12:19Z",
+    "modified": "2022-10-20T00:32:28Z",
     "code": [
       "architecture=\"\"",
       "case $(uname -m) in",
@@ -273,16 +241,10 @@
     "example": "",
     "output": "",
     "description": "",
-    "command": [
-      "architecture=\"\"\ncase",
-      "grep",
-      "",
-      "architecture=\"arm\""
-    ],
     "language": "bash",
     "tags": [
-      "arm",
-      "posix"
+      "posix",
+      "case"
     ],
     "url": "https://stackoverflow.com/a/48679640"
   },
@@ -303,12 +265,6 @@
     ],
     "output": "",
     "description": "",
-    "command": [
-      "jq",
-      "objects",
-      "select(has(\"updateDate\"))",
-      ".updateDate'"
-    ],
     "language": "bash",
     "tags": [],
     "url": "https://stackoverflow.com/a/53676048"
@@ -389,9 +345,6 @@
     "description": [
       "List the package specific scriptlet(s) that are used as part of the installation and uninstallation processes."
     ],
-    "command": [
-      "rpm"
-    ],
     "language": "bash",
     "tags": [
       "package"
@@ -401,7 +354,7 @@
     "id": 392,
     "title": "echo text N times ",
     "created": "2022-08-31T06:24:56Z",
-    "modified": "2022-08-31T06:24:56Z",
+    "modified": "2022-10-20T00:32:41Z",
     "code": [
       "echo text{,,,,,,,,,,}"
     ],
@@ -411,11 +364,10 @@
     ],
     "output": "",
     "description": "",
-    "command": [
-      "echo"
-    ],
     "language": "bash",
-    "tags": []
+    "tags": [
+      "text"
+    ]
   },
   {
     "id": 391,
@@ -441,12 +393,6 @@
     ],
     "output": "",
     "description": "",
-    "command": [
-      "yes",
-      "tr",
-      "fold",
-      "head"
-    ],
     "language": "bash",
     "tags": []
   },
@@ -467,9 +413,6 @@
     ],
     "output": "",
     "description": "",
-    "command": [
-      "printf"
-    ],
     "language": "bash",
     "tags": [
       "date"
@@ -488,9 +431,6 @@
     "example": "",
     "output": "",
     "description": "",
-    "command": [
-      "dir=$(mktemp"
-    ],
     "language": "bash",
     "tags": []
   },
@@ -514,9 +454,6 @@
       ""
     ],
     "description": "",
-    "command": [
-      "ss"
-    ],
     "language": "bash",
     "tags": [
       "network"
@@ -536,11 +473,6 @@
       "Netsh interacts with other operating system components by using dynamic-link library (DLL) files.",
       "",
       "Each netsh helper DLL provides an extensive set of features called a context, which is a group of commands specific to a networking server role or feature. These contexts extend the functionality of netsh by providing configuration and monitoring support for one or more services, utilities, or protocols. For example, Dhcpmon.dll provides netsh with the context and set of commands necessary to configure and manage DHCP servers."
-    ],
-    "command": [
-      "netsh",
-      "grep",
-      "xargs"
     ],
     "language": "cmd",
     "tags": [
@@ -566,9 +498,6 @@
     "example": "",
     "output": "",
     "description": "",
-    "command": [
-      "YUM_OPTIONS=\"--disablerepo=*"
-    ],
     "language": "bash",
     "tags": []
   },
@@ -612,9 +541,6 @@
     "example": "",
     "output": "",
     "description": "",
-    "command": [
-      "$"
-    ],
     "language": "bash",
     "tags": [],
     "url": "https://www.baeldung.com/linux/locale-environment-variables"
@@ -655,12 +581,6 @@
     ],
     "output": "",
     "description": "",
-    "command": [
-      "$",
-      "awk",
-      "tr",
-      "fold"
-    ],
     "language": "bash",
     "tags": [
       "security"
@@ -712,9 +632,6 @@
     ],
     "output": "",
     "description": "",
-    "command": [
-      "#"
-    ],
     "language": "bash",
     "tags": [
       "text",
@@ -738,10 +655,6 @@
     "example": "",
     "output": "",
     "description": "",
-    "command": [
-      "get-childitem",
-      "FL"
-    ],
     "language": "powershell",
     "tags": [
       "security"
@@ -766,9 +679,6 @@
     ],
     "output": "",
     "description": "",
-    "command": [
-      "date"
-    ],
     "language": "bash",
     "tags": [
       "date"
@@ -792,9 +702,6 @@
     ],
     "output": "",
     "description": "",
-    "command": [
-      "$"
-    ],
     "language": "bash",
     "tags": []
   },
@@ -823,14 +730,6 @@
     ],
     "output": "",
     "description": "",
-    "command": [
-      "eval",
-      "jq",
-      "to_entries",
-      ".[].value",
-      "@sh",
-      "tee"
-    ],
     "language": "bash",
     "tags": [
       "jq"
@@ -862,9 +761,6 @@
     ],
     "output": "",
     "description": "",
-    "command": [
-      "find"
-    ],
     "language": "bash",
     "tags": [
       "filesys"
@@ -895,9 +791,6 @@
     ],
     "output": "",
     "description": "",
-    "command": [
-      "name=\"Annie"
-    ],
     "language": "bash",
     "tags": []
   },
@@ -914,9 +807,6 @@
     ],
     "output": "",
     "description": "",
-    "command": [
-      "find"
-    ],
     "language": "bash",
     "tags": [
       "filesys"
@@ -938,9 +828,6 @@
     "example": "",
     "output": "",
     "description": "",
-    "command": [
-      "#"
-    ],
     "language": "bash",
     "tags": [
       "text"
@@ -958,9 +845,6 @@
     "example": "",
     "output": "",
     "description": "",
-    "command": [
-      "awk"
-    ],
     "language": "bash",
     "tags": [
       "text"
@@ -1003,9 +887,6 @@
       "---",
       "URL: https://stackoverflow.com/a/5277575"
     ],
-    "command": [
-      "git"
-    ],
     "language": "bash",
     "tags": [
       "git"
@@ -1028,9 +909,6 @@
     "example": "",
     "output": "",
     "description": "",
-    "command": [
-      "#"
-    ],
     "language": "bash",
     "tags": [
       "security",
@@ -1140,9 +1018,6 @@
       "",
       "`default`, `emacs`, `friendly`, `friendly`, `grayscale`, `colorful`, `autumn`, `murphy`, `manni`, `material`, `monokai`, `perldoc`, `pastie`, `borland`, `trac`, `native`, `fruity`, `bw`, `vim`, `vs`, `tango`, `rrt`, `xcode`, `igor`, `paraiso`, `light`, `paraiso`, `dark`, `lovelace`, `algol`, `algol`, `nu`, `arduino`, `rainbow`, `dash`, `abap`, `solarized`, `dark`, `solarized`, `light`, `sas`, `stata`, `stata`, `light`, `stata`, `dark`, `inkpot`, `zenburn`, `gruvbox`, `dark`, `gruvbox`, `light`, `dracula`, `one`, `dark`, `lilypond`"
     ],
-    "command": [
-      "STYLE=css\npygmentize"
-    ],
     "language": "bash",
     "tags": []
   },
@@ -1174,11 +1049,6 @@
       "[...]"
     ],
     "description": "",
-    "command": [
-      "Get-Process",
-      "Sort-Object",
-      "Format-Table"
-    ],
     "language": "powershell",
     "tags": [],
     "url": "https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.utility/format-table?view=powershell-7.2#example-2-format-processes-by-basepriority"
@@ -1211,10 +1081,6 @@
       "svc_npexampleawx     2022-04-11 11:11:32 AM"
     ],
     "description": "",
-    "command": [
-      "Get-ADUser",
-      "FT"
-    ],
     "language": "powershell",
     "tags": [
       "AD",
@@ -1232,9 +1098,6 @@
     "example": "",
     "output": "",
     "description": "",
-    "command": [
-      "for"
-    ],
     "language": "bash",
     "tags": []
   },
@@ -1249,11 +1112,6 @@
     "example": "",
     "output": "",
     "description": "",
-    "command": [
-      "cat",
-      "tr",
-      "jq"
-    ],
     "language": "bash",
     "tags": []
   },
@@ -1279,9 +1137,6 @@
       ""
     ],
     "description": "",
-    "command": [
-      "dstat"
-    ],
     "language": "bash",
     "tags": []
   },
@@ -1307,11 +1162,6 @@
     ],
     "output": "",
     "description": "",
-    "command": [
-      "$",
-      "openssl",
-      "openssl"
-    ],
     "language": "bash",
     "tags": [
       "security"
@@ -1396,10 +1246,6 @@
     "description": [
       "The s_client command implements a generic SSL/TLS client which connects to a remote host using SSL/TLS. It is a very useful diagnostic tool for SSL servers."
     ],
-    "command": [
-      "echo",
-      "openssl"
-    ],
     "language": "bash",
     "tags": [
       "security"
@@ -1461,10 +1307,6 @@
       ""
     ],
     "description": "",
-    "command": [
-      "curl",
-      "python"
-    ],
     "language": "bash",
     "tags": [
       "awx",
@@ -1488,10 +1330,6 @@
     ],
     "output": "",
     "description": "",
-    "command": [
-      "<list",
-      "zip"
-    ],
     "language": "bash",
     "tags": []
   },
@@ -1513,9 +1351,6 @@
       "",
       "easy way for sourcing key/value environment files "
     ],
-    "command": [
-      "set"
-    ],
     "language": "bash",
     "tags": [
       "environment"
@@ -1536,9 +1371,6 @@
     "example": "",
     "output": "",
     "description": "",
-    "command": [
-      "curl"
-    ],
     "language": "bash",
     "tags": [
       "api"
@@ -1560,9 +1392,6 @@
     ],
     "output": "",
     "description": "",
-    "command": [
-      "docker"
-    ],
     "language": "bash",
     "tags": [
       "docker"
@@ -1591,11 +1420,6 @@
     "description": [
       "https://awxserver.example.com/api/v2/hosts/<ID>/",
       "https://awxserver.example.com/api/v2/hosts/4613/"
-    ],
-    "command": [
-      "docker",
-      "cat'\n\npsql",
-      "cat"
     ],
     "language": "sql",
     "tags": [
@@ -1654,9 +1478,6 @@
       "-   This module is also supported for Windows targets.",
       "-   This module should be run with elevated privileges on BSD systems to gather facts like ansible_product_version.",
       ""
-    ],
-    "command": [
-      "#"
     ],
     "language": "bash",
     "tags": [
@@ -1739,9 +1560,6 @@
       "",
       "WorkingDir - this is where you are dropped when running an interactive shell in the container."
     ],
-    "command": [
-      "docker"
-    ],
     "language": "bash",
     "tags": [
       "docker"
@@ -1787,10 +1605,6 @@
       "  Hex signatures cannot be verified using openssl.  Instead, use \"xxd -r\" or similar",
       "  program to transform the hex signature into a binary signature prior to verification."
     ],
-    "command": [
-      "echo",
-      "openssl"
-    ],
     "language": "bash",
     "tags": [
       "security"
@@ -1822,9 +1636,6 @@
       "Returns the hashed password as a string, which will be composed of characters from the same alphabet as the salt.",
       ""
     ],
-    "command": [
-      "python"
-    ],
     "language": "python",
     "tags": [],
     "url": "https://docs.python.org/3/library/crypt.html#crypt.crypt"
@@ -1854,9 +1665,6 @@
     ],
     "output": "",
     "description": "",
-    "command": [
-      "function"
-    ],
     "language": "javascript",
     "tags": [
       "dom"
@@ -1891,9 +1699,6 @@
       "",
       "NOTE: An operating system capable of running constantly for a long time without crashes or freeze-ups is a good one, and so having a high uptime value is a matter of pride for many Linux users. It is not uncommon to hear of systems that have been running for months and sometimes even years non-stop -- one Linux administrator reported on the Internet about one of his work systems, which had been running continuously without reboot for three years!"
     ],
-    "command": [
-      "last"
-    ],
     "language": "bash",
     "tags": []
   },
@@ -1912,9 +1717,6 @@
       "around reclaimable memory.  However, it is not available until 3.14",
       "kernel (i.e. Ubuntu LTS Trusty misses it).  In that case, we fall",
       "back to free+buffers+cache as the available memory."
-    ],
-    "command": [
-      "awk"
     ],
     "language": "bash",
     "tags": [],
@@ -1989,78 +1791,6 @@
     "description": [
       "https://www.acunetix.com/blog/web-security-zone/hardening-nginx/"
     ],
-    "command": [
-      "#",
-      "REQUEST)(=",
-      "\\[",
-      "%)\"",
-      "%3C).*script.*(>",
-      "%3)\"",
-      "\\.\\.\\.",
-      "\\.\\./",
-      "~",
-      "`",
-      "<",
-      ">",
-      "\\",
-      ")\"",
-      "etc/passwd",
-      "self/environ)\"",
-      "open)?",
-      "tim(thumb)?)\\.php\"",
-      "\\\")(.*)(drop",
-      "insert",
-      "md5",
-      "select",
-      "union)\"",
-      "ftp",
-      "php):/\"",
-      "=\\\\%27",
-      "/\\\\\\'/?)\\.\"",
-      "\\(/\\(",
-      "\\.\\.\\.",
-      "\\+\\+\\+",
-      "\\\\\\\"\\\\\\\")\"",
-      "`",
-      "<",
-      ">",
-      ":",
-      ";",
-      "%",
-      "\\\\",
-      "\\s",
-      "\\{",
-      "\\}",
-      "\\[",
-      "\\]",
-      "\\",
-      ")\"",
-      "\\$&",
-      "_mm",
-      "(wp-)?config\\.",
-      "cgi-",
-      "etc/passwd",
-      "muieblack)\"",
-      "_vti_",
-      "\\(null\\)",
-      "\\{\\$itemURL\\}",
-      "echo(.*)kae",
-      "etc/passwd",
-      "eval\\(",
-      "self/environ)\"",
-      "mobiquo",
-      "phpinfo",
-      "shell",
-      "sqlpatch",
-      "thumb",
-      "thumb_editor",
-      "thumbopen",
-      "timthumb",
-      "webshell",
-      "config",
-      "settings",
-      "configuration)\\.php\""
-    ],
     "language": "nginx",
     "tags": [],
     "url": "https://gist.github.com/nfsarmento/57db5abba08b315b67f174cd178bea88"
@@ -2084,9 +1814,6 @@
     "description": [
       "This directive allows you to prevent the use of all HTTP methods, except the ones that you explicitly allow. Within a location block, you may want to restrict the use of some HTTP methods, such as forbidding clients from sending POST requests. You need to define two elements: first, the methods that are not forbidden (the allowed methods; all others will be forbidden); and second, the audience that is affected by the restriction"
     ],
-    "command": [
-      "location"
-    ],
     "language": "nginx",
     "tags": [],
     "url": "https://www.oreilly.com/library/view/nginx-http-server/9781788623551/75c3c065-0311-4c4c-a191-31fd1e344f78.xhtml"
@@ -2106,9 +1833,6 @@
     ],
     "output": "",
     "description": "",
-    "command": [
-      "python3"
-    ],
     "language": "python",
     "tags": []
   },
@@ -2138,9 +1862,6 @@
     ],
     "output": "",
     "description": "",
-    "command": [
-      "GITLAB_PROJECT_TOKEN=glpat-9eAicfQ9HoLp2ilItrVZ\ngit"
-    ],
     "language": "bash",
     "tags": [
       "api",
@@ -2187,9 +1908,6 @@
     ],
     "output": "",
     "description": "",
-    "command": [
-      "Object.fromEntries(document.cookie.split(';"
-    ],
     "language": "javascript",
     "tags": [],
     "url": "https://developer.mozilla.org/en-US/docs/Web/API/Document/cookie"
@@ -2236,9 +1954,6 @@
       "",
       "the command following exec didn't run, since the shell was replaced."
     ],
-    "command": [
-      "#"
-    ],
     "language": "bash",
     "tags": [],
     "url": "https://unix.stackexchange.com/a/296852/464659"
@@ -2262,9 +1977,6 @@
       "  fetch = +refs/heads/*:refs/remotes/origin/*",
       "```"
     ],
-    "command": [
-      "git"
-    ],
     "language": "bash",
     "tags": [
       "api",
@@ -2285,9 +1997,6 @@
     ],
     "output": "",
     "description": "",
-    "command": [
-      "iconv"
-    ],
     "language": "bash",
     "tags": []
   },
@@ -2318,9 +2027,6 @@
     ],
     "output": "",
     "description": "",
-    "command": [
-      "curl"
-    ],
     "language": "bash",
     "tags": [
       "api"
@@ -2346,11 +2052,6 @@
       "use the logical and && and or || to compare strings:",
       "",
       ""
-    ],
-    "command": [
-      "[[",
-      "",
-      "echo"
     ],
     "language": "bash",
     "tags": [],
@@ -2385,9 +2086,6 @@
       "",
       "In the first for loop, IFS is set to $' '. (The $'...' syntax creates a string, with backslash-escaped characters replaced with special characters - like \"\\t\" for tab and \"\\n\" for newline.) Within the for loops, x and y are set to whatever bash considers a \"word\" in the original sequence. For the first loop, IFS is a space, meaning that words are separated by a space character. For the second loop, \"words\" are separated by a newline, which means bash considers the whole value of \"items\" as a single word. If IFS is more than one character, splitting will be done on any of those characters."
     ],
-    "command": [
-      "IFS=$'"
-    ],
     "language": "bash",
     "tags": [],
     "url": "http://redsymbol.net/articles/unofficial-bash-strict-mode/"
@@ -2403,9 +2101,6 @@
     "example": "",
     "output": "",
     "description": "",
-    "command": [
-      "cp"
-    ],
     "language": "bash",
     "tags": [],
     "url": "https://askubuntu.com/a/962511"
@@ -2437,9 +2132,6 @@
       "Exit the script. An exit statement will exit only the sub-shell.",
       "Starting a sub-shell can also be a serious performance hit. You're launching a new process each time you call the function.",
       ""
-    ],
-    "command": [
-      "$"
     ],
     "language": "bash",
     "tags": [],
@@ -2494,10 +2186,6 @@
       "",
       "    cat in | command | command2 > out"
     ],
-    "command": [
-      "#",
-      "awk"
-    ],
     "language": "bash",
     "tags": [],
     "url": "https://en.wikipedia.org/wiki/Cat_(Unix)#Useless_use_of_cat"
@@ -2547,10 +2235,6 @@
     ],
     "output": "",
     "description": "",
-    "command": [
-      "jq",
-      "map(\"\\(.key)=\\(.value)\")"
-    ],
     "language": "bash",
     "tags": [],
     "url": "https://www.dormant.ninja/export-json-to-env/"
@@ -2579,12 +2263,6 @@
     ],
     "output": "",
     "description": "",
-    "command": [
-      "#",
-      "jq",
-      "jq",
-      ".[]'"
-    ],
     "language": "bash",
     "tags": [
       "jq"
@@ -2691,9 +2369,6 @@
       "More info:",
       "https://tldp.org/HOWTO/LVM-HOWTO/index.html"
     ],
-    "command": [
-      "FILESYSTEM_PATH=/dev/mapper/osvg-var.fs\n\n#"
-    ],
     "language": "bash",
     "tags": [
       "sysadmin"
@@ -2731,9 +2406,6 @@
     ],
     "output": "",
     "description": "",
-    "command": [
-      "echo"
-    ],
     "language": "bash",
     "tags": [],
     "url": "https://github.com/git/git/blob/master/ci/run-docker-build.sh"
@@ -2770,10 +2442,6 @@
     "description": [
       "similar to ",
       "jq 'with_entries(.[]|select([.key] | inside([\"id\", \"title\"])))'"
-    ],
-    "command": [
-      "curl",
-      "python3"
     ],
     "language": "python",
     "tags": []
@@ -2853,10 +2521,6 @@
       "NOTE: The %-symbol is a special symbol in the win32-environment,",
       "where all occurrences of % must be doubled when using  this  option."
     ],
-    "command": [
-      "curl",
-      "jq"
-    ],
     "language": "bash",
     "tags": []
   },
@@ -2908,9 +2572,6 @@
       "31"
     ],
     "description": "",
-    "command": [
-      "python"
-    ],
     "language": "python",
     "tags": [
       "python-oneliner"
@@ -2929,9 +2590,6 @@
     "output": "",
     "description": [
       "The sysconfig module provides access to Python’s configuration information like the list of installation paths and the configuration variables relevant for the current platform."
-    ],
-    "command": [
-      "python"
     ],
     "language": "python",
     "tags": [],
@@ -3009,9 +2667,6 @@
       "When there are two numbers in the first column (for example 3/1), it means that the function recursed. The second value is the number of primitive calls and the former is the total number of calls. Note that when the function does not recurse, these two values are the same, and only the single figure is printed.",
       ""
     ],
-    "command": [
-      "python"
-    ],
     "language": "python",
     "tags": []
   },
@@ -3040,11 +2695,6 @@
     ],
     "output": "",
     "description": "",
-    "command": [
-      "CSV_FILE=https://raw.githubusercontent.com/jhsu98/json-csv-converter/master/MOCK_DATA.csv\n\n#",
-      "python",
-      "python"
-    ],
     "language": "python",
     "tags": []
   },
@@ -3072,9 +2722,6 @@
     ],
     "output": "",
     "description": "",
-    "command": [
-      "python3"
-    ],
     "language": "python",
     "tags": [
       "python-oneliner"
@@ -3101,10 +2748,6 @@
     "description": [
       "Use awk to remove duplicate lines if sorting is not needed. It's a lot faster "
     ],
-    "command": [
-      "#",
-      "awk"
-    ],
     "language": "bash",
     "tags": []
   },
@@ -3120,9 +2763,6 @@
     "output": "",
     "description": [
       "set -o igncr causes the shell ignore windows line endings (skip \\r). Another solution would be to fix the script by running dos2unix on it."
-    ],
-    "command": [
-      "set"
     ],
     "language": "bash",
     "tags": [],
@@ -3142,10 +2782,6 @@
     "example": "",
     "output": "",
     "description": "",
-    "command": [
-      "python3",
-      "python3"
-    ],
     "language": "bash",
     "tags": [
       "python"
@@ -3390,9 +3026,6 @@
       "",
       "https://docs.gitlab.com/ee/api/projects.html"
     ],
-    "command": [
-      "PROJECT_NAME=test\nGITLAB_PERSONAL_ACCESS_TOKEN=...\n\ncurl"
-    ],
     "language": "bash",
     "tags": [
       "gitlab"
@@ -3420,12 +3053,6 @@
       "\"XML\",false"
     ],
     "description": "",
-    "command": [
-      "echo",
-      "jq",
-      "map(.)",
-      "@csv'"
-    ],
     "language": "bash",
     "tags": []
   },
@@ -3464,9 +3091,6 @@
       "-x: Exact match",
       "-f: Use a file for patterns"
     ],
-    "command": [
-      "grep"
-    ],
     "language": "bash",
     "tags": [],
     "url": "https://stackoverflow.com/a/72278813/7460613"
@@ -3498,9 +3122,6 @@
       ""
     ],
     "description": "",
-    "command": [
-      "declare"
-    ],
     "language": "bash",
     "tags": []
   },
@@ -3515,9 +3136,6 @@
     "example": "",
     "output": "",
     "description": "",
-    "command": [
-      "nmap"
-    ],
     "language": "bash",
     "tags": [
       "network"
@@ -3555,9 +3173,6 @@
     ],
     "output": "",
     "description": "",
-    "command": [
-      "csplit"
-    ],
     "language": "bash",
     "tags": [],
     "url": "https://www.gnu.org/software/coreutils/manual/html_node/csplit-invocation.html#csplit-invocation"
@@ -3584,9 +3199,6 @@
     ],
     "output": "",
     "description": "",
-    "command": [
-      "rpm"
-    ],
     "language": "bash",
     "tags": []
   },
@@ -3617,9 +3229,6 @@
     ],
     "output": "",
     "description": "",
-    "command": [
-      "xargs"
-    ],
     "language": "bash",
     "tags": []
   },
@@ -3663,9 +3272,6 @@
       "$ nmap -p 80 onofri.org",
       "",
       "You can also use `telnet onofri.org 80`, as suggested in one of the other answers (It will give an error if the port is closed or filtered)."
-    ],
-    "command": [
-      "nmap"
     ],
     "language": "bash",
     "tags": [],
@@ -3715,10 +3321,6 @@
       "]"
     ],
     "description": "",
-    "command": [
-      "echo",
-      "jq"
-    ],
     "language": "bash",
     "tags": []
   },
@@ -3755,12 +3357,6 @@
       "main"
     ],
     "description": "",
-    "command": [
-      "git",
-      "sed",
-      "grep",
-      "awk"
-    ],
     "language": "bash",
     "tags": [
       "git"
@@ -3785,9 +3381,6 @@
     ],
     "output": "",
     "description": "",
-    "command": [
-      "#"
-    ],
     "language": "bash",
     "tags": [
       "git"
@@ -3828,9 +3421,6 @@
       "",
       "`--keep-largest-pack`",
       "All packs except the largest pack and those marked with a `.keep` files are consolidated into a single pack. When this option is used, `gc.bigPackThreshold` is ignored."
-    ],
-    "command": [
-      "git"
     ],
     "language": "bash",
     "tags": [
@@ -3885,9 +3475,6 @@
       "",
       "https://docs.github.com/en/rest/markdown#render-a-markdown-document"
     ],
-    "command": [
-      "curl"
-    ],
     "language": "bash",
     "tags": [
       "git"
@@ -3915,9 +3502,6 @@
       "       fuser telnet/tcp",
       "              shows all processes at the (local) TELNET port.",
       ""
-    ],
-    "command": [
-      "fuser"
     ],
     "language": "bash",
     "tags": [],
@@ -4018,9 +3602,6 @@
       "Verifying CSR Information",
       "After creating your CSR using your private key, we recommend verifying that the information contained in the CSR is correct and that the file hasn't been modified or corrupted."
     ],
-    "command": [
-      "#"
-    ],
     "language": "bash",
     "tags": [],
     "url": "https://www.digicert.com/kb/ssl-support/openssl-quick-reference-guide.htm"
@@ -4070,9 +3651,6 @@
       "start           Start a Transactional Resource Manager",
       "stop            Stop a Transactional Resource Manager"
     ],
-    "command": [
-      "fsutil"
-    ],
     "language": "cmd",
     "tags": []
   },
@@ -4094,9 +3672,6 @@
       "This list can then be passed to unset:",
       "",
       "unset \"${!myvarname@}\""
-    ],
-    "command": [
-      "unset"
     ],
     "language": "bash",
     "tags": [],
@@ -4132,9 +3707,6 @@
       ""
     ],
     "description": "",
-    "command": [
-      "Get-WindowsUpdateLog"
-    ],
     "language": "powershell",
     "tags": []
   },
@@ -4167,10 +3739,6 @@
       "",
       "    Gets password of local administrator on computer MyComputer"
     ],
-    "command": [
-      "Get-AdmPwdPassword",
-      "Format-List"
-    ],
     "language": "powershell",
     "tags": []
   },
@@ -4190,9 +3758,6 @@
       "That means that to match -mtime 0, a file will have to have a modification in the past which is less than 24 hours ago.",
       "",
       ""
-    ],
-    "command": [
-      "find"
     ],
     "language": "bash",
     "tags": []
@@ -4860,14 +4425,6 @@
       "Get-WULastScanSuccessDate"
     ],
     "description": "",
-    "command": [
-      "#C:/Windows/System32/WindowsPowerShell/v1.0/Modules\nfind",
-      "tr",
-      "tr",
-      "grep",
-      "sort",
-      "tee"
-    ],
     "language": "bash",
     "tags": []
   },
@@ -4889,10 +4446,6 @@
       ""
     ],
     "description": "",
-    "command": [
-      "Get-NetAdapter",
-      "Format-Table"
-    ],
     "language": "powershell",
     "tags": [
       "network"
@@ -4928,11 +4481,6 @@
       ""
     ],
     "description": "",
-    "command": [
-      "Get-WmiObject",
-      "Format-Table",
-      "Format-Wide"
-    ],
     "language": "powershell",
     "tags": []
   },
@@ -5149,9 +4697,6 @@
       ""
     ],
     "description": "",
-    "command": [
-      "#"
-    ],
     "language": "bash",
     "tags": [],
     "url": "https://csonuryilmaz.github.io/curl/dict/2018/03/25/search-dictionary-from-command-line-(part1).html"
@@ -5189,9 +4734,6 @@
       "- **Encoding** - 0,1,2,3,4,5 mean server side compression was 'identity', 'gzip', 'deflate', 'lzma/xz', 'bzip2', 'brotli', 'zstd', 'lzip'",
       "- **Verification** - PGP verification status. 0,1,2,3 mean 'none',  'valid', 'invalid', 'bad', 'missing'."
     ],
-    "command": [
-      "wget2"
-    ],
     "language": "bash",
     "tags": [],
     "url": "https://github.com/rockdaboot/wget2/blob/master/docs/wget2.md"
@@ -5224,11 +4766,6 @@
       "           jq ´.[] | select(.id == \"second\")´",
       "              [{\"id\": \"first\", \"val\": 1}, {\"id\": \"second\", \"val\": 2}]",
       "           => {\"id\": \"second\", \"val\": 2}"
-    ],
-    "command": [
-      "echo",
-      "jq",
-      "select(.id"
     ],
     "language": "bash",
     "tags": [
@@ -5322,9 +4859,6 @@
       "",
       "Basically it gets the identity associated with the current process, checks whether it is an administrator, and if it isn't, creates a new PowerShell process with administrator privileges and terminates the old process."
     ],
-    "command": [
-      "$myWindowsID"
-    ],
     "language": "powershell",
     "tags": [
       "security"
@@ -5342,9 +4876,6 @@
     "example": "",
     "output": "",
     "description": "",
-    "command": [
-      "Get-ChildItem"
-    ],
     "language": "powershell",
     "tags": [],
     "url": "https://devblogs.microsoft.com/scripting/powertip-use-windows-powershell-to-display-all-environment-variables/"
@@ -5390,11 +4921,6 @@
       ""
     ],
     "description": "",
-    "command": [
-      "echo",
-      "tr",
-      "tr"
-    ],
     "language": "bash",
     "tags": [
       "crypto",
@@ -5531,9 +5057,6 @@
       "",
       ""
     ],
-    "command": [
-      "netsh"
-    ],
     "language": "bash",
     "tags": [
       "windows,",
@@ -5626,9 +5149,6 @@
     "description": [
       "Network shell (netsh) is a command-line utility that allows you to configure and display the status of various network communications server roles and components after they are installed on computers running Windows Server® 2008 R2 and Windows Server® 2008."
     ],
-    "command": [
-      "netsh"
-    ],
     "language": "bash",
     "tags": [
       "windows",
@@ -5686,10 +5206,6 @@
       "  processes  whose  command  name  includes  the  string  \"fox\" or",
       "  \"bird\"."
     ],
-    "command": [
-      "pidstat",
-      "postgres\""
-    ],
     "language": "bash",
     "tags": [],
     "url": "http://man.he.net/man1/pidstat"
@@ -5705,11 +5221,6 @@
     "example": "",
     "output": "",
     "description": "",
-    "command": [
-      "ip",
-      "grep",
-      "awk"
-    ],
     "language": "bash",
     "tags": [
       "network"
@@ -5726,9 +5237,6 @@
     "example": "",
     "output": "",
     "description": "",
-    "command": [
-      "Get-ADGroupMember"
-    ],
     "language": "powershell",
     "tags": [],
     "url": "https://www.lepide.com/how-to/export-members-of-a-particular-ad-group-using-poweshell.html#:~:text=The%20PowerShell%20Get%2DADGroupMember%20cmdlet,group%20you%20want%20to%20use."
@@ -5759,9 +5267,6 @@
       ""
     ],
     "description": "",
-    "command": [
-      "nmap"
-    ],
     "language": "bash",
     "tags": [
       "network"
@@ -5831,9 +5336,6 @@
       ""
     ],
     "description": "",
-    "command": [
-      ":set"
-    ],
     "language": "vim",
     "tags": []
   },
@@ -5868,9 +5370,6 @@
       ""
     ],
     "description": "",
-    "command": [
-      "systemctl"
-    ],
     "language": "bash",
     "tags": [],
     "url": "https://linuxconfig.org/how-to-use-systemctl-to-list-services-on-systemd-linux"
@@ -5888,9 +5387,6 @@
     ],
     "output": "",
     "description": "",
-    "command": [
-      "journalctl"
-    ],
     "language": "bash",
     "tags": []
   },
@@ -5906,9 +5402,6 @@
     "example": "",
     "output": "",
     "description": "",
-    "command": [
-      "ps"
-    ],
     "language": "bash",
     "tags": [],
     "url": "https://unix.stackexchange.com/a/393198"
@@ -5924,9 +5417,6 @@
     "example": "",
     "output": "",
     "description": "",
-    "command": [
-      "ll"
-    ],
     "language": "bash",
     "tags": [
       "service"
@@ -5963,11 +5453,6 @@
       ""
     ],
     "description": "",
-    "command": [
-      "#",
-      "awk",
-      "bc\ndone"
-    ],
     "language": "bash",
     "tags": [
       "security"
@@ -5998,9 +5483,6 @@
       "",
       "How do I create an MD5 or SHA1 digest of a file?",
       "Digests are created using the dgst option. I’ve seen several systems on which the OpenSSL dgst(1) man page does not accurately report the digest functions available via the local openssl binary. I suggest running openssl dgst -h to see which digests are actually available."
-    ],
-    "command": [
-      "$"
     ],
     "language": "bash",
     "tags": [
@@ -6040,9 +5522,6 @@
     "example": "",
     "output": "",
     "description": "",
-    "command": [
-      "$"
-    ],
     "language": "bash",
     "tags": [
       "security"
@@ -6151,9 +5630,6 @@
       ""
     ],
     "description": "",
-    "command": [
-      "openssl"
-    ],
     "language": "bash",
     "tags": [
       "security"
@@ -6174,11 +5650,6 @@
     "example": "",
     "output": "",
     "description": "",
-    "command": [
-      "$Self",
-      "sort-object",
-      "Format-Table"
-    ],
     "language": "powershell",
     "tags": [
       "AD"
@@ -6232,9 +5703,6 @@
       ""
     ],
     "description": "",
-    "command": [
-      "sssctl"
-    ],
     "language": "bash",
     "tags": []
   },
@@ -6353,11 +5821,6 @@
       "",
       "$ jq '.[] | {message: .commit.message, name: .commit.committer.name}'"
     ],
-    "command": [
-      "curl",
-      "jq",
-      "{message:"
-    ],
     "language": "bash",
     "tags": [
       "vault"
@@ -6379,10 +5842,6 @@
     "description": [
       "%USERPROFILE%\\AppData\\Roaming\\Microsoft\\Windows\\PowerShell\\PSReadLine\\ConsoleHost_history.txt"
     ],
-    "command": [
-      "POWERSHELL_HISTORY=${USERPROFILE,\\\\,\\/,g}/AppData/Roaming/Microsoft/Windows/PowerShell/PSReadLine/ConsoleHost_history.txt\ncat",
-      "sed"
-    ],
     "language": "powershell",
     "tags": []
   },
@@ -6397,10 +5856,6 @@
     "example": "",
     "output": "",
     "description": "",
-    "command": [
-      "Get-Help",
-      "Format-Table"
-    ],
     "language": "powershell",
     "tags": []
   },
@@ -6415,10 +5870,6 @@
     "example": "",
     "output": "",
     "description": "",
-    "command": [
-      "sudo",
-      "sed"
-    ],
     "language": "bash",
     "tags": []
   },
@@ -6439,10 +5890,6 @@
       "M,N,O"
     ],
     "description": "",
-    "command": [
-      "echo",
-      "awk"
-    ],
     "language": "bash",
     "tags": [],
     "url": "https://unix.stackexchange.com/a/430556"
@@ -6461,9 +5908,6 @@
     "example": "",
     "output": "",
     "description": "",
-    "command": [
-      "s/^/\"/g;"
-    ],
     "language": "bash",
     "tags": [],
     "url": "https://stackoverflow.com/a/59580100"
@@ -6479,9 +5923,6 @@
     "example": "",
     "output": "",
     "description": "",
-    "command": [
-      "curl"
-    ],
     "language": "bash",
     "tags": [
       "vault"
@@ -6532,9 +5973,6 @@
       "-iter 100000 is overriding the default count of iterations for the password, quoting the man page:",
       "Use a given number of iterations on the password in deriving the encryption key. High values increase the time required to brute-force the resulting file. This option enables the use of PBKDF2 algorithm to derive the key."
     ],
-    "command": [
-      "ENCRYPTEDFILE=.secrets.enc\nSALTFILE=.vault-password\nSECRETSFILE=.env\n\n#"
-    ],
     "language": "bash",
     "tags": [],
     "url": "https://askubuntu.com/a/1126882"
@@ -6550,10 +5988,6 @@
     "example": "",
     "output": "",
     "description": "",
-    "command": [
-      "get-adgroup",
-      "Select"
-    ],
     "language": "powershell",
     "tags": []
   },
@@ -6568,9 +6002,6 @@
     "example": "",
     "output": "",
     "description": "",
-    "command": [
-      "curl"
-    ],
     "language": "bash",
     "tags": [
       "grafana"
@@ -6599,9 +6030,6 @@
       ""
     ],
     "description": "",
-    "command": [
-      "ls"
-    ],
     "language": "bash",
     "tags": []
   },
@@ -6617,9 +6045,6 @@
     "example": "",
     "output": "",
     "description": "",
-    "command": [
-      "vault"
-    ],
     "language": "bash",
     "tags": [
       "vault"
@@ -6650,9 +6075,6 @@
       "",
       "When @ is used and the expansion appears within double quotes, each variable name expands to a separate word."
     ],
-    "command": [
-      "${!prefix*}\n${!prefix@}"
-    ],
     "language": "bash",
     "tags": []
   },
@@ -6679,9 +6101,6 @@
     ],
     "output": "",
     "description": "",
-    "command": [
-      "python3"
-    ],
     "language": "python",
     "tags": [],
     "url": "https://gist.github.com/noahcoad/46909253a5891af3699580b8f17baba8"
@@ -6700,9 +6119,6 @@
     "example": "",
     "output": "",
     "description": "",
-    "command": [
-      "SOURCE=\"${BASH_SOURCE[0]}\"\nwhile"
-    ],
     "language": "bash",
     "tags": [],
     "url": "https://github.com/hashicorp/vault/blob/3dc8ef76b670aeb91654a7f7df709c8fd08ca1d0/scripts/build.sh"
@@ -6725,9 +6141,6 @@
     "example": "",
     "output": "",
     "description": "",
-    "command": [
-      "$"
-    ],
     "language": "bash",
     "tags": [
       "network"
@@ -6747,9 +6160,6 @@
     "description": [
       "slash at the end is very important"
     ],
-    "command": [
-      "vault"
-    ],
     "language": "bash",
     "tags": [
       "vault"
@@ -6767,9 +6177,6 @@
     "example": "",
     "output": "",
     "description": "",
-    "command": [
-      "python"
-    ],
     "language": "python",
     "tags": []
   },
@@ -6785,9 +6192,6 @@
     "output": "",
     "description": [
       "taken from `vault token renew -increment=24h -output-curl-string`"
-    ],
-    "command": [
-      "curl"
     ],
     "language": "bash",
     "tags": [
@@ -6825,9 +6229,6 @@
       "VAULT_NAMESPACE=infrastructure/database/engineering",
       "VAULT_ADDR=https://hcvault.example.com"
     ],
-    "command": [
-      "vault"
-    ],
     "language": "bash",
     "tags": [
       "hc-vault",
@@ -6852,9 +6253,6 @@
       "SGID = 2",
       "Sticky = 1"
     ],
-    "command": [
-      "find"
-    ],
     "language": "bash",
     "tags": [],
     "url": "https://www.redhat.com/sysadmin/suid-sgid-sticky-bit"
@@ -6876,9 +6274,6 @@
     ],
     "output": "",
     "description": "",
-    "command": [
-      "git"
-    ],
     "language": "bash",
     "tags": [
       "git"
@@ -6901,9 +6296,6 @@
       "prereq:",
       "npm install -g  @prettier/plugin-xml prettier"
     ],
-    "command": [
-      "alias"
-    ],
     "language": "bash",
     "tags": [
       "linter"
@@ -6923,9 +6315,6 @@
     ],
     "output": "",
     "description": "",
-    "command": [
-      "powershell"
-    ],
     "language": "bash",
     "tags": []
   },
@@ -6951,10 +6340,6 @@
       "clean up with:",
       "git reflog expire --expire=now",
       "git gc --prune=now"
-    ],
-    "command": [
-      "git",
-      "grep"
     ],
     "language": "bash",
     "tags": [
@@ -6986,10 +6371,6 @@
       "",
       ""
     ],
-    "command": [
-      "echo",
-      "ansible-vault"
-    ],
     "language": "bash",
     "tags": [
       "ansible"
@@ -7016,9 +6397,6 @@
       "",
       "The third type of UUID is generated with the --md5 or --sha1 options, followed by --namespace namespace and --name name. The namespace may either be a well-known UUID, or else an alias to one of the well-known UUIDs defined in RFC 4122, that is @dns, @url, @oid, or @x500. The name is an arbitrary string value. The generated UUID is the digest of the concatenation of the namespace UUID and the name value, hashed with the MD5 or SHA1 algorithms. It is, therefore, a predictable value which may be useful when UUIDs are being used as handles or nonces for more complex values or values which shouldn’t be disclosed directly. See the RFC for more information."
     ],
-    "command": [
-      "uuidgen"
-    ],
     "language": "bash",
     "tags": [],
     "url": "https://github.com/util-linux/util-linux/blob/5de72a375cd59b55bde6243eb2e1fe62cc07e75e/misc-utils/uuidgen.1.adoc"
@@ -7041,9 +6419,6 @@
       "",
       "-ctime n",
       "File's status was last changed n*24 hours ago. "
-    ],
-    "command": [
-      "find"
     ],
     "language": "bash",
     "tags": [
@@ -7085,9 +6460,6 @@
       "systemd-nspawn@My\\x20Container\\x201.service systemd-nspawn@containerb.service systemd-nspawn@container-III.service",
       "",
       ""
-    ],
-    "command": [
-      "systemd-escape"
     ],
     "language": "bash",
     "tags": [
@@ -7142,47 +6514,6 @@
     "example": "",
     "output": "",
     "description": "",
-    "command": [
-      "-",
-      "to_nice_json",
-      "to_json",
-      "from_json",
-      "to_nice_yml",
-      "to_yml",
-      "from_yml",
-      "failed",
-      "changed",
-      "success",
-      "skipped",
-      "manditory",
-      "default(5)",
-      "unique",
-      "union(list2)",
-      "intersect(list2)",
-      "difference(list2)",
-      "symmetric_difference(list2)",
-      "version_compare(ver2,",
-      "random",
-      "random",
-      "random(start=1,",
-      "join('",
-      "basename",
-      "dirname",
-      "expanduser",
-      "realpath",
-      "b64decode",
-      "b64encode",
-      "md5",
-      "bool",
-      "int",
-      "quote",
-      "md5",
-      "fileglob",
-      "match",
-      "search",
-      "regex",
-      "regexp_replace('from',"
-    ],
     "language": "yaml",
     "tags": [
       "ansible"
@@ -7219,9 +6550,6 @@
     ],
     "output": "",
     "description": "",
-    "command": [
-      "echo"
-    ],
     "language": "bash",
     "tags": [
       "security"
@@ -7256,9 +6584,6 @@
       "    $ openssl passwd -salt 8E MySecret",
       "    8E4vqBR4UOYF."
     ],
-    "command": [
-      "$"
-    ],
     "language": "bash",
     "tags": [
       "security"
@@ -7282,9 +6607,6 @@
       "",
       "To run a catchall benchmark, run it without any further options."
     ],
-    "command": [
-      "openssl"
-    ],
     "language": "bash",
     "tags": []
   },
@@ -7305,9 +6627,6 @@
       "2022-03-08 18:39:51.177925946 -0600"
     ],
     "description": "",
-    "command": [
-      "stat"
-    ],
     "language": "bash",
     "tags": [
       "text",
@@ -7363,9 +6682,6 @@
     "example": "",
     "output": "",
     "description": "",
-    "command": [
-      "##"
-    ],
     "language": "bash",
     "tags": [
       "service"
@@ -7382,10 +6698,6 @@
     "example": "",
     "output": "",
     "description": "",
-    "command": [
-      "openssl",
-      "awk"
-    ],
     "language": "bash",
     "tags": [
       "security"
@@ -7431,9 +6743,6 @@
       "prtstat  prints  the statistics of the specified process.  This information comes from the /proc/PID/stat file.",
       ""
     ],
-    "command": [
-      "prtstat"
-    ],
     "language": "bash",
     "tags": []
   },
@@ -7472,9 +6781,6 @@
       "apart.  If  the interval parameter is specified without the count parameter, the mpstat command generates",
       "reports continuously.",
       ""
-    ],
-    "command": [
-      "mpstat"
     ],
     "language": "bash",
     "tags": [
@@ -7599,9 +6905,6 @@
       "",
       "Location  of  the history files defaults to /tmp/.ifstat.u$UID but may be overridden with the IFSTAT_HISTORY environment variable. "
     ],
-    "command": [
-      "ifstat"
-    ],
     "language": "bash",
     "tags": [
       "network",
@@ -7695,9 +6998,6 @@
       "        -v      print version info",
       "        -h      print this help"
     ],
-    "command": [
-      "procinfo"
-    ],
     "language": "bash",
     "tags": []
   },
@@ -7761,9 +7061,6 @@
       "",
       ""
     ],
-    "command": [
-      "dstat"
-    ],
     "language": "bash",
     "tags": []
   },
@@ -7810,9 +7107,6 @@
       "",
       ""
     ],
-    "command": [
-      "man"
-    ],
     "language": "bash",
     "tags": [
       "reference"
@@ -7851,9 +7145,6 @@
       "└─/dev/sda1                           8:1    0 1000M  0 part /boot"
     ],
     "description": "",
-    "command": [
-      "lsblk"
-    ],
     "language": "bash",
     "tags": [
       "system"
@@ -7911,9 +7202,6 @@
       "     offset must be separated from the colon by at least one space to",
       "     avoid being confused with the ':-' expansion."
     ],
-    "command": [
-      "$"
-    ],
     "language": "bash",
     "tags": [
       "text"
@@ -7930,10 +7218,6 @@
     "example": "",
     "output": "",
     "description": "",
-    "command": [
-      "systemctl",
-      "awk"
-    ],
     "language": "bash",
     "tags": [
       "service"
@@ -7972,11 +7256,6 @@
       ""
     ],
     "description": "",
-    "command": [
-      "ansible-config",
-      "grep",
-      "sed"
-    ],
     "language": "bash",
     "tags": [
       "ansible"
@@ -7984,24 +7263,20 @@
   },
   {
     "id": 227,
-    "title": "disable ldap login for user",
+    "title": "disable login for domain user",
     "created": "2022-03-01T01:58:08Z",
-    "modified": "2022-03-04T18:33:21Z",
+    "modified": "2022-10-20T01:43:41Z",
     "code": [
-      "echo '-:svc_prddbaseceng:ALL' | tee -a /etc/security/access.conf",
+      "echo '-:svc_user_account:ALL' | tee -a /etc/security/access.conf",
       ""
     ],
     "example": "",
     "output": "",
     "description": "",
-    "command": [
-      "echo",
-      "tee"
-    ],
     "language": "bash",
     "tags": [
-      "example",
-      "security"
+      "security",
+      "windows"
     ],
     "url": "https://serverfault.com/a/910048"
   },
@@ -8016,11 +7291,6 @@
     "example": "",
     "output": "",
     "description": "",
-    "command": [
-      "systemctl",
-      "awk",
-      "xargs"
-    ],
     "language": "bash",
     "tags": [
       "service"
@@ -8037,9 +7307,6 @@
     "example": "",
     "output": "",
     "description": "",
-    "command": [
-      "pkill"
-    ],
     "language": "bash",
     "tags": []
   },
@@ -8054,9 +7321,6 @@
     "example": "",
     "output": "",
     "description": "",
-    "command": [
-      "find"
-    ],
     "language": "bash",
     "tags": [],
     "url": "https://devconnected.com/how-to-zip-folder-on-linux/"
@@ -8095,9 +7359,6 @@
       "",
       "Display the running processes of a container",
       ""
-    ],
-    "command": [
-      "$"
     ],
     "language": "bash",
     "tags": [
@@ -8227,9 +7488,6 @@
       "https://loicpefferkorn.net/2018/09/linux-network-statistics-reference/",
       "https://www.kernel.org/doc/html/latest/networking/"
     ],
-    "command": [
-      "nstat"
-    ],
     "language": "bash",
     "tags": [
       "network"
@@ -8302,9 +7560,6 @@
       ""
     ],
     "description": "",
-    "command": [
-      "systemd-cgls"
-    ],
     "language": "bash",
     "tags": [],
     "url": "http://0pointer.de/blog/projects/systemd-for-admins-2.html"
@@ -8353,9 +7608,6 @@
       ""
     ],
     "description": "",
-    "command": [
-      "netstat"
-    ],
     "language": "bash",
     "tags": [
       "network"
@@ -8409,9 +7661,6 @@
     "description": [
       "n systemd we place every process that is spawned in a control group named after its service. Control groups (or cgroups) at their most basic are simply groups of processes that can be arranged in a hierarchy and labelled individually. When processes spawn other processes these children are automatically made members of the parents cgroup. Leaving a cgroup is not possible for unprivileged processes. Thus, cgroups can be used as an effective way to label processes after the service they belong to and be sure that the service cannot escape from the label, regardless how often it forks or renames itself. Furthermore this can be used to safely kill a service and all processes it created, again with no chance of escaping."
     ],
-    "command": [
-      "ps"
-    ],
     "language": "bash",
     "tags": [
       "system"
@@ -8439,9 +7688,6 @@
     "example": "",
     "output": "",
     "description": "",
-    "command": [
-      "#"
-    ],
     "language": "bash",
     "tags": [
       "docker"
@@ -8459,9 +7705,6 @@
     "example": "",
     "output": "",
     "description": "",
-    "command": [
-      "docker"
-    ],
     "language": "bash",
     "tags": [
       "docker"
@@ -8492,9 +7735,6 @@
       "",
       "It is possible to change docker root directory by creating a systemd drop-in service file. This is useful when you want images and containers or docker generated files to be located in another partition or drive."
     ],
-    "command": [
-      "mkdir"
-    ],
     "language": "bash",
     "tags": [
       "docker"
@@ -8515,9 +7755,6 @@
     "example": "",
     "output": "",
     "description": "",
-    "command": [
-      "echo"
-    ],
     "language": "bash",
     "tags": [
       "cygwin"
@@ -8534,9 +7771,6 @@
     "example": "",
     "output": "",
     "description": "",
-    "command": [
-      "find"
-    ],
     "language": "bash",
     "tags": [
       "fs"
@@ -8560,12 +7794,6 @@
       "So, the answer is, while the processes have the files still opened, you shouldn't expect to get the space back. It's not freed, it's being actively used. This is also one of the reasons that applications should really close the files when they finish using them. In normal usage, you shouldn't think of that space as free, and this also shouldn't be very common at all - with the exception of temporary files that are unlinked on purpose, there shouldn't really be any files that you would consider being unused, but still open. Try to review if there is a process that does this a lot and consider how you use it, or just find more space.",
       ""
     ],
-    "command": [
-      "kill",
-      "grep",
-      "awk",
-      "sort"
-    ],
     "language": "bash",
     "tags": [],
     "url": "https://unix.stackexchange.com/a/182082/464659"
@@ -8587,11 +7815,6 @@
     "example": "",
     "output": "",
     "description": "",
-    "command": [
-      "get_token()",
-      "sed",
-      "tee"
-    ],
     "language": "bash",
     "tags": [
       "ansible"
@@ -8633,9 +7856,6 @@
       ""
     ],
     "description": "",
-    "command": [
-      "du"
-    ],
     "language": "bash",
     "tags": [
       "fs"
@@ -8655,11 +7875,6 @@
     ],
     "output": "",
     "description": "",
-    "command": [
-      "Get-ADUser",
-      "Select",
-      "Export-CSV"
-    ],
     "language": "powershell",
     "tags": []
   },
@@ -8675,9 +7890,6 @@
     "output": "",
     "description": [
       "These simple commands give you a feel of the memory usage and give the first indication that you have a memory leak when you see that the Rss of a process keeps on increasing. However, they are not very accurate in the absolute measurements of memory usage."
-    ],
-    "command": [
-      "ps"
     ],
     "language": "bash",
     "tags": [],
@@ -8699,9 +7911,6 @@
       ""
     ],
     "description": "",
-    "command": [
-      "date"
-    ],
     "language": "bash",
     "tags": [
       "date"
@@ -8752,12 +7961,6 @@
       ""
     ],
     "description": "",
-    "command": [
-      "str='delete",
-      "jq",
-      "length]",
-      "="
-    ],
     "language": "bash",
     "tags": []
   },
@@ -8785,12 +7988,6 @@
       ""
     ],
     "description": "",
-    "command": [
-      "wget",
-      "jq",
-      "[.id,",
-      "@csv'"
-    ],
     "language": "bash",
     "tags": [],
     "url": "https://programminghistorian.org/en/lessons/json-and-jq"
@@ -8815,9 +8012,6 @@
       " 70138"
     ],
     "description": "",
-    "command": [
-      "ps"
-    ],
     "language": "bash",
     "tags": [
       "utils"
@@ -8840,9 +8034,6 @@
       " 68072"
     ],
     "description": "",
-    "command": [
-      "ps"
-    ],
     "language": "bash",
     "tags": []
   },
@@ -8865,9 +8056,6 @@
     "example": "",
     "output": "",
     "description": "",
-    "command": [
-      "case"
-    ],
     "language": "bash",
     "tags": [
       "utils"
@@ -8896,9 +8084,6 @@
       ""
     ],
     "description": "",
-    "command": [
-      "host"
-    ],
     "language": "bash",
     "tags": [
       "network"
@@ -8920,12 +8105,6 @@
       "                RSA Public-Key: (2048 bit)"
     ],
     "description": "",
-    "command": [
-      "echo",
-      "openssl",
-      "openssl",
-      "grep"
-    ],
     "language": "bash",
     "tags": [
       "network"
@@ -8947,15 +8126,6 @@
     "description": [
       "The SSH extension provides a command for cleaning up the VS Code Server from the remote machine, Remote-SSH: Uninstall VS Code Server from Host.... The command does two things: it kills any running VS Code Server processes and it deletes the folder where the server was installed."
     ],
-    "command": [
-      "kill",
-      "grep",
-      "grep",
-      "awk",
-      "grep",
-      "grep",
-      "awk"
-    ],
     "language": "bash",
     "tags": [
       "vscode"
@@ -8973,11 +8143,6 @@
     "example": "",
     "output": "",
     "description": "",
-    "command": [
-      "ps",
-      "grep",
-      "sort"
-    ],
     "language": "bash",
     "tags": []
   },
@@ -9001,13 +8166,6 @@
     "output": "",
     "description": [
       "To start the SSH Agent automatically on login, add these lines to your ~/.bash_profile"
-    ],
-    "command": [
-      "if",
-      "grep",
-      "grep",
-      "wc",
-      "tr"
     ],
     "language": "bash",
     "tags": [],
@@ -9041,9 +8199,6 @@
       "",
       "Setting up the SSH Agent#"
     ],
-    "command": [
-      "Host"
-    ],
     "language": "config",
     "tags": [
       "network"
@@ -9062,9 +8217,6 @@
     "output": "",
     "description": [
       "Run foo with a reduced environment, preserving only the original PATH to avoid problems in locating foo."
-    ],
-    "command": [
-      "env"
     ],
     "language": "bash",
     "tags": [],
@@ -9110,9 +8262,6 @@
       "Cmdlet          Expand-WindowsCustomDataImage                      3.0        Dism"
     ],
     "description": "",
-    "command": [
-      "gcm"
-    ],
     "language": "powershell",
     "tags": [],
     "url": "https://stackoverflow.com/a/34537239/7460613"
@@ -9136,9 +8285,6 @@
     "example": "",
     "output": "",
     "description": "",
-    "command": [
-      "file_system=(cat"
-    ],
     "language": "bash",
     "tags": [
       "gnu"
@@ -9185,9 +8331,6 @@
       "             |         ],                                                              "
     ],
     "description": "",
-    "command": [
-      "select"
-    ],
     "language": "sql",
     "tags": [
       "db",
@@ -9223,9 +8366,6 @@
       " main_host                                                 | 992 k"
     ],
     "description": "",
-    "command": [
-      "select"
-    ],
     "language": "sql",
     "tags": [
       "db"
@@ -9243,9 +8383,6 @@
     "example": "",
     "output": "",
     "description": "",
-    "command": [
-      "alias"
-    ],
     "language": "bash",
     "tags": [],
     "url": "https://linoxide.com/commands-clear-linux-terminal/"
@@ -9268,9 +8405,6 @@
     "example": "",
     "output": "",
     "description": "",
-    "command": [
-      "select"
-    ],
     "language": "sql",
     "tags": [
       "db"
@@ -9309,9 +8443,6 @@
     "description": [
       "       -o     like -l, but do not list group information"
     ],
-    "command": [
-      "ls"
-    ],
     "language": "bash",
     "tags": [
       "shell"
@@ -9336,9 +8467,6 @@
       ""
     ],
     "description": "",
-    "command": [
-      "Get-WmiObject"
-    ],
     "language": "powershell",
     "tags": []
   },
@@ -9353,9 +8481,6 @@
     "example": "",
     "output": "",
     "description": "",
-    "command": [
-      "python"
-    ],
     "language": "python",
     "tags": [
       "http"
@@ -9375,9 +8500,6 @@
     "description": [
       "Creating a zip archive from a directory",
       "The command line option -r adds files recursively. Thus, it allows to create a zip file from an entire (sub-)directory:"
-    ],
-    "command": [
-      "zip"
     ],
     "language": "bash",
     "tags": [
@@ -9401,9 +8523,6 @@
       "random27790"
     ],
     "description": "",
-    "command": [
-      "echo"
-    ],
     "language": "bash",
     "tags": [
       "shell"
@@ -9428,9 +8547,6 @@
     ],
     "output": "",
     "description": "",
-    "command": [
-      "date"
-    ],
     "language": "bash",
     "tags": [],
     "url": "https://stackoverflow.com/a/53326257/7460613"
@@ -9439,7 +8555,7 @@
     "id": 183,
     "title": "bat file for opening cygwin in current directory",
     "created": "2022-01-04T23:18:52Z",
-    "modified": "2022-03-17T00:26:23Z",
+    "modified": "2022-10-20T01:42:11Z",
     "code": [
       "@echo off",
       "setlocal enableextensions",
@@ -9455,13 +8571,10 @@
     "example": "",
     "output": "",
     "description": "",
-    "command": [
-      "@echo"
-    ],
     "language": "cmd",
     "tags": [
-      "example",
-      "cygwin"
+      "cygwin",
+      "windows"
     ]
   },
   {
@@ -9530,9 +8643,6 @@
       "            or not found, respectively",
       ""
     ],
-    "command": [
-      "type"
-    ],
     "language": "bash",
     "tags": [
       "shell"
@@ -9551,9 +8661,6 @@
     "example": "",
     "output": "",
     "description": "",
-    "command": [
-      "git"
-    ],
     "language": "bash",
     "tags": [
       "git"
@@ -9578,9 +8685,6 @@
       "UDP sockets are stateless, meaning they are either open or closed and every process’s connection is independent of those which occurred before and after. This is in contrast to TCP connection states such as LISTEN, ESTABLISHED and CLOSE_WAIT. The ss output above shows no UDP connections.",
       ""
     ],
-    "command": [
-      "ss"
-    ],
     "language": "bash",
     "tags": [
       "network"
@@ -9603,10 +8707,6 @@
     "example": "",
     "output": "",
     "description": "",
-    "command": [
-      "echo",
-      "sendmail"
-    ],
     "language": "bash",
     "tags": []
   },
@@ -9621,9 +8721,6 @@
     "example": "",
     "output": "",
     "description": "",
-    "command": [
-      "sshpass"
-    ],
     "language": "bash",
     "tags": [
       "ssh"
@@ -9648,9 +8745,6 @@
       "ERROR: failed to register layer: Error processing tar file(exit status 1):",
       "no space left on device",
       ""
-    ],
-    "command": [
-      "systemctl"
     ],
     "language": "bash",
     "tags": [
@@ -9696,10 +8790,6 @@
     ],
     "description": [
       "Following @StéphaneChazelas, this works for me: find . -type f -print0 | xargs -0 du -h | sort -rh. If you just want say the largest 30 files: find . -type f -print0 | xargs -0 du -h | sort -rh | head -n 30"
-    ],
-    "command": [
-      "du",
-      "sort"
     ],
     "language": "bash",
     "tags": [],
@@ -9748,9 +8838,6 @@
       ""
     ],
     "description": "",
-    "command": [
-      "$"
-    ],
     "language": "bash",
     "tags": [
       "network"
@@ -9770,9 +8857,6 @@
     "example": "",
     "output": "",
     "description": "",
-    "command": [
-      "VAULT_TOKEN=...\n\ncurl"
-    ],
     "language": "bash",
     "tags": [
       "vault"
@@ -9809,9 +8893,6 @@
     "example": "",
     "output": "",
     "description": "",
-    "command": [
-      "css"
-    ],
     "language": "javascript",
     "tags": []
   },
@@ -9827,10 +8908,6 @@
     "example": "",
     "output": "",
     "description": "",
-    "command": [
-      "git",
-      "awk"
-    ],
     "language": "bash",
     "tags": [
       "git"
@@ -9847,9 +8924,6 @@
     "example": "",
     "output": "",
     "description": "",
-    "command": [
-      "Get-ADUser"
-    ],
     "language": "powershell",
     "tags": [
       "AD"
@@ -9893,9 +8967,6 @@
       "SslPort                    : 636"
     ],
     "description": "",
-    "command": [
-      "Get-ADDomainController"
-    ],
     "language": "powershell",
     "tags": [
       "AD"
@@ -9920,9 +8991,6 @@
     "example": "",
     "output": "",
     "description": "",
-    "command": [
-      ":"
-    ],
     "language": "bash",
     "tags": []
   },
@@ -9937,9 +9005,6 @@
     "example": "",
     "output": "",
     "description": "",
-    "command": [
-      "tr"
-    ],
     "language": "bash",
     "tags": []
   },
@@ -9982,9 +9047,6 @@
       ""
     ],
     "description": "",
-    "command": [
-      "ansible-doc"
-    ],
     "language": "bash",
     "tags": [
       "ansible"
@@ -10002,9 +9064,6 @@
     "example": "",
     "output": "",
     "description": "",
-    "command": [
-      "git"
-    ],
     "language": "bash",
     "tags": [
       "git"
@@ -10015,19 +9074,16 @@
     "id": 165,
     "title": "windows - repair health",
     "created": "2021-11-17T04:50:57Z",
-    "modified": "2022-01-03T06:24:38Z",
+    "modified": "2022-10-20T00:51:55Z",
     "code": [
       "dism /online /cleanup-image /restorehealth"
     ],
     "example": "",
     "output": "",
     "description": "",
-    "command": [
-      "dism"
-    ],
     "language": "cmd",
     "tags": [
-      "example"
+      "windows"
     ],
     "url": "https://support.microsoft.com/en-us/topic/system-file-checker-finds-corrupt-files-after-installing-kb2821895-12d6d944-25f5-fc42-551b-05607a026e9d"
   },
@@ -10056,10 +9112,6 @@
     ],
     "output": "",
     "description": "",
-    "command": [
-      "cat",
-      "sed"
-    ],
     "language": "bash",
     "tags": []
   },
@@ -10081,9 +9133,6 @@
     "example": "",
     "output": "",
     "description": "",
-    "command": [
-      "#"
-    ],
     "language": "bash",
     "tags": [
       "text"
@@ -10101,9 +9150,6 @@
     "example": "",
     "output": "",
     "description": "",
-    "command": [
-      "top"
-    ],
     "language": "bash",
     "tags": []
   },
@@ -10119,9 +9165,6 @@
     "example": "",
     "output": "",
     "description": "",
-    "command": [
-      "mount"
-    ],
     "language": "bash",
     "tags": [
       "docker"
@@ -10152,10 +9195,6 @@
       "./pandoc-test/src/utils.js"
     ],
     "description": "",
-    "command": [
-      "find",
-      ".git)*\""
-    ],
     "language": "bash",
     "tags": []
   },
@@ -10175,9 +9214,6 @@
     ],
     "output": "",
     "description": "",
-    "command": [
-      "echo"
-    ],
     "language": "bash",
     "tags": []
   },
@@ -10194,9 +9230,6 @@
     "description": [
       "To get a list of the currently installed security updates "
     ],
-    "command": [
-      "yum"
-    ],
     "language": "bash",
     "tags": [],
     "url": "https://access.redhat.com/solutions/10021"
@@ -10212,9 +9245,6 @@
     "example": "",
     "output": "",
     "description": "",
-    "command": [
-      "ssh-keygen"
-    ],
     "language": "bash",
     "tags": [
       "devops"
@@ -10241,17 +9271,6 @@
     "example": "",
     "output": "",
     "description": "",
-    "command": [
-      "dockerprettyhist()",
-      "tac",
-      "tr",
-      "cut",
-      "sed",
-      "sed",
-      "sed",
-      "sed",
-      "head"
-    ],
     "language": "bash",
     "tags": [
       "docker"
@@ -10304,9 +9323,6 @@
       ""
     ],
     "description": "",
-    "command": [
-      "yum"
-    ],
     "language": "bash",
     "tags": []
   },
@@ -10323,9 +9339,6 @@
       "Umask:  0027"
     ],
     "description": "",
-    "command": [
-      "grep"
-    ],
     "language": "bash",
     "tags": [],
     "url": "https://unix.stackexchange.com/a/354303"
@@ -10349,9 +9362,6 @@
       ""
     ],
     "description": "",
-    "command": [
-      "getfacl"
-    ],
     "language": "bash",
     "tags": []
   },
@@ -10366,9 +9376,6 @@
     "example": "",
     "output": "",
     "description": "",
-    "command": [
-      "usermod"
-    ],
     "language": "bash",
     "tags": []
   },
@@ -10389,9 +9396,6 @@
     ],
     "output": "",
     "description": "",
-    "command": [
-      "realpath"
-    ],
     "language": "bash",
     "tags": []
   },
@@ -10407,9 +9411,6 @@
     "example": "",
     "output": "",
     "description": "",
-    "command": [
-      "*/15"
-    ],
     "language": "plain",
     "tags": [
       "ansible"
@@ -10431,10 +9432,6 @@
       "##########"
     ],
     "description": "",
-    "command": [
-      "printf",
-      "tr"
-    ],
     "language": "bash",
     "tags": []
   },
@@ -10449,13 +9446,6 @@
     "example": "",
     "output": "",
     "description": "",
-    "command": [
-      "rpm",
-      "awk",
-      "awk",
-      "sort",
-      "tail"
-    ],
     "language": "bash",
     "tags": []
   },
@@ -10470,9 +9460,6 @@
     "example": "",
     "output": "",
     "description": "",
-    "command": [
-      "curl"
-    ],
     "language": "bash",
     "tags": [
       "ansible"
@@ -10500,9 +9487,6 @@
     "description": [
       "To list all the menu entries that will be displayed at system boot"
     ],
-    "command": [
-      "awk"
-    ],
     "language": "bash",
     "tags": [],
     "url": "https://wiki.centos.org/HowTos/Grub2"
@@ -10523,13 +9507,6 @@
     ],
     "output": "",
     "description": "",
-    "command": [
-      "awk",
-      "grep",
-      "rescue)\"",
-      "sort",
-      "tail"
-    ],
     "language": "bash",
     "tags": [
       "admin"
@@ -10555,9 +9532,6 @@
     ],
     "output": "",
     "description": "",
-    "command": [
-      "awk"
-    ],
     "language": "bash",
     "tags": [
       "admin"
@@ -10574,9 +9548,6 @@
     "example": "",
     "output": "",
     "description": "",
-    "command": [
-      "awx"
-    ],
     "language": "bash",
     "tags": [
       "ansible"
@@ -10586,7 +9557,7 @@
     "id": 141,
     "title": "get laptop service tag",
     "created": "2021-10-08T21:33:35Z",
-    "modified": "2022-03-24T22:14:06Z",
+    "modified": "2022-10-20T01:42:00Z",
     "code": [
       "Get-WmiObject win32_SystemEnclosure | select serialnumber",
       "",
@@ -10600,13 +9571,9 @@
       "1TL8YD3"
     ],
     "description": "",
-    "command": [
-      "Get-WmiObject",
-      "select"
-    ],
     "language": "powershell",
     "tags": [
-      "example"
+      "windows"
     ],
     "url": "https://exchangepedia.com/2007/02/getting-example-service-tag-using-powershell.html"
   },
@@ -10621,9 +9588,6 @@
     "example": "",
     "output": "",
     "description": "",
-    "command": [
-      "get-module"
-    ],
     "language": "powershell",
     "tags": []
   },
@@ -10640,9 +9604,6 @@
     ],
     "output": "",
     "description": "",
-    "command": [
-      "ps"
-    ],
     "language": "bash",
     "tags": [],
     "url": "https://superuser.com/a/1352711"
@@ -10664,11 +9625,6 @@
     "example": "",
     "output": "",
     "description": "",
-    "command": [
-      "sha256()",
-      "awk",
-      "awk"
-    ],
     "language": "bash",
     "tags": [],
     "url": "https://github.com/containerd/containerd/blob/main/test/utils.sh"
@@ -10692,10 +9648,6 @@
       "    inet 172.24.0.1/16 brd 172.24.255.255 scope global br-7ee3b3ed5e09"
     ],
     "description": "",
-    "command": [
-      "/usr/sbin/ip",
-      "grep"
-    ],
     "language": "bash",
     "tags": [
       "network"
@@ -10713,9 +9665,6 @@
     "example": "",
     "output": "",
     "description": "",
-    "command": [
-      "Get-ADGroupMember"
-    ],
     "language": "powershell",
     "tags": [
       "ldap"
@@ -10740,9 +9689,6 @@
     "example": "",
     "output": "",
     "description": "",
-    "command": [
-      "from"
-    ],
     "language": "python",
     "tags": [
       "ansible"
@@ -10767,10 +9713,6 @@
       ".."
     ],
     "description": "",
-    "command": [
-      "Get-ADUser",
-      "FT"
-    ],
     "language": "powershell",
     "tags": []
   },
@@ -10785,9 +9727,6 @@
     "example": "",
     "output": "",
     "description": "",
-    "command": [
-      "openssl"
-    ],
     "language": "bash",
     "tags": []
   },
@@ -10806,9 +9745,6 @@
     "example": "",
     "output": "",
     "description": "",
-    "command": [
-      "#"
-    ],
     "language": "bash",
     "tags": []
   },
@@ -10825,9 +9761,6 @@
     "example": "",
     "output": "",
     "description": "",
-    "command": [
-      "find"
-    ],
     "language": "bash",
     "tags": []
   },
@@ -10865,9 +9798,6 @@
       "The -s flag defines the minimum number of special characters that must be in the password.   The  default",
       "is 1."
     ],
-    "command": [
-      "mkpasswd"
-    ],
     "language": "bash",
     "tags": []
   },
@@ -10902,9 +9832,6 @@
       "  1307      1  0.0  0.0 /usr/bin/python2 -Es /usr/sbin/tuned -l -P"
     ],
     "description": "",
-    "command": [
-      "ps"
-    ],
     "language": "bash",
     "tags": [],
     "url": "https://example-my.sharepoint.com/home/ansible/.vscode-server/bin/379476f0e13988d90fab105c5c19e7abc8b1dea8/out/vs/base/node/ps.sh"
@@ -10920,9 +9847,6 @@
     "example": "",
     "output": "",
     "description": "",
-    "command": [
-      "awk"
-    ],
     "language": "bash",
     "tags": [],
     "url": "https://unix.stackexchange.com/a/205854"
@@ -10980,9 +9904,6 @@
       "- /proc/net/ip_masquerade: masqueraded connections",
       "- /proc/net/snmp: statistics"
     ],
-    "command": [
-      "cat"
-    ],
     "language": "bash",
     "tags": []
   },
@@ -10997,9 +9918,6 @@
     "example": "",
     "output": "",
     "description": "",
-    "command": [
-      "find"
-    ],
     "language": "bash",
     "tags": [],
     "url": "https://stackoverflow.com/a/44415319"
@@ -11015,9 +9933,6 @@
     "example": "",
     "output": "",
     "description": "",
-    "command": [
-      "awk"
-    ],
     "language": "bash",
     "tags": [],
     "url": "https://stackoverflow.com/a/11532197"
@@ -11044,10 +9959,6 @@
     ],
     "output": "",
     "description": "",
-    "command": [
-      "cat",
-      "awk"
-    ],
     "language": "bash",
     "tags": []
   },
@@ -11065,9 +9976,6 @@
       "================================================================================"
     ],
     "description": "",
-    "command": [
-      "printf"
-    ],
     "language": "bash",
     "tags": [
       "text"
@@ -11084,9 +9992,6 @@
     "example": "",
     "output": "",
     "description": "",
-    "command": [
-      "ps"
-    ],
     "language": "bash",
     "tags": []
   },
@@ -11103,9 +10008,6 @@
     "example": "",
     "output": "",
     "description": "",
-    "command": [
-      "echo"
-    ],
     "language": "bash",
     "tags": [],
     "url": "https://stackoverflow.com/a/9057392"
@@ -11121,11 +10023,6 @@
     "example": "",
     "output": "",
     "description": "",
-    "command": [
-      "sudo",
-      "grep",
-      "awk"
-    ],
     "language": "bash",
     "tags": []
   },
@@ -11142,9 +10039,6 @@
     "example": "",
     "output": "",
     "description": "",
-    "command": [
-      "STR=\"Hello"
-    ],
     "language": "bash",
     "tags": [
       "text"
@@ -11169,9 +10063,6 @@
     "example": "",
     "output": "",
     "description": "",
-    "command": [
-      "name=\"John\"\necho"
-    ],
     "language": "bash",
     "tags": [
       "text"
@@ -11202,9 +10093,6 @@
       "# terminal sequence to reset to the default color.",
       "SETCOLOR_NORMAL=\"echo -en \\\\033[0;39m\"",
       ""
-    ],
-    "command": [
-      "SETCOLOR_SUCCESS=\"echo"
     ],
     "language": "bash",
     "tags": []
@@ -11243,9 +10131,6 @@
     ],
     "output": "",
     "description": "",
-    "command": [
-      "ss"
-    ],
     "language": "bash",
     "tags": []
   },
@@ -11273,53 +10158,11 @@
     "example": "",
     "output": "",
     "description": "",
-    "command": [
-      "ORACLE_PWD=$1\nORACLE_SID=\"`grep",
-      "cut",
-      "grep",
-      "awk",
-      "cut"
-    ],
     "language": "bash",
     "tags": [
       "db"
     ],
     "url": "https://github.com/oracle/vagrant-projects/blob/main/OracleDatabase/19.3.0/scripts/setPassword.sh"
-  },
-  {
-    "id": 113,
-    "title": "awk - get value only",
-    "created": "2021-09-10T02:44:20Z",
-    "modified": "2022-01-19T15:47:48Z",
-    "code": [
-      "awk -F= '/^BUILDTYPE=/ {print tolower($2)}' /etc/example.cfg"
-    ],
-    "example": [
-      "$ awk -F= '/^BUILDTYPE=/ {print tolower($2)}' /etc/example.cfg",
-      "it",
-      "",
-      "$ cat /etc/example.cfg",
-      "ONCALLSHORT=\"svc_prdvmaas\"",
-      "BUSINESSSHORT=\"svc_prdvmaas\"",
-      "XINSTALLED=0",
-      "STAFF_EMAIL=svc_prdvmaas@example.com",
-      "PRODUCTION=PRD",
-      "ENVIRONMENT=PRD",
-      "SUPPORTGROUP=AMER",
-      "SMTPGATEWAY=smtp-out.us.example.com",
-      "HOSTNAME=awxserver02.us.example.com",
-      "BUILDTYPE=IT",
-      "APPLICATIONID=1003150"
-    ],
-    "output": "",
-    "description": "",
-    "command": [
-      "awk"
-    ],
-    "language": "bash",
-    "tags": [
-      "example"
-    ]
   },
   {
     "id": 112,
@@ -11339,9 +10182,6 @@
     ],
     "output": "",
     "description": "",
-    "command": [
-      "bash"
-    ],
     "language": "bash",
     "tags": [],
     "url": "https://unix.stackexchange.com/a/296852"
@@ -11364,9 +10204,6 @@
     "description": [
       "What exec cmd does, is exactly the same as just running cmd, except that the current shell is replaced with the command, instead of a separate process being run."
     ],
-    "command": [
-      "bash"
-    ],
     "language": "bash",
     "tags": [],
     "url": "https://unix.stackexchange.com/a/296852"
@@ -11382,10 +10219,6 @@
     "example": "",
     "output": "",
     "description": "",
-    "command": [
-      "tr",
-      "head"
-    ],
     "language": "bash",
     "tags": [
       "admin"
@@ -11403,15 +10236,6 @@
     "example": "",
     "output": "",
     "description": "",
-    "command": [
-      "eval",
-      "grep",
-      "sed",
-      "sed",
-      "grep",
-      "sort",
-      "tail"
-    ],
     "language": "bash",
     "tags": []
   },
@@ -11431,14 +10255,6 @@
     ],
     "output": "",
     "description": "",
-    "command": [
-      "sudo",
-      "grep",
-      "sed",
-      "sed",
-      "grep",
-      "sed"
-    ],
     "language": "bash",
     "tags": [
       "admin"
@@ -11455,9 +10271,6 @@
     "example": "",
     "output": "",
     "description": "",
-    "command": [
-      "find"
-    ],
     "language": "bash",
     "tags": [
       "git"
@@ -11481,10 +10294,6 @@
       ""
     ],
     "description": "",
-    "command": [
-      "ps",
-      "grep"
-    ],
     "language": "bash",
     "tags": [],
     "url": "https://bencane.com/2012/07/02/when-zombies-invade-linux-what-are-zombie-processes-and-what-to-do-about-them/"
@@ -11503,9 +10312,6 @@
     "example": "",
     "output": "",
     "description": "",
-    "command": [
-      "tar"
-    ],
     "language": "bash",
     "tags": [],
     "url": "https://help.dreamhost.com/hc/en-us/articles/115002768331-UNIX-commands-Decompressing-files"
@@ -11523,9 +10329,6 @@
     "example": "",
     "output": "",
     "description": "",
-    "command": [
-      "tar"
-    ],
     "language": "bash",
     "tags": []
   },
@@ -11544,9 +10347,6 @@
     "example": "",
     "output": "",
     "description": "",
-    "command": [
-      "#"
-    ],
     "language": "bash",
     "tags": [],
     "url": "https://github.com/ansible/product-demos/blob/master/playbooks/infrastructure/debug_info.yml"
@@ -11572,9 +10372,6 @@
     ],
     "output": "",
     "description": "",
-    "command": [
-      "systemctl"
-    ],
     "language": "bash",
     "tags": [
       "service"
@@ -11591,11 +10388,6 @@
     "example": "",
     "output": "",
     "description": "",
-    "command": [
-      "docker",
-      "awk",
-      "tail"
-    ],
     "language": "bash",
     "tags": [
       "docker"
@@ -11626,13 +10418,6 @@
       "i love cary"
     ],
     "description": "",
-    "command": [
-      "$",
-      "tr",
-      "sed",
-      "shuf",
-      "tr"
-    ],
     "language": "bash",
     "tags": []
   },
@@ -11647,9 +10432,6 @@
     "example": "",
     "output": "",
     "description": "",
-    "command": [
-      "git"
-    ],
     "language": "bash",
     "tags": [
       "git"
@@ -11666,9 +10448,6 @@
     "example": "",
     "output": "",
     "description": "",
-    "command": [
-      "sed"
-    ],
     "language": "bash",
     "tags": []
   },
@@ -11683,10 +10462,6 @@
     "example": "",
     "output": "",
     "description": "",
-    "command": [
-      "cat",
-      "sed"
-    ],
     "language": "bash",
     "tags": []
   },
@@ -11701,9 +10476,6 @@
     "example": "",
     "output": "",
     "description": "",
-    "command": [
-      "find"
-    ],
     "language": "bash",
     "tags": []
   },
@@ -11719,14 +10491,6 @@
     "example": "",
     "output": "",
     "description": "",
-    "command": [
-      "cat",
-      "grep",
-      "sort",
-      "uniq",
-      "sort",
-      "less"
-    ],
     "language": "bash",
     "tags": []
   },
@@ -11748,9 +10512,6 @@
     ],
     "output": "",
     "description": "",
-    "command": [
-      "openssl"
-    ],
     "language": "bash",
     "tags": [],
     "url": "https://letsencrypt.org/docs/certificates-for-localhost/"
@@ -11769,9 +10530,6 @@
     "example": "",
     "output": "",
     "description": "",
-    "command": [
-      "#"
-    ],
     "language": "bash",
     "tags": [
       "git"
@@ -11792,10 +10550,6 @@
     "example": "",
     "output": "",
     "description": "",
-    "command": [
-      "Get-Service",
-      "Where-Object"
-    ],
     "language": "powershell",
     "tags": [],
     "url": "https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.management/get-service?view=powershell-7.1"
@@ -11811,10 +10565,6 @@
     "example": "",
     "output": "",
     "description": "",
-    "command": [
-      "Get-Process",
-      "Format-List"
-    ],
     "language": "powershell",
     "tags": [
       "powershell"
@@ -11832,9 +10582,6 @@
     "example": "",
     "output": "",
     "description": "",
-    "command": [
-      "find"
-    ],
     "language": "bash",
     "tags": []
   },
@@ -11849,10 +10596,6 @@
     "example": "",
     "output": "",
     "description": "",
-    "command": [
-      "Get-ADUser",
-      "Select"
-    ],
     "language": "powershell",
     "tags": [
       "powershell"
@@ -11869,9 +10612,6 @@
     "example": "",
     "output": "",
     "description": "",
-    "command": [
-      "Get-ADUser"
-    ],
     "language": "powershell",
     "tags": [
       "powershell"
@@ -11892,14 +10632,6 @@
     "example": "",
     "output": "",
     "description": "",
-    "command": [
-      "psql",
-      "awk",
-      "\"",
-      "grep",
-      "sort",
-      "tee"
-    ],
     "language": "bash",
     "tags": [
       "db"
@@ -11927,15 +10659,6 @@
     "example": "",
     "output": "",
     "description": "",
-    "command": [
-      "printcommands()",
-      "sed",
-      "grep",
-      "grep",
-      "*.exe$\"",
-      "grep",
-      "tee"
-    ],
     "language": "bash",
     "tags": []
   },
@@ -11963,9 +10686,6 @@
     "example": "",
     "output": "",
     "description": "",
-    "command": [
-      "$"
-    ],
     "language": "bash",
     "tags": [],
     "url": "https://stackoverflow.com/a/85903"
@@ -11981,9 +10701,6 @@
     "example": "",
     "output": "",
     "description": "",
-    "command": [
-      "ansible"
-    ],
     "language": "bash",
     "tags": [
       "ansible"
@@ -12001,9 +10718,6 @@
     "example": "",
     "output": "",
     "description": "",
-    "command": [
-      "encrypt"
-    ],
     "language": "bash",
     "tags": [
       "admin"
@@ -12020,9 +10734,6 @@
     "example": "",
     "output": "",
     "description": "",
-    "command": [
-      "ansible"
-    ],
     "language": "bash",
     "tags": [
       "ansible"
@@ -12040,9 +10751,6 @@
     "example": "",
     "output": "",
     "description": "",
-    "command": [
-      "ansible-doc"
-    ],
     "language": "bash",
     "tags": [
       "ansible"
@@ -12059,9 +10767,6 @@
     "example": "",
     "output": "",
     "description": "",
-    "command": [
-      "openssl"
-    ],
     "language": "bash",
     "tags": []
   },
@@ -12076,9 +10781,6 @@
     "example": "",
     "output": "",
     "description": "",
-    "command": [
-      "rsync"
-    ],
     "language": "bash",
     "tags": []
   },
@@ -12093,9 +10795,6 @@
     "example": "",
     "output": "",
     "description": "",
-    "command": [
-      "openssl"
-    ],
     "language": "bash",
     "tags": [
       "admin"
@@ -12112,9 +10811,6 @@
     "example": "",
     "output": "",
     "description": "",
-    "command": [
-      "find"
-    ],
     "language": "bash",
     "tags": []
   },
@@ -12129,13 +10825,6 @@
     "example": "",
     "output": "",
     "description": "",
-    "command": [
-      "history",
-      "cut",
-      "sort",
-      "uniq",
-      "sort"
-    ],
     "language": "bash",
     "tags": []
   },
@@ -12150,12 +10839,6 @@
     "example": "",
     "output": "",
     "description": "",
-    "command": [
-      "cat",
-      "grep",
-      "cut",
-      "sort"
-    ],
     "language": "bash",
     "tags": [
       "admin"
@@ -12172,9 +10855,6 @@
     "example": "",
     "output": "",
     "description": "",
-    "command": [
-      "lsof"
-    ],
     "language": "bash",
     "tags": [
       "admin"
@@ -12197,11 +10877,6 @@
     "example": "",
     "output": "",
     "description": "",
-    "command": [
-      "tmppath=\"/tmp/$(date",
-      "sed",
-      "tee"
-    ],
     "language": "bash",
     "tags": []
   },
@@ -12217,10 +10892,6 @@
     "output": "",
     "description": [
       "To encrypt the string ‘letmein’ read from stdin, add the vault ID ‘dev’ using the ‘dev’ vault password stored in a_password_file, and name the variable ‘db_password"
-    ],
-    "command": [
-      "echo",
-      "ansible-vault"
     ],
     "language": "bash",
     "tags": [],
@@ -12266,9 +10937,6 @@
     ],
     "output": "",
     "description": "",
-    "command": [
-      "iptables"
-    ],
     "language": "bash",
     "tags": [
       "network"
@@ -12296,11 +10964,6 @@
     ],
     "output": "",
     "description": "",
-    "command": [
-      "getsame()",
-      "cut",
-      "tr"
-    ],
     "language": "bash",
     "tags": [],
     "url": "https://stackoverflow.com/a/6973595/7460613"
@@ -12326,10 +10989,6 @@
       "   previous expression. The '*' metacharacter looks for the leftmost",
       "   possible match first and will match zero characters. Thus,"
     ],
-    "command": [
-      "echo",
-      "sed"
-    ],
     "language": "bash",
     "tags": []
   },
@@ -12344,12 +11003,6 @@
     "example": "",
     "output": "",
     "description": "",
-    "command": [
-      "export",
-      "grep",
-      "export)\"",
-      "grep"
-    ],
     "language": "bash",
     "tags": []
   },
@@ -12379,9 +11032,6 @@
       "2021-04-07, backupschedule-create-mongo.ym"
     ],
     "description": "",
-    "command": [
-      "for"
-    ],
     "language": "bash",
     "tags": [
       "coreutils"
@@ -12391,7 +11041,7 @@
     "id": 64,
     "title": "view workstation details",
     "created": "2021-06-30T13:47:02Z",
-    "modified": "2021-12-30T19:44:09Z",
+    "modified": "2022-10-20T01:41:48Z",
     "code": [
       "net config workstation"
     ],
@@ -12418,12 +11068,9 @@
       "The command completed successfully."
     ],
     "description": "",
-    "command": [
-      "net"
-    ],
     "language": "bash",
     "tags": [
-      "example"
+      "windows"
     ]
   },
   {
@@ -12441,10 +11088,6 @@
     "output": "",
     "description": [
       "`--ignore=\"\\.*\"` removes paths like ./ ../"
-    ],
-    "command": [
-      "ls",
-      "awk"
     ],
     "language": "bash",
     "tags": [
@@ -12524,9 +11167,6 @@
     "example": "",
     "output": "",
     "description": "",
-    "command": [
-      "#"
-    ],
     "language": "bash",
     "tags": []
   },
@@ -12557,10 +11197,6 @@
       "--max-depth=1: so you only check for the directories within the current directory",
       "",
       "sort -hr: sorts it decreasingly"
-    ],
-    "command": [
-      "du",
-      "sort"
     ],
     "language": "bash",
     "tags": []
@@ -12601,9 +11237,6 @@
       "net.bridge.bridge-nf-call-ip6tables = 1",
       ""
     ],
-    "command": [
-      "modprobe"
-    ],
     "language": "bash",
     "tags": [
       "docker"
@@ -12642,10 +11275,6 @@
       ""
     ],
     "description": "",
-    "command": [
-      "df",
-      "numfmt"
-    ],
     "language": "bash",
     "tags": []
   },
@@ -12679,9 +11308,6 @@
       "c1"
     ],
     "description": "",
-    "command": [
-      "alias"
-    ],
     "language": "bash",
     "tags": [
       "gnu"
@@ -12691,19 +11317,16 @@
     "id": 57,
     "title": "view service account owner",
     "created": "2021-06-16T14:34:11Z",
-    "modified": "2021-12-30T19:44:09Z",
+    "modified": "2022-10-20T00:53:29Z",
     "code": [
       "net user /domain svc_npdboraos"
     ],
     "example": "",
     "output": "",
     "description": "",
-    "command": [
-      "net"
-    ],
-    "language": "bash",
+    "language": "cmd",
     "tags": [
-      "example"
+      "windows"
     ]
   },
   {
@@ -12717,9 +11340,6 @@
     "example": "",
     "output": "",
     "description": "",
-    "command": [
-      "git"
-    ],
     "language": "bash",
     "tags": [
       "git"
@@ -12748,9 +11368,6 @@
       ""
     ],
     "description": "",
-    "command": [
-      "df"
-    ],
     "language": "bash",
     "tags": []
   },
@@ -12773,9 +11390,6 @@
       ""
     ],
     "description": "",
-    "command": [
-      "df"
-    ],
     "language": "bash",
     "tags": [
       "coreutils"
@@ -12793,13 +11407,6 @@
     "example": "",
     "output": "",
     "description": "",
-    "command": [
-      "unset",
-      "grep",
-      "export)\"",
-      "grep",
-      "cut"
-    ],
     "language": "bash",
     "tags": []
   },
@@ -12814,9 +11421,6 @@
     "example": "",
     "output": "",
     "description": "",
-    "command": [
-      "exe()"
-    ],
     "language": "bash",
     "tags": [],
     "url": "https://stackoverflow.com/a/23342259/7460613"
@@ -12836,10 +11440,6 @@
     ],
     "output": "",
     "description": "",
-    "command": [
-      "ps",
-      "awk"
-    ],
     "language": "bash",
     "tags": [],
     "url": "https://stackoverflow.com/a/23118210"
@@ -12862,9 +11462,6 @@
       "* -s 2: the signal to send when the timer has exceeded, it can be a number or the name. Equally valid would have been -s SIGINT (more on the kill signals below)",
       "* 10: the duration the script can run, before the kill signal described above is sent to it."
     ],
-    "command": [
-      "/bin/timeout"
-    ],
     "language": "bash",
     "tags": [],
     "url": "https://ma.ttias.be/limit-runtime-cronjob-script/"
@@ -12880,10 +11477,6 @@
     "example": "",
     "output": "",
     "description": "",
-    "command": [
-      "find",
-      "xargs"
-    ],
     "language": "bash",
     "tags": []
   },
@@ -12899,10 +11492,6 @@
     "example": "",
     "output": "",
     "description": "",
-    "command": [
-      "curl",
-      "tee"
-    ],
     "language": "bash",
     "tags": [
       "file"
@@ -12919,10 +11508,6 @@
     "example": "",
     "output": "",
     "description": "",
-    "command": [
-      "export",
-      "xargs)"
-    ],
     "language": "bash",
     "tags": []
   },
@@ -12938,9 +11523,6 @@
     "example": "",
     "output": "",
     "description": "",
-    "command": [
-      "(umask"
-    ],
     "language": "bash",
     "tags": []
   },
@@ -12955,13 +11537,6 @@
     "example": "",
     "output": "",
     "description": "",
-    "command": [
-      "pip",
-      "awk",
-      "grep",
-      "xargs)",
-      "less"
-    ],
     "language": "bash",
     "tags": [
       "python"
@@ -12986,10 +11561,6 @@
     "example": "",
     "output": "",
     "description": "",
-    "command": [
-      "shopt",
-      "while"
-    ],
     "language": "bash",
     "tags": [],
     "url": "https://stackoverflow.com/questions/1891797/capturing-groups-from-a-grep-regex"
@@ -13005,17 +11576,6 @@
     "example": "",
     "output": "",
     "description": "",
-    "command": [
-      "docker",
-      "tac",
-      "tr",
-      "cut",
-      "sed",
-      "sed",
-      "sed",
-      "sed",
-      "head"
-    ],
     "language": "bash",
     "tags": [
       "docker"
@@ -13046,11 +11606,6 @@
     "example": "",
     "output": "",
     "description": "",
-    "command": [
-      "dockerimagedir=\"docker-images-$(date",
-      "sed",
-      "awk"
-    ],
     "language": "bash",
     "tags": [
       "docker"
@@ -13068,10 +11623,6 @@
     "example": "",
     "output": "",
     "description": "",
-    "command": [
-      "pip",
-      "grep"
-    ],
     "language": "bash",
     "tags": [
       "python"
@@ -13095,10 +11646,6 @@
       "SSH_CONNECTION"
     ],
     "description": "",
-    "command": [
-      "env",
-      "grep"
-    ],
     "language": "bash",
     "tags": [],
     "url": "https://stackoverflow.com/a/43126805"
@@ -13114,10 +11661,6 @@
     "example": "",
     "output": "",
     "description": "",
-    "command": [
-      "export",
-      "xargs)"
-    ],
     "language": "bash",
     "tags": [],
     "url": "https://gist.github.com/judy2k/7656bfe3b322d669ef75364a46327836"
@@ -13133,10 +11676,6 @@
     "example": "",
     "output": "",
     "description": "",
-    "command": [
-      "echo",
-      "grep"
-    ],
     "language": "bash",
     "tags": []
   },
@@ -13155,9 +11694,6 @@
     "example": "",
     "output": "",
     "description": "",
-    "command": [
-      "rsync"
-    ],
     "language": "bash",
     "tags": []
   },
@@ -13172,10 +11708,6 @@
     "example": "",
     "output": "",
     "description": "",
-    "command": [
-      "find",
-      "less"
-    ],
     "language": "bash",
     "tags": [
       "info"
@@ -13193,11 +11725,6 @@
     "example": "",
     "output": "",
     "description": "",
-    "command": [
-      "find",
-      "sort",
-      "xargs"
-    ],
     "language": "bash",
     "tags": []
   },
@@ -13212,9 +11739,6 @@
     "example": "",
     "output": "",
     "description": "",
-    "command": [
-      "find"
-    ],
     "language": "bash",
     "tags": [
       "info"
@@ -13236,9 +11760,6 @@
     ],
     "output": "",
     "description": "",
-    "command": [
-      "diff"
-    ],
     "language": "bash",
     "tags": []
   },
@@ -13267,9 +11788,6 @@
       ""
     ],
     "description": "",
-    "command": [
-      "wget"
-    ],
     "language": "bash",
     "tags": [
       "file"
@@ -13287,9 +11805,6 @@
     "example": "",
     "output": "",
     "description": "",
-    "command": [
-      "lsof"
-    ],
     "language": "bash",
     "tags": []
   },
@@ -13316,12 +11831,6 @@
       "19 if"
     ],
     "description": "",
-    "command": [
-      "COLUMN=4\nhistory",
-      "awk",
-      "sort",
-      "head"
-    ],
     "language": "bash",
     "tags": []
   },
@@ -13345,15 +11854,6 @@
       ""
     ],
     "description": "",
-    "command": [
-      "netstat",
-      "grep",
-      "awk",
-      "awk",
-      "sort",
-      "uniq",
-      "awk"
-    ],
     "language": "bash",
     "tags": [
       "network"
@@ -13439,9 +11939,6 @@
       "       v     vsize        total VM size in KiB",
       "       y     priority     kernel scheduling priority"
     ],
-    "command": [
-      "ps"
-    ],
     "language": "bash",
     "tags": []
   },
@@ -13458,10 +11955,6 @@
     "description": [
       "Print filename before printing contents of file. ",
       "Same as `cat ./*.txt` but with filename"
-    ],
-    "command": [
-      "find",
-      "less"
     ],
     "language": "bash",
     "tags": [
@@ -13487,12 +11980,6 @@
     "example": "",
     "output": "",
     "description": "",
-    "command": [
-      "cat",
-      "grep",
-      "sed",
-      "sed"
-    ],
     "language": "bash",
     "tags": []
   },
@@ -13514,10 +12001,6 @@
       "http://www"
     ],
     "description": "",
-    "command": [
-      "sed",
-      "xargs"
-    ],
     "language": "bash",
     "tags": [
       "coreutils"
@@ -13542,9 +12025,6 @@
       "recursively download a page ",
       "creates the "
     ],
-    "command": [
-      "wget"
-    ],
     "language": "bash",
     "tags": [
       "file"
@@ -13565,9 +12045,6 @@
     ],
     "output": "",
     "description": "",
-    "command": [
-      "useradd"
-    ],
     "language": "bash",
     "tags": [
       "coreutils"
@@ -13600,9 +12077,6 @@
     ],
     "output": "",
     "description": "",
-    "command": [
-      "mail"
-    ],
     "language": "bash",
     "tags": [
       "coreutils"
@@ -13625,9 +12099,6 @@
       "-p displays",
       "-W print wide (no trim)"
     ],
-    "command": [
-      "netstat"
-    ],
     "language": "bash",
     "tags": [
       "network"
@@ -13647,9 +12118,6 @@
     ],
     "output": "",
     "description": "",
-    "command": [
-      "sed"
-    ],
     "language": "bash",
     "tags": [
       "root"
@@ -13670,13 +12138,6 @@
     ],
     "output": "",
     "description": "",
-    "command": [
-      "find",
-      "grep",
-      "\\.pyc",
-      "\\.pyo$)\"",
-      "xargs"
-    ],
     "language": "bash",
     "tags": [
       "python"
@@ -13693,9 +12154,6 @@
     "example": "",
     "output": "",
     "description": "",
-    "command": [
-      "printf"
-    ],
     "language": "bash",
     "tags": [],
     "url": "https://stackoverflow.com/a/60087216"
@@ -13711,11 +12169,6 @@
     "example": "",
     "output": "",
     "description": "",
-    "command": [
-      "find",
-      "cut",
-      "xargs"
-    ],
     "language": "bash",
     "tags": [
       "system"
@@ -13747,12 +12200,6 @@
     ],
     "output": "",
     "description": "",
-    "command": [
-      "ls",
-      "grep",
-      "sed",
-      "/'"
-    ],
     "language": "bash",
     "tags": [
       "system"
@@ -13781,11 +12228,6 @@
       "ls command: get a recursive full-path listing, one line per file",
       ""
     ],
-    "command": [
-      "ls",
-      "awk",
-      "grep"
-    ],
     "language": "bash",
     "tags": [
       "system"
@@ -13804,13 +12246,6 @@
     "output": "",
     "description": [
       "This command will find all git repos in your current directory with a max depth of 3. Afterwards it will perform a git pull on the current branch for each of those repositories."
-    ],
-    "command": [
-      "find",
-      "rev",
-      "cut",
-      "rev",
-      "xargs"
     ],
     "language": "bash",
     "tags": [
@@ -13831,9 +12266,6 @@
     ],
     "output": "",
     "description": "",
-    "command": [
-      "usermod"
-    ],
     "language": "bash",
     "tags": [
       "root"
@@ -13872,9 +12304,6 @@
     ],
     "output": "",
     "description": "",
-    "command": [
-      "cat"
-    ],
     "language": "bash",
     "tags": [
       "system"
@@ -13900,9 +12329,6 @@
       "http://api.sr2.pcf.example.com",
       "PCF Org"
     ],
-    "command": [
-      "cf"
-    ],
     "language": "bash",
     "tags": [
       "network"
@@ -13923,9 +12349,6 @@
     ],
     "output": "",
     "description": "",
-    "command": [
-      "RPMURL='https://...'\nrpm"
-    ],
     "language": "bash",
     "tags": [
       "pkg"
@@ -13943,9 +12366,6 @@
     "example": "",
     "output": "",
     "description": "",
-    "command": [
-      "openssl"
-    ],
     "language": "bash",
     "tags": [
       "network"
@@ -13990,9 +12410,6 @@
     "description": [
       "To test whether your Linux computer has a 32-bit or 64-bit CPU and to see what version of Linux is installed, open your terminal, type the following command at the prompt, and then hit Enter:"
     ],
-    "command": [
-      "lscpu"
-    ],
     "language": "bash",
     "tags": [
       "coreutils"
@@ -14023,9 +12440,6 @@
     "description": [
       "On CentOS 8 (and RedHat 8), the commands below will also open HTTP, HTTPS and SSH access in the system firewall."
     ],
-    "command": [
-      "sudo"
-    ],
     "language": "bash",
     "tags": [
       "network"
@@ -14044,12 +12458,6 @@
     "example": "",
     "output": "",
     "description": "",
-    "command": [
-      "STRING_MATCH=\"\"\nlsof",
-      "grep",
-      "awk",
-      "xargs"
-    ],
     "language": "bash",
     "tags": [
       "system"
@@ -14069,9 +12477,6 @@
     ],
     "output": "",
     "description": "",
-    "command": [
-      "host"
-    ],
     "language": "bash",
     "tags": []
   },
@@ -14090,9 +12495,6 @@
     "description": [
       "The pstree command shows running processes as a tree. The tree is rooted at either pid or init if pid is omitted. If a username is specified, all process trees rooted at processes owned by that user are shown."
     ],
-    "command": [
-      "pstree"
-    ],
     "language": "bash",
     "tags": []
   },
@@ -14107,9 +12509,6 @@
     "example": "",
     "output": "",
     "description": "",
-    "command": [
-      "openssl"
-    ],
     "language": "bash",
     "tags": [
       "network"
