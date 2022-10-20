@@ -8,426 +8,426 @@ cd sshell
 
 ## bash
 
-- [402](data/402): jq - convert kv to json froms stdin
-- [401](data/401): jq group by with count
-- [400](data/400): jq - recursively slice array values to get first child only
-- [399](data/399): jq - merge files 
-- [398](data/398): jq - filter dates
-- [397](data/397): convert between hex and ascii text
-- [396](data/396): cvtsudoers - get all configured sudo policies
-- [395](data/395): get machine architecture.
-- [394](data/394): jq - select objects with given key name
-- [393](data/393): rpm - get scripts used during install/uninstall processes
-- [392](data/392): echo text N times 
-- [391](data/391): draw honeycomb
-- [390](data/390): get current time in seconds 
-- [389](data/389): create and delete temp directory
-- [388](data/388): Display all established ssh connections
-- [386](data/386): yum update security
-- [385](data/385): example showing locale set between "C" and en_US.UTF-8
-- [384](data/384): simple token generator 
-- [383](data/383): sed - extract lines between two tags
-- [381](data/381): date - get seconds at 00:00:00 for date
-- [380](data/380): generate ansible-vault like hash
-- [379](data/379): jq - download and extract all the files from a gist
-- [378](data/378): find and remove files older than date
-- [377](data/377): bash - get last N characters
-- [376](data/376): prune example to filter files in .git/**
-- [375](data/375): sed - delete lines between html tags
-- [374](data/374): awk - trim leading and trailing whitespace
-- [373](data/373): cleanup git folder 
-- [372](data/372): git reset - basic undo
-- [371](data/371): pygmentize - create css file
-- [367](data/367): pandoc - for loop to convert files
-- [366](data/366): get source of minified javascript script
-- [365](data/365): dstat - get expensive processes
-- [364](data/364): openssl enc -encoding with iter
-- [363](data/363): openssl-s_client, s_client - SSL/TLS client program
-- [362](data/362): curl awx - view api 
-- [361](data/361): zip - create zip file from list piped in stdin
-- [360](data/360): set allexport - sourcing key/value .env files (without prefixing export)
-- [359](data/359): github release api - upload asset file
-- [358](data/358): docker -  get IP address of a running container
-- [356](data/356): ansible setup module - adhoc command for gathering facts
-- [355](data/355): docker format results
-- [354](data/354): openssl-dgst - hash salted password
-- [351](data/351): last reboot -  list of the times and dates when the system was recently rebooted
-- [350](data/350): MemAvailable - memory tracker: get reclaimable memory from /proc/meminfo
-- [346](data/346): clone gitlab project using project token
-- [344](data/344): exec vs eval - process
-- [343](data/343): gitlab - clone using personal token
-- [342](data/342): iconv - convert text encoding
-- [341](data/341): curl - api to get definition
-- [340](data/340): && and || - compare strings using logical operators
-- [339](data/339): IFS - word splitting observed in for loops
-- [338](data/338): cp - brace expansion to copy/backup file
-- [337](data/337): () - subshell and variable assignment
-- [336](data/336): cat - short read about useless use
-- [335](data/335): jq - convert json to environment variables
-- [334](data/334): jq - extract keys/values from object
-- [333](data/333): lvm - increase capacity of partition
-- [332](data/332): ${0%/*} - get directory of running script
-- [330](data/330): curl - display information after transfer
-- [324](data/324): awk - remove duplicates without sorting
-- [323](data/323): ignore carriage return in windows 
-- [322](data/322): python - command line pretty print json
-- [321](data/321): gitlab - create project 
-- [320](data/320): jq - convert json to csv
-- [319](data/319): grep - display lines in file1 that aren't in file2 (similar to comm)
-- [318](data/318): declare - list all function names
-- [317](data/317): nmap - view open ports
-- [316](data/316): csplit - split text in file on empty lines
-- [315](data/315): rpm - get all installed doc files for packages
-- [314](data/314): xargs - pretty print process environment
-- [313](data/313): nmap - scan port
-- [312](data/312): jq - get unique items based on key
-- [311](data/311): git - get remote branches
-- [310](data/310): git log - get commit hash list
-- [309](data/309): git-gc - cleanup unnecessary files and optimize the local repository
-- [308](data/308): github api - render a markdown document as an HTML page 
-- [307](data/307): fuser - close tcp ports 
-- [306](data/306): openssl - create and verify CSR 
-- [304](data/304): unset variables beginning with 
-- [301](data/301): find - search files modified in last 24 hours
-- [300](data/300): powershell - get all Get- commands
-- [297](data/297): curl - search dictionaries 
-- [296](data/296): wget2 - get site stats and download files
-- [295](data/295): jq - target objects in array using key
-- [292](data/292): naive string encryption - scramble numbers in string to hide sensitive data
-- [291](data/291): netsh - find the processId for the registered urls 
-- [290](data/290): netsh -  Lists all defined aliases
-- [289](data/289): pidstat - display global page faults and memory statistics
-- [288](data/288): get docker gateway
-- [286](data/286): nmap - list open TCP ports 
-- [284](data/284): systemctl - view status for every loaded service on the system
-- [283](data/283): journalctl - get entries for service
-- [282](data/282): ps - find service using the most memory
-- [281](data/281): systemd - files and tools that manage the Linux startup sequence
-- [280](data/280): openssl - generate a set of prime numbers
-- [279](data/279): openssl - MD5, SHA1, and SHA256 digest
-- [278](data/278): openssl - extract information from a certificate
-- [277](data/277): openssl - list high encryption ciphers using the AES algorithm
-- [275](data/275): sssctl - get command usage from help
-- [274](data/274): jq - get 
-- [271](data/271): sudo - show root entries only 
-- [270](data/270): awk - split string into maxtrix-like table
-- [269](data/269): sed - prepending and appending to file/line
-- [268](data/268): vault - get openapi specs
-- [267](data/267): openssl - for versions >1.1.1
-- [265](data/265): prometheus - curl metrics
-- [264](data/264): ls - sortable ls
-- [263](data/263): vault - enable and write userpass
-- [262](data/262): get environment names matching prefix
-- [260](data/260): Get the parent directory of where this script is.
-- [259](data/259): investigate sockets & processes
-- [258](data/258): vault - list secrets in path
-- [256](data/256): curl - renew vault token
-- [255](data/255): vault - update secret with file
-- [254](data/254): find directories that do not have sticky bit for group
-- [253](data/253): git - get top level directory
-- [252](data/252): prettier - alias for stdin formatting for xml files
-- [251](data/251): powershell - run noprofile command in shell (bash)
-- [250](data/250): git - remove commits matching pattern in message
-- [248](data/248): ansible-vault - encrypt string with vault id
-- [247](data/247): uuidgen - create a new UUID value
-- [246](data/246): find files created in the last hour
-- [245](data/245): systemd-escape - escape strings 
-- [243](data/243): openssl salted encryption/decryption
-- [242](data/242): openssl crypt-style password hash
-- [241](data/241): openssl benchmark
-- [240](data/240): stat - display file properties
-- [239](data/239): systemctl examples
-- [238](data/238): openssl - verify checksum
-- [237](data/237): print statistics of a process
-- [236](data/236): mpstat - processors related statistics.
-- [235](data/235): read network interface statistics
-- [234](data/234): procinfo: display all system status gathered from /proc
-- [233](data/233): show most expensive CPU process
-- [232](data/232): gnu tools
-- [231](data/231): list block devices
-- [230](data/230): examples illustrating substring expansion
-- [229](data/229): systemctl - Get enabled services
-- [228](data/228): get non default values for ansible config
-- [227](data/227): disable login for domain user
-- [226](data/226): restart failed services
-- [225](data/225): kill all processes for user
-- [224](data/224): zip files in current directory
-- [223](data/223): Display the running processes of a container
-- [222](data/222): nstat (better way of getting network statistics)
-- [221](data/221): systemd-cgls: recursively show control group contents.
-- [220](data/220): Gather listening ports
-- [219](data/219): map view of pids owned by services
-- [218](data/218): clean docker (to factory)
-- [217](data/217): Delete Orphaned Docker Volumes
-- [216](data/216): docker root systemd drop-in service
-- [215](data/215): cygwin - open terminal here
-- [214](data/214): find files created on this date
-- [213](data/213): cleanup leftover open files
-- [212](data/212): awx - get token
-- [211](data/211): du - aggregate directory size
-- [209](data/209): check memory usage per process
-- [208](data/208): date unix timestamp to format
-- [207](data/207): build json using jq
-- [206](data/206): create csv from json (jq)
-- [205](data/205): ps do not print columns
-- [204](data/204): only get pid
-- [203](data/203): os detection
-- [202](data/202): get name server
-- [201](data/201): Check client certificate
-- [200](data/200): Cleaning up the VS Code Server on the remote
-- [199](data/199): get process pid and parent id
-- [198](data/198): start ssh agent on login
-- [196](data/196): env reduced environment
-- [194](data/194): util linux
-- [191](data/191): clear screen
-- [189](data/189): list files with time style & hides groups
-- [186](data/186): zip directory
-- [185](data/185): random variable
-- [184](data/184): date - get N days ago
-- [182](data/182): type - display information about command
-- [181](data/181): git diff side by side
-- [180](data/180): List Network Facing Services
-- [179](data/179): sendmail template
-- [178](data/178): sshpass - read ssh password from file
-- [177](data/177): docker - resolve no space on device
-- [176](data/176): list files and sort by size
-- [175](data/175): Getting Server Certificate
-- [174](data/174): curl vault secrets
-- [172](data/172): get git symlink files
-- [169](data/169): set existing variables only
-- [168](data/168): delete null value
-- [167](data/167): ansible-doc snippet
-- [166](data/166): Get commits that have deleted files
-- [164](data/164): proc environ - format for readability
-- [163](data/163): comm - find common or distinct lines between files
-- [162](data/162): sort top command by memory
-- [161](data/161): rbind mount docker
-- [160](data/160): find js files in src/
-- [159](data/159): Check and assign variables
-- [158](data/158): yum - get installed security updates
-- [157](data/157): ssh-keygen - generate public key from prviate key
-- [156](data/156): docker history
-- [155](data/155): yum list docker-engine --showduplicates
-- [154](data/154): umask - get umask for current process
-- [153](data/153): getfactl - get user, group, and perm 
-- [152](data/152): add user to group
-- [151](data/151): realpath - get relative paths
-- [148](data/148): Print border
-- [147](data/147): get latest kernel version
-- [146](data/146): awx curl
-- [145](data/145): system boot menu entries
-- [144](data/144): get latest kernel
-- [143](data/143): get installed kernels
-- [142](data/142): awx job_template
-- [139](data/139): Uptime of a process
-- [138](data/138): sha256
-- [137](data/137): get ip address
-- [132](data/132): generate random password openssl
-- [131](data/131): python to encode and decode
-- [130](data/130): find world writable files
-- [129](data/129): password generator
-- [128](data/128): pmem (vscode mimics ps)
-- [127](data/127): remove trailing whitespace
-- [126](data/126): /proc files
-- [125](data/125): print files with timestamp
-- [124](data/124): awk - remove duplicates without sorting
-- [123](data/123): Use awk to display text and insert blank line before
-- [122](data/122): repeat string N times
-- [121](data/121): get all processes for user
-- [120](data/120): get arguments after first
-- [119](data/119): get runas user
-- [118](data/118): string substring
-- [117](data/117): string slicing
-- [116](data/116): set color
-- [115](data/115): ss -  investigate sockets
-- [114](data/114): sqlplus - set password
-- [112](data/112): view process id
-- [111](data/111): exec cmd
-- [110](data/110): generate random password
-- [108](data/108): run sudosu
-- [107](data/107): get allowed sudo commands
-- [106](data/106): get git status for all worktree repos in git
-- [105](data/105): find zombie processes
-- [104](data/104): extract in a different directory
-- [103](data/103): compress directory using tar
-- [102](data/102): get top memory/cpu hog
-- [101](data/101): Get systemctl property
-- [100](data/100): docker volume - inspect all
-- [99](data/99): generating crypto quote
-- [98](data/98): git diff tags
-- [97](data/97): sed - only print after matching pattern
-- [96](data/96): sed - delete rows after pattern 
-- [95](data/95): sed replace files
-- [94](data/94): sort .bash_history
-- [93](data/93): self sign cert (generate private key, csr, and crt)
-- [92](data/92): git pager
-- [89](data/89): prune unwritable files from find
-- [86](data/86): psql table size
-- [84](data/84): print all commands in $PATH (windows bash)
-- [83](data/83): type
-- [82](data/82): ansible list all hosts
-- [81](data/81): encrypt/decrypt gpg
-- [80](data/80): ansible - transfer a file directly to many servers:
-- [79](data/79): See the list of available plugins
-- [78](data/78): generate ed25519 private key
-- [77](data/77): rsync
-- [76](data/76): create csr request
-- [75](data/75): print markdown docs not in node_modules
-- [74](data/74): get most used commands
-- [73](data/73): print commands from sudo log
-- [72](data/72): view UDP and TCP ports
-- [71](data/71): output all yml
-- [70](data/70): encrypt string with ansible-vault
-- [69](data/69): list all ip rules
-- [68](data/68): get matching prefix
-- [67](data/67): greedy *
-- [66](data/66): hack for exporting env variables
-- [65](data/65): get modification date for files in directory
-- [64](data/64): view workstation details
-- [63](data/63): Recursively get full path name
-- [62](data/62): coreutils
-- [61](data/61): get sorted size of directories in current working directory
-- [60](data/60): Resolve warning that bridge-nf-call-iptables is disabled
-- [59](data/59): Get size of mounted filesystems
-- [58](data/58): alias for easy column extraction
-- [56](data/56): fetch all git tags
-- [55](data/55): get free space on directory
-- [54](data/54): get free space in directory
-- [53](data/53): hack for unsourcing env variables
-- [52](data/52): echo shell commands as they are executed
-- [51](data/51): print all the columns after a particular number using awk
-- [50](data/50): set timeout for script 
-- [49](data/49): git make files executable
-- [48](data/48): curl yum repo
-- [47](data/47): set env variables
-- [46](data/46): umask create file with permissions
-- [45](data/45): pip show for all pip installed
-- [44](data/44): capturing group grep
-- [43](data/43): docker history dockerfile
-- [42](data/42): docker save images
-- [41](data/41): pip install requirements one line
-- [40](data/40): print env variables that start with S
-- [39](data/39): Parse a .env (dotenv) file directly using bash
-- [38](data/38): extract title from html
-- [37](data/37): rsync with exclude
-- [36](data/36): view signed certs
-- [35](data/35): hash directory 
-- [34](data/34): print name + content
-- [32](data/32): diff project structures for git branches
-- [31](data/31): download & save as json
-- [30](data/30): a fancier lsof -i
-- [29](data/29): get list of most used commands
-- [28](data/28): Graph # of connections for each hosts.
-- [27](data/27): ps examples
-- [26](data/26): print filename + content of sudo privileges
-- [25](data/25): create html toc
-- [24](data/24): urldecode
-- [23](data/23): recursively download files from web
-- [22](data/22): creating a user with pass
-- [21](data/21): sending email
-- [20](data/20): Get active internet connections and domain sockets
-- [19](data/19): unwrap text file (useful for logs)
-- [18](data/18): clear pycache
-- [17](data/17): print = across the screen
-- [16](data/16): Update multiple repos (no rev)
-- [15](data/15): view file structure (tree)
-- [14](data/14): List full paths for recursive files with grep and awk
-- [13](data/13): Updating Multiple Repos With One Command
-- [11](data/11): append group to a user
-- [10](data/10): view os-release
-- [9](data/9): cf
-- [8](data/8): rpm
-- [7](data/7): test openssl connection
-- [6](data/6): display information about the CPU architecture
-- [5](data/5): start firewalld
-- [4](data/4): find and kill processes
-- [3](data/3): host
-- [2](data/2): pstree
-- [1](data/1): generate RSA key
+- [402](nntrn.github.io/sshell/#402): jq - convert kv to json froms stdin
+- [401](nntrn.github.io/sshell/#401): jq group by with count
+- [400](nntrn.github.io/sshell/#400): jq - recursively slice array values to get first child only
+- [399](nntrn.github.io/sshell/#399): jq - merge files 
+- [398](nntrn.github.io/sshell/#398): jq - filter dates
+- [397](nntrn.github.io/sshell/#397): convert between hex and ascii text
+- [396](nntrn.github.io/sshell/#396): cvtsudoers - get all configured sudo policies
+- [395](nntrn.github.io/sshell/#395): get machine architecture.
+- [394](nntrn.github.io/sshell/#394): jq - select objects with given key name
+- [393](nntrn.github.io/sshell/#393): rpm - get scripts used during install/uninstall processes
+- [392](nntrn.github.io/sshell/#392): echo text N times 
+- [391](nntrn.github.io/sshell/#391): draw honeycomb
+- [390](nntrn.github.io/sshell/#390): get current time in seconds 
+- [389](nntrn.github.io/sshell/#389): create and delete temp directory
+- [388](nntrn.github.io/sshell/#388): Display all established ssh connections
+- [386](nntrn.github.io/sshell/#386): yum update security
+- [385](nntrn.github.io/sshell/#385): example showing locale set between "C" and en_US.UTF-8
+- [384](nntrn.github.io/sshell/#384): simple token generator 
+- [383](nntrn.github.io/sshell/#383): sed - extract lines between two tags
+- [381](nntrn.github.io/sshell/#381): date - get seconds at 00:00:00 for date
+- [380](nntrn.github.io/sshell/#380): generate ansible-vault like hash
+- [379](nntrn.github.io/sshell/#379): jq - download and extract all the files from a gist
+- [378](nntrn.github.io/sshell/#378): find and remove files older than date
+- [377](nntrn.github.io/sshell/#377): bash - get last N characters
+- [376](nntrn.github.io/sshell/#376): prune example to filter files in .git/**
+- [375](nntrn.github.io/sshell/#375): sed - delete lines between html tags
+- [374](nntrn.github.io/sshell/#374): awk - trim leading and trailing whitespace
+- [373](nntrn.github.io/sshell/#373): cleanup git folder 
+- [372](nntrn.github.io/sshell/#372): git reset - basic undo
+- [371](nntrn.github.io/sshell/#371): pygmentize - create css file
+- [367](nntrn.github.io/sshell/#367): pandoc - for loop to convert files
+- [366](nntrn.github.io/sshell/#366): get source of minified javascript script
+- [365](nntrn.github.io/sshell/#365): dstat - get expensive processes
+- [364](nntrn.github.io/sshell/#364): openssl enc -encoding with iter
+- [363](nntrn.github.io/sshell/#363): openssl-s_client, s_client - SSL/TLS client program
+- [362](nntrn.github.io/sshell/#362): curl awx - view api 
+- [361](nntrn.github.io/sshell/#361): zip - create zip file from list piped in stdin
+- [360](nntrn.github.io/sshell/#360): set allexport - sourcing key/value .env files (without prefixing export)
+- [359](nntrn.github.io/sshell/#359): github release api - upload asset file
+- [358](nntrn.github.io/sshell/#358): docker -  get IP address of a running container
+- [356](nntrn.github.io/sshell/#356): ansible setup module - adhoc command for gathering facts
+- [355](nntrn.github.io/sshell/#355): docker format results
+- [354](nntrn.github.io/sshell/#354): openssl-dgst - hash salted password
+- [351](nntrn.github.io/sshell/#351): last reboot -  list of the times and dates when the system was recently rebooted
+- [350](nntrn.github.io/sshell/#350): MemAvailable - memory tracker: get reclaimable memory from /proc/meminfo
+- [346](nntrn.github.io/sshell/#346): clone gitlab project using project token
+- [344](nntrn.github.io/sshell/#344): exec vs eval - process
+- [343](nntrn.github.io/sshell/#343): gitlab - clone using personal token
+- [342](nntrn.github.io/sshell/#342): iconv - convert text encoding
+- [341](nntrn.github.io/sshell/#341): curl - api to get definition
+- [340](nntrn.github.io/sshell/#340): && and || - compare strings using logical operators
+- [339](nntrn.github.io/sshell/#339): IFS - word splitting observed in for loops
+- [338](nntrn.github.io/sshell/#338): cp - brace expansion to copy/backup file
+- [337](nntrn.github.io/sshell/#337): () - subshell and variable assignment
+- [336](nntrn.github.io/sshell/#336): cat - short read about useless use
+- [335](nntrn.github.io/sshell/#335): jq - convert json to environment variables
+- [334](nntrn.github.io/sshell/#334): jq - extract keys/values from object
+- [333](nntrn.github.io/sshell/#333): lvm - increase capacity of partition
+- [332](nntrn.github.io/sshell/#332): ${0%/*} - get directory of running script
+- [330](nntrn.github.io/sshell/#330): curl - display information after transfer
+- [324](nntrn.github.io/sshell/#324): awk - remove duplicates without sorting
+- [323](nntrn.github.io/sshell/#323): ignore carriage return in windows 
+- [322](nntrn.github.io/sshell/#322): python - command line pretty print json
+- [321](nntrn.github.io/sshell/#321): gitlab - create project 
+- [320](nntrn.github.io/sshell/#320): jq - convert json to csv
+- [319](nntrn.github.io/sshell/#319): grep - display lines in file1 that aren't in file2 (similar to comm)
+- [318](nntrn.github.io/sshell/#318): declare - list all function names
+- [317](nntrn.github.io/sshell/#317): nmap - view open ports
+- [316](nntrn.github.io/sshell/#316): csplit - split text in file on empty lines
+- [315](nntrn.github.io/sshell/#315): rpm - get all installed doc files for packages
+- [314](nntrn.github.io/sshell/#314): xargs - pretty print process environment
+- [313](nntrn.github.io/sshell/#313): nmap - scan port
+- [312](nntrn.github.io/sshell/#312): jq - get unique items based on key
+- [311](nntrn.github.io/sshell/#311): git - get remote branches
+- [310](nntrn.github.io/sshell/#310): git log - get commit hash list
+- [309](nntrn.github.io/sshell/#309): git-gc - cleanup unnecessary files and optimize the local repository
+- [308](nntrn.github.io/sshell/#308): github api - render a markdown document as an HTML page 
+- [307](nntrn.github.io/sshell/#307): fuser - close tcp ports 
+- [306](nntrn.github.io/sshell/#306): openssl - create and verify CSR 
+- [304](nntrn.github.io/sshell/#304): unset variables beginning with 
+- [301](nntrn.github.io/sshell/#301): find - search files modified in last 24 hours
+- [300](nntrn.github.io/sshell/#300): powershell - get all Get- commands
+- [297](nntrn.github.io/sshell/#297): curl - search dictionaries 
+- [296](nntrn.github.io/sshell/#296): wget2 - get site stats and download files
+- [295](nntrn.github.io/sshell/#295): jq - target objects in array using key
+- [292](nntrn.github.io/sshell/#292): naive string encryption - scramble numbers in string to hide sensitive data
+- [291](nntrn.github.io/sshell/#291): netsh - find the processId for the registered urls 
+- [290](nntrn.github.io/sshell/#290): netsh -  Lists all defined aliases
+- [289](nntrn.github.io/sshell/#289): pidstat - display global page faults and memory statistics
+- [288](nntrn.github.io/sshell/#288): get docker gateway
+- [286](nntrn.github.io/sshell/#286): nmap - list open TCP ports 
+- [284](nntrn.github.io/sshell/#284): systemctl - view status for every loaded service on the system
+- [283](nntrn.github.io/sshell/#283): journalctl - get entries for service
+- [282](nntrn.github.io/sshell/#282): ps - find service using the most memory
+- [281](nntrn.github.io/sshell/#281): systemd - files and tools that manage the Linux startup sequence
+- [280](nntrn.github.io/sshell/#280): openssl - generate a set of prime numbers
+- [279](nntrn.github.io/sshell/#279): openssl - MD5, SHA1, and SHA256 digest
+- [278](nntrn.github.io/sshell/#278): openssl - extract information from a certificate
+- [277](nntrn.github.io/sshell/#277): openssl - list high encryption ciphers using the AES algorithm
+- [275](nntrn.github.io/sshell/#275): sssctl - get command usage from help
+- [274](nntrn.github.io/sshell/#274): jq - get 
+- [271](nntrn.github.io/sshell/#271): sudo - show root entries only 
+- [270](nntrn.github.io/sshell/#270): awk - split string into maxtrix-like table
+- [269](nntrn.github.io/sshell/#269): sed - prepending and appending to file/line
+- [268](nntrn.github.io/sshell/#268): vault - get openapi specs
+- [267](nntrn.github.io/sshell/#267): openssl - for versions >1.1.1
+- [265](nntrn.github.io/sshell/#265): prometheus - curl metrics
+- [264](nntrn.github.io/sshell/#264): ls - sortable ls
+- [263](nntrn.github.io/sshell/#263): vault - enable and write userpass
+- [262](nntrn.github.io/sshell/#262): get environment names matching prefix
+- [260](nntrn.github.io/sshell/#260): Get the parent directory of where this script is.
+- [259](nntrn.github.io/sshell/#259): investigate sockets & processes
+- [258](nntrn.github.io/sshell/#258): vault - list secrets in path
+- [256](nntrn.github.io/sshell/#256): curl - renew vault token
+- [255](nntrn.github.io/sshell/#255): vault - update secret with file
+- [254](nntrn.github.io/sshell/#254): find directories that do not have sticky bit for group
+- [253](nntrn.github.io/sshell/#253): git - get top level directory
+- [252](nntrn.github.io/sshell/#252): prettier - alias for stdin formatting for xml files
+- [251](nntrn.github.io/sshell/#251): powershell - run noprofile command in shell (bash)
+- [250](nntrn.github.io/sshell/#250): git - remove commits matching pattern in message
+- [248](nntrn.github.io/sshell/#248): ansible-vault - encrypt string with vault id
+- [247](nntrn.github.io/sshell/#247): uuidgen - create a new UUID value
+- [246](nntrn.github.io/sshell/#246): find files created in the last hour
+- [245](nntrn.github.io/sshell/#245): systemd-escape - escape strings 
+- [243](nntrn.github.io/sshell/#243): openssl salted encryption/decryption
+- [242](nntrn.github.io/sshell/#242): openssl crypt-style password hash
+- [241](nntrn.github.io/sshell/#241): openssl benchmark
+- [240](nntrn.github.io/sshell/#240): stat - display file properties
+- [239](nntrn.github.io/sshell/#239): systemctl examples
+- [238](nntrn.github.io/sshell/#238): openssl - verify checksum
+- [237](nntrn.github.io/sshell/#237): print statistics of a process
+- [236](nntrn.github.io/sshell/#236): mpstat - processors related statistics.
+- [235](nntrn.github.io/sshell/#235): read network interface statistics
+- [234](nntrn.github.io/sshell/#234): procinfo: display all system status gathered from /proc
+- [233](nntrn.github.io/sshell/#233): show most expensive CPU process
+- [232](nntrn.github.io/sshell/#232): gnu tools
+- [231](nntrn.github.io/sshell/#231): list block devices
+- [230](nntrn.github.io/sshell/#230): examples illustrating substring expansion
+- [229](nntrn.github.io/sshell/#229): systemctl - Get enabled services
+- [228](nntrn.github.io/sshell/#228): get non default values for ansible config
+- [227](nntrn.github.io/sshell/#227): disable login for domain user
+- [226](nntrn.github.io/sshell/#226): restart failed services
+- [225](nntrn.github.io/sshell/#225): kill all processes for user
+- [224](nntrn.github.io/sshell/#224): zip files in current directory
+- [223](nntrn.github.io/sshell/#223): Display the running processes of a container
+- [222](nntrn.github.io/sshell/#222): nstat (better way of getting network statistics)
+- [221](nntrn.github.io/sshell/#221): systemd-cgls: recursively show control group contents.
+- [220](nntrn.github.io/sshell/#220): Gather listening ports
+- [219](nntrn.github.io/sshell/#219): map view of pids owned by services
+- [218](nntrn.github.io/sshell/#218): clean docker (to factory)
+- [217](nntrn.github.io/sshell/#217): Delete Orphaned Docker Volumes
+- [216](nntrn.github.io/sshell/#216): docker root systemd drop-in service
+- [215](nntrn.github.io/sshell/#215): cygwin - open terminal here
+- [214](nntrn.github.io/sshell/#214): find files created on this date
+- [213](nntrn.github.io/sshell/#213): cleanup leftover open files
+- [212](nntrn.github.io/sshell/#212): awx - get token
+- [211](nntrn.github.io/sshell/#211): du - aggregate directory size
+- [209](nntrn.github.io/sshell/#209): check memory usage per process
+- [208](nntrn.github.io/sshell/#208): date unix timestamp to format
+- [207](nntrn.github.io/sshell/#207): build json using jq
+- [206](nntrn.github.io/sshell/#206): create csv from json (jq)
+- [205](nntrn.github.io/sshell/#205): ps do not print columns
+- [204](nntrn.github.io/sshell/#204): only get pid
+- [203](nntrn.github.io/sshell/#203): os detection
+- [202](nntrn.github.io/sshell/#202): get name server
+- [201](nntrn.github.io/sshell/#201): Check client certificate
+- [200](nntrn.github.io/sshell/#200): Cleaning up the VS Code Server on the remote
+- [199](nntrn.github.io/sshell/#199): get process pid and parent id
+- [198](nntrn.github.io/sshell/#198): start ssh agent on login
+- [196](nntrn.github.io/sshell/#196): env reduced environment
+- [194](nntrn.github.io/sshell/#194): util linux
+- [191](nntrn.github.io/sshell/#191): clear screen
+- [189](nntrn.github.io/sshell/#189): list files with time style & hides groups
+- [186](nntrn.github.io/sshell/#186): zip directory
+- [185](nntrn.github.io/sshell/#185): random variable
+- [184](nntrn.github.io/sshell/#184): date - get N days ago
+- [182](nntrn.github.io/sshell/#182): type - display information about command
+- [181](nntrn.github.io/sshell/#181): git diff side by side
+- [180](nntrn.github.io/sshell/#180): List Network Facing Services
+- [179](nntrn.github.io/sshell/#179): sendmail template
+- [178](nntrn.github.io/sshell/#178): sshpass - read ssh password from file
+- [177](nntrn.github.io/sshell/#177): docker - resolve no space on device
+- [176](nntrn.github.io/sshell/#176): list files and sort by size
+- [175](nntrn.github.io/sshell/#175): Getting Server Certificate
+- [174](nntrn.github.io/sshell/#174): curl vault secrets
+- [172](nntrn.github.io/sshell/#172): get git symlink files
+- [169](nntrn.github.io/sshell/#169): set existing variables only
+- [168](nntrn.github.io/sshell/#168): delete null value
+- [167](nntrn.github.io/sshell/#167): ansible-doc snippet
+- [166](nntrn.github.io/sshell/#166): Get commits that have deleted files
+- [164](nntrn.github.io/sshell/#164): proc environ - format for readability
+- [163](nntrn.github.io/sshell/#163): comm - find common or distinct lines between files
+- [162](nntrn.github.io/sshell/#162): sort top command by memory
+- [161](nntrn.github.io/sshell/#161): rbind mount docker
+- [160](nntrn.github.io/sshell/#160): find js files in src/
+- [159](nntrn.github.io/sshell/#159): Check and assign variables
+- [158](nntrn.github.io/sshell/#158): yum - get installed security updates
+- [157](nntrn.github.io/sshell/#157): ssh-keygen - generate public key from prviate key
+- [156](nntrn.github.io/sshell/#156): docker history
+- [155](nntrn.github.io/sshell/#155): yum list docker-engine --showduplicates
+- [154](nntrn.github.io/sshell/#154): umask - get umask for current process
+- [153](nntrn.github.io/sshell/#153): getfactl - get user, group, and perm 
+- [152](nntrn.github.io/sshell/#152): add user to group
+- [151](nntrn.github.io/sshell/#151): realpath - get relative paths
+- [148](nntrn.github.io/sshell/#148): Print border
+- [147](nntrn.github.io/sshell/#147): get latest kernel version
+- [146](nntrn.github.io/sshell/#146): awx curl
+- [145](nntrn.github.io/sshell/#145): system boot menu entries
+- [144](nntrn.github.io/sshell/#144): get latest kernel
+- [143](nntrn.github.io/sshell/#143): get installed kernels
+- [142](nntrn.github.io/sshell/#142): awx job_template
+- [139](nntrn.github.io/sshell/#139): Uptime of a process
+- [138](nntrn.github.io/sshell/#138): sha256
+- [137](nntrn.github.io/sshell/#137): get ip address
+- [132](nntrn.github.io/sshell/#132): generate random password openssl
+- [131](nntrn.github.io/sshell/#131): python to encode and decode
+- [130](nntrn.github.io/sshell/#130): find world writable files
+- [129](nntrn.github.io/sshell/#129): password generator
+- [128](nntrn.github.io/sshell/#128): pmem (vscode mimics ps)
+- [127](nntrn.github.io/sshell/#127): remove trailing whitespace
+- [126](nntrn.github.io/sshell/#126): /proc files
+- [125](nntrn.github.io/sshell/#125): print files with timestamp
+- [124](nntrn.github.io/sshell/#124): awk - remove duplicates without sorting
+- [123](nntrn.github.io/sshell/#123): Use awk to display text and insert blank line before
+- [122](nntrn.github.io/sshell/#122): repeat string N times
+- [121](nntrn.github.io/sshell/#121): get all processes for user
+- [120](nntrn.github.io/sshell/#120): get arguments after first
+- [119](nntrn.github.io/sshell/#119): get runas user
+- [118](nntrn.github.io/sshell/#118): string substring
+- [117](nntrn.github.io/sshell/#117): string slicing
+- [116](nntrn.github.io/sshell/#116): set color
+- [115](nntrn.github.io/sshell/#115): ss -  investigate sockets
+- [114](nntrn.github.io/sshell/#114): sqlplus - set password
+- [112](nntrn.github.io/sshell/#112): view process id
+- [111](nntrn.github.io/sshell/#111): exec cmd
+- [110](nntrn.github.io/sshell/#110): generate random password
+- [108](nntrn.github.io/sshell/#108): run sudosu
+- [107](nntrn.github.io/sshell/#107): get allowed sudo commands
+- [106](nntrn.github.io/sshell/#106): get git status for all worktree repos in git
+- [105](nntrn.github.io/sshell/#105): find zombie processes
+- [104](nntrn.github.io/sshell/#104): extract in a different directory
+- [103](nntrn.github.io/sshell/#103): compress directory using tar
+- [102](nntrn.github.io/sshell/#102): get top memory/cpu hog
+- [101](nntrn.github.io/sshell/#101): Get systemctl property
+- [100](nntrn.github.io/sshell/#100): docker volume - inspect all
+- [99](nntrn.github.io/sshell/#99): generating crypto quote
+- [98](nntrn.github.io/sshell/#98): git diff tags
+- [97](nntrn.github.io/sshell/#97): sed - only print after matching pattern
+- [96](nntrn.github.io/sshell/#96): sed - delete rows after pattern 
+- [95](nntrn.github.io/sshell/#95): sed replace files
+- [94](nntrn.github.io/sshell/#94): sort .bash_history
+- [93](nntrn.github.io/sshell/#93): self sign cert (generate private key, csr, and crt)
+- [92](nntrn.github.io/sshell/#92): git pager
+- [89](nntrn.github.io/sshell/#89): prune unwritable files from find
+- [86](nntrn.github.io/sshell/#86): psql table size
+- [84](nntrn.github.io/sshell/#84): print all commands in $PATH (windows bash)
+- [83](nntrn.github.io/sshell/#83): type
+- [82](nntrn.github.io/sshell/#82): ansible list all hosts
+- [81](nntrn.github.io/sshell/#81): encrypt/decrypt gpg
+- [80](nntrn.github.io/sshell/#80): ansible - transfer a file directly to many servers:
+- [79](nntrn.github.io/sshell/#79): See the list of available plugins
+- [78](nntrn.github.io/sshell/#78): generate ed25519 private key
+- [77](nntrn.github.io/sshell/#77): rsync
+- [76](nntrn.github.io/sshell/#76): create csr request
+- [75](nntrn.github.io/sshell/#75): print markdown docs not in node_modules
+- [74](nntrn.github.io/sshell/#74): get most used commands
+- [73](nntrn.github.io/sshell/#73): print commands from sudo log
+- [72](nntrn.github.io/sshell/#72): view UDP and TCP ports
+- [71](nntrn.github.io/sshell/#71): output all yml
+- [70](nntrn.github.io/sshell/#70): encrypt string with ansible-vault
+- [69](nntrn.github.io/sshell/#69): list all ip rules
+- [68](nntrn.github.io/sshell/#68): get matching prefix
+- [67](nntrn.github.io/sshell/#67): greedy *
+- [66](nntrn.github.io/sshell/#66): hack for exporting env variables
+- [65](nntrn.github.io/sshell/#65): get modification date for files in directory
+- [64](nntrn.github.io/sshell/#64): view workstation details
+- [63](nntrn.github.io/sshell/#63): Recursively get full path name
+- [62](nntrn.github.io/sshell/#62): coreutils
+- [61](nntrn.github.io/sshell/#61): get sorted size of directories in current working directory
+- [60](nntrn.github.io/sshell/#60): Resolve warning that bridge-nf-call-iptables is disabled
+- [59](nntrn.github.io/sshell/#59): Get size of mounted filesystems
+- [58](nntrn.github.io/sshell/#58): alias for easy column extraction
+- [56](nntrn.github.io/sshell/#56): fetch all git tags
+- [55](nntrn.github.io/sshell/#55): get free space on directory
+- [54](nntrn.github.io/sshell/#54): get free space in directory
+- [53](nntrn.github.io/sshell/#53): hack for unsourcing env variables
+- [52](nntrn.github.io/sshell/#52): echo shell commands as they are executed
+- [51](nntrn.github.io/sshell/#51): print all the columns after a particular number using awk
+- [50](nntrn.github.io/sshell/#50): set timeout for script 
+- [49](nntrn.github.io/sshell/#49): git make files executable
+- [48](nntrn.github.io/sshell/#48): curl yum repo
+- [47](nntrn.github.io/sshell/#47): set env variables
+- [46](nntrn.github.io/sshell/#46): umask create file with permissions
+- [45](nntrn.github.io/sshell/#45): pip show for all pip installed
+- [44](nntrn.github.io/sshell/#44): capturing group grep
+- [43](nntrn.github.io/sshell/#43): docker history dockerfile
+- [42](nntrn.github.io/sshell/#42): docker save images
+- [41](nntrn.github.io/sshell/#41): pip install requirements one line
+- [40](nntrn.github.io/sshell/#40): print env variables that start with S
+- [39](nntrn.github.io/sshell/#39): Parse a .env (dotenv) file directly using bash
+- [38](nntrn.github.io/sshell/#38): extract title from html
+- [37](nntrn.github.io/sshell/#37): rsync with exclude
+- [36](nntrn.github.io/sshell/#36): view signed certs
+- [35](nntrn.github.io/sshell/#35): hash directory 
+- [34](nntrn.github.io/sshell/#34): print name + content
+- [32](nntrn.github.io/sshell/#32): diff project structures for git branches
+- [31](nntrn.github.io/sshell/#31): download & save as json
+- [30](nntrn.github.io/sshell/#30): a fancier lsof -i
+- [29](nntrn.github.io/sshell/#29): get list of most used commands
+- [28](nntrn.github.io/sshell/#28): Graph # of connections for each hosts.
+- [27](nntrn.github.io/sshell/#27): ps examples
+- [26](nntrn.github.io/sshell/#26): print filename + content of sudo privileges
+- [25](nntrn.github.io/sshell/#25): create html toc
+- [24](nntrn.github.io/sshell/#24): urldecode
+- [23](nntrn.github.io/sshell/#23): recursively download files from web
+- [22](nntrn.github.io/sshell/#22): creating a user with pass
+- [21](nntrn.github.io/sshell/#21): sending email
+- [20](nntrn.github.io/sshell/#20): Get active internet connections and domain sockets
+- [19](nntrn.github.io/sshell/#19): unwrap text file (useful for logs)
+- [18](nntrn.github.io/sshell/#18): clear pycache
+- [17](nntrn.github.io/sshell/#17): print = across the screen
+- [16](nntrn.github.io/sshell/#16): Update multiple repos (no rev)
+- [15](nntrn.github.io/sshell/#15): view file structure (tree)
+- [14](nntrn.github.io/sshell/#14): List full paths for recursive files with grep and awk
+- [13](nntrn.github.io/sshell/#13): Updating Multiple Repos With One Command
+- [11](nntrn.github.io/sshell/#11): append group to a user
+- [10](nntrn.github.io/sshell/#10): view os-release
+- [9](nntrn.github.io/sshell/#9): cf
+- [8](nntrn.github.io/sshell/#8): rpm
+- [7](nntrn.github.io/sshell/#7): test openssl connection
+- [6](nntrn.github.io/sshell/#6): display information about the CPU architecture
+- [5](nntrn.github.io/sshell/#5): start firewalld
+- [4](nntrn.github.io/sshell/#4): find and kill processes
+- [3](nntrn.github.io/sshell/#3): host
+- [2](nntrn.github.io/sshell/#2): pstree
+- [1](nntrn.github.io/sshell/#1): generate RSA key
 
 ## cmd
 
-- [387](data/387): netsh - loop over ip4 to display network information
-- [305](data/305): fsutil resource info
-- [183](data/183): bat file for opening cygwin in current directory
-- [165](data/165): windows - repair health
-- [57](data/57): view service account owner
+- [387](nntrn.github.io/sshell/#387): netsh - loop over ip4 to display network information
+- [305](nntrn.github.io/sshell/#305): fsutil resource info
+- [183](nntrn.github.io/sshell/#183): bat file for opening cygwin in current directory
+- [165](nntrn.github.io/sshell/#165): windows - repair health
+- [57](nntrn.github.io/sshell/#57): view service account owner
 
 ## config
 
-- [197](data/197): enable ssh controlmaster - ssh sessions
+- [197](nntrn.github.io/sshell/#197): enable ssh controlmaster - ssh sessions
 
 ## javascript
 
-- [352](data/352): document.documentElement.scrollTop - scroll to top of page
-- [345](data/345): document.cookie - convert key=value string to JSON string
-- [173](data/173): devtools: get all css items
+- [352](nntrn.github.io/sshell/#352): document.documentElement.scrollTop - scroll to top of page
+- [345](nntrn.github.io/sshell/#345): document.cookie - convert key=value string to JSON string
+- [173](nntrn.github.io/sshell/#173): devtools: get all css items
 
 ## nginx
 
-- [349](data/349): nginx -  common configurations to block sql injections and other attacks
-- [348](data/348): limit_except
+- [349](nntrn.github.io/sshell/#349): nginx -  common configurations to block sql injections and other attacks
+- [348](nntrn.github.io/sshell/#348): limit_except
 
 ## plain
 
-- [149](data/149): ansible-playbook in crontab
+- [149](nntrn.github.io/sshell/#149): ansible-playbook in crontab
 
 ## powershell
 
-- [382](data/382): list local certificates
-- [370](data/370): Format-Table -GroupBy - Format processes by BasePriority
-- [369](data/369): Get-ADUser - get last password set for service accounts
-- [303](data/303): Get-WindowsUpdateLog - get update
-- [302](data/302): Finds local admin password and password expiration timestamp for given computer
-- [299](data/299): Get-NetAdapter
-- [298](data/298): Get-WmiObject - get network adapter config
-- [294](data/294): WindowsIdentity- get current user in powershell
-- [293](data/293): env - get all environment items in powershell
-- [287](data/287): Get-ADGroupMember
-- [276](data/276): Powershell - set variables to get dynamic ADUser
-- [273](data/273): read powershell history and trim leading whitespace
-- [272](data/272): get-help - show all loaded cmdlets, functions, and modules in powershell
-- [266](data/266): get-adgroup - get all members for AD group
-- [210](data/210): get-aduser - get ex employees
-- [195](data/195): List available powershell commands
-- [188](data/188): Get-WmiObject - get computer system properties
-- [171](data/171): Get AD User from another domain (ldap)
-- [170](data/170): get AD domain controller (amer.example.com)
-- [141](data/141): get laptop service tag
-- [140](data/140): Get all powershell modules
-- [136](data/136): Get group members
-- [134](data/134): get all service accounts owned by user
-- [91](data/91): Get services with search string
-- [90](data/90): get all available data about a process
-- [88](data/88): get ldap group related to ADUser
-- [87](data/87): get AD User (powershell)
+- [382](nntrn.github.io/sshell/#382): list local certificates
+- [370](nntrn.github.io/sshell/#370): Format-Table -GroupBy - Format processes by BasePriority
+- [369](nntrn.github.io/sshell/#369): Get-ADUser - get last password set for service accounts
+- [303](nntrn.github.io/sshell/#303): Get-WindowsUpdateLog - get update
+- [302](nntrn.github.io/sshell/#302): Finds local admin password and password expiration timestamp for given computer
+- [299](nntrn.github.io/sshell/#299): Get-NetAdapter
+- [298](nntrn.github.io/sshell/#298): Get-WmiObject - get network adapter config
+- [294](nntrn.github.io/sshell/#294): WindowsIdentity- get current user in powershell
+- [293](nntrn.github.io/sshell/#293): env - get all environment items in powershell
+- [287](nntrn.github.io/sshell/#287): Get-ADGroupMember
+- [276](nntrn.github.io/sshell/#276): Powershell - set variables to get dynamic ADUser
+- [273](nntrn.github.io/sshell/#273): read powershell history and trim leading whitespace
+- [272](nntrn.github.io/sshell/#272): get-help - show all loaded cmdlets, functions, and modules in powershell
+- [266](nntrn.github.io/sshell/#266): get-adgroup - get all members for AD group
+- [210](nntrn.github.io/sshell/#210): get-aduser - get ex employees
+- [195](nntrn.github.io/sshell/#195): List available powershell commands
+- [188](nntrn.github.io/sshell/#188): Get-WmiObject - get computer system properties
+- [171](nntrn.github.io/sshell/#171): Get AD User from another domain (ldap)
+- [170](nntrn.github.io/sshell/#170): get AD domain controller (amer.example.com)
+- [141](nntrn.github.io/sshell/#141): get laptop service tag
+- [140](nntrn.github.io/sshell/#140): Get all powershell modules
+- [136](nntrn.github.io/sshell/#136): Get group members
+- [134](nntrn.github.io/sshell/#134): get all service accounts owned by user
+- [91](nntrn.github.io/sshell/#91): Get services with search string
+- [90](nntrn.github.io/sshell/#90): get all available data about a process
+- [88](nntrn.github.io/sshell/#88): get ldap group related to ADUser
+- [87](nntrn.github.io/sshell/#87): get AD User (powershell)
 
 ## python
 
-- [353](data/353): python one liner - return hashed password as a string
-- [347](data/347): python oneliner cryptogen
-- [331](data/331): python - select keys in json to print
-- [329](data/329): python module calendar
-- [328](data/328): sysconfig - provide access to Python’s configuration information
-- [327](data/327): cProfile - Performance Profiling Python One-Liner
-- [326](data/326): python - csv to json
-- [325](data/325): python oneliner - print columns like awk
-- [261](data/261): convert json to yaml from stdin
-- [257](data/257): venv 
-- [187](data/187): Start a static HTTP server
-- [135](data/135): awx-manage shell_plus
+- [353](nntrn.github.io/sshell/#353): python one liner - return hashed password as a string
+- [347](nntrn.github.io/sshell/#347): python oneliner cryptogen
+- [331](nntrn.github.io/sshell/#331): python - select keys in json to print
+- [329](nntrn.github.io/sshell/#329): python module calendar
+- [328](nntrn.github.io/sshell/#328): sysconfig - provide access to Python’s configuration information
+- [327](nntrn.github.io/sshell/#327): cProfile - Performance Profiling Python One-Liner
+- [326](nntrn.github.io/sshell/#326): python - csv to json
+- [325](nntrn.github.io/sshell/#325): python oneliner - print columns like awk
+- [261](nntrn.github.io/sshell/#261): convert json to yaml from stdin
+- [257](nntrn.github.io/sshell/#257): venv 
+- [187](nntrn.github.io/sshell/#187): Start a static HTTP server
+- [135](nntrn.github.io/sshell/#135): awx-manage shell_plus
 
 ## sql
 
-- [357](data/357): awx_postgres - get hostname ids for api
-- [193](data/193): psql: cast json and pretty print
-- [192](data/192): postgresql list and order tables by size
-- [190](data/190): get list of tables and number of rows (postgres)
+- [357](nntrn.github.io/sshell/#357): awx_postgres - get hostname ids for api
+- [193](nntrn.github.io/sshell/#193): psql: cast json and pretty print
+- [192](nntrn.github.io/sshell/#192): postgresql list and order tables by size
+- [190](nntrn.github.io/sshell/#190): get list of tables and number of rows (postgres)
 
 ## vim
 
-- [285](data/285): vim - display all possible runtime config settings for vim
+- [285](nntrn.github.io/sshell/#285): vim - display all possible runtime config settings for vim
 
 ## yaml
 
-- [244](data/244): ansible playbook variables
+- [244](nntrn.github.io/sshell/#244): ansible playbook variables
