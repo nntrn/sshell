@@ -12,21 +12,8 @@ cd sshell
 ## Scripts
 
 ```sh
-# build static files for gh-pages
-cat updated-snippets.json | ./build_static.py
-
 # update snippets.json in data branch
-# cat updated-snippets.json | ./scripts/update-snippets.sh
-
-# publish changes in public/* to gh-pages branch
-./scripts/publish
-```
-
-## Useful snippets
-
-```sh
-# combine all json files in api
-jq -s 'sort_by( .created )' api/*.json >snippets.json
+cat snippets.json | ./scripts/upload-data.sh
 ```
 
 ## Local serve
