@@ -8,6 +8,11 @@ cd sshell
 
 ## bash
 
+- [408](https://nntrn.github.io/sshell/#408): How to remove systemd services
+- [407](https://nntrn.github.io/sshell/#407): ldifde - Active Directory Schema
+- [406](https://nntrn.github.io/sshell/#406): list  all mounted filesytems or search for a filesystem
+- [405](https://nntrn.github.io/sshell/#405): Verifying Which Ports Are Listening
+- [403](https://nntrn.github.io/sshell/#403): get return status of pipe commands
 - [402](https://nntrn.github.io/sshell/#402): jq - convert kv to json froms stdin
 - [401](https://nntrn.github.io/sshell/#401): jq group by with count
 - [400](https://nntrn.github.io/sshell/#400): jq - recursively slice array values to get first child only
@@ -374,6 +379,7 @@ cd sshell
 
 ## powershell
 
+- [404](https://nntrn.github.io/sshell/#404): get-eventlog 
 - [382](https://nntrn.github.io/sshell/#382): list local certificates
 - [370](https://nntrn.github.io/sshell/#370): Format-Table -GroupBy - Format processes by BasePriority
 - [369](https://nntrn.github.io/sshell/#369): Get-ADUser - get last password set for service accounts
