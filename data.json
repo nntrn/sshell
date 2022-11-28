@@ -14,9 +14,6 @@
       "systemctl daemon-reload",
       "systemctl reset-failed"
     ],
-    "example": "",
-    "output": "",
-    "description": "",
     "language": "bash",
     "tags": [],
     "url": "https://superuser.com/a/936976"
@@ -27,8 +24,7 @@
     "created": "2022-11-15T18:09:03Z",
     "modified": "2022-11-15T18:09:03Z",
     "code": [
-      "ldifde -f person-ldap.txt -d \"CN=Fname Lname,OU=Users,OU=Austin,DC=amer,DC=example,DC=com\"",
-      ""
+      "ldifde -f person-ldap.txt -d \"CN=Fname Lname,OU=Users,OU=Austin,DC=amer,DC=example,DC=com\""
     ],
     "example": [
       "Example: Simple import of current domain",
@@ -48,7 +44,6 @@
       "    ldifde -f export.ldf -c \"#configurationNamingContext\" \"cn=configuration,dc=x\"",
       "    ldifde -i -f import.ldf -c \"cn=configuration,dc=x\" \"#configurationNamingContext\""
     ],
-    "output": "",
     "description": [
       "LDIF Directory Exchange",
       "",
@@ -140,10 +135,8 @@
       "/u01           /dev/datavg/u01                           xfs    defaults",
       "/oswatcher     /dev/mapper/osvg-oswatcher.fs             xfs    defaults,nodev",
       "",
-      "root@awxserver02 ~",
-      ""
+      "root@awxserver02 ~"
     ],
-    "output": "",
     "description": [
       "findmnt  will  list  all mounted filesytems or search for a filesystem.",
       "The findmnt command is able  to  search  in  /etc/fstab,  /etc/mtab  or",
@@ -161,8 +154,6 @@
     "code": [
       "netstat -pan -A inet,inet6 | grep -v ESTABLISHED"
     ],
-    "example": "",
-    "output": "",
     "description": [
       "Using netstat for Open Ports Scan",
       "Enter the following command as root to determine which ports are listening for connections from the network:",
@@ -170,8 +161,7 @@
       "~]# netstat -pan -A inet,inet6 | grep -v ESTABLISHED",
       "",
       "Use the -l option of the netstat command to display only listening server sockets:",
-      "~]# netstat -tlnw",
-      ""
+      "~]# netstat -tlnw"
     ],
     "language": "bash",
     "tags": [],
@@ -207,8 +197,6 @@
       "     512      7 OverwriteOlder              3 Visual Studio",
       "  15,360      0 OverwriteAsNeeded       6,716 Windows PowerShell"
     ],
-    "output": "",
-    "description": "",
     "language": "powershell",
     "tags": []
   },
@@ -220,9 +208,6 @@
     "code": [
       "RC=( \"${PIPESTATUS[@]}\" )"
     ],
-    "example": "",
-    "output": "",
-    "description": "",
     "language": "bash",
     "tags": []
   },
@@ -232,8 +217,7 @@
     "created": "2022-10-17T21:02:19Z",
     "modified": "2022-10-17T21:02:58Z",
     "code": [
-      "jq -Rn '[(inputs | split(\" \")) | .[] | split(\"=\") | {key: .[0], value: .[1]}] | from_entries'",
-      ""
+      "jq -Rn '[(inputs | split(\" \")) | .[] | split(\"=\") | {key: .[0], value: .[1]}] | from_entries'"
     ],
     "example": [
       "$ echo 'a=3 4=9' | jq -Rn '[(inputs | split(\" \")) | .[] | split(\"=\") | {key: .[0], value: .[1]}] | from_entries'",
@@ -242,8 +226,6 @@
       "  \"4\": \"9\"",
       "}"
     ],
-    "output": "",
-    "description": "",
     "language": "bash",
     "tags": [
       "jq"
@@ -255,8 +237,7 @@
     "created": "2022-10-12T16:53:23Z",
     "modified": "2022-10-20T00:31:16Z",
     "code": [
-      "jq 'group_by(.language)| map( {\"\\(.[0].language)\":length}) |add'",
-      ""
+      "jq 'group_by(.language)| map( {\"\\(.[0].language)\":length}) |add'"
     ],
     "example": [
       "$ curl -s https://api.github.com/users/nntrn/repos | jq 'group_by(.language)| map( {\"\\(.[0].language)\":length}) |add'",
@@ -270,8 +251,6 @@
       "  \"SCSS\": 1",
       "}"
     ],
-    "output": "",
-    "description": "",
     "language": "bash",
     "tags": [
       "jq"
@@ -288,7 +267,6 @@
     "example": [
       "cat array-of-objects.json | jq '.[]|walk(if type == \"array\" then (if length > 10 then (.|join(\", \")) else . end) else . end)'"
     ],
-    "output": "",
     "description": [
       "definition of builtin walk function: ",
       "# Apply f to composite entities recursively, and to atoms",
@@ -334,8 +312,6 @@
       "$ jq -c -s '.[0] + .[1]' arr*",
       "[1,2,3,5,6,\"a\",\"b\",\"c\",\"d\",\"e\"]"
     ],
-    "output": "",
-    "description": "",
     "language": "bash",
     "tags": [
       "jq"
@@ -382,8 +358,6 @@
       "  }",
       "]"
     ],
-    "output": "",
-    "description": "",
     "language": "bash",
     "tags": [
       "jq"
@@ -403,18 +377,15 @@
       "echo -n \"$HEX_TEXT\" | sed 's/\\([0-9A-F]\\{2\\}\\)/\\\\\\\\\\\\x\\1/gI' | xargs printf && echo ''",
       "",
       "# ascii to hex",
-      "echo -n \"$ASCII_TEXT\" | od -A n -t x1 | tr -d ' '",
-      ""
+      "echo -n \"$ASCII_TEXT\" | od -A n -t x1 | tr -d ' '"
     ],
     "example": [
       "$ echo -n \"hello world\" | od -A n -t x1 | tr -d ' '",
       "68656c6c6f20776f726c64",
       "",
       "$ echo '68656c6c6f20776f726c64'|sed 's/\\([0-9A-F]\\{2\\}\\)/\\\\\\\\\\\\x\\1/gI' | xargs printf && echo ''",
-      "hello world",
-      ""
+      "hello world"
     ],
-    "output": "",
     "description": [
       "- https://www.commandlinefu.com/commands/view/6081/convert-ascii-string-to-hex",
       "- https://www.linuxshelltips.com/convert-hex-to-ascii-characters-linux/"
@@ -437,13 +408,8 @@
       "cvtsudoers -f json -o sudoers.json sudoers",
       "",
       "# combines all /etc/sudoers.d/* and /etc/sudoers",
-      "cvtsudoers -f sudoers -o sudoers.txt sudoers",
-      "",
-      ""
+      "cvtsudoers -f sudoers -o sudoers.txt sudoers"
     ],
-    "example": "",
-    "output": "",
-    "description": "",
     "language": "bash",
     "tags": [
       "permissions",
@@ -465,9 +431,6 @@
       "    arm)    dpkg --print-architecture | grep -q \"arm64\" && architecture=\"arm64\" || architecture=\"arm\" ;;",
       "esac"
     ],
-    "example": "",
-    "output": "",
-    "description": "",
     "language": "bash",
     "tags": [
       "posix",
@@ -490,8 +453,6 @@
       "2022-09-15T16:37:03Z    Keith J. Grant  adjust DetailList spacing when two appear in succession",
       "2022-09-14T22:33:00Z    Keith J. Grant  improve frequency validation performance"
     ],
-    "output": "",
-    "description": "",
     "language": "bash",
     "tags": [],
     "url": "https://stackoverflow.com/a/53676048"
@@ -565,10 +526,8 @@
       "        systemctl start docker > /dev/null 2>&1 || :",
       "        rm -f /var/lib/rpm-state/docker-is-active > /dev/null 2>&1 || :",
       "    fi",
-      "fi",
-      ""
+      "fi"
     ],
-    "output": "",
     "description": [
       "List the package specific scriptlet(s) that are used as part of the installation and uninstallation processes."
     ],
@@ -589,8 +548,6 @@
       "$ echo boo{,,,,,,,,,,}",
       "boo boo boo boo boo boo boo boo boo boo boo"
     ],
-    "output": "",
-    "description": "",
     "language": "bash",
     "tags": [
       "text"
@@ -618,8 +575,6 @@
       "/  \\__/  \\__/  \\__/  \\__/  \\__/  \\__/  \\__/  \\__/",
       "\\__/  \\__/  \\__/  \\__/  \\__/  \\__/  \\__/  \\__/  \\__"
     ],
-    "output": "",
-    "description": "",
     "language": "bash",
     "tags": []
   },
@@ -638,8 +593,6 @@
       "$ date --date @1661900157",
       "Tue, Aug 30, 2022  5:55:57 PM"
     ],
-    "output": "",
-    "description": "",
     "language": "bash",
     "tags": [
       "date"
@@ -655,9 +608,6 @@
       "dir=$(mktemp -d dist.XXXXXX)",
       "trap 'rm -r \"$dir\"' EXIT"
     ],
-    "example": "",
-    "output": "",
-    "description": "",
     "language": "bash",
     "tags": []
   },
@@ -669,7 +619,6 @@
     "code": [
       "ss -o state established '( dport = :ssh or sport = :ssh )'"
     ],
-    "example": "",
     "output": [
       "Netid        Recv-Q        Send-Q                Local Address:Port                Peer Address:Port        Process",
       "tcp          0             0                    10.171.232.150:ssh                10.135.192.91:59187        timer:(keepalive,114min,0)",
@@ -677,10 +626,8 @@
       "tcp          0             48                   10.171.232.150:ssh                10.135.192.91:55065        timer:(on,252ms,0)",
       "mptcp        0             0                    10.171.232.150:ssh                10.135.192.91:59187        timer:(keepalive,114min,0)",
       "mptcp        0             0                    10.171.232.150:ssh                10.135.192.91:61393        timer:(keepalive,81min,0)",
-      "mptcp        0             48                   10.171.232.150:ssh                10.135.192.91:55065        timer:(on,251ms,0)",
-      ""
+      "mptcp        0             48                   10.171.232.150:ssh                10.135.192.91:55065        timer:(on,251ms,0)"
     ],
-    "description": "",
     "language": "bash",
     "tags": [
       "network"
@@ -694,8 +641,6 @@
     "code": [
       "netsh interface ipv4 show | grep show awk '{print $2}' | xargs -I %  netsh interface ipv4 show %"
     ],
-    "example": "",
-    "output": "",
     "description": [
       "Netsh interacts with other operating system components by using dynamic-link library (DLL) files.",
       "",
@@ -722,9 +667,6 @@
       "",
       "yum ${YUM_OPTIONS} update --security"
     ],
-    "example": "",
-    "output": "",
-    "description": "",
     "language": "bash",
     "tags": []
   },
@@ -762,12 +704,8 @@
       "a",
       "b",
       "c",
-      "d",
-      ""
+      "d"
     ],
-    "example": "",
-    "output": "",
-    "description": "",
     "language": "bash",
     "tags": [],
     "url": "https://www.baeldung.com/linux/locale-environment-variables"
@@ -806,8 +744,6 @@
       "71621410",
       "70189482"
     ],
-    "output": "",
-    "description": "",
     "language": "bash",
     "tags": [
       "security"
@@ -852,13 +788,8 @@
       "> EOF",
       "",
       "  <li>one</li>",
-      "  <li>two</li>",
-      "",
-      "",
-      ""
+      "  <li>two</li>"
     ],
-    "output": "",
-    "description": "",
     "language": "bash",
     "tags": [
       "text",
@@ -876,12 +807,8 @@
       "get-childitem cert:\\LocalMachine",
       "get-childitem cert:\\LocalMachine\\Root | FL *",
       "get-childitem cert:\\LocalMachine\\\"AAD Token Issuer\"",
-      "get-childitem cert:\\LocalMachine\\CA",
-      ""
+      "get-childitem cert:\\LocalMachine\\CA"
     ],
-    "example": "",
-    "output": "",
-    "description": "",
     "language": "powershell",
     "tags": [
       "security"
@@ -894,8 +821,7 @@
     "created": "2022-08-16T00:07:08Z",
     "modified": "2022-08-16T00:07:08Z",
     "code": [
-      "date -d \"$(date +%F)\" +%s",
-      ""
+      "date -d \"$(date +%F)\" +%s"
     ],
     "example": [
       "$ date -d \"$(date +%F)\" +%s",
@@ -904,8 +830,6 @@
       "$ date --date @1660539600",
       "Mon Aug 15 00:00:00 CDT 2022"
     ],
-    "output": "",
-    "description": "",
     "language": "bash",
     "tags": [
       "date"
@@ -919,16 +843,12 @@
     "modified": "2022-08-13T01:56:25Z",
     "code": [
       "$ openssl passwd -5 -salt VAULT  password",
-      "$5$VAULT$QuHvYEpH9XsW9SVsKimTvMdRykrd2g3UiAi.fO7MAhB",
-      ""
+      "$5$VAULT$QuHvYEpH9XsW9SVsKimTvMdRykrd2g3UiAi.fO7MAhB"
     ],
     "example": [
       "$ openssl passwd -5 -salt VAULT  password",
-      "$5$VAULT$QuHvYEpH9XsW9SVsKimTvMdRykrd2g3UiAi.fO7MAhB",
-      ""
+      "$5$VAULT$QuHvYEpH9XsW9SVsKimTvMdRykrd2g3UiAi.fO7MAhB"
     ],
-    "output": "",
-    "description": "",
     "language": "bash",
     "tags": []
   },
@@ -941,8 +861,7 @@
       "eval \"$(",
       "  curl -s https://api.github.com/gists/b787f3e14f28de11af45b1c7ec0ffbbc|",
       "    jq -r '.files | to_entries | .[].value | @sh \"echo \\(.content) | tee \\(.filename)\"'",
-      ")\"",
-      ""
+      ")\""
     ],
     "example": [
       "eval \"$(",
@@ -955,8 +874,6 @@
       "  '",
       ")\""
     ],
-    "output": "",
-    "description": "",
     "language": "bash",
     "tags": [
       "jq"
@@ -983,11 +900,8 @@
       "2021-03-31 10:57:15.955632797 -0500 /tmp/.xrdp",
       "2021-03-31 11:00:16.843881677 -0500 /tmp/b3b3a754-be2b-48ea-a50f-b7e0787ae131",
       "2021-03-31 11:01:15.547215168 -0500 /tmp/6e6cc719-3dc5-4aaf-823e-749da74fe810",
-      "2021-03-31 11:01:35.650224061 -0500 /tmp/6e7036e8-bcfa-4035-8906-5bb7bc0436de",
-      ""
+      "2021-03-31 11:01:35.650224061 -0500 /tmp/6e7036e8-bcfa-4035-8906-5bb7bc0436de"
     ],
-    "output": "",
-    "description": "",
     "language": "bash",
     "tags": [
       "filesys"
@@ -1000,8 +914,7 @@
     "modified": "2022-08-10T01:03:34Z",
     "code": [
       "name=\"Annie Tran\"",
-      "echo ${name: -3}",
-      ""
+      "echo ${name: -3}"
     ],
     "example": [
       "$ name=\"Annie Tran\"",
@@ -1013,11 +926,8 @@
       "ie Tran",
       "",
       "$ echo ${name:0:3}",
-      "Ann",
-      ""
+      "Ann"
     ],
-    "output": "",
-    "description": "",
     "language": "bash",
     "tags": []
   },
@@ -1032,8 +942,6 @@
     "example": [
       "$ find . -type d -name \".git*\" -prune -o -maxdepth 2 -type f"
     ],
-    "output": "",
-    "description": "",
     "language": "bash",
     "tags": [
       "filesys"
@@ -1052,9 +960,6 @@
       "# delete all lines between tags including tags:",
       "sed '/<script>/,/<\\/script>/d'"
     ],
-    "example": "",
-    "output": "",
-    "description": "",
     "language": "bash",
     "tags": [
       "text"
@@ -1069,9 +974,6 @@
     "code": [
       "awk '{$1=$1};1'"
     ],
-    "example": "",
-    "output": "",
-    "description": "",
     "language": "bash",
     "tags": [
       "text"
@@ -1088,8 +990,6 @@
       "git repack -ad  # Remove dangling objects from packfiles",
       "git prune       # Remove dangling loose objects"
     ],
-    "example": "",
-    "output": "",
     "description": [
       "If you added the files and then removed them, the blobs still exist but are dangling. git fsck will list unreachable blobs, and git prune will delete them.",
       "",
@@ -1133,9 +1033,6 @@
       "#    *  will untrack new files",
       "git reset HEAD ."
     ],
-    "example": "",
-    "output": "",
-    "description": "",
     "language": "bash",
     "tags": [
       "security",
@@ -1256,7 +1153,6 @@
     "code": [
       "Get-Process | Sort-Object -Property BasePriority | Format-Table -GroupBy BasePriority -Wrap"
     ],
-    "example": "",
     "output": [
       "   BasePriority: 0",
       "",
@@ -1275,7 +1171,6 @@
       "    328      22    25940       3796       4.95   9096   1 msedge",
       "[...]"
     ],
-    "description": "",
     "language": "powershell",
     "tags": [],
     "url": "https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.utility/format-table?view=powershell-7.2#example-2-format-processes-by-basepriority"
@@ -1288,7 +1183,6 @@
     "code": [
       "Get-ADUser -Filter \"ownerID -eq 123456 -and employeeType -like 'Service'\"  -Properties * | FT  Name,PasswordLastSet"
     ],
-    "example": "",
     "output": [
       "Name               PasswordLastSet",
       "----               ---------------",
@@ -1307,7 +1201,6 @@
       "svc_prdexampleawx    2022-04-11 2:46:01 PM",
       "svc_npexampleawx     2022-04-11 11:11:32 AM"
     ],
-    "description": "",
     "language": "powershell",
     "tags": [
       "AD",
@@ -1322,9 +1215,6 @@
     "code": [
       "for f in *.html; do pandoc \"$f\" -t markdown_mmd-raw_html -o \"${f%.*}.md\"; done"
     ],
-    "example": "",
-    "output": "",
-    "description": "",
     "language": "bash",
     "tags": []
   },
@@ -1336,9 +1226,6 @@
     "code": [
       "cat file.js.map | tr -d '\\r' | jq -cr '.sourcesContent[]'"
     ],
-    "example": "",
-    "output": "",
-    "description": "",
     "language": "bash",
     "tags": []
   },
@@ -1350,7 +1237,6 @@
     "code": [
       "dstat -tcndylp --top-cpu"
     ],
-    "example": "",
     "output": [
       "----system---- ----total-cpu-usage---- -net/total- -dsk/total- ---system-- ---load-avg--- ---procs--- -most-expensive-",
       "     time     |usr sys idl wai hiq siq| recv  send| read  writ| int   csw | 1m   5m  15m |run blk new|  cpu process",
@@ -1359,11 +1245,8 @@
       "22-07 16:52:34|  2   1  97   0   1   0| 180B  182B|   0    31k| 537   863 |0.10 0.10 0.09|  0   0 1.0|node         0.5",
       "22-07 16:52:35|  2   1  98   0   0   0|2638B 2728B|   0  5120B| 480   753 |0.10 0.10 0.09|  0   0 1.0|zabbix_agent21.0",
       "22-07 16:52:36|  1   1  98   0   0   1| 690B 1297B|   0    12k| 635  1109 |0.10 0.10 0.09|  0   0 1.0|lldpad       0.5",
-      "22-07 16:52:37|  2   1  97   0   0   0| 638B  264B|   0  8192B| 473   753 |0.10 0.10 0.09|  0   0 1.0|python3      0.5^C",
-      "",
-      ""
+      "22-07 16:52:37|  2   1  97   0   0   0| 638B  264B|   0  8192B| 473   753 |0.10 0.10 0.09|  0   0 1.0|python3      0.5^C"
     ],
-    "description": "",
     "language": "bash",
     "tags": []
   },
@@ -1377,8 +1260,7 @@
       "U2FsdGVkX18vCTkI4x3csNp2FERhbXWY6HNSpyshkRY=",
       "",
       "$ echo \"U2FsdGVkX18vCTkI4x3csNp2FERhbXWY6HNSpyshkRY=\" | openssl enc -aes256 -k passphrase_aka_salt -base64 -iter 1000 -d",
-      "password",
-      ""
+      "password"
     ],
     "example": [
       "$ echo -n \"password\" | openssl enc -aes256 -k salt -base64 -iter 1000",
@@ -1387,8 +1269,6 @@
       "$ echo 'U2FsdGVkX18iY8nu2te4KoNXSYW7hzDaCN2uOSQVm6w=' | openssl enc -d -aes256 -k salt -base64 -iter 1000",
       "password"
     ],
-    "output": "",
-    "description": "",
     "language": "bash",
     "tags": [
       "security"
@@ -1467,8 +1347,7 @@
       "No ALPN negotiated",
       "Early data was not sent",
       "Verify return code: 0 (ok)",
-      "---",
-      ""
+      "---"
     ],
     "description": [
       "The s_client command implements a generic SSL/TLS client which connects to a remote host using SSL/TLS. It is a very useful diagnostic tool for SSL servers."
@@ -1484,10 +1363,8 @@
     "created": "2022-07-18T23:08:37Z",
     "modified": "2022-07-20T19:40:34Z",
     "code": [
-      "curl -s -k -u \"admin:password\" https://awxserver.example.com/api/v2/me/ | python -m json.tool",
-      ""
+      "curl -s -k -u \"admin:password\" https://awxserver.example.com/api/v2/me/ | python -m json.tool"
     ],
-    "example": "",
     "output": [
       "{",
       "    \"count\": 1,",
@@ -1530,10 +1407,8 @@
       "            \"auth\": []",
       "        }",
       "    ]",
-      "}",
-      ""
+      "}"
     ],
-    "description": "",
     "language": "bash",
     "tags": [
       "awx",
@@ -1555,8 +1430,6 @@
       "# zip only shell scripts",
       "ls -1 *.sh | zip shell-files.zip --names-stdin"
     ],
-    "output": "",
-    "description": "",
     "language": "bash",
     "tags": []
   },
@@ -1570,8 +1443,6 @@
       "source .env",
       "set +o allexport"
     ],
-    "example": "",
-    "output": "",
     "description": [
       "`-o allexport` enables all following variable definitions to be exported. ",
       "`+o allexport` disables this feature.",
@@ -1595,9 +1466,6 @@
       "  --data-binary @$FILE \\",
       "  \"https://uploads.github.com/repos/$GITHUB_OWNER/$GITHUB_REPO/releases/$GITHUB_RELEASE/assets?name=$(basename $FILE)\""
     ],
-    "example": "",
-    "output": "",
-    "description": "",
     "language": "bash",
     "tags": [
       "api"
@@ -1614,11 +1482,8 @@
     ],
     "example": [
       "$ docker inspect --format '{{range .NetworkSettings.Networks}} {{.IPAddress}} {{end}}' awx_web",
-      "172.24.0.4",
-      ""
+      "172.24.0.4"
     ],
-    "output": "",
-    "description": "",
     "language": "bash",
     "tags": [
       "docker"
@@ -1640,10 +1505,8 @@
       "4611,server10.amer.example.com",
       "4613,server11.us.example.com",
       "4614,server12.us.example.com",
-      "5311,server13.us.example.com",
-      ""
+      "5311,server13.us.example.com"
     ],
-    "output": "",
     "description": [
       "https://awxserver.example.com/api/v2/hosts/<ID>/",
       "https://awxserver.example.com/api/v2/hosts/4613/"
@@ -1695,16 +1558,13 @@
       "# Display facts from Windows hosts with custom facts stored in C(C:\\\\custom_facts).",
       "# ansible windows -m setup -a \"fact_path='c:\\\\custom_facts'\""
     ],
-    "example": "",
-    "output": "",
     "description": [
       "-   More ansible facts will be added with successive releases. If facter or ohai are installed, variables from these programs will also be snapshotted into the JSON file for usage in templating. These variables are prefixed with facter_ and ohai_ so it's easy to tell their source. All variables are bubbled up to the caller. Using the ansible facts and choosing to not install facter and ohai means you can avoid Ruby-dependencies on your remote systems. (See also facter and ohai.)",
       "-   The filter option filters only the first level subkey below ansible_facts.",
       "-   If the target host is Windows, you will not currently have the ability to use filter as this is provided by a simpler implementation of the module.",
       "-   If the target host is Windows you can now use fact_path. Make sure that this path exists on the target host. Files in this path MUST be PowerShell scripts (*.ps1) and their output must be formattable in JSON (Ansible will take care of this). Test the output of your scripts. This option was added in Ansible 2.1.",
       "-   This module is also supported for Windows targets.",
-      "-   This module should be run with elevated privileges on BSD systems to gather facts like ansible_product_version.",
-      ""
+      "-   This module should be run with elevated privileges on BSD systems to gather facts like ansible_product_version."
     ],
     "language": "bash",
     "tags": [
@@ -1762,11 +1622,8 @@
       "      \"DriverOpts\": null",
       "    }",
       "  }",
-      "}",
-      "",
-      ""
+      "}"
     ],
-    "output": "",
     "description": [
       "To inspect containers:",
       "",
@@ -1807,7 +1664,6 @@
       "$ echo -n \"$salt$password\" | openssl dgst -r -sha1",
       "59b3e8d637cf97edbe2384cf59cb7453dfe30789 *stdin"
     ],
-    "output": "",
     "description": [
       "$ man openssl-dgst",
       "",
@@ -1850,7 +1706,6 @@
       "python -c 'import crypt; print(crypt.crypt(\"This is my Password\", \"$1$SomeSalt$\"))'",
       "$1$SomeSalt$UqddPX3r4kH3UL5jq5/ZI."
     ],
-    "output": "",
     "description": [
       "crypt.crypt(word, salt=None)",
       "",
@@ -1860,8 +1715,7 @@
       "",
       "salt (either a random 2 or 16 character string, possibly prefixed with $digit$ to indicate the method) which will be used to perturb the encryption algorithm. The characters in salt must be in the set [./a-zA-Z0-9], with the exception of Modular Crypt Format which prefixes a $digit$.",
       "",
-      "Returns the hashed password as a string, which will be composed of characters from the same alphabet as the salt.",
-      ""
+      "Returns the hashed password as a string, which will be composed of characters from the same alphabet as the salt."
     ],
     "language": "python",
     "tags": [],
@@ -1875,8 +1729,7 @@
     "code": [
       "function setScrollTopForDocument(doc = document, value = 0) {",
       "  doc.documentElement.scrollTop = doc.body.scrollTop = value",
-      "}",
-      ""
+      "}"
     ],
     "example": [
       "/**",
@@ -1887,11 +1740,8 @@
       " */",
       "export function setScrollTopForDocument(doc, value) {",
       "  doc.documentElement.scrollTop = doc.body.scrollTop = value;",
-      "}",
-      ""
+      "}"
     ],
-    "output": "",
-    "description": "",
     "language": "javascript",
     "tags": [
       "dom"
@@ -1913,11 +1763,8 @@
       "reboot   system boot  5.4.17-2136.304. Fri Jun  3 13:36 - 12:02 (2+22:26)",
       "reboot   system boot  5.4.17-2136.304. Thu Jun  2 09:55 - 18:35 (1+08:40)",
       "",
-      "wtmp begins Wed Jun  1 09:54:13 2022",
-      "",
-      ""
+      "wtmp begins Wed Jun  1 09:54:13 2022"
     ],
-    "output": "",
     "description": [
       "To get a list of the times and dates when the system was recently rebooted, give `reboot' as an argument to last (see Listing the Last Times a User Logged In).",
       "",
@@ -1937,8 +1784,6 @@
     "code": [
       "awk '/^MemAvailable:/ {print $2}' /proc/meminfo"
     ],
-    "example": "",
-    "output": "",
     "description": [
       "MemAvailable is the best estimation and has built-in heuristics",
       "around reclaimable memory.  However, it is not available until 3.14",
@@ -2013,8 +1858,6 @@
       "    deny all;",
       "}"
     ],
-    "example": "",
-    "output": "",
     "description": [
       "https://www.acunetix.com/blog/web-security-zone/hardening-nginx/"
     ],
@@ -2033,11 +1876,8 @@
       "      allow 192.168.1.0/24; ",
       "      deny all; ",
       "    } ",
-      "} ",
-      ""
+      "} "
     ],
-    "example": "",
-    "output": "",
     "description": [
       "This directive allows you to prevent the use of all HTTP methods, except the ones that you explicitly allow. Within a location block, you may want to restrict the use of some HTTP methods, such as forbidding clients from sending POST requests. You need to define two elements: first, the methods that are not forbidden (the allowed methods; all others will be forbidden); and second, the audience that is affected by the restriction"
     ],
@@ -2058,8 +1898,6 @@
       "clear-text password: hello",
       "$6$8.cZMuvV3mZj3JHW$wADCu1k1DuH4CkodnCXpolIQiUWVAonb0Iiwi5/ayVqPNw.haTdW5jlqiqw/SjGQk04H2SAYw2gBbsAq7nmai0"
     ],
-    "output": "",
-    "description": "",
     "language": "python",
     "tags": []
   },
@@ -2087,8 +1925,6 @@
       "remote: Total 15 (delta 2), reused 0 (delta 0), pack-reused 0",
       "Unpacking objects: 100% (15/15), 33.34 KiB | 3.33 MiB/s, done."
     ],
-    "output": "",
-    "description": "",
     "language": "bash",
     "tags": [
       "api",
@@ -2133,8 +1969,6 @@
       "  \"ai_session\": \"pwphoYvaRZgwAq3bBU7MUJ|1656047614115|1656047632593\"",
       "}"
     ],
-    "output": "",
-    "description": "",
     "language": "javascript",
     "tags": [],
     "url": "https://developer.mozilla.org/en-US/docs/Web/API/Document/cookie"
@@ -2161,7 +1995,6 @@
       "7217",
       "lrwxrwxrwx 1 root root 0 Jun 30 16:49 /proc/self -> 7217"
     ],
-    "output": "",
     "description": [
       "exec - Replace the shell with the given command.",
       "eval -  Execute arguments as a shell command.",
@@ -2193,8 +2026,6 @@
     "code": [
       "git clone https://oauth2:personal_token@gitlab.com/username/project.git "
     ],
-    "example": "",
-    "output": "",
     "description": [
       "update git config file:",
       "",
@@ -2222,8 +2053,6 @@
     "example": [
       "$ iconv -f ISO-8859-1 -t UTF-8 file.txt "
     ],
-    "output": "",
-    "description": "",
     "language": "bash",
     "tags": []
   },
@@ -2252,8 +2081,6 @@
       "250 ok [d/m/c = 1/0/16; 0.000r 0.000u 0.000s]",
       "221 bye [d/m/c = 0/0/0; 0.000r 0.000u 0.000s]"
     ],
-    "output": "",
-    "description": "",
     "language": "bash",
     "tags": [
       "api"
@@ -2274,11 +2101,8 @@
       "$ [[ \"string1\" == \"string2\" ]] && echo \"Equal\" || echo \"Not equal\"",
       "Not equal"
     ],
-    "output": "",
     "description": [
-      "use the logical and && and or || to compare strings:",
-      "",
-      ""
+      "use the logical and && and or || to compare strings:"
     ],
     "language": "bash",
     "tags": [],
@@ -2301,7 +2125,6 @@
       "    echo \"$y\"",
       "done"
     ],
-    "example": "",
     "output": [
       "a",
       "b",
@@ -2325,9 +2148,6 @@
     "code": [
       "cp snippets.json{,.bkp}"
     ],
-    "example": "",
-    "output": "",
-    "description": "",
     "language": "bash",
     "tags": [],
     "url": "https://askubuntu.com/a/962511"
@@ -2345,11 +2165,8 @@
       "nntrn",
       "",
       "$ echo $ANNIE",
-      "isme",
-      ""
+      "isme"
     ],
-    "example": "",
-    "output": "",
     "description": [
       "When you define a function with (), you are right: it will create sub-shell. That sub-shell will contain the same values the original had, but won't be able to modify them. So that you are losing that resource of changing global scope variables.",
       "",
@@ -2357,8 +2174,7 @@
       "",
       "Change global variables. Variables changes will not propagate to the parent shell.",
       "Exit the script. An exit statement will exit only the sub-shell.",
-      "Starting a sub-shell can also be a serious performance hit. You're launching a new process each time you call the function.",
-      ""
+      "Starting a sub-shell can also be a serious performance hit. You're launching a new process each time you call the function."
     ],
     "language": "bash",
     "tags": [],
@@ -2378,8 +2194,6 @@
       "",
       "# source: https://www.shellcheck.net/wiki/SC2002"
     ],
-    "example": "",
-    "output": "",
     "description": [
       "Useless use of cat (UUOC) is common Unix jargon for command line constructs that only provide a function of convenience to the user. In computing, the word \"abuse\", in the second sense of the definition, is used to disparage the excessive or unnecessary use of a language construct; thus, abuse of cat is sometimes called \"cat abuse\". Example of a common cat abuse is given in the award:",
       "",
@@ -2460,8 +2274,6 @@
       "created_at=2016-03-06T11:27:35Z",
       "updated_at=2022-03-15T20:41:03Z"
     ],
-    "output": "",
-    "description": "",
     "language": "bash",
     "tags": [],
     "url": "https://www.dormant.ninja/export-json-to-env/"
@@ -2485,11 +2297,8 @@
       "",
       "$ echo '{ \"a\": 1, \"b\": 2 }' | jq 'keys | .[]'",
       "\"a\"",
-      "\"b\"",
-      ""
+      "\"b\""
     ],
-    "output": "",
-    "description": "",
     "language": "bash",
     "tags": [
       "jq"
@@ -2588,7 +2397,6 @@
       "",
       "    /dev/mapper/osvg-var.fs                    15G   10G  5.0G  67% /var"
     ],
-    "output": "",
     "description": [
       "Attach the new storage to the system. Next, create a new Physical Volume (PV) from that storage. ",
       "Add the PV to the Volume Group (VG) and then extend the Logical Volume (LV).",
@@ -2631,8 +2439,6 @@
       "└── util",
       "    └── extract-trash-dirs.sh       "
     ],
-    "output": "",
-    "description": "",
     "language": "bash",
     "tags": [],
     "url": "https://github.com/git/git/blob/master/ci/run-docker-build.sh"
@@ -2645,7 +2451,6 @@
     "code": [
       "curl -s \"https://jsonplaceholder.typicode.com/posts\" | python3 -c \"import sys, json; data=json.load(sys.stdin); x = [{'id': d['id'], 'title': d['title']} for d in data]; print(json.dumps(x, indent=2))\""
     ],
-    "example": "",
     "output": [
       "[",
       "  {",
@@ -2681,7 +2486,6 @@
     "code": [
       "curl -s -o snippets.json -w '%{json}' https://raw.githubusercontent.com/nntrn/sshell/data/snippets.json | jq"
     ],
-    "example": "",
     "output": [
       "{",
       "  \"content_type\": \"text/plain; charset=utf-8\",",
@@ -2759,7 +2563,6 @@
     "code": [
       "python -m calendar"
     ],
-    "example": "",
     "output": [
       "                                  2022",
       "",
@@ -2798,7 +2601,6 @@
       "24 25 26 27 28 29 30      28 29 30                  26 27 28 29 30 31",
       "31"
     ],
-    "description": "",
     "language": "python",
     "tags": [
       "python-oneliner"
@@ -2813,8 +2615,6 @@
     "code": [
       "python -m sysconfig"
     ],
-    "example": "",
-    "output": "",
     "description": [
       "The sysconfig module provides access to Python’s configuration information like the list of installation paths and the configuration variables relevant for the current platform."
     ],
@@ -2832,7 +2632,6 @@
       "",
       "python -m profile file.py"
     ],
-    "example": "",
     "output": [
       "         1347 function calls (1290 primitive calls) in 0.003 seconds",
       "",
@@ -2891,8 +2690,7 @@
       "filename:lineno(function)",
       "provides the respective data of each function",
       "",
-      "When there are two numbers in the first column (for example 3/1), it means that the function recursed. The second value is the number of primitive calls and the former is the total number of calls. Note that when the function does not recurse, these two values are the same, and only the single figure is printed.",
-      ""
+      "When there are two numbers in the first column (for example 3/1), it means that the function recursed. The second value is the number of primitive calls and the former is the total number of calls. Note that when the function does not recurse, these two values are the same, and only the single figure is printed."
     ],
     "language": "python",
     "tags": []
@@ -2917,11 +2715,8 @@
       "CSV_FILE=~/csv/cities.csv",
       "",
       "python -c \"import csv,json;print(json.dumps(list(csv.DictReader(open('$CSV_FILE')))))\"",
-      "python -c \"import csv,json;print(json.dumps(list(csv.reader(open('$CSV_FILE')))))\"",
-      ""
+      "python -c \"import csv,json;print(json.dumps(list(csv.reader(open('$CSV_FILE')))))\""
     ],
-    "output": "",
-    "description": "",
     "language": "python",
     "tags": []
   },
@@ -2947,8 +2742,6 @@
       "SMSNomadP2P&",
       "WDAGUtilityAccount"
     ],
-    "output": "",
-    "description": "",
     "language": "python",
     "tags": [
       "python-oneliner"
@@ -2971,7 +2764,6 @@
       "hello",
       "hi"
     ],
-    "output": "",
     "description": [
       "Use awk to remove duplicate lines if sorting is not needed. It's a lot faster "
     ],
@@ -2986,8 +2778,6 @@
     "code": [
       "set -o igncr"
     ],
-    "example": "",
-    "output": "",
     "description": [
       "set -o igncr causes the shell ignore windows line endings (skip \\r). Another solution would be to fix the script by running dos2unix on it."
     ],
@@ -3006,9 +2796,6 @@
       "# or",
       "cat file.json | python3 -m json.tool"
     ],
-    "example": "",
-    "output": "",
-    "description": "",
     "language": "bash",
     "tags": [
       "python"
@@ -3025,10 +2812,8 @@
       "GITLAB_PERSONAL_ACCESS_TOKEN=...",
       "",
       "curl --silent --header \"PRIVATE-TOKEN: $GITLAB_PERSONAL_ACCESS_TOKEN\" \\",
-      "  -XPOST \"https://gitlab.example.com/api/v4/projects?name=$PROJECT_NAME&visibility=private&initialize_with_readme=true\"",
-      ""
+      "  -XPOST \"https://gitlab.example.com/api/v4/projects?name=$PROJECT_NAME&visibility=private&initialize_with_readme=true\""
     ],
-    "example": "",
     "output": [
       "{\"id\":132638,\"description\":null,\"name\":\"test\",\"name_with_namespace\":\"Tran, Annie / test\",\"path\":\"test\",\"path_with_namespace\":\"Annie_Tran/test\",\"created_at\":\"2022-05-20T20:52:21.886Z\",\"default_branch\":\"main\",\"tag_list\":[],\"topics\":[],\"ssh_url_to_repo\":\"git@gitlab.example.com:Annie_Tran/test.git\",\"http_url_to_repo\":\"https://gitlab.example.com/Annie_Tran/test.git\",\"web_url\":\"https://gitlab.example.com/Annie_Tran/test\",\"readme_url\":\"https://gitlab.example.com/Annie_Tran/test/-/blob/main/README.md\",\"avatar_url\":null,\"forks_count\":0,\"star_count\":0,\"last_activity_at\":\"2022-05-20T20:52:21.886Z\",\"namespace\":{\"id\":25694,\"name\":\"Tran, Annie\",\"path\":\"Annie_Tran\",\"kind\":\"user\",\"full_path\":\"Annie_Tran\",\"parent_id\":null,\"avatar_url\":\"/uploads/-/system/user/avatar/15958/avatar.png\",\"web_url\":\"https://gitlab.example.com/Annie_Tran\"},\"_links\":{\"self\":\"https://gitlab.example.com/api/v4/projects/132638\",\"issues\":\"https://gitlab.example.com/api/v4/projects/132638/issues\",\"merge_requests\":\"https://gitlab.example.com/api/v4/projects/132638/merge_requests\",\"repo_branches\":\"https://gitlab.example.com/api/v4/projects/132638/repository/branches\",\"labels\":\"https://gitlab.example.com/api/v4/projects/132638/labels\",\"events\":\"https://gitlab.example.com/api/v4/projects/132638/events\",\"members\":\"https://gitlab.example.com/api/v4/projects/132638/members\"},\"packages_enabled\":true,\"empty_repo\":false,\"archived\":false,\"visibility\":\"private\",\"owner\":{\"id\":15958,\"username\":\"Annie_Tran\",\"name\":\"Tran, Annie\",\"state\":\"active\",\"avatar_url\":\"https://gitlab.example.com/uploads/-/system/user/avatar/15958/avatar.png\",\"web_url\":\"https://gitlab.example.com/Annie_Tran\"},\"resolve_outdated_diff_discussions\":false,\"container_expiration_policy\":{\"cadence\":\"1d\",\"enabled\":false,\"keep_n\":10,\"older_than\":\"90d\",\"name_regex\":\".*\",\"name_regex_keep\":null,\"next_run_at\":\"2022-05-21T20:52:21.916Z\"},\"issues_enabled\":true,\"merge_requests_enabled\":true,\"wiki_enabled\":true,\"jobs_enabled\":true,\"snippets_enabled\":true,\"container_registry_enabled\":true,\"service_desk_enabled\":false,\"service_desk_address\":null,\"can_create_merge_request_in\":true,\"issues_access_level\":\"enabled\",\"repository_access_level\":\"enabled\",\"merge_requests_access_level\":\"enabled\",\"forking_access_level\":\"enabled\",\"wiki_access_level\":\"enabled\",\"builds_access_level\":\"enabled\",\"snippets_access_level\":\"enabled\",\"pages_access_level\":\"private\",\"operations_access_level\":\"enabled\",\"analytics_access_level\":\"enabled\",\"container_registry_access_level\":\"enabled\",\"emails_disabled\":null,\"shared_runners_enabled\":true,\"lfs_enabled\":true,\"creator_id\":15958,\"import_status\":\"none\",\"import_error\":null,\"open_issues_count\":0,\"runners_token\":\"GR1348941HFqJJiSjZmRBkZeixhiT\",\"ci_default_git_depth\":20,\"ci_forward_deployment_enabled\":true,\"ci_job_token_scope_enabled\":false,\"public_jobs\":true,\"build_git_strategy\":\"fetch\",\"build_timeout\":3600,\"auto_cancel_pending_pipelines\":\"enabled\",\"build_coverage_regex\":null,\"ci_config_path\":\"\",\"shared_with_groups\":[],\"only_allow_merge_if_pipeline_succeeds\":false,\"allow_merge_on_skipped_pipeline\":null,\"restrict_user_defined_variables\":false,\"request_access_enabled\":true,\"only_allow_merge_if_all_discussions_are_resolved\":false,\"remove_source_branch_after_merge\":true,\"printing_merge_request_link_enabled\":true,\"merge_method\":\"merge\",\"squash_option\":\"default_off\",\"suggestion_commit_message\":null,\"merge_commit_template\":null,\"squash_commit_template\":null,\"auto_devops_enabled\":false,\"auto_devops_deploy_strategy\":\"continuous\",\"autoclose_referenced_issues\":true,\"keep_latest_artifact\":true,\"runner_token_expiration_interval\":null,\"approvals_before_merge\":0,\"mirror\":false,\"external_authorization_classification_label\":\"\",\"marked_for_deletion_at\":null,\"marked_for_deletion_on\":null,\"requirements_enabled\":false,\"requirements_access_level\":\"enabled\",\"security_and_compliance_enabled\":true,\"compliance_frameworks\":[],\"issues_template\":null,\"merge_requests_template\":null,\"merge_pipelines_enabled\":false,\"merge_trains_enabled\":false}"
     ],
@@ -3266,20 +3051,17 @@
     "modified": "2022-05-17T20:16:22Z",
     "code": [
       "echo '[{\"name\":\"JSON\", \"good\":true}, {\"name\":\"XML\", \"good\":false}]' |",
-      "  jq -r '.[] | map(.) | @csv'",
-      ""
+      "  jq -r '.[] | map(.) | @csv'"
     ],
     "example": [
       "$ curl -s https://sports.core.api.espn.com/v2/sports/football/leagues/nfl/seasons/2021/futures >futures.json",
       "",
-      "$ cat futures.json | jq -r '.items[].futures[].provider| map(.) |@csv'",
-      ""
+      "$ cat futures.json | jq -r '.items[].futures[].provider| map(.) |@csv'"
     ],
     "output": [
       "\"JSON\",true",
       "\"XML\",false"
     ],
-    "description": "",
     "language": "bash",
     "tags": []
   },
@@ -3307,10 +3089,8 @@
       "",
       "$ grep -vFxf first.txt second.txt",
       "1",
-      "4",
-      ""
+      "4"
     ],
-    "output": "",
     "description": [
       "Options are:",
       "-v: Selected lines are those not matching any of the specified patterns",
@@ -3330,7 +3110,6 @@
     "code": [
       "declare -F"
     ],
-    "example": "",
     "output": [
       "declare -f __expand_tilde_by_ref",
       "declare -f __get_cword_at_cursor_by_ref",
@@ -3345,10 +3124,8 @@
       "declare -f __git_complete_revlist",
       "declare -f __git_complete_revlist_file",
       "declare -f __git_complete_strategy",
-      "declare -f __git_compute_all_commands",
-      ""
+      "declare -f __git_compute_all_commands"
     ],
-    "description": "",
     "language": "bash",
     "tags": []
   },
@@ -3360,9 +3137,6 @@
     "code": [
       "nmap --open $HOSTNAME"
     ],
-    "example": "",
-    "output": "",
-    "description": "",
     "language": "bash",
     "tags": [
       "network"
@@ -3398,8 +3172,6 @@
       "./file-02",
       "  three"
     ],
-    "output": "",
-    "description": "",
     "language": "bash",
     "tags": [],
     "url": "https://www.gnu.org/software/coreutils/manual/html_node/csplit-invocation.html#csplit-invocation"
@@ -3424,8 +3196,6 @@
       "/usr/share/man/man1/gmake.1.gz",
       "/usr/share/man/man1/make.1.gz"
     ],
-    "output": "",
-    "description": "",
     "language": "bash",
     "tags": []
   },
@@ -3451,11 +3221,8 @@
       "USER=root",
       "LOGNAME=root",
       "PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin",
-      "XDG_SESSION_ID=c20",
-      ""
+      "XDG_SESSION_ID=c20"
     ],
-    "output": "",
-    "description": "",
     "language": "bash",
     "tags": []
   },
@@ -3488,10 +3255,8 @@
       "    PORT    STATE  SERVICE",
       "    443/tcp closed https",
       "",
-      "    Nmap done: 1 IP address (1 host up) scanned in 0.47 seconds",
-      ""
+      "    Nmap done: 1 IP address (1 host up) scanned in 0.47 seconds"
     ],
-    "output": "",
     "description": [
       "Ports are a concept of UDP and TCP. Ping messages are technically referred to as ICMP Echo Request and ICMP Echo Reply which are part of ICMP. ICMP, TCP, and UDP are \"siblings\"; they are not based on each other, but are three separate protocols that run on top of IP.",
       "",
@@ -3547,7 +3312,6 @@
       "  }",
       "]"
     ],
-    "description": "",
     "language": "bash",
     "tags": []
   },
@@ -3583,7 +3347,6 @@
       "gh-pages",
       "main"
     ],
-    "description": "",
     "language": "bash",
     "tags": [
       "git"
@@ -3606,8 +3369,6 @@
       "c51538a",
       "2090d93"
     ],
-    "output": "",
-    "description": "",
     "language": "bash",
     "tags": [
       "git"
@@ -3621,8 +3382,6 @@
     "code": [
       "git gc --aggressive --prune=all "
     ],
-    "example": "",
-    "output": "",
     "description": [
       "`--aggressive`",
       "Usually *git gc* runs very quickly while providing good disk space utilization and performance. This option will cause *git gc* to more aggressively optimize the repository at the expense of taking much more time. The effects of this optimization are mostly persistent. See the \"AGGRESSIVE\" section below for details.",
@@ -3660,8 +3419,7 @@
     "created": "2022-05-10T04:31:18Z",
     "modified": "2022-05-10T04:31:18Z",
     "code": [
-      "curl -sL -X POST --data-binary @readme.md  https://api.github.com/markdown/raw --header \"Content-Type:text/x-markdown\" ",
-      ""
+      "curl -sL -X POST --data-binary @readme.md  https://api.github.com/markdown/raw --header \"Content-Type:text/x-markdown\" "
     ],
     "example": [
       "$ curl -sL -X POST --data-binary @readme.md  https://api.github.com/markdown/raw --header \"Content-Type:text/x-markdown\" ",
@@ -3693,7 +3451,6 @@
       "<span class=\"pl-c\"><span class=\"pl-c\">#</span> publish changes in public/* to gh-pages branch</span>",
       "./scripts/publish</pre></div>"
     ],
-    "output": "",
     "description": [
       "Markdown",
       "The Markdown API enables you to render a markdown document as an HTML page or as raw text.",
@@ -3717,8 +3474,6 @@
       "fuser -v -k -n tcp 443",
       "fuser -v -k -n tcp 80"
     ],
-    "example": "",
-    "output": "",
     "description": [
       "       fuser -km /home",
       "              kills all processes accessing the file system /home in any way.",
@@ -3727,8 +3482,7 @@
       "              invokes something if no other process is using /dev/ttyS1.",
       "",
       "       fuser telnet/tcp",
-      "              shows all processes at the (local) TELNET port.",
-      ""
+      "              shows all processes at the (local) TELNET port."
     ],
     "language": "bash",
     "tags": [],
@@ -3806,10 +3560,8 @@
       "         35:4c:d4:61:d3:37:64:7f:cf:a6:c6:8c:68:24:cb:17:4c:78:",
       "         51:09:20:97:d2:53:ee:11:71:2a:5e:df:c9:42:9d:3b:f2:fa:",
       "         32:df:5d:5c:70:86:cf:53:e2:ad:e4:f3:9c:76:4a:d7:6f:95:",
-      "         8c:8e:28:7a",
-      ""
+      "         8c:8e:28:7a"
     ],
-    "output": "",
     "description": [
       "Creating Your CSR with One Command",
       "Instead of generating a private key and then creating a CSR in two separate steps, you can actually perform both tasks at once.",
@@ -3841,7 +3593,6 @@
     "code": [
       "fsutil resource info C:"
     ],
-    "example": "",
     "output": [
       "Resource Manager Identifier :      F3292104-1D58-11EC-96F2-381428BEAE7E",
       "KTM Log Path for RM:  \\Device\\HarddiskVolume3\\$Extend\\$RmMetadata\\$TxfLog\\$TxfLog::KtmLog",
@@ -3889,8 +3640,6 @@
     "code": [
       "unset \"${!VSCODE@}\""
     ],
-    "example": "",
-    "output": "",
     "description": [
       "In the Bash shell, the ${!prefix@} parameter expansion generates all variables that start with prefix.",
       "",
@@ -3912,7 +3661,6 @@
     "code": [
       "Get-WindowsUpdateLog "
     ],
-    "example": "",
     "output": [
       "$ Get-WindowsUpdateLog",
       "",
@@ -3930,10 +3678,8 @@
       "     C:\\WINDOWS\\logs\\WindowsUpdate\\WindowsUpdate.20220503.231030.187.1.etl",
       "     C:\\WINDOWS\\logs\\WindowsUpdate\\WindowsUpdate.20220503.231030.187.2.etl",
       "     C:\\WINDOWS\\logs\\WindowsUpdate\\WindowsUpdate.20220503.231030.187.3.etl",
-      "     C:\\WINDOWS\\logs\\WindowsUpdate\\WindowsUpdate.20220503.232525.203.1.etl",
-      ""
+      "     C:\\WINDOWS\\logs\\WindowsUpdate\\WindowsUpdate.20220503.232525.203.1.etl"
     ],
-    "description": "",
     "language": "powershell",
     "tags": []
   },
@@ -3945,7 +3691,6 @@
     "code": [
       "Get-AdmPwdPassword -ComputerName:AT01488YD3 | Format-List *"
     ],
-    "example": "",
     "output": [
       "ComputerName        : AT01488YD3",
       "DistinguishedName   : CN=AT01488YD3,OU=Workstations,OU=Computers,OU=Austin,DC=amer,DC=example,DC=com",
@@ -3977,14 +3722,10 @@
     "code": [
       "find $HOME -mtime 0"
     ],
-    "example": "",
-    "output": "",
     "description": [
       "Search for files in your home directory which have been modified in the last twenty-four hours. ",
       "This command works this way because the time since each file was last modified is divided by 24 hours and any remainder is discarded. ",
-      "That means that to match -mtime 0, a file will have to have a modification in the past which is less than 24 hours ago.",
-      "",
-      ""
+      "That means that to match -mtime 0, a file will have to have a modification in the past which is less than 24 hours ago."
     ],
     "language": "bash",
     "tags": []
@@ -3996,10 +3737,8 @@
     "modified": "2022-05-09T17:34:41Z",
     "code": [
       "#C:/Windows/System32/WindowsPowerShell/v1.0/Modules",
-      "find . -type f -name \"*.psd1\" -print -exec cat {} \\; | tr -d '\\r' | tr -d '\\0' | grep -Eo 'Get-[a-zA-Z\\-]+' | sort -u | tee ~/all_powershell_get.txt",
-      ""
+      "find . -type f -name \"*.psd1\" -print -exec cat {} \\; | tr -d '\\r' | tr -d '\\0' | grep -Eo 'Get-[a-zA-Z\\-]+' | sort -u | tee ~/all_powershell_get.txt"
     ],
-    "example": "",
     "output": [
       "Get-Acl",
       "Get-ADAccountAuthorizationGroup",
@@ -4651,7 +4390,6 @@
       "Get-WULastInstallationDate",
       "Get-WULastScanSuccessDate"
     ],
-    "description": "",
     "language": "bash",
     "tags": []
   },
@@ -4663,16 +4401,13 @@
     "code": [
       "Get-NetAdapter | Format-Table  -AutoSize -Wrap"
     ],
-    "example": "",
     "output": [
       "Name                       InterfaceDescription              ifIndex Status MacAddress         LinkSpeed",
       "----                       --------------------              ------- ------ ----------         ---------",
       "vEthernet (Default Switch) Hyper-V Virtual Ethernet Adapter       45 Up     00-15-5D-G3-85-46    10 Gbps",
       "Wi-Fi                      Intel(R) Wi-Fi 6 AX201 160MHz          18 Up     FE-D9-C4-E6-18-B1 866.7 Mbps",
-      "Ethernet 3                 PANGP Virtual Ethernet Adapter #2       7 Up     01-50-41-40-42-01     2 Gbps",
-      ""
+      "Ethernet 3                 PANGP Virtual Ethernet Adapter #2       7 Up     01-50-41-40-42-01     2 Gbps"
     ],
-    "description": "",
     "language": "powershell",
     "tags": [
       "network"
@@ -4686,7 +4421,6 @@
     "code": [
       "Get-WmiObject win32_networkadapterconfiguration | Format-Table DHCPEnabled,ServiceName,Description -AutoSize -Wrap | Format-Wide -Column 3"
     ],
-    "example": "",
     "output": [
       "DHCPEnabled ServiceName  Description",
       "----------- -----------  -----------",
@@ -4704,10 +4438,8 @@
       "      False RasPppoe     WAN Miniport (PPPOE)",
       "      False NdisWan      WAN Miniport (IP)",
       "      False NdisWan      WAN Miniport (IPv6)",
-      "      False NdisWan      WAN Miniport (Network Monitor)",
-      ""
+      "      False NdisWan      WAN Miniport (Network Monitor)"
     ],
-    "description": "",
     "language": "powershell",
     "tags": []
   },
@@ -4721,10 +4453,8 @@
       "curl dict://dict.org/show:db",
       "",
       "# search word in a specific dictionary",
-      "curl dict://dict.org/d:computer:fd-eng-tur",
-      ""
+      "curl dict://dict.org/d:computer:fd-eng-tur"
     ],
-    "example": "",
     "output": [
       "$ curl dict://dict.org/d:nfs:foldoc",
       "220 dict.dict.org dictd 1.12.1/rf on Linux 4.19.0-10-amd64 <auth.mime> <113630767.10835.1651568641@dict.dict.org>",
@@ -4920,10 +4650,8 @@
       "all \"All Dictionaries (English-Only and Translating)\"",
       ".",
       "250 ok",
-      "221 bye [d/m/c = 0/0/0; 0.000r 0.000u 0.000s]",
-      ""
+      "221 bye [d/m/c = 0/0/0; 0.000r 0.000u 0.000s]"
     ],
-    "description": "",
     "language": "bash",
     "tags": [],
     "url": "https://csonuryilmaz.github.io/curl/dict/2018/03/25/search-dictionary-from-command-line-(part1).html"
@@ -4936,8 +4664,6 @@
     "code": [
       "wget2 --stats-site=csv:out.csv --recursive kernel.org/doc/Documentation/process/"
     ],
-    "example": "",
-    "output": "",
     "description": [
       "--stats-site=[FORMAT:]FILE",
       "Save Site stats in format FORMAT, in file FILE.",
@@ -4973,7 +4699,6 @@
     "code": [
       "echo '[{\"id\": \"first\", \"val\": 1}, {\"id\": \"second\", \"val\": 2}]' | jq '.[] | select(.id == \"second\")'"
     ],
-    "example": "",
     "output": [
       "{",
       "  \"id\": \"second\",",
@@ -5100,9 +4825,6 @@
     "code": [
       "Get-ChildItem env:"
     ],
-    "example": "",
-    "output": "",
-    "description": "",
     "language": "powershell",
     "tags": [],
     "url": "https://devblogs.microsoft.com/scripting/powertip-use-windows-powershell-to-display-all-environment-variables/"
@@ -5119,7 +4841,6 @@
       "randomnumstring=$RANDOM$RANDOM$RANDOM",
       "echo \"$text-to-scramble-numbers\"  | tr \"0123456789\" $( echo ${randomnumstring:0:9})"
     ],
-    "example": "",
     "output": [
       "AuthenticationType : Kerberos",
       "ImpersonationLevel : None",
@@ -5144,10 +4865,8 @@
       "BootstrapContext   :",
       "Label              :",
       "NameClaimType      : http://schemas.xmlsoap.org/ws/3112/12/identity/claims/name",
-      "RoleClaimType      : http://schemas.microsoft.com/ws/3118/12/identity/claims/groupsid",
-      ""
+      "RoleClaimType      : http://schemas.microsoft.com/ws/3118/12/identity/claims/groupsid"
     ],
-    "description": "",
     "language": "bash",
     "tags": [
       "crypto",
@@ -5160,10 +4879,8 @@
     "created": "2022-04-27T16:36:08Z",
     "modified": "2022-04-27T16:36:08Z",
     "code": [
-      "netsh http show servicestate view=requestq verbose=no",
-      ""
+      "netsh http show servicestate view=requestq verbose=no"
     ],
-    "example": "",
     "output": [
       "Snapshot of HTTP service state (Request Queue View):",
       "-----------------------------------------------------",
@@ -5276,13 +4993,10 @@
       "                HTTP://127.0.0.1:8884:127.0.0.1/",
       "        Server session ID: FD00000220000001",
       "            Version: 2.0",
-      "            State: Active",
-      ""
+      "            State: Active"
     ],
     "description": [
-      "You can find the processId for the registered urls using the following command:",
-      "",
-      ""
+      "You can find the processId for the registered urls using the following command:"
     ],
     "language": "bash",
     "tags": [
@@ -5301,9 +5015,7 @@
     ],
     "example": [
       "$ which netsh",
-      "/cygdrive/c/WINDOWS/system32/netsh",
-      "",
-      ""
+      "/cygdrive/c/WINDOWS/system32/netsh"
     ],
     "output": [
       "Helper GUID                             DLL Filename  Command",
@@ -5391,7 +5103,6 @@
     "code": [
       "pidstat -C \"awx | postgres\" -r -p ALL"
     ],
-    "example": "",
     "output": [
       "Linux 5.4.17-2136.304.4.1.el7uek.x86_64 (awxserver02.us.example.com)       04/22/2022      _x86_64_        (2 CPU)",
       "",
@@ -5424,8 +5135,7 @@
       "02:01:07 AM   999     71901      0.01      0.00  215908  16680   0.07  postgres",
       "02:01:07 AM   999     71902      0.01      0.00  215020  16908   0.07  postgres",
       "02:01:07 AM   999     71903      0.02      0.00  215988  20760   0.09  postgres",
-      "02:01:07 AM   999     71904      0.01      0.00  214868  14408   0.06  postgres",
-      ""
+      "02:01:07 AM   999     71904      0.01      0.00  214868  14408   0.06  postgres"
     ],
     "description": [
       "pidstat -C \"fox|bird\" -r -p ALL",
@@ -5445,9 +5155,6 @@
     "code": [
       "ip route show | grep docker0 | awk '{print $9}'"
     ],
-    "example": "",
-    "output": "",
-    "description": "",
     "language": "bash",
     "tags": [
       "network"
@@ -5461,9 +5168,6 @@
     "code": [
       "Get-ADGroupMember -Identity <Group_Name> "
     ],
-    "example": "",
-    "output": "",
-    "description": "",
     "language": "powershell",
     "tags": [],
     "url": "https://www.lepide.com/how-to/export-members-of-a-particular-ad-group-using-poweshell.html#:~:text=The%20PowerShell%20Get%2DADGroupMember%20cmdlet,group%20you%20want%20to%20use."
@@ -5476,7 +5180,6 @@
     "code": [
       "nmap -sT -O  10.171.230.150"
     ],
-    "example": "",
     "output": [
       "Starting Nmap 6.40 ( http://nmap.org ) at 2022-04-21 11:31 CDT",
       "Nmap scan report for server.us.example.com (10.123.123.123)",
@@ -5490,10 +5193,8 @@
       "3389/tcp open  ms-wbt-server",
       "7937/tcp open  nsrexecd",
       "7938/tcp open  lgtomapper",
-      "9100/tcp open  jetdirect",
-      ""
+      "9100/tcp open  jetdirect"
     ],
-    "description": "",
     "language": "bash",
     "tags": [
       "network"
@@ -5508,7 +5209,6 @@
     "code": [
       ":set all"
     ],
-    "example": "",
     "output": [
       "--- Options ---",
       "  ambiwidth=single    endofline         noinsertmode          mousetime=500       shellxescape=       tags=./tags,tags  novisualbell",
@@ -5559,10 +5259,8 @@
       "  selection=inclusive",
       "  shellredir=>%s 2>&1",
       "  shortmess=filnxtToO",
-      "  suffixes=.bak,~,.o,.h,.info,.swp,.obj",
-      ""
+      "  suffixes=.bak,~,.o,.h,.info,.swp,.obj"
     ],
-    "description": "",
     "language": "vim",
     "tags": []
   },
@@ -5574,7 +5272,6 @@
     "code": [
       "systemctl status --type=service"
     ],
-    "example": "",
     "output": [
       "● awxnldev01.us.example.com",
       "    State: running",
@@ -5593,10 +5290,8 @@
       "           │ │ ├─2819 /var/lib/awx/venv/awx/bin/uwsgi --socket 127.0.0.1:8050 --module=awx.wsgi:application --vacuum --processes=5 --harakiri=120 --no-orphans --master --max-requests=1000 --master-fifo=/var/lib/awx/awxfifo --lazy-apps -b 32768",
       "           │ │ ├─2820 /var/lib/awx/venv/awx/bin/python3 /var/lib/awx/venv/awx/bin/daphne -b 127.0.0.1 -p 8051 --websocket_timeout -1 awx.asgi:channel_layer",
       "           │ │ ├─2821 /var/lib/awx/venv/awx/bin/python3 /usr/bin/awx-manage run_wsbroadcast",
-      "           │ │ ├─2824 nginx: worker process",
-      ""
+      "           │ │ ├─2824 nginx: worker process"
     ],
-    "description": "",
     "language": "bash",
     "tags": [],
     "url": "https://linuxconfig.org/how-to-use-systemctl-to-list-services-on-systemd-linux"
@@ -5612,8 +5307,6 @@
     "example": [
       " journalctl -u  systemd-logind.service"
     ],
-    "output": "",
-    "description": "",
     "language": "bash",
     "tags": []
   },
@@ -5623,12 +5316,8 @@
     "created": "2022-04-14T03:08:22Z",
     "modified": "2022-04-14T03:08:22Z",
     "code": [
-      "ps aux --sort=-%mem",
-      ""
+      "ps aux --sort=-%mem"
     ],
-    "example": "",
-    "output": "",
-    "description": "",
     "language": "bash",
     "tags": [],
     "url": "https://unix.stackexchange.com/a/393198"
@@ -5641,9 +5330,6 @@
     "code": [
       "ll /etc/systemd/system/multi-user.target.wants"
     ],
-    "example": "",
-    "output": "",
-    "description": "",
     "language": "bash",
     "tags": [
       "service"
@@ -5664,7 +5350,6 @@
       "  openssl prime $N | awk '/is prime/ {print \"ibase=16;\"$1}' | bc",
       "done"
     ],
-    "example": "",
     "output": [
       "10007",
       "10009",
@@ -5676,10 +5361,8 @@
       "10079",
       "10091",
       "10093",
-      "10099",
-      ""
+      "10099"
     ],
-    "description": "",
     "language": "bash",
     "tags": [
       "security"
@@ -5699,11 +5382,8 @@
       "SHA1(README)= b018bfbdd6b6c939ea6acb3b4ea591e214a2a84d",
       "",
       "$ openssl dgst -sha256 README",
-      "SHA256(README)= d173e8ad75a8abbed8d21d4924ce145af7331f27a1a7b31e79e57271888ad54f",
-      ""
+      "SHA256(README)= d173e8ad75a8abbed8d21d4924ce145af7331f27a1a7b31e79e57271888ad54f"
     ],
-    "example": "",
-    "output": "",
     "description": [
       "Digests",
       "Generating digests with the dgst option is one of the more straightforward tasks you can accomplish with the openssl binary. Producing digests is done so often, as a matter of fact, that you can find special-use binaries for doing the same thing.",
@@ -5743,12 +5423,8 @@
       "91b885cd",
       "",
       "$ openssl x509 -noout -in cert.pem -fingerprint",
-      "SHA1 Fingerprint=E3:EB:7B:6B:01:2D:CE:3A:AD:63:00:AA:0B:60:08:F8:64:9F:1E:D9",
-      ""
+      "SHA1 Fingerprint=E3:EB:7B:6B:01:2D:CE:3A:AD:63:00:AA:0B:60:08:F8:64:9F:1E:D9"
     ],
-    "example": "",
-    "output": "",
-    "description": "",
     "language": "bash",
     "tags": [
       "security"
@@ -5763,7 +5439,6 @@
     "code": [
       "openssl ciphers -V 'AES+HIGH'"
     ],
-    "example": "",
     "output": [
       "          0x13,0x02 - TLS_AES_256_GCM_SHA384  TLSv1.3 Kx=any      Au=any  Enc=AESGCM(256) Mac=AEAD",
       "          0x13,0x03 - TLS_CHACHA20_POLY1305_SHA256 TLSv1.3 Kx=any      Au=any  Enc=CHACHA20/POLY1305(256) Mac=AEAD",
@@ -5853,10 +5528,8 @@
       "          0x00,0x90 - DHE-PSK-AES128-CBC-SHA  SSLv3 Kx=DHEPSK   Au=PSK  Enc=AES(128)  Mac=SHA1",
       "          0x00,0x2F - AES128-SHA              SSLv3 Kx=RSA      Au=RSA  Enc=AES(128)  Mac=SHA1",
       "          0x00,0xAE - PSK-AES128-CBC-SHA256   TLSv1 Kx=PSK      Au=PSK  Enc=AES(128)  Mac=SHA256",
-      "          0x00,0x8C - PSK-AES128-CBC-SHA      SSLv3 Kx=PSK      Au=PSK  Enc=AES(128)  Mac=SHA1",
-      ""
+      "          0x00,0x8C - PSK-AES128-CBC-SHA      SSLv3 Kx=PSK      Au=PSK  Enc=AES(128)  Mac=SHA1"
     ],
-    "description": "",
     "language": "bash",
     "tags": [
       "security"
@@ -5874,9 +5547,6 @@
       "",
       "Get-ADUser  -Filter \"OwnerID -like $EID\"  -Properties * | sort-object -property PasswordLastSet | Format-Table Name,PasswordLastSet -AutoSize -Wrap"
     ],
-    "example": "",
-    "output": "",
-    "description": "",
     "language": "powershell",
     "tags": [
       "AD"
@@ -5890,7 +5560,6 @@
     "code": [
       "sssctl --help"
     ],
-    "example": "",
     "output": [
       "Usage:",
       "sssctl COMMAND COMMAND-ARGS",
@@ -5925,11 +5594,8 @@
       "",
       "Help options:",
       "  -?, --help             Show this for a command",
-      "  --usage                Show brief usage message for a command",
-      "",
-      ""
+      "  --usage                Show brief usage message for a command"
     ],
-    "description": "",
     "language": "bash",
     "tags": []
   },
@@ -6023,15 +5689,13 @@
       "      }",
       "    ]",
       "  }",
-      "]",
-      ""
+      "]"
     ],
     "output": [
       "{",
       "  \"message\": \"1.2.0\",",
       "  \"date\": \"2021-12-27T12:13:16Z\"",
-      "}",
-      ""
+      "}"
     ],
     "description": [
       "We can use jq to extract just the first commit.",
@@ -6061,11 +5725,8 @@
     "modified": "2022-04-09T07:25:00Z",
     "code": [
       "POWERSHELL_HISTORY=${USERPROFILE,\\\\,\\/,g}/AppData/Roaming/Microsoft/Windows/PowerShell/PSReadLine/ConsoleHost_history.txt",
-      "cat \"$POWERSHELL_HISTORY\" | sed 's/^[ \\t]*//'",
-      ""
+      "cat \"$POWERSHELL_HISTORY\" | sed 's/^[ \\t]*//'"
     ],
-    "example": "",
-    "output": "",
     "description": [
       "%USERPROFILE%\\AppData\\Roaming\\Microsoft\\Windows\\PowerShell\\PSReadLine\\ConsoleHost_history.txt"
     ],
@@ -6080,9 +5741,6 @@
     "code": [
       "Get-Help Get | Format-Table Name,Category,Module -AutoSize -Wrap"
     ],
-    "example": "",
-    "output": "",
-    "description": "",
     "language": "powershell",
     "tags": []
   },
@@ -6094,9 +5752,6 @@
     "code": [
       "sudo -ll | sed -n '/RunAsUsers: root/,/Sudoers entry/p'"
     ],
-    "example": "",
-    "output": "",
-    "description": "",
     "language": "bash",
     "tags": []
   },
@@ -6108,7 +5763,6 @@
     "code": [
       "echo \"A,B,C,D,E,F,G,H,I,J,K,L,M,N,O\" | awk -v RS='[,\\n]' '{a=$0;getline b; getline c; print a,b,c}' OFS=,"
     ],
-    "example": "",
     "output": [
       "A,B,C",
       "D,E,F",
@@ -6116,7 +5770,6 @@
       "J,K,L",
       "M,N,O"
     ],
-    "description": "",
     "language": "bash",
     "tags": [],
     "url": "https://unix.stackexchange.com/a/430556"
@@ -6132,9 +5785,6 @@
       "1s/^/export json = \\n/; - prepend to file",
       "$s/$/\\n); - append to file"
     ],
-    "example": "",
-    "output": "",
-    "description": "",
     "language": "bash",
     "tags": [],
     "url": "https://stackoverflow.com/a/59580100"
@@ -6147,9 +5797,6 @@
     "code": [
       "curl -H \"X-Vault-Token: $VAULT_TOKEN\" \"$VAULT_ADDR/v1/sys/internal/specs/openapi\""
     ],
-    "example": "",
-    "output": "",
-    "description": "",
     "language": "bash",
     "tags": [
       "vault"
@@ -6171,8 +5818,6 @@
       "# decrypt",
       "openssl enc -d -aes-256-cbc -md sha512 -pbkdf2 -iter 100000 -base64 -salt -in $ENCRYPTEDFILE -pass file:$SALTFILE"
     ],
-    "example": "",
-    "output": "",
     "description": [
       "Comparing the Synopsys of the two main and recent versions of OpenSSL, let me quote the man pages.",
       "",
@@ -6212,9 +5857,6 @@
     "code": [
       "get-adgroup -Identity amerunixteam -properties *|Select -ExpandProperty member"
     ],
-    "example": "",
-    "output": "",
-    "description": "",
     "language": "powershell",
     "tags": []
   },
@@ -6226,9 +5868,6 @@
     "code": [
       "curl http://127.0.0.1:9190/integrations/node_exporter/metrics"
     ],
-    "example": "",
-    "output": "",
-    "description": "",
     "language": "bash",
     "tags": [
       "grafana"
@@ -6243,7 +5882,6 @@
     "code": [
       "ls -lptr --time-style='+%s %FT%T' --no-group --group-directories-first "
     ],
-    "example": "",
     "output": [
       "total 11276",
       "drwxr-xr-x 3 annie_tran     123 1628039419 2021-08-03T20:10:19 awx_setup/",
@@ -6253,10 +5891,8 @@
       "drwxr-xr-x 3 annie_tran      65 1642781441 2022-01-21T10:10:41 admin_scripts/",
       "drwxrwxr-x 2 annie_tran      54 1643173909 2022-01-25T23:11:49 ansible/",
       "drwxr-xr-x 2 annie_tran      55 1643180329 2022-01-26T00:58:49 bin/",
-      "drwxrwxr-x 4 annie_tran      45 1648750176 2022-03-31T13:09:36 devops-git/",
-      ""
+      "drwxrwxr-x 4 annie_tran      45 1648750176 2022-03-31T13:09:36 devops-git/"
     ],
-    "description": "",
     "language": "bash",
     "tags": []
   },
@@ -6269,9 +5905,6 @@
       "vault auth enable userpass",
       "vault write auth/userpass/users/annie_tran password=secret"
     ],
-    "example": "",
-    "output": "",
-    "description": "",
     "language": "bash",
     "tags": [
       "vault"
@@ -6291,7 +5924,6 @@
       "$ echo \"${!VAULT*}\"",
       "VAULT_ADDR VAULT_NAMESPACE VAULT_TOKEN"
     ],
-    "output": "",
     "description": [
       "${!prefix*}",
       "${!prefix@}",
@@ -6326,8 +5958,6 @@
       "- 2",
       "- 3"
     ],
-    "output": "",
-    "description": "",
     "language": "python",
     "tags": [],
     "url": "https://gist.github.com/noahcoad/46909253a5891af3699580b8f17baba8"
@@ -6340,12 +5970,8 @@
     "code": [
       "SOURCE=\"${BASH_SOURCE[0]}\"",
       "while [ -h \"$SOURCE\" ] ; do SOURCE=\"$(readlink \"$SOURCE\")\"; done",
-      "DIR=\"$( cd -P \"$( dirname \"$SOURCE\" )/..\" && pwd )\"",
-      ""
+      "DIR=\"$( cd -P \"$( dirname \"$SOURCE\" )/..\" && pwd )\""
     ],
-    "example": "",
-    "output": "",
-    "description": "",
     "language": "bash",
     "tags": [],
     "url": "https://github.com/hashicorp/vault/blob/3dc8ef76b670aeb91654a7f7df709c8fd08ca1d0/scripts/build.sh"
@@ -6365,9 +5991,6 @@
       "",
       "$  procinfo $PID"
     ],
-    "example": "",
-    "output": "",
-    "description": "",
     "language": "bash",
     "tags": [
       "network"
@@ -6382,8 +6005,6 @@
     "code": [
       "vault kv list -format=json 'kv/awx/svc_accounts/'"
     ],
-    "example": "",
-    "output": "",
     "description": [
       "slash at the end is very important"
     ],
@@ -6401,9 +6022,6 @@
       "python -m venv .venv",
       "source .venv/bin/activate"
     ],
-    "example": "",
-    "output": "",
-    "description": "",
     "language": "python",
     "tags": []
   },
@@ -6415,8 +6033,6 @@
     "code": [
       "curl -X PUT -H \"X-Vault-Namespace: infrastructure/database/engineering\" -H \"X-Vault-Request: true\" -H \"X-Vault-Token: $VAULT_TOKEN)\" -d '{\"increment\":\"24h\"}' https://hcvault.example.com/v1/auth/token/renew-self"
     ],
-    "example": "",
-    "output": "",
     "description": [
       "taken from `vault token renew -increment=24h -output-curl-string`"
     ],
@@ -6434,7 +6050,6 @@
     "code": [
       "vault kv put 'kv/path/to/secrets' @file-with-object.json"
     ],
-    "example": "",
     "output": [
       "=============== Secret Path ===============",
       "kv/path/to/secrets",
@@ -6470,8 +6085,6 @@
     "code": [
       "find $DIR -maxdepth 3 -mindepth 1 -type d ! -perm -2000 -print -exec chmod g+s {} \\;"
     ],
-    "example": "",
-    "output": "",
     "description": [
       "Using the numerical method, we need to pass a fourth, preceding digit in our chmod command. The digit used is calculated similarly to the standard permission digits:",
       "",
@@ -6499,8 +6112,6 @@
       "$ git rev-parse --show-toplevel",
       "/u01/devops-db"
     ],
-    "output": "",
-    "description": "",
     "language": "bash",
     "tags": [
       "git"
@@ -6518,7 +6129,6 @@
     "example": [
       "cat file.xml | prettier-xml"
     ],
-    "output": "",
     "description": [
       "prereq:",
       "npm install -g  @prettier/plugin-xml prettier"
@@ -6540,8 +6150,6 @@
     "example": [
       "powershell -noprofile -command \"Get-ADUser -Identity Annie_Tran -Properties *\""
     ],
-    "output": "",
-    "description": "",
     "language": "bash",
     "tags": []
   },
@@ -6559,8 +6167,6 @@
       "        git commit-tree \"$@\";",
       "    fi' HEAD"
     ],
-    "example": "",
-    "output": "",
     "description": [
       "fast solution that uses filter-branch instead of rebase",
       "",
@@ -6582,7 +6188,6 @@
     "code": [
       "echo -n 'letmein' | ansible-vault encrypt_string --vault-id dev@a_password_file --stdin-name 'db_password'"
     ],
-    "example": "",
     "output": [
       "Reading plaintext input from stdin. (ctrl-d to end input, twice if your content does not already have a new line)",
       "db_password: !vault |",
@@ -6594,9 +6199,7 @@
       "          3039"
     ],
     "description": [
-      "To encrypt the string ‘letmein’ read from stdin, add the vault ID ‘dev’ using the ‘dev’ vault password stored in a_password_file, and name the variable ‘db_password’:",
-      "",
-      ""
+      "To encrypt the string ‘letmein’ read from stdin, add the vault ID ‘dev’ using the ‘dev’ vault password stored in a_password_file, and name the variable ‘db_password’:"
     ],
     "language": "bash",
     "tags": [
@@ -6616,7 +6219,6 @@
       "$ uuidgen --sha1 --namespace @dns --name \"1626044030000\"",
       "1faa6f1b-f538-5d91-8aaa-1f96de461a16"
     ],
-    "output": "",
     "description": [
       "The uuidgen program creates (and prints) a new universally unique identifier (UUID) using the libuuid(3) library. The new UUID can reasonably be considered unique among all UUIDs created on the local system, and among UUIDs created on other systems in the past and in the future.",
       "",
@@ -6636,8 +6238,6 @@
     "code": [
       "find . -mindepth 1 -maxdepth 1 -type d -ctime 0 -print"
     ],
-    "example": "",
-    "output": "",
     "description": [
       "-amin, -atime, -cmin, -ctime, -mmin, and -mtime",
       "",
@@ -6661,7 +6261,6 @@
     "code": [
       "systemd-escape -u 'Hall\\xc3\\xb6chen\\x2c\\x20Meister'"
     ],
-    "example": "",
     "output": [
       "Hallöchen, Meister"
     ],
@@ -6684,9 +6283,7 @@
       "To generate instance names of three strings",
       "",
       "$ systemd-escape --template=systemd-nspawn@.service 'My Container 1' 'containerb' 'container/III'",
-      "systemd-nspawn@My\\x20Container\\x201.service systemd-nspawn@containerb.service systemd-nspawn@container-III.service",
-      "",
-      ""
+      "systemd-nspawn@My\\x20Container\\x201.service systemd-nspawn@containerb.service systemd-nspawn@container-III.service"
     ],
     "language": "bash",
     "tags": [
@@ -6738,9 +6335,6 @@
       "- \"{{ var | regex }}\"",
       "- \"{{ var | regexp_replace('from', 'to' ) }}\""
     ],
-    "example": "",
-    "output": "",
-    "description": "",
     "language": "yaml",
     "tags": [
       "ansible"
@@ -6775,8 +6369,6 @@
       "$ openssl enc -d -aes256 -a -in .secrets.enc -pass file:./.vault-password 2>/dev/null",
       "username: password"
     ],
-    "output": "",
-    "description": "",
     "language": "bash",
     "tags": [
       "security"
@@ -6794,8 +6386,6 @@
       "$ openssl passwd -salt 8E MySecret",
       "8E4vqBR4UOYF."
     ],
-    "example": "",
-    "output": "",
     "description": [
       "Using the `passwd` option, you can generate password hashes that interoperate with traditional `/etc/passwd` files, newer-style `/etc/shadow` files, and Apache password files.",
       "",
@@ -6822,11 +6412,8 @@
     "created": "2022-03-09T01:24:01Z",
     "modified": "2022-03-17T00:31:51Z",
     "code": [
-      "openssl speed",
-      ""
+      "openssl speed"
     ],
-    "example": "",
-    "output": "",
     "description": [
       "How do I benchmark my system’s performance?",
       "",
@@ -6853,7 +6440,6 @@
       "wheel",
       "2022-03-08 18:39:51.177925946 -0600"
     ],
-    "description": "",
     "language": "bash",
     "tags": [
       "text",
@@ -6906,9 +6492,6 @@
       "journalctl -f                 # Follow messages as they appear",
       "journalctl -k                 # Show only kernel messages"
     ],
-    "example": "",
-    "output": "",
-    "description": "",
     "language": "bash",
     "tags": [
       "service"
@@ -6922,9 +6505,6 @@
     "code": [
       "openssl sha1 -sha256 file.txt | awk '{print $2}'"
     ],
-    "example": "",
-    "output": "",
-    "description": "",
     "language": "bash",
     "tags": [
       "security"
@@ -6967,8 +6547,7 @@
       "  Nice:   0        "
     ],
     "description": [
-      "prtstat  prints  the statistics of the specified process.  This information comes from the /proc/PID/stat file.",
-      ""
+      "prtstat  prints  the statistics of the specified process.  This information comes from the /proc/PID/stat file."
     ],
     "language": "bash",
     "tags": []
@@ -6979,10 +6558,8 @@
     "created": "2022-03-03T21:23:52Z",
     "modified": "2022-03-17T00:24:02Z",
     "code": [
-      "mpstat 2 5",
-      ""
+      "mpstat 2 5"
     ],
-    "example": "",
     "output": [
       "Linux 5.4.17-2102.202.5.el7uek.x86_64 (server.us.example.com)         03/03/2022      _x86_64_        (2 CPU)",
       "",
@@ -6992,8 +6569,7 @@
       "03:22:39 PM  all    0.50    0.00    0.50    0.00    0.00    0.00    0.00    0.00    0.00   98.99",
       "03:22:41 PM  all    0.75    0.00    0.50    0.25    0.00    0.50    0.00    0.00    0.00   98.01",
       "03:22:43 PM  all    0.50    0.00    0.75    0.00    0.50    0.00    0.00    0.00    0.00   98.25",
-      "Average:     all    0.70    0.00    0.85    0.05    0.15    0.10    0.00    0.00    0.00   98.15",
-      ""
+      "Average:     all    0.70    0.00    0.85    0.05    0.15    0.10    0.00    0.00    0.00   98.15"
     ],
     "description": [
       "The mpstat command writes to standard output activities for each available processor, processor  0  being",
@@ -7006,8 +6582,7 @@
       "startup  (boot).  The count parameter can be specified in conjunction with the interval parameter if this",
       "one is not set to zero. The value of count determines the number of reports generated at interval seconds",
       "apart.  If  the interval parameter is specified without the count parameter, the mpstat command generates",
-      "reports continuously.",
-      ""
+      "reports continuously."
     ],
     "language": "bash",
     "tags": [
@@ -7022,7 +6597,6 @@
     "code": [
       "ifstat -j -p"
     ],
-    "example": "",
     "output": [
       "{",
       "    \"kernel\": {",
@@ -7146,7 +6720,6 @@
     "code": [
       "procinfo -a"
     ],
-    "example": "",
     "output": [
       "Linux 5.4.17-2102.202.5.el7uek.x86_64 (mockbuild@host-100-100-224-35) (gcc 4.8.5 20150623) #2 2CPU [awxserver02]",
       "",
@@ -7204,8 +6777,7 @@
       " 24 *cryptd          16 *glue_helper     16  pcspkr          24  joydev          36  sg",
       " 72 *vmw_vmci        28  i2c_piix4       92  auth_rpcgss    380 *sunrpc          24 *binfmt_misc",
       " 28 *ip_tables      1428 *xfs             16 *libcrc32c       24  sr_mod          68 *cdrom",
-      " 52 *sd_Segmentation fault",
-      ""
+      " 52 *sd_Segmentation fault"
     ],
     "description": [
       "usage: procinfo [-fsmadiDSbhv] [-nN] [-Ffile]",
@@ -7234,10 +6806,8 @@
     "created": "2022-03-03T17:13:49Z",
     "modified": "2022-03-03T17:13:49Z",
     "code": [
-      "dstat --top-cpu",
-      ""
+      "dstat --top-cpu"
     ],
-    "example": "",
     "output": [
       "-most-expensive-",
       "  cpu process",
@@ -7284,9 +6854,7 @@
       "    show process using the most memory",
       "",
       "--top-oom",
-      "    show process that will be killed by OOM the first",
-      "",
-      ""
+      "    show process that will be killed by OOM the first"
     ],
     "language": "bash",
     "tags": []
@@ -7299,8 +6867,6 @@
     "code": [
       "man dstat"
     ],
-    "example": "",
-    "output": "",
     "description": [
       "   Performance tools",
       "       ifstat(1), iftop(8), iostat(1), mpstat(1), netstat(1), nfsstat(1), nstat, vmstat(1), xosview(1)",
@@ -7330,9 +6896,7 @@
       "       xdpyinfo(1), xrestop(1)",
       "",
       "   Other useful info",
-      "       collectl(1), proc(5), procinfo(8)",
-      "",
-      ""
+      "       collectl(1), proc(5), procinfo(8)"
     ],
     "language": "bash",
     "tags": [
@@ -7345,10 +6909,8 @@
     "created": "2022-03-03T17:04:25Z",
     "modified": "2022-03-23T21:26:37Z",
     "code": [
-      "lsblk -a -p",
-      ""
+      "lsblk -a -p"
     ],
-    "example": "",
     "output": [
       "NAME                                MAJ:MIN RM  SIZE RO TYPE MOUNTPOINT",
       "/dev/sdb                              8:16   0  100G  0 disk",
@@ -7371,7 +6933,6 @@
       "├─/dev/sda3                           8:3    0    8G  0 part [SWAP]",
       "└─/dev/sda1                           8:1    0 1000M  0 part /boot"
     ],
-    "description": "",
     "language": "bash",
     "tags": [
       "system"
@@ -7406,8 +6967,6 @@
       "$ echo ${1: -7:-2}",
       "bcdef"
     ],
-    "example": "",
-    "output": "",
     "description": [
       "'${PARAMETER:OFFSET:LENGTH}'",
       "     This is referred to as Substring Expansion.  It expands to up to",
@@ -7442,9 +7001,6 @@
     "code": [
       "systemctl list-unit-files --state=enabled --type=service --no-legend | awk '{print $1}'"
     ],
-    "example": "",
-    "output": "",
-    "description": "",
     "language": "bash",
     "tags": [
       "service"
@@ -7458,7 +7014,6 @@
     "code": [
       "ansible-config dump | grep -v '\\(default\\)' | sed 's,(.*cfg),,g'"
     ],
-    "example": "",
     "output": [
       "ANSIBLE_SSH_ARGS = -C -o ControlMaster=auto -o ControlPersist=60s -o StrictHostKeyChecking=no",
       "ANSIBLE_SSH_CONTROL_PATH = %(directory)s/%%h-%%r",
@@ -7479,10 +7034,8 @@
       "MAX_FILE_SIZE_FOR_DIFF = 3145728",
       "RETRY_FILES_ENABLED = True",
       "RETRY_FILES_SAVE_PATH = ~/.ansible-retry",
-      "SYSTEM_WARNINGS = False",
-      ""
+      "SYSTEM_WARNINGS = False"
     ],
-    "description": "",
     "language": "bash",
     "tags": [
       "ansible"
@@ -7494,12 +7047,8 @@
     "created": "2022-03-01T01:58:08Z",
     "modified": "2022-10-20T01:43:41Z",
     "code": [
-      "echo '-:svc_user_account:ALL' | tee -a /etc/security/access.conf",
-      ""
+      "echo '-:svc_user_account:ALL' | tee -a /etc/security/access.conf"
     ],
-    "example": "",
-    "output": "",
-    "description": "",
     "language": "bash",
     "tags": [
       "security",
@@ -7515,9 +7064,6 @@
     "code": [
       "systemctl list-units --failed --no-legend | awk '{print $1}'| xargs -I % systemctl status % && systemctl restart %"
     ],
-    "example": "",
-    "output": "",
-    "description": "",
     "language": "bash",
     "tags": [
       "service"
@@ -7531,9 +7077,6 @@
     "code": [
       "pkill -HUP -u annie_tran"
     ],
-    "example": "",
-    "output": "",
-    "description": "",
     "language": "bash",
     "tags": []
   },
@@ -7545,9 +7088,6 @@
     "code": [
       "find . -maxdepth 1 -type d -exec zip archive.zip {} +"
     ],
-    "example": "",
-    "output": "",
-    "description": "",
     "language": "bash",
     "tags": [],
     "url": "https://devconnected.com/how-to-zip-folder-on-linux/"
@@ -7560,7 +7100,6 @@
     "code": [
       "$ docker top awx_task"
     ],
-    "example": "",
     "output": [
       "UID                 PID                 PPID                C                   STIME               TTY                 TIME                CMD",
       "root                2083                2043                0                   13:16               ?                   00:00:00            /usr/bin/tini -- /usr/bin/launch_awx_task.sh",
@@ -7577,15 +7116,12 @@
       "root                3223                3153                0                   13:17               ?                   00:00:00            /var/lib/awx/venv/awx/bin/python3 /usr/bin/awx-manage run_dispatcher",
       "root                3224                3153                0                   13:17               ?                   00:00:00            /var/lib/awx/venv/awx/bin/python3 /usr/bin/awx-manage run_dispatcher",
       "root                3225                3153                0                   13:17               ?                   00:00:00            /var/lib/awx/venv/awx/bin/python3 /usr/bin/awx-manage run_dispatcher",
-      "root                3226                3153                0                   13:17               ?                   00:00:00            /var/lib/awx/venv/awx/bin/python3 /usr/bin/awx-manage run_dispatcher",
-      "",
-      ""
+      "root                3226                3153                0                   13:17               ?                   00:00:00            /var/lib/awx/venv/awx/bin/python3 /usr/bin/awx-manage run_dispatcher"
     ],
     "description": [
       "Usage:  docker top CONTAINER [ps OPTIONS]",
       "",
-      "Display the running processes of a container",
-      ""
+      "Display the running processes of a container"
     ],
     "language": "bash",
     "tags": [
@@ -7600,7 +7136,6 @@
     "code": [
       "nstat -a -t 60"
     ],
-    "example": "",
     "output": [
       "#kernel",
       "IpInReceives                    11726853           0.0",
@@ -7708,8 +7243,7 @@
       "IpExtInMcastOctets              218700             0.0",
       "IpExtOutMcastOctets             560                0.0",
       "IpExtInBcastOctets              177442505          0.0",
-      "IpExtInNoECTPkts                11733275           0.0",
-      ""
+      "IpExtInNoECTPkts                11733275           0.0"
     ],
     "description": [
       "https://loicpefferkorn.net/2018/09/linux-network-statistics-reference/",
@@ -7729,7 +7263,6 @@
     "code": [
       "systemd-cgls"
     ],
-    "example": "",
     "output": [
       "$ systemd-cgls",
       "├─1 /usr/lib/systemd/systemd --switched-root --system --deserialize 22",
@@ -7783,10 +7316,8 @@
       "│   ├─38994 /var/lib/awx/venv/awx/bin/python3 /usr/bin/awx-manage run_dispatcher",
       "│   ├─38995 /var/lib/awx/venv/awx/bin/python3 /usr/bin/awx-manage run_callback_receiver",
       "│   ├─38996 /var/lib/awx/venv/awx/bin/python3 /usr/bin/awx-manage run_callback_receiver",
-      "│   └─38997 /var/lib/awx/venv/awx/bin/python3 /usr/bin/awx-manage run_callback_receiver",
-      ""
+      "│   └─38997 /var/lib/awx/venv/awx/bin/python3 /usr/bin/awx-manage run_callback_receiver"
     ],
-    "description": "",
     "language": "bash",
     "tags": [],
     "url": "http://0pointer.de/blog/projects/systemd-for-admins-2.html"
@@ -7799,7 +7330,6 @@
     "code": [
       "netstat -ln --inet --program"
     ],
-    "example": "",
     "output": [
       "Active Internet connections (only servers)",
       "Proto Recv-Q Send-Q Local Address           Foreign Address         State       PID/Program name",
@@ -7831,10 +7361,8 @@
       "udp        0      0 0.0.0.0:123             0.0.0.0:*                           80791/ntpd",
       "udp        0      0 127.0.0.1:659           0.0.0.0:*                           1331/rpc.statd",
       "udp        0      0 0.0.0.0:800             0.0.0.0:*                           1054/rpcbind",
-      "udp        0      0 0.0.0.0:21989           0.0.0.0:*                           1331/rpc.statd",
-      ""
+      "udp        0      0 0.0.0.0:21989           0.0.0.0:*                           1331/rpc.statd"
     ],
-    "description": "",
     "language": "bash",
     "tags": [
       "network"
@@ -7849,7 +7377,6 @@
     "code": [
       "ps xawf -eo pid,user,cgroup,args"
     ],
-    "example": "",
     "output": [
       "35899 root     10:devices:/system.slice/co  \\_ containerd-shim -namespace moby -workdir /var/lib/containerd/io.containerd.runtime.v1",
       " 35916 root     11:hugetlb:/docker/cd279976  |   \\_ /usr/bin/tini -- /bin/sh -c /usr/bin/launch_awx.sh",
@@ -7882,8 +7409,7 @@
       " 36441 root     11:hugetlb:/docker/12e8d10b                      \\_ /var/lib/awx/venv/awx/bin/python3 /usr/bin/awx-manage run_callbac",
       " 36442 root     11:hugetlb:/docker/12e8d10b                      \\_ /var/lib/awx/venv/awx/bin/python3 /usr/bin/awx-manage run_callbac",
       " 36443 root     11:hugetlb:/docker/12e8d10b                      \\_ /var/lib/awx/venv/awx/bin/python3 /usr/bin/awx-manage run_callbac",
-      " 34665 root     10:devices:/system.slice/do /usr/bin/dockerd -H fd:// --containerd=/run/containerd/containerd.sock",
-      ""
+      " 34665 root     10:devices:/system.slice/do /usr/bin/dockerd -H fd:// --containerd=/run/containerd/containerd.sock"
     ],
     "description": [
       "n systemd we place every process that is spawned in a control group named after its service. Control groups (or cgroups) at their most basic are simply groups of processes that can be arranged in a hierarchy and labelled individually. When processes spawn other processes these children are automatically made members of the parents cgroup. Leaving a cgroup is not possible for unprivileged processes. Thus, cgroups can be used as an effective way to label processes after the service they belong to and be sure that the service cannot escape from the label, regardless how often it forks or renames itself. Furthermore this can be used to safely kill a service and all processes it created, again with no chance of escaping."
@@ -7912,9 +7438,6 @@
       "# 4. Remove all images",
       "docker rmi $(docker images -q)"
     ],
-    "example": "",
-    "output": "",
-    "description": "",
     "language": "bash",
     "tags": [
       "docker"
@@ -7929,9 +7452,6 @@
     "code": [
       "docker volume rm $(docker volume ls -qf dangling=true)"
     ],
-    "example": "",
-    "output": "",
-    "description": "",
     "language": "bash",
     "tags": [
       "docker"
@@ -7952,11 +7472,8 @@
       "ExecStart=/usr/bin/dockerd -g /u01/docker-root -H fd://' >>/etc/systemd/system/docker.service.d/docker.root.conf",
       "",
       "systemctl daemon-reload",
-      "systemctl restart docker",
-      ""
+      "systemctl restart docker"
     ],
-    "example": "",
-    "output": "",
     "description": [
       "Change docker root directory by creating a systemd drop-in service file",
       "",
@@ -7976,12 +7493,8 @@
     "code": [
       "echo 'cd \"$OLDPWD\"' >> .bashrc",
       "",
-      "C:\\Users\\annie_tran.AMERICAS\\cyg\\bin\\bash --login -i",
-      ""
+      "C:\\Users\\annie_tran.AMERICAS\\cyg\\bin\\bash --login -i"
     ],
-    "example": "",
-    "output": "",
-    "description": "",
     "language": "bash",
     "tags": [
       "cygwin"
@@ -7995,9 +7508,6 @@
     "code": [
       "find /tmp -maxdepth 1 -type f -newermt 2022-02-02 ! -newermt 2022-02-04 -print -exec rm -rf {} \\;"
     ],
-    "example": "",
-    "output": "",
-    "description": "",
     "language": "bash",
     "tags": [
       "fs"
@@ -8011,15 +7521,12 @@
     "code": [
       "kill -9 $(lsof |grep deleted|awk '{print $2}'|sort -u)"
     ],
-    "example": "",
-    "output": "",
     "description": [
       "On unices, filenames are just pointers (inodes) that point to the memory where the file resides (which can be a hard drive or even a RAM-backed filesystem). Each file records the number of links to it: the links can be either the filename (plural, if there are multiple hard links to the same file), and also every time a file is opened, the process actually holds the \"link\" to the same space.",
       "",
       "The space is physically freed only if there are no links left (therefore, it's impossible to get to it). That's the only sensible choice: while the file is being used, it's not important if someone else can no longer access it: you are using it and until you close it, you still have control over it - you won't even notice the filename is gone or moved or whatever. That's even used for tempfiles: some implementations create a file and immediately unlink it, so it's not visible in the filesystem, but the process that created it is using it normally. Flash plugin is especially fond of this method: all the downloaded video files are held open, but the filesystem doesn't show them.",
       "",
-      "So, the answer is, while the processes have the files still opened, you shouldn't expect to get the space back. It's not freed, it's being actively used. This is also one of the reasons that applications should really close the files when they finish using them. In normal usage, you shouldn't think of that space as free, and this also shouldn't be very common at all - with the exception of temporary files that are unlinked on purpose, there shouldn't really be any files that you would consider being unused, but still open. Try to review if there is a process that does this a lot and consider how you use it, or just find more space.",
-      ""
+      "So, the answer is, while the processes have the files still opened, you shouldn't expect to get the space back. It's not freed, it's being actively used. This is also one of the reasons that applications should really close the files when they finish using them. In normal usage, you shouldn't think of that space as free, and this also shouldn't be very common at all - with the exception of temporary files that are unlinked on purpose, there shouldn't really be any files that you would consider being unused, but still open. Try to review if there is a process that does this a lot and consider how you use it, or just find more space."
     ],
     "language": "bash",
     "tags": [],
@@ -8039,9 +7546,6 @@
       "    awx login -f human | sed 's,export ,,g' | tee -a \".${1%%.*}\"",
       "}"
     ],
-    "example": "",
-    "output": "",
-    "description": "",
     "language": "bash",
     "tags": [
       "ansible"
@@ -8055,7 +7559,6 @@
     "code": [
       "du -h -d 1 ."
     ],
-    "example": "",
     "output": [
       "132K    ./.ssh",
       "2.6M    ./.ansible",
@@ -8079,10 +7582,8 @@
       "36K     ./.secrets",
       "20K     ./ssh-expect",
       "362M    ./.vscode-server",
-      "890M    .",
-      ""
+      "890M    ."
     ],
-    "description": "",
     "language": "bash",
     "tags": [
       "fs"
@@ -8100,8 +7601,6 @@
     "example": [
       "$ cat enabled.csv | grep 2022 | column -s\\\" -t| sort -k 3"
     ],
-    "output": "",
-    "description": "",
     "language": "powershell",
     "tags": []
   },
@@ -8113,8 +7612,6 @@
     "code": [
       "ps -eo pid,tid,class,rtprio,stat,vsz,rss,comm"
     ],
-    "example": "",
-    "output": "",
     "description": [
       "These simple commands give you a feel of the memory usage and give the first indication that you have a memory leak when you see that the Rss of a process keeps on increasing. However, they are not very accurate in the absolute measurements of memory usage."
     ],
@@ -8134,10 +7631,8 @@
       "$ date -d @1638163336"
     ],
     "output": [
-      "Sun Nov 28 23:22:16 CST 2021",
-      ""
+      "Sun Nov 28 23:22:16 CST 2021"
     ],
-    "description": "",
     "language": "bash",
     "tags": [
       "date"
@@ -8157,7 +7652,6 @@
       "  cat files.json | jq \".$i[.$i|length] |= . + {\\\"date\\\": \\\"$(date +%F%X)\\\"}\" >files.json",
       "done"
     ],
-    "example": "",
     "output": [
       "{",
       "  \"delete\": [",
@@ -8184,10 +7678,8 @@
       "      \"date\": \"2022-02-0502:49:06 AM\"",
       "    }",
       "  ]",
-      "}",
-      ""
+      "}"
     ],
-    "description": "",
     "language": "bash",
     "tags": []
   },
@@ -8197,10 +7689,8 @@
     "created": "2022-02-05T07:40:54Z",
     "modified": "2022-02-05T07:40:54Z",
     "code": [
-      "wget -qO- http://programminghistorian.org/assets/jq_rkm.json | jq -r '.artObjects[] | [.id, .title, .principalOrFirstMaker, .webImage.url] | @csv'",
-      ""
+      "wget -qO- http://programminghistorian.org/assets/jq_rkm.json | jq -r '.artObjects[] | [.id, .title, .principalOrFirstMaker, .webImage.url] | @csv'"
     ],
-    "example": "",
     "output": [
       "\"nl-SK-C-5\",\"Schutters van wijk II onder leiding van kapitein Frans Banninck Cocq, bekend als de ‘Nachtwacht’\",\"Rembrandt Harmensz. van Rijn\",\"http://lh6.ggpht.com/ZYWwML8mVFonXzbmg2rQBulNuCSr3rAaf5ppNcUc2Id8qXqudDL1NSYxaqjEXyDLSbeNFzOHRu0H7rbIws0Js4d7s_M=s0\"",
       "\"nl-SK-A-1505\",\"Een molen aan een poldervaart, bekend als ‘In de maand juli’\",\"Paul Joseph Constantin Gabriël\",\"http://lh4.ggpht.com/PkQr-nNqzn0OVXVd4-hdJ6PPdWZ6-DQ_74WfBT3MZIV4LNYA-q8LUrtReXNstuzl9k6gKWkaBwG-LcFZ7zWU9Ch92g=s0\"",
@@ -8211,10 +7701,8 @@
       "\"nl-SK-A-690\",\"Een schrijver die zijn pen versnijdt\",\"Jan Ekels (II)\",\"http://lh4.ggpht.com/e2kmNV3E-YMFjH1zYsRnN7VrsQh5U7PtzJhAeIADmE-C-fw_s5tRkfZid9AIOuUs-6e36YmAylTl2btxkpIoU_3b5K4=s0\"",
       "\"nl-SK-A-2983\",\"Eendennesten\",\"Paul Joseph Constantin Gabriël\",\"http://lh6.ggpht.com/-Ul_3YE8q2CPw44SRBdz3X3HEqCfMDEqUONqvVWRwHZvIG05D_PerehgIvfy_di71bLX_467GOkR99jFJ3uzsWysqQk=s0\"",
       "\"nl-SK-A-3924\",\"Pompeius Occo\",\"Dirck Jacobsz.\",\"http://lh3.ggpht.com/bCIqIe6jDaZTe9ABLEbMKQXSFCQMMkPalrqur82zq691y2jpbyJRjpbCtYrsUT1IHgIAQO1stRRDDVErmGlVOzO7IWs=s0\"",
-      "\"nl-SK-A-3246\",\"De visvrouw\",\"Adriaen van Ostade\",\"http://lh4.ggpht.com/I5AaMSHTtQT2s7nFoBDYmKCi77zPvc-i4pssHS_lLlEuadlZ3gRv7vZri1qOog3_ofVS11LvyqZJ_LP-deIFIO7chjs=s0\"",
-      ""
+      "\"nl-SK-A-3246\",\"De visvrouw\",\"Adriaen van Ostade\",\"http://lh4.ggpht.com/I5AaMSHTtQT2s7nFoBDYmKCi77zPvc-i4pssHS_lLlEuadlZ3gRv7vZri1qOog3_ofVS11LvyqZJ_LP-deIFIO7chjs=s0\""
     ],
-    "description": "",
     "language": "bash",
     "tags": [],
     "url": "https://programminghistorian.org/en/lessons/json-and-jq"
@@ -8227,7 +7715,6 @@
     "code": [
       "ps -o pid=''"
     ],
-    "example": "",
     "output": [
       "$ ps -o pid=X",
       "     X",
@@ -8238,7 +7725,6 @@
       " 29015",
       " 70138"
     ],
-    "description": "",
     "language": "bash",
     "tags": [
       "utils"
@@ -8252,7 +7738,6 @@
     "code": [
       "ps -efo pid"
     ],
-    "example": "",
     "output": [
       "   PID",
       " 64822",
@@ -8260,7 +7745,6 @@
       " 64835",
       " 68072"
     ],
-    "description": "",
     "language": "bash",
     "tags": []
   },
@@ -8280,9 +7764,6 @@
       "  *)        echo \"unknown: $OSTYPE\" ;;",
       "esac"
     ],
-    "example": "",
-    "output": "",
-    "description": "",
     "language": "bash",
     "tags": [
       "utils"
@@ -8297,7 +7778,6 @@
     "code": [
       " host -t ns example.com"
     ],
-    "example": "",
     "output": [
       "example.com name server uslas06bcdnsdhcp01.us.example.com.",
       "example.com name server uslas06bcdnsdhcp02.us.example.com.",
@@ -8307,10 +7787,8 @@
       "example.com name server uslhs03bcdnsdhcp02.us.example.com.",
       "example.com name server aus08dns01.us.example.com.",
       "example.com name server aus08dns02.us.example.com.",
-      "example.com name server uslhs03bcdnsdhcp01.us.example.com.",
-      ""
+      "example.com name server uslhs03bcdnsdhcp01.us.example.com."
     ],
-    "description": "",
     "language": "bash",
     "tags": [
       "network"
@@ -8325,13 +7803,11 @@
     "code": [
       "echo '' | openssl s_client -connect awxserver02.us.example.com:443 2>/dev/null | openssl x509 -text -noout | grep -A 1 \"Public Key Algorithm\""
     ],
-    "example": "",
     "output": [
       "$ echo '' | openssl s_client -connect awxserver02.us.example.com:443 2>/dev/null | openssl x509 -text -noout | grep -A 1 \"Public Key Algorithm\"",
       "            Public Key Algorithm: rsaEncryption",
       "                RSA Public-Key: (2048 bit)"
     ],
-    "description": "",
     "language": "bash",
     "tags": [
       "network"
@@ -8348,8 +7824,6 @@
       "kill -9 `ps ax | grep \"watcherService\" | grep -v grep | awk '{print $1}'`",
       "rm -rf ~/.vscode-server # Or ~/.vscode-server-insiders"
     ],
-    "example": "",
-    "output": "",
     "description": [
       "The SSH extension provides a command for cleaning up the VS Code Server from the remote machine, Remote-SSH: Uninstall VS Code Server from Host.... The command does two things: it kills any running VS Code Server processes and it deletes the folder where the server was installed."
     ],
@@ -8367,9 +7841,6 @@
     "code": [
       "ps -ax -o pid=,ppid=,command= | grep -v \"\\[\" | sort -k3 -k2 -k1"
     ],
-    "example": "",
-    "output": "",
-    "description": "",
     "language": "bash",
     "tags": []
   },
@@ -8389,8 +7860,6 @@
       "   eval `cat .ssh/ssh-agent`",
       "fi"
     ],
-    "example": "",
-    "output": "",
     "description": [
       "To start the SSH Agent automatically on login, add these lines to your ~/.bash_profile"
     ],
@@ -8409,8 +7878,6 @@
       "    ControlPath  ~/.ssh/sockets/%r@%h-%p",
       "    ControlPersist  600"
     ],
-    "example": "",
-    "output": "",
     "description": [
       "If you are on macOS and Linux and want to reduce how often you have to enter a password or token, you can enable the ControlMaster feature on your local machine so that OpenSSH runs multiple SSH sessions over a single connection.",
       "",
@@ -8440,8 +7907,6 @@
     "code": [
       "env - PATH=\"$PATH\" foo"
     ],
-    "example": "",
-    "output": "",
     "description": [
       "Run foo with a reduced environment, preserving only the original PATH to avoid problems in locating foo."
     ],
@@ -8457,7 +7922,6 @@
     "code": [
       "gcm -module DISM"
     ],
-    "example": "",
     "output": [
       "CommandType     Name                                               Version    Source",
       "-----------     ----                                               -------    ------",
@@ -8488,7 +7952,6 @@
       "Cmdlet          Enable-WindowsOptionalFeature                      3.0        Dism",
       "Cmdlet          Expand-WindowsCustomDataImage                      3.0        Dism"
     ],
-    "description": "",
     "language": "powershell",
     "tags": [],
     "url": "https://stackoverflow.com/a/34537239/7460613"
@@ -8509,9 +7972,6 @@
       "software_development=(ar ctags lex make nm strip yacc)",
       "miscellaneous=(bc cal expr lp od sleep true false)"
     ],
-    "example": "",
-    "output": "",
-    "description": "",
     "language": "bash",
     "tags": [
       "gnu"
@@ -8527,7 +7987,6 @@
       "select jsonb_pretty(extra_data::jsonb) ",
       "from main_joblaunchconfig where extra_data <> '{}';"
     ],
-    "example": "",
     "output": [
       "awx=# select jsonb_pretty(extra_data::jsonb) from main_joblaunchconfig where extra_data <> '{}';",
       "-[ RECORD 1 ]+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------",
@@ -8557,7 +8016,6 @@
       "             |             }                                                                                                                                                         +",
       "             |         ],                                                              "
     ],
-    "description": "",
     "language": "sql",
     "tags": [
       "db",
@@ -8577,7 +8035,6 @@
       "where table_schema = 'public'",
       "order by pg_relation_size(quote_ident(table_name)) desc;"
     ],
-    "example": "",
     "output": [
       "                        table_name                         | pg_size_pretty",
       "-----------------------------------------------------------+----------------",
@@ -8592,7 +8049,6 @@
       " main_usersessionmembership                                | 1144 kB",
       " main_host                                                 | 992 k"
     ],
-    "description": "",
     "language": "sql",
     "tags": [
       "db"
@@ -8607,9 +8063,6 @@
     "code": [
       "alias cls='printf \"\\033c\"'"
     ],
-    "example": "",
-    "output": "",
-    "description": "",
     "language": "bash",
     "tags": [],
     "url": "https://linoxide.com/commands-clear-linux-terminal/"
@@ -8629,9 +8082,6 @@
       "      and n.nspname not in ('information_schema','pg_catalog')",
       "order by c.reltuples desc;"
     ],
-    "example": "",
-    "output": "",
-    "description": "",
     "language": "sql",
     "tags": [
       "db"
@@ -8646,7 +8096,6 @@
     "code": [
       "ls -lptr --time-style='+%s %F %T' --group-directories-first -o"
     ],
-    "example": "",
     "output": [
       "total 11276",
       "drwxr-xr-x 3 annie_tran     123 1628039419 2021-08-03 20:10:19 awx_setup/",
@@ -8683,17 +8132,14 @@
     "code": [
       "Get-WmiObject -Class Win32_ComputerSystem -Property *"
     ],
-    "example": "",
     "output": [
       "Domain              : amer.example.com",
       "Manufacturer        : Inc.",
       "Model               : Precision 5560",
       "Name                : W101TL8YD3",
       "PrimaryOwnerName    : example, Inc.",
-      "TotalPhysicalMemory : 34065952768",
-      ""
+      "TotalPhysicalMemory : 34065952768"
     ],
-    "description": "",
     "language": "powershell",
     "tags": []
   },
@@ -8705,9 +8151,6 @@
     "code": [
       "python -m SimpleHTTPServer 8080"
     ],
-    "example": "",
-    "output": "",
-    "description": "",
     "language": "python",
     "tags": [
       "http"
@@ -8722,8 +8165,6 @@
     "code": [
       "zip $ZIP_NAME.zip -r $DIRNAME"
     ],
-    "example": "",
-    "output": "",
     "description": [
       "Creating a zip archive from a directory",
       "The command line option -r adds files recursively. Thus, it allows to create a zip file from an entire (sub-)directory:"
@@ -8749,7 +8190,6 @@
     "output": [
       "random27790"
     ],
-    "description": "",
     "language": "bash",
     "tags": [
       "shell"
@@ -8772,8 +8212,6 @@
       "$ date -d \"$date -7 days\" +\"%Y-%m-%d\"",
       "2022-03-16"
     ],
-    "output": "",
-    "description": "",
     "language": "bash",
     "tags": [],
     "url": "https://stackoverflow.com/a/53326257/7460613"
@@ -8795,9 +8233,6 @@
       "",
       "bash --login -i -c \"eval \\\"cd '$CURRENTDIR'\\\";$SHELL\""
     ],
-    "example": "",
-    "output": "",
-    "description": "",
     "language": "cmd",
     "tags": [
       "cygwin",
@@ -8850,8 +8285,7 @@
       "        fi;",
       "    done;",
       "    return 0",
-      "}",
-      ""
+      "}"
     ],
     "description": [
       "Options:",
@@ -8867,8 +8301,7 @@
       "  -t        output a single word which is one of `alias', `keyword',",
       "            `function', `builtin', `file' or `', if NAME is an alias,",
       "            shell reserved word, shell function, shell builtin, disk file,",
-      "            or not found, respectively",
-      ""
+      "            or not found, respectively"
     ],
     "language": "bash",
     "tags": [
@@ -8885,9 +8318,6 @@
       "",
       "git difftool -y -x sdiff path/to/file"
     ],
-    "example": "",
-    "output": "",
-    "description": "",
     "language": "bash",
     "tags": [
       "git"
@@ -8902,15 +8332,12 @@
     "code": [
       "ss -atpu"
     ],
-    "example": "",
-    "output": "",
     "description": [
       "TCP",
       "See the Peer Address:Port column of the ss readout. The process sshd is listening on *:*, which translates into any incoming IPv4 address to any port, and over any network interface. The next line shows an established SSH connection from IP address 198.51.100.2 via ephemeral port 54820. The last line, :::* denotes the sshd process listening for any incoming SSH connections over IPv6 to any port, and again over any network interface.",
       "",
       "UDP",
-      "UDP sockets are stateless, meaning they are either open or closed and every process’s connection is independent of those which occurred before and after. This is in contrast to TCP connection states such as LISTEN, ESTABLISHED and CLOSE_WAIT. The ss output above shows no UDP connections.",
-      ""
+      "UDP sockets are stateless, meaning they are either open or closed and every process’s connection is independent of those which occurred before and after. This is in contrast to TCP connection states such as LISTEN, ESTABLISHED and CLOSE_WAIT. The ss output above shows no UDP connections."
     ],
     "language": "bash",
     "tags": [
@@ -8928,12 +8355,8 @@
       "Subject: my subject",
       "Content-Type: text/html",
       "",
-      "$(cat test-html-email.html)\" | sendmail -t",
-      ""
+      "$(cat test-html-email.html)\" | sendmail -t"
     ],
-    "example": "",
-    "output": "",
-    "description": "",
     "language": "bash",
     "tags": []
   },
@@ -8945,9 +8368,6 @@
     "code": [
       "sshpass -f .secrets/sshpass/svc_npdbmongos ssh -o StrictHostKeyChecking=no svc_npdbmongos@cfinlmdrprf17.us.example.com"
     ],
-    "example": "",
-    "output": "",
-    "description": "",
     "language": "bash",
     "tags": [
       "ssh"
@@ -8966,12 +8386,9 @@
       "mount --rbind /u01/docker /var/lib/docker",
       "systemctl start docker"
     ],
-    "example": "",
-    "output": "",
     "description": [
       "ERROR: failed to register layer: Error processing tar file(exit status 1):",
-      "no space left on device",
-      ""
+      "no space left on device"
     ],
     "language": "bash",
     "tags": [
@@ -8986,7 +8403,6 @@
     "code": [
       "du -h | sort -rh"
     ],
-    "example": "",
     "output": [
       "3.3G    ./.awx",
       "3.3G    .",
@@ -9012,8 +8428,7 @@
       "5.7M    ./.awx/awxcompose",
       "5.6M    ./.cache/pip/http/f/8/1/8/f",
       "5.6M    ./.cache/pip/http/f/8/1/8",
-      "5.6M    ./.cache/pip/http/f/8/1",
-      ""
+      "5.6M    ./.cache/pip/http/f/8/1"
     ],
     "description": [
       "Following @StéphaneChazelas, this works for me: find . -type f -print0 | xargs -0 du -h | sort -rh. If you just want say the largest 30 files: find . -type f -print0 | xargs -0 du -h | sort -rh | head -n 30"
@@ -9030,7 +8445,6 @@
     "code": [
       "$ openssl s_client -showcerts -connect awxserver02.us.example.com:80"
     ],
-    "example": "",
     "output": [
       "",
       "CONNECTED(00000003)",
@@ -9060,11 +8474,8 @@
       "    Start Time: 1640747180",
       "    Timeout   : 300 (sec)",
       "    Verify return code: 0 (ok)",
-      "---",
-      "",
-      ""
+      "---"
     ],
-    "description": "",
     "language": "bash",
     "tags": [
       "network"
@@ -9081,9 +8492,6 @@
       "",
       "curl -H \"X-Vault-Namespace: infrastructure/database/engineering/tools/dbv2/dbv2/\" -H \"X-Vault-Request: true\" -H \"X-Vault-Token: $VAULT_TOKEN\" https://hcvault-nonprod.example.com/v1/kv/data/SERVICE_ACCOUNT/MONGO/NONPROD"
     ],
-    "example": "",
-    "output": "",
-    "description": "",
     "language": "bash",
     "tags": [
       "vault"
@@ -9114,12 +8522,8 @@
       "    .map(c => c[0].split(',').map(a => a + '\\u007B' + c[1]))",
       "    .flat(2)",
       "    .sort()",
-      ")",
-      ""
+      ")"
     ],
-    "example": "",
-    "output": "",
-    "description": "",
     "language": "javascript",
     "tags": []
   },
@@ -9129,12 +8533,8 @@
     "created": "2021-12-08T20:47:47Z",
     "modified": "2021-12-30T19:53:06Z",
     "code": [
-      "git ls-files -s | awk '/120000/{print $4}'",
-      ""
+      "git ls-files -s | awk '/120000/{print $4}'"
     ],
-    "example": "",
-    "output": "",
-    "description": "",
     "language": "bash",
     "tags": [
       "git"
@@ -9148,9 +8548,6 @@
     "code": [
       "Get-ADUser -Server amer.example.com -Identity annie_tran -Properties *"
     ],
-    "example": "",
-    "output": "",
-    "description": "",
     "language": "powershell",
     "tags": [
       "AD"
@@ -9164,7 +8561,6 @@
     "code": [
       "Get-ADDomainController"
     ],
-    "example": "",
     "output": [
       "ComputerObjectDN           : CN=AUSSERVERNAME,OU=Domain Controllers,DC=amer,DC=example,DC=com",
       "DefaultPartition           : DC=amer,DC=example,DC=com",
@@ -9193,7 +8589,6 @@
       "Site                       : AMERAustin",
       "SslPort                    : 636"
     ],
-    "description": "",
     "language": "powershell",
     "tags": [
       "AD"
@@ -9215,9 +8610,6 @@
       ": ${PERL='perl'}",
       ": ${TEXI2HTML=\"texi2html\"}"
     ],
-    "example": "",
-    "output": "",
-    "description": "",
     "language": "bash",
     "tags": []
   },
@@ -9229,9 +8621,6 @@
     "code": [
       "tr -d '\\0'"
     ],
-    "example": "",
-    "output": "",
-    "description": "",
     "language": "bash",
     "tags": []
   },
@@ -9241,10 +8630,8 @@
     "created": "2021-11-29T16:35:32Z",
     "modified": "2022-01-03T06:11:18Z",
     "code": [
-      "ansible-doc awx.awx.tower_ad_hoc_command --snippet",
-      ""
+      "ansible-doc awx.awx.tower_ad_hoc_command --snippet"
     ],
-    "example": "",
     "output": [
       "- name: create, update, or destroy Ansible Tower ad hoc commands.",
       "  tower_ad_hoc_command:",
@@ -9270,10 +8657,8 @@
       "      validate_certs:        # Whether to allow insecure connections to Tower or AWX. If `no', SSL certificates will not be validated. This should only be used on personally controlled sites using self-",
       "                               signed certificates. If value not set, will try environment variable `TOWER_VERIFY_SSL' and then config files",
       "      verbosity:             # Verbosity level for this ad hoc command run",
-      "      wait:                  # Wait for the command to complete.",
-      ""
+      "      wait:                  # Wait for the command to complete."
     ],
-    "description": "",
     "language": "bash",
     "tags": [
       "ansible"
@@ -9288,9 +8673,6 @@
     "code": [
       "git log --diff-filter=D --summary"
     ],
-    "example": "",
-    "output": "",
-    "description": "",
     "language": "bash",
     "tags": [
       "git"
@@ -9305,9 +8687,6 @@
     "code": [
       "dism /online /cleanup-image /restorehealth"
     ],
-    "example": "",
-    "output": "",
-    "description": "",
     "language": "cmd",
     "tags": [
       "windows"
@@ -9320,8 +8699,7 @@
     "created": "2021-11-12T21:34:39Z",
     "modified": "2022-03-17T00:29:41Z",
     "code": [
-      "cat /proc/$$/environ | sed 's/\\([A-Z_]*=\\)/\\n\\1/g'",
-      ""
+      "cat /proc/$$/environ | sed 's/\\([A-Z_]*=\\)/\\n\\1/g'"
     ],
     "example": [
       "$ cat /proc/$$/environ",
@@ -9337,8 +8715,6 @@
       "TERM=xterm",
       "DISPLAY=localhost:10.0"
     ],
-    "output": "",
-    "description": "",
     "language": "bash",
     "tags": []
   },
@@ -9357,9 +8733,6 @@
       "# find lines common to both files",
       "comm -12 file1 file2 "
     ],
-    "example": "",
-    "output": "",
-    "description": "",
     "language": "bash",
     "tags": [
       "text"
@@ -9374,9 +8747,6 @@
     "code": [
       "top -o +%MEM"
     ],
-    "example": "",
-    "output": "",
-    "description": "",
     "language": "bash",
     "tags": []
   },
@@ -9386,12 +8756,8 @@
     "created": "2021-11-10T22:13:28Z",
     "modified": "2022-01-21T19:00:56Z",
     "code": [
-      "mount --rbind /u01/docker /var/lib/docker",
-      ""
+      "mount --rbind /u01/docker /var/lib/docker"
     ],
-    "example": "",
-    "output": "",
-    "description": "",
     "language": "bash",
     "tags": [
       "docker"
@@ -9403,8 +8769,7 @@
     "created": "2021-11-08T23:23:08Z",
     "modified": "2022-01-21T19:00:30Z",
     "code": [
-      "find . -maxdepth 3 -type f -name \"*.js\" \\( -path \"*/src/*\" -and ! -regex \"*(node_modules|.git)*\" \\) -print",
-      ""
+      "find . -maxdepth 3 -type f -name \"*.js\" \\( -path \"*/src/*\" -and ! -regex \"*(node_modules|.git)*\" \\) -print"
     ],
     "example": [
       "$ find . -maxdepth 3 -type f -name \"*.js\" \\( -path \"*/src/*\" -and ! -regex \"*(node_modules|.git)*\" \\) -print"
@@ -9421,7 +8786,6 @@
       "./pandoc-test/src/imagemin.js",
       "./pandoc-test/src/utils.js"
     ],
-    "description": "",
     "language": "bash",
     "tags": []
   },
@@ -9439,8 +8803,6 @@
       "$ echo \"$VAR1\"",
       "default"
     ],
-    "output": "",
-    "description": "",
     "language": "bash",
     "tags": []
   },
@@ -9452,8 +8814,6 @@
     "code": [
       "yum updateinfo list security installed"
     ],
-    "example": "",
-    "output": "",
     "description": [
       "To get a list of the currently installed security updates "
     ],
@@ -9469,9 +8829,6 @@
     "code": [
       "ssh-keygen -y -f ~/.ssh/windows_login"
     ],
-    "example": "",
-    "output": "",
-    "description": "",
     "language": "bash",
     "tags": [
       "devops"
@@ -9495,9 +8852,6 @@
       "  echo \"\"",
       "}"
     ],
-    "example": "",
-    "output": "",
-    "description": "",
     "language": "bash",
     "tags": [
       "docker"
@@ -9511,7 +8865,6 @@
     "code": [
       "yum list docker-engine --showduplicates"
     ],
-    "example": "",
     "output": [
       "Loaded plugins: ulninfo",
       "Available Packages",
@@ -9546,10 +8899,8 @@
       "docker-engine.x86_64                    19.03.11.ol-9.el7                        artifactory7-pass-through",
       "docker-engine.x86_64                    19.03.11.ol-11.el7                       artifactory7-pass-through",
       "docker-engine.x86_64                    19.03.11.ol-12.el7                       artifactory7-pass-through",
-      "docker-engine.x86_64                    19.03.11.ol-13.el7                       artifactory7-pass-through",
-      ""
+      "docker-engine.x86_64                    19.03.11.ol-13.el7                       artifactory7-pass-through"
     ],
-    "description": "",
     "language": "bash",
     "tags": []
   },
@@ -9561,11 +8912,9 @@
     "code": [
       "grep '^Umask:' \"/proc/$$/status\""
     ],
-    "example": "",
     "output": [
       "Umask:  0027"
     ],
-    "description": "",
     "language": "bash",
     "tags": [],
     "url": "https://unix.stackexchange.com/a/354303"
@@ -9578,17 +8927,14 @@
     "code": [
       "getfacl linux"
     ],
-    "example": "",
     "output": [
       "# file: linux",
       "# owner: annie_tran",
       "# group: annie_tran",
       "user::rwx",
       "group::rwx",
-      "other::r-x",
-      ""
+      "other::r-x"
     ],
-    "description": "",
     "language": "bash",
     "tags": []
   },
@@ -9600,9 +8946,6 @@
     "code": [
       "usermod -a -G wheel annie_tran"
     ],
-    "example": "",
-    "output": "",
-    "description": "",
     "language": "bash",
     "tags": []
   },
@@ -9621,8 +8964,6 @@
       "$ realpath --relative-to=/tmp /home/annie_tran",
       "../home/annie_tran"
     ],
-    "output": "",
-    "description": "",
     "language": "bash",
     "tags": []
   },
@@ -9632,12 +8973,8 @@
     "created": "2021-11-03T18:02:57Z",
     "modified": "2022-01-07T18:15:21Z",
     "code": [
-      "*/15 * * * *    if ! out=`ansible-playbook yourplaybook.yaml`; then echo $out; fi",
-      ""
+      "*/15 * * * *    if ! out=`ansible-playbook yourplaybook.yaml`; then echo $out; fi"
     ],
-    "example": "",
-    "output": "",
-    "description": "",
     "language": "plain",
     "tags": [
       "ansible"
@@ -9658,7 +8995,6 @@
     "output": [
       "##########"
     ],
-    "description": "",
     "language": "bash",
     "tags": []
   },
@@ -9670,9 +9006,6 @@
     "code": [
       "rpm -q kernel|awk -F- '{print $3}'|awk -F. '{print $1}'|sort -n|tail -1"
     ],
-    "example": "",
-    "output": "",
-    "description": "",
     "language": "bash",
     "tags": []
   },
@@ -9684,9 +9017,6 @@
     "code": [
       "curl -f -k -s -v -H \"Content-Type: application/json\" -X PUT -d @_ldap.json --user $TOWER_USERNAME:$TOWER_PASSWORD \"https://$TOWER_HOST/api/v2/settings/ldap/\""
     ],
-    "example": "",
-    "output": "",
-    "description": "",
     "language": "bash",
     "tags": [
       "ansible"
@@ -9708,8 +9038,7 @@
       "1 : Oracle Linux Server 7.6, with Unbreakable Enterprise Kernel 4.1.12-61.1.18.el7uek.x86_64",
       "2 : Oracle Linux Server 7.6, with Linux 3.10.0-1160.15.2.el7.x86_64",
       "3 : Oracle Linux Server 7.6, with Linux 3.10.0-1127.18.2.el7.x86_64",
-      "4 : Oracle Linux Server 7.6, with Linux 0-rescue-21e762519e7246a4b97b5fa8e94a7ed1",
-      ""
+      "4 : Oracle Linux Server 7.6, with Linux 0-rescue-21e762519e7246a4b97b5fa8e94a7ed1"
     ],
     "description": [
       "To list all the menu entries that will be displayed at system boot"
@@ -9728,12 +9057,8 @@
     ],
     "example": [
       "$ awk -F\\' /^menuentry/{print\\$2} /etc/grub2.cfg | grep -vE \"(uek|rescue)\" | sort | tail -n 1",
-      "Oracle Linux Server 7.9, with Linux 3.10.0-1160.36.2.el7.x86_64",
-      "",
-      ""
+      "Oracle Linux Server 7.9, with Linux 3.10.0-1160.36.2.el7.x86_64"
     ],
-    "output": "",
-    "description": "",
     "language": "bash",
     "tags": [
       "admin"
@@ -9753,12 +9078,8 @@
       "Oracle Linux Server 7.9, with Unbreakable Enterprise Kernel 4.1.12-61.1.18.el7uek.x86_64",
       "Oracle Linux Server 7.9, with Linux 3.10.0-1160.36.2.el7.x86_64",
       "Oracle Linux Server 7.9, with Linux 3.10.0-1160.15.2.el7.x86_64",
-      "Oracle Linux Server 7.9, with Linux 0-rescue-21e762519e7246a4b97b5fa8e94a7ed1",
-      "",
-      ""
+      "Oracle Linux Server 7.9, with Linux 0-rescue-21e762519e7246a4b97b5fa8e94a7ed1"
     ],
-    "output": "",
-    "description": "",
     "language": "bash",
     "tags": [
       "admin"
@@ -9772,9 +9093,6 @@
     "code": [
       "awx job_template list --all -f human --filter 'id, name, playbook, modified, status'"
     ],
-    "example": "",
-    "output": "",
-    "description": "",
     "language": "bash",
     "tags": [
       "ansible"
@@ -9791,14 +9109,11 @@
       "# another way:",
       "Get-WMIObject -Class Win32_Bios"
     ],
-    "example": "",
     "output": [
       "serialnumber",
       "------------",
-      "2TL5WQ6",
-      ""
+      "2TL5WQ6"
     ],
-    "description": "",
     "language": "powershell",
     "tags": [
       "windows"
@@ -9813,9 +9128,6 @@
     "code": [
       "get-module -listavailable"
     ],
-    "example": "",
-    "output": "",
-    "description": "",
     "language": "powershell",
     "tags": []
   },
@@ -9830,8 +9142,6 @@
     "example": [
       "ps -o etimes -p 1"
     ],
-    "output": "",
-    "description": "",
     "language": "bash",
     "tags": [],
     "url": "https://superuser.com/a/1352711"
@@ -9850,9 +9160,6 @@
       "  fi",
       "}"
     ],
-    "example": "",
-    "output": "",
-    "description": "",
     "language": "bash",
     "tags": [],
     "url": "https://github.com/containerd/containerd/blob/main/test/utils.sh"
@@ -9866,8 +9173,7 @@
       "/usr/sbin/ip a | grep inet"
     ],
     "example": [
-      "$ ip a | grep inet",
-      ""
+      "$ ip a | grep inet"
     ],
     "output": [
       "    inet 127.0.0.1/8 scope host lo",
@@ -9875,7 +9181,6 @@
       "    inet 172.17.0.1/16 brd 172.17.255.255 scope global docker0",
       "    inet 172.24.0.1/16 brd 172.24.255.255 scope global br-7ee3b3ed5e09"
     ],
-    "description": "",
     "language": "bash",
     "tags": [
       "network"
@@ -9890,9 +9195,6 @@
     "code": [
       "Get-ADGroupMember -Identity \"dbsecuritygroup\" -Recursive"
     ],
-    "example": "",
-    "output": "",
-    "description": "",
     "language": "powershell",
     "tags": [
       "ldap"
@@ -9911,12 +9213,8 @@
       "for svc in cred_names:",
       "    cred = Credential.objects.get(name=svc)",
       "    print(svc)",
-      "    print(decrypt_field(cred, \"password\"))",
-      ""
+      "    print(decrypt_field(cred, \"password\"))"
     ],
-    "example": "",
-    "output": "",
-    "description": "",
     "language": "python",
     "tags": [
       "ansible"
@@ -9930,7 +9228,6 @@
     "code": [
       "Get-ADUser -Filter \"employeeType -eq 'Service' -and OwnerID -eq 123456\" -Properties * | FT Name,PasswordLastSet"
     ],
-    "example": "",
     "output": [
       "Name               PasswordLastSet",
       "----               ---------------",
@@ -9940,7 +9237,6 @@
       "svc_prddbmt     2022-04-11 2:46:01 PM",
       ".."
     ],
-    "description": "",
     "language": "powershell",
     "tags": []
   },
@@ -9952,9 +9248,6 @@
     "code": [
       "openssl rand -base64 20"
     ],
-    "example": "",
-    "output": "",
-    "description": "",
     "language": "bash",
     "tags": []
   },
@@ -9970,9 +9263,6 @@
       "# decode",
       "python -m base64 -d <<< \"dGhpcyBpcyBlbmNvZGVkCg==\""
     ],
-    "example": "",
-    "output": "",
-    "description": "",
     "language": "bash",
     "tags": []
   },
@@ -9986,9 +9276,6 @@
       "",
       "find / -xdev -type d \\( -perm -0002 -a ! -perm -1000 \\) -print"
     ],
-    "example": "",
-    "output": "",
-    "description": "",
     "language": "bash",
     "tags": []
   },
@@ -10002,10 +9289,8 @@
     ],
     "example": [
       "$ mkpasswd -l 20 -d 5 -C 3",
-      "p10i5nzya3Ebdlj,8XLf",
-      ""
+      "p10i5nzya3Ebdlj,8XLf"
     ],
-    "output": "",
     "description": [
       "The -l flag defines the length of the password.  The default is 9.  The following example  creates  a  20",
       "character password.",
@@ -10059,7 +9344,6 @@
       "  1094      1  0.0  0.0 /usr/sbin/rpc.gssd",
       "  1307      1  0.0  0.0 /usr/bin/python2 -Es /usr/sbin/tuned -l -P"
     ],
-    "description": "",
     "language": "bash",
     "tags": [],
     "url": "https://example-my.sharepoint.com/home/ansible/.vscode-server/bin/379476f0e13988d90fab105c5c19e7abc8b1dea8/out/vs/base/node/ps.sh"
@@ -10072,9 +9356,6 @@
     "code": [
       "awk '{$1=$1};1'"
     ],
-    "example": "",
-    "output": "",
-    "description": "",
     "language": "bash",
     "tags": [],
     "url": "https://unix.stackexchange.com/a/205854"
@@ -10104,11 +9385,8 @@
       "cat /proc/interrupts",
       "cat /boot/grub/grub.conf",
       "cat /proc/version",
-      "cat /proc/modules",
-      ""
+      "cat /proc/modules"
     ],
-    "example": "",
-    "output": "",
     "description": [
       "FILES",
       "- /etc/services: The services translation file",
@@ -10143,9 +9421,6 @@
     "code": [
       " find . -type f -printf '%TFT%TT %p\\n'"
     ],
-    "example": "",
-    "output": "",
-    "description": "",
     "language": "bash",
     "tags": [],
     "url": "https://stackoverflow.com/a/44415319"
@@ -10158,9 +9433,6 @@
     "code": [
       "awk '!x[$0]++'"
     ],
-    "example": "",
-    "output": "",
-    "description": "",
     "language": "bash",
     "tags": [],
     "url": "https://stackoverflow.com/a/11532197"
@@ -10185,8 +9457,6 @@
       "Sensor Monitoring Service",
       "Monitors various sensors in order to expose data and adapt to system and user state.  If this service is stopped or disabled, the display brightness will not adapt to lighting conditions. Stopping this service may affect other system functionality and features as well."
     ],
-    "output": "",
-    "description": "",
     "language": "bash",
     "tags": []
   },
@@ -10196,14 +9466,11 @@
     "created": "2021-09-11T06:43:21Z",
     "modified": "2022-03-03T21:10:29Z",
     "code": [
-      "printf '=%.0s' {1..80}",
-      ""
+      "printf '=%.0s' {1..80}"
     ],
-    "example": "",
     "output": [
       "================================================================================"
     ],
-    "description": "",
     "language": "bash",
     "tags": [
       "text"
@@ -10217,9 +9484,6 @@
     "code": [
       "ps -U $USER -u $USER u"
     ],
-    "example": "",
-    "output": "",
-    "description": "",
     "language": "bash",
     "tags": []
   },
@@ -10230,12 +9494,8 @@
     "modified": "2022-01-19T00:11:21Z",
     "code": [
       "echo \"${@:2}\"",
-      "echo \"${*:2}\"",
-      ""
+      "echo \"${*:2}\""
     ],
-    "example": "",
-    "output": "",
-    "description": "",
     "language": "bash",
     "tags": [],
     "url": "https://stackoverflow.com/a/9057392"
@@ -10248,9 +9508,6 @@
     "code": [
       "sudo --list | grep 'NOPASSWD: ALL' |  awk -F'[)(]' '{print $2}'"
     ],
-    "example": "",
-    "output": "",
-    "description": "",
     "language": "bash",
     "tags": []
   },
@@ -10264,9 +9521,6 @@
       "echo ${STR:6:5}   # \"world\"",
       "echo ${STR: -5:5}  # \"world\""
     ],
-    "example": "",
-    "output": "",
-    "description": "",
     "language": "bash",
     "tags": [
       "text"
@@ -10288,9 +9542,6 @@
       "echo ${name:(-2):1} #=> \"h\" (slicing from right)",
       "echo ${food:-Cake}  #=> $food or \"Cake"
     ],
-    "example": "",
-    "output": "",
-    "description": "",
     "language": "bash",
     "tags": [
       "text"
@@ -10305,11 +9556,8 @@
       "SETCOLOR_SUCCESS=\"echo -en \\\\033[0;32m\"",
       "SETCOLOR_FAILURE=\"echo -en \\\\033[0;31m\"",
       "SETCOLOR_WARNING=\"echo -en \\\\033[0;33m\"",
-      "SETCOLOR_RESET=\"echo -en \\\\033[0;39m\"",
-      ""
+      "SETCOLOR_RESET=\"echo -en \\\\033[0;39m\""
     ],
-    "example": "",
-    "output": "",
     "description": [
       "# terminal sequence to set color to a 'success' color (currently: green)",
       "SETCOLOR_SUCCESS=\"echo -en \\\\033[0;32m\"",
@@ -10319,8 +9567,7 @@
       "# terminal sequence to set color to a 'warning' color (currently: yellow)",
       "SETCOLOR_WARNING=\"echo -en \\\\033[0;33m\"",
       "# terminal sequence to reset to the default color.",
-      "SETCOLOR_NORMAL=\"echo -en \\\\033[0;39m\"",
-      ""
+      "SETCOLOR_NORMAL=\"echo -en \\\\033[0;39m\""
     ],
     "language": "bash",
     "tags": []
@@ -10357,8 +9604,6 @@
       "# List sockets in all states from all socket tables but TCP.",
       "ss -a -A 'all,!tcp'"
     ],
-    "output": "",
-    "description": "",
     "language": "bash",
     "tags": []
   },
@@ -10380,12 +9625,8 @@
       "      ALTER SESSION SET CONTAINER=$ORACLE_PDB;",
       "      ALTER USER PDBADMIN IDENTIFIED BY \"$ORACLE_PWD\";",
       "      exit;",
-      "EOF",
-      ""
+      "EOF"
     ],
-    "example": "",
-    "output": "",
-    "description": "",
     "language": "bash",
     "tags": [
       "db"
@@ -10405,11 +9646,8 @@
       "68800",
       "lrwxrwxrwx 1 root root 0 Jun 28 05:35 /proc/self -> 68801",
       "foo",
-      "68800",
-      ""
+      "68800"
     ],
-    "output": "",
-    "description": "",
     "language": "bash",
     "tags": [],
     "url": "https://unix.stackexchange.com/a/296852"
@@ -10425,10 +9663,8 @@
     "example": [
       "$ bash -c 'echo $$ ; exec ls -l /proc/self ; echo foo'",
       "4315",
-      "lrwxrwxrwx 1 root root 0 Aug 17 09:15 /proc/self -> 4315",
-      ""
+      "lrwxrwxrwx 1 root root 0 Aug 17 09:15 /proc/self -> 4315"
     ],
-    "output": "",
     "description": [
       "What exec cmd does, is exactly the same as just running cmd, except that the current shell is replaced with the command, instead of a separate process being run."
     ],
@@ -10444,9 +9680,6 @@
     "code": [
       "tr -dc 'a-zA-Z0-9' < /dev/urandom | head -c 32"
     ],
-    "example": "",
-    "output": "",
-    "description": "",
     "language": "bash",
     "tags": [
       "admin"
@@ -10458,12 +9691,8 @@
     "created": "2021-09-09T23:30:08Z",
     "modified": "2022-01-19T15:48:05Z",
     "code": [
-      "eval \"sudo $(sudo --list | grep -ws User -A 1000 | sed 's/,/\\n/g' | sed 's/:/:\\n/g' | grep '/bin/su' | sort | tail -n 1)\"",
-      ""
+      "eval \"sudo $(sudo --list | grep -ws User -A 1000 | sed 's/,/\\n/g' | sed 's/:/:\\n/g' | grep '/bin/su' | sort | tail -n 1)\""
     ],
-    "example": "",
-    "output": "",
-    "description": "",
     "language": "bash",
     "tags": []
   },
@@ -10481,8 +9710,6 @@
       "/bin/su",
       "/usr/local/bin/gitlab-runner"
     ],
-    "output": "",
-    "description": "",
     "language": "bash",
     "tags": [
       "admin"
@@ -10496,9 +9723,6 @@
     "code": [
       "find . -maxdepth 3 -name .git -type d -print -exec git -C {} status \\;"
     ],
-    "example": "",
-    "output": "",
-    "description": "",
     "language": "bash",
     "tags": [
       "git"
@@ -10512,16 +9736,13 @@
     "code": [
       "ps -elf | grep Z"
     ],
-    "example": "",
     "output": [
       "$ ps -elf | grep Z",
       "F S UID         PID   PPID  C PRI  NI ADDR SZ WCHAN  STIME TTY          TIME CMD",
       "0 Z root       6703   6695  0  80   0 -     0 do_exi Jun28 ?        00:00:00 [sh] <defunct>",
       "0 S root      13833   7005  0  80   0 - 28571 pipe_w 13:51 pts/1    00:00:00 grep --color=auto Z",
-      "5 Z root     106273  61791  0  80   0 -     0 do_exi 11:45 ?        00:00:04 [awx-manage] <defunct>",
-      ""
+      "5 Z root     106273  61791  0  80   0 -     0 do_exi 11:45 ?        00:00:04 [awx-manage] <defunct>"
     ],
-    "description": "",
     "language": "bash",
     "tags": [],
     "url": "https://bencane.com/2012/07/02/when-zombies-invade-linux-what-are-zombie-processes-and-what-to-do-about-them/"
@@ -10537,9 +9758,6 @@
       "# extract to current directory",
       "tar xvf filename.tar"
     ],
-    "example": "",
-    "output": "",
-    "description": "",
     "language": "bash",
     "tags": [],
     "url": "https://help.dreamhost.com/hc/en-us/articles/115002768331-UNIX-commands-Decompressing-files"
@@ -10554,9 +9772,6 @@
       "",
       "tar zcvf image_backup.tar.gz dirname"
     ],
-    "example": "",
-    "output": "",
-    "description": "",
     "language": "bash",
     "tags": []
   },
@@ -10572,9 +9787,6 @@
       "# get top CPU hog",
       "ps -eo user,pid,size,pcpu,cmd --sort=-pcpu"
     ],
-    "example": "",
-    "output": "",
-    "description": "",
     "language": "bash",
     "tags": [],
     "url": "https://github.com/ansible/product-demos/blob/master/playbooks/infrastructure/debug_info.yml"
@@ -10595,11 +9807,8 @@
       "WantedBy=multi-user.target",
       "",
       "$ systemctl show -p MemoryCurrent docker.service",
-      "MemoryCurrent=147226624",
-      ""
+      "MemoryCurrent=147226624"
     ],
-    "output": "",
-    "description": "",
     "language": "bash",
     "tags": [
       "service"
@@ -10613,9 +9822,6 @@
     "code": [
       "docker volume inspect $(docker volume ls | awk '{print $2}' |  tail -n +2)"
     ],
-    "example": "",
-    "output": "",
-    "description": "",
     "language": "bash",
     "tags": [
       "docker"
@@ -10629,10 +9835,8 @@
     "code": [
       "$ special='! @ # % ^ & * ( ) _ + = [ ] { } < > . / ?'",
       "$ abc=$(echo {a..z} {A..Z} {0..9} \"$special\" | tr -d ' ')",
-      "$ key=$(echo \"$abc\" | sed 's,\\(.\\),\\1\\n,g' | shuf | tr -d '\\n')",
-      ""
+      "$ key=$(echo \"$abc\" | sed 's,\\(.\\),\\1\\n,g' | shuf | tr -d '\\n')"
     ],
-    "example": "",
     "output": [
       "$ echo \"$abc\"",
       "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#%^&*()_+=[]{}<>./?",
@@ -10645,7 +9849,6 @@
       "$ echo \"$cryptic_msg\" | tr \"$key\" \"$abc\"",
       "i love cary"
     ],
-    "description": "",
     "language": "bash",
     "tags": []
   },
@@ -10657,9 +9860,6 @@
     "code": [
       " git diff --minimal -w -b 17.0.1 17.1.0 installer"
     ],
-    "example": "",
-    "output": "",
-    "description": "",
     "language": "bash",
     "tags": [
       "git"
@@ -10673,9 +9873,6 @@
     "code": [
       "sed -n '/^\\[mongo:children.*/,$p'"
     ],
-    "example": "",
-    "output": "",
-    "description": "",
     "language": "bash",
     "tags": []
   },
@@ -10687,9 +9884,6 @@
     "code": [
       "cat playbooks/hosts/prod.ini | sed -e '/^\\[mongo:children/,+5000d'"
     ],
-    "example": "",
-    "output": "",
-    "description": "",
     "language": "bash",
     "tags": []
   },
@@ -10701,9 +9895,6 @@
     "code": [
       "find . -type f -name \"*.html\" -print -exec sed -i -e 's/\"\\/\\//\"/g' {} \\;"
     ],
-    "example": "",
-    "output": "",
-    "description": "",
     "language": "bash",
     "tags": []
   },
@@ -10713,12 +9904,8 @@
     "created": "2021-08-09T17:52:39Z",
     "modified": "2022-01-19T15:49:51Z",
     "code": [
-      "cat .bash_history | grep -vE \"^#[0-9]+\" | sort | uniq -c | sort -k 1 -n | less",
-      ""
+      "cat .bash_history | grep -vE \"^#[0-9]+\" | sort | uniq -c | sort -k 1 -n | less"
     ],
-    "example": "",
-    "output": "",
-    "description": "",
     "language": "bash",
     "tags": []
   },
@@ -10738,8 +9925,6 @@
       "  -subj '/CN=localhost' -extensions EXT -config <( \\",
       "   printf \"[dn]\\nCN=localhost\\n[req]\\ndistinguished_name = dn\\n[EXT]\\nsubjectAltName=DNS:localhost\\nkeyUsage=digitalSignature\\nextendedKeyUsage=serverAuth\")"
     ],
-    "output": "",
-    "description": "",
     "language": "bash",
     "tags": [],
     "url": "https://letsencrypt.org/docs/certificates-for-localhost/"
@@ -10755,9 +9940,6 @@
       "",
       "git config --global --replace-all core.pager \"less -F -X\""
     ],
-    "example": "",
-    "output": "",
-    "description": "",
     "language": "bash",
     "tags": [
       "git"
@@ -10772,12 +9954,8 @@
     "code": [
       "Get-Service -Displayname \"*network*\"",
       "",
-      "Get-Service | Where-Object {$_.Status -eq \"Running\"}",
-      ""
+      "Get-Service | Where-Object {$_.Status -eq \"Running\"}"
     ],
-    "example": "",
-    "output": "",
-    "description": "",
     "language": "powershell",
     "tags": [],
     "url": "https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.management/get-service?view=powershell-7.1"
@@ -10790,9 +9968,6 @@
     "code": [
       "Get-Process atom | Format-List *"
     ],
-    "example": "",
-    "output": "",
-    "description": "",
     "language": "powershell",
     "tags": [
       "powershell"
@@ -10807,9 +9982,6 @@
     "code": [
       "find /repository/images/database -type d ! -writable -prune -o -type f -group $USER -print -exec chown -c $USER.dbcore {} \\;"
     ],
-    "example": "",
-    "output": "",
-    "description": "",
     "language": "bash",
     "tags": []
   },
@@ -10821,9 +9993,6 @@
     "code": [
       "Get-ADUser -Identity Annie_Tran -Properties * | Select -ExpandProperty MemberOf"
     ],
-    "example": "",
-    "output": "",
-    "description": "",
     "language": "powershell",
     "tags": [
       "powershell"
@@ -10837,9 +10006,6 @@
     "code": [
       "Get-ADUser -Identity Annie_Tran -Properties *"
     ],
-    "example": "",
-    "output": "",
-    "description": "",
     "language": "powershell",
     "tags": [
       "powershell"
@@ -10857,9 +10023,6 @@
       "  sort -k2 -rh |",
       "  tee /tmp/awx_table_size.txt"
     ],
-    "example": "",
-    "output": "",
-    "description": "",
     "language": "bash",
     "tags": [
       "db"
@@ -10881,12 +10044,8 @@
       "  done",
       "}",
       "",
-      "printcommands | tee /tmp/window-commands.txt",
-      ""
+      "printcommands | tee /tmp/window-commands.txt"
     ],
-    "example": "",
-    "output": "",
-    "description": "",
     "language": "bash",
     "tags": []
   },
@@ -10908,12 +10067,8 @@
       "type is a shell builtin",
       "",
       "$ LC_ALL=C type -t rvm",
-      "function",
-      ""
+      "function"
     ],
-    "example": "",
-    "output": "",
-    "description": "",
     "language": "bash",
     "tags": [],
     "url": "https://stackoverflow.com/a/85903"
@@ -10926,9 +10081,6 @@
     "code": [
       "ansible all --list-hosts"
     ],
-    "example": "",
-    "output": "",
-    "description": "",
     "language": "bash",
     "tags": [
       "ansible"
@@ -10943,9 +10095,6 @@
       "encrypt () { gpg -ac --no-options \"$1\"; }",
       "decrypt () { gpg --no-options \"$1\"; }"
     ],
-    "example": "",
-    "output": "",
-    "description": "",
     "language": "bash",
     "tags": [
       "admin"
@@ -10959,9 +10108,6 @@
     "code": [
       "ansible all -m copy -a \"src=ansible.cfg dest=/tmp/\""
     ],
-    "example": "",
-    "output": "",
-    "description": "",
     "language": "bash",
     "tags": [
       "ansible"
@@ -10976,9 +10122,6 @@
     "code": [
       "ansible-doc -t become -l"
     ],
-    "example": "",
-    "output": "",
-    "description": "",
     "language": "bash",
     "tags": [
       "ansible"
@@ -10992,9 +10135,6 @@
     "code": [
       "openssl genpkey -algorithm ed25519"
     ],
-    "example": "",
-    "output": "",
-    "description": "",
     "language": "bash",
     "tags": []
   },
@@ -11006,9 +10146,6 @@
     "code": [
       "rsync -avr -o -g filename.txt user@hostname.us.example.com:/home/annie_tran"
     ],
-    "example": "",
-    "output": "",
-    "description": "",
     "language": "bash",
     "tags": []
   },
@@ -11020,9 +10157,6 @@
     "code": [
       "openssl req -new -newkey rsa:4096 -nodes -keyout \"private.key\" -out \"$(hostname -f).csr\" -subj \"/C=US/ST=Texas/L=Round Rock/O=example/OU=Digital/CN=$(hostname -f)\""
     ],
-    "example": "",
-    "output": "",
-    "description": "",
     "language": "bash",
     "tags": [
       "admin"
@@ -11036,9 +10170,6 @@
     "code": [
       "find . -type f -name \"*.md\" ! -path \"*node_modules*\" -print"
     ],
-    "example": "",
-    "output": "",
-    "description": "",
     "language": "bash",
     "tags": []
   },
@@ -11050,9 +10181,6 @@
     "code": [
       "history | cut -d ' ' -f6- | sort | uniq -c | sort -k1 -nr"
     ],
-    "example": "",
-    "output": "",
-    "description": "",
     "language": "bash",
     "tags": []
   },
@@ -11064,9 +10192,6 @@
     "code": [
       "cat /var/log/sudo.log | grep \"LANG=C;LANGUAGE=en\" | cut -d';' -f3 | sort -u "
     ],
-    "example": "",
-    "output": "",
-    "description": "",
     "language": "bash",
     "tags": [
       "admin"
@@ -11080,9 +10205,6 @@
     "code": [
       "lsof -n -i TCP -i UDP"
     ],
-    "example": "",
-    "output": "",
-    "description": "",
     "language": "bash",
     "tags": [
       "admin"
@@ -11102,9 +10224,6 @@
       "  find \"$d\" -type f -name \"*.yml\" -print -exec cat {} \\; | sed -e 's@'\"$(echo \"$d\")\"'@'\"$(echo \"\\n# file: $d\")\"'@g' | tee \"$tmppath/${savename//[^a-zA-Z0-9.]/_}\"",
       "done"
     ],
-    "example": "",
-    "output": "",
-    "description": "",
     "language": "bash",
     "tags": []
   },
@@ -11116,8 +10235,6 @@
     "code": [
       "echo -n 'letmein' | ansible-vault encrypt_string --vault-id dev@a_password_file --stdin-name 'db_password'"
     ],
-    "example": "",
-    "output": "",
     "description": [
       "To encrypt the string ‘letmein’ read from stdin, add the vault ID ‘dev’ using the ‘dev’ vault password stored in a_password_file, and name the variable ‘db_password"
     ],
@@ -11160,11 +10277,8 @@
       "-A DOCKER-ISOLATION-STAGE-2 -o docker0 -j DROP",
       "-A DOCKER-ISOLATION-STAGE-2 -o br-a86456b5e096 -j DROP",
       "-A DOCKER-ISOLATION-STAGE-2 -j RETURN",
-      "-A DOCKER-USER -j RETURN",
-      ""
+      "-A DOCKER-USER -j RETURN"
     ],
-    "output": "",
-    "description": "",
     "language": "bash",
     "tags": [
       "network"
@@ -11190,8 +10304,6 @@
       "$ getsame $path1 $path2",
       "kv/SERVICE_ACCOUNT/"
     ],
-    "output": "",
-    "description": "",
     "language": "bash",
     "tags": [],
     "url": "https://stackoverflow.com/a/6973595/7460613"
@@ -11209,8 +10321,7 @@
       "EEEfoo"
     ],
     "output": [
-      "will generate 'EEEfoo', not 'fEEE' as one might expect. This is because /o*/ matches the null string at the beginning of the word.",
-      ""
+      "will generate 'EEEfoo', not 'fEEE' as one might expect. This is because /o*/ matches the null string at the beginning of the word."
     ],
     "description": [
       "The '*' metacharacter represents zero or more instances of the",
@@ -11228,9 +10339,6 @@
     "code": [
       "export $(cat /path/to/file.txt | grep -vE \"^(#|export)\" | grep \".\")"
     ],
-    "example": "",
-    "output": "",
-    "description": "",
     "language": "bash",
     "tags": []
   },
@@ -11243,10 +10351,8 @@
       "for pb in $(find . -maxdepth 1 -type f -name \"*.yml\"); do",
       "  mod=$(stat -c %y $pb)",
       "  echo -e \"${mod%%\\ *}, ${pb##\\.\\/}\"",
-      "done",
-      ""
+      "done"
     ],
-    "example": "",
     "output": [
       "2021-07-06, add-delete-userdb-mongodb.yml",
       "2021-04-07, add-delete-userdb-mssql.yml",
@@ -11259,7 +10365,6 @@
       "2021-02-11, ansible-gather-facts.yml",
       "2021-04-07, backupschedule-create-mongo.ym"
     ],
-    "description": "",
     "language": "bash",
     "tags": [
       "coreutils"
@@ -11273,7 +10378,6 @@
     "code": [
       "net config workstation"
     ],
-    "example": "",
     "output": [
       "Computer name                        \\\\W106697SN2",
       "Full Computer name                   W106697SN2.aus.amer.example.com",
@@ -11295,7 +10399,6 @@
       "COM Send Timeout (msec)              250",
       "The command completed successfully."
     ],
-    "description": "",
     "language": "bash",
     "tags": [
       "windows"
@@ -11312,8 +10415,6 @@
       "/:$/&&!f{sub(/:$/,\"\");s=$0;f=1;next}",
       "NF&&f{ print s\"/\"$0 }'"
     ],
-    "example": "",
-    "output": "",
     "description": [
       "`--ignore=\"\\.*\"` removes paths like ./ ../"
     ],
@@ -11389,12 +10490,8 @@
       "chcon runcon",
       "",
       "# Modified command invocation",
-      "chroot env nice nohup stdbuf timeout",
-      ""
+      "chroot env nice nohup stdbuf timeout"
     ],
-    "example": "",
-    "output": "",
-    "description": "",
     "language": "bash",
     "tags": []
   },
@@ -11406,7 +10503,6 @@
     "code": [
       "du -h --max-depth=1 | sort -h"
     ],
-    "example": "",
     "output": [
       "0       ./.pki",
       "0       ./.rapid7_tmp",
@@ -11416,8 +10512,7 @@
       "4.4M    ./fcron-3.2.1",
       "12M     ./.cache",
       "442M    ./.awx",
-      "463M    .",
-      ""
+      "463M    ."
     ],
     "description": [
       "du: estimates file space usage recursively for directories",
@@ -11444,10 +10539,8 @@
       "...",
       "",
       "WARNING: bridge-nf-call-iptables is disabled",
-      "WARNING: bridge-nf-call-ip6tables is disabled",
-      ""
+      "WARNING: bridge-nf-call-ip6tables is disabled"
     ],
-    "output": "",
     "description": [
       "Warning messages may be displayed by Docker Engine when a user performs some actions, such as running docker info if the system kernel on a host system is configured to disable the net.bridge.bridge-nf-call-iptables and net.bridge.bridge-nf-call-ip6tables options. For example, the user may see an error similar to:",
       "",
@@ -11462,8 +10555,7 @@
       "To make these options permanent, edit /etc/sysctl.conf and add the lines:",
       "",
       "net.bridge.bridge-nf-call-iptables = 1",
-      "net.bridge.bridge-nf-call-ip6tables = 1",
-      ""
+      "net.bridge.bridge-nf-call-ip6tables = 1"
     ],
     "language": "bash",
     "tags": [
@@ -11479,7 +10571,6 @@
     "code": [
       "df --block-size=1 | numfmt --field 2 --header --to=iec"
     ],
-    "example": "",
     "output": [
       "Filesystem                                                         1B-blocks         Used    Available Use% Mounted on",
       "devtmpfs                                                                 12G            0  12533854208   0% /dev",
@@ -11499,10 +10590,8 @@
       "/dev/sda1                                                               997M    209358848    835723264  21% /boot",
       "/dev/mapper/osvg-oswatcher.fs                                           3.0G    365981696   2844758016  12% /oswatcher",
       "tmpfs                                                                   2.4G            0   2509221888   0% /run/user/0",
-      "tmpfs                                                                   2.4G            0   2509221888   0% /run/user/1000",
-      ""
+      "tmpfs                                                                   2.4G            0   2509221888   0% /run/user/1000"
     ],
-    "description": "",
     "language": "bash",
     "tags": []
   },
@@ -11527,15 +10616,13 @@
       "b1 b2 b3",
       "c1 c2 c3'",
       "",
-      "echo \"$demo\" | c1",
-      ""
+      "echo \"$demo\" | c1"
     ],
     "output": [
       "a1",
       "b1",
       "c1"
     ],
-    "description": "",
     "language": "bash",
     "tags": [
       "gnu"
@@ -11549,9 +10636,6 @@
     "code": [
       "net user /domain svc_npdboraos"
     ],
-    "example": "",
-    "output": "",
-    "description": "",
     "language": "cmd",
     "tags": [
       "windows"
@@ -11565,9 +10649,6 @@
     "code": [
       "git fetch --all --tags"
     ],
-    "example": "",
-    "output": "",
-    "description": "",
     "language": "bash",
     "tags": [
       "git"
@@ -11583,8 +10664,7 @@
       "df -Ph . "
     ],
     "example": [
-      "df -Ph . | tail -1 | awk '{print $4}'",
-      ""
+      "df -Ph . | tail -1 | awk '{print $4}'"
     ],
     "output": [
       "$ df -Ph . | tail -1 | awk '{print $4}'",
@@ -11592,10 +10672,8 @@
       "",
       "$ df -Ph .",
       "Filesystem      Size  Used Avail Use% Mounted on",
-      "overlay          20G  4.4G   16G  23% /",
-      ""
+      "overlay          20G  4.4G   16G  23% /"
     ],
-    "description": "",
     "language": "bash",
     "tags": []
   },
@@ -11607,17 +10685,14 @@
     "code": [
       "df -Ph . "
     ],
-    "example": "",
     "output": [
       "$ df -Ph . | tail -1 | awk '{print $4}'",
       "16G",
       "",
       "$ df -Ph .",
       "Filesystem      Size  Used Avail Use% Mounted on",
-      "overlay          20G  4.4G   16G  23% /",
-      ""
+      "overlay          20G  4.4G   16G  23% /"
     ],
-    "description": "",
     "language": "bash",
     "tags": [
       "coreutils"
@@ -11632,9 +10707,6 @@
     "code": [
       "unset $(cat /path/to/file.txt | grep -vE \"^(#|export)\" | grep \".\" | cut -d = -f -1)"
     ],
-    "example": "",
-    "output": "",
-    "description": "",
     "language": "bash",
     "tags": []
   },
@@ -11646,9 +10718,6 @@
     "code": [
       "exe() { echo \"\\$ $@\" ; \"$@\" ; }"
     ],
-    "example": "",
-    "output": "",
-    "description": "",
     "language": "bash",
     "tags": [],
     "url": "https://stackoverflow.com/a/23342259/7460613"
@@ -11659,15 +10728,11 @@
     "created": "2021-06-03T18:23:30Z",
     "modified": "2021-12-30T19:44:09Z",
     "code": [
-      "ps -ef | awk -v m=\"\\x01\" -v N=\"8\" '{$N=m$N ;print substr($0, index($0,m)+1)}'",
-      ""
+      "ps -ef | awk -v m=\"\\x01\" -v N=\"8\" '{$N=m$N ;print substr($0, index($0,m)+1)}'"
     ],
     "example": [
-      "ps -ef | awk -v m=\"\\x01\" -v N=\"8\" '{$N=m$N ;print substr($0, index($0,m)+1)}'",
-      ""
+      "ps -ef | awk -v m=\"\\x01\" -v N=\"8\" '{$N=m$N ;print substr($0, index($0,m)+1)}'"
     ],
-    "output": "",
-    "description": "",
     "language": "bash",
     "tags": [],
     "url": "https://stackoverflow.com/a/23118210"
@@ -11684,7 +10749,6 @@
       "crontab -l",
       "* * * * * /bin/timeout -s 2 10 /path/to/your/script.sh"
     ],
-    "output": "",
     "description": [
       "* /bin/timeout: the command.",
       "* -s 2: the signal to send when the timer has exceeded, it can be a number or the name. Equally valid would have been -s SIGINT (more on the kill signals below)",
@@ -11702,9 +10766,6 @@
     "code": [
       "find . -type f -name \"*.sh\" | xargs -I {} git add --chmod=+x {}"
     ],
-    "example": "",
-    "output": "",
-    "description": "",
     "language": "bash",
     "tags": []
   },
@@ -11717,9 +10778,6 @@
       "curl -sL https://dl.yarnpkg.com/rpm/yarn.repo | tee /etc/yum.repos.d/yarn.repo",
       "yum install yarn"
     ],
-    "example": "",
-    "output": "",
-    "description": "",
     "language": "bash",
     "tags": [
       "file"
@@ -11733,9 +10791,6 @@
     "code": [
       "export $(egrep -v '^#' \"path/to/file\" | xargs)"
     ],
-    "example": "",
-    "output": "",
-    "description": "",
     "language": "bash",
     "tags": []
   },
@@ -11748,9 +10803,6 @@
       "(umask 077; touch file)  # creates a 600 (rw-------) file",
       "(umask 002; touch file)  # creates a 664 (rw-rw-r--) file"
     ],
-    "example": "",
-    "output": "",
-    "description": "",
     "language": "bash",
     "tags": []
   },
@@ -11762,9 +10814,6 @@
     "code": [
       "pip show $(pip list | awk '{print $1}' | grep -v - | xargs) | less"
     ],
-    "example": "",
-    "output": "",
-    "description": "",
     "language": "bash",
     "tags": [
       "python"
@@ -11786,9 +10835,6 @@
       "  [[ ! -z $2 ]] && echo \"$1$2\"",
       "done"
     ],
-    "example": "",
-    "output": "",
-    "description": "",
     "language": "bash",
     "tags": [],
     "url": "https://stackoverflow.com/questions/1891797/capturing-groups-from-a-grep-regex"
@@ -11801,9 +10847,6 @@
     "code": [
       "docker history --no-trunc <imageid> | tac | tr -s ' ' | cut -d \" \" -f 5- | sed 's,^/bin/sh -c #(nop) ,,g' | sed 's,^/bin/sh -c,RUN,g' | sed 's, && ,\\n  & ,g' | sed 's,\\s*[0-9]*[\\.]*[0-9]*\\s*[kMG]*B\\s*$,,g' | head -n -1"
     ],
-    "example": "",
-    "output": "",
-    "description": "",
     "language": "bash",
     "tags": [
       "docker"
@@ -11831,9 +10874,6 @@
       "        docker tag \"$IMAGE_ID\" \"$REPOSITORY:$TAG\"",
       "done < \"$dockerimagedir/docker-images.list\""
     ],
-    "example": "",
-    "output": "",
-    "description": "",
     "language": "bash",
     "tags": [
       "docker"
@@ -11848,9 +10888,6 @@
     "code": [
       " pip install --upgrade  $(cat requirements.txt | grep -o \"^[^#].*\")"
     ],
-    "example": "",
-    "output": "",
-    "description": "",
     "language": "bash",
     "tags": [
       "python"
@@ -11864,7 +10901,6 @@
     "code": [
       "env | grep -o '^S[^=]*'"
     ],
-    "example": "",
     "output": [
       "SHELL",
       "SSH_CLIENT",
@@ -11873,7 +10909,6 @@
       "SHLVL",
       "SSH_CONNECTION"
     ],
-    "description": "",
     "language": "bash",
     "tags": [],
     "url": "https://stackoverflow.com/a/43126805"
@@ -11886,9 +10921,6 @@
     "code": [
       "export $(egrep -v '^#' .env | xargs)"
     ],
-    "example": "",
-    "output": "",
-    "description": "",
     "language": "bash",
     "tags": [],
     "url": "https://gist.github.com/judy2k/7656bfe3b322d669ef75364a46327836"
@@ -11901,9 +10933,6 @@
     "code": [
       "echo -e $html | grep -Eo \"<title>(.*)</title>\""
     ],
-    "example": "",
-    "output": "",
-    "description": "",
     "language": "bash",
     "tags": []
   },
@@ -11915,13 +10944,8 @@
     "code": [
       "rsync -avr --exclude={'dbv2-awx','*.rpm'} -o -g /home/servicedb servicedb@awxserver02.us.example.com:/home/servicedb/01",
       "",
-      "rsync -avr --exclude={'dbv2-awx','ansible'} -o -g db annie_tran@auspslpltinf1.us.example.com:/home/annie_tran",
-      "",
-      ""
+      "rsync -avr --exclude={'dbv2-awx','ansible'} -o -g db annie_tran@auspslpltinf1.us.example.com:/home/annie_tran"
     ],
-    "example": "",
-    "output": "",
-    "description": "",
     "language": "bash",
     "tags": []
   },
@@ -11933,9 +10957,6 @@
     "code": [
       "find /etc/pki -type f ! -name \"*cacerts*\" -print -exec cat {} \\; | less"
     ],
-    "example": "",
-    "output": "",
-    "description": "",
     "language": "bash",
     "tags": [
       "info"
@@ -11947,12 +10968,8 @@
     "created": "2021-04-14T00:18:25Z",
     "modified": "2021-12-30T19:44:09Z",
     "code": [
-      "find . -type f -print0 | sort -z | xargs -r0 sha256sum  sha256SumOutput",
-      ""
+      "find . -type f -print0 | sort -z | xargs -r0 sha256sum  sha256SumOutput"
     ],
-    "example": "",
-    "output": "",
-    "description": "",
     "language": "bash",
     "tags": []
   },
@@ -11964,9 +10981,6 @@
     "code": [
       "find . -type f -print -exec cat {} \\; "
     ],
-    "example": "",
-    "output": "",
-    "description": "",
     "language": "bash",
     "tags": [
       "info"
@@ -11980,14 +10994,11 @@
     "code": [
       "diff --side-by-side --color=always --width=200 --suppress-common-lines \\",
       "  <(git ls-tree -r branch01--name-only) \\",
-      "  <(git ls-tree -r branch02 --name-only)",
-      ""
+      "  <(git ls-tree -r branch02 --name-only)"
     ],
     "example": [
       "diff -y --color=always --width=180 --suppress-common-lines <(git ls-tree -r 17.0.1 --name-only) <(git ls-tree -r 17.1.0 --name-only)"
     ],
-    "output": "",
-    "description": "",
     "language": "bash",
     "tags": []
   },
@@ -12012,10 +11023,8 @@
       "",
       "snow_date.json                         [ <=>                                                           ]  11.65K  --.-KB/s    in 0.007s",
       "",
-      "2021-04-02 10:01:00 (1.72 MB/s) - ‘snow_date.json’ saved [11926]",
-      ""
+      "2021-04-02 10:01:00 (1.72 MB/s) - ‘snow_date.json’ saved [11926]"
     ],
-    "description": "",
     "language": "bash",
     "tags": [
       "file"
@@ -12030,9 +11039,6 @@
     "code": [
       "lsof -P -i -n"
     ],
-    "example": "",
-    "output": "",
-    "description": "",
     "language": "bash",
     "tags": []
   },
@@ -12045,7 +11051,6 @@
       "COLUMN=4",
       "history | awk '{a[$COLUMN]++}END{for(i in a){print a[i] \" \" i}}' | sort -rn | head"
     ],
-    "example": "",
     "output": [
       "149 ls",
       "64 cat",
@@ -12058,7 +11063,6 @@
       "19 myproxy",
       "19 if"
     ],
-    "description": "",
     "language": "bash",
     "tags": []
   },
@@ -12070,7 +11074,6 @@
     "code": [
       "netstat -an | grep ESTABLISHED | awk '{print $5}' | awk -F: '{print $1}' | sort | uniq -c | awk '{ printf(\"%s\\t%s\\t\",$2,$1) ; for (i = 0; i < $1; i++) {printf(\"*\")}; print \"\" }'"
     ],
-    "example": "",
     "output": [
       "10.143.6.25     1       *",
       "10.170.24.53    2       **",
@@ -12078,10 +11081,8 @@
       "10.191.3.236    1       *",
       "10.58.67.40     1       *",
       "10.58.77.30     1       *",
-      "127.0.0.1       4       ****",
-      ""
+      "127.0.0.1       4       ****"
     ],
-    "description": "",
     "language": "bash",
     "tags": [
       "network"
@@ -12134,10 +11135,8 @@
       "    ps -C syslogd -o pid=",
       "",
       "# Print only the name of PID 42:",
-      "    ps -q 42 -o comm=",
-      ""
+      "    ps -q 42 -o comm="
     ],
-    "output": "",
     "description": [
       "       KEY   LONG         DESCRIPTION",
       "       c     cmd          simple name of executable",
@@ -12178,8 +11177,6 @@
     "code": [
       "find /etc/sudoers.d/ -type f -print -exec cat {} \\; | less"
     ],
-    "example": "",
-    "output": "",
     "description": [
       "Print filename before printing contents of file. ",
       "Same as `cat ./*.txt` but with filename"
@@ -12205,9 +11202,6 @@
       "</html>",
       "EOF"
     ],
-    "example": "",
-    "output": "",
-    "description": "",
     "language": "bash",
     "tags": []
   },
@@ -12228,7 +11222,6 @@
     "output": [
       "http://www"
     ],
-    "description": "",
     "language": "bash",
     "tags": [
       "coreutils"
@@ -12271,8 +11264,6 @@
       "PASS=password",
       "useradd -p $(openssl passwd -1 $PASS) $USER"
     ],
-    "output": "",
-    "description": "",
     "language": "bash",
     "tags": [
       "coreutils"
@@ -12285,8 +11276,7 @@
     "created": "2021-03-26T17:57:58Z",
     "modified": "2021-12-30T19:44:08Z",
     "code": [
-      "mail -s \"$(echo -e \"SAR files\\nContent-Type: text/html\")\" annie_tran@example.com <allsar.txt",
-      ""
+      "mail -s \"$(echo -e \"SAR files\\nContent-Type: text/html\")\" annie_tran@example.com <allsar.txt"
     ],
     "example": [
       "mail -s \"Test\" -a vatp2s_hc_WED_vm_sizing.html annie_tran@example.com </dev/null",
@@ -12303,8 +11293,6 @@
       "",
       "mail -s \"`hostname`\" -a /home/annie_tran/email-test.txt annie_tran@example.com </dev/null"
     ],
-    "output": "",
-    "description": "",
     "language": "bash",
     "tags": [
       "coreutils"
@@ -12318,7 +11306,6 @@
     "code": [
       "netstat -pW"
     ],
-    "example": "",
     "output": [
       "Active Internet connections (w/o servers)",
       "Proto Recv-Q Send-Q Local Address           Foreign Address         State       PID/Program name"
@@ -12344,8 +11331,6 @@
       "# unwrap sudo.log file",
       "sed ':a;N;$!{/\\n$/!ba}; s/[[:blank:]]*\\n[[:blank:]]*/ /g' /var/log/sudo.log | sed 's/COMMAND/\\nCOMMAND/g'"
     ],
-    "output": "",
-    "description": "",
     "language": "bash",
     "tags": [
       "root"
@@ -12361,11 +11346,8 @@
       "find . | grep -E \"(__pycache__|\\.pyc|\\.pyo$)\" | xargs rm -rf"
     ],
     "example": [
-      "alias pyclear='find . | grep -E \"(__pycache__|\\.pyc|\\.pyo$)\" | xargs rm -rf'",
-      ""
+      "alias pyclear='find . | grep -E \"(__pycache__|\\.pyc|\\.pyo$)\" | xargs rm -rf'"
     ],
-    "output": "",
-    "description": "",
     "language": "bash",
     "tags": [
       "python"
@@ -12379,9 +11361,6 @@
     "code": [
       "printf '=%.0s' $(seq 1 $(tput cols))"
     ],
-    "example": "",
-    "output": "",
-    "description": "",
     "language": "bash",
     "tags": [],
     "url": "https://stackoverflow.com/a/60087216"
@@ -12394,9 +11373,6 @@
     "code": [
       "find . -maxdepth 3 -name .git -type d | cut -d '/' -f1,2 | xargs -I {} git -C {} pull"
     ],
-    "example": "",
-    "output": "",
-    "description": "",
     "language": "bash",
     "tags": [
       "system"
@@ -12423,11 +11399,8 @@
       "   |-----tasks",
       "   |-----templates",
       "   |-----tests",
-      "   |-----vars",
-      ""
+      "   |-----vars"
     ],
-    "output": "",
-    "description": "",
     "language": "bash",
     "tags": [
       "system"
@@ -12451,10 +11424,8 @@
       "/:$/&&!f{sub(/:$/,\"\");s=$0;f=1;next}",
       "NF&&f{ print s\"/\"$0 }' | grep docx"
     ],
-    "output": "",
     "description": [
-      "ls command: get a recursive full-path listing, one line per file",
-      ""
+      "ls command: get a recursive full-path listing, one line per file"
     ],
     "language": "bash",
     "tags": [
@@ -12470,8 +11441,6 @@
     "code": [
       "find . -maxdepth 3 -name .git -type d | rev | cut -c 6- | rev | xargs -I {} git -C {} pull"
     ],
-    "example": "",
-    "output": "",
     "description": [
       "This command will find all git repos in your current directory with a max depth of 3. Afterwards it will perform a git pull on the current branch for each of those repositories."
     ],
@@ -12492,8 +11461,6 @@
     "example": [
       "usermod -aG wheel annie_tran"
     ],
-    "output": "",
-    "description": "",
     "language": "bash",
     "tags": [
       "root"
@@ -12530,8 +11497,6 @@
       "ORACLE_SUPPORT_PRODUCT=\"Oracle Linux\"",
       "ORACLE_SUPPORT_PRODUCT_VERSION=8.3"
     ],
-    "output": "",
-    "description": "",
     "language": "bash",
     "tags": [
       "system"
@@ -12545,8 +11510,6 @@
     "code": [
       "cf login -a https://api.sr2.pcf.example.com"
     ],
-    "example": "",
-    "output": "",
     "description": [
       "Sustaining team has the following PCF Environments (change api to apps if you want to access the panel)",
       "",
@@ -12575,8 +11538,6 @@
     "example": [
       "rpm -ivh http://images-http.us.example.com/images/repository/linux/apps/cloudfoundry/cf-cli-installer_6.51.0_x86-64.rpm"
     ],
-    "output": "",
-    "description": "",
     "language": "bash",
     "tags": [
       "pkg"
@@ -12591,9 +11552,6 @@
     "code": [
       "openssl s_client -connect github.com:443 -msg"
     ],
-    "example": "",
-    "output": "",
-    "description": "",
     "language": "bash",
     "tags": [
       "network"
@@ -12608,7 +11566,6 @@
     "code": [
       "lscpu"
     ],
-    "example": "",
     "output": [
       "Architecture:        x86_64",
       "CPU op-mode(s):      32-bit, 64-bit",
@@ -12656,15 +11613,13 @@
       "# Check if opening the firewall is needed with: sudo systemctl status firewalld",
       "sudo firewall-cmd --permanent --add-service=http",
       "sudo firewall-cmd --permanent --add-service=https",
-      "sudo systemctl reload firewalld",
-      ""
+      "sudo systemctl reload firewalld"
     ],
     "example": [
       "systemctl status firewalld",
       "service firewalld start",
       "#service firewalld stop"
     ],
-    "output": "",
     "description": [
       "On CentOS 8 (and RedHat 8), the commands below will also open HTTP, HTTPS and SSH access in the system firewall."
     ],
@@ -12683,9 +11638,6 @@
       "STRING_MATCH=\"\"",
       "lsof -i | grep $STRING_MATCH |  awk '{print $2}' | xargs kill"
     ],
-    "example": "",
-    "output": "",
-    "description": "",
     "language": "bash",
     "tags": [
       "system"
@@ -12703,8 +11655,6 @@
       "$ host -w awxnlsusandbox.amer.example.com",
       "AWXNLSUSANDBOX.amer.example.com has address 10.179.177.76"
     ],
-    "output": "",
-    "description": "",
     "language": "bash",
     "tags": []
   },
@@ -12719,7 +11669,6 @@
     "example": [
       "$ pstree"
     ],
-    "output": "",
     "description": [
       "The pstree command shows running processes as a tree. The tree is rooted at either pid or init if pid is omitted. If a username is specified, all process trees rooted at processes owned by that user are shown."
     ],
@@ -12734,9 +11683,6 @@
     "code": [
       "openssl genpkey -out fd.key -algorithm RSA -pkeyopt rsa_keygen_bits:2048 -aes-128-cbc"
     ],
-    "example": "",
-    "output": "",
-    "description": "",
     "language": "bash",
     "tags": [
       "network"
