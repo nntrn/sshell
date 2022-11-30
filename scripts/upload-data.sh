@@ -3,45 +3,40 @@
 set -e
 
 REMOTE_URL=https://github.com/nntrn/sshell.git
-REPO=sshell
+REPO=$(basename $REMOTE_URL .git)
 BRANCH=data
 TMPDIR=$(mktemp -d)
 
-trap 'rm -rf -- "$TMPDIR"' EXIT
-
-[[ -f $1 ]] && DATA_FILE=$1
-
-cat $DATA_FILE | tr -d '\r' >$TMPDIR/data.json
+cat $1 | tr -d '\r' >$TMPDIR/data.json
 
 cd $TMPDIR
-git clone -b $BRANCH $REMOTE_URL $REPO &>/dev/null
-cd $REPO
 
 if [[ -s $TMPDIR/data.json ]]; then
+  git clone -b $BRANCH $REMOTE_URL
+  cd $REPO
+
   jq 'sort_by(.id)|reverse' $TMPDIR/data.json >data.json
+
+  {
+    echo "<h1 id=\"top\">${REPO}/data</h1>"
+    echo ""
+    echo '```sh'
+    echo "git clone -b $BRANCH $REMOTE_URL"
+    echo "cd $REPO"
+    echo '```'
+    echo ""
+  } >readme.md
+
+  jq -r '[(map(.language) | unique | map("* [\(.)](#\(.))")),
+  (group_by(.language) | map(["","## \(.[0].language)", "",
+  map(["### \(.title)","","```\(.language)",(.code|join("\n")),"```",""]),
+  "[Top](#top)"])) ] | flatten(4) | join("\n")' data.json >>readme.md
+
+  git config --local user.email 17685332+nntrn@users.noreply.github.com
+  git add data.json readme.md
+  git commit -m "Commit changes"
+  git push
+
 fi
 
-{
-  echo "# ${REPO}/data"
-  echo ""
-  echo '```sh'
-  echo "git clone -b $BRANCH $REMOTE_URL"
-  echo "cd $REPO"
-  echo '```'
-  echo ""
-} >readme.md
-
-jq -r 'group_by(.language)
-| map({"\(.[0].language)": (.)})
-| add | to_entries| .[]
-| ["\n## " +.key+"\n","- "+(.value|.[]|"[\(.id)](https://nntrn.github.io/sshell/#\(.id)): \(.title)")]
-| join("\n")' data.json >>readme.md
-
-jq -rc '.[]
-| [.id,(.modified|sub("T"; " "))]
-| join(" ")' data.json >modified.txt
-
-git config --local user.email 17685332+nntrn@users.noreply.github.com
-git add data.json readme.md modified.txt
-git commit -m "Commit changes"
-git push
+trap 'rm -rf -- "$TMPDIR"' EXIT
