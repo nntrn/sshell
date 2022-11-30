@@ -8,6 +8,8 @@ cd sshell
 
 ## bash
 
+- [411](https://nntrn.github.io/sshell/#411): get all manpaths for commands in $PATH
+- [409](https://nntrn.github.io/sshell/#409): color output in the console
 - [408](https://nntrn.github.io/sshell/#408): How to remove systemd services
 - [407](https://nntrn.github.io/sshell/#407): ldifde - Active Directory Schema
 - [406](https://nntrn.github.io/sshell/#406): list  all mounted filesytems or search for a filesystem
@@ -410,6 +412,7 @@ cd sshell
 
 ## python
 
+- [410](https://nntrn.github.io/sshell/#410): token_hex & token_urlsafe secrets password generator
 - [353](https://nntrn.github.io/sshell/#353): python one liner - return hashed password as a string
 - [347](https://nntrn.github.io/sshell/#347): python oneliner cryptogen
 - [331](https://nntrn.github.io/sshell/#331): python - select keys in json to print

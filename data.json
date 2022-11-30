@@ -1,5 +1,82 @@
 [
   {
+    "id": 411,
+    "title": "get all manpaths for commands in $PATH",
+    "created": "2022-11-29T07:29:51Z",
+    "modified": "2022-11-29T07:29:51Z",
+    "code": [
+      "while read line; do whereis -m ${line}/*; done < <(echo $PATH | tr \":\" \"\\n\")"
+    ],
+    "output": [
+      "$ while read  line; do whereis -m ${line}/* ; done < <(echo $PATH | tr \":\" \"\\n\")",
+      "kdumpnotify:tftpd:activate-global-python-argcomplete:akit:ansible:ansible-builder:ansible-cmdb:ansible-cmdb:ansible-config:ansible-connection:ansible-console:ansible-doc:ansible-galaxy:ansible-inventory:ansible-lint:ansible-playbook:ansible-pull:ansible-runner:ansible-test:ansible-vault:awx:chardetect:cmark:cobbler: /usr/share/man/man1/cobbler.1",
+      "cobblerd: /usr/share/man/man8/cobblerd.8",
+      "cobbler-ext-nodes:commitizen:coverage:coverage3:coverage-3:cz:example_proxy:distro:docker-compose:dotenv:empty:facter:git-cz:gitlab-runner:hiera:http: /usr/share/man/mann/http.n.gz",
+      "https:inq:jp:jsonschema:kubectl:mako-render:mpio:mpio:mpio:nmon:normalizer:npm: /usr/share/man/man1/npm.1.gz",
+      "npx: /usr/share/man/man1/npx.1.gz",
+      "pe-man:pip:pip3:pip3:prettier:puppet:pybabel:__pycache__:pygmentize:python-argcomplete-check-easy-install-script:python-argcomplete-tcsh:register-python-argcomplete:rst2html4:rst2html5:rst2html:rst2latex:rst2man:rst2odt_prepstyles:rst2odt:rst2pseudoxml:rst2s5:rst2xetex:rst2xml:rstpep2html:scapy:shfmt:snowctl:sphinx-apidoc:sphinx-autogen:sphinx-build:sphinx-quickstart:statreport:UTscapy:wheel:wsdump:yamllint:accessdb: /usr/share/man/man8/accessdb.8.gz",
+      "adcli: /usr/share/man/man8/adcli.8.gz",
+      "addgnupghome: /usr/share/man/man8/addgnupghome.8.gz",
+      "addpart: /usr/share/man/man8/addpart.8.gz"
+    ],
+    "language": "bash",
+    "tags": [
+      "files",
+      "fs"
+    ]
+  },
+  {
+    "id": 410,
+    "title": "token_hex & token_urlsafe secrets password generator",
+    "created": "2022-11-28T21:22:47Z",
+    "modified": "2022-11-28T21:25:52Z",
+    "code": [
+      "python -c 'import secrets;print(secrets.token_hex(32))'",
+      "",
+      "python -c 'import secrets;print(secrets.token_urlsafe(32))'"
+    ],
+    "example": [
+      "$ python -c 'import secrets;print(secrets.token_hex(32))'",
+      "b0a0bf42bcf50f3c71a645aa743f980c8d05a279fa28f7fd76268d9de27828de",
+      "",
+      "$ python -c 'import secrets;print(secrets.token_urlsafe(32))'",
+      "3vz8Gf5uDp7_Whthy-l2KVvQN10pA5YKnMQr9LScYWM",
+      "",
+      "$ python -c 'import secrets;print(secrets.token_urlsafe())'",
+      "J1Rk7Y1ttT-oRQYkDKXVySRtex7F_ttdiJbGK0JG-ug",
+      "",
+      "$ python -c 'import secrets;print(secrets.token_hex())'",
+      "1feec7a7b864c5257af36cfa46c5033963327987bb79e9f52da80a5ef2b9cdbb"
+    ],
+    "language": "python",
+    "tags": [
+      "security"
+    ],
+    "url": "https://docs.python.org/3/library/secrets.html"
+  },
+  {
+    "id": 409,
+    "title": "color output in the console",
+    "created": "2022-11-28T21:15:20Z",
+    "modified": "2022-11-28T21:15:20Z",
+    "code": [
+      "# standard colors",
+      "for C in {40..47}; do echo -en \"\\e[${C}m$C \"; done",
+      "",
+      "# high intensity colors",
+      "for C in {100..107}; do echo -en \"\\e[${C}m$C \"; done",
+      "",
+      "# 256 colors",
+      "for C in {16..255}; do echo -en \"\\e[48;5;${C}m$C \"; done",
+      "for C in {0..255}; do tput setab $C; echo -n \"$C \"; done"
+    ],
+    "language": "bash",
+    "tags": [
+      "colors"
+    ],
+    "url": "https://wiki.archlinux.org/title/Bash/Prompt_customization"
+  },
+  {
     "id": 408,
     "title": "How to remove systemd services",
     "created": "2022-11-18T02:40:49Z",
@@ -759,7 +836,7 @@
       "sed -n '/<tag/,/<\\/tag/ p'",
       "",
       "# get inner lines only",
-      "sed -n '/<ul/,/<\\/ul/ {//! p}' "
+      "sed -n '/<ul/,/<\\/ul/ {//! p}'"
     ],
     "example": [
       "## include tag",
@@ -1876,7 +1953,7 @@
       "      allow 192.168.1.0/24; ",
       "      deny all; ",
       "    } ",
-      "} "
+      "}"
     ],
     "description": [
       "This directive allows you to prevent the use of all HTTP methods, except the ones that you explicitly allow. Within a location block, you may want to restrict the use of some HTTP methods, such as forbidding clients from sending POST requests. You need to define two elements: first, the methods that are not forbidden (the allowed methods; all others will be forbidden); and second, the audience that is affected by the restriction"
@@ -2024,7 +2101,7 @@
     "created": "2022-06-20T16:10:26Z",
     "modified": "2022-06-20T16:10:26Z",
     "code": [
-      "git clone https://oauth2:personal_token@gitlab.com/username/project.git "
+      "git clone https://oauth2:personal_token@gitlab.com/username/project.git"
     ],
     "description": [
       "update git config file:",
@@ -2757,7 +2834,7 @@
       "awk '!a[$0]++'  file.txt",
       "",
       "# from stdin",
-      "echo \"...\" | awk '!a[$0]++'  "
+      "echo \"...\" | awk '!a[$0]++'"
     ],
     "example": [
       "$ echo -e \"hello\\nhello\\nhi\\nhello\" | awk '!a[$0]++'",
@@ -3362,7 +3439,7 @@
       "git log -2 --pretty=%h ",
       "",
       "# get all",
-      "git log --pretty=%h "
+      "git log --pretty=%h"
     ],
     "example": [
       "$  git log -2 --pretty=%h ",
@@ -3380,7 +3457,7 @@
     "created": "2022-05-11T02:03:35Z",
     "modified": "2022-05-11T02:04:16Z",
     "code": [
-      "git gc --aggressive --prune=all "
+      "git gc --aggressive --prune=all"
     ],
     "description": [
       "`--aggressive`",
@@ -3419,7 +3496,7 @@
     "created": "2022-05-10T04:31:18Z",
     "modified": "2022-05-10T04:31:18Z",
     "code": [
-      "curl -sL -X POST --data-binary @readme.md  https://api.github.com/markdown/raw --header \"Content-Type:text/x-markdown\" "
+      "curl -sL -X POST --data-binary @readme.md  https://api.github.com/markdown/raw --header \"Content-Type:text/x-markdown\""
     ],
     "example": [
       "$ curl -sL -X POST --data-binary @readme.md  https://api.github.com/markdown/raw --header \"Content-Type:text/x-markdown\" ",
@@ -3659,7 +3736,7 @@
     "created": "2022-05-04T22:39:00Z",
     "modified": "2022-05-04T22:39:00Z",
     "code": [
-      "Get-WindowsUpdateLog "
+      "Get-WindowsUpdateLog"
     ],
     "output": [
       "$ Get-WindowsUpdateLog",
@@ -5166,7 +5243,7 @@
     "created": "2022-04-22T01:10:49Z",
     "modified": "2022-10-04T02:48:37Z",
     "code": [
-      "Get-ADGroupMember -Identity <Group_Name> "
+      "Get-ADGroupMember -Identity <Group_Name>"
     ],
     "language": "powershell",
     "tags": [],
@@ -5880,7 +5957,7 @@
     "created": "2022-03-31T18:24:32Z",
     "modified": "2022-03-31T18:24:32Z",
     "code": [
-      "ls -lptr --time-style='+%s %FT%T' --no-group --group-directories-first "
+      "ls -lptr --time-style='+%s %FT%T' --no-group --group-directories-first"
     ],
     "output": [
       "total 11276",
@@ -7776,7 +7853,7 @@
     "created": "2022-02-03T03:40:35Z",
     "modified": "2022-02-10T16:14:52Z",
     "code": [
-      " host -t ns example.com"
+      "host -t ns example.com"
     ],
     "output": [
       "example.com name server uslas06bcdnsdhcp01.us.example.com.",
@@ -8731,7 +8808,7 @@
       "comm -13 file1 file2 ",
       "",
       "# find lines common to both files",
-      "comm -12 file1 file2 "
+      "comm -12 file1 file2"
     ],
     "language": "bash",
     "tags": [
@@ -9419,7 +9496,7 @@
     "created": "2021-09-15T19:07:05Z",
     "modified": "2022-01-19T00:09:53Z",
     "code": [
-      " find . -type f -printf '%TFT%TT %p\\n'"
+      "find . -type f -printf '%TFT%TT %p\\n'"
     ],
     "language": "bash",
     "tags": [],
@@ -9858,7 +9935,7 @@
     "created": "2021-08-13T00:31:46Z",
     "modified": "2022-01-19T15:49:08Z",
     "code": [
-      " git diff --minimal -w -b 17.0.1 17.1.0 installer"
+      "git diff --minimal -w -b 17.0.1 17.1.0 installer"
     ],
     "language": "bash",
     "tags": [
@@ -10190,7 +10267,7 @@
     "created": "2021-07-12T20:47:34Z",
     "modified": "2021-12-30T19:44:10Z",
     "code": [
-      "cat /var/log/sudo.log | grep \"LANG=C;LANGUAGE=en\" | cut -d';' -f3 | sort -u "
+      "cat /var/log/sudo.log | grep \"LANG=C;LANGUAGE=en\" | cut -d';' -f3 | sort -u"
     ],
     "language": "bash",
     "tags": [
@@ -10661,7 +10738,7 @@
     "created": "2021-06-08T00:04:52Z",
     "modified": "2021-12-30T19:44:09Z",
     "code": [
-      "df -Ph . "
+      "df -Ph ."
     ],
     "example": [
       "df -Ph . | tail -1 | awk '{print $4}'"
@@ -10683,7 +10760,7 @@
     "created": "2021-06-07T16:04:43Z",
     "modified": "2021-12-30T19:44:09Z",
     "code": [
-      "df -Ph . "
+      "df -Ph ."
     ],
     "output": [
       "$ df -Ph . | tail -1 | awk '{print $4}'",
@@ -10886,7 +10963,7 @@
     "created": "2021-05-05T03:22:19Z",
     "modified": "2021-12-30T19:44:09Z",
     "code": [
-      " pip install --upgrade  $(cat requirements.txt | grep -o \"^[^#].*\")"
+      "pip install --upgrade  $(cat requirements.txt | grep -o \"^[^#].*\")"
     ],
     "language": "bash",
     "tags": [
@@ -10979,7 +11056,7 @@
     "created": "2021-04-13T23:55:19Z",
     "modified": "2021-12-30T19:44:09Z",
     "code": [
-      "find . -type f -print -exec cat {} \\; "
+      "find . -type f -print -exec cat {} \\;"
     ],
     "language": "bash",
     "tags": [
