@@ -1,11 +1,9 @@
-# sshell/data
+<h1 id="top">sshell/data</h1>
 
 ```sh
 git clone -b data https://github.com/nntrn/sshell.git
 cd sshell
 ```
-
-<div id="top"></div>
 
 * [bash](#bash)
 * [cmd](#cmd)
@@ -20,6 +18,65 @@ cd sshell
 * [yaml](#yaml)
 
 ## bash
+
+### python systemd journal support
+
+```bash
+# prereq
+yum install python36-devel systemd-devel -y
+pip install systemd
+
+# write journal entry from python
+python3 -c 'from systemd import journal; journal.write("Hello Lennart")'
+
+$ journalctl -n 3
+-- Logs begin at Thu 2022-12-01 09:34:53 CST, end at Tue 2022-12-06 22:39:54 CST. --.
+Dec 06 22:39:21 awxserver02.us.example.com rc.local[1274]: oswbb heartbeat:Tue Dec 6 22:39:21 CST 2022
+Dec 06 22:39:51 awxserver02.us.example.com rc.local[1274]: oswbb heartbeat:Tue Dec 6 22:39:51 CST 2022
+Dec 06 22:39:54 awxserver02.us.example.com python3[109659]: Hello Lennart
+```
+
+### systemd-cat - connect a pipeline or program's output with the journal
+
+```bash
+$ echo "annie is cool" | systemd-cat -t nntrn
+
+$ journalctl -o export -n 1
+__CURSOR=s=56a4a698d04f478889d273caff148fde;i=1b287;b=18c4816e4c984fc79f80e5e7f8b0833a;m=6b7499c4a8;t=5ef359bd7de43;x=2520f3cb8f49f1d8
+__REALTIME_TIMESTAMP=1670388410474051
+__MONOTONIC_TIMESTAMP=461517735080
+_BOOT_ID=18c4816e4c984fc79f80e5e7f8b0833a
+PRIORITY=6
+_MACHINE_ID=21e762519e7246a4b97b5fa8e94a7ed1
+_HOSTNAME=awxserver.us.example.com
+_UID=0
+_GID=0
+_TRANSPORT=stdout
+SYSLOG_IDENTIFIER=nntrn
+MESSAGE=annie is cool
+_STREAM_ID=58e9f43495f7428b8ec4b4c4aaac754d
+_PID=111536
+
+$ journalctl -t nntrn
+-- Logs begin at Thu 2022-12-01 09:34:53 CST, end at Tue 2022-12-06 22:27:21 CST. --
+Dec 06 22:27:21 hostname.amer.com nntrn[106134]: hello world
+```
+
+### Manually delete journal entries
+
+```bash
+# retain logs from last <N>[s,m,h,days,months,weeks,years]
+journalctl --flush --rotate
+journalctl --vacuum-time=10days
+
+# retains the last 400MB files.
+journalctl --flush --rotate
+journalctl --vacuum-size=400M
+
+# retains last 2 files
+journalctl --flush --rotate
+journalctl --vacuum-files=2
+```
 
 ### get all manpaths for commands in $PATH
 
