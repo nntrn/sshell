@@ -1,5 +1,47 @@
 [
   {
+    "id": 415,
+    "title": "jq - json2csv",
+    "created": "2022-12-08T21:21:09Z",
+    "modified": "2022-12-08T21:21:49Z",
+    "code": [
+      "jq -r '(map(keys) | add | unique) as $cols | map(. as $row | $cols | map($row[.])) as $rows | $cols, $rows[] | @csv'"
+    ],
+    "example": [
+      "$ cat data/athletes.json | jq '.[0]'",
+      "{",
+      "  \"id\": 736041664,",
+      "  \"name\": \"A Jesus Garcia\",",
+      "  \"nationality\": \"ESP\",",
+      "  \"sex\": \"male\",",
+      "  \"date_of_birth\": \"1969-10-17\",",
+      "  \"height\": 1.72,",
+      "  \"weight\": 64,",
+      "  \"sport\": \"athletics\",",
+      "  \"gold\": 0,",
+      "  \"silver\": 0,",
+      "  \"bronze\": 0,",
+      "  \"info\": \"\"",
+      "}",
+      "",
+      "$ cat data/athletes.json | jq -r '(map(keys) | add | unique) as $cols | map(. as $row | $cols | map($row[.])) as $rows | $cols, $rows[] | @csv'",
+      "\"bronze\",\"date_of_birth\",\"gold\",\"height\",\"id\",\"info\",\"name\",\"nationality\",\"sex\",\"silver\",\"sport\",\"weight\"",
+      "0,\"1969-10-17\",0,1.72,736041664,\"\",\"A Jesus Garcia\",\"ESP\",\"male\",0,\"athletics\",64",
+      "0,\"1986-09-23\",0,1.68,532037425,\"\",\"A Lam Shin\",\"KOR\",\"female\",0,\"fencing\",56",
+      "1,\"1992-05-27\",0,1.98,435962603,\"\",\"Aaron Brown\",\"CAN\",\"male\",0,\"athletics\",79",
+      "0,\"1991-01-02\",0,1.83,521041435,\"\",\"Aaron Cook\",\"MDA\",\"male\",0,\"taekwondo\",80",
+      "0,\"1990-11-26\",0,1.81,33922579,\"\",\"Aaron Gate\",\"NZL\",\"male\",0,\"cycling\",71",
+      "0,\"1990-01-26\",0,1.8,173071782,\"\",\"Aaron Royle\",\"AUS\",\"male\",0,\"triathlon\",67",
+      "1,\"1993-06-04\",0,2.05,266237702,\"\",\"Aaron Russell\",\"USA\",\"male\",0,\"volleyball\",98",
+      "0,\"1991-09-25\",0,1.93,382571888,\"\",\"Aaron Younger\",\"AUS\",\"male\",0,\"aquatics\",100",
+      "0,\"1988-12-14\",0,1.8,87689776,\"\",\"Aauri Lorena Bokesa\",\"ESP\",\"female\",0,\"athletics\",62",
+      "0,\"1991-07-22\",0,1.65,997877719,\"\",\"Ababel Yeshaneh\",\"ETH\",\"female\",0,\"athletics\",54"
+    ],
+    "language": "bash",
+    "tags": [],
+    "url": "https://earthly.dev/blog/convert-to-from-json/#convert-json-to-csv-via-the-command-line-using-jq"
+  },
+  {
     "id": 414,
     "title": "python systemd journal support",
     "created": "2022-12-07T04:46:25Z",

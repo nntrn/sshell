@@ -19,6 +19,12 @@ cd sshell
 
 ## bash
 
+### jq - json2csv
+
+```bash
+jq -r '(map(keys) | add | unique) as $cols | map(. as $row | $cols | map($row[.])) as $rows | $cols, $rows[] | @csv'
+```
+
 ### python systemd journal support
 
 ```bash
