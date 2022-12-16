@@ -2830,6 +2830,16 @@ openssl genpkey -out fd.key -algorithm RSA -pkeyopt rsa_keygen_bits:2048 -aes-12
 
 ## cmd
 
+### Windows 10 TCP/IP Reset
+
+```cmd
+netsh winsock reset
+netsh int ip reset
+ipconfig /release
+ipconfig /renew
+ipconfig /flushdns
+```
+
 ### netsh - loop over ip4 to display network information
 
 ```cmd
