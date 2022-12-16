@@ -19,6 +19,14 @@ cd sshell
 
 ## bash
 
+### jq - convert graphql query for curl
+
+```bash
+CURL_GRAPHQL_QUERY="$(
+  jq -c -n --arg query '{...}' '{"query":$query}'
+)"
+```
+
 ### jq - json2csv
 
 ```bash
@@ -969,10 +977,10 @@ openssl ciphers -V 'AES+HIGH'
 sssctl --help
 ```
 
-### jq - get 
+### jq - decode base64 
 
 ```bash
-curl -s 'https://api.github.com/repos/nntrn/dvt/commits?per_page=1' | jq '.[] | {message: .commit.message, date: .commit.committer.date}'
+jq -r --arg key content '.[$key] | gsub("\n";"") | @base64d'
 ```
 
 ### sudo - show root entries only 
