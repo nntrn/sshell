@@ -44,7 +44,7 @@ for i in "$@"; do
     shift
     ;;
   -w | --write-to)
-    mkdir -p $(dirname $2)
+    mkdir -p "$(dirname $2)"
     OUTPUT_FILE=$2
     shift 2
     ;;
