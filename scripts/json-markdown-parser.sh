@@ -60,7 +60,7 @@ if [[ -s $INPUT_FILE ]]; then
 def md:
   split("---")
   | ((.[1] | split("\n") | map(capture("(?<key>[a-z]+): (?<value>.*)")) |from_entries )
-   + (.[2] | split("\n## ") | map(capture("(?<key>[A-Z][a-z]+)\n\n(?<value>.*)\n"; "m"))
+   + (.[2:] | join("\n") | split("\n## ") | map(capture("(?<key>[A-Z][a-z]+)\n\n(?<value>.*)\n"; "m"))
   | map({key: (.key|ascii_downcase), value: (.value|split("\n")|map(select(contains("```")|not))) })
   | from_entries));
 
