@@ -19,6 +19,104 @@ cd sshell
 
 ## bash
 
+### awk - filter out rows with column less than value
+
+```bash
+awk '$3 >= 1000'
+```
+
+### true color vs 8bit 
+
+```bash
+# 8 bit (5;)
+for COLOR in {1..255}; do  echo -e "\e[38;5;${COLOR}m${COLOR}\e[0m"; done
+
+# true color (2;)
+# TBA
+
+```
+
+### systemctl - service dependencies
+
+```bash
+systemctl show -p "Wants" multi-user.target
+```
+
+### generate box-drawing symbols
+
+```bash
+for j in {0..9}; do (for i in {0..9} {A..F}; do echo -e "u25${j}${i} \u25${j}${i}"; done); done
+```
+
+### wget - download all files from site
+
+```bash
+wget -m -p -k -np -R '*html*,*htm*,*asp*,*php*,*css*,*gif*' -X 'www' <URL>
+```
+
+### awk - display line length
+
+```bash
+awk '{print length}'
+```
+
+### unicode chart
+
+```bash
+(for k in {0..3}; do for j in {0..9}; do for i in {10..99}; do echo -e "u${k}${j}${i} \u${k}${j}${i}"; done; done; done)
+```
+
+### awk - add all numbers in row (horizontally)
+
+```bash
+awk '{for(i=t=0;i<NF;) t+=$++i; $0=t}1'
+```
+
+### gpg - verify the validity of cygwin setup binary 
+
+```bash
+# First, import the key with:
+gpg --import pubring.asc
+# gpg --list-keys
+
+# Now you can verify this signature against your list of public keys:
+gpg --verify setup-x86_64.exe.sig setup-x86_64.exe
+```
+
+### awk - NF and NR
+
+```bash
+$ ls -laptr |awk 'END {print NF}'
+10
+```
+
+### git - create empty branch
+
+```bash
+# create new empty branch
+git checkout --orphan NEWBRANCH
+git rm -rf .
+
+# reset head to empty branch
+touch .gitignore && git add .gitignore
+git commit -m "Initialize with .gitignore"
+git checkout main
+git reset --hard NEWBRANCH
+```
+
+### gpg - encrypt file (binary output)
+
+```bash
+echo 'helloooooo' >password.txt
+SECRET_PASSPHRASE=hello
+
+# encrypt file (creates password.txt.gpg)
+gpg --symmetric --cipher-algo AES256 password.txt
+
+# decrypt
+gpg --quiet --batch --yes --decrypt --passphrase="$SECRET_PASSPHRASE" --output /tmp/password.txt password.txt.gpg
+```
+
 ### jq - convert graphql query for curl
 
 ```bash
@@ -48,6 +146,7 @@ $ journalctl -n 3
 Dec 06 22:39:21 awxserver02.us.example.com rc.local[1274]: oswbb heartbeat:Tue Dec 6 22:39:21 CST 2022
 Dec 06 22:39:51 awxserver02.us.example.com rc.local[1274]: oswbb heartbeat:Tue Dec 6 22:39:51 CST 2022
 Dec 06 22:39:54 awxserver02.us.example.com python3[109659]: Hello Lennart
+
 ```
 
 ### systemd-cat - connect a pipeline or program's output with the journal
@@ -74,6 +173,7 @@ _PID=111536
 $ journalctl -t nntrn
 -- Logs begin at Thu 2022-12-01 09:34:53 CST, end at Tue 2022-12-06 22:27:21 CST. --
 Dec 06 22:27:21 hostname.amer.com nntrn[106134]: hello world
+
 ```
 
 ### Manually delete journal entries
@@ -110,6 +210,7 @@ for C in {100..107}; do echo -en "\e[${C}m$C "; done
 # 256 colors
 for C in {16..255}; do echo -en "\e[48;5;${C}m$C "; done
 for C in {0..255}; do tput setab $C; echo -n "$C "; done
+
 ```
 
 ### How to remove systemd services
@@ -129,6 +230,7 @@ systemctl reset-failed
 
 ```bash
 ldifde -f person-ldap.txt -d "CN=Fname Lname,OU=Users,OU=Austin,DC=amer,DC=example,DC=com"
+
 ```
 
 ### list  all mounted filesytems or search for a filesystem
@@ -153,12 +255,14 @@ RC=( "${PIPESTATUS[@]}" )
 
 ```bash
 jq -Rn '[(inputs | split(" ")) | .[] | split("=") | {key: .[0], value: .[1]}] | from_entries'
+
 ```
 
 ### jq group by with count
 
 ```bash
 jq 'group_by(.language)| map( {"\(.[0].language)":length}) |add'
+
 ```
 
 ### jq - recursively slice array values to get first child only
@@ -190,6 +294,7 @@ echo -n "$HEX_TEXT" | sed 's/\([0-9A-F]\{2\}\)/\\\\\\x\1/gI' | xargs printf && e
 
 # ascii to hex
 echo -n "$ASCII_TEXT" | od -A n -t x1 | tr -d ' '
+
 ```
 
 ### cvtsudoers - get all configured sudo policies
@@ -202,6 +307,8 @@ cvtsudoers -f json -o sudoers.json sudoers
 
 # combines all /etc/sudoers.d/* and /etc/sudoers
 cvtsudoers -f sudoers -o sudoers.txt sudoers
+
+
 ```
 
 ### get machine architecture.
@@ -304,6 +411,7 @@ a
 b
 c
 d
+
 ```
 
 ### simple token generator 
@@ -320,13 +428,14 @@ $ openssl dgst -sha256 -hex <<<$(date +"%F %R $SALTSTRING") | awk '{print $NF}' 
 sed -n '/<tag/,/<\/tag/ p'
 
 # get inner lines only
-sed -n '/<ul/,/<\/ul/ {//! p}'
+sed -n '/<ul/,/<\/ul/ {//! p}' 
 ```
 
 ### date - get seconds at 00:00:00 for date
 
 ```bash
 date -d "$(date +%F)" +%s
+
 ```
 
 ### generate ansible-vault like hash
@@ -334,6 +443,7 @@ date -d "$(date +%F)" +%s
 ```bash
 $ openssl passwd -5 -salt VAULT  password
 $5$VAULT$QuHvYEpH9XsW9SVsKimTvMdRykrd2g3UiAi.fO7MAhB
+
 ```
 
 ### jq - download and extract all the files from a gist
@@ -343,6 +453,7 @@ eval "$(
   curl -s https://api.github.com/gists/b787f3e14f28de11af45b1c7ec0ffbbc|
     jq -r '.files | to_entries | .[].value | @sh "echo \(.content) | tee \(.filename)"'
 )"
+
 ```
 
 ### find and remove files older than date
@@ -356,6 +467,7 @@ find /tmp -mindepth 1 -maxdepth 1  ! -newermt 2022-01-01 -print -exec rm -rf {} 
 ```bash
 name="Annie Tran"
 echo ${name: -3}
+
 ```
 
 ### prune example to filter files in .git/**
@@ -432,6 +544,7 @@ U2FsdGVkX18vCTkI4x3csNp2FERhbXWY6HNSpyshkRY=
 
 $ echo "U2FsdGVkX18vCTkI4x3csNp2FERhbXWY6HNSpyshkRY=" | openssl enc -aes256 -k passphrase_aka_salt -base64 -iter 1000 -d
 password
+
 ```
 
 ### openssl-s_client, s_client - SSL/TLS client program
@@ -444,6 +557,7 @@ echo -n | openssl s_client -connect $HOSTNAME:443
 
 ```bash
 curl -s -k -u "admin:password" https://awxserver.example.com/api/v2/me/ | python -m json.tool
+
 ```
 
 ### zip - create zip file from list piped in stdin
@@ -558,7 +672,7 @@ bash -c 'echo $$ ; exec ls -l /proc/self ; echo foo'
 ### gitlab - clone using personal token
 
 ```bash
-git clone https://oauth2:personal_token@gitlab.com/username/project.git
+git clone https://oauth2:personal_token@gitlab.com/username/project.git 
 ```
 
 ### iconv - convert text encoding
@@ -611,6 +725,7 @@ nntrn
 
 $ echo $ANNIE
 isme
+
 ```
 
 ### cat - short read about useless use
@@ -678,7 +793,7 @@ curl -s -o snippets.json -w '%{json}' https://raw.githubusercontent.com/nntrn/ss
 awk '!a[$0]++'  file.txt
 
 # from stdin
-echo "..." | awk '!a[$0]++'
+echo "..." | awk '!a[$0]++'  
 ```
 
 ### ignore carriage return in windows 
@@ -704,6 +819,7 @@ GITLAB_PERSONAL_ACCESS_TOKEN=...
 
 curl --silent --header "PRIVATE-TOKEN: $GITLAB_PERSONAL_ACCESS_TOKEN" \
   -XPOST "https://gitlab.example.com/api/v4/projects?name=$PROJECT_NAME&visibility=private&initialize_with_readme=true"
+
 ```
 
 ### jq - convert json to csv
@@ -711,6 +827,7 @@ curl --silent --header "PRIVATE-TOKEN: $GITLAB_PERSONAL_ACCESS_TOKEN" \
 ```bash
 echo '[{"name":"JSON", "good":true}, {"name":"XML", "good":false}]' |
   jq -r '.[] | map(.) | @csv'
+
 ```
 
 ### grep - display lines in file1 that aren't in file2 (similar to comm)
@@ -774,19 +891,20 @@ git remote show origin | sed -n '/Remote branches/,/Local/p' | grep -v ':' | awk
 git log -2 --pretty=%h 
 
 # get all
-git log --pretty=%h
+git log --pretty=%h 
 ```
 
 ### git-gc - cleanup unnecessary files and optimize the local repository
 
 ```bash
-git gc --aggressive --prune=all
+git gc --aggressive --prune=all 
 ```
 
 ### github api - render a markdown document as an HTML page 
 
 ```bash
-curl -sL -X POST --data-binary @readme.md  https://api.github.com/markdown/raw --header "Content-Type:text/x-markdown"
+curl -sL -X POST --data-binary @readme.md  https://api.github.com/markdown/raw --header "Content-Type:text/x-markdown" 
+
 ```
 
 ### fuser - close tcp ports 
@@ -826,6 +944,7 @@ find $HOME -mtime 0
 ```bash
 #C:/Windows/System32/WindowsPowerShell/v1.0/Modules
 find . -type f -name "*.psd1" -print -exec cat {} \; | tr -d '\r' | tr -d '\0' | grep -Eo 'Get-[a-zA-Z\-]+' | sort -u | tee ~/all_powershell_get.txt
+
 ```
 
 ### curl - search dictionaries 
@@ -836,6 +955,7 @@ curl dict://dict.org/show:db
 
 # search word in a specific dictionary
 curl dict://dict.org/d:computer:fd-eng-tur
+
 ```
 
 ### wget2 - get site stats and download files
@@ -864,6 +984,7 @@ echo "$text-to-scramble-numbers"  | tr "0123456789" $( echo ${randomnumstring:0:
 
 ```bash
 netsh http show servicestate view=requestq verbose=no
+
 ```
 
 ### netsh -  Lists all defined aliases
@@ -906,6 +1027,7 @@ journalctl -u  <service>
 
 ```bash
 ps aux --sort=-%mem
+
 ```
 
 ### systemd - files and tools that manage the Linux startup sequence
@@ -937,6 +1059,7 @@ SHA1(README)= b018bfbdd6b6c939ea6acb3b4ea591e214a2a84d
 
 $ openssl dgst -sha256 README
 SHA256(README)= d173e8ad75a8abbed8d21d4924ce145af7331f27a1a7b31e79e57271888ad54f
+
 ```
 
 ### openssl - extract information from a certificate
@@ -963,6 +1086,7 @@ $ openssl x509 -noout -in cert.pem -hash
 
 $ openssl x509 -noout -in cert.pem -fingerprint
 SHA1 Fingerprint=E3:EB:7B:6B:01:2D:CE:3A:AD:63:00:AA:0B:60:08:F8:64:9F:1E:D9
+
 ```
 
 ### openssl - list high encryption ciphers using the AES algorithm
@@ -980,7 +1104,7 @@ sssctl --help
 ### jq - decode base64 
 
 ```bash
-jq -r --arg key content '.[$key] | gsub("\n";"") | @base64d'
+jq -r --arg key content '.[$key] | gsub("\n";"") | @base64d' 
 ```
 
 ### sudo - show root entries only 
@@ -1033,7 +1157,7 @@ curl http://127.0.0.1:9190/integrations/node_exporter/metrics
 ### ls - sortable ls
 
 ```bash
-ls -lptr --time-style='+%s %FT%T' --no-group --group-directories-first
+ls -lptr --time-style='+%s %FT%T' --no-group --group-directories-first 
 ```
 
 ### vault - enable and write userpass
@@ -1056,6 +1180,7 @@ ${!prefix@}
 SOURCE="${BASH_SOURCE[0]}"
 while [ -h "$SOURCE" ] ; do SOURCE="$(readlink "$SOURCE")"; done
 DIR="$( cd -P "$( dirname "$SOURCE" )/.." && pwd )"
+
 ```
 
 ### investigate sockets & processes
@@ -1176,6 +1301,7 @@ $ openssl passwd -salt 8E MySecret
 
 ```bash
 openssl speed
+
 ```
 
 ### stat - display file properties
@@ -1244,6 +1370,7 @@ prtstat $PID
 
 ```bash
 mpstat 2 5
+
 ```
 
 ### read network interface statistics
@@ -1262,6 +1389,7 @@ procinfo -a
 
 ```bash
 dstat --top-cpu
+
 ```
 
 ### gnu tools
@@ -1274,6 +1402,7 @@ man dstat
 
 ```bash
 lsblk -a -p
+
 ```
 
 ### examples illustrating substring expansion
@@ -1319,6 +1448,7 @@ ansible-config dump | grep -v '\(default\)' | sed 's,(.*cfg),,g'
 
 ```bash
 echo '-:svc_user_account:ALL' | tee -a /etc/security/access.conf
+
 ```
 
 ### restart failed services
@@ -1403,6 +1533,7 @@ ExecStart=/usr/bin/dockerd -g /u01/docker-root -H fd://' >>/etc/systemd/system/d
 
 systemctl daemon-reload
 systemctl restart docker
+
 ```
 
 ### cygwin - open terminal here
@@ -1411,6 +1542,7 @@ systemctl restart docker
 echo 'cd "$OLDPWD"' >> .bashrc
 
 C:\Users\annie_tran.AMERICAS\cyg\bin\bash --login -i
+
 ```
 
 ### find files created on this date
@@ -1471,6 +1603,7 @@ done
 
 ```bash
 wget -qO- http://programminghistorian.org/assets/jq_rkm.json | jq -r '.artObjects[] | [.id, .title, .principalOrFirstMaker, .webImage.url] | @csv'
+
 ```
 
 ### ps do not print columns
@@ -1502,7 +1635,7 @@ esac
 ### get name server
 
 ```bash
-host -t ns example.com
+ host -t ns example.com
 ```
 
 ### Check client certificate
@@ -1617,6 +1750,7 @@ Subject: my subject
 Content-Type: text/html
 
 $(cat test-html-email.html)" | sendmail -t
+
 ```
 
 ### sshpass - read ssh password from file
@@ -1660,6 +1794,7 @@ curl -H "X-Vault-Namespace: infrastructure/database/engineering/tools/dbv2/dbv2/
 
 ```bash
 git ls-files -s | awk '/120000/{print $4}'
+
 ```
 
 ### set existing variables only
@@ -1686,6 +1821,7 @@ tr -d '\0'
 
 ```bash
 ansible-doc awx.awx.tower_ad_hoc_command --snippet
+
 ```
 
 ### Get commits that have deleted files
@@ -1698,6 +1834,7 @@ git log --diff-filter=D --summary
 
 ```bash
 cat /proc/$$/environ | sed 's/\([A-Z_]*=\)/\n\1/g'
+
 ```
 
 ### comm - find common or distinct lines between files
@@ -1710,7 +1847,7 @@ comm -23 file1 file2
 comm -13 file1 file2 
 
 # find lines common to both files
-comm -12 file1 file2
+comm -12 file1 file2 
 ```
 
 ### sort top command by memory
@@ -1723,12 +1860,14 @@ top -o +%MEM
 
 ```bash
 mount --rbind /u01/docker /var/lib/docker
+
 ```
 
 ### find js files in src/
 
 ```bash
 find . -maxdepth 3 -type f -name "*.js" \( -path "*/src/*" -and ! -regex "*(node_modules|.git)*" \) -print
+
 ```
 
 ### Check and assign variables
@@ -1797,7 +1936,7 @@ realpath --relative-to=$DIR1 $DIR2
 ### Print border
 
 ```bash
-printf '%*.0s\n' 10 "" | tr " " "#"
+printf '=%.0s' {1..100}
 ```
 
 ### get latest kernel version
@@ -1925,12 +2064,13 @@ cat /proc/interrupts
 cat /boot/grub/grub.conf
 cat /proc/version
 cat /proc/modules
+
 ```
 
 ### print files with timestamp
 
 ```bash
-find . -type f -printf '%TFT%TT %p\n'
+ find . -type f -printf '%TFT%TT %p\n'
 ```
 
 ### awk - remove duplicates without sorting
@@ -1949,6 +2089,7 @@ cat file.txt | awk -F '\t' '{print "\n"$2,$3}' OFS='\n'
 
 ```bash
 printf '=%.0s' {1..80}
+
 ```
 
 ### get all processes for user
@@ -1962,6 +2103,7 @@ ps -U $USER -u $USER u
 ```bash
 echo "${@:2}"
 echo "${*:2}"
+
 ```
 
 ### get runas user
@@ -1999,6 +2141,7 @@ SETCOLOR_SUCCESS="echo -en \\033[0;32m"
 SETCOLOR_FAILURE="echo -en \\033[0;31m"
 SETCOLOR_WARNING="echo -en \\033[0;33m"
 SETCOLOR_RESET="echo -en \\033[0;39m"
+
 ```
 
 ### ss -  investigate sockets
@@ -2023,6 +2166,7 @@ sqlplus / as sysdba << EOF
       ALTER USER PDBADMIN IDENTIFIED BY "$ORACLE_PWD";
       exit;
 EOF
+
 ```
 
 ### view process id
@@ -2047,6 +2191,7 @@ tr -dc 'a-zA-Z0-9' < /dev/urandom | head -c 32
 
 ```bash
 eval "sudo $(sudo --list | grep -ws User -A 1000 | sed 's/,/\n/g' | sed 's/:/:\n/g' | grep '/bin/su' | sort | tail -n 1)"
+
 ```
 
 ### get allowed sudo commands
@@ -2115,12 +2260,13 @@ docker volume inspect $(docker volume ls | awk '{print $2}' |  tail -n +2)
 $ special='! @ # % ^ & * ( ) _ + = [ ] { } < > . / ?'
 $ abc=$(echo {a..z} {A..Z} {0..9} "$special" | tr -d ' ')
 $ key=$(echo "$abc" | sed 's,\(.\),\1\n,g' | shuf | tr -d '\n')
+
 ```
 
 ### git diff tags
 
 ```bash
-git diff --minimal -w -b 17.0.1 17.1.0 installer
+ git diff --minimal -w -b 17.0.1 17.1.0 installer
 ```
 
 ### sed - only print after matching pattern
@@ -2145,6 +2291,7 @@ find . -type f -name "*.html" -print -exec sed -i -e 's/"\/\//"/g' {} \;
 
 ```bash
 cat .bash_history | grep -vE "^#[0-9]+" | sort | uniq -c | sort -k 1 -n | less
+
 ```
 
 ### self sign cert (generate private key, csr, and crt)
@@ -2194,6 +2341,7 @@ printcommands() {
 }
 
 printcommands | tee /tmp/window-commands.txt
+
 ```
 
 ### type
@@ -2212,6 +2360,7 @@ type is a shell builtin
 
 $ LC_ALL=C type -t rvm
 function
+
 ```
 
 ### ansible list all hosts
@@ -2272,7 +2421,7 @@ history | cut -d ' ' -f6- | sort | uniq -c | sort -k1 -nr
 ### print commands from sudo log
 
 ```bash
-cat /var/log/sudo.log | grep "LANG=C;LANGUAGE=en" | cut -d';' -f3 | sort -u
+cat /var/log/sudo.log | grep "LANG=C;LANGUAGE=en" | cut -d';' -f3 | sort -u 
 ```
 
 ### view UDP and TCP ports
@@ -2335,6 +2484,7 @@ for pb in $(find . -maxdepth 1 -type f -name "*.yml"); do
   mod=$(stat -c %y $pb)
   echo -e "${mod%%\ *}, ${pb##\.\/}"
 done
+
 ```
 
 ### view workstation details
@@ -2417,6 +2567,7 @@ chcon runcon
 
 # Modified command invocation
 chroot env nice nohup stdbuf timeout
+
 ```
 
 ### get sorted size of directories in current working directory
@@ -2462,13 +2613,13 @@ git fetch --all --tags
 ### get free space on directory
 
 ```bash
-df -Ph .
+df -Ph . 
 ```
 
 ### get free space in directory
 
 ```bash
-df -Ph .
+df -Ph . 
 ```
 
 ### hack for unsourcing env variables
@@ -2487,6 +2638,7 @@ exe() { echo "\$ $@" ; "$@" ; }
 
 ```bash
 ps -ef | awk -v m="\x01" -v N="8" '{$N=m$N ;print substr($0, index($0,m)+1)}'
+
 ```
 
 ### set timeout for script 
@@ -2570,7 +2722,7 @@ done < "$dockerimagedir/docker-images.list"
 ### pip install requirements one line
 
 ```bash
-pip install --upgrade  $(cat requirements.txt | grep -o "^[^#].*")
+ pip install --upgrade  $(cat requirements.txt | grep -o "^[^#].*")
 ```
 
 ### print env variables that start with S
@@ -2597,6 +2749,8 @@ echo -e $html | grep -Eo "<title>(.*)</title>"
 rsync -avr --exclude={'dbv2-awx','*.rpm'} -o -g /home/servicedb servicedb@awxserver02.us.example.com:/home/servicedb/01
 
 rsync -avr --exclude={'dbv2-awx','ansible'} -o -g db annie_tran@auspslpltinf1.us.example.com:/home/annie_tran
+
+
 ```
 
 ### view signed certs
@@ -2609,12 +2763,13 @@ find /etc/pki -type f ! -name "*cacerts*" -print -exec cat {} \; | less
 
 ```bash
 find . -type f -print0 | sort -z | xargs -r0 sha256sum  sha256SumOutput
+
 ```
 
 ### print name + content
 
 ```bash
-find . -type f -print -exec cat {} \;
+find . -type f -print -exec cat {} \; 
 ```
 
 ### diff project structures for git branches
@@ -2623,6 +2778,7 @@ find . -type f -print -exec cat {} \;
 diff --side-by-side --color=always --width=200 --suppress-common-lines \
   <(git ls-tree -r branch01--name-only) \
   <(git ls-tree -r branch02 --name-only)
+
 ```
 
 ### download & save as json
@@ -2699,6 +2855,7 @@ useradd -p $(openssl passwd -1 $PASS) $USER
 
 ```bash
 mail -s "$(echo -e "SAR files\nContent-Type: text/html")" annie_tran@example.com <allsar.txt
+
 ```
 
 ### Get active internet connections and domain sockets
@@ -2799,6 +2956,7 @@ sudo systemctl start sshd
 sudo firewall-cmd --permanent --add-service=http
 sudo firewall-cmd --permanent --add-service=https
 sudo systemctl reload firewalld
+
 ```
 
 ### find and kill processes
@@ -2896,12 +3054,35 @@ Host *
 
 ## javascript
 
+### d3 - parse csv from string
+
+```javascript
+var csvString = `date,weekday,hour,pickup
+2020-08-31,1,6,0
+2020-08-31,1,7,5
+2020-08-31,1,8,7
+2020-08-31,1,9,7
+2020-08-31,1,10,6
+2020-08-31,1,11,10
+2020-08-31,1,12,5
+2020-08-31,1,13,6
+2020-08-31,1,14,11`
+
+// v5: https://d3js.org/d3.v5.js
+var data = d3.csvParse(csvString)
+
+// v3: https://d3js.org/d3.v3.js
+var data = d3.csv.parse(csvString);
+
+```
+
 ### document.documentElement.scrollTop - scroll to top of page
 
 ```javascript
 function setScrollTopForDocument(doc = document, value = 0) {
   doc.documentElement.scrollTop = doc.body.scrollTop = value
 }
+
 ```
 
 ### document.cookie - convert key=value string to JSON string
@@ -2939,6 +3120,7 @@ css = new Set(
     .flat(2)
     .sort()
 )
+
 ```
 
 [Top](#top)
@@ -3015,7 +3197,8 @@ location / {
       allow 192.168.1.0/24; 
       deny all; 
     } 
-}
+} 
+
 ```
 
 [Top](#top)
@@ -3026,11 +3209,18 @@ location / {
 
 ```plain
 */15 * * * *    if ! out=`ansible-playbook yourplaybook.yaml`; then echo $out; fi
+
 ```
 
 [Top](#top)
 
 ## powershell
+
+###  Get-ComputerInfo
+
+```powershell
+Get-ComputerInfo -Property * | convertto-json
+```
 
 ### get-eventlog 
 
@@ -3046,6 +3236,7 @@ get-childitem cert:\LocalMachine
 get-childitem cert:\LocalMachine\Root | FL *
 get-childitem cert:\LocalMachine\"AAD Token Issuer"
 get-childitem cert:\LocalMachine\CA
+
 ```
 
 ### Format-Table -GroupBy - Format processes by BasePriority
@@ -3063,7 +3254,7 @@ Get-ADUser -Filter "ownerID -eq 123456 -and employeeType -like 'Service'"  -Prop
 ### Get-WindowsUpdateLog - get update
 
 ```powershell
-Get-WindowsUpdateLog
+Get-WindowsUpdateLog 
 ```
 
 ### Finds local admin password and password expiration timestamp for given computer
@@ -3103,7 +3294,7 @@ Get-ChildItem env:
 ### Get-ADGroupMember
 
 ```powershell
-Get-ADGroupMember -Identity <Group_Name>
+Get-ADGroupMember -Identity <Group_Name> 
 ```
 
 ### Powershell - set variables to get dynamic ADUser
@@ -3120,6 +3311,7 @@ Get-ADUser  -Filter "OwnerID -like $EID"  -Properties * | sort-object -property 
 ```powershell
 POWERSHELL_HISTORY=${USERPROFILE,\\,\/,g}/AppData/Roaming/Microsoft/Windows/PowerShell/PSReadLine/ConsoleHost_history.txt
 cat "$POWERSHELL_HISTORY" | sed 's/^[ \t]*//'
+
 ```
 
 ### get-help - show all loaded cmdlets, functions, and modules in powershell
@@ -3197,6 +3389,7 @@ Get-ADUser -Filter "employeeType -eq 'Service' -and OwnerID -eq 123456" -Propert
 Get-Service -Displayname "*network*"
 
 Get-Service | Where-Object {$_.Status -eq "Running"}
+
 ```
 
 ### get all available data about a process
@@ -3317,6 +3510,7 @@ for svc in cred_names:
     cred = Credential.objects.get(name=svc)
     print(svc)
     print(decrypt_field(cred, "password"))
+
 ```
 
 [Top](#top)
