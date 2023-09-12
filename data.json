@@ -1,5 +1,196 @@
 [
   {
+    "id": 438,
+    "title": "numerical constants",
+    "created": "2023-09-12T23:33:50Z",
+    "modified": "2023-09-12T23:33:50Z",
+    "code": [
+      "# Decimal: the default",
+      "$ let \"dec = 32\"",
+      "$ echo \"decimal number = $dec\"",
+      "32",
+      "",
+      "# Octal: numbers preceded by '0' (zero)",
+      "$ let \"oct = 032\"",
+      "$ echo \"octal number = $oct\"",
+      "26",
+      "",
+      "# Hexadecimal: numbers preceded by '0x' or '0X'",
+      "$ let \"hex = 0x32\"",
+      "$ echo \"hexadecimal number = $hex\"",
+      "50",
+      "",
+      "$ echo $((0x9abc))",
+      "39612",
+      "",
+      "# Other bases: BASE#NUMBER",
+      "# BASE between 2 and 64.",
+      "# NUMBER must use symbols within the BASE range, see below.",
+      "",
+      "$ let \"bin = 2#111100111001101\"",
+      "$ echo \"binary number = $bin\"",
+      "31181",
+      "",
+      "$ let \"b32 = 32#77\"",
+      "$ echo \"base-32 number = $b32\"",
+      "231",
+      "",
+      "# This notation only works for a limited range (2 - 64) of ASCII characters.",
+      "# 10 digits + 26 lowercase characters + 26 uppercase characters + @ + _",
+      "$ let \"b64 = 64#@_\"",
+      "$ echo \"base-64 number = $b64\"",
+      "4031"
+    ],
+    "example": "",
+    "output": "",
+    "description": "",
+    "language": "bash",
+    "tags": [],
+    "url": "https://tldp.org/LDP/abs/html/numerical-constants.html#NUMBERS"
+  },
+  {
+    "id": 437,
+    "title": "downloading certs",
+    "created": "2023-09-12T21:24:45Z",
+    "modified": "2023-09-12T21:24:45Z",
+    "code": [
+      "openssl s_client -showcerts -servername gitlab.com -connect gitlab.com:443 < /dev/null | openssl x509 > gitlab-cert.pem",
+      "mv example-gitlab-cert.pem /usr/local/share/ca-certificates/gitlab-cert.crt"
+    ],
+    "example": "",
+    "output": "",
+    "description": "",
+    "language": "bash",
+    "tags": []
+  },
+  {
+    "id": 436,
+    "title": "oneliner: print true color",
+    "created": "2023-09-08T22:17:06Z",
+    "modified": "2023-09-08T22:17:06Z",
+    "code": [
+      "for i in {1..255}; do echo -en \"\\e[38;5;${i}m[$i]\\e[0m\"; ! (($i%15)) && echo; done"
+    ],
+    "example": "",
+    "output": "",
+    "description": "",
+    "language": "bash",
+    "tags": []
+  },
+  {
+    "id": 435,
+    "title": "postgres - password md5 ",
+    "created": "2023-08-24T22:54:28Z",
+    "modified": "2023-08-24T22:54:28Z",
+    "code": [
+      "select md5('passwordpostgres');",
+      "",
+      "CREATE USER postgres PASSWORD 'md532e12f215ba27cb750c9e093ce4b5127';",
+      ""
+    ],
+    "example": [
+      "postgres=# select rolpassword from pg_authid where rolname ='postgres';",
+      "             rolpassword",
+      "-------------------------------------",
+      " md532e12f215ba27cb750c9e093ce4b5127",
+      "",
+      "postgres=# select md5('passwordpostgres');",
+      "               md5",
+      "----------------------------------",
+      " 32e12f215ba27cb750c9e093ce4b5127",
+      ""
+    ],
+    "output": "",
+    "description": "",
+    "language": "sql",
+    "tags": [],
+    "url": "https://stackoverflow.com/a/17431573"
+  },
+  {
+    "id": 434,
+    "title": "get active sessions on server",
+    "created": "2023-08-24T22:09:14Z",
+    "modified": "2023-08-24T22:09:14Z",
+    "code": [
+      "head -n 20 /run/systemd/users/[0-9]*",
+      ""
+    ],
+    "example": "",
+    "output": [
+      "==> /run/systemd/users/3001353 <==",
+      "# This is private data. Do not parse.",
+      "NAME=processdaceaccount",
+      "STATE=active",
+      "STOPPING=no",
+      "RUNTIME=/run/user/3001353 ",
+      "DISPLAY=389547",
+      "REALTIME=1692159069931344",
+      "MONOTONIC=10419731117866",
+      "SESSIONS=417538 417535 417436 416889 416753 416748 416745 416456 416394 415985 415968 415965 415954 415951 415948 415939 415907 415906 415901 415868 415859 415754 414917 414911 414314 414283 414278 410299 410065 409111 407784 406994 406349 406329 406321 406315 405871 398166 393982 393569 393117 391280 390757 390754 390753 390748 390589 390554 390484 390477 390476 390457 390070 389976 389547",
+      "SEATS=",
+      "ACTIVE_SESSIONS=417538 417535 417436 416889 416753 416748 416745 416456 416394 415985 415968 415965 415954 415951 415948 415939 415907 415906 415901 415868 415859 415754 414917 414911 414314 414283 414278 410299 410065 409111 407784 406994 406349 406329 406321 406315 405871 398166 393982 393569 393117 391280 390757 390754 390753 390748 390589 390554 390484 390477 390476 390457 390070 389976 389547",
+      "ONLINE_SESSIONS=417538 417535 417436 416889 416753 416748 416745 416456 416394 415985 415968 415965 415954 415951 415948 415939 415907 415906 415901 415868 415859 415754 414917 414911 414314 414283 414278 410299 410065 409111 407784 406994 406349 406329 406321 406315 405871 398166 393982 393569 393117 391280 390757 390754 390753 390748 390589 390554 390484 390477 390476 390457 390070 389976 389547",
+      "ACTIVE_SEATS=",
+      "ONLINE_SEATS=",
+      ""
+    ],
+    "description": "",
+    "language": "bash",
+    "tags": []
+  },
+  {
+    "id": 433,
+    "title": "get encrypted password ",
+    "created": "2023-08-24T21:17:05Z",
+    "modified": "2023-08-24T21:17:05Z",
+    "code": [
+      "select rolname,rolpassword from pg_authid;",
+      "          rolname          |             rolpassword",
+      "---------------------------+-------------------------------------",
+      " pg_monitor                |",
+      " pg_read_all_settings      |",
+      " pg_read_all_stats         |",
+      " pg_stat_scan_tables       |",
+      " pg_read_server_files      |",
+      " pg_write_server_files     |",
+      " pg_execute_server_program |",
+      " pg_signal_backend         |",
+      " postgres                  | md5XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+      " pgs_monitor               | md5XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+      " awx                       | md5XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+      " awxdbusr               | md5XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+      " hashivaultcicd            | md5XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+      " rolehashivaultcicd        |",
+      " roledeploymentcicd        |",
+      "(15 rows)",
+      "",
+      ""
+    ],
+    "example": "",
+    "output": "",
+    "description": "",
+    "language": "sql",
+    "tags": []
+  },
+  {
+    "id": 432,
+    "title": "Informing user about errors",
+    "created": "2023-08-05T02:43:39Z",
+    "modified": "2023-08-05T02:43:39Z",
+    "code": [
+      "LOGFILE=\"log.log\"",
+      "exec 3>&1 1>\"$LOGFILE\" 2>&1",
+      "set -x",
+      "trap \"echo 'ERROR: An error occurred during execution, check log $LOGFILE for details.' >&3\" ERR"
+    ],
+    "example": "",
+    "output": "",
+    "description": "",
+    "language": "bash",
+    "tags": [],
+    "url": "https://blog.tratif.com/2023/01/09/bash-tips-1-logging-in-shell-scripts/"
+  },
+  {
     "id": 431,
     "title": "awk - filter out rows with column less than value",
     "created": "2023-08-04T18:49:53Z",
@@ -457,7 +648,7 @@
     "id": 420,
     "title": "git - create empty branch",
     "created": "2023-01-04T23:53:10Z",
-    "modified": "2023-01-04T23:53:10Z",
+    "modified": "2023-08-05T02:43:58Z",
     "code": [
       "# create new empty branch",
       "git checkout --orphan NEWBRANCH",
@@ -473,7 +664,9 @@
     "output": "",
     "description": "",
     "language": "bash",
-    "tags": [],
+    "tags": [
+      "git"
+    ],
     "url": "https://gist.github.com/ozh/4734410"
   },
   {
@@ -3257,7 +3450,7 @@
     "id": 335,
     "title": "jq - convert json to environment variables",
     "created": "2022-05-31T05:45:01Z",
-    "modified": "2022-05-31T05:45:01Z",
+    "modified": "2023-08-05T02:45:24Z",
     "code": [
       "jq -rc 'to_entries | map(\"\\(.key)=\\(.value)\")"
     ],
@@ -3299,7 +3492,9 @@
     "output": "",
     "description": "",
     "language": "bash",
-    "tags": [],
+    "tags": [
+      "jq"
+    ],
     "url": "https://www.dormant.ninja/export-json-to-env/"
   },
   {
@@ -3442,36 +3637,15 @@
     "id": 332,
     "title": "${0%/*} - get directory of running script",
     "created": "2022-05-27T08:07:07Z",
-    "modified": "2022-05-27T08:07:07Z",
+    "modified": "2023-08-05T02:46:45Z",
     "code": [
       "echo \"${0%/*}\""
     ],
-    "example": [
-      "$ tree ci/",
-      "ci/",
-      "├── check-directional-formatting.bash",
-      "├── config",
-      "│   └── allow-ref.sample",
-      "├── install-dependencies.sh",
-      "├── install-docker-dependencies.sh   ",
-      "├── lib.sh",
-      "├── make-test-artifacts.sh",
-      "├── mount-fileshare.sh",
-      "├── print-test-failures.sh",
-      "├── run-build-and-tests.sh",
-      "├── run-docker.sh",
-      "├── run-docker-build.sh",
-      "├── run-static-analysis.sh",
-      "├── run-test-slice.sh",
-      "├── test-documentation.sh",
-      "└── util",
-      "    └── extract-trash-dirs.sh       "
-    ],
+    "example": "",
     "output": "",
     "description": "",
     "language": "bash",
-    "tags": [],
-    "url": "https://github.com/git/git/blob/master/ci/run-docker-build.sh"
+    "tags": []
   },
   {
     "id": 331,
