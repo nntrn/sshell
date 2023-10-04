@@ -1,5 +1,103 @@
 [
   {
+    "id": 443,
+    "title": "node trigger diagnostic report",
+    "created": "2023-10-04T00:20:13Z",
+    "modified": "2023-10-04T00:20:13Z",
+    "code": [
+      "process.report.writeReport();"
+    ],
+    "example": "",
+    "output": "",
+    "description": [
+      "Delivers a JSON-formatted diagnostic summary, written to a file.",
+      "",
+      "The report is intended for development, test and production use, to capture and preserve information for problem determination. It includes JavaScript and native stack traces, heap statistics, platform information, resource usage etc. With the report option enabled, diagnostic reports can be triggered on unhandled exceptions, fatal errors and user signals, in addition to triggering programmatically through API calls.",
+      "",
+      "A complete example report that was generated on an uncaught exception is provided below for reference."
+    ],
+    "language": "bash",
+    "tags": [],
+    "url": "https://nodejs.org/dist/latest-v14.x/docs/api/report.html#report_configuration"
+  },
+  {
+    "id": 442,
+    "title": " create a symbolic link in Windows using PowerShell",
+    "created": "2023-10-03T23:50:58Z",
+    "modified": "2023-10-03T23:50:58Z",
+    "code": [
+      "New-Item -ItemType SymbolicLink -Path  \"/new/path/to/create/symbolic-link\" -Target \"/existing/path/to/target/for/symlink\"",
+      ""
+    ],
+    "example": [
+      "New-Item -ItemType SymbolicLink -Path  \"C:/cygwin/home/Annie_Tran/bin/node.exe\" -Target \"C:/Program Files/nodejs/node.exe\""
+    ],
+    "output": "",
+    "description": "",
+    "language": "powershell",
+    "tags": []
+  },
+  {
+    "id": 441,
+    "title": "prints free memory",
+    "created": "2023-10-02T21:30:45Z",
+    "modified": "2023-10-02T21:30:45Z",
+    "code": [
+      "available=$(awk '/^Cached/ { c=$2 } /^MemAvailable/ { a=$2 } END { printf \"%.0f\", (a + c)/1024  }' /proc/meminfo)",
+      "echo $available | awk '{ printf \"%0.2fGb\\n\", $1/1024 }'",
+      "",
+      ""
+    ],
+    "example": [
+      " awk '/^Cached/ { c=$2 } /^MemAvailable/ { a=$2 } END { printf \"%.0f\", (a + c)/1024  }' /proc/meminfo | awk '{ printf \"%0.2fGb\\n\", $1/1024 }'",
+      "23.47Gb",
+      ""
+    ],
+    "output": "",
+    "description": [
+      " Prints free memory in gigabytes. Sends urgent notification if usage is less than defined value.  Cached memory is considered free."
+    ],
+    "language": "bash",
+    "tags": [],
+    "url": "https://github.com/dmi3/bin/blob/master/memory-available.sh"
+  },
+  {
+    "id": 440,
+    "title": "print section of file based on line numbers",
+    "created": "2023-10-02T16:17:02Z",
+    "modified": "2023-10-02T16:17:02Z",
+    "code": [
+      "awk 'NR==<START>,NR==<END>'"
+    ],
+    "example": [
+      "$ seq 1 100 | awk 'NR==8,NR==12'",
+      "8",
+      "9",
+      "10",
+      "11",
+      "12"
+    ],
+    "output": "",
+    "description": "",
+    "language": "bash",
+    "tags": []
+  },
+  {
+    "id": 439,
+    "title": "awk: number each line",
+    "created": "2023-10-02T16:03:08Z",
+    "modified": "2023-10-02T16:03:08Z",
+    "code": [
+      "awk '{ print FNR \"\\t\" $0 }'"
+    ],
+    "example": "",
+    "output": "",
+    "description": "",
+    "language": "bash",
+    "tags": [],
+    "url": "https://catonmat.net/awk-one-liners-explained-part-one"
+  },
+  {
     "id": 438,
     "title": "numerical constants",
     "created": "2023-09-12T23:33:50Z",
