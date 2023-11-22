@@ -19,13 +19,148 @@ cd sshell
 
 ## bash
 
+### grep for ansible-vault files and unseal
+
+```bash
+echo 'abc123' >/path/to/vault-password.txt
+export ANSIBLE_VAULT_PASSWORD_FILE=/path/to/vault-password.txt
+VAULTFILES=($(grep -rl '$ANSIBLE_VAULT;' .))
+for i in "${VAULTFILES[@]}"; do
+  mkdir -p unsealed/${i%/*}
+  echo $i
+  ansible-vault view $i >unsealed/$i
+done
+
+```
+
+### Create a data URL from a file
+
+```bash
+dataurl() {
+  local mimeType=$(file -b --mime-type "$1")
+  if [[ $mimeType == text/* ]]; then
+    mimeType="${mimeType};charset=utf-8"
+  fi
+  echo "data:${mimeType};base64,$(openssl base64 -in "$1" | tr -d '\n')"
+}
+```
+
+### capture groups
+
+```bash
+TODAY=$(date +%F)
+regex="([0-9]{4})-([0-9]{2})-([0-9]{2})"
+if [[ $TODAY =~ $regex ]]; then
+  year="${BASH_REMATCH[1]}"
+  month="${BASH_REMATCH[2]}"
+  day="${BASH_REMATCH[3]}"
+  echo "$month $year"
+fi
+```
+
+### node trigger diagnostic report
+
+```bash
+process.report.writeReport();
+```
+
+### prints free memory
+
+```bash
+available=$(awk '/^Cached/ { c=$2 } /^MemAvailable/ { a=$2 } END { printf "%.0f", (a + c)/1024  }' /proc/meminfo)
+echo $available | awk '{ printf "%0.2fGb\n", $1/1024 }'
+
+
+```
+
+### print section of file based on line numbers
+
+```bash
+awk 'NR==<START>,NR==<END>'
+```
+
+### awk: number each line
+
+```bash
+awk '{ print FNR "\t" $0 }'
+```
+
+### numerical constants
+
+```bash
+# Decimal: the default
+$ let "dec = 32"
+$ echo "decimal number = $dec"
+32
+
+# Octal: numbers preceded by '0' (zero)
+$ let "oct = 032"
+$ echo "octal number = $oct"
+26
+
+# Hexadecimal: numbers preceded by '0x' or '0X'
+$ let "hex = 0x32"
+$ echo "hexadecimal number = $hex"
+50
+
+$ echo $((0x9abc))
+39612
+
+# Other bases: BASE#NUMBER
+# BASE between 2 and 64.
+# NUMBER must use symbols within the BASE range, see below.
+
+$ let "bin = 2#111100111001101"
+$ echo "binary number = $bin"
+31181
+
+$ let "b32 = 32#77"
+$ echo "base-32 number = $b32"
+231
+
+# This notation only works for a limited range (2 - 64) of ASCII characters.
+# 10 digits + 26 lowercase characters + 26 uppercase characters + @ + _
+$ let "b64 = 64#@_"
+$ echo "base-64 number = $b64"
+4031
+```
+
+### downloading certs
+
+```bash
+openssl s_client -showcerts -servername gitlab.com -connect gitlab.com:443 < /dev/null | openssl x509 > gitlab-cert.pem
+mv example gitlab-cert.pem /usr/local/share/ca-certificates/gitlab-cert.crt
+```
+
+### oneliner: print true color
+
+```bash
+for i in {1..255}; do echo -en "\e[38;5;${i}m[$i]\e[0m"; ! (($i%15)) && echo; done
+```
+
+### get active sessions on server
+
+```bash
+head -n 20 /run/systemd/users/[0-9]*
+
+```
+
+### Informing user about errors
+
+```bash
+LOGFILE="log.log"
+exec 3>&1 1>"$LOGFILE" 2>&1
+set -x
+trap "echo 'ERROR: An error occurred during execution, check log $LOGFILE for details.' >&3" ERR
+```
+
 ### awk - filter out rows with column less than value
 
 ```bash
 awk '$3 >= 1000'
 ```
 
-### true color vs 8bit 
+### true color vs 8bit
 
 ```bash
 # 8 bit (5;)
@@ -72,7 +207,7 @@ awk '{print length}'
 awk '{for(i=t=0;i<NF;) t+=$++i; $0=t}1'
 ```
 
-### gpg - verify the validity of cygwin setup binary 
+### gpg - verify the validity of cygwin setup binary
 
 ```bash
 # First, import the key with:
@@ -143,9 +278,9 @@ python3 -c 'from systemd import journal; journal.write("Hello Lennart")'
 
 $ journalctl -n 3
 -- Logs begin at Thu 2022-12-01 09:34:53 CST, end at Tue 2022-12-06 22:39:54 CST. --.
-Dec 06 22:39:21 awxserver02.us.example.com rc.local[1274]: oswbb heartbeat:Tue Dec 6 22:39:21 CST 2022
-Dec 06 22:39:51 awxserver02.us.example.com rc.local[1274]: oswbb heartbeat:Tue Dec 6 22:39:51 CST 2022
-Dec 06 22:39:54 awxserver02.us.example.com python3[109659]: Hello Lennart
+Dec 06 22:39:21 awxserver.example.com rc.local[1274]: oswbb heartbeat:Tue Dec 6 22:39:21 CST 2022
+Dec 06 22:39:51 awxserver.example.com rc.local[1274]: oswbb heartbeat:Tue Dec 6 22:39:51 CST 2022
+Dec 06 22:39:54 awxserver.example.com python3[109659]: Hello Lennart
 
 ```
 
@@ -271,7 +406,7 @@ jq 'group_by(.language)| map( {"\(.[0].language)":length}) |add'
 jq 'walk(if type == "array" then (.[0]) else . end)'
 ```
 
-### jq - merge files 
+### jq - merge files
 
 ```bash
 jq -s '.[0] + .[1]' file1.json file2.json
@@ -335,7 +470,7 @@ jq '..|objects|select(has("updateDate"))|.updateDate'
 rpm -q  --scripts <PACKAGE_NAME>
 ```
 
-### echo text N times 
+### echo text N times
 
 ```bash
 echo text{,,,,,,,,,,}
@@ -347,7 +482,7 @@ echo text{,,,,,,,,,,}
 yes "\\__/ " | tr "\n" " " | fold -$((($COLUMNS-3)/6*6+3)) | head -$LINES
 ```
 
-### get current time in seconds 
+### get current time in seconds
 
 ```bash
 printf '%(%s)T\n' -1
@@ -414,7 +549,7 @@ d
 
 ```
 
-### simple token generator 
+### simple token generator
 
 ```bash
 $ SALTSTRING=cheeseburger
@@ -492,7 +627,7 @@ sed '/<script>/,/<\/script>/d'
 awk '{$1=$1};1'
 ```
 
-### cleanup git folder 
+### cleanup git folder
 
 ```bash
 git reflog expire --expire=now --all
@@ -553,7 +688,7 @@ password
 echo -n | openssl s_client -connect $HOSTNAME:443
 ```
 
-### curl awx - view api 
+### curl awx - view api
 
 ```bash
 curl -s -k -u "admin:password" https://awxserver.example.com/api/v2/me/ | python -m json.tool
@@ -796,7 +931,7 @@ awk '!a[$0]++'  file.txt
 echo "..." | awk '!a[$0]++'  
 ```
 
-### ignore carriage return in windows 
+### ignore carriage return in windows
 
 ```bash
 set -o igncr
@@ -811,7 +946,7 @@ python3 -m json.tool file.json
 cat file.json | python3 -m json.tool
 ```
 
-### gitlab - create project 
+### gitlab - create project
 
 ```bash
 PROJECT_NAME=test
@@ -900,21 +1035,21 @@ git log --pretty=%h
 git gc --aggressive --prune=all 
 ```
 
-### github api - render a markdown document as an HTML page 
+### github api - render a markdown document as an HTML page
 
 ```bash
 curl -sL -X POST --data-binary @readme.md  https://api.github.com/markdown/raw --header "Content-Type:text/x-markdown" 
 
 ```
 
-### fuser - close tcp ports 
+### fuser - close tcp ports
 
 ```bash
 fuser -v -k -n tcp 443
 fuser -v -k -n tcp 80
 ```
 
-### openssl - create and verify CSR 
+### openssl - create and verify CSR
 
 ```bash
 # Creating Your CSR with One Command
@@ -927,7 +1062,7 @@ openssl req -new \
 openssl req -text -in $HOSTNAME.csr -noout -verify
 ```
 
-### unset variables beginning with 
+### unset variables beginning with
 
 ```bash
 unset "${!VSCODE@}"
@@ -947,7 +1082,7 @@ find . -type f -name "*.psd1" -print -exec cat {} \; | tr -d '\r' | tr -d '\0' |
 
 ```
 
-### curl - search dictionaries 
+### curl - search dictionaries
 
 ```bash
 # list dictionaries
@@ -980,7 +1115,7 @@ randomnumstring=$RANDOM$RANDOM$RANDOM
 echo "$text-to-scramble-numbers"  | tr "0123456789" $( echo ${randomnumstring:0:9})
 ```
 
-### netsh - find the processId for the registered urls 
+### netsh - find the processId for the registered urls
 
 ```bash
 netsh http show servicestate view=requestq verbose=no
@@ -1005,7 +1140,7 @@ pidstat -C "awx | postgres" -r -p ALL
 ip route show | grep docker0 | awk '{print $9}'
 ```
 
-### nmap - list open TCP ports 
+### nmap - list open TCP ports
 
 ```bash
 nmap -sT -O  10.171.230.150
@@ -1066,18 +1201,18 @@ SHA256(README)= d173e8ad75a8abbed8d21d4924ce145af7331f27a1a7b31e79e57271888ad54f
 
 ```bash
 $ openssl x509 -noout -in cert.pem -issuer
-issuer= /C=US/ST=Texas/L=Round Rock/O=Technologies/CN=Technologies Issuing CA 101
+issuer= /C=US/ST=Texas/L=Round Rock/O=example=Technologies/CN=example=Technologies Issuing CA 101
 
 $ openssl x509 -noout -in cert.pem -subject
-subject= /C=US/ST=Texas/L=Round Rock/O=example/OU=Digital/CN=awxserver02.us.example.com
+subject= /C=US/ST=Texas/L=Round Rock/O=example=OU=example=Digital/CN=awxserver.example.com
 
 $ openssl x509 -noout -in cert.pem -dates
 notBefore=Jul 14 18:17:08 2021 GMT
 notAfter=Jul 14 18:17:08 2023 GMT
 
 $ openssl x509 -noout -in cert.pem -issuer -subject -dates
-issuer= /C=US/ST=Texas/L=Round Rock/O=Technologies/CN=Technologies Issuing CA 101
-subject= /C=US/ST=Texas/L=Round Rock/O=example/OU=Digital/CN=awxserver02.us.example.com
+issuer= /C=US/ST=Texas/L=Round Rock/O=example=Technologies/CN=example=Technologies Issuing CA 101
+subject= /C=US/ST=Texas/L=Round Rock/O=example=OU=example=Digital/CN=awxserver.example.com
 notBefore=Jul 14 18:17:08 2021 GMT
 notAfter=Jul 14 18:17:08 2023 GMT
 
@@ -1101,13 +1236,13 @@ openssl ciphers -V 'AES+HIGH'
 sssctl --help
 ```
 
-### jq - decode base64 
+### jq - decode base64
 
 ```bash
 jq -r --arg key content '.[$key] | gsub("\n";"") | @base64d' 
 ```
 
-### sudo - show root entries only 
+### sudo - show root entries only
 
 ```bash
 sudo -ll | sed -n '/RunAsUsers: root/,/Sudoers entry/p'
@@ -1268,7 +1403,7 @@ uuidgen --sha1 --namespace @dns --name "string_to_hash"
 find . -mindepth 1 -maxdepth 1 -type d -ctime 0 -print
 ```
 
-### systemd-escape - escape strings 
+### systemd-escape - escape strings
 
 ```bash
 systemd-escape -u 'Hall\xc3\xb6chen\x2c\x20Meister'
@@ -1635,13 +1770,13 @@ esac
 ### get name server
 
 ```bash
- host -t ns example.com
+ host -t ns example com
 ```
 
 ### Check client certificate
 
 ```bash
-echo '' | openssl s_client -connect awxserver02.us.example.com:443 2>/dev/null | openssl x509 -text -noout | grep -A 1 "Public Key Algorithm"
+echo '' | openssl s_client -connect awxserver.example.com:443 2>/dev/null | openssl x509 -text -noout | grep -A 1 "Public Key Algorithm"
 ```
 
 ### Cleaning up the VS Code Server on the remote
@@ -1745,7 +1880,7 @@ ss -atpu
 ### sendmail template
 
 ```bash
-echo "To: annie_tran@example.com
+echo "To: annie_tran@example@com
 Subject: my subject
 Content-Type: text/html
 
@@ -1756,7 +1891,7 @@ $(cat test-html-email.html)" | sendmail -t
 ### sshpass - read ssh password from file
 
 ```bash
-sshpass -f .secrets/sshpass/svc_npdbmongos ssh -o StrictHostKeyChecking=no svc_npdbmongos@cfinlmdrprf17.us.example.com
+sshpass -f .secrets/sshpass/svc_npdbaasmongos ssh -o StrictHostKeyChecking=no svc_npdbaasmongos@cfiserver.example.com
 ```
 
 ### docker - resolve no space on device
@@ -1779,7 +1914,7 @@ du -h | sort -rh
 ### Getting Server Certificate
 
 ```bash
-$ openssl s_client -showcerts -connect awxserver02.us.example.com:80
+$ openssl s_client -showcerts -connect awxserver.example.com:80
 ```
 
 ### curl vault secrets
@@ -1787,7 +1922,7 @@ $ openssl s_client -showcerts -connect awxserver02.us.example.com:80
 ```bash
 VAULT_TOKEN=...
 
-curl -H "X-Vault-Namespace: infrastructure/database/engineering/tools/dbv2/dbv2/" -H "X-Vault-Request: true" -H "X-Vault-Token: $VAULT_TOKEN" https://hcvault-nonprod.example.com/v1/kv/data/SERVICE_ACCOUNT/MONGO/NONPROD
+curl -H "X-Vault-Namespace: infrastructure/database/engineering/tools/dbaasv2/dbaasv2/" -H "X-Vault-Request: true" -H "X-Vault-Token: $VAULT_TOKEN" https://hcvault-nonprod.example.com/v1/kv/data/SERVICE_ACCOUNT/MONGO/NONPROD
 ```
 
 ### get git symlink files
@@ -1915,7 +2050,7 @@ yum list docker-engine --showduplicates
 grep '^Umask:' "/proc/$$/status"
 ```
 
-### getfactl - get user, group, and perm 
+### getfactl - get user, group, and perm
 
 ```bash
 getfacl linux
@@ -2275,7 +2410,7 @@ $ key=$(echo "$abc" | sed 's,\(.\),\1\n,g' | shuf | tr -d '\n')
 sed -n '/^\[mongo:children.*/,$p'
 ```
 
-### sed - delete rows after pattern 
+### sed - delete rows after pattern
 
 ```bash
 cat playbooks/hosts/prod.ini | sed -e '/^\[mongo:children/,+5000d'
@@ -2297,7 +2432,7 @@ cat .bash_history | grep -vE "^#[0-9]+" | sort | uniq -c | sort -k 1 -n | less
 ### self sign cert (generate private key, csr, and crt)
 
 ```bash
-openssl req -new -newkey rsa:4096 -nodes -keyout "private.key" -out "$(hostname -f).csr" -subj "/C=US/ST=Texas/L=Round Rock/O=example/OU=Digital/CN=$(hostname -f)"
+openssl req -new -newkey rsa:4096 -nodes -keyout "private.key" -out "$(hostname -f).csr" -subj "/C=US/ST=Texas/L=Round Rock/O=example=OU=example=Digital/CN=$(hostname -f)"
 
 openssl x509 -signkey private.key -in $(hostname -f).csr -req -days 365 -out $(hostname).crt
 ```
@@ -2397,13 +2532,13 @@ openssl genpkey -algorithm ed25519
 ### rsync
 
 ```bash
-rsync -avr -o -g filename.txt user@hostname.us.example.com:/home/annie_tran
+rsync -avr -o -g filename.txt user@hosserver.example.com:/home/annie_tran
 ```
 
 ### create csr request
 
 ```bash
-openssl req -new -newkey rsa:4096 -nodes -keyout "private.key" -out "$(hostname -f).csr" -subj "/C=US/ST=Texas/L=Round Rock/O=example/OU=Digital/CN=$(hostname -f)"
+openssl req -new -newkey rsa:4096 -nodes -keyout "private.key" -out "$(hostname -f).csr" -subj "/C=US/ST=Texas/L=Round Rock/O=example=OU=example=Digital/CN=$(hostname -f)"
 ```
 
 ### print markdown docs not in node_modules
@@ -2641,7 +2776,7 @@ ps -ef | awk -v m="\x01" -v N="8" '{$N=m$N ;print substr($0, index($0,m)+1)}'
 
 ```
 
-### set timeout for script 
+### set timeout for script
 
 ```bash
 /bin/timeout -s 2 10 /path/to/your/script.sh
@@ -2669,8 +2804,8 @@ export $(egrep -v '^#' "path/to/file" | xargs)
 ### umask create file with permissions
 
 ```bash
-(umask 077; touch file)  # creates a 600 (rw-------) file
-(umask 002; touch file)  # creates a 664 (rw-rw-r--) file
+(umask 077; touch file)  # creates a 600 (rw-------) file
+(umask 002; touch file)  # creates a 664 (rw-rw-r--) file
 ```
 
 ### pip show for all pip installed
@@ -2687,9 +2822,9 @@ shopt -s nullglob
 shopt -s nocaseglob
 
 ls +(.*) | while read file; do
-  echo $file
-  set -- $file
-  [[ ! -z $2 ]] && echo "$1$2"
+  echo $file
+  set -- $file
+  [[ ! -z $2 ]] && echo "$1$2"
 done
 ```
 
@@ -2708,7 +2843,7 @@ mkdir -p dockerimagedir
 docker save $(docker images -q) -o "$dockerimagedir/$(hostname -a).tar"
 docker images | sed '1d' | awk '{print $1 " " $2 " " $3}' >  "$dockerimagedir/docker-images.list"
 
-rsync -avr  -o -g $dockerimagedir servicedb@awxserver02.us.example.com:/home/servicedb
+rsync -avr  -o -g $dockerimagedir servicedbaas@awxserver.example.com:/home/servicedbaas
 
 docker load -i /path/to/save/mydockersimages.tar
 
@@ -2722,7 +2857,7 @@ done < "$dockerimagedir/docker-images.list"
 ### pip install requirements one line
 
 ```bash
- pip install --upgrade  $(cat requirements.txt | grep -o "^[^#].*")
+ pip install --upgrade  $(cat requirements.txt | grep -o "^[^#].*")
 ```
 
 ### print env variables that start with S
@@ -2746,9 +2881,9 @@ echo -e $html | grep -Eo "<title>(.*)</title>"
 ### rsync with exclude
 
 ```bash
-rsync -avr --exclude={'dbv2-awx','*.rpm'} -o -g /home/servicedb servicedb@awxserver02.us.example.com:/home/servicedb/01
+rsync -avr --exclude={'dbaasv2-awx','*.rpm'} -o -g /home/servicedbaas servicedbaas@awxserver.example.com:/home/servicedbaas/01
 
-rsync -avr --exclude={'dbv2-awx','ansible'} -o -g db annie_tran@auspslpltinf1.us.example.com:/home/annie_tran
+rsync -avr --exclude={'dbaasv2-awx','ansible'} -o -g dbaas annie_tran@ausserver.example.com:/home/annie_tran
 
 
 ```
@@ -2759,7 +2894,7 @@ rsync -avr --exclude={'dbv2-awx','ansible'} -o -g db annie_tran@auspslpltinf1.us
 find /etc/pki -type f ! -name "*cacerts*" -print -exec cat {} \; | less
 ```
 
-### hash directory 
+### hash directory
 
 ```bash
 find . -type f -print0 | sort -z | xargs -r0 sha256sum  sha256SumOutput
@@ -2854,7 +2989,7 @@ useradd -p $(openssl passwd -1 $PASS) $USER
 ### sending email
 
 ```bash
-mail -s "$(echo -e "SAR files\nContent-Type: text/html")" annie_tran@example.com <allsar.txt
+mail -s "$(echo -e "SAR files\nContent-Type: text/html")" annie_tran@example@com <allsar.txt
 
 ```
 
@@ -2891,7 +3026,7 @@ find . -maxdepth 3 -name .git -type d | cut -d '/' -f1,2 | xargs -I {} git -C {}
 ### view file structure (tree)
 
 ```bash
-ls -R | grep ":$" | sed -e 's/:$//' -e 's/[^-][^\/]*\//--/g' -e 's/^/   /' -e 's/-/|/'
+ls -R | grep ":$" | sed -e 's/:$//' -e 's/[^-][^\/]*\//--/g' -e 's/^/   /' -e 's/-/|/'
 ```
 
 ### List full paths for recursive files with grep and awk
@@ -2988,6 +3123,18 @@ openssl genpkey -out fd.key -algorithm RSA -pkeyopt rsa_keygen_bits:2048 -aes-12
 
 ## cmd
 
+### install optional feature using dism
+
+```cmd
+# get feature name
+DISM.exe /Online /Get-Capabilities | find "Rsat.Active"
+
+# download
+DISM /Online /Add-Capability /CapabilityName:Rsat.ActiveDirectory.DS-LDS.Tools~~~~0.0.1.0
+
+
+```
+
 ### Windows 10 TCP/IP Reset
 
 ```cmd
@@ -3034,7 +3181,7 @@ dism /online /cleanup-image /restorehealth
 ### view service account owner
 
 ```cmd
-net user /domain svc_npdboraos
+net user /domain svc_npdbaasoraos
 ```
 
 [Top](#top)
@@ -3216,13 +3363,20 @@ location / {
 
 ## powershell
 
-###  Get-ComputerInfo
+### create a symbolic link in Windows using PowerShell
+
+```powershell
+New-Item -ItemType SymbolicLink -Path  "/new/path/to/create/symbolic-link" -Target "/existing/path/to/target/for/symlink"
+
+```
+
+### Get-ComputerInfo
 
 ```powershell
 Get-ComputerInfo -Property * | convertto-json
 ```
 
-### get-eventlog 
+### get-eventlog
 
 ```powershell
 get-eventlog -list
@@ -3380,7 +3534,7 @@ Get-ADGroupMember -Identity "dbsecuritygroup" -Recursive
 ### get all service accounts owned by user
 
 ```powershell
-Get-ADUser -Filter "employeeType -eq 'Service' -and OwnerID -eq 123456" -Properties * | FT Name,PasswordLastSet
+Get-ADUser -Filter "employeeType -eq 'Service' -and OwnerID -eq 873846" -Properties * | FT Name,PasswordLastSet
 ```
 
 ### Get services with search string
@@ -3486,7 +3640,7 @@ python3 -c 'print("\n".join(line.split(":",1)[0] for line in open("/etc/passwd")
 python3 -c "import yaml, json, sys; sys.stdout.write(yaml.dump(json.load(sys.stdin)))"
 ```
 
-### venv 
+### venv
 
 ```python
 python -m venv .venv
@@ -3516,6 +3670,41 @@ for svc in cred_names:
 [Top](#top)
 
 ## sql
+
+### postgres - password md5
+
+```sql
+select md5('passwordpostgres');
+
+CREATE USER postgres PASSWORD 'md532e12f215ba27cb750c9e093ce4b5127';
+
+```
+
+### get encrypted password
+
+```sql
+select rolname,rolpassword from pg_authid;
+          rolname          |             rolpassword
+---------------------------+-------------------------------------
+ pg_monitor                |
+ pg_read_all_settings      |
+ pg_read_all_stats         |
+ pg_stat_scan_tables       |
+ pg_read_server_files      |
+ pg_write_server_files     |
+ pg_execute_server_program |
+ pg_signal_backend         |
+ postgres                  | md5XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+ pgs_monitor               | md5XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+ awx                       | md5XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+ awxdbaasusr               | md5XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+ hashivaultcicd            | md5XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+ rolehashivaultcicd        |
+ roledeploymentcicd        |
+(15 rows)
+
+
+```
 
 ### awx_postgres - get hostname ids for api
 
