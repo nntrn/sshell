@@ -1,5 +1,21 @@
 [
   {
+    "id": 448,
+    "title": "psql - export table as json",
+    "modified": "2023-11-28T20:07:42Z",
+    "created": "2023-11-27T20:14:08Z",
+    "code": [
+      "\\pset tuples_only",
+      "SELECT array_to_json(array_agg(row_to_json(u))) FROM table_name u;"
+    ],
+    "tags": null,
+    "description": "",
+    "example": "",
+    "output": "",
+    "language": "bash",
+    "url": "https://attacomsian.com/blog/export-postgresql-table-data-json/"
+  },
+  {
     "id": 447,
     "title": "grep for ansible-vault files and unseal",
     "modified": "2023-11-22T16:39:24Z",
@@ -22,7 +38,7 @@
     "example": "",
     "output": "",
     "language": "bash",
-    "url": ""
+    "url": "https://attacomsian.com/blog/export-postgresql-table-data-json/"
   },
   {
     "id": 446,

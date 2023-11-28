@@ -19,6 +19,13 @@ cd sshell
 
 ## bash
 
+### psql - export table as json
+
+```bash
+\pset tuples_only
+SELECT array_to_json(array_agg(row_to_json(u))) FROM table_name u;
+```
+
 ### grep for ansible-vault files and unseal
 
 ```bash
