@@ -1,18 +1,53 @@
 [
   {
-    "id": 448,
-    "title": "psql - export table as json",
-    "modified": "2023-11-28T20:07:42Z",
-    "created": "2023-11-27T20:14:08Z",
+    "id": 450,
+    "title": "get self-signed certificate of the remote server",
+    "modified": "2023-12-08T18:44:53Z",
+    "created": "2023-12-08T18:44:53Z",
     "code": [
-      "\\pset tuples_only",
-      "SELECT array_to_json(array_agg(row_to_json(u))) FROM table_name u;"
+      " echo | openssl s_client -connect HOST:PORT | sed -ne '/-BEGIN CERTIFICATE-/,/-END CERTIFICATE-/p' > cacert.pem"
+    ],
+    "tags": null,
+    "description": "",
+    "example": [
+      "echo exit | openssl s_client -showcerts -connect gitlab.example.com:443 | sed -ne '/-BEGIN CERTIFICATE-/,/-END CERTIFICATE-/p' >gitlab-cacert.pem"
+    ],
+    "output": "",
+    "language": "bash",
+    "url": ""
+  },
+  {
+    "id": 449,
+    "title": "docker run",
+    "modified": "2023-12-01T18:08:44Z",
+    "created": "2023-12-01T18:08:44Z",
+    "code": [
+      "docker run -d -p 8088:80 --name welcome-to-docker docker/welcome-to-docker",
+      ""
     ],
     "tags": null,
     "description": "",
     "example": "",
     "output": "",
     "language": "bash",
+    "url": ""
+  },
+  {
+    "id": 448,
+    "title": "psql - export table as json",
+    "modified": "2023-11-29T00:52:23Z",
+    "created": "2023-11-27T20:14:08Z",
+    "code": [
+      "\\pset tuples_only",
+      "SELECT array_to_json(array_agg(row_to_json(u))) FROM table_name u;"
+    ],
+    "tags": [
+      "db"
+    ],
+    "description": "",
+    "example": "",
+    "output": "",
+    "language": "sql",
     "url": "https://attacomsian.com/blog/export-postgresql-table-data-json/"
   },
   {
@@ -64,7 +99,7 @@
   {
     "id": 445,
     "title": "capture groups",
-    "modified": "2023-11-13T21:55:49Z",
+    "modified": "2023-11-29T00:52:57Z",
     "created": "2023-11-13T21:55:23Z",
     "code": [
       "TODAY=$(date +%F)",
@@ -76,7 +111,9 @@
       "  echo \"$month $year\"",
       "fi"
     ],
-    "tags": null,
+    "tags": [
+      "regex"
+    ],
     "description": "",
     "example": [
       "BASH_REMATCH=([0]=\"2023-11-13\" [1]=\"2023\" [2]=\"11\" [3]=\"13\")"
@@ -125,12 +162,14 @@
   {
     "id": 443,
     "title": "node trigger diagnostic report",
-    "modified": "2023-10-04T00:20:13Z",
+    "modified": "2023-11-29T00:53:22Z",
     "created": "2023-10-04T00:20:13Z",
     "code": [
       "process.report.writeReport();"
     ],
-    "tags": null,
+    "tags": [
+      "nodejs"
+    ],
     "description": [
       "Delivers a JSON-formatted diagnostic summary, written to a file.",
       "",
@@ -140,7 +179,7 @@
     ],
     "example": "",
     "output": "",
-    "language": "bash",
+    "language": "javascript",
     "url": "https://nodejs.org/dist/latest-v14.x/docs/api/report.html#report_configuration"
   },
   {
@@ -164,7 +203,7 @@
   {
     "id": 441,
     "title": "prints free memory",
-    "modified": "2023-10-02T21:30:45Z",
+    "modified": "2023-11-29T00:53:51Z",
     "created": "2023-10-02T21:30:45Z",
     "code": [
       "available=$(awk '/^Cached/ { c=$2 } /^MemAvailable/ { a=$2 } END { printf \"%.0f\", (a + c)/1024  }' /proc/meminfo)",
@@ -172,12 +211,14 @@
       "",
       ""
     ],
-    "tags": null,
+    "tags": [
+      "awk"
+    ],
     "description": [
       " Prints free memory in gigabytes. Sends urgent notification if usage is less than defined value.  Cached memory is considered free."
     ],
     "example": [
-      " awk '/^Cached/ { c=$2 } /^MemAvailable/ { a=$2 } END { printf \"%.0f\", (a + c)/1024  }' /proc/meminfo | awk '{ printf \"%0.2fGb\\n\", $1/1024 }'",
+      "$ awk '/^Cached/ { c=$2 } /^MemAvailable/ { a=$2 } END { printf \"%.0f\", (a + c)/1024  }' /proc/meminfo | awk '{ printf \"%0.2fGb\\n\", $1/1024 }'",
       "23.47Gb",
       ""
     ],
@@ -188,12 +229,14 @@
   {
     "id": 440,
     "title": "print section of file based on line numbers",
-    "modified": "2023-10-02T16:17:02Z",
+    "modified": "2023-11-29T00:54:05Z",
     "created": "2023-10-02T16:17:02Z",
     "code": [
       "awk 'NR==<START>,NR==<END>'"
     ],
-    "tags": null,
+    "tags": [
+      "awk"
+    ],
     "description": "",
     "example": [
       "$ seq 1 100 | awk 'NR==8,NR==12'",
@@ -4920,17 +4963,17 @@
     ],
     "description": [
       "`--aggressive`",
-      "Usually *git gc* runs very quickly while providing good disk space utilization and performance. This option will cause *git gc* to more aggressively optimize the repository at the expense of taking much more time. The effects of this optimization are mostly persistent. See the \"AGGRESSIVE\" section below for details.",
+      "Usually *git gc* runs very quickly while providing good disk space utilization and performance. This option will cause *git gc* to more aggressively optimize the repository at the expense of taking much more time. The effects of this optimization are mostly persistent. See the \"AGGRESSIVE\" section below for details.",
       "",
       "`--auto`",
-      "With this option, *git gc* checks whether any housekeeping is required; if not, it exits without performing any work.",
+      "With this option, *git gc* checks whether any housekeeping is required; if not, it exits without performing any work.",
       "",
-      "See the `gc.auto` option in the \"CONFIGURATION\" section below for how this heuristic works.",
+      "See the `gc.auto` option in the \"CONFIGURATION\" section below for how this heuristic works.",
       "",
-      "Once housekeeping is triggered by exceeding the limits of configuration options such as `gc.auto` and `gc.autoPackLimit`, all other housekeeping tasks (e.g. rerere, working trees, reflog...​) will be performed as well.",
+      "Once housekeeping is triggered by exceeding the limits of configuration options such as `gc.auto` and `gc.autoPackLimit`, all other housekeeping tasks (e.g. rerere, working trees, reflog...​) will be performed as well.",
       "",
       "`--prune=<date>`",
-      "Prune loose objects older than date (default is 2 weeks ago, overridable by the config variable `gc.pruneExpire`). --prune=now prunes loose objects regardless of their age and increases the risk of corruption if another process is writing to the repository concurrently; see \"NOTES\" below. --prune is on by default.",
+      "Prune loose objects older than date (default is 2 weeks ago, overridable by the config variable `gc.pruneExpire`). --prune=now prunes loose objects regardless of their age and increases the risk of corruption if another process is writing to the repository concurrently; see \"NOTES\" below. --prune is on by default.",
       "",
       "`--no-prune`",
       "Do not prune any loose objects.",
@@ -4939,10 +4982,10 @@
       "Suppress all progress reports.",
       "",
       "`--force`",
-      "Force `git gc` to run even if there may be another `git gc` instance running on this repository.",
+      "Force `git gc` to run even if there may be another `git gc` instance running on this repository.",
       "",
       "`--keep-largest-pack`",
-      "All packs except the largest pack and those marked with a `.keep` files are consolidated into a single pack. When this option is used, `gc.bigPackThreshold` is ignored."
+      "All packs except the largest pack and those marked with a `.keep` files are consolidated into a single pack. When this option is used, `gc.bigPackThreshold` is ignored."
     ],
     "example": "",
     "output": "",
@@ -13084,8 +13127,8 @@
     "modified": "2021-12-30T19:44:09Z",
     "created": "2021-05-06T23:59:24Z",
     "code": [
-      "(umask 077; touch file)  # creates a 600 (rw-------) file",
-      "(umask 002; touch file)  # creates a 664 (rw-rw-r--) file"
+      "(umask 077; touch file)  # creates a 600 (rw-------) file",
+      "(umask 002; touch file)  # creates a 664 (rw-rw-r--) file"
     ],
     "tags": null,
     "description": "",
@@ -13122,9 +13165,9 @@
       "shopt -s nocaseglob",
       "",
       "ls +(.*) | while read file; do",
-      "  echo $file",
-      "  set -- $file",
-      "  [[ ! -z $2 ]] && echo \"$1$2\"",
+      "  echo $file",
+      "  set -- $file",
+      "  [[ ! -z $2 ]] && echo \"$1$2\"",
       "done"
     ],
     "tags": null,
@@ -13188,7 +13231,7 @@
     "modified": "2021-12-30T19:44:09Z",
     "created": "2021-05-05T03:22:19Z",
     "code": [
-      " pip install --upgrade  $(cat requirements.txt | grep -o \"^[^#].*\")"
+      " pip install --upgrade  $(cat requirements.txt | grep -o \"^[^#].*\")"
     ],
     "tags": [
       "python"
@@ -13768,7 +13811,7 @@
     "modified": "2021-12-30T19:44:08Z",
     "created": "2021-03-12T22:08:24Z",
     "code": [
-      "ls -R | grep \":$\" | sed -e 's/:$//' -e 's/[^-][^\\/]*\\//--/g' -e 's/^/   /' -e 's/-/|/'"
+      "ls -R | grep \":$\" | sed -e 's/:$//' -e 's/[^-][^\\/]*\\//--/g' -e 's/^/   /' -e 's/-/|/'"
     ],
     "tags": [
       "system"

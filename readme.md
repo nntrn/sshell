@@ -19,11 +19,17 @@ cd sshell
 
 ## bash
 
-### psql - export table as json
+### get self-signed certificate of the remote server
 
 ```bash
-\pset tuples_only
-SELECT array_to_json(array_agg(row_to_json(u))) FROM table_name u;
+ echo | openssl s_client -connect HOST:PORT | sed -ne '/-BEGIN CERTIFICATE-/,/-END CERTIFICATE-/p' > cacert.pem
+```
+
+### docker run
+
+```bash
+docker run -d -p 8088:80 --name welcome-to-docker docker/welcome-to-docker
+
 ```
 
 ### grep for ansible-vault files and unseal
@@ -63,12 +69,6 @@ if [[ $TODAY =~ $regex ]]; then
   day="${BASH_REMATCH[3]}"
   echo "$month $year"
 fi
-```
-
-### node trigger diagnostic report
-
-```bash
-process.report.writeReport();
 ```
 
 ### prints free memory
@@ -2811,8 +2811,8 @@ export $(egrep -v '^#' "path/to/file" | xargs)
 ### umask create file with permissions
 
 ```bash
-(umask 077; touch file)  # creates a 600 (rw-------) file
-(umask 002; touch file)  # creates a 664 (rw-rw-r--) file
+(umask 077; touch file)  # creates a 600 (rw-------) file
+(umask 002; touch file)  # creates a 664 (rw-rw-r--) file
 ```
 
 ### pip show for all pip installed
@@ -2829,9 +2829,9 @@ shopt -s nullglob
 shopt -s nocaseglob
 
 ls +(.*) | while read file; do
-  echo $file
-  set -- $file
-  [[ ! -z $2 ]] && echo "$1$2"
+  echo $file
+  set -- $file
+  [[ ! -z $2 ]] && echo "$1$2"
 done
 ```
 
@@ -2864,7 +2864,7 @@ done < "$dockerimagedir/docker-images.list"
 ### pip install requirements one line
 
 ```bash
- pip install --upgrade  $(cat requirements.txt | grep -o "^[^#].*")
+ pip install --upgrade  $(cat requirements.txt | grep -o "^[^#].*")
 ```
 
 ### print env variables that start with S
@@ -3033,7 +3033,7 @@ find . -maxdepth 3 -name .git -type d | cut -d '/' -f1,2 | xargs -I {} git -C {}
 ### view file structure (tree)
 
 ```bash
-ls -R | grep ":$" | sed -e 's/:$//' -e 's/[^-][^\/]*\//--/g' -e 's/^/   /' -e 's/-/|/'
+ls -R | grep ":$" | sed -e 's/:$//' -e 's/[^-][^\/]*\//--/g' -e 's/^/   /' -e 's/-/|/'
 ```
 
 ### List full paths for recursive files with grep and awk
@@ -3207,6 +3207,12 @@ Host *
 [Top](#top)
 
 ## javascript
+
+### node trigger diagnostic report
+
+```javascript
+process.report.writeReport();
+```
 
 ### d3 - parse csv from string
 
@@ -3677,6 +3683,13 @@ for svc in cred_names:
 [Top](#top)
 
 ## sql
+
+### psql - export table as json
+
+```sql
+\pset tuples_only
+SELECT array_to_json(array_agg(row_to_json(u))) FROM table_name u;
+```
 
 ### postgres - password md5
 
