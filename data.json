@@ -1,5 +1,22 @@
 [
   {
+    "id": 451,
+    "title": "Exclude item from object in powershell",
+    "modified": "2024-01-10T04:19:59Z",
+    "created": "2024-01-10T04:19:59Z",
+    "code": [
+      "Select-Object -Property * -ExcludeProperty item1,item2"
+    ],
+    "tags": null,
+    "description": "",
+    "example": [
+      "Get-ADUser -identity Annie_Tran -Properties * |  Select-Object -Property * -ExcludeProperty thumbnailPhoto,PropertyNames "
+    ],
+    "output": "",
+    "language": "powershell",
+    "url": ""
+  },
+  {
     "id": 450,
     "title": "get self-signed certificate of the remote server",
     "modified": "2023-12-08T18:44:53Z",

@@ -3376,6 +3376,12 @@ location / {
 
 ## powershell
 
+### Exclude item from object in powershell
+
+```powershell
+Select-Object -Property * -ExcludeProperty item1,item2
+```
+
 ### create a symbolic link in Windows using PowerShell
 
 ```powershell
