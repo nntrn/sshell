@@ -7570,25 +7570,31 @@
   {
     "id": 261,
     "title": "convert json to yaml from stdin",
-    "modified": "2022-06-01T23:11:22Z",
+    "modified": "2024-01-11T22:49:06Z",
     "created": "2022-03-30T15:49:09Z",
     "code": [
-      "python3 -c \"import yaml, json, sys; sys.stdout.write(yaml.dump(json.load(sys.stdin)))\""
+      "python -c 'import yaml, json, sys; yaml.safe_dump(json.load(sys.stdin), sys.stdout, default_flow_style=False)'",
+      "",
+      "# create alias",
+      "alias json2yaml=\"python -c 'import yaml, json, sys; yaml.safe_dump(json.load(sys.stdin), sys.stdout, default_flow_style=False)'\""
     ],
     "tags": null,
     "description": "",
     "example": [
-      "# run in shell",
-      "cat file.json | python -c 'import yaml, json, sys; sys.stdout.write(yaml.dump(json.load(sys.stdin)))'",
+      "$ cat vault.json",
+      "{",
+      "  \"become_method\": \"\",",
+      "  \"become_username\": \"root\",",
+      "  \"password\": \"password\",",
+      "  \"username\": \"user\"",
+      "}",
       "",
-      "# create alias",
-      "alias json2yaml=\"python -c 'import yaml, json, sys; sys.stdout.write(yaml.dump(json.load(sys.stdin)))'\"",
-      "",
-      "$ echo '{\"dirs\": [1,2,3]}' | python3 -c \"import yaml, json, sys; sys.stdout.write(yaml.dump(json.load(sys.stdin)))\"",
-      "dirs:",
-      "- 1",
-      "- 2",
-      "- 3"
+      "$ cat vault.json | json2yaml",
+      "become_method: ''",
+      "become_username: root",
+      "password: password",
+      "username: user",
+      ""
     ],
     "output": "",
     "language": "python",

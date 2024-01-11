@@ -3656,7 +3656,10 @@ python3 -c 'print("\n".join(line.split(":",1)[0] for line in open("/etc/passwd")
 ### convert json to yaml from stdin
 
 ```python
-python3 -c "import yaml, json, sys; sys.stdout.write(yaml.dump(json.load(sys.stdin)))"
+python -c 'import yaml, json, sys; yaml.safe_dump(json.load(sys.stdin), sys.stdout, default_flow_style=False)'
+
+# create alias
+alias json2yaml="python -c 'import yaml, json, sys; yaml.safe_dump(json.load(sys.stdin), sys.stdout, default_flow_style=False)'"
 ```
 
 ### venv
