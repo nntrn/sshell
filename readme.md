@@ -3693,6 +3693,28 @@ for svc in cred_names:
 
 ## sql
 
+### psql - preview all tables
+
+```sql
+\! mkdir psql
+\pset tuples_only on
+\pset pager off
+\pset format unaligned
+
+\o psql/script-:HOST.psql
+
+\qecho '\\pset expanded on'
+\qecho '\\set'
+
+SELECT '\qecho ' || table_name || chr(10) || 'select * from ' || table_name || ' limit 1;'  ||chr(10) || '\qecho ' || '' FROM information_schema.tables  WHERE table_schema = 'public' ;
+
+\o /dev/stdout
+
+\echo psql --output=psql/tables-:HOST.txt --file=psql/script-:HOST.psql
+
+\echo '\npsql --output=psql/tables-':HOST'.txt --file=psql/script-':HOST'.psql\n'
+```
+
 ### psql - export table as json
 
 ```sql
