@@ -1,5 +1,66 @@
 [
   {
+    "id": 455,
+    "title": "gitconfig includeif",
+    "modified": "2024-01-30T19:00:57Z",
+    "created": "2024-01-30T19:00:57Z",
+    "code": [
+      "[includeIf \"hasconfig:remote.*.url:https://github.com/**\"]",
+      "path = ~/.gitconfig-github",
+      "",
+      "[includeIf \"hasconfig:remote.*.url:https://gist.github.com/**\"]",
+      "path = ~/.gitconfig-github",
+      "",
+      "[includeIf \"hasconfig:remote.origin.url:git@gist.github.com:.*\"]",
+      "path = ~/.gitconfig-github",
+      "",
+      "[includeIf \"hasconfig:remote.*.url:https://gitlab.example.com/**\"]",
+      "path = ~/.gitconfig-gitlab",
+      "",
+      "[includeIf \"gitdir:C:/cygwin/opt/gitlab/\"]",
+      "path = ~/.gitconfig-gitlab"
+    ],
+    "tags": null,
+    "description": "",
+    "example": "",
+    "output": "",
+    "language": "config",
+    "url": ""
+  },
+  {
+    "id": 454,
+    "title": "Uninstall app package",
+    "modified": "2024-01-22T20:39:40Z",
+    "created": "2024-01-22T20:39:40Z",
+    "code": [
+      "Get-AppxPackage *OneDrive* | Remove-AppxPackage"
+    ],
+    "tags": null,
+    "description": "",
+    "example": "",
+    "output": "",
+    "language": "powershell",
+    "url": ""
+  },
+  {
+    "id": 453,
+    "title": "check if private key has a passphrase",
+    "modified": "2024-01-22T20:37:17Z",
+    "created": "2024-01-22T20:37:17Z",
+    "code": [
+      "ssh-keygen -y -P \"\" -f ~/.ssh/id_rsa"
+    ],
+    "tags": null,
+    "description": "",
+    "example": [
+      "$ ssh-keygen -y -P \"\" -f ~/.ssh/id_rsa",
+      "Load key \"/home/Annie_Tran/.ssh/id_rsa\": incorrect passphrase supplied to decrypt private key"
+    ],
+    "output": "",
+    "language": "bash",
+    "url": ""
+  },
+  {
     "id": 452,
     "title": "psql - preview all tables",
     "modified": "2024-01-17T01:14:12Z",
@@ -50,15 +111,17 @@
   {
     "id": 450,
     "title": "get self-signed certificate of the remote server",
-    "modified": "2023-12-08T18:44:53Z",
+    "modified": "2024-01-30T18:58:23Z",
     "created": "2023-12-08T18:44:53Z",
     "code": [
-      " echo | openssl s_client -connect HOST:PORT | sed -ne '/-BEGIN CERTIFICATE-/,/-END CERTIFICATE-/p' > cacert.pem"
+      "echo exit | openssl s_client -connect HOST:PORT | sed -ne '/-BEGIN CERTIFICATE-/,/-END CERTIFICATE-/p' > cacert.pem"
     ],
     "tags": null,
     "description": "",
     "example": [
-      "echo exit | openssl s_client -showcerts -connect gitlab.example.com:443 | sed -ne '/-BEGIN CERTIFICATE-/,/-END CERTIFICATE-/p' >gitlab-cacert.pem"
+      "echo exit | openssl s_client -showcerts -connect gitlab.example.com:443 | sed -ne '/-BEGIN CERTIFICATE-/,/-END CERTIFICATE-/p' >gitlab-cacert.pem",
+      "",
+      "git config --global http.sslCAInfo gitlab-cacert.pem"
     ],
     "output": "",
     "language": "bash",
@@ -876,7 +939,7 @@
   {
     "id": 425,
     "title": "unicode chart",
-    "modified": "2023-07-31T22:23:11Z",
+    "modified": "2024-01-30T19:02:13Z",
     "created": "2023-06-27T15:58:53Z",
     "code": [
       "(for k in {0..3}; do for j in {0..9}; do for i in {10..99}; do echo -e \"u${k}${j}${i} \\u${k}${j}${i}\"; done; done; done)"
@@ -884,7 +947,20 @@
     "tags": null,
     "description": "",
     "example": "",
-    "output": "",
+    "output": [
+      "u0023 #",
+      "u0024 $",
+      "u0025 %",
+      "u0026 &",
+      "u0027 '",
+      "u0028 (",
+      "u0029 )",
+      "u0030 0",
+      "u0031 1",
+      "u0032 2",
+      "u0033 3",
+      "u0034 4"
+    ],
     "language": "bash",
     "url": "https://www.freedesktop.org/wiki/Software/systemd/TipsAndTricks/"
   },

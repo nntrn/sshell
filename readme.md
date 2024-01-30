@@ -19,10 +19,16 @@ cd sshell
 
 ## bash
 
+### check if private key has a passphrase
+
+```bash
+ssh-keygen -y -P "" -f ~/.ssh/id_rsa
+```
+
 ### get self-signed certificate of the remote server
 
 ```bash
- echo | openssl s_client -connect HOST:PORT | sed -ne '/-BEGIN CERTIFICATE-/,/-END CERTIFICATE-/p' > cacert.pem
+echo exit | openssl s_client -connect HOST:PORT | sed -ne '/-BEGIN CERTIFICATE-/,/-END CERTIFICATE-/p' > cacert.pem
 ```
 
 ### docker run
@@ -3195,6 +3201,25 @@ net user /domain svc_npdbaasoraos
 
 ## config
 
+### gitconfig includeif
+
+```config
+[includeIf "hasconfig:remote.*.url:https://github.com/**"]
+path = ~/.gitconfig-github
+
+[includeIf "hasconfig:remote.*.url:https://gist.github.com/**"]
+path = ~/.gitconfig-github
+
+[includeIf "hasconfig:remote.origin.url:git@gist.github.com:.*"]
+path = ~/.gitconfig-github
+
+[includeIf "hasconfig:remote.*.url:https://gitlab.example.com/**"]
+path = ~/.gitconfig-gitlab
+
+[includeIf "gitdir:C:/cygwin/opt/gitlab/"]
+path = ~/.gitconfig-gitlab
+```
+
 ### enable ssh controlmaster - ssh sessions
 
 ```config
@@ -3375,6 +3400,12 @@ location / {
 [Top](#top)
 
 ## powershell
+
+### Uninstall app package
+
+```powershell
+Get-AppxPackage *OneDrive* | Remove-AppxPackage
+```
 
 ### Exclude item from object in powershell
 
