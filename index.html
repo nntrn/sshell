@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<title>sshell</title>
+<meta name="author" content="Annie Tran (@nntrn)" />
+<meta charset="UTF-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="Content-Language" content="en" />
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+<meta name="title" content="sshell" />
+<meta name="description" content="On the job snippets - bash, python, powershell, and more" />
+<meta property="og:type" content="website" />
+<meta property="og:site-name" content="sshell" />
+<meta name="theme-color" content="#222" />
+<link rel="canonical" href="https://nntrn.github.io/sshell/" />
+<link rel="icon" href="favicon.png" />
+<link rel="icon" href="site-icon.svg" type="image/svg+xml" />
+<link rel="apple-touch-icon" href="favicon.png" />
+<link href="style.css" rel="stylesheet">
+<style>
+:root{
+  --logo-size: 40px;
+}
+:root,[data-theme="light"]{
+  --body-color:#212529;
+  --bg-color: #fff;
+  --bg-code-block:#eee;
+  --border-color:#eee;
+  --color:#aaa;
+}
+[data-theme="dark"]{
+  --body-color:#fff;
+  --bg-color: #212529;
+  --bg-code-block:#1b1f22;
+  --border-color:#000000;
+  --color:#aaa;
+}
+</style>
+</head>
+
+<body data-theme="light">
+  <main>
+    <nav>
+      <a class="site-icon" href="https://github.com/nntrn/sshell" title="sshell"><img src="site-icon.svg"/></a>
+      <div class="container">
+        <button class="btn-theme" onclick="toggleTheme()"></button>
+      </div>
+    </nav>
+    <div class="main">
+      <div id="sidebar">
+        <input id="searchbar" autocomplete="off" name="q" placeholder="search" spellcheck="false" value="" />
+        <div class="toc"></div>
+      </div>
+      <div id="content">
+        <div id="top"></div>
+      </div>
+    </div>
+  </main>
+  <script src="script.js"></script>
+</body>
+
+</html>
