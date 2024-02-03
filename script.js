@@ -4,7 +4,7 @@ const $ = (query) => document.querySelector(query)
 const SNIPPETS_URL = "https://raw.githubusercontent.com/nntrn/sshell/data/data.json"
 
 const urlquery = (query = location.search) =>
-  Object.fromEntries(query.split(/[?&]/).filter(Boolean).map((e) => e.split("=")))
+  Object.fromEntries(unescape(query).split(/[?&]/).filter(Boolean).map((e) => e.split("=")))
 
 const urlparse = (obj) => "?" +
   Object.entries(obj).map((e) => `${e[0]}=${e[1].replace(/ /g, '%20')}`).join("&")
@@ -62,7 +62,7 @@ function buildSnippetHtml(json) {
     .filter((e) => Boolean(json[e]) && json[e].length > 0)
     .map(e => {
       const typeBlock = ['code', 'example', 'output'].indexOf(e) > -1 ? "pre" : "div"
-      return `<${typeBlock} data-section="${e}">${fmtPre(json[e])}</${typeBlock}>`
+      return `<div data-section="${e}"><${typeBlock}>${fmtPre(json[e])}</${typeBlock}></div>`
     })
 
   return `
@@ -75,21 +75,6 @@ function buildSnippetHtml(json) {
     ${json.url ? `<div data-section="url"><a href="${json.url}" class="source-link">${json.url}</a></div>` : ""}
   </div>`
 }
-
-
-//function replaceAll(string, map) {
-//  for(key in map) {
-//      string = string.replace("$" + key, map[key]);
-//  }
-//  return string;
-//}
-
-//var string = '<div><span class="person $type">$name</span><span class="time">$date</span></div>';
-//var html = replaceAll(string, {
-//  type: personClass,
-//  name: personName,
-//  date: date
-//});
 
 function build(json) {
   const groups = {}
@@ -189,8 +174,8 @@ function eventFilter(e) {
 }
 
 function toggleTheme() {
-  const currentTheme=document.querySelector('body').dataset.theme || ""
-  document.querySelector('body').dataset.theme = currentTheme== "light" ? "dark" : "light"
+  const currentTheme = document.querySelector('body').dataset.theme || ""
+  document.querySelector('body').dataset.theme = currentTheme == "light" ? "dark" : "light"
 }
 
 function jumpToLocation() {
