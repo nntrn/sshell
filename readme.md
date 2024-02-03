@@ -19,6 +19,27 @@ cd sshell
 
 ## bash
 
+### ssh wrapper function that reads password from file
+
+```bash
+ssh_wrapper() {
+  sshpass -f /file/with/passwordstring ssh -o StrictHostKeyChecking=no svc_account@$@
+}
+
+```
+
+### index a string in bash
+
+```bash
+STRING="abcdefghij"
+
+$ echo ${STRING:3}
+defghij
+
+$ echo ${STRING: -3}
+hij
+```
+
 ### check if private key has a passphrase
 
 ```bash
@@ -455,8 +476,6 @@ cvtsudoers -f json -o sudoers.json sudoers
 
 # combines all /etc/sudoers.d/* and /etc/sudoers
 cvtsudoers -f sudoers -o sudoers.txt sudoers
-
-
 ```
 
 ### get machine architecture.
@@ -663,7 +682,7 @@ git reset HEAD .
 
 ```bash
 STYLE=css
-pygmentize -S $STYLE-f html -a .highlight >default.css
+pygmentize -S $STYLE -f html -a .highlight >default.css
 ```
 
 ### pandoc - for loop to convert files
@@ -3400,6 +3419,13 @@ location / {
 [Top](#top)
 
 ## powershell
+
+### windows security - add exclusion path
+
+```powershell
+(Get-MpPreference).ExclusionPath
+Add-MpPreference -ExclusionPath "C:\cygwin\home\Annie_Tran" -Force
+```
 
 ### Uninstall app package
 

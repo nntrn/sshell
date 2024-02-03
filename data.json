@@ -1,5 +1,71 @@
 [
   {
+    "id": 458,
+    "title": "windows security - add exclusion path",
+    "modified": "2024-02-03T00:16:06Z",
+    "created": "2024-02-03T00:16:06Z",
+    "code": [
+      "(Get-MpPreference).ExclusionPath",
+      "Add-MpPreference -ExclusionPath \"C:\\cygwin\\home\\Annie_Tran\" -Force"
+    ],
+    "tags": null,
+    "description": [
+      "https://learn.microsoft.com/en-us/microsoft-365/security/defender-endpoint/configure-process-opened-file-exclusions-microsoft-defender-antivirus?view=o365-worldwide",
+      "",
+      "# confirm exclusion - run from C:/ProgramData/Microsoft/Windows Defender/Platform/<VERSION>",
+      "./MpCmdRun.exe -CheckExclusion -path \"C:/cygwin/home\"",
+      "C:/cygwin/home [\\Device\\HarddiskVolume3\\cygwin\\home] is not excluded. Exit code is 1."
+    ],
+    "example": [
+      "# run in command prompt",
+      "powershell -inputformat none -outputformat none -NonInteractive -Command Add-MpPreference -ExclusionPath \"C:\\cygwin\\home\\Annie_Tran\"",
+      "",
+      "powershell -inputformat none -outputformat text -NonInteractive -Command Get-MpPreference"
+    ],
+    "output": "",
+    "language": "powershell",
+    "url": "https://stackoverflow.com/a/45339380"
+  },
+  {
+    "id": 457,
+    "title": "ssh wrapper function that reads password from file",
+    "modified": "2024-02-02T18:22:35Z",
+    "created": "2024-02-02T18:22:35Z",
+    "code": [
+      "ssh_wrapper() {",
+      "  sshpass -f /file/with/passwordstring ssh -o StrictHostKeyChecking=no svc_account@$@",
+      "}",
+      ""
+    ],
+    "tags": null,
+    "description": "",
+    "example": "",
+    "output": "",
+    "language": "bash",
+    "url": "https://stackoverflow.com/a/45339380"
+  },
+  {
+    "id": 456,
+    "title": "index a string in bash",
+    "modified": "2024-01-31T22:51:27Z",
+    "created": "2024-01-31T22:51:27Z",
+    "code": [
+      "STRING=\"abcdefghij\"",
+      "",
+      "$ echo ${STRING:3}",
+      "defghij",
+      "",
+      "$ echo ${STRING: -3}",
+      "hij"
+    ],
+    "tags": null,
+    "description": "",
+    "example": "",
+    "output": "",
+    "language": "bash",
+    "url": "https://unix.stackexchange.com/a/303983"
+  },
+  {
     "id": 455,
     "title": "gitconfig includeif",
     "modified": "2024-01-30T19:00:57Z",
@@ -25,7 +91,7 @@
     "example": "",
     "output": "",
     "language": "config",
-    "url": ""
+    "url": "https://unix.stackexchange.com/a/303983"
   },
   {
     "id": 454,
@@ -40,7 +106,7 @@
     "example": "",
     "output": "",
     "language": "powershell",
-    "url": ""
+    "url": "https://unix.stackexchange.com/a/303983"
   },
   {
     "id": 453,
@@ -58,7 +124,7 @@
     ],
     "output": "",
     "language": "bash",
-    "url": ""
+    "url": "https://unix.stackexchange.com/a/303983"
   },
   {
     "id": 452,
@@ -89,7 +155,7 @@
     "example": "",
     "output": "",
     "language": "sql",
-    "url": ""
+    "url": "https://unix.stackexchange.com/a/303983"
   },
   {
     "id": 451,
@@ -106,7 +172,7 @@
     ],
     "output": "",
     "language": "powershell",
-    "url": ""
+    "url": "https://unix.stackexchange.com/a/303983"
   },
   {
     "id": 450,
@@ -125,7 +191,7 @@
     ],
     "output": "",
     "language": "bash",
-    "url": ""
+    "url": "https://unix.stackexchange.com/a/303983"
   },
   {
     "id": 449,
@@ -141,7 +207,7 @@
     "example": "",
     "output": "",
     "language": "bash",
-    "url": ""
+    "url": "https://unix.stackexchange.com/a/303983"
   },
   {
     "id": 448,
@@ -1866,7 +1932,7 @@
   {
     "id": 396,
     "title": "cvtsudoers - get all configured sudo policies",
-    "modified": "2022-09-16T23:44:46Z",
+    "modified": "2024-01-31T22:52:00Z",
     "created": "2022-09-16T23:44:46Z",
     "code": [
       "cp /etc/sudoers . ",
@@ -1875,9 +1941,7 @@
       "cvtsudoers -f json -o sudoers.json sudoers",
       "",
       "# combines all /etc/sudoers.d/* and /etc/sudoers",
-      "cvtsudoers -f sudoers -o sudoers.txt sudoers",
-      "",
-      ""
+      "cvtsudoers -f sudoers -o sudoers.txt sudoers"
     ],
     "tags": [
       "permissions",
@@ -2594,11 +2658,11 @@
   {
     "id": 371,
     "title": "pygmentize - create css file",
-    "modified": "2022-08-01T20:48:56Z",
+    "modified": "2024-01-31T22:53:05Z",
     "created": "2022-08-01T20:48:56Z",
     "code": [
       "STYLE=css",
-      "pygmentize -S $STYLE-f html -a .highlight >default.css"
+      "pygmentize -S $STYLE -f html -a .highlight >default.css"
     ],
     "tags": null,
     "description": [
@@ -2619,82 +2683,7 @@
       "</body>",
       "\""
     ],
-    "output": [
-      "pre { line-height: 125%; }",
-      "td.linenos .normal { color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px; }",
-      "span.linenos { color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px; }",
-      "td.linenos .special { color: #000000; background-color: #ffffc0; padding-left: 5px; padding-right: 5px; }",
-      "span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 5px; padding-right: 5px; }",
-      ".highlight .hll { background-color: #ffffcc }",
-      ".highlight { background: #ffffff; }",
-      ".highlight .c { color: #888888 } /* Comment */",
-      ".highlight .err { color: #FF0000; background-color: #FFAAAA } /* Error */",
-      ".highlight .k { color: #008800; font-weight: bold } /* Keyword */",
-      ".highlight .o { color: #333333 } /* Operator */",
-      ".highlight .ch { color: #888888 } /* Comment.Hashbang */",
-      ".highlight .cm { color: #888888 } /* Comment.Multiline */",
-      ".highlight .cp { color: #557799 } /* Comment.Preproc */",
-      ".highlight .cpf { color: #888888 } /* Comment.PreprocFile */",
-      ".highlight .c1 { color: #888888 } /* Comment.Single */",
-      ".highlight .cs { color: #cc0000; font-weight: bold } /* Comment.Special */",
-      ".highlight .gd { color: #A00000 } /* Generic.Deleted */",
-      ".highlight .ge { font-style: italic } /* Generic.Emph */",
-      ".highlight .gr { color: #FF0000 } /* Generic.Error */",
-      ".highlight .gh { color: #000080; font-weight: bold } /* Generic.Heading */",
-      ".highlight .gi { color: #00A000 } /* Generic.Inserted */",
-      ".highlight .go { color: #888888 } /* Generic.Output */",
-      ".highlight .gp { color: #c65d09; font-weight: bold } /* Generic.Prompt */",
-      ".highlight .gs { font-weight: bold } /* Generic.Strong */",
-      ".highlight .gu { color: #800080; font-weight: bold } /* Generic.Subheading */",
-      ".highlight .gt { color: #0044DD } /* Generic.Traceback */",
-      ".highlight .kc { color: #008800; font-weight: bold } /* Keyword.Constant */",
-      ".highlight .kd { color: #008800; font-weight: bold } /* Keyword.Declaration */",
-      ".highlight .kn { color: #008800; font-weight: bold } /* Keyword.Namespace */",
-      ".highlight .kp { color: #003388; font-weight: bold } /* Keyword.Pseudo */",
-      ".highlight .kr { color: #008800; font-weight: bold } /* Keyword.Reserved */",
-      ".highlight .kt { color: #333399; font-weight: bold } /* Keyword.Type */",
-      ".highlight .m { color: #6600EE; font-weight: bold } /* Literal.Number */",
-      ".highlight .s { background-color: #fff0f0 } /* Literal.String */",
-      ".highlight .na { color: #0000CC } /* Name.Attribute */",
-      ".highlight .nb { color: #007020 } /* Name.Builtin */",
-      ".highlight .nc { color: #BB0066; font-weight: bold } /* Name.Class */",
-      ".highlight .no { color: #003366; font-weight: bold } /* Name.Constant */",
-      ".highlight .nd { color: #555555; font-weight: bold } /* Name.Decorator */",
-      ".highlight .ni { color: #880000; font-weight: bold } /* Name.Entity */",
-      ".highlight .ne { color: #FF0000; font-weight: bold } /* Name.Exception */",
-      ".highlight .nf { color: #0066BB; font-weight: bold } /* Name.Function */",
-      ".highlight .nl { color: #997700; font-weight: bold } /* Name.Label */",
-      ".highlight .nn { color: #0e84b5; font-weight: bold } /* Name.Namespace */",
-      ".highlight .nt { color: #007700 } /* Name.Tag */",
-      ".highlight .nv { color: #996633 } /* Name.Variable */",
-      ".highlight .ow { color: #000000; font-weight: bold } /* Operator.Word */",
-      ".highlight .w { color: #bbbbbb } /* Text.Whitespace */",
-      ".highlight .mb { color: #6600EE; font-weight: bold } /* Literal.Number.Bin */",
-      ".highlight .mf { color: #6600EE; font-weight: bold } /* Literal.Number.Float */",
-      ".highlight .mh { color: #005588; font-weight: bold } /* Literal.Number.Hex */",
-      ".highlight .mi { color: #0000DD; font-weight: bold } /* Literal.Number.Integer */",
-      ".highlight .mo { color: #4400EE; font-weight: bold } /* Literal.Number.Oct */",
-      ".highlight .sa { background-color: #fff0f0 } /* Literal.String.Affix */",
-      ".highlight .sb { background-color: #fff0f0 } /* Literal.String.Backtick */",
-      ".highlight .sc { color: #0044DD } /* Literal.String.Char */",
-      ".highlight .dl { background-color: #fff0f0 } /* Literal.String.Delimiter */",
-      ".highlight .sd { color: #DD4422 } /* Literal.String.Doc */",
-      ".highlight .s2 { background-color: #fff0f0 } /* Literal.String.Double */",
-      ".highlight .se { color: #666666; font-weight: bold; background-color: #fff0f0 } /* Literal.String.Escape */",
-      ".highlight .sh { background-color: #fff0f0 } /* Literal.String.Heredoc */",
-      ".highlight .si { background-color: #eeeeee } /* Literal.String.Interpol */",
-      ".highlight .sx { color: #DD2200; background-color: #fff0f0 } /* Literal.String.Other */",
-      ".highlight .sr { color: #000000; background-color: #fff0ff } /* Literal.String.Regex */",
-      ".highlight .s1 { background-color: #fff0f0 } /* Literal.String.Single */",
-      ".highlight .ss { color: #AA6600 } /* Literal.String.Symbol */",
-      ".highlight .bp { color: #007020 } /* Name.Builtin.Pseudo */",
-      ".highlight .fm { color: #0066BB; font-weight: bold } /* Name.Function.Magic */",
-      ".highlight .vc { color: #336699 } /* Name.Variable.Class */",
-      ".highlight .vg { color: #dd7700; font-weight: bold } /* Name.Variable.Global */",
-      ".highlight .vi { color: #3333BB } /* Name.Variable.Instance */",
-      ".highlight .vm { color: #996633 } /* Name.Variable.Magic */",
-      ".highlight .il { color: #0000DD; font-weight: bold } /* Literal.Number.Integer.Long */"
-    ],
+    "output": "",
     "language": "bash",
     "url": "https://stackoverflow.com/a/5277575"
   },
